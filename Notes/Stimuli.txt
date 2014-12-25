@@ -1,0 +1,35 @@
+Pictures:
+- 5 animals (monkey, fox, dog, wolf, lion)
+- 6 activities (catch, comb, paint, push, scrub, pull)
+Sentences:
+- 114 unique sentences
+- 154 speech variations (average of 1.35 variations per sentence, max 3)
+Structure:
+- 19 trials per cluster
+- visual feedback after each cluster
+	- speed/accuracy tradeoff: balancing strongly towards accuracy
+- 8 clusters per block
+- 2 blocks per session
+
+Tutorial:
+- Visual description of the remote control
+- First task: like subsequent task, just with added written instructions and question
+- Broken task: like subsequent task, just with ambiguous sentence ("Wo ist der Affe, den den Löwe fängt?")
+- Subsequent tasks: like full task, just with two explicit animal descriptors ("Wo ist der Affe, den der Löwe fängt?")
+- stops automatically when subject is good enough
+	- either when error percentage drops under 20%, with an average response time of less then 3000ms
+	- or when error percentage drops under 12%
+
+Full task:
+- two side-by-side white images on black background
+	- two cartoon animals interacts with each other on each image
+	- images are identical, except that the roles are reversed (recipient becomes agent and vice versa)
+- 10ms delay
+- spoken question starts playing
+	- only one explicit animal descriptor ("Wo ist das Tier, das der Löwe fängt?")
+	- questions are phonetically and syntactically identical until "das der"
+- auditory and visual feedback after the response
+	- Windows XP "Device plugged in" and "Device removed" sounds for correct and incorrect feedback (respectively)
+	- Green checkmark and diagonal red cross displayed on the response side, underneath the image
+- pause of 400-800ms (with visual feedback still visible)
+- next trial

@@ -1,0 +1,16 @@
+Preliminary analysis:
+- Freesurfer-based surface extraction and detailed brain segmentation
+- estimate anisotropy properties from DWI data
+	- Fit diffusion tensors into DWI data
+	- Select only white matter voxels
+	- Convert diffusion tensors into conductivity tensors
+
+Segmentation:
+- SPM-based 5-tissue segmentation of the combined T1 and T2 dataset
+- Assemble a voxel-based head model from tissue probability maps
+- Increase cortical thickness to satisfy Venant condition
+- Convert voxel model to mesh
+- Close diagonal voxel leaks
+- Insert dipole locations from Freesurfer
+- Insert anisotropic conductivity properties
+- Save in Vista format

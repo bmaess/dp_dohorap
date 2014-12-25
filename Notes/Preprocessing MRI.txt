@@ -1,0 +1,7 @@
+File preprocessing:
+- convert from DICOM into Nifti format
+- sort Nifti datasets into folders
+
+Spatial preprocessing:
+- coregister DWI and T2 to T1 dataset
+- motion and distortion correction of DWI dataset

@@ -1,0 +1,11 @@
+Motion correction:
+- part of the Neuromag Maxfilter package
+
+Baseline correction:
+- filtering with a 1/2.5 Hz highpass
+
+Jump artifact correction:
+- blind ICA decomposition
+- calculate the correlation between ICA components and EOG/ECG
+- calculate z-scores from correlations
+- reject the component if its z-score is above 0.4

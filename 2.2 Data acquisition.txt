@@ -1,0 +1,15 @@
+2.2.1 MEG
+
+[import scanning blurb from the wiki]
+
+[MEG scanner and data acquisition]
+MEG data were collected with a Neuromag VectorView scanner (Elekta AB, Stockholm, Sweden) at the Magnetoencephalographic department of the Max-Planck-Institute for Cogntive and Brain Sciences, Leipzig, Germany. The scanner comprises 306 MEG-channel sensors (102 magnetometers, 204 planar gradiometers). Sensors were tuned prior to each MEG recording session to limit noise levels to approximately [2.5 fT/cm]. Sensors that became very noisy during a recording block were individually re-tuned at the inter-block break, using the Neuromag automatized heating process.
+Continuous MEG data were recorded at 1000 Hz sampling rate. Prior to data acquisition, all metal and other potential sources of electromagnetic interference were removed from participants. Electro-oculogram (EOG) and electrocardiogram (ECG) time-series were recorded simultaneously with MEG to track anatomical sources of electrical artifacts. Five head position indicator (HPI) coils were attached to the participant's forehead and a [Polhemus stylus and digitizer device] were used to record the locations of fiducial points (right and left pre-auricular points (RPA, LPA) and nasion), the HPI coils, and approximately 200 extra digitizer points on the head surface. Prior to the recording of each stimulus block, head location in the scanner was measured with an automatic process that detected the coils. Continuous HPI recorded any head movements during data acquisition.
+
+[Preprocessing and HPI correction]
+Data were preprocessed with Elekta Neuromag MaxFilter software (version 2.1, May 2009).MaxFilter software reduces noise in the data by suppressing magnetic interference coming from outside and inside the sensory array, using signal-space separation (SSS). The MaxMove sub-command was used to spatially co-register MEG recordings across blocks to the median head position for each individual. HPI movement compensation was also applied. Data were then subjected to a 0.4–330 Hz bandpass filter to remove DC components.
+
+[Artifact removal]
+MEG channels with constant high noise levels as identified by visual inspection were rejected from further analysis. A maximum of two such channels was removed per participant and scan. Eye-related artifacts such as blinks were identified as deviations in the EOG recording trace. Epochs containing artifacts arising from the eyes or intermittent sensor noise were removed from further analysis. Peak-to-peak threshold for removal of eye blinks and overt eye movements was within the range 100–200 × 10−6 V. Maximum noise level threshold for magnetometer and gradiometer activity was within range 2–3 × 10−12 T and 1.5–2 × 10−10 T/m, respectively. In both cases, the specific threshold depended on the artifact amplitudes recorded for each individual. After artifact removal, in all cases there remained at least 95 trials per stimulus per participant.
+
+[Epoching]

@@ -1,0 +1,13 @@
+- Gluing 5 HPI coils 4 EOG electrodes (2 vertical at the left eye, 2 horizontal) to the face
+- Localizing HPI coils and head shape with a digitizer
+- Entering the MEG, laying down, inserting earplugs, familiarizing with the remote control
+- Running the hearing threshold test:
+	- Spoken word ("Affe") is repeated with increasing loudness
+	- Subject presses a button as soon as they hear the word
+	- repeated 3x for each ear
+- Entering the hearing threshold into the main experiment
+- Running the tutorial
+- Running the first experimental block
+- short break: sitting or standing up, getting a drink, 3-5min
+- Running the second experimental block
+- Removing the electrodes
