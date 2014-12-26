@@ -4,3 +4,5 @@ MNE:
 MNE-Python:
 [2] A. Gramfort, M. Luessi, E. Larson, D. Engemann, D. Strohmeier, C. Brodbeck, R. Goj, M. Jas, T. Brooks, L. Parkkonen, M. Hämäläinen, MEG and EEG data analysis with MNE-Python, Frontiers in Neuroscience, Volume 7, 2013, ISSN 1662-453X, [DOI]
 
+MEG acquisition methods:
+[3] Cicmil, N., Bridge, H., Parker, A. J., Woolrich, M. W., & Krug, K. (2014). Localization of MEG human brain responses to retinotopic visual stimuli with contrasting source reconstruction approaches. Frontiers in Neuroscience, 8, 127. doi:10.3389/fnins.2014.00127

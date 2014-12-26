@@ -13,10 +13,11 @@ Compared to this example, there were a few minor differences in this study: The 
 [quote starts]
 Data were preprocessed with Elekta Neuromag® MaxFilter software (version 2.1, May 2009). MaxFilter software reduces noise in the data by suppressing magnetic interference coming from outside and inside the sensory array, using signal-space separation (SSS). The MaxMove sub-command was used to spatially co-register MEG recordings across blocks to the median head position for each individual. MaxMove continuous HPI movement compensation was also applied.
 [quote ends]
-Our block-level recordings were coregistered to the initial (instead of the median) head position. Data were then subjected to a 0.4 highpass filter ([insert filter properties]) to remove DC components.
+Our block-level recordings were coregistered to the initial (instead of the median) head position. Data were then subjected to a 0.4 FIR highpass filter (Hamming window design, 4367 coefficients, damping at 0Hz: -130db) to remove DC components.
 
 [Artifact removal]
 MEG channels with abnormally high noise levels as identified by visual inspection were rejected from further analysis. A maximum of [3 channels] (median: [1 channel]) was removed.
-The data contained major artifacts from spontaneous channel jumps, electrocardiac activity and electroocular activity. Spontaneous jumps were detected by selecting peaks in the z-transformed continuous data that exceeded [a threshold of 35]. Raw data 1s before and after the selected jump was temporarily [set to zero] for the following step. [ICA]
+The resulting pre-processed data contained major artifacts from spontaneous channel jumps, electrocardiographic (ECG) activity and electrooculographic (EOG) activity. Jumps were detected by selecting peaks in the z-transformed continuous data that exceeded [a threshold of 35]. Pre-processed data [1s before and after] the selected jump was temporarily [set to zero] for the following step. A decomposition into [63 independent components] (ICA) followed. Components that correlated significantly more (threshold of z=0.4) with EOG or ECG channels than other components were removed. The remaining ICA composition was applied to the pre-processed data. Ideally, the resulting data only contained major artifacts from channel jumps.
 
 [Epoching]
+The main trigger was set at the onset of the condition difference between sentences, i.e., on the "d" sound of "den" or "der". 
