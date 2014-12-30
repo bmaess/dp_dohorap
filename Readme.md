@@ -11,8 +11,6 @@ Table of contents
 2. Methods
   1. Participants and stimuli
   2. Data acquisition
-    1. Magnetophysiological measurements
-    2. Nuclear magnetic resonance imaging
   3. Data analysis
     1. Behavioral data
     2. Sensor-space activity

@@ -7,7 +7,7 @@ Parents gave written informed consent and were compensated with [some money]. Ch
 
 Task
 
-The study consisted of two sessions: an anatomical MRI acquisition (duration: 50 minutes) and an interactive magnetoencephalographic measurement (typical duration: 90 minutes). Since they took place in two different locations, there was a delay ([minimum: 5 hours, median: 4 days, maximum: 45 days]) between the two sessions.
+The study consisted of two sessions: an anatomical MRI acquisition (duration: 50 minutes) and an interactive magnetoencephalographic measurement (typical duration: 90 minutes). Since they took place in two different locations, there was a delay (median: 98 days, maximum: 243 days) between the two sessions.
 
 The MRI sessions is described in detail in [section 2.2.1].
 
