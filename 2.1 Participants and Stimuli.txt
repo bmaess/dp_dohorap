@@ -1,7 +1,7 @@
 Participants
 
-18 children, aged between [9y10m] and [11y2m], and 22 adults, aged between 20 and 28 years, were recruited from the internal participants database. Subjects were selected if they spoke German as native language, if their language development was unremarkable, if their handedness score was above 80, if they fulfilled the prerequisites for MRI scans, and if their medical history was free of cognitive abnormalities.
-4 children and 5 adults dropped out because they failed to arrive at the both sessions of the study. 2 children were excluded from the analysis because their behavioral performance was at chance level.
+18 children, aged between 9y 11m and 10y 10m at the time of the MEG session, and 22 adults, aged between [20 and 28] years, were recruited from the internal participants database. Subjects were selected if they spoke German as native language, if their language development was unremarkable, if their handedness score was above 80, if they fulfilled the prerequisites for MRI scans, and if their medical history was free of cognitive abnormalities.
+4 children and 5 adults dropped out inbetween sessions of the study. Two children were excluded from the analysis because their behavioral performance was at chance level, leaving 12 children and 17 adults for the subsequent analysis.
 Parents gave written informed consent and were compensated with [some money]. Children agreed to participate in the study and were compensated with a 10€ gift voucher. All experimental procedures were approved by the University of Leipzig Ethical Review Board.
 
 

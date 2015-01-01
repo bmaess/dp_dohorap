@@ -15,8 +15,8 @@ Table of contents
     1. Behavioral data
     2. Sensor-space activity
       1. Preprocessing and artifact correction
-      2. Activity analysis
-      3. Time window estimation
+      2. Time window estimation
+      3. Activity analysis
     3. Reconstructed cortical activity
       1. Reconstruction of cortical activity
       2. Activity analysis
