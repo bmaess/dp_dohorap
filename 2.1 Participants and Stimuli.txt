@@ -1,63 +1,117 @@
 Participants
 
-18 children, aged between 9y 11m and 10y 10m at the time of the MEG session, and 22 adults, aged between [20 and 28] years, were recruited from the internal participants database. Subjects were selected if they spoke German as native language, if their language development was unremarkable, if their handedness score was above 80, if they fulfilled the prerequisites for MRI scans, and if their medical history was free of cognitive abnormalities.
-4 children and 5 adults dropped out inbetween sessions of the study. Two children were excluded from the analysis because their behavioral performance was at chance level, leaving 12 children and 17 adults for the subsequent analysis.
-Parents gave written informed consent and were compensated with [some money]. Children agreed to participate in the study and were compensated with a 10€ gift voucher. All experimental procedures were approved by the University of Leipzig Ethical Review Board.
+18 children, aged between 9y 11m and 10y 10m at the time of the MEG session, and 22 adults, aged between [20 and 28] years, were recruited from the internal participants database.
+Subjects were selected if they spoke German as native language, if their language development was unremarkable, if their handedness score was above 80, if they fulfilled the prerequisites for MRI scans, and if their medical history was free of cognitive abnormalities.
+4 children and 5 adults dropped out inbetween sessions of the study.
+Two children were excluded from the analysis because their behavioral performance was at chance level, leaving 12 children and 17 adults for the subsequent analysis.
+Parents gave written informed consent and were compensated with [some money].
+Children agreed to participate in the study and were compensated with a 10€ gift voucher.
+All experimental procedures were approved by the University of Leipzig Ethical Review Board.
 
 
 Task
 
-The study consisted of two sessions: an anatomical MRI acquisition (duration: 50 minutes) and an interactive magnetoencephalographic measurement (typical duration: 90 minutes). Since they took place in two different locations, there was a delay (median: 98 days, maximum: 243 days) between the two sessions.
+The study consisted of two sessions: an anatomical MRI acquisition (duration: 50 minutes) and an interactive magnetoencephalographic measurement (typical duration: 90 minutes).
+Since they took place in two different locations, there was a delay (median: 98 days, maximum: 243 days) between the two sessions.
 
 The MRI sessions is described in detail in [section 2.2.1].
 
-The MEG sessions consisted of two sections: a tutorial section and a main section. [Neuromag stimulation paragraph from the wiki]
+The MEG sessions consisted of two sections: a tutorial section and a main section.
+[Neuromag stimulation paragraph from the wiki]
 
 [MEG tutorial section]
-First, the tutorial section described the usage of the interface. Second, subjects needed to respond to an example stimulus with the spoken sentence written out below the screen. Third, three example trials followed without the written sentence. Fourth, an artificially incomprehensible sentence was presented together with otherwise innocuous visual stimuli. When subjects pressed either response button instead of skipping the trial, they were instructed with the skip function. Finally, a series of randomized tutorial trials followed.
-When subjects showed behavioral proficiency of the task, the tutorial ended automatically. Two thresholds for proficiency were possible: either an average response time below 3000ms and an accuracy score above 80%, or an accuracy score above 88%. Otherwise the tutorial ended after 36 trials.
+First, the tutorial section described the usage of the interface.
+Second, subjects needed to respond to an example stimulus with the spoken sentence written out below the screen.
+Third, three example trials followed without the written sentence.
+Fourth, an artificially incomprehensible sentence was presented together with otherwise innocuous visual stimuli.
+When subjects pressed either response button instead of skipping the trial, they were instructed with the skip function.
+Finally, a series of randomized tutorial trials followed.
+When subjects showed behavioral proficiency of the task, the tutorial ended automatically.
+Two thresholds for proficiency were possible: either an average response time below 3000ms and an accuracy score above 80%, or an accuracy score above 88%.
+Otherwise the tutorial ended after 36 trials.
 
 [MEG main section]
-The main section was used for MEG acquisition and consisted of 304 trials grouped in two blocks. There was a scheduled break between the blocks (usually 1-2 minutes) which included interaction with the research assistant. Subject-specific trial randomization was performed before the task. All stimuli-related randomization tasks were implemented with a time-seeded Mersenne-Twister approach in Python 2.7.
-Each block consisted of 8 clusters. Subjects were shown a feedback screen at the end of each cluster, summarizing their performance throughout the recent cluster. Since manual intervention was necessary to proceed to the next cluster, subjects frequently used this opportunity for a tiny break (typically 5-20 seconds).
+The main section was used for MEG acquisition and consisted of 304 trials grouped in two blocks.
+There was a scheduled break between the blocks (usually 1-2 minutes) which included interaction with the research assistant.
+Subject-specific trial randomization was performed before the task.
+All stimuli-related randomization tasks were implemented with a time-seeded Mersenne-Twister approach in Python 2.7.
+Each block consisted of 8 clusters.
+Subjects were shown a feedback screen at the end of each cluster, summarizing their performance throughout the recent cluster.
+Since manual intervention was necessary to proceed to the next cluster, subjects frequently used this opportunity for a tiny break (typically 5-20 seconds).
 
 [Structure of a single trial]
-Each cluster consisted of 19 trials. Each trial started by showing two pairs of cartoon animals. 10ms later, the spoken question started playing. The subject could respond by pressing one of the direction buttons or the skip button. There were two direction buttons, left or right, signifying that the left or right image contained the answer to the question. The skip button was used to mark the trial as invalid for further analysis, and excluded the trial from performance feedback. This response was the correct choice when the subject was distracted or failed to comprehend the question immediately. This opened a minor pitfall: subjects could have gotten perfect scores by just pressing the skip button each time. Fortunately, none of the subjects discovered this opportunity. The trial ended with an auditory and visual feedback. The trial sequence contained no artificial waiting time or blank screens.
+Each cluster consisted of 19 trials.
+Each trial started by showing two pairs of cartoon animals.
+10ms later, the spoken question started playing.
+The subject could respond by pressing one of the direction buttons or the skip button.
+There were two direction buttons, left or right, signifying that the left or right image contained the answer to the question.
+The skip button was used to mark the trial as invalid for further analysis, and excluded the trial from performance feedback.
+This response was the correct choice when the subject was distracted or failed to comprehend the question immediately.
+This opened a minor pitfall: subjects could have gotten perfect scores by just pressing the skip button each time.
+Fortunately, none of the subjects discovered this opportunity.
+The trial ended with an auditory and visual feedback.
+The trial sequence contained no artificial waiting time or blank screens.
 
 
 Visual stimuli
 
 [Character motivation]
-A set of visual stimuli consisted of a two side-by-side images on black background. Each image depicted two different animals on a white background. I selected selected social activities that were only plausible for abstract, antropomorphised characters. If associations with real-world animalistic behavior were too strong, a lion "catching" a monkey would invite a resemblence to predatory behavior. This association would introduce a semnatic bias against the reverse interaction: a real-life monkey catching a lion is much more implausible. To further detract from a naturalistic view, the animals were represented in a cartoon style. To prevent unnecessary stress on this interpretation, I only selected animals whose real-life counterparts were approximately equally sized.
+A set of visual stimuli consisted of a two side-by-side images on black background.
+Each image depicted two different animals on a white background.
+I selected selected social activities that were only plausible for abstract, antropomorphised characters.
+If associations with real-world animalistic behavior were too strong, a lion "catching" a monkey would invite a resemblence to predatory behavior.
+This association would introduce a semnatic bias against the reverse interaction: a real-life monkey catching a lion is much more implausible.
+To further detract from a naturalistic view, the animals were represented in a cartoon style.
+To prevent unnecessary stress on this interpretation, I only selected animals whose real-life counterparts were approximately equally sized.
 *Illustration: Monkey catches lion*
 
-Image components were adapted from [Daniela Schipke]. Modifications were performed with Inkscape.
+Image components were adapted from [Daniela Schipke].
+Modifications were performed with Inkscape.
 
 *Table: all six social activities with pictures*
 *Table: all five animals with pictures*
 
 [Trial feedback]
-Immediately after each response, an icon appeared below one of the two displayed animal pairs. The presented side was determined by the subject's response. In the case of the skip button, the icon appeared at the same height as the others, but in the middle of the screen. A green checkmark, a diagonal red cross and a yellow skip symbol signified a correct response, an incorrect response and an invalid trial, respectively. The trial feedback screen was presented for a random interval between 400ms and 800ms.
+Immediately after each response, an icon appeared below one of the two displayed animal pairs.
+The presented side was determined by the subject's response.
+In the case of the skip button, the icon appeared at the same height as the others, but in the middle of the screen.
+A green checkmark, a diagonal red cross and a yellow skip symbol signified a correct response, an incorrect response and an invalid trial, respectively.
+The trial feedback screen was presented for a random interval between 400ms and 800ms.
 
 *Trial feedback screen*
 
 [Cluster feedback]
-In this experiment, there was an obvious tradeoff between speed and accuracy. To encourage a high level of attention and a high number of usable trials, two bar graphs visualized performance speed and accuracy. In order to maximize the amount of usable trials for further analysis, the visualization valued accuracy much more than response time.
+In this experiment, there was an obvious tradeoff between speed and accuracy.
+To encourage a high level of attention and a high number of usable trials, two bar graphs visualized performance speed and accuracy.
+In order to maximize the amount of usable trials for further analysis, the visualization valued accuracy much more than response time.
 *Cluster feedback screen* *feedbackGraphRT.fig* *feedbackGraphAccuracy.fig*
 
 
 Auditory stimuli
 
 [Sentence content]
-Each pair of images was presented with a spoken question. The question format fit well with the stimulus-response paradigm, and allowed the sentences to be identical until the conditional article ("den" or "der") appeared. Syntactically, the sentences used an equal number of subject-relative and object-relative clauses. In order to minimize confounding effects, these two conditions were designed to show as little auditory distinction as possible. The structure of the results is displayed in [table 2.1.1].
+Each pair of images was presented with a spoken question.
+The question format fit well with the stimulus-response paradigm, and allowed the sentences to be identical until the conditional article ("den" or "der") appeared.
+Syntactically, the sentences used an equal number of subject-relative and object-relative clauses.
+In order to minimize confounding effects, these two conditions were designed to show as little auditory distinction as possible.
+The structure of the results is displayed in [table 2.1.1].
 
 *Table: two sentence conditions with descriptors and word annotations*
 
 [Tutorial sentences]
- During the pilot study, children often assumed that the every sentence was a subject-relative construction, miscategorizing "den" for "der". Tutorial sentences made the two animal nouns explicit, so that the sentences were structured in the format "Where is the monkey that is caught by the dog?". While this setup was creating strong auditory differences, it was easier to comprehend. If the children didn't notice the difference by the eighth tutorial trial, the research assistant repeated the question with an exaggerated "den" pronounciation.
+ During the pilot study, children often assumed that the every sentence was a subject-relative construction, miscategorizing "den" for "der".
+Tutorial sentences made the two animal nouns explicit, so that the sentences were structured in the format "Where is the monkey that is caught by the dog?".
+While this setup was creating strong auditory differences, it was easier to comprehend.
+If the children didn't notice the difference by the eighth tutorial trial, the research assistant repeated the question with an exaggerated "den" pronounciation.
 
 [Sentence format]
-Sentences were spoken by a professional female native speaker in an unisonous and moderately child-directed prosody. Recording and playback was performed at a sampling rate of 44100Hz with one channel. Loudness of each sentence was normalized. Overall loudness was adjusted to [60db] above each subject's individual hearing threshold.
+Sentences were spoken by a professional female native speaker in an unisonous and moderately child-directed prosody.
+Recording and playback was performed at a sampling rate of 44100Hz with one channel.
+Loudness of each sentence was normalized.
+Overall loudness was adjusted to [60db] above each subject's individual hearing threshold.
 
 [Trial feedback]
-Immediately after each response, one of two short sounds played. The sounds were extracted from Microsoft Windows XP. The "external device plugged in" icon (two bell sounds in ascending tone) and the "external device removed" icon (two bell sounds in descending tone) represented correct and incorrect responses, respectively. No sound was played after the skip button.
+Immediately after each response, one of two short sounds played.
+The sounds were extracted from Microsoft Windows XP.
+The "external device plugged in" icon (two bell sounds in ascending tone) and the "external device removed" icon (two bell sounds in descending tone) represented correct and incorrect responses, respectively.
+No sound was played after the skip button.

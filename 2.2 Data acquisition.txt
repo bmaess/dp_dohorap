@@ -1,14 +1,34 @@
 2.2.1 MEG
 
 [import scanning blurb from the wiki]
-Acquisition of magnetoencephalographic data is widely performed in a similar manner. The study by [1], if not otherwise indicated, will be quoted as a typical example in this chapter.
+Acquisition of magnetoencephalographic data is widely performed in a similar manner.
+The study by [1], if not otherwise indicated, will be quoted as a typical example in this chapter.
 
 [MEG scanner and data acquisition]
 [quote starts]
-MEG data were collected with an Elekta Neuromag VectorView® MEG scanner at the Oxford Centre for Human Brain Activity (OHBA), Department of Psychiatry, University of Oxford, Warneford Hospital, Oxford, U.K. The scanner comprises 306 MEG-channel sensors (102 magnetometers, 204 planar gradiometers). Sensors were tuned prior to each MEG recording session to limit noise levels to approximately 2.5 fT/cm. Sensors that became very noisy during a recording block would be individually re-tuned at the next inter-block break, using the Neuromag automatized heating process or by eye, as necessary. Continuous MEG data were recorded at 1000 Hz sampling rate (0.3–330 Hz bandpass filter). Prior to data acquisition, all metal and other potential sources of electromagnetic interference were removed from participants. Quality of recording was confirmed by visual inspection of 1–2 min of MEG recording during quiet sitting prior to the start of the experiment. Electro-oculogram (EOG) and electrocardiogram (ECG) time-series were recorded simultaneously with MEG to track potential noise sources and artifacts. Four head position indicator (HPI) coils were attached to the participant's head and a Polhemus stylus and digitizer device were used to record the locations of fiducial points (right and left pre-auricular points (RPA, LPA) and nasion), the HPI coils, and between 40 and 80 extra digitizer points on the head surface. Prior to the recording of each stimulus block, head location in the scanner was measured with an automatic process that detected the coils. Continuous HPI recorded any head movements during data acquisition.
+MEG data were collected with an Elekta Neuromag VectorView® MEG scanner at the Oxford Centre for Human Brain Activity (OHBA), Department of Psychiatry, University of Oxford, Warneford Hospital, Oxford, U.K.
+The scanner comprises 306 MEG-channel sensors (102 magnetometers, 204 planar gradiometers).
+Sensors were tuned prior to each MEG recording session to limit noise levels to approximately 2.5 fT/cm.
+Sensors that became very noisy during a recording block would be individually re-tuned at the next inter-block break, using the Neuromag automatized heating process or by eye, as necessary.
+Continuous MEG data were recorded at 1000 Hz sampling rate (0.3–330 Hz bandpass filter).
+Prior to data acquisition, all metal and other potential sources of electromagnetic interference were removed from participants.
+Quality of recording was confirmed by visual inspection of 1–2 min of MEG recording during quiet sitting prior to the start of the experiment.
+Electro-oculogram (EOG) and electrocardiogram (ECG) time-series were recorded simultaneously with MEG to track potential noise sources and artifacts.
+Four head position indicator (HPI) coils were attached to the participant's head and a Polhemus stylus and digitizer device were used to record the locations of fiducial points (right and left pre-auricular points (RPA, LPA) and nasion), the HPI coils, and between 40 and 80 extra digitizer points on the head surface.
+Prior to the recording of each stimulus block, head location in the scanner was measured with an automatic process that detected the coils.
+Continuous HPI recorded any head movements during data acquisition.
 [quote ends]
-Compared to this example, there were a few minor differences in this study: The scanner for this study was located in Bennewitz, at the department of Magnetoencephalography, Institute for cognitive and brain sciences, Leipzig, Germany. The quality of recording was determined and adjusted before each session without the subject present. We used five HPI coils, attached to the forehead. Finally, we used between 180 and 200 extra digitizer points on the head surface.
+Compared to this example, there were a few minor differences in this study: The scanner for this study was located in Bennewitz, at the department of Magnetoencephalography, Institute for cognitive and brain sciences, Leipzig, Germany.
+The quality of recording was determined and adjusted before each session without the subject present.
+We used five HPI coils, attached to the forehead.
+Finally, we used between 180 and 200 extra digitizer points on the head surface.
 
-2.2.2. MRI
-Anatomical magnetic resonance imaging (aMRI) data were collected with a 3.0 Tesla TIM Trio scanner, located at the Max-Planck-Institute for Cognitive and Brain sciences. Three scans were acquired from each participant in one session: A T1-weighted scan, a T2-weighted scan and a diffusion weighted image. The T1-weighted scan used the magnetization-prepared rapid gradient echo (MPRAGE, [6]) sequence (flip angle = 9°, TR/TE/TI = 2300ms/2.96ms/900ms). The scan was oriented transverse (176 slices) with an isotropic resolution of 1mm. The T2-weighted scan used the SPACE sequence by [7] (flip angle = 120°, TR/TE = 3200ms/402ms). The scan was oriented transverse (176 slices at 1mm) with an inplane resolution of 0.5mm x 0.5mm.
+2.2.2.
+MRI
+Anatomical magnetic resonance imaging (aMRI) data were collected with a 3.0 Tesla TIM Trio scanner, located at the Max-Planck-Institute for Cognitive and Brain sciences.
+Three scans were acquired from each participant in one session: A T1-weighted scan, a T2-weighted scan and a diffusion weighted image.
+The T1-weighted scan used the magnetization-prepared rapid gradient echo (MPRAGE, [6]) sequence (flip angle = 9°, TR/TE/TI = 2300ms/2.96ms/900ms).
+The scan was oriented transverse (176 slices) with an isotropic resolution of 1mm.
+The T2-weighted scan used the SPACE sequence by [7] (flip angle = 120°, TR/TE = 3200ms/402ms).
+The scan was oriented transverse (176 slices at 1mm) with an inplane resolution of 0.5mm x 0.5mm.
 All scans used a 32-channel head coil for the [incoming data].
