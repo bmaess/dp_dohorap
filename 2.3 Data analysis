@@ -24,7 +24,7 @@ The resulting pre-processed data contained major artifacts from spontaneous chan
 Jump amplitudes were detected by selecting peaks in the z-transformed continuous data that exceeded a threshold of 12 standard deviations.
 Segments of 2 seconds in the pre-processed continuous data were rejected if any magnitude channel exceeded an amplitude of 6 * 10e-12 T (gradiometer channels: 400 * 10e-12 T/m).
 Continuous data were then decomposed into independent components (ICA) that explained 99% of the variance.
-Components that correlated significantly more (threshold of z=0.4) with EOG or ECG channels than other components were removed (children: median of 1 component per block, maximum of 3; adults: median of 0 components per block, maximum of 2).
+Components that correlated with EOG or ECG channels were removed with the  (children: median of [1 component] per block, [maximum of 3]; adults: median of [0 components] per block, [maximum of 2]).
 The resulting ICA components were used to reconstruct continuous data.
 
 [Epoching]
@@ -37,5 +37,18 @@ A baseline correction was omitted in favor of the initial highpass filtering.
 
 2.3.2.2 Time window estimation
 
+The condition effect was used to determine suitable time windows, which created a multiple comparison problem.
+This problem was resolved with a cluster-level permutation test.
 Extracted trials were split into a 4 parts (2 groups x 2 conditions).
 Since the group had a strong impact on RT (see [3.1.1]), effective time windows were estimated separately for children and adults.
+All trials within each subject group were pooled for this step.
+Trials contained average data from four different general locations and two conditions.
+The sensor selection was determined by the MNE function read_selection.
+General locations were specified according to [table 2].
+Clusters were determined with the MNE function stats.permutation_cluster_test (see [8]).
+For the permutation test, trials from both conditions were paired randomly and compared with a paired-sample F-test.
+Clusters were calculated from 2500 permutations, were selected when their initial F-value exceeded 1.0, and were corrected for multiple comparisons.
+
+* Table 2: General locations for the sensor-level analysis *
+ * "Description", "Visualization" *
+ * "Left/Right - frontal, temporal, parietal", [6 plots] *
