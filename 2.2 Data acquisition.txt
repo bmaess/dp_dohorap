@@ -1,6 +1,5 @@
 2.2.1 MEG
 
-[import scanning blurb from the wiki]
 Acquisition of magnetoencephalographic data is widely performed in a similar manner.
 The study by [1], if not otherwise indicated, will be quoted as a typical example in this chapter.
 
@@ -18,17 +17,17 @@ Four head position indicator (HPI) coils were attached to the participant's head
 Prior to the recording of each stimulus block, head location in the scanner was measured with an automatic process that detected the coils.
 Continuous HPI recorded any head movements during data acquisition.
 [quote ends]
-Compared to this example, there were a few minor differences in this study: The scanner for this study was located in Bennewitz, at the department of Magnetoencephalography, Institute for cognitive and brain sciences, Leipzig, Germany.
+Compared to this example, there were a few minor differences in this study: The scanner for this study was located in Bennewitz, at the department of Magnetoencephalography, Institute for Cognitive and Brain sciences, Leipzig, Germany.
 The quality of recording was determined and adjusted before each session without the subject present.
+We used a highpass filter of 330Hz instead of a bandpass filter.
 We used five HPI coils, attached to the forehead.
 Finally, we used between 180 and 200 extra digitizer points on the head surface.
 
-2.2.2.
-MRI
+2.2.2. MRI
 Anatomical magnetic resonance imaging (aMRI) data were collected with a 3.0 Tesla TIM Trio scanner, located at the Max-Planck-Institute for Cognitive and Brain sciences.
-Three scans were acquired from each participant in one session: A T1-weighted scan, a T2-weighted scan and a diffusion weighted image.
+Two scans were acquired from each participant in one session: A T1-weighted scan and a T2-weighted scan.
 The T1-weighted scan used the magnetization-prepared rapid gradient echo (MPRAGE, [6]) sequence (flip angle = 9°, TR/TE/TI = 2300ms/2.96ms/900ms).
-The scan was oriented transverse (176 slices) with an isotropic resolution of 1mm.
+This scan was oriented transverse (176 slices) with an isotropic resolution of 1mm.
 The T2-weighted scan used the SPACE sequence by [7] (flip angle = 120°, TR/TE = 3200ms/402ms).
-The scan was oriented transverse (176 slices at 1mm) with an inplane resolution of 0.5mm x 0.5mm.
+This scan was oriented transverse (176 slices at 1mm) with an inplane resolution of 0.5mm x 0.5mm.
 All scans used a 32-channel head coil for the [incoming data].

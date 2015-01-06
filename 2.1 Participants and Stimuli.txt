@@ -2,7 +2,7 @@ Participants
 
 18 children, aged between 9y 11m and 10y 10m at the time of the MEG session, and 22 adults, aged between [20 and 28] years, were recruited from the internal participants database.
 Subjects were selected if they spoke German as native language, if their language development was unremarkable, if their handedness score was above 80, if they fulfilled the prerequisites for MRI scans, and if their medical history was free of cognitive abnormalities.
-4 children and 5 adults dropped out inbetween sessions of the study.
+4 children and 4 adults dropped out inbetween sessions of the study.
 Two children were excluded from the analysis because their behavioral performance was at chance level, leaving 12 children and 17 adults for the subsequent analysis.
 Parents gave written informed consent and were compensated with [some money].
 Children agreed to participate in the study and were compensated with a 10€ gift voucher.
@@ -14,10 +14,12 @@ Task
 The study consisted of two sessions: an anatomical MRI acquisition (duration: 50 minutes) and an interactive magnetoencephalographic measurement (typical duration: 90 minutes).
 Since they took place in two different locations, there was a delay (median: 98 days, maximum: 243 days) between the two sessions.
 
-The MRI sessions is described in detail in [section 2.2.1].
+The MRI session is described in detail in [section 2.2.1].
 
-The MEG sessions consisted of two sections: a tutorial section and a main section.
-[Neuromag stimulation paragraph from the wiki]
+The MEG session consisted of two sections: a tutorial section and a main section.
+Generally, the participants were seated on a comfortable chair.
+Displays were produced by a computer at 75 Hz refresh rate and 1152x852 resolution using a video distribution amplifier Extron SW2 VGA DA2A and a projector Panasonic PT-D7700.
+Auditory stimuli were presented by a computer via a Stim2 system (Compumedics, Hamburg, Germany), a passive audio filter and Nicolet headphones (300 Ohms).
 
 [MEG tutorial section]
 First, the tutorial section described the usage of the interface.
