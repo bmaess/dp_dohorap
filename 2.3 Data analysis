@@ -5,7 +5,9 @@ Response time was measured at the condition onset, i.e. at the "d" sound of "den
 First, the slowest 10% of all trials were omitted.
 Of the remaining 90%, trials were omitted when they contained an incorrect response to the task or were skipped by the user.
 The median RT and the average RA were calculated per subject.
-Accuracy failed the * test for normality
+Both metrics were tested for the requirements for an analysis of variance (ANOVA).
+Normality of the residuals was tested with a Shapiro-Wilk test.
+Equality of variances was tested with a Bartlett test.
 Within-group comparisons were performed with [an ANOVA].
 
 2.3.2 Sensor-space activity
