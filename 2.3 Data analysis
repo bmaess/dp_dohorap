@@ -5,7 +5,7 @@ Response time was measured at the condition onset, i.e. at the "d" sound of "den
 First, the slowest 10% of all trials were omitted.
 Of the remaining 90%, trials were omitted when they contained an incorrect response to the task or were skipped by the user.
 The median RT and the average RA were calculated per subject.
-Since both metrics failed to adhere to a normal distribution once combined across groups or conditions, they were compared with a Mann-Whitney-Wilcoxon test.
+Accuracy failed the * test for normality
 Within-group comparisons were performed with [an ANOVA].
 
 2.3.2 Sensor-space activity
@@ -13,18 +13,18 @@ Within-group comparisons were performed with [an ANOVA].
 2.3.2.1 Preprocessing and artifact correction
 
 [Preprocessing and HPI correction]
-Data were preprocessed with the Elekta Neuromag® MaxFilter package (version 2.2, May 2009), with Matlab (version 2014a) and with MNE-Python (version 0.8.6, October 2014).
-MaxFilter software reduces noise in the data by suppressing magnetic interference coming from outside and inside the sensory array, using signal-space separation (SSS).
+Data were preprocessed with the three software packages: Elekta Neuromag® MaxFilter (version 2.2), Matlab (version 2014a) and MNE-Python (version 0.8.6).
+MaxFilter was used to reduced noise in the data by suppressing magnetic interference coming from outside and inside the sensory array, using signal-space separation (SSS).
 MEG recordings were corrected for HPI movements, and co-registered across blocks to the inital head position for each individual.
-Data were then subjected to a 0.4 FIR highpass filter (Hamming window design, 4367 coefficients, -130db damping at 0Hz) to remove slow trends.
+Data were then subjected to a 0.4Hz FIR highpass filter (Hamming window design, 4367 coefficients, -130db damping at 0Hz, processing in Matlab) to remove slow trends.
 
 [Artifact removal]
-MEG channels with abnormally high noise levels as identified by visual inspection were rejected from further analysis. A maximum of [3 channels] (median: [1 channel]) was removed.
+MEG channels with abnormally high noise levels as identified by visual inspection were rejected from further analysis. A median of [1 channel] (maximum: [3 channels]) was removed.
 The resulting pre-processed data contained major artifacts from spontaneous channel jumps, electrocardiographic (ECG) activity and electrooculographic (EOG) activity.
 Jump amplitudes were detected by selecting peaks in the z-transformed continuous data that exceeded a threshold of 12 standard deviations.
 Segments of 2 seconds in the pre-processed continuous data were rejected if any magnitude channel exceeded an amplitude of 6 * 10e-12 T (gradiometer channels: 400 * 10e-12 T/m).
 Continuous data were then decomposed into independent components (ICA) that explained 99% of the variance.
-Components that correlated with EOG or ECG channels were removed with the  (children: median of [1 component] per block, [maximum of 3]; adults: median of [0 components] per block, [maximum of 2]).
+Components that correlated with EOG or ECG channels were removed with the MNE methods preprocessing.ica_find_ecg_events() and preprocessing.ica_find_eog_events(), respectively. ICA-based correction removed a median of [1 component] per block (maximum: 3) in children, and a median of [0 components] per block (maximum: 1) in adults.
 The resulting ICA components were used to reconstruct continuous data.
 
 [Epoching]
@@ -32,7 +32,7 @@ The main trigger was set at the condition onset (described in [2.3.1]).
 Epochs were created between 1000ms before and 3000ms after the main trigger.
 If the trial was skipped or answered incorrectly, the epoch was rejected.
 This procedure yielded an average of [] trials in children and [] trials in adults.
-Data were filtered before epoching with a 45Hz FIR highpass ([filter order 6, cutoff at 50Hz]).
+Data were filtered before epoching with a 45Hz FIR lowpass ([insert filter properties from mne-python]).
 A baseline correction was omitted in favor of the initial highpass filtering.
 
 2.3.2.2 Time window estimation
@@ -52,3 +52,7 @@ Clusters were calculated from 2500 permutations, were selected when their initia
 * Table 2: General locations for the sensor-level analysis *
  * "Description", "Visualization" *
  * "Left/Right - frontal, temporal, parietal", [6 plots] *
+
+ 2.3.2.3 Activity analysis
+
+ Estimated time windows were used to 
