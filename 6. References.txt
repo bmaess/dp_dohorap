@@ -7,6 +7,9 @@ MNE-Python:
 MEG acquisition methods:
 [3] Cicmil, N., Bridge, H., Parker, A. J., Woolrich, M. W., & Krug, K. (2014). Localization of MEG human brain responses to retinotopic visual stimuli with contrasting source reconstruction approaches. Frontiers in Neuroscience, 8, 127. doi:10.3389/fnins.2014.00127
 
+Visual stimuli:
+[5] Schipke, C. S., Friederici, A. D., & Oberecker, R. (2011). Brain responses to case-marking violations in German preschool children. Neuroreport, 22(16), 850–4. doi:10.1097/WNR.0b013e32834c1578
+
 MRI acquisition methods:
 [6] MPRAGE sequence
 [7] SPACE sequence
