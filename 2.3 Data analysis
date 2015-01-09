@@ -1,21 +1,20 @@
 2.3.1 Behavioral data
 
+Data were preprocessed with the three software packages: Elekta Neuromag® MaxFilter (version 2.2), Matlab (version 2014a) and MNE-Python (version 0.8.6).
 Two types of behavioral data were analyzed for group and condition effects: response time (RT) and response accuracy (RA).
 Response time was measured at the condition onset, i.e. at the "d" sound of "den" or "der" (in the subject-relative clause or the object-relative clause, respectively).
-First, the slowest 10% of all trials were omitted.
-Of the remaining 90%, trials were omitted when they contained an incorrect response to the task or were skipped by the user.
-The median RT and the average RA were calculated per subject.
+Trials were omitted when they contained an incorrect response to the task or were skipped by the user.
+RT and RA were determined for each subject separately from the remaining trials.
+Median of the RT
 Both metrics were tested for the requirements for an analysis of variance (ANOVA).
-Normality of the residuals was tested with a Shapiro-Wilk test.
-Equality of variances was tested with a Bartlett test.
-Within-group comparisons were performed with [an ANOVA].
+Normality of the residuals was tested with a Shapiro-Wilk test [SW], implemented in Matlab.
+Equality of variances was tested with a Levene [LEV] test, implemented in SPSS.
 
 2.3.2 Sensor-space activity
 
 2.3.2.1 Preprocessing and artifact correction
 
 [Preprocessing and HPI correction]
-Data were preprocessed with the three software packages: Elekta Neuromag® MaxFilter (version 2.2), Matlab (version 2014a) and MNE-Python (version 0.8.6).
 MaxFilter was used to reduced noise in the data by suppressing magnetic interference coming from outside and inside the sensory array, using signal-space separation (SSS).
 MEG recordings were corrected for HPI movements, and co-registered across blocks to the inital head position for each individual.
 Data were then subjected to a 0.4Hz FIR highpass filter (Hamming window design, 4367 coefficients, -130db damping at 0Hz, processing in Matlab) to remove slow trends.
@@ -48,8 +47,7 @@ Trials contained average data from four different general locations and two cond
 The sensor selection was determined by the MNE function read_selection.
 General locations were specified according to [table 2].
 Clusters were determined with the MNE function stats.permutation_cluster_test (see [8]).
-For the permutation test, trials from both conditions were paired randomly and compared with a paired-sample F-test.
-Clusters were calculated from 2500 permutations, were selected when their initial F-value exceeded 1.0, and were corrected for multiple comparisons.
+This used 2500 permutations, an F-threshold of 1.0, and a one-tailed test.
 
 * Table 2: General locations for the sensor-level analysis *
  * "Description", "Visualization" *
