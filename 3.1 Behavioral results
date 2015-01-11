@@ -1,0 +1,31 @@
+If not noted otherwise, one value in brackets describes the standard deviation, and two values in brackets describe the upper and lower values of a 95% confidence interval.
+
+3.1.1 Response times
+A Shapiro-Wilk test was conducted to determine if individual data are normal distributed.
+No subject exceeded a probability of 0.01% that their response times were normal distributed.
+Therefore, we decided to represent individual response times by their median.
+
+A Shapiro-Wilk test was then conducted to determine if group-level data are normal distributed.
+The probability that childrens' median response times to object-relative clauses were normal distributed was less than p = 0.1%.
+The probability that childrens' median response times to subject-relative clauses were normal distributed was p = 2.1%.
+The probability that adults' median response times to object-relative clauses were normal distributed was p = 1.1%.
+The probability that adults' median response times to subject-relative clauses were normal distributed was p = 1.5%.
+
+The children needed a median time of 2.11s (0.91s) to respond to object-relative clauses.
+For subject-relative clauses, they needed 2.1s (0.61s).
+Adults needed a median time of 1.53s (0.52s) to respond to object-relative clauses.
+For subject-relative clauses, they needed 1.62s (0.53s).
+
+3.1.2 Response accuracy
+A Shapiro-Wilk test was conducted to determine if group-level accuracy data are normal distributed.
+Before transformation:
+The probability that childrens' response accuracy data to object-relative clauses were normal distributed was p = 6.5%.
+The probability that childrens' response accuracy data to subject-relative clauses were normal distributed was p = 2.0%.
+The probability that adults' response accuracy data to object-relative clauses were normal distributed was = 20.3%.
+The probability that adults' response accuracy data to subject-relative clauses were normal distributed was p = 11.2%.
+
+After transformation:
+The probability that childrens' response accuracy data to object-relative clauses were normal distributed was p = 27.3%.
+The probability that childrens' response accuracy data to subject-relative clauses were normal distributed was p = 25.3%.
+The probability that adults' response accuracy data to object-relative clauses were normal distributed was = 3.6%.
+The probability that adults' response accuracy data to subject-relative clauses were normal distributed was p = 0.5%.
