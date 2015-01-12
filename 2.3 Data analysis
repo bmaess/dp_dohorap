@@ -3,12 +3,16 @@
 Data were preprocessed with the three software packages: Elekta Neuromag® MaxFilter (version 2.2), Matlab (version 2014a) and MNE-Python (version 0.8.6).
 Two types of behavioral data were analyzed for group and condition effects: response time (RT) and response accuracy (RA).
 Response time was measured at the condition onset, i.e. at the "d" sound of "den" or "der" (in the subject-relative clause or the object-relative clause, respectively).
-Trials were omitted when they contained an incorrect response to the task or were skipped by the user.
+Trials were omitted when the subject skipped or answered them incorrectly.
+Trials were also omitted if the response took longer than 4000ms.
+This procedure removed 11.1% of the childrens' trials, and 2.5% of the adults' trials.
 RT and RA were determined for each subject separately from the remaining trials.
-Median of the RT
 Both metrics were tested for the requirements for an analysis of variance (ANOVA).
 Normality of the residuals was tested with a Shapiro-Wilk test [SW], implemented in Matlab.
 Equality of variances was tested with a Levene [LEV] test, implemented in SPSS.
+RA data failed the normality test (see chapter [3.1]).
+To include RA data in the following analysis, they were temporarily transformed to fit a normal distribution.
+This transformation was accomplished with the inverted sigmoid function.
 
 2.3.2 Sensor-space activity
 
@@ -30,8 +34,8 @@ The resulting ICA components were used to reconstruct continuous data.
 
 [Epoching]
 The main trigger was set at the condition onset (described in [2.3.1]).
-Epochs were created between 1000ms before and 3000ms after the main trigger.
-If the trial was skipped or answered incorrectly, the epoch was rejected.
+Epochs were created between 1000ms before and 4000ms after the main trigger.
+The epoch was rejected if the trial was skipped, or answered too slow (more than 4000ms) or answered incorrectly.
 This procedure yielded an average of [] trials in children and [] trials in adults.
 Data were filtered before epoching with a 45Hz FIR lowpass ([insert filter properties from mne-python]).
 A baseline correction was omitted in favor of the initial highpass filtering.
@@ -47,7 +51,7 @@ Trials contained average data from four different general locations and two cond
 The sensor selection was determined by the MNE function read_selection.
 General locations were specified according to [table 2].
 Clusters were determined with the MNE function stats.permutation_cluster_test (see [8]).
-This used 2500 permutations, an F-threshold of 1.0, and a one-tailed test.
+This function was run with 2500 permutations, an F-threshold of 1.0, and a one-tailed test.
 
 * Table 2: General locations for the sensor-level analysis *
  * "Description", "Visualization" *

@@ -48,6 +48,7 @@ The main section was used for MEG acquisition and consisted of 304 trials groupe
 There was a scheduled break between the blocks (usually 1-2 minutes) which included interaction with the research assistant.
 Subject-specific trial randomization was performed before the task.
 All stimuli-related randomization tasks were implemented with a time-seeded Mersenne-Twister approach in Python 2.7.
+Randomization contained two exceptions: neither the same image nor the same sentence could be played twice in a row.
 Each block consisted of 8 clusters.
 Subjects were shown a feedback screen at the end of each cluster, summarizing their performance throughout the recent cluster.
 Since manual intervention was necessary to proceed to the next cluster, subjects frequently used this opportunity for a tiny break (typically 5-20 seconds).
