@@ -13,6 +13,8 @@ Equality of variances was tested with a Levene [LEV] test, implemented in SPSS.
 RA data failed the normality test (see chapter [3.1]).
 To include RA data in the following analysis, they were temporarily transformed to fit a normal distribution.
 This transformation was accomplished with the inverted sigmoid function.
+x = -log(1./acc-1)
+
 
 2.3.2 Sensor-space activity
 
