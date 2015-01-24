@@ -31,7 +31,8 @@ The resulting pre-processed data contained major artifacts from spontaneous chan
 Jump amplitudes were detected by selecting peaks in the z-transformed continuous data that exceeded a threshold of 12 standard deviations.
 Segments of 2 seconds in the pre-processed continuous data were rejected if any magnitude channel exceeded an amplitude of 6 * 10e-12 T (gradiometer channels: 400 * 10e-12 T/m).
 Continuous data were then decomposed into independent components (ICA) that explained 99% of the variance.
-Components that correlated with EOG or ECG channels were removed with the MNE methods preprocessing.ica_find_ecg_events() and preprocessing.ica_find_eog_events(), respectively. ICA-based correction removed a median of [1 component] per block (maximum: 3) in children, and a median of [0 components] per block (maximum: 1) in adults.
+Components that correlated with EOG or ECG channels were removed with the MNE methods preprocessing.ica_find_ecg_events() and preprocessing.ica_find_eog_events(), respectively.
+ICA-based correction removed an average of 2.1 components per subject and block (minimum: 1, maximum: 4).
 The resulting ICA components were used to reconstruct continuous data.
 
 [Epoching]
@@ -42,23 +43,20 @@ This procedure yielded an average of [] trials in children and [] trials in adul
 Data were filtered before epoching with a 45Hz FIR lowpass ([insert filter properties from mne-python]).
 A baseline correction was omitted in favor of the initial highpass filtering.
 
-2.3.2.2 Time window estimation
+2.3.2.2 Activity analysis
 
 The condition effect was used to determine suitable time windows, which created a multiple comparison problem.
 This problem was resolved with a cluster-level permutation test.
 Extracted trials were split into a 4 parts (2 groups x 2 conditions).
 Since the group had a strong impact on RT (see [3.1.1]), effective time windows were estimated separately for children and adults.
-All trials within each subject group were pooled for this step.
-Trials contained average data from four different general locations and two conditions.
-The sensor selection was determined by the MNE function read_selection.
+Trials from each of the four parts were pooled for this step.
+Trials contained average data from four different sensor groups.
+The sensor group selection was determined by the MNE function read_selection.
 General locations were specified according to [table 2].
 Clusters were determined with the MNE function stats.permutation_cluster_test (see [8]).
-This function was run with 2500 permutations, an F-threshold of 1.0, and a one-tailed test.
+This process provides a less restrictive approach to multiple-comparison correction than, for example, the Bonferroni correction.
+The function was run with 2500 permutations, and an t-threshold of 1.0.
 
 * Table 2: General locations for the sensor-level analysis *
  * "Description", "Visualization" *
  * "Left/Right - frontal, temporal, parietal", [6 plots] *
-
- 2.3.2.3 Activity analysis
-
- Estimated time windows were used to 

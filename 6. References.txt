@@ -14,4 +14,4 @@ MRI acquisition methods:
 [6] MPRAGE sequence
 [7] SPACE sequence
 
-[8] Cluster permutation algorithm: ?
+[8] Cluster permutation algorithm:  Maris/Oostenveld (2007), "Nonparametric statistical testing of EEG- and MEG-data", Journal of Neuroscience Methods, Vol. 164, No. 1., pp. 177-190.

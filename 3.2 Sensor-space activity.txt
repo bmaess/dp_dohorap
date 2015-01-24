@@ -1,0 +1,56 @@
+Temporal clusters
+
+Comparing activity between conditions yielded several temporal clusters.
+
+For children, significant differences were observed by right-parietal, left-temporal magnetometers and right-temporal gradiometers.
+Right temporal gradiometers showed an effect between 1426ms and 1660ms (p = 4.3%).
+Left temporal magnetometers showed an effect between 345ms and 622ms (p = 1.0%).
+Right parietal magnetometers showed an effect between 159ms and 374ms (p = 3.1%).
+
+For adults, clusters of significant differences were observed by left-temporal gradiometers and left-parietal magnetometers.
+Left temporal gradiometers showed an effect between 257ms and 454ms (p = 2.0%).
+Left parietal magnetometers showed an effect between 618ms and 769ms (p = 0.28%).
+
+
+Sensor-level activity
+
+We computed average event-related fields (ERF) for each subject and sensor region.
+Activity from these ERF was selected with two different types of time windows.
+
+First, ERF activity was compared by using the time windows of region-specific clusters.
+In children, the second (345ms-622ms) and the first time window (159ms-374ms) yielded an effect.
+The effect during the second timewindow was mainly captured by the left frontal magnetometers (p = 4.5%, F = 4.5).
+It was weakly captured by the left (p = 9.1%, F = 3.1) and right (p = 7.2%, F = 3.6) temporal magnetometers.
+The effect during the third time window was captured by the right parietal magnetometers (p = 3.1%, F = 5.3).
+In adults, only the second time window (618ms-769ms) yielded an effect.
+This effect was weakly captured by the left temporal gradiometers (p = 5.2%, F = 4.0).
+
+Second, ERF activity was compared blindly between 0 and 1200ms after onset in 100ms intervals from all regions.
+The comparisons across these time windows yielded no effects in adults, and two effects in children.
+Both effects occurred between 400ms and 500ms after onset.
+One effect was captured the by right frontal gradiometer group.
+It indicated that activity was slightly stronger during object-related clauses (p = 6.1%, t = 4.48).
+The other effect was captured by the right temporal magnetometer group.
+It indicated that evoked fields were slightly more positive during object-related clauses (p = 3.4%, t = 4.84).
+All statistical results were Bonferroni-corrected with 66 comparisons (2 hemispheres, 3 sensory regions, 11 time intervals).
+
+
+Source-level activity
+We estimated cortical activity with sLORETA localization on a subject-specific BEM model.
+This activity was compared in different cortical regions.
+First, localized activity was compared by using the time windows from the cluster analysis.
+Comparisons in children only yielded an effect during the first time window (1426ms-1660ms).
+This effect was represented in signed activity from the left prcs (p=4.7%, F=4.4).
+It was also weakly represented in pooled activity from the right BA44 (p = 5.9%, F = 4.0).
+Comparisons in adults only yielded an effect during the second time window (618ms-769ms).
+It could be seen in pooled activity from the right pSTS (p=3.8%, F=4.6).
+This effect was also visible in signed activity from the left BA45 (p=4.5%, F=4.3) and the right PAC (p=4.4%, F=4.4).
+
+Second, localized activity was compared blindly between 0 and 1600ms after onset in 200ms intervals.
+In this comparison, only adults showed an effect.
+The first effect could be observed in the left region BA45.
+Between 400ms and 600ms, activity was more positive during object-related clauses (p = 1.7%, t = 4.5).
+This effect continued in this region between 600ms and 800ms (p = 1.5%, t = 4.6).
+During this time interval, the effect in the right region pSTS showed the same direction (p = 0.93%, t = 4.8).
+
+All statistical results were Bonferroni-corrected with 56 comparisons (2 hemispheres, 4 localized regions, 7 time intervals).
