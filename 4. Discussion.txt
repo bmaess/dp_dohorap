@@ -1,4 +1,18 @@
 [What do this data mean?]
+Sensor data:
+Confirmation by cluster analysis, and by blind comparison
+
+Children:
+"Middle": 183-350, positive, right parietal mags
+"Late": 380-647, negative, left-temporal and left-frontal mags
+"Very Late": 1455-1631, positive, (right-temporal grads)
+Adults:
+"Middle": 282-429 (left-temporal grads)
+"Late": 637-750 (left-parietal mags)
+"Very late": 1013-1136 (right-temporal mags)
+
+Source data:
+
 
 [Are the hypotheses confirmed?]
 

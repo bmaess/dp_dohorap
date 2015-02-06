@@ -43,7 +43,7 @@ if useRealData
         data{cond} = struct();
         data{cond}.time = cell(1,1);
         data{cond}.trial = cell(1,1);
-        data{cond}.label = {'pSTG', 'BA44'};
+        data{cond}.label = {'pSTG', 'BA45'};
         data{cond}.fsample = fsample;
         for i = 1:higherCount
             p = file{cond}.lh_pSTS{i}';
@@ -75,7 +75,7 @@ else
         data{cond} = struct();
         data{cond}.time = cell(1,1);
         data{cond}.trial = cell(1,1);
-        data{cond}.label = {'pSTG', 'BA44'};
+        data{cond}.label = {'pSTG', 'BA45'};
         data{cond}.fsample = fsample;
         for i = 1:160
             data{cond}.time{1,i} = timescale;
@@ -106,9 +106,9 @@ else
 end
 
 %% Prepare the data
-cfgTEP.sgncmb = {'pSTG','BA44';'BA44','pSTG'};
+cfgTEP.sgncmb = {'pSTG','BA45';'BA45','pSTG'};
 cfgTEP.Path2TSTOOL = '/Users/goocy/Documents/MATLAB/OpenTSTOOL';
-cfgTEP.toi = [-0.05, 0.15];
+cfgTEP.toi = [0.35, 0.80];
 cfgTEP.predicttime_u = 10;
 cfgTEP.predicttimemin_u    = 2;      % minimum u to be scanned
 cfgTEP.predicttimemax_u    = 20;	  % maximum u to be scanned

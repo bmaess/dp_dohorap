@@ -2,13 +2,14 @@ Table of contents
 =================
 
 1. Research perspective
-  1. Linguistic basis
-  2. Cognitive basis for syntactic processing
-  3. Structural and functional differences between children and adults
-  4. Research questions and hypotheses
-  5. Choice of measurement methods
+  1. Functional anatomy of language processing
+  2. Developmental aspects
+  3. Research questions and hypotheses
+  4. Choice of measurement methods
 
-2. Methods
+2. Pilot study
+
+3. Methods
   1. Participants and stimuli
   2. Data acquisition
   3. Data analysis
@@ -20,7 +21,7 @@ Table of contents
       1. Reconstruction of cortical activity
       2. Activity analysis
 
-3. Results
+4. Results
   1. Behavioral results
     1. Response times
     2. Accuracy
@@ -31,9 +32,9 @@ Table of contents
     1. Inverse models review
     2. Comparison of regional activity
 
-4. Discussion
+5. Discussion
   1. Impact on hypotheses
   2. Comparison to previous results
   3. Limitations and possibilities of this study
 
-5. Conclusion
+6. Conclusion

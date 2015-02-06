@@ -113,7 +113,7 @@ end
 [sensorsX,sensorsY]=pol2cart(ttheta,pi/2-tphi);
 
 scalings = {1e15, 1e13};
-xlims = [-0.2, 2.5];
+xlims = [-0.5, 2.5];
 layoutPositions = {[0.6 0.2 0.35 0.35], [0.05 0.62 0.35 0.35]};
 for sensID = [2, 1]
     sensors = sensorText{sensID};
@@ -139,14 +139,11 @@ for sensID = [2, 1]
                 for c = 1:numel(conditions)
                     condition = conditions{c};
                     color = conditionColors(c,:);
-                    a = smooth(squeeze(averageData{sensID,g}(c,d,l,:))') * scaling;
-                    s = smooth(squeeze(stdevData{sensID,g}(c,d,l,:))') * scaling;
+                    a = squeeze(averageData{sensID,g}(c,d,l,:))' * scaling;
+                    s = squeeze(stdevData{sensID,g}(c,d,l,:))' * scaling;
                     % Plot the filled charts
                     xFill = [-2, timescale, 6, fliplr(timescale), -2];
                     yFill = [0, a-s, 0, fliplr(a+s), 0];
-                    if sensID == 2
-                        fill(xFill, [0, a, 0, a*0, 0], color, 'FaceAlpha', 0.1);
-                    end
                     fill(xFill, yFill, color, 'EdgeColor', 'None', 'FaceAlpha', 0.2);
                     aData(c,:) = a;
                 end

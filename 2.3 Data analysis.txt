@@ -43,10 +43,11 @@ This procedure yielded an average of [] trials in children and [] trials in adul
 Data were filtered before epoching with a 45Hz FIR lowpass ([insert filter properties from mne-python]).
 A baseline correction was omitted in favor of the initial highpass filtering.
 
-2.3.2.2 Activity analysis
+2.3.2.2 Establishing time windows of interest
 
-The condition effect was used to determine suitable time windows, which created a multiple comparison problem.
-This problem was resolved with a cluster-level permutation test.
+The condition effect was used to determine suitable time windows.
+If this comparison is strategy typically overestimates  a multiple comparison problem.
+This problem was resolved with a cluster-level permutation.
 Extracted trials were split into a 4 parts (2 groups x 2 conditions).
 Since the group had a strong impact on RT (see [3.1.1]), effective time windows were estimated separately for children and adults.
 Trials from each of the four parts were pooled for this step.
@@ -60,3 +61,9 @@ The function was run with 2500 permutations, and an t-threshold of 1.0.
 * Table 2: General locations for the sensor-level analysis *
  * "Description", "Visualization" *
  * "Left/Right - frontal, temporal, parietal", [6 plots] *
+
+ 2.3.3 Source space activity
+
+ 2.3.4 Interaction analysis
+
+The TRENtool software was used for exploring interactions between cortical areas.
