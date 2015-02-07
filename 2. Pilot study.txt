@@ -1,0 +1,15 @@
+[Experimental paradigm]
+
+[Acquisition]
+
+21 children, behavioral experiment
+Two pictures, spoken sentence ("Wo ist der Hund, den der Tiger wäscht?"), two buttons
+
+[Analysis]
+
+Behavioral data was analyzed with Matlab (version 2014a).
+Two types of behavioral data were analyzed for group and condition effects: response time (RT) and response accuracy (RA).
+Response time was measured at the condition onset, i.e. at the "d" sound of "den" or "der" (in the subject-relative clause or the object-relative clause, respectively).
+Trials were omitted when the subject skipped or answered them incorrectly.
+Subject-specific response accuracy was evaluated against the chance level
+Response times from remaining trials

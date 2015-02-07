@@ -67,3 +67,5 @@ The function was run with 2500 permutations, and an t-threshold of 1.0.
  2.3.4 Interaction analysis
 
 The TRENtool software was used for exploring interactions between cortical areas.
+Role of embedding, Ragwitz optimization
+statistical tests between conditions and multiple comparisons

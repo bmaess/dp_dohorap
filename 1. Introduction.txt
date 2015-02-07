@@ -1,35 +1,74 @@
  1.1 Functional anatomy of language processing
 
+[White fiber tracts]
 Brain tries to save space and energy
 Connections cost both space and energy, so brain is largely locally organized
 Long-distance connections cost much more space and energy than local connections, while not transferring more information
 The fact that long-distance connections exist means the transferred information is especially important and/or highly compressed
+
+[Language network]
 Dorsal & Ventral streams
 The ventral stream uses two major long-distance fiber tracts: ECFS and UF
 Ventral pathway I (ECFS): STG to BA45
 Ventral pathway II (UF): aSTG to FOP
 The dorsal stream uses two major long-distance fiber tracts: The arcuate fascicle and the superior longitudinal fascicle.
-Dorsal pathway I: pSTG to premotor cortex in BA6
-Dorsal pathway II: pSTG to BA44
- 
- 1.2 Developmental aspects
- Kids don't have the AF tract yet
- Without AF, kids rely strongly on other regions (BA45)
- Processing is slower and more vulnerable to bias
- Error rates from misunderstandings are higher too
+Dorsal pathway I (SLF): pSTG to premotor cortex in BA6
+Dorsal pathway II (AF): pSTG to BA44
 
- 
- 1.3 Research questions
- Replication of earlier results with MEG
- Determining ROI and TOI
- Interaction analysis of ROI
+[Cortical activity]
+Region of interest: pSTG
+pSTG is involved in complex syntax
+Accurate role in syntactic processing isn't clear yet
+Utilizing dorsal pathway I and II for researching pSTG
+Paradigm of choice: Object-/Subject-relative clauses
+Previous findings: pSTG and IFG (BA44, 45, 47 + FOP) are more active in object-relative clauses
 
- 1.4 Hypotheses
- 
- 1.5 Choice of measurement methods
-[]
+
+1.2 Developmental aspects
+
+Kids don't have the AF tract yet
+Previous findings: kids rely more on the ventral pathway
+Ventral processing involves BA45 (no condition effect in adults)
+Processing is more vulnerable to bias (semantic crosstalk)
+Behavioral data is worse too
+
+
+1.3 Research questions
+
+Replication of EEG/fMRI results with MEG?
+Which cortical regions are involved in the conditional effect?
+Is semantic content relevant?
+How long does each processing stage take?
+In which order do the steps take place?
+Can we see a different pathway in kids?
+
+[Hypotheses]
+Condition effect mainly in pSTG, BA44 (adults), BA45 (kids)
+Kids: worse performance than adults
+Kids: less involvement of pSTG
+Adults vs kids: Dorsal II vs. Ventral II
+
+
+1.4 Choice of measurement methods
+
+[Acquisition]
+MEG: Very high sampling rate
+very little spatial distortion from the head
+Low signal-to-noise ratio
+
+[Forward models]
+Based on individual high-resolution anatomical data
+1-layer BEM: Robust creation, good software support
+Quick and semi-automated process
+
+[Localization]
+Distributed source model: models a ton of unwanted activity
+-> high SNR for actual ROI
+sLORETA: no overlap effect at the boundaries, high ROI specificity
 
 [Information transfer]
-Different approaches, different assumptions
-
-Transfer Entropy: model-free, non-linear
+Meaning of information transfer
+modelling vs. model-free, linear vs. nonlinear
+Transfer Entropy is suited best for highly complex, nonlinear timescale data
+Potential pitfall: Volume conduction (can also come from bad localization)
+TrenTOOL can correct volume conduction
