@@ -27,32 +27,41 @@ clear i rawParts parts p rp offset trigger wavfile triggerFile t
 % load response, responseList, words
 load('responseData.mat');
 subjectCount = numel(responses);
-responseTime = cell(1, subjectCount);
-subjectWord = cell(1, subjectCount);
-verbWord = cell(1, subjectCount);
-objectWord = cell(1, subjectCount);
-subjectID = cell(1, subjectCount);
 medianRT = zeros(1,subjectCount);
 accuracy = zeros(1,subjectCount);
+careless = zeros(2,subjectCount);
+ratio = zeros(1,subjectCount);
+conditionalAccuracy = zeros(2, subjectCount);
 for s = 1:subjectCount
     r = responses{s};
-    validTrials = r(4,:) == 1;
-    trialIDs = r(1,validTrials);
+    trialIDs = r(1,:);
     offsets = trialIDoffsets(trialIDs);
-    responseTime{s} = r(2,validTrials) - offsets;
+    rawRT = r(2,:) - offsets;
+    validTrials = r(4,:) == 1 & rawRT > 0;
+    validTrialIDs = trialIDs(validTrials);
+    responseTime{s} = rawRT(validTrials);
     responseSide{s} = r(5,validTrials);
     subjectWord{s} = r(6,validTrials);
     verbWord{s} = r(7,validTrials);
     objectWord{s} = r(8,validTrials);
     subjectID{s} = ones(1,sum(validTrials))*s;
-    condition{s} = (trialIDs <= 152)+1;
+    condition{s} = (validTrialIDs <= 152) +1;
     
     % Behavioral data
     accuracy(s) = mean(r(4,:));
     medianRT(s) = median(responseTime{s});
+    [pRandom, pciRandom] = binofit(round(size(r,2)/2), size(r,2), 0.01);
+    careless(1,s) = accuracy(s) < pciRandom(2);
+    secondConditionTrials = (r(1,:) >= 152);
+    firstConditionTrials = (r(1,:) <= 152);
+    conditionCount{s} = [sum(firstConditionTrials), sum(secondConditionTrials)];
+    conditionalAccuracy(1,s) = mean(r(4,firstConditionTrials));
+    conditionalAccuracy(2,s) = mean(r(4,secondConditionTrials));
+    [pRandom, pciRandom] = binofit(round(sum(firstConditionTrials)/2), sum(firstConditionTrials), 0.01);
+    careless(2,s) = conditionalAccuracy(1,s) < pciRandom(2);
+    ratio(s) = sum(firstConditionTrials) / sum(secondConditionTrials);
 end
-clear r validTrials offsets s
-validSubjects = accuracy >= 0.8;
+clear r offsets s
 
 responseTimeL = [];
 responseSideL = [];
@@ -61,8 +70,8 @@ verbWordL = [];
 objectWordL = [];
 conditionL = [];
 for s = 1:subjectCount;
-    if validSubjects(s)
-        responseTimeL = [responseTimeL, responseTime{s}];
+    if ~careless(2,s)
+        responseTimeL = [responseTimeL, log(responseTime{s})];
         responseSideL = [responseSideL, responseSide{s}];
         subjectWordL = [subjectWordL, subjectWord{s}];
         verbWordL = [verbWordL, verbWord{s}];
@@ -71,4 +80,6 @@ for s = 1:subjectCount;
     end
 end
 clear s
-mainEffects = anovan(responseTimeL, {responseSideL subjectWordL verbWordL objectWordL});
+
+[~,accuracyP,accuracyCI,accuracyStats] = ttest(conditionalAccuracy(1,~careless(1,:)), conditionalAccuracy(2,~careless(1,:)));
+[rtP, rtTable, rtStats] = anovan(responseTimeL, {responseSideL, subjectWordL, verbWordL, objectWordL, conditionL});
