@@ -1,17 +1,61 @@
 [Experimental paradigm]
 
-[Stimuli and acquisition]
+The experimental design consisted of two syntactic conditions.
+Conditions differed only in the use of subject-relative or object-relative clauses.
+The clauses were always posed as questions.
+Each question was posed according to this template: Where is the [explicit actor] who [active or passive verb] the [explicit recipient]?.
+This experiment presented object-relative clauses and subject-relative clauses in random order at a ratio of 2.5:1.
 
-21 children, behavioral experiment
-Two pictures, spoken sentence ("Wo ist der Hund, den der Tiger wäscht?"), two buttons
-Object-relative clauses appeared 2.5 times as often as subject-relative clauses.
+[Participants]
+
+21 children (9 female) were recruited from the internal participants database.
+Subjects were selected if they spoke German as native language, if their language development was unremarkable, if their handedness score was above 70 and if their medical history was free of cognitive abnormalities.
+Children were aged between [9y11m] and [10y9m] and described as right-handed by their parents.
+Parents gave written informed consent and were compensated with 7,50€.
+Children agreed to participate in the study and were compensated with a toy at an average value of 12€.
+All experimental procedures were approved by the University of Leipzig Ethical Review Board.
+
+[Task and Stimuli]
+
+Participants were seated on a height-adjustable office chair.
+Visual and auditory stimuli were produced by a computer running Presentation (version 14.0) at 60Hz refresh rate and 1024x768 resolution.
+Video signal was displayed by a 17-inch TFT display at a distance of approximately 80cm.
+Sound was produced produced by an on-board sound card and played via semi-open Sennheiser headphones.
+
+The session consisted of two sections: a tutorial and the main experiment.
+The tutorial section introduced the physical interface and 36 practice trials.
+The main section consisted of 18 clusters with 12 trials each (216 total).
+All trials were randomized by Presentation at the beginning of the experiment.
+Randomization contained an exception: no two identical images could be presented after another.
+Subjects were shown a feedback screen at the end of each cluster.
+
+Each trial started by showing a set of visual stimuli.
+200ms later, a spoken question started playing.
+Possible responses included pressing the left, right or the skip button.
+The trial ended with an auditory and visual feedback.
+
+A set of visual stimuli consisted of a two side-by-side images on black background.
+Each image depicted two cartoon animals on a white background.
+In one picture, one of the animals performed a social action on the other animal.
+In the other picture, the roles were reversed.
+Subjects needed to identify the picture that answered the question correctly.
+
+Questions were spoken in a natural, child-directed tone by a native speaker.
+
+Immediately after each response, an icon appeared below the two animal pairs.
+A green checkmark, a diagonal red cross and a yellow skip symbol signified a correct response, an incorrect response and an invalid trial, respectively.
+The trial feedback screen was presented for a random interval between 400ms and 800ms.
+
+This experiment created a tradeoff between speed and accuracy.
+To encourage a high level of attention and a high number of usable trials, a feedback screen was displayed at the end of each cluster.
+On this screen, two linear bar graphs visualized performance speed and accuracy.
 
 [Analysis]
 
 Behavioral data were analyzed with Matlab (version 2014a).
 Response accuracy was evaluated for the case that subjects responded randomly.
 For this purpose, accuracy was compared to the outcome of a random sequence of binary events.
-We established the alpha = 0.01 confidence interval for the percentage of correct trials (k/n) that could be answered correctly purely by chance.
+We established the alpha = 0.01 confidence interval for the percentage of correct trials (k÷n) that could be answered correctly purely by chance.
 This calculation was implemented using the binomial fit method in Matlab: binofit(k, n, alpha).
 If the upper confidence interval of this calculation exceeded the subject-specific accuracy, the subject was removed from further analysis.
 Two subjects failed to exceed chance level performance, leaving 19 subjects for the analysis.
@@ -21,12 +65,12 @@ Response time was measured at the condition onset, i.e. at the "d" sound of "den
 Trials were omitted when the subject skipped or answered them incorrectly, or responded earlier than the cue.
 Accuracy was calculated by dividing the amount of of correct trials by the amount of total trials for each subject.
 
-The Shapiro-Wilk test (Matlab method swtest()) was used to test for normal-distributed residuals.
+A Shapiro-Wilk test was used to test for normal-distributed residuals.
 Accuracy passed this test at a p = 0.01 significance level.
 The impact of the syntactic condition on response accuracy was determined with a T-test.
 
 Response times were transformed with the logarithm function to approach normality.
-Residuals did not pass the Shapiro-Wilk test, but appeared to be close to a normal distribution (see Fig. 2.1).
+Transformed residuals failed the Shapiro-Wilk test, but appeared to be distributed roughly normal (see Fig. 3.1).
 The impact on response time was determined with a five-way-ANOVA (main effects only).
 ANOVA are robust against small deviations from normality, which allowed us to assume normality for this test.
 The five possible impact factors were response side (left / right), condition (object-relative / subject-relative) and three sentence particles.
@@ -42,17 +86,24 @@ The median accuracy was 70% (worst 5%: 62%, best 5%: 94%).
 The syntactic condition had a highly significant effect on accuracy (p < 0.001, t(18) = -14.0).
 The syntactic condition also had a highly significant effect on response time (p < 0.001, F = 17.0).
 No other factors had a significant effect on response time (p > 0.1, F < 1.5).
+
 Post-hoc tests were conducted to reveal the condition-specific average data values.
 The average accuracy for responses to subject-relative clauses was much higher than to object-relative clauses (93% and 64%, respectively).
 The median response time to subject-relative clauses was slightly higher than to object-relative clauses (2.1s and 1.8s).
-
-We repeated the binomial fit test while selecting only the accuracy for object-relative clauses.
-8 of 19 subjects failed the test in this condition at a p = 0.01 significance level.
+We repeated the binomial fit test of the individual accuracy while selecting only responses with object-relative clauses.
+8 of 19 subjects failed this test at a p = 0.01 significance level.
 After removing these subjects from the analysis, selected tests were repeated.
 The impact of the syntactic condition on response time weakened slightly (p < 0.001, F = 14.3).
-Median response times remained stable for both conditions.
+Median response times remained stable in both conditions.
 The difference in accuracy weakened as well (p < 0.001, t(10) = -9.4).
 Average accuracy in the remaining subjects improved slightly (95% for subject-relative clauses and 68% for object-relative clauses).
 
 [Discussion]
 
+Compared to typical adults, our children performed considerably worse in both accuracy and response time.
+Existing neuroanatomical evidence suggests that the arcuate fascicle (AF) is not yet fully developed until late adolescence.
+42% of our subjects failed to perform better than chance level when the task required a fully-developed AF.
+Both response time and accuracy results indicate that the 10-year age bracket was suitable for selecting subjects with an incomplete dorsal tract II.
+
+Furthermore, both response times and accuracy levels are comparable with the findings of similar experiments.
+Skeide

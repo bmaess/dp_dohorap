@@ -8,7 +8,7 @@ Therefore, we decided to represent individual response times by their median.
 
 Children needed a median time of 1.91s (1.64s, 2.19s) to respond to object-relative clauses.
 For subject-relative clauses, they needed 1.97s (1.69s, 2.25s).
-Adults needed a median time of 1.51s (1.28, 1.73s) to respond to object-relative clauses.
+Adults needed a median time of 1.51s (1.28s, 1.73s) to respond to object-relative clauses.
 For subject-relative clauses, they needed 1.60s (1.37s, 1.82s).
 
 A Shapiro-Wilk test determined that response time data was normal distributed with a probability between 1.5% and 27%.

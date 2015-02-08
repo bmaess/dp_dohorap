@@ -30,6 +30,7 @@ subjectCount = numel(responses);
 medianRT = zeros(1,subjectCount);
 accuracy = zeros(1,subjectCount);
 careless = zeros(2,subjectCount);
+trialCount = {};
 ratio = zeros(1,subjectCount);
 conditionalAccuracy = zeros(2, subjectCount);
 for s = 1:subjectCount
@@ -39,6 +40,7 @@ for s = 1:subjectCount
     rawRT = r(2,:) - offsets;
     validTrials = r(4,:) == 1 & rawRT > 0;
     validTrialIDs = trialIDs(validTrials);
+    trialCount{s} = r(9,validTrials);
     responseTime{s} = rawRT(validTrials);
     responseSide{s} = r(5,validTrials);
     subjectWord{s} = r(6,validTrials);
@@ -50,14 +52,14 @@ for s = 1:subjectCount
     % Behavioral data
     accuracy(s) = mean(r(4,:));
     medianRT(s) = median(responseTime{s});
-    [pRandom, pciRandom] = binofit(round(size(r,2)/2), size(r,2), 0.01);
+    [~, pciRandom] = binofit(round(size(r,2)/2), size(r,2), 0.01);
     careless(1,s) = accuracy(s) < pciRandom(2);
     secondConditionTrials = (r(1,:) >= 152);
     firstConditionTrials = (r(1,:) <= 152);
     conditionCount{s} = [sum(firstConditionTrials), sum(secondConditionTrials)];
     conditionalAccuracy(1,s) = mean(r(4,firstConditionTrials));
     conditionalAccuracy(2,s) = mean(r(4,secondConditionTrials));
-    [pRandom, pciRandom] = binofit(round(sum(firstConditionTrials)/2), sum(firstConditionTrials), 0.01);
+    [~, pciRandom] = binofit(round(sum(firstConditionTrials)/2), sum(firstConditionTrials), 0.01);
     careless(2,s) = conditionalAccuracy(1,s) < pciRandom(2);
     ratio(s) = sum(firstConditionTrials) / sum(secondConditionTrials);
 end
@@ -69,6 +71,7 @@ subjectWordL = [];
 verbWordL = [];
 objectWordL = [];
 conditionL = [];
+trialCountL = [];
 for s = 1:subjectCount;
     if ~careless(2,s)
         responseTimeL = [responseTimeL, log(responseTime{s})];
@@ -77,6 +80,7 @@ for s = 1:subjectCount;
         verbWordL = [verbWordL, verbWord{s}];
         objectWordL = [objectWordL, objectWord{s}];
         conditionL = [conditionL, condition{s}];
+        trialCountL = [trialCountL, trialCount{s}];
     end
 end
 clear s
