@@ -1,0 +1,16 @@
+1.1 The role of white matter tracts in syntax processing
+
+[White fiber tracts]
+Brain tries to save space and energy
+Connections cost both space and energy, so brain is largely locally organized
+Long-distance connections cost much more space and energy than local connections, while not transferring more information
+The fact that long-distance connections exist means the transferred information is especially important and/or highly compressed
+
+[Language network]
+Dorsal & Ventral streams
+The ventral stream uses two major long-distance fiber tracts: ECFS and UF
+Ventral pathway I (ECFS): STG to BA45
+Ventral pathway II (UF): aSTG to FOP
+The dorsal stream uses two major long-distance fiber tracts: The arcuate fascicle and the superior longitudinal fascicle.
+Dorsal pathway I (SLF): pSTG to premotor cortex in BA6
+Dorsal pathway II (AF): pSTG to BA44

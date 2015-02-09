@@ -1,0 +1,23 @@
+1.4 Choice of measurement methods
+
+[Acquisition]
+MEG: Very high sampling rate
+very little spatial distortion from the head
+Low signal-to-noise ratio
+
+[Forward models]
+Based on individual high-resolution anatomical data
+1-layer BEM: Robust creation, good software support
+Quick and semi-automated process
+
+[Localization]
+Distributed source model: models a ton of unwanted activity
+-> high SNR for actual ROI
+sLORETA: no overlap effect at the boundaries, high ROI specificity
+
+[Information transfer]
+Meaning of information transfer
+modelling vs. model-free, linear vs. nonlinear
+Transfer Entropy is suited best for highly complex, nonlinear timescale data
+Potential pitfall: Volume conduction (can also come from bad localization)
+TrenTOOL can correct volume conduction
