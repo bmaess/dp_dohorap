@@ -3,12 +3,13 @@
 The experimental design consisted of two syntactic conditions.
 Conditions differed only in the use of subject-relative or object-relative clauses.
 The clauses were always posed as questions.
-Each question was posed according to this template: Where is the [explicit actor] who [active or passive verb] the [explicit recipient]?.
+Each question was posed according to this template: Where is the [explicit actor] who [active or passive verb] the [explicit recipient]?
+For a more detailed analysis, see fig. 2.1.
 This experiment presented object-relative clauses and subject-relative clauses in random order at a ratio of 2.5:1.
 
 [Participants]
 
-21 children (9 female) were recruited from the internal participants database.
+21 children ([9 female]) were recruited from the internal participants database.
 Subjects were selected if they spoke German as native language, if their language development was unremarkable, if their handedness score was above 70 and if their medical history was free of cognitive abnormalities.
 Children were aged between [9y11m] and [10y9m] and described as right-handed by their parents.
 Parents gave written informed consent and were compensated with 7,50€.
@@ -17,16 +18,11 @@ All experimental procedures were approved by the University of Leipzig Ethical R
 
 [Task and Stimuli]
 
-Participants were seated on a height-adjustable office chair.
-Visual and auditory stimuli were produced by a computer running Presentation (version 14.0) at 60Hz refresh rate and 1024x768 resolution.
-Video signal was displayed by a 17-inch TFT display at a distance of approximately 80cm.
-Sound was produced produced by an on-board sound card and played via semi-open Sennheiser headphones.
-
 The session consisted of two sections: a tutorial and the main experiment.
 The tutorial section introduced the physical interface and 36 practice trials.
 The main section consisted of 18 clusters with 12 trials each (216 total).
 All trials were randomized by Presentation at the beginning of the experiment.
-Randomization contained an exception: no two identical images could be presented after another.
+There was an exception to the random order: no two identical images were presented after another.
 Subjects were shown a feedback screen at the end of each cluster.
 
 Each trial started by showing a set of visual stimuli.
@@ -40,7 +36,7 @@ In one picture, one of the animals performed a social action on the other animal
 In the other picture, the roles were reversed.
 Subjects needed to identify the picture that answered the question correctly.
 
-Questions were spoken in a natural, child-directed tone by a native speaker.
+Questions were voiced in a natural, child-directed tone by a professional native speaker.
 
 Immediately after each response, an icon appeared below the two animal pairs.
 A green checkmark, a diagonal red cross and a yellow skip symbol signified a correct response, an incorrect response and an invalid trial, respectively.
@@ -48,7 +44,11 @@ The trial feedback screen was presented for a random interval between 400ms and 
 
 This experiment created a tradeoff between speed and accuracy.
 To encourage a high level of attention and a high number of usable trials, a feedback screen was displayed at the end of each cluster.
-On this screen, two linear bar graphs visualized performance speed and accuracy.
+On this screen, two bar graphs visualized response speed and accuracy during the preceding cluster.
+
+Visual and auditory stimuli were produced by a computer running Presentation (version 14.0).
+Video signal was displayed by a 17-inch TFT display at a distance of approximately 80cm.
+Sound was played with a pair of semi-open headphones.
 
 [Analysis]
 
@@ -61,7 +61,7 @@ If the upper confidence interval of this calculation exceeded the subject-specif
 Two subjects failed to exceed chance level performance, leaving 19 subjects for the analysis.
 
 Two types of behavioral data were analyzed for group and condition effects: response time (RT) and response accuracy (RA).
-Response time was measured at the condition onset, i.e. at the "d" sound of "den" or "der" (in the subject-relative clause or the object-relative clause, respectively).
+Response time was measured at the condition onset, i.e. at the "d" sound of the sixth word.
 Trials were omitted when the subject skipped or answered them incorrectly, or responded earlier than the cue.
 Accuracy was calculated by dividing the amount of of correct trials by the amount of total trials for each subject.
 
@@ -70,7 +70,7 @@ Accuracy passed this test at a p = 0.01 significance level.
 The impact of the syntactic condition on response accuracy was determined with a T-test.
 
 Response times were transformed with the logarithm function to approach normality.
-Transformed residuals failed the Shapiro-Wilk test, but appeared to be distributed roughly normal (see Fig. 3.1).
+Transformed residuals failed the Shapiro-Wilk test, but appeared to be distributed roughly normal (see Fig. 2.2).
 The impact on response time was determined with a five-way-ANOVA (main effects only).
 ANOVA are robust against small deviations from normality, which allowed us to assume normality for this test.
 The five possible impact factors were response side (left / right), condition (object-relative / subject-relative) and three sentence particles.
@@ -105,5 +105,35 @@ Existing neuroanatomical evidence suggests that the arcuate fascicle (AF) is not
 42% of our subjects failed to perform better than chance level when the task required a fully-developed AF.
 Both response time and accuracy results indicate that the 10-year age bracket was suitable for selecting subjects with an incomplete dorsal tract II.
 
-Furthermore, both response times and accuracy levels are comparable with the findings of similar experiments.
-Skeide
+Both response times and accuracy levels are comparable with the findings of similar experiments.
+The study by Skeide [2.1] reported accuracy levels of 94% in both conditions.
+The authors were surprised by the good performance and speculated that semantic cues may have helped with sentence comprehension.
+This speculation was supported by their fMRI findings, which indicated that especially young children relied more on semantic than on syntactic processing.
+Our setup didn't include semantic cues, which puts our results in line with studies like 
+
+"hierarchy construction might be supported by left inferior frontal (particularly BA44/45) and posterior superior temporal regions: (Ben-Shachar et al., 2003, 2004; Caplan et al., 2002; Just et al., 1996; Röder et al., 2002; Stromswold et al., 1996)"
+
+"the enhanced inferior frontal (BA 44/45) activation observed for these sentence types is engendered by highly specialized aspects of syntactic processing, namely by syntactic transformations (Ben-Shachar et al., 2003, 2004; Grodzinsky, 2000)."
+
+
+
+The variation in grammatical elements had no undesired impact on response times.
+These findings support the current stimulus setup for use during MEG measurements.
+Currently, sentences differ from each other in length and content.
+To prevent confounding effects, sentences across trials (or at least, across conditions) would be identical up until the conditional trigger cue.
+
+Finally, our sentence structure contains a theoretical loophole.
+With sufficient time and wit, subjects could develop an alternative strategy that doesn't require syntactic processing of the whole sentence.
+The alternative strategy exploits the fact that the minimum information for a correct decision is already available at the fifth word.
+Subjects only needed to complete three sequential steps:
+First, attending only to the left of the two pictures.
+Second, waiting until the fourth word is spoken.
+If the mentioned animal was displayed as actor, the left button would be correct and vice versa.
+Third, using the fifth word to execute the previous or the reverse button mapping.
+If the mentioned word was a "der", the previously correct button remained correct and could be pressed immediately.
+If the mentioned word was a "den", the previously wrong button had to be pressed for a correct result.
+This strategy could potentially reduce the task into a simple series of motor preparation and pattern matching.
+Complex syntactic processing and, presumably, the use of pSTS and dorsal pathway II would be circumvented.
+Employing this strategy could create suspicious behavioral results in the form of systematically reduced and less varied response times.
+This flaw was the main reason for the redesign of stimuli for the main study.
+Other minor flaws were also corrected for improved validity.

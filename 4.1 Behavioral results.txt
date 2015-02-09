@@ -2,9 +2,9 @@ If not noted otherwise, two comma-separated values in brackets describe the uppe
 
 3.1.1 Response times
 
-A Shapiro-Wilk test was conducted to determine if individual data were normal distributed.
-No subject exceeded a probability of p=1e-8 that their response times were normal distributed.
-Therefore, we decided to represent individual response times by their median.
+A Shapiro-Wilk test was conducted to determine if individual response times were normal distributed.
+All subjects failed this test (p < 0.001), indicating a strong deviation from normality.
+Therefore, we represented individual response times by their median.
 
 Children needed a median time of 1.91s (1.64s, 2.19s) to respond to object-relative clauses.
 For subject-relative clauses, they needed 1.97s (1.69s, 2.25s).

@@ -1,4 +1,4 @@
- 1.1 Functional anatomy of language processing
+ 1.1 The role of white matter tracts in syntax processing
 
 [White fiber tracts]
 Brain tries to save space and energy
@@ -15,42 +15,39 @@ The dorsal stream uses two major long-distance fiber tracts: The arcuate fascicl
 Dorsal pathway I (SLF): pSTG to premotor cortex in BA6
 Dorsal pathway II (AF): pSTG to BA44
 
-[Cortical activity]
+
+1.2 Functional anatomy of syntax processing
+
 Region of interest: pSTS
 pSTG is involved in complex syntax
+Adults:
 "Neuroimaging studies have tried to characterise the neu- ral substrate for representing human action. Many of these studies have followed a different tradition in psychophysics and developmental psychology of investigating the percep- tion of “biological motion” – that is, the characteristic articu- lated motion of chordate animal bodies (e.g. Vaina, Solomon, Chowdhury, Sinha, & Belliveau, 2001; Grossman & Blake, 2002; Beauchamp, Lee, Haxby, & Martin, 2002; Pelphrey, Mitchell, McKeown, Goldstein, Allison, & McCarthy, 2003) or body and face parts (e.g. Hoffman & Haxby, 2000; Hooker et al. 2003; Kilts et al. 2003; Pelphrey et al., 2003). Biologi- cal motion can also be perceived from the relative motion of just a few dots (“point-light walkers”, Johansson, 1973); if the dots are spatially or temporally rearranged, the percept is destroyed. These neuroimaging studies suggest that one brain region, the posterior superior temporal sulcus, is par- ticularly involved in the representation of biological motion.
 Two sets of recent neuroimaging data suggest that the role of the posterior superior temporal sulcus (pSTS) may extend beyond a response to biological motion, to more ab- stract representations of intentional action. First, Castelli, Happe, Frith, & Frith, (2000) and Schultz, Grelotti, Klin, Kleinman, Van der Gaag, Marois, & Skudlarski, (2003) reported that a region of the pSTS showed a significantly higher response to animations of moving geometric shapes that depicted complex social interactions than to anima- tions depicting inanimate motion. Second, using movies of human actors engaged in structured goal-directed ac- tions (e.g. cleaning the kitchen), Zacks, Braver, Sheridan, Donaldson, Snyder, Ollinger, Buckner, & Raichle, (2001) found that activity in the pSTS was enhanced when the agent switched from one action to another, suggesting that this region encodes the goal-structure of actions. Both of these results are consistent with a role for a region of pSTS cor- tex in representing intentional action, and not just biological motion." (doi:10.1016/j.neuropsychologia.2004.04.015)
 
-Accurate role in syntactic processing isn't clear yet
-Utilizing dorsal pathway I and II for researching pSTG
-Paradigm of choice: Social interaction, Object-/Subject-relative clauses
-Previous findings: pSTG and IFG (BA44, 45, 47 + FOP) are more active in object-relative clauses
+ "More complex  syntactic processing, 
+ including  the  identification  of  hierarchical  structures  within  a  sentence,  takes 
+ place  later  at  around  300ms  to  500ms  in  the  already  mentioned  pSTG/STS 
+ (Cooke  et  al.,  2002;  Vandenberghe  et  al.,  2002;  Humphries  et  al.,  2005; 
+ Bornkessel and Schlesewsky, 2006; Kinno et al., 2008; Friederici et al., 2009; 
+ Snijders et al., 2009; Santi and Grodzinsky, 2010; Newman et al., 2010). How-
+ ever,  this  is  not  achieved  by  the  pSTG/STS  alone  but,  as  Friederici  argues, 
+ critically involves the pars opercularis of the inferior frontal gyrus (IFGoper) in 
+ Broca’s  area  (Friederici  et  al.,  2006;  Makuuchi  et  al.,  2009;  Newman  et  al., 
+ 2010;  Wilson  et  al.,  2010)." (Skeide 2013)
 
-
-1.2 Developmental aspects
-
-Kids don't have the AF tract yet
+Children:
+- Development of simple sentence processing is complete at age 3 (Friederici 2005)
+- Kids often don't have the AF tract yet until early adulthood
 Previous findings: kids rely more on the ventral pathway
 Ventral processing involves BA45 (no condition effect in adults)
 Processing is more vulnerable to bias (semantic crosstalk)
-Behavioral data is worse too
 
 
-1.3 Research questions
+1.3 Experimental paradigm
 
-Replication of EEG/fMRI results with MEG?
-Which cortical regions are involved in the conditional effect?
-Is semantic content relevant?
-How long does each processing stage take?
-In which order do the steps take place?
-Can we see a different pathway in kids?
-
-[Hypotheses]
-Condition effect mainly in pSTG, BA44 (adults), BA45 (kids)
-Kids: worse performance than adults
-Kids: less involvement of pSTG
-Adults vs kids: Dorsal II vs. Ventral II
-
+Task: Exploring role and timing of pSTG/pSTS activity in complex syntax processing
+Actor/Undergoer setup
+Object-/Subject-relative clauses
 
 1.4 Choice of measurement methods
 
@@ -75,3 +72,18 @@ modelling vs. model-free, linear vs. nonlinear
 Transfer Entropy is suited best for highly complex, nonlinear timescale data
 Potential pitfall: Volume conduction (can also come from bad localization)
 TrenTOOL can correct volume conduction
+
+1.5 Research questions
+
+Replication of EEG/fMRI results with MEG?
+Which cortical regions are involved in the conditional effect?
+Is semantic content relevant?
+How long does each processing stage take?
+In which order do the steps take place?
+Can we see a different pathway in kids?
+
+[Hypotheses]
+Condition effect mainly in pSTG, BA44 (adults), BA45 (kids)
+Kids: worse performance than adults
+Kids: less involvement of pSTG
+Adults vs kids: Dorsal II vs. Ventral II
