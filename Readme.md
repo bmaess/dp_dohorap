@@ -2,10 +2,11 @@ Table of contents
 =================
 
 1. Research perspective
-  1. Functional anatomy of language processing
-  2. Developmental aspects
-  3. Research questions and hypotheses
+  1. The role of white tracts in syntax processing
+  2. Functional anatomy of syntax processing
+  3. Experimental paradigm
   4. Choice of measurement methods
+  5. Research questions
 
 2. Pilot study
 

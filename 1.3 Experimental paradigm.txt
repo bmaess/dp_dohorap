@@ -3,3 +3,17 @@
 Task: Exploring role and timing of pSTG/pSTS activity in complex syntax processing
 Actor/Undergoer setup
 Object-/Subject-relative clauses
+
+Sentences are comparable to Constable, 2004:
+Subject/object-relative clauses
+"The biologist — who showed the video — studied the snake."
+"The biologist — who the video showed — studied the snake."
+fMRI effect in:
+Left: BA40, 44/45, 39, premotor cortex
+Right: BA44/45, premotor cortex
+
+Also comparable to Bornkessel, 2006:
+specifically, cases E and F (unambiguous subject- and object-relative clauses with active verb)
+significant fMRI effect in:
+left: IFG (pars opercularis), pSTG, pSTS, inferior frontal junction, ventral premotor cortex, interparietal sulcus
+right: interparietal sulcus

@@ -1,11 +1,20 @@
 [Experimental paradigm]
 
-The experimental design consisted of two syntactic conditions.
-Conditions differed only in the use of subject-relative or object-relative clauses.
-The clauses were always posed as questions.
-Each question was posed according to this template: Where is the [explicit actor] who [active or passive verb] the [explicit recipient]?
-For a more detailed analysis, see fig. 2.1.
-This experiment presented object-relative clauses and subject-relative clauses in random order at a ratio of 2.5:1.
+The design was a repeated measures factorial designs with one factor, syntax order.
+The two conditions differed in the use of either subject-relative or object-relative clauses.
+The clauses were always posed as questions in order to elicit an immediate response.
+Each question was posed in a right-branching structure along this example: "Wo ist der Hund, den der Frosch wäscht?" ("Where is the dog, who the frog washes?", see fig. 2.1).
+Object-relative clauses and subject-relative clauses were presented in random order at a ratio of 2.5:1.
+
+The pilot study was designed with two goals:
+First, to find any strong inherent bias in the stimuli material.
+Especially the choice of animal pairings (predators, prey and insects mixed with each other) was a potential confounding effect.
+It was also unclear if the different types of actions (predatory and antropomorphic/social) could introduce a response bias.
+
+Second, to determine whether 10-year-old children are the correct age bracket for examining our research questions.
+We expected a lower performance than adults, but better or equal performance than from younger children.
+Especially important was to test the ability of our subjects to answer questions in object-relative clause correctly.
+
 
 [Participants]
 
@@ -15,6 +24,7 @@ Children were aged between [9y11m] and [10y9m] and described as right-handed by 
 Parents gave written informed consent and were compensated with 7,50€.
 Children agreed to participate in the study and were compensated with a toy at an average value of 12€.
 All experimental procedures were approved by the University of Leipzig Ethical Review Board.
+
 
 [Task and Stimuli]
 
@@ -50,6 +60,7 @@ Visual and auditory stimuli were produced by a computer running Presentation (ve
 Video signal was displayed by a 17-inch TFT display at a distance of approximately 80cm.
 Sound was played with a pair of semi-open headphones.
 
+
 [Analysis]
 
 Behavioral data were analyzed with Matlab (version 2014a).
@@ -77,7 +88,8 @@ The five possible impact factors were response side (left / right), condition (o
 The sentence particles comprised the race of the actor and recipient and the performed action.
 Performed actions included painting, pushing, combing, washing, pulling and catching.
 The actor and recipient could appear as two of 12 different races: Lion, rabbit, wolf, bird, fox, hedgehog, dog, tiger, ape, ladybug, bear and frog.
-No two races appeared in the same picture.
+No two identical races appeared in the same picture.
+
 
 [Results]
 
@@ -98,31 +110,58 @@ Median response times remained stable in both conditions.
 The difference in accuracy weakened as well (p < 0.001, t(10) = -9.4).
 Average accuracy in the remaining subjects improved slightly (95% for subject-relative clauses and 68% for object-relative clauses).
 
+
 [Discussion]
 
-Compared to typical adults, our children performed considerably worse in both accuracy and response time.
-Existing neuroanatomical evidence suggests that the arcuate fascicle (AF) is not yet fully developed until late adolescence.
-42% of our subjects failed to perform better than chance level when the task required a fully-developed AF.
-Both response time and accuracy results indicate that the 10-year age bracket was suitable for selecting subjects with an incomplete dorsal tract II.
-
-Both response times and accuracy levels are comparable with the findings of similar experiments.
-The study by Skeide [2.1] reported accuracy levels of 94% in both conditions.
-The authors were surprised by the good performance and speculated that semantic cues may have helped with sentence comprehension.
-This speculation was supported by their fMRI findings, which indicated that especially young children relied more on semantic than on syntactic processing.
-Our setup didn't include semantic cues, which puts our results in line with studies like 
-
-"hierarchy construction might be supported by left inferior frontal (particularly BA44/45) and posterior superior temporal regions: (Ben-Shachar et al., 2003, 2004; Caplan et al., 2002; Just et al., 1996; Röder et al., 2002; Stromswold et al., 1996)"
-
-"the enhanced inferior frontal (BA 44/45) activation observed for these sentence types is engendered by highly specialized aspects of syntactic processing, namely by syntactic transformations (Ben-Shachar et al., 2003, 2004; Grodzinsky, 2000)."
-
-
-
+The first goal of this pilot study was to establish an unbiased test paradigm.
 The variation in grammatical elements had no undesired impact on response times.
+Syntax conditions produced a strong effect in both performance metrics.
 These findings support the current stimulus setup for use during MEG measurements.
-Currently, sentences differ from each other in length and content.
-To prevent confounding effects, sentences across trials (or at least, across conditions) would be identical up until the conditional trigger cue.
 
-Finally, our sentence structure contains a theoretical loophole.
+
+The second goal of the pilot study was to determine if 10-year old children were suitable subjects for the designed task.
+Accuracy levels were comparable with the findings of similar experiments.
+Due to different trigger points and sentence lengths, comparisons of response times couldn't be made directly and were instead limited to comparisons of effect size.
+We start by comparing our results to our spiritual predecessor, the study by [2.1].
+They found no significant conditional impact on response time in the 9-10-year age bracket.
+In stark contrast to our results (93% and 64% for subject- and object-relative clauses), their subjects were not influenced by a condition effect, with accuracy levels of 94% in both conditions.
+The good performance was met with surprise and speculation that semantic cues may have helped with sentence comprehension.
+This speculation was supported by their fMRI findings, which indicated that children relied heavily on semantic-centric processing areas, rather than on pure syntax-related processing areas that adults use.
+Our setup didn't include semantic cues, which puts our results more in line with other infant studies.
+
+[2.2], for instance, measured repetition performance in 3- and 4-year-old children.
+The study presented German subject-relative and object-relative clauses with two interacting people in third person, similar to our setup.
+Their subjects performed with an accuracy of just 5% (3 years) and 26% (4 years) for object-relative clauses.
+Subject-relative clauses were performed with 13% and 31% accuracy, respectably.
+Note that these ratings represent accurate verbal repetition, and don't need to be corrected for chance level performance.
+
+[2.3] found more accurate responses to portuguese right-branching subject- and object-relative clauses.
+Subject-relative clauses were correctly answered 23%, 50%, 83% and 80% of the time (in 3-, 4-, 5- and 6-year old children, respectably).
+Object-relative clauses reached only slightly lower accuracy levels of 18%, 40%, 75% and 68%, respectably.
+They employed a more user-friendly approach by requiring the children to act out the posed sentences with toy animals.
+Because the authors deliberately removed as many processing constraints as possible, these accuracy levels can be considered upper performance limits on these age brackets.
+
+6 to 8 year old children solved syntactic problems with higher complexity in the study by [2.4].
+The experimental design varied two syntactical factors and one contextual factor.
+One syntactical factor, "question", varied English object- and subject-relative clauses, coinciding with our setup.
+Object-first and subject-first clauses were responded with an accuracy of 64% and 83%, respectably.
+
+Response time and accuracy performance indicates that the 10-year age bracket was successful in selecting subjects with an incomplete dorsal tract II.
+Compared to typical adults, our subjects performed considerably worse in both accuracy and response time.
+Compared to younger children, our subjects performed condsiderably better in subject-relative clauses.
+
+42% of our subjects failed to perform better than chance level when the task required a fully-developed AF.
+We have no sufficient reason to assume that these subjects were using a random-button strategy.
+If anything, the weakened condition effect indicates that these performances were due to honest mistakes.
+Hence, there is no reason to exclude subjects with chance-level performances to object-relative clauses.
+
+
+Finally, the pilot study revealed a few design flaws as well.
+
+First, sentences differ systematically between conditions.
+To prevent confounding effects from different content, an as long as possible sentence fragment needs to be identical.
+
+Second, our sentence structure contains a theoretical loophole.
 With sufficient time and wit, subjects could develop an alternative strategy that doesn't require syntactic processing of the whole sentence.
 The alternative strategy exploits the fact that the minimum information for a correct decision is already available at the fifth word.
 Subjects only needed to complete three sequential steps:
