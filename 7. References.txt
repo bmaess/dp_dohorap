@@ -1,3 +1,24 @@
+% Chapter 1
+
+[]
+
+[1.4.music] Mosher, J., & Leahy, R. (1998). Recursive MUSIC: A framework for EEG and MEG source localization. IEEE Transactions on Biomedical Engineering, 45(11), 13421354. doi:10.1109/10.725331
+
+[1.4.simplex] Huang, M., Aine, C., Supek, S., Best, E., Ranken, D., & Flynn, E. (1998). Multi-start downhill simplex method for spatio-temporal source localization in magnetoencephalography. Electroencephalography and clinical neurophysiology, 108(1), 32–44. doi:10.1016/S0168-5597(97)00091-9
+
+[1.4.focal.a]: H.G. Vaughan, Jr. The analysis of scalp-recorded brain potentials. In R.F. Thompson and M.M. Patterson, editors, Bioelectric Recording Techniques, pages 158–207. Part B. Academic Press, New York, 1974.
+
+[1.4.focal.b]: M. Scherg and D. von Cramon. Two bilateral sources of the late AEP as identified by a spatio-temporal dipole model. Electroenc. Clin. Neurophysiol., 62:32–44, 1985.
+
+[1.4.focal.c]: J.C. Mosher, P.S. Lewis, and R.M. Leahy. Multiple dipole modeling and localization from spatio-temporal MEG data. IEEE Trans. Biomed. Eng., 39(6):541–557, 1992.
+
+[1.4.focal.d]: C.H. Wolters, R.F. Beckmann, A. Rienäcker, and H. Buchner. Comparing regularized and non-regularized nonlinear dipole fit methods: A study in a simulated sulcus structure. Brain Top., 12(1):3–18, 1999.
+
+[1.4.L2]: M.S. Hämäläinen and R.J. Ilmoniemi. Interpreting measured magnetic fields of the brain: Estimates of current distributions. Techn. Report TKK- F-A559, Helsinki University of Technology, 1984.
+
+[1.4.L1.b]: M. Wagner, M. Fuchs, H.-A. Wischmann, R. Drenckhahn, and Th. Köhler. Current density reconstructions using the L1-norm. In Proc. of the 10th Int.Conf.of Biomagnetism; Santa Fe, pages 158–207. Biomag96, 1996.
+
+
 % Chapter 2
 
 [2.1] Skeide, M. A. (2012). Syntax and semantics networks in the developing brain. PhD Thesis, Max Planck Institute for Human Cognitive and Brain Sciences, Leipzig.
@@ -32,3 +53,5 @@ MRI acquisition methods:
 [levtest]
 
 [swtest]
+
+[3.3.nuintensity] Zheng, W., Chee, M., & Zagorodnov, V. (2009). Improvement of brain segmentation accuracy by optimizing non-uniformity correction using N3. NeuroImage, 48(1), 73–83. doi:10.1016/j.neuroimage.2009.06.039

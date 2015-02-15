@@ -1,6 +1,7 @@
-2.3.1 Behavioral data
-
 Data were preprocessed with the three software packages: Elekta Neuromag® MaxFilter (version 2.2), Matlab (version 2014a) and MNE-Python (version 0.8.6).
+
+3.3.1 Behavioral data
+
 Two types of behavioral data were analyzed for group and condition effects: response time (RT) and response accuracy (RA).
 Response time was measured at the condition onset, i.e. at the "d" sound of "den" or "der" (in the subject-relative clause or the object-relative clause, respectively).
 Trials were omitted when the subject skipped or answered them incorrectly.
@@ -8,17 +9,17 @@ Trials were also omitted if the response took longer than 4000ms.
 This procedure removed 11.1% of the childrens' trials, and 2.5% of the adults' trials.
 RT and RA were determined for each subject separately from the remaining trials.
 Both metrics were tested for the requirements for an analysis of variance (ANOVA).
-Normality of the residuals was tested with a Shapiro-Wilk test [SW], implemented in Matlab.
-Equality of variances was tested with a Levene [LEV] test, implemented in SPSS.
-RA data failed the normality test (see chapter [4.1]).
+Normality of the residuals was tested with a Shapiro-Wilk test {swtest}, implemented in Matlab.
+Equality of variances was tested with a Levene {levtest} test, implemented in SPSS.
+RA data failed the normality test.
 To include RA data in the following analysis, they were temporarily transformed to fit a normal distribution.
-This transformation was accomplished with the inverted sigmoid function.
-x = -log(1./acc-1)
+This transformation was accomplished with the inverted sigmoid function:
+accuracy_transformed = -log(1./accuracy-1)
 
 
-2.3.2 Sensor-space activity
+3.3.2 Sensor-space activity
 
-2.3.2.1 Preprocessing and artifact correction
+3.3.2.1 Preprocessing and artifact correction
 
 [Preprocessing and HPI correction]
 MaxFilter was used to reduced noise in the data by suppressing magnetic interference coming from outside and inside the sensory array, using signal-space separation (SSS).
@@ -43,10 +44,10 @@ This procedure yielded an average of [] trials in children and [] trials in adul
 Data were filtered before epoching with a 45Hz FIR lowpass ([insert filter properties from mne-python]).
 A baseline correction was omitted in favor of the initial highpass filtering.
 
-2.3.2.2 Establishing time windows of interest
+3.3.2.2 Establishing time windows of interest
 
 The condition effect was used to determine suitable time windows.
-If this comparison is strategy typically overestimates  a multiple comparison problem.
+This comparison typically overestimates a multiple comparison problem.
 This problem was resolved with a cluster-level permutation.
 Extracted trials were split into a 4 parts (2 groups x 2 conditions).
 Since the group had a strong impact on RT (see [3.1.1]), effective time windows were estimated separately for children and adults.
@@ -62,10 +63,28 @@ The function was run with 2500 permutations, and an t-threshold of 1.0.
  * "Description", "Visualization" *
  * "Left/Right - frontal, temporal, parietal", [6 plots] *
 
- 2.3.3 Source space activity
+3.3.3 Source space activity
 
- 2.3.4 Interaction analysis
+[Anatomical preprocessing]
+Cortical reconstruction and volumetric segmentation was performed with the Freesurfer image analysis suite, which is documented and freely available for download online (http://surfer.nmr.mgh.harvard.edu/).
+The technical details of these procedures are described in prior publications (Dale et al., 1999; Dale and Sereno, 1993; Fischl and Dale, 2000; Fischl et al., 2001; Fischl et al., 2002; Fischl et al., 2004a; Fischl et al., 1999a; Fischl et al., 1999b; Fischl et al., 2004b; Han et al., 2006; Jovicich et al., 2006; Segonne et al., 2004, Reuter et al. 2010, Reuter et al. 2012).
+We followed the recommended processing pipeline ("recon-all"), with three optional functions.
+First, the option "-nuintensitycor-3T" improved brain segmentation accuracy by optimizing the bias field correction [3.3.nuintensity].
+Second, by invoking "-notal-check", we skipped the Talairach registration checks.
+Talairach registration was prone to failure especially in the infant subjects, and uneccessary for our further processing steps.
+Third, we supplied and included T2-weighted MRI datasets with the options "-T2" and "-T2pial".
+The combination of T1- and T2-weighted images improves tissue differentiation especially around the pia mater, yielding a more accurate cortex segmentation.
 
-The TRENtool software was used for exploring interactions between cortical areas.
-Role of embedding, Ragwitz optimization
-statistical tests between conditions and multiple comparisons
+[Forward model]
+Our forward models consisted of one BEM layer and the MEG sensors.
+Each model was constructed semi-automatically using MNE.
+The cortical surface from Freesurfer
+The finished BEM layer comprised 5140 sources.
+
+[Inverse solution]
+
+3.3.4 Interaction analysis
+
+The TRENtool software was used for exploring transfered entropy between cortical areas.
+- Role of embedding, Ragwitz optimization
+- statistical tests between conditions and multiple comparisons

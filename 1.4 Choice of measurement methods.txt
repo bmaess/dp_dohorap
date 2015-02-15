@@ -1,19 +1,125 @@
 1.4 Choice of measurement methods
 
 [Acquisition]
-MEG: Very high sampling rate
-very little spatial distortion from the head
-Low signal-to-noise ratio
 
-[Forward models]
-Based on individual high-resolution anatomical data
-1-layer BEM: Robust creation, good software support
-Quick and semi-automated process
+Neuronal activity consists of a mixture of electrical and magnetic fields.
+On a cellular level, activating a neuron causes depolarization, which in turn creates a weak electric field.
+Most neurons are equipped with a long axonal fibre that transmits a relatively strong postsynaptic signal.
+Especially in pyramidal cells which are responsible for long-distance transmissions, this axon can span several centimeters in length.
+Since signals along axons travel by a complex combination of transmitter binding, ionic flow and electric fields, neuron-to-neuron data transmission exhibits three important restrictions.
+First, a successful signal transmission requires a short refractory period until the next transmission is possible again.
+This leads to the phenomenon that transmissions can only travel one way, and overlapping signals on the same fiber are impossible.
+Second, axonal transmissions can only be binary.
+If the minimum threshold voltage is reached, the signal will be transmitted at maximum speed along the entire fibre.
+Below the threshold, no transmission can occur.
+Third, maximum transmission speed is relatively low at approximately 100m/s.
+Other commonly used transmission fibers, for comparison, achieve speeds of 2e8m/s (copper wire) or even 3e8m/s (glass fibre).
+Additionally, transmision speed depends on the thickness of the fiber, with the thinnest fibers transmitting as slowly as 0.1m/s.
+This property causes a considerable delay when transmitting signals over macroscopic distances.
+Signal delay in technical applications is generally small enough to be disregarded or considered an inescapable nuisance.
+In the brain however, two interconnected neurons at opposite sides of the head can generate output simultaneously, but their signals will be offset by several miliseconds by the time they arrive.
+For any neural network, delayed information is therefore an widely expected issue and must be properly factored into signal processing.
+
+Due to the long axon and the low transmission speed, transmitted signals will create a electrical field that moves along the axon during a non-trivial time window.
+Aggregated electric fields from thousands of similar signals can be acquired with an electroencephalograph (EEG).
+This process involves measuring the voltage at two or more arbitrary points in the brain; typically, on the surface of the head or the cortex.
+However, every electric signal that travels along a conducting wire also induces a magnetic field.
+Since an axon is no exception to this rule, any transmitted neuron-to-neuron signal can also be acquired with a magnetic sensor.
+A magnetoenecephalograph (MEG) consists of several dozens of these sensors distributed around the head.
+
+
+Compared to EEG, the MEG-based measuring strategy has a few advantages and drawbacks.
+
+The main advantage is the drastically lower distortion from surrounding tissue.
+For an EEG to be able to measure a potential difference on the skin surface, an electrical current needs to pass the tissues surrounding the cortical surface.
+Some of these tissue layers, like blood vessels or cerebreal spinal fluid (CSF), are highly conductive; so they smooth and spread every electric field.
+Other tissue layers, especially the compact bone, are very bad electrical conductors; so they distort and attenuate every passing signal.
+After these tissues have been passed, the original signal has substantially decreased in intensity, and changed in location.
+On the other hand, the same tissues are highly permeable to magnetic fields.
+The magnetic permeability of water, which most human tissue is based on, is only 0.0008% higher than that of vacuum.
+As a rule of thumb, only metal-based materials are substantially less permeable than water.
+Since the human head usually doesn't contain metal in considerable quantities, it practically allows magnetic fields to pass without distortion.
+
+This circumstance does not imply, unfortunately, that every neural transmission arrives at the magnetic sensors with equal strength.
+There are three main reasons for that.
+
+First, the main source of electrical and magnetical activity are the pyramidal cells in the cortical tissue on the brain surface.
+The activity of a single neuron, besides being highly unlikely in vivo, doesn't create a field with sufficient strength to elict a response in contemporary EEG or MEG sensors.
+Only the combined and synchronous activity of larger clusters of neurons can cross the detection threshold.
+
+Second, the human cortex is folded.
+When two neural groups at opposite cortical walls produce identical activity, the two created electric and magnetic fields are directly opposed to each other.
+Opposing fields cancel each other out, so the original signal will be systematically underestimated by surrounding sensors.
+
+Third, their basic physical properties imply that electric and magnetic fields are orthagonal to each other.
+Signals that travel along fibers orthogonally to the head surface create the strongest magnetic activation in surrounding sensors, but the weakest voltage in surface electrodes.
+Fibers that lie parallel to the head surface, in contrast, create strong electric but weak magnetic activation.
+The implication on measurements of neural activity is that EEG is most sensitive for gyri and sulci, and MEG is most sensitive for the radial walls inbetween.
+To counteract this particular measurement bias, EEG and MEG data need to be acquired simultaneously.
+
+The last big difference between MEG and EEG is due to the sensor technology.
+While both methods rely on strong amplification of very small input signals, only MEG uses superconducting sensors.
+Contemporary superconductors require cooling with liquid helium.
+Magnetic fields from neurons are also weaker than environmental magnetic noise by several magnitudes.
+To limit measurements to neural activity, the MEG device need to be shielded with large quantities of highly magnetically permeable material (most commonly, an nickel-iron alloy).
+These requirements makes MEG much less portable, and equally more expensive, than EEG.
+The use of superconducting materials is necessary due to the extreme weakness of neural magnetic fields.
+With the large amplification factors involved in both methods, amplifiers contribute a large amount of noise to the signal.
+But since the amplifier noise depends directly on their operating temperature, suspending the amplifiers in liquid helium drastically lowers the noise level.
+Theoretically, this approach would  be possible for EEG amplifiers as well.
+Due to the additional effort to integrate supercooling however, it is practically never used in this context.
+As a consequence, MEG-based cortical measurements can show a signal-to-noise ratio of up to [300:1], while EEG-based measurements would typically only reach ratios of [50:1].
 
 [Localization]
-Distributed source model: models a ton of unwanted activity
--> high SNR for actual ROI
-sLORETA: no overlap effect at the boundaries, high ROI specificity
+Magnetic signals, induced by the brain, arrive at the sensors only as mixture of many cortical sources.
+Demixing these signals is a fundamentally flawed process.
+The problem of discerning these signal sources is equivalent to finding the location and intensity of all the flames in a hot air balloon, while only looking at the outside of the hull.
+There are infinitely many possible configurations of light sources that can generate the same brightness pattern on the outer skin.
+The same issue is valid for localizing magnetic signal sources in the human head.
+This task involves creating a bidirectional map between the curved plane of MEG sensors and the threedimensional human head.
+Because of the different dimensionality, the task of creating this map is an underdefined problem.
+This means that there are infinitely many possible locations and intensities for magnetic fields that can generate the exact same signal pattern in the MEG sensors.
+This multitude of possible solutions needs to be constrained to make the results meaningful.
+One popular set of constraints is the use of a source model.
+A source model assumes that there is a limited number of discrete current sources distributed throughout the brain.
+Usually, these current sources are assumed to be generated by neuronal tissue.
+There are three popular types of source modelling.
+
+The first type of source modelling uses spatial filtering.
+A popular spatial filtering strategy is the single-core beamformer method (Barnes and Hillebrand, 2003; Gross and Ioannides, 1999; Gross et al., 2001; Hillebrand and Barnes, 2003; Robinson and Vrba, 1999; Sekihara et al., 2001; Van Veen et al., 1997).
+Its main weakness is the assumption that data from different sources is completely uncorrelated.
+This assumption is especially detrimental to the analysis of cortical signals, since neuronal-level synchronizity is one of the fundamental principles behind attention and learning (Kandel et al., 2000).
+
+In the focal source model, neural current flow is represented by a limited set of point-shaped current dipoles.
+There are are three subcategories to this model: an unconstrained variant (the moving dipole model), dipoles with a fixed position (the rotating dipole model) and dipoles with a fixed position and rotation (the fixed dipole model).
+Popular applications of this approach include "multiple signal classification" (MUSIC) [1.4.music] and "multi-start spatio-temporal multiple-dipole modeling" [1.4.simplex]
+Dipole models have had limited success with representing neuronal responses for two main reasons.
+First, reducing extended neuroanatomical structures to a point current source introduces a systematic model error.
+Second, the number and location of dipoles has a strong influence on the localized results, yet is hard to estimate in advance (Huang et al., 1998).
+
+The third type of source model is the distributed source model.
+For these approaches, a dense grid of dipoles is derived from a cortical layer.
+The goal is to place dipoles in homogenous density at every location that is able to produce currents.
+Typically, the continuous cortex surface is extracted from anatomical data and populated with several thousands of (roughly) equally spaced dipoles.
+For determining localized activity, moments are computed for all dipoles.
+The dipole moments are then used to simulate activity in the MEG sensors.
+Simulated activity then is optimized so that the error to the reference sensor activity is minimal.
+Because every sensor activity pattern can be created by infinitely many source configurations, the localization process is facilitated with two processes.
+First, dipole activity is spatially regularized with a predefined factor.
+Second, the best pattern of localized sources is selected by minimizing the norm over all dipoles.
+The most popular norm today is the L2-norm [1.4.L2], and implementations are widely available.
+Alternatively, the L1-norm [1.4.L1a, 1.4.L1b] can result in a more focally reconstructed activity.
+This process is usually computed separately for every temporal sample.
+Popular implementations include dSPM (Dale et al., 2000), MNE (Hammalaien, 2005) and sLORETA (Pascual-Marqui, 2002)).
+We opted for this approach because the spatial filtering approaches aren't recommended for localizing cortical activity, and the quality of results from the dipole fit models depend too strongly on the inital parameters.
+
+L2-norm-based solutions have two major drawbacks.
+First, the solution has a relatively low spatial resolution.
+This issue leads to spatially distributed activity clusters even if the real sources are very focal.
+If the sources are in close proximity, unintended mixing of reconstructed source activity can occur as well.
+Second, generic L2-normal solutions contain a mandatory systematical spatial bias.
+The sLORETA algorithm, by contrast, has been designed to create solutions with zero bias.
+Since this algorithm has minimal drawbacks out of all readiliy available software, it became the method of choice for our source localization purposes.
 
 [Information transfer]
 Meaning of information transfer

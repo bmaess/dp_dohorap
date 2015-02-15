@@ -1,11 +1,5 @@
 [Experimental paradigm]
 
-The design was a repeated measures factorial designs with one factor, syntax order.
-The two conditions differed in the use of either subject-relative or object-relative clauses.
-The clauses were always posed as questions in order to elicit an immediate response.
-Each question was posed in a right-branching structure along this example: "Wo ist der Hund, den der Frosch wäscht?" ("Where is the dog, who the frog washes?", see fig. 2.1).
-Object-relative clauses and subject-relative clauses were presented in random order at a ratio of 2.5:1.
-
 The pilot study was designed with two goals:
 First, to find any strong inherent bias in the stimuli material.
 Especially the choice of animal pairings (predators, prey and insects mixed with each other) was a potential confounding effect.
@@ -15,6 +9,8 @@ Second, to determine whether 10-year-old children are the correct age bracket fo
 We expected a lower performance than adults, but better or equal performance than from younger children.
 Especially important was to test the ability of our subjects to answer questions in object-relative clause correctly.
 
+We employed a repeated measures factorial design with one factor: syntax order.
+The two conditions of this factor differed in the use of either subject-relative or object-relative clauses.
 
 [Participants]
 
@@ -31,12 +27,12 @@ All experimental procedures were approved by the University of Leipzig Ethical R
 The session consisted of two sections: a tutorial and the main experiment.
 The tutorial section introduced the physical interface and 36 practice trials.
 The main section consisted of 18 clusters with 12 trials each (216 total).
-All trials were randomized by Presentation at the beginning of the experiment.
+All trials were randomized at the beginning of the experiment.
 There was an exception to the random order: no two identical images were presented after another.
 Subjects were shown a feedback screen at the end of each cluster.
 
 Each trial started by showing a set of visual stimuli.
-200ms later, a spoken question started playing.
+200ms later, a spoken sentence started playing.
 Possible responses included pressing the left, right or the skip button.
 The trial ended with an auditory and visual feedback.
 
@@ -46,7 +42,18 @@ In one picture, one of the animals performed a social action on the other animal
 In the other picture, the roles were reversed.
 Subjects needed to identify the picture that answered the question correctly.
 
+[Figure 2.1: Example visual stimuli]
+
+The spoken sentences were always posed as questions in order to elicit an immediate response.
+Each question was posed in a right-branching structure along this example: "Wo ist der Hund, den der Frosch wäscht?" ("Where is the dog, who the frog washes?", see fig. 2.1).
+Object-relative clauses and subject-relative clauses were presented in random order at a ratio of 2.5:1.
 Questions were voiced in a natural, child-directed tone by a professional native speaker.
+The question consisted of an actor, a recipient and the verb that described their interaction.
+The performed action was either painting, pushing, combing, washing, pulling or catching.
+The actor and recipient were selected randomly from 12 different races: Lion, rabbit, wolf, bird, fox, hedgehog, dog, tiger, ape, ladybug, bear and frog.
+No two identical races appeared in the same picture.
+
+[Table 2.1: German and english sentence, with word numbers underneath]
 
 Immediately after each response, an icon appeared below the two animal pairs.
 A green checkmark, a diagonal red cross and a yellow skip symbol signified a correct response, an incorrect response and an invalid trial, respectively.
@@ -56,7 +63,7 @@ This experiment created a tradeoff between speed and accuracy.
 To encourage a high level of attention and a high number of usable trials, a feedback screen was displayed at the end of each cluster.
 On this screen, two bar graphs visualized response speed and accuracy during the preceding cluster.
 
-Visual and auditory stimuli were produced by a computer running Presentation (version 14.0).
+Visual and auditory stimuli were produced by a computer running the software package Presentation (Neurobehavioral Systems, Inc., version [14.6]).
 Video signal was displayed by a 17-inch TFT display at a distance of approximately 80cm.
 Sound was played with a pair of semi-open headphones.
 
@@ -74,7 +81,7 @@ Two subjects failed to exceed chance level performance, leaving 19 subjects for 
 Two types of behavioral data were analyzed for group and condition effects: response time (RT) and response accuracy (RA).
 Response time was measured at the condition onset, i.e. at the "d" sound of the sixth word.
 Trials were omitted when the subject skipped or answered them incorrectly, or responded earlier than the cue.
-Accuracy was calculated by dividing the amount of of correct trials by the amount of total trials for each subject.
+Accuracy was calculated by dividing the amount of correct trials by the amount of total trials for each subject.
 
 A Shapiro-Wilk test was used to test for normal-distributed residuals.
 Accuracy passed this test at a p = 0.01 significance level.
@@ -84,12 +91,9 @@ Response times were transformed with the logarithm function to approach normalit
 Transformed residuals failed the Shapiro-Wilk test, but appeared to be distributed roughly normal (see Fig. 2.2).
 The impact on response time was determined with a five-way-ANOVA (main effects only).
 ANOVA are robust against small deviations from normality, which allowed us to assume normality for this test.
-The five possible impact factors were response side (left / right), condition (object-relative / subject-relative) and three sentence particles.
-The sentence particles comprised the race of the actor and recipient and the performed action.
-Performed actions included painting, pushing, combing, washing, pulling and catching.
-The actor and recipient could appear as two of 12 different races: Lion, rabbit, wolf, bird, fox, hedgehog, dog, tiger, ape, ladybug, bear and frog.
-No two identical races appeared in the same picture.
+The five possible impact factors were response side (left / right), condition (object-relative / subject-relative), the race of the actor (12) and recipient (12) and the peformed action.
 
+[Fig. 2.2: transformed response times - residual error from normal distribution]
 
 [Results]
 
@@ -98,6 +102,8 @@ The median accuracy was 70% (worst 5%: 62%, best 5%: 94%).
 The syntactic condition had a highly significant effect on accuracy (p < 0.001, t(18) = -14.0).
 The syntactic condition also had a highly significant effect on response time (p < 0.001, F = 17.0).
 No other factors had a significant effect on response time (p > 0.1, F < 1.5).
+
+[Fig. 2.3: Bargraph of RT] [Fig. 2.4: Bargraph of accuracy]
 
 Post-hoc tests were conducted to reveal the condition-specific average data values.
 The average accuracy for responses to subject-relative clauses was much higher than to object-relative clauses (93% and 64%, respectively).
@@ -158,12 +164,14 @@ Hence, there is no reason to exclude subjects with chance-level performances to 
 
 Finally, the pilot study revealed a few design flaws as well.
 
-First, sentences differ systematically between conditions.
-To prevent confounding effects from different content, an as long as possible sentence fragment needs to be identical.
+First, sentences differed systematically between conditions even before the intended condition cue.
+The syntactical condition reverses the order of pronouns, creating an opposition between "der den" and "den der".
+To prevent confounding effects from different content, the initial sentence fragment needs to be identical at least across conditions, and, preferably, across trials as well.
+Ideally, the distance between the end of this identical sentence fragment and the conditional cue point should be as short and invariant as possible.
 
-Second, our sentence structure contains a theoretical loophole.
+Second, our sentence structure contained a theoretical loophole.
 With sufficient time and wit, subjects could develop an alternative strategy that doesn't require syntactic processing of the whole sentence.
-The alternative strategy exploits the fact that the minimum information for a correct decision is already available at the fifth word.
+The alternative strategy exploits the fact that the minimum information for a correct decision is already available at the fifth word (see table 2.1).
 Subjects only needed to complete three sequential steps:
 First, attending only to the left of the two pictures.
 Second, waiting until the fourth word is spoken.
