@@ -1,6 +1,10 @@
 % Chapter 1
 
-[]
+[1.4.SNR] Volegov, P., Matlachov, A., Mosher, J., Espy, M., & Kraus, R. (2004). Noise-free magnetoencephalography recordings of brain function. Physics in Medicine and Biology, 49(10), 2117–2128. doi:10.1088/0031-9155/49/10/020
+
+[1.4.tissues.a] Geddes, L., Baker, L., 1967. The specific resistance of biological material. A compendium of data for the biomedical engineer and physiologist. Med. Biol. Eng. 5, 271 – 293.
+
+[1.4.tissues.b] Haueisen, J., 1996. Methods of numerical field calculation for neuromagnetic source localization. PhD thesis, Shaker-Verlag Aachen, ISBN 3-8265-1691-5.
 
 [1.4.music] Mosher, J., & Leahy, R. (1998). Recursive MUSIC: A framework for EEG and MEG source localization. IEEE Transactions on Biomedical Engineering, 45(11), 13421354. doi:10.1109/10.725331
 
@@ -41,7 +45,7 @@ MNE-Python:
 MEG acquisition methods:
 [3] Cicmil, N., Bridge, H., Parker, A. J., Woolrich, M. W., & Krug, K. (2014). Localization of MEG human brain responses to retinotopic visual stimuli with contrasting source reconstruction approaches. Frontiers in Neuroscience, 8, 127. doi:10.3389/fnins.2014.00127
 
-[8] Cluster permutation algorithm:  Maris/Oostenveld (2007), "Nonparametric statistical testing of EEG- and MEG-data", Journal of Neuroscience Methods, Vol. 164, No. 1., pp. 177-190.
+[8] Cluster permutation algorithm: Maris/Oostenveld (2007), "Nonparametric statistical testing of EEG- and MEG-data", Journal of Neuroscience Methods, Vol. 164, No. 1., pp. 177-190.
 
 Visual stimuli:
 [5] Schipke, C. S., Friederici, A. D., & Oberecker, R. (2011). Brain responses to case-marking violations in German preschool children. Neuroreport, 22(16), 850–4. doi:10.1097/WNR.0b013e32834c1578

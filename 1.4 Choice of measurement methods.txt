@@ -26,19 +26,38 @@ This process involves measuring the voltage at two or more arbitrary points in t
 However, every electric signal that travels along a conducting wire also induces a magnetic field.
 Since an axon is no exception to this rule, any transmitted neuron-to-neuron signal can also be acquired with a magnetic sensor.
 A magnetoenecephalograph (MEG) consists of several dozens of these sensors distributed around the head.
-
+MEG and EEG are currently the only non-invasive acquisition methods that measure brain activity with a milisecond resolution [1.4.MEG.a][1.4.MEG.b][1.4.MEG.c].
+The focus of this project is on cognitive processes that require timespans in the single-digit second range to complete.
+Considering these small time frames, a good temporal resolution is integral for yielding a sufficient amount of data from every processing step.
+This is the reason why we decided to use a EEG/MEG method, while using the highest available temporal resolution.
 
 Compared to EEG, the MEG-based measuring strategy has a few advantages and drawbacks.
 
-The main advantage is the drastically lower distortion from surrounding tissue.
-For an EEG to be able to measure a potential difference on the skin surface, an electrical current needs to pass the tissues surrounding the cortical surface.
-Some of these tissue layers, like blood vessels or cerebreal spinal fluid (CSF), are highly conductive; so they smooth and spread every electric field.
-Other tissue layers, especially the compact bone, are very bad electrical conductors; so they distort and attenuate every passing signal.
-After these tissues have been passed, the original signal has substantially decreased in intensity, and changed in location.
-On the other hand, the same tissues are highly permeable to magnetic fields.
-The magnetic permeability of water, which most human tissue is based on, is only 0.0008% higher than that of vacuum.
+The first major difference between MEG and EEG is due to the sensor technology.
+While both methods rely on strong amplification of very small input signals, only MEG uses superconducting sensors.
+Contemporary superconductors require cooling with liquid helium.
+Magnetic fields from neurons are also weaker than environmental magnetic noise by several magnitudes.
+To limit measurements to neural activity, the MEG device need to be shielded with large quantities of highly magnetically permeable material (most commonly, an nickel-iron alloy).
+These requirements makes MEG much less portable, and equally more expensive, than EEG.
+Passive shielding already reduces environmental noise levels by 25-60db [1.4.SNR].
+In addition to that, it is possible to dampen noise levels by another 60db with adaptive noise reduction [1.4.SNR].
+Good adaptive noise reduction requires large external coils that can counteract outside magnetic fields.
+The use of superconducting MEG sensors is necessary due to the extreme weakness of neural magnetic fields.
+With the large amplification factors involved in both methods, amplifiers contribute a large amount of noise to the signal.
+But since the amplifier noise depends directly on their operating temperature, suspending the amplifiers in liquid helium drastically lowers the noise level [1.4.MEG.a].
+Generally, EEG and MEG are considered equally sensitive [1.4.MEG.a][1.4.MEG.c].
+However, the addition of magnetic shielding can elevate signal-to-noise ratios in MEG measurements above equivalent acquisitions from EEG [1.4.SNR].
+
+The main advantage of MEG is the drastically lower distortion from surrounding tissue.
+For an EEG to be able to measure a potential difference on the skin surface, an electrical current needs to pass the tissues surrounding the cortical surface [1.4.tissues.b].
+Some of these tissue layers, like blood vessels or cerebreal spinal fluid (CSF), are 5 times more conductive than gray matter; so they smooth and diffuse electric fields [1.4.tissues.a][1.4.tissues.b].
+Other tissue layers, especially the compact bone, conduct electricity 78 times worse than gray matter; so they distort and attenuate every passing signal [1.4.tissues.a].
+After these tissues have been passed, the original signal has substantially decreased in intensity, and changed drastically in shape and location.
+In contrast to electrical fields, the same tissues are highly permeable to magnetic fields.
+The magnetic permeability of water, which most human tissue is based on, is only 0.0008% different from vacuum.
 As a rule of thumb, only metal-based materials are substantially less permeable than water.
-Since the human head usually doesn't contain metal in considerable quantities, it practically allows magnetic fields to pass without distortion.
+Since the human head doesn't contain metal in considerable quantities, it practically allows magnetic fields to pass without distortion. [1.4.tissues.a]
+
 
 This circumstance does not imply, unfortunately, that every neural transmission arrives at the magnetic sensors with equal strength.
 There are three main reasons for that.
@@ -55,23 +74,24 @@ Third, their basic physical properties imply that electric and magnetic fields a
 Signals that travel along fibers orthogonally to the head surface create the strongest magnetic activation in surrounding sensors, but the weakest voltage in surface electrodes.
 Fibers that lie parallel to the head surface, in contrast, create strong electric but weak magnetic activation.
 The implication on measurements of neural activity is that EEG is most sensitive for gyri and sulci, and MEG is most sensitive for the radial walls inbetween.
-To counteract this particular measurement bias, EEG and MEG data need to be acquired simultaneously.
+To counteract this particular measurement bias, EEG and MEG data would have to be acquired simultaneously.
 
-The last big difference between MEG and EEG is due to the sensor technology.
-While both methods rely on strong amplification of very small input signals, only MEG uses superconducting sensors.
-Contemporary superconductors require cooling with liquid helium.
-Magnetic fields from neurons are also weaker than environmental magnetic noise by several magnitudes.
-To limit measurements to neural activity, the MEG device need to be shielded with large quantities of highly magnetically permeable material (most commonly, an nickel-iron alloy).
-These requirements makes MEG much less portable, and equally more expensive, than EEG.
-The use of superconducting materials is necessary due to the extreme weakness of neural magnetic fields.
-With the large amplification factors involved in both methods, amplifiers contribute a large amount of noise to the signal.
-But since the amplifier noise depends directly on their operating temperature, suspending the amplifiers in liquid helium drastically lowers the noise level.
-Theoretically, this approach would  be possible for EEG amplifiers as well.
-Due to the additional effort to integrate supercooling however, it is practically never used in this context.
-As a consequence, MEG-based cortical measurements can show a signal-to-noise ratio of up to [300:1], while EEG-based measurements would typically only reach ratios of [50:1].
+Side note: although the simultaneous acqusisition of EEG and MEG data provides theoretical benefits to the signal quality, we ultimately decided against this strategy.
+MEG acquisition consists of three preparation steps: Getting written consent, applying the HPI coils and ocular electrodes, and digitizing the head.
+This preparation typically requires 25 minutes for children and 15 minutes for experienced adults.
+Including EEG acquisition would have added several lengthy steps to this procedure: Fitting the gel electrode cap, ensuring a good connection for each electrode, and plugging in each of the 63 cables individually.
+These additional steps would have extended the preparation time to at least 60 minutes.
+Since patience is not a strong trait in children, we wanted to minimize any idle waiting times between their arrival and the experiment [footnote: Implementing details with the goal to prevent boredom was a common theme in this study, as explained in more detail in chapter 3.].
+Therefore, we only acquired MEG data during this study.
+
+Once the signals were acquired by the MEG, there were a few possible decisions for preprocessing.
+- Use of Neuromag SSS and MC
+- Highpass instead of baseline (pros and cons)
+- ICA instead of artifact rejection
+- Lowpass Filtering
 
 [Localization]
-Magnetic signals, induced by the brain, arrive at the sensors only as mixture of many cortical sources.
+Magnetic fields, when induced by the brain, arrive at MEG sensors only as mixture of many cortical sources.
 Demixing these signals is a fundamentally flawed process.
 The problem of discerning these signal sources is equivalent to finding the location and intensity of all the flames in a hot air balloon, while only looking at the outside of the hull.
 There are infinitely many possible configurations of light sources that can generate the same brightness pattern on the outer skin.

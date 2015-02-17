@@ -9,8 +9,8 @@ Trials were also omitted if the response took longer than 4000ms.
 This procedure removed 11.1% of the childrens' trials, and 2.5% of the adults' trials.
 RT and RA were determined for each subject separately from the remaining trials.
 Both metrics were tested for the requirements for an analysis of variance (ANOVA).
-Normality of the residuals was tested with a Shapiro-Wilk test {swtest}, implemented in Matlab.
-Equality of variances was tested with a Levene {levtest} test, implemented in SPSS.
+Normality of the residuals was tested with a Shapiro-Wilk test [swtest], implemented in Matlab.
+Equality of variances was tested with a Levene [levtest] test, implemented in SPSS.
 RA data failed the normality test.
 To include RA data in the following analysis, they were temporarily transformed to fit a normal distribution.
 This transformation was accomplished with the inverted sigmoid function:
@@ -45,6 +45,10 @@ Data were filtered before epoching with a 45Hz FIR lowpass ([insert filter prope
 A baseline correction was omitted in favor of the initial highpass filtering.
 
 3.3.2.2 Establishing time windows of interest
+
+[Timewindow estimation]
+- Two possible strategies: guided by literature, or bootstrapping
+- Two bootstrapping methods: interval checking or cluster analysis
 
 The condition effect was used to determine suitable time windows.
 This comparison typically overestimates a multiple comparison problem.
