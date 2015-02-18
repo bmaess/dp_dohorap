@@ -59,7 +59,7 @@ The function was run with 2500 permutations, and an t-threshold of 1.0.
 
 For visualization purposes, grand average activity was also calculated for each sensor group and condition, separately for children and adults.
 
-* [Fig. 3.3.2.sensors]: General locations for the sensor-level analysis *
+* [Fig. 3.3.sensors]: General locations for the sensor-level analysis *
  * "Description", "Visualization" *
  * "Left/Right - frontal, temporal, parietal", [6 plots] *
 
@@ -120,7 +120,7 @@ Similarly, pSTS and pSTG were combined into pSTS/G.
 The final regions of interest on the reference brain are visualized in [Fig. 3.3.3.ROI].
 Regions were automatically valid for all other subjects as well, since the inverse operator was already calculated in respect to the morphed reference brain.
 
-[Fig. 3.3.3.ROI. Left: selected regions on the natural cortex. Right: selected regions on the inflated cortex.]
+[Fig. 3.3.ROI: Left: selected regions on the natural cortex. Right: selected regions on the inflated cortex.]
 
 The inverse operator was used to calculate inverse solutions from MEG sensor data.
 Inverse solutions were calculated for each time point, region, trial and subject individually.

@@ -33,6 +33,7 @@ careless = zeros(2,subjectCount);
 trialCount = {};
 ratio = zeros(1,subjectCount);
 conditionalAccuracy = zeros(2, subjectCount);
+conditionalRT = zeros(2, subjectCount);
 for s = 1:subjectCount
     r = responses{s};
     trialIDs = r(1,:);
@@ -59,6 +60,8 @@ for s = 1:subjectCount
     conditionCount{s} = [sum(firstConditionTrials), sum(secondConditionTrials)];
     conditionalAccuracy(1,s) = mean(r(4,firstConditionTrials));
     conditionalAccuracy(2,s) = mean(r(4,secondConditionTrials));
+    conditionalRT(1,s) = median(rawRT(validTrials(firstConditionTrials)));
+    conditionalRT(2,s) = median(rawRT(validTrials(secondConditionTrials)));
     [~, pciRandom] = binofit(round(sum(firstConditionTrials)/2), sum(firstConditionTrials), 0.01);
     careless(2,s) = conditionalAccuracy(1,s) < pciRandom(2);
     ratio(s) = sum(firstConditionTrials) / sum(secondConditionTrials);
@@ -87,3 +90,24 @@ clear s
 
 [~,accuracyP,accuracyCI,accuracyStats] = ttest(conditionalAccuracy(1,~careless(1,:)), conditionalAccuracy(2,~careless(1,:)));
 [rtP, rtTable, rtStats] = anovan(responseTimeL, {responseSideL, subjectWordL, verbWordL, objectWordL, conditionL});
+
+csvwrite('RT.csv', conditionalRT');
+csvwrite('accuracy.csv', conditionalAccuracy');
+subjectRT = [];
+for subject = 1:21
+    conditions = condition{subject};
+    RT = responseTime{subject};
+    firstConditionTrials = conditions == 1;
+    secondConditionTrials = conditions == 2;
+    firstCount = sum(firstConditionTrials);
+    secondCount = sum(secondConditionTrials);
+    firstRT = RT(firstConditionTrials);
+    secondRT = RT(secondConditionTrials);
+    firstEntries = ones(1,firstCount)*subject;
+    secondEntries = ones(1,secondCount)*subject;
+    firstCondition = ones(1,firstCount)*1;
+    secondCondition = ones(1,secondCount)*2;
+    block = [firstEntries', firstCondition', firstRT'; secondEntries', secondCondition', secondRT'];
+    subjectRT = [subjectRT; block];
+end
+csvwrite('individualRT.csv', subjectRT);

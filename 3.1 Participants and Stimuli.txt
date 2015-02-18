@@ -19,7 +19,7 @@ Task
 The study consisted of two sessions: an anatomical MRI acquisition (duration: 50 minutes) and an interactive magnetoencephalographic measurement (typical duration: 90 minutes).
 Since they took place in two different locations, there was a delay (median: 98 days, maximum: 243 days) between the two sessions.
 
-The MRI session is described in detail in [section 2.2.1].
+The MRI session is described in detail in [section 3.2.1].
 
 The MEG session consisted of two sections: a tutorial section and a main section.
 Generally, the participants were seated on a comfortable chair.

@@ -1,16 +1,23 @@
 Chapter 2
 
-Figure 2.1: Example visual stimuli
-Table 2.1: German and english sentence, with word numbers underneath
-Figure 2.2: transformed response times - residual error from normal distribution
-Figure 2.3: Bargraph of RT
-Figure 2.4: Bargraph of accuracy
+Figure 2.screen: Example visual stimuli
+Table 2.sentences: German and english sentence, with word numbers underneath
+Figure 2.RTgraph: Bargraph of RT
+Figure 2.RAgraph: Bargraph of accuracy
 
 
 Chapter 3
+Figure 3.1.screen: Monkey catches lion
+[Table 3.1.activities: all six social activities with pictures]
+[Table 3.1.animals: all five animals with pictures]
+[Figure 3.1.feedback: Trial feedback screen]
+[Figure 3.1.clusterfeedback: Cluster feedback screen]
+[Figure 3.1.feedbackGraphRT]
+[Figure 3.1.feedbackGraphAccuracy]
+[Table 3.1.sentences: two sentence conditions with descriptors and word annotations]
 
-Figure 3.3.2.sensors: 6 locations for the sensors (Left/Right, frontal/temporal/parietal)
-Figure 3.3.3.ROI: PAC, aSTS/G, pSTS/G, BA44, BA45 and BA6v on pial cortex (left) and inflated cortex (right)
+Figure 3.3.sensors: 6 locations for the sensors (Left/Right, frontal/temporal/parietal)
+Figure 3.3.ROI: PAC, aSTS/G, pSTS/G, BA44, BA45 and BA6v on pial cortex (left) and inflated cortex (right)
 
 
 Chapter 4
