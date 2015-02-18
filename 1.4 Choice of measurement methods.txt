@@ -85,10 +85,22 @@ Since patience is not a strong trait in children, we wanted to minimize any idle
 Therefore, we only acquired MEG data during this study.
 
 Once the signals were acquired by the MEG, there were a few possible decisions for preprocessing.
-- Use of Neuromag SSS and MC
 - Highpass instead of baseline (pros and cons)
 - ICA instead of artifact rejection
 - Lowpass Filtering
+
+[Timewindow estimation]
+The acquired signals need to be explored for the impact of the conditional effect.
+This effect is usually spatially and temporally limited.
+For establishing time and spatial regions of interest, there are two possible approaches.
+First, 
+- Two possible strategies: guided by literature, or bootstrapping
+- Two bootstrapping methods: interval checking or cluster analysis
+We decided to use each approach for different purposes:
+Comparisons within previously discovered time windows provide results that can be compared with earlier studies.
+Additionally, blind comparisons with a cluster analysis enables the detection of new time windows.
+For the blind comparisons, we still relied on known cortical regions instead of extending to a blind spatial search.
+Since we need to be correct for multiple comparisons, this attempt would have sacrificed too much of the contrast to produce viable results.
 
 [Localization]
 Magnetic fields, when induced by the brain, arrive at MEG sensors only as mixture of many cortical sources.
