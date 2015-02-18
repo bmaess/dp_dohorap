@@ -1,6 +1,16 @@
 Chapter 2
 
-[Figure 2.1: Example visual stimuli]
-[Table 2.1: German and english sentence, with word numbers underneath]
-[Fig. 2.2: transformed response times - residual error from normal distribution]
-[Fig. 2.3: Bargraph of RT] [Fig. 2.4: Bargraph of accuracy]
+Figure 2.1: Example visual stimuli
+Table 2.1: German and english sentence, with word numbers underneath
+Figure 2.2: transformed response times - residual error from normal distribution
+Figure 2.3: Bargraph of RT
+Figure 2.4: Bargraph of accuracy
+
+
+Chapter 3
+
+Figure 3.3.2.sensors: 6 locations for the sensors (Left/Right, frontal/temporal/parietal)
+Figure 3.3.3.ROI: PAC, aSTS/G, pSTS/G, BA44, BA45 and BA6v on pial cortex (left) and inflated cortex (right)
+
+
+Chapter 4
