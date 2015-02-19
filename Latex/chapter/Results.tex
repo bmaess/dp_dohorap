@@ -1,0 +1,67 @@
+\chapter{Results}\label{results}
+
+\section{Behavioral results}
+
+If not noted otherwise, two comma-separated values in brackets describe the upper and lower values of a $95\% $confidence interval.
+
+\subsection{Response times}
+
+A Shapiro-Wilk test was conducted to determine if individual data were normal distributed.
+No subject exceeded a probability of p=1e-8 that their response times were normal distributed.
+Therefore, we decided to represent individual response times by their median.
+
+Children needed a median time of $1.91s$ ($1.64s, 2.19s$) to respond to object-relative clauses.
+For subject-relative clauses, they needed $1.97s$ ($1.69s, 2.25s$).
+Adults needed a median time of $1.51s$ ($1.28, 1.73s$) to respond to object-relative clauses.
+For subject-relative clauses, they needed $1.60s$ ($1.37s$, $1.82s$).
+
+A Shapiro-Wilk test determined that response time data was normal distributed with a probability between $1.5\%$ and $27\%$.
+A Levene's test determined that the probability of median response times being normal distributed was between 
+
+\subsection{Response accuracy}
+
+For the analysis of variance (ANOVA), all data must be normal distributed with equal variance.
+A Shapiro-Wilk test determined that the probability of accuracy data being normal distributed was between $2.0$ and $20.3\%$.
+A Levene's test yielded that the probability that accuracy data were distributed with equal variance was less than $p = 0.1\%$.
+
+The ANOVA is known to be robust for considerable deviations from the normal distribution.
+However, it is highly vulnerable to violation the assumption of equal variances.
+To meet this requirement, we transformed the accuracy data with the inverse sigmoid function.
+This procedure, however, created singularities in some extreme cases, i.e., when a subject performed with a $100\%$ accuracy rate.
+To prevent this issue, we added a single incorrect trial to every subject's performance for the following analysis.
+
+After the transformation, the same tests as before were conducted.
+The probability for transformed accuracy data being normal distributed was between $0.5\%$ and $27\%$.
+The probability for transformed accuracy data being distributed with equal variance was $p = 72.2\%$.
+Supported by these findings, the transformed accuracy data was included in the ANOVA.
+
+\subsection{Analysis of combined performance data}
+
+The ANOVA was conducted with the transformed accuracy data and the median response time.
+Each subject provided one data point for each metric.
+Data were analyzed with a group x condition design.
+Accuracy estimates were transformed back with the sigmoid function $acc = 1/(1+exp(-x))$.
+
+Children responded 0.39s slower than adults ($1.94s vs. 1.55s$).
+This difference was significant ($F_56 = 9.4, p = 0.3\%$).
+
+Children responded with an average accuracy of $93.8\%$ ($92.2\%$, $95.0\%$).
+Adults performed much better, with an average accuracy of $97.9\%$ ($97.5\%$, $98.3\%$).
+This difference was highly significant ($F_56 = 52$, $p = 1.6e-9$).
+
+Sentence condition had no impact on median response times ($F = 0.33$, $p = 57\%$) or on response accuracy ($F = 1.3, p = 26\%$).
+There was no interaction effect between group and sentence condition ($F < 0.1, p > 80\%$).
+
+
+
+
+\section{Sensor--space activity}
+
+\subsection{Preprocessing review}
+\subsection{Comparison of regional activity}
+
+\section{Reconstructed cortical activity}
+\subsection{Inverse models review}
+\subsection{Comparison of regional activity}
+
+

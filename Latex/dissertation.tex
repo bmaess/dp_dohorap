@@ -1,0 +1,244 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+% Copyright (C) 1998-2005 by MPI-CBS                                           %
+%                                                                              %
+% Max-Planck-Institute of Cognitive Neuroscience                               %
+% PO Box 500 355, D-04303 Leipzig, Germany                                     %
+%                                                                              %
+% Phone +49 341 9940-00                                                        %
+% Fax   +49 341 9940-113                                                       %
+%                                                                              %
+% EMail info@cbs.mpg.de                                                        %
+% WWW   http://www.cbs.mpg.de                                                  %
+%                                                                              %
+% This software may be freely copied, modified, and redistributed provided     %
+% that this copyright notice is preserved on all copies.                       %
+%                                                                              %
+% You may not distribute this software, in whole or in part, as part of any    %
+% commercial product without the express consent of the author.                %
+%                                                                              %
+% There is no warranty or other guarantee of the fitness of this software      %
+% for any purpose. It is provided solely "as is".                              %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%
+% Setting %
+%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dissertation by Stefan Zysset and Claudia Danielmeier %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,11pt,twoside]{book}
+
+\usepackage[english]{babel}     % english, or usepackage[ngerman]{babel} for german
+\usepackage[ansinew]{inputenc}   % latin1 input encoding
+\usepackage[T1]{fontenc}        % font encoding
+\usepackage{apacite}            % citations style
+\usepackage{graphicx}           % for including pictures
+\usepackage{color}              % for color stuff
+\usepackage{rotating}           % rotating tables, figures, ...
+\usepackage{subfigure}          % for side by side pictures
+\usepackage{longtable}          % multiple pages tables 
+\usepackage{times}              % Adobe PostScript Fonts
+\usepackage{mathptm}            % Adobe PostScript Fonts
+\usepackage{courier}            % Adobe PostScript Fonts
+\usepackage{exscale}            % misc packages
+\usepackage{setspace}           % line distance
+\usepackage{calc}               % linear measures
+\usepackage{caption}            % adjust captions
+\usepackage{multicol}           % text with multiple columns
+\usepackage{booktabs}           % formatting command for tables
+\usepackage{dcolumn}            % formatting command for tables
+%\usepackage{parskip}           % free line between paragraphs and no indentation on the next line
+\usepackage{fancyhdr}           % adjust footer and header
+\usepackage[inner=4cm,
+            outer=3cm,
+            top=3cm,
+            bottom=3cm,
+            includeheadfoot]{geometry} % Seitenlayout bei zweiseitigen Dokumenten (book, ...)
+
+\usepackage{german}
+\usepackage{eurosym}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% new table and figure captions %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\captionfont}{\small\itshape}
+\renewcommand{\captionlabelfont}{\small}
+
+
+%%%%%%%%%%%%%%%%%%%%
+% more formattings %
+%%%%%%%%%%%%%%%%%%%%
+
+\onehalfspacing % bzw. \doublespacing, \singlespacing
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% penalty customization %
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% if a line of a paragraph is on the next page
+%\clubpenalty = 10000
+%\widowpenalty = 10000
+%\displaywidowpenalty = 10000
+
+% if words overhanging
+%tolerance = 500
+%\setlength{\emergencystretch}{2em} 
+
+% paragraphs sehen aus wie subsubsubsections
+%\titleformat{\paragraph}[hang]{\bf}{\thetitle\quad}{0pt}{}						
+%\titlespacing{\paragraph}{0pt}{1em}{1em} 
+
+% subparagraphs sehen aus wie vorher paragraphs
+%\titleformat{\subparagraph}[runin]{\bf}{}{0.5em}{}
+%\titlespacing{\subparagraph}{0pt}{1em}{1em}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% clear header style on the last empty odd pages %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makeatletter
+  \def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else%
+  \hbox{}%
+  \thispagestyle{empty}%
+  \newpage%
+  \if@twocolumn\hbox{}\newpage\fi\fi\fi}
+\makeatother
+
+%%%%%%%%%%%%%%%
+% hyphenation %
+%%%%%%%%%%%%%%%
+
+\hyphenation{mor-pho-syn-tax}
+
+%%%%%%%%
+% text %
+%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%
+% title %
+%%%%%%%%%
+
+\input{chapter/Titlepage}
+
+%%%%%%%%%%
+% Thanks %
+%%%%%%%%%%
+
+%\input{chapter/thanks}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Wenn du möchtest, dass Vorspann, Hauptteil und Nachspann deines Dokuments seperat    %
+% nummeriert werden, dann trenne diese Teile mittels \frontmatter, \mainmatter und     %
+% \backmatter. Alles zwischen den ersten beiden bekommt (standardmässig) römische      %
+% Ziffern, nach \mainmatter wird alphanumerisch gezählt (von Eins an), und \backmatter %
+% zählt (standardmässig) weiter, das lässt sich aber konfigurieren                     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\frontmatter
+
+%%%%%%%%%%%%
+% Contents %
+%%%%%%%%%%%%
+
+% header and footer
+\pagestyle{fancy}
+
+\fancypagestyle{plain}{%
+\fancyhf{}   % clear all header and footer fields
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}}
+
+\renewcommand{\headrulewidth}{0pt}     % no head rule
+\fancyhead{}                           % delete head
+\fancyfoot{}                           % delete footer
+\fancyhead[OR]{\thepage}               % page number
+\fancyhead[OL]{\nouppercase\rightmark} % rightmark is the section
+\fancyhead[ER]{\nouppercase\leftmark}  % leftmark is the capitel
+\fancyhead[EL]{\thepage}               % page number
+
+\clearpage
+\cleardoublepage
+\tableofcontents
+
+\mainmatter
+
+\part{Theoretical Part}
+
+\input{chapter/Introduction}
+\input{chapter/Pilotstudy}
+\input{chapter/Methods}
+
+
+\part{Empirical Part}
+
+\input{chapter/Results}
+\input{chapter/Discussion}
+\input{chapter/Conclusion}
+
+%%%%%%%%%%%%
+% appendix %
+%%%%%%%%%%%%
+
+\appendix
+\input{chapter/Appendix}
+
+\backmatter
+
+%%%%%%%%%%%%%%
+% references %
+%%%%%%%%%%%%%%
+\clearpage
+\cleardoublepage
+\bibliographystyle{apacite}
+\nocite{AFIFI98}
+\renewcommand{\bibname}{References}
+
+% apacite customization, there
+%renewcommand{\BEDS}{Hers.} % Eds:
+%renewcommand{\BCBT}{;} % semicolon instead of comma between authors
+%setlength{\bibitemsep}{\baselineskip} % more space beetween items
+\bibliography{bibliography}
+
+%%%%%%%%%%%
+% figures %
+%%%%%%%%%%%
+\clearpage
+\cleardoublepage
+\addcontentsline{toc}{chapter}{List of Figures}
+\listoffigures
+
+%%%%%%%%%%%%
+% tables %
+%%%%%%%%%%%%
+\clearpage
+\cleardoublepage
+\addcontentsline{toc}{chapter}{List of Tables}
+\listoftables
+
+%%%%%%
+% cv %
+%%%%%%
+\clearpage
+\cleardoublepage
+\pagestyle{empty} % no more page numbering
+\input{chapter/cv}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Selbständigkeitserklärung %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{chapter/selbst}
+\newpage
+
+%%%%%%%
+% fin %
+%%%%%%%
+
+\end{document}

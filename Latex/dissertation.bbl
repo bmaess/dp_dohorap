@@ -1,0 +1,81 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Afifi%
+\ \BBA {} Bergmann%
+}{%
+Afifi%
+\ \BBA {} Bergmann%
+}{%
+{\protect \APACyear {1998}}%
+}]{%
+AFIFI98}
+\APACinsertmetastar {%
+AFIFI98}%
+\begin{APACrefauthors}%
+Afifi, A\BPBI K.%
+\BCBT {}\ \BBA {} Bergmann, R\BPBI A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{1998}.
+\newblock
+\APACrefbtitle {Functional Neuroanatomy: Text and Atlas} {Functional
+  neuroanatomy: Text and atlas}.
+\newblock
+\APACaddressPublisher{McGraw-Hill}{New York}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Anderson%
+\ \BBA {} Bower%
+}{%
+Anderson%
+\ \BBA {} Bower%
+}{%
+{\protect \APACyear {1973}}%
+}]{%
+ANDER73}
+\APACinsertmetastar {%
+ANDER73}%
+\begin{APACrefauthors}%
+Anderson, J\BPBI R.%
+\BCBT {}\ \BBA {} Bower, G\BPBI H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{1973}.
+\newblock
+\APACrefbtitle {Human Associative Memory} {Human associative memory}.
+\newblock
+\APACaddressPublisher{Washington}{Winston}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Bekerian%
+\ \BBA {} Baddeley%
+}{%
+Bekerian%
+\ \BBA {} Baddeley%
+}{%
+{\protect \APACyear {1980}}%
+}]{%
+BEKER80}
+\APACinsertmetastar {%
+BEKER80}%
+\begin{APACrefauthors}%
+Bekerian, D\BPBI A.%
+\BCBT {}\ \BBA {} Baddeley, A\BPBI D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1980}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Saturation advertising and the repetition effect}
+  {Saturation advertising and the repetition effect}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Verbal Learning and Verbal
+  Behavior}{19}{}{17--25}.
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}
