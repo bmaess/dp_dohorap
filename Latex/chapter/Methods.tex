@@ -90,13 +90,24 @@ This association with chasing and killing would introduce a semantic bias agains
 To further detract from a naturalistic view, the animals were represented in a cartoon style.
 To prevent unnecessary stress on this interpretation, I only selected animals whose real-life counterparts were approximately equally sized.
 
-[Figure 3.1.screen: Monkey catches lion]
+\begin{figure}[h]
+\begin{center}
+\vspace{7mm}
+\includegraphics[width=0.5\textwidth]{pics/3_1_screen}
+\caption{\label{3.1.screen} A typical visual stimulus, featuring two pairs of animals.}
+\end{center}
+\end{figure}
 
 Image components were adapted with permission and kind advice from [5].
 Modifications were performed with Inkscape.
 
-[Table 3.1.activities: all six social activities with pictures]
-[Table 3.1.animals: all five animals with pictures]
+\begin{figure}[h]
+\begin{center}
+\vspace{7mm}
+\includegraphics[width=0.99\textwidth]{pics/3_1_activities}
+\caption{\label{3.1.activities} Illustrations of all five animals performing their social activities. From left to right: catching, combing, pushing, painting and washing}
+\end{center}
+\end{figure}
 
 \paragraph{Trial feedback}
 Immediately after each response, an icon appeared below one of the two displayed animal pairs.
@@ -105,29 +116,34 @@ In the case of the skip button, the icon appeared at the same height as the othe
 A green checkmark, a diagonal red cross and a yellow skip symbol signified a correct response, an incorrect response and an invalid trial, respectively.
 The trial feedback screen was presented for a random interval between 400ms and 800ms.
 
-[Figure 3.1.feedback: Trial feedback screen]
+
+\begin{figure}[h]
+\begin{center}
+\vspace{7mm}
+\includegraphics[width=0.5\textwidth]{pics/3_1_feedback}
+\caption{\label{3.1.feedback} The visual feedback to a correct response.}
+\end{center}
+\end{figure}
 
 \paragraph{Cluster feedback}
 In this experiment, there was an obvious tradeoff between speed and accuracy.
 To encourage a high level of attention and a high number of usable trials, two bar graphs visualized performance speed and accuracy (see Fig. \ref{3.1.clusterfeedback}).
 In order to maximize the amount of usable trials for further analysis, the visualization valued accuracy much more than response time (see Fig. \ref{3.1.feedbackGraphs}).
 
-[Figure 3.1.clusterfeedback: Cluster feedback screen]
 \begin{figure}[h]
 \begin{center}
 \vspace{7mm}
-\includegraphics[width=0.7\textwidth]{pics/3_1_clusterfeedback}
-\caption{\label{3.1.clusterfeedback} An ideal cluster feedback screen that appears after completing 19 trials.}
+\includegraphics[width=0.5\textwidth]{pics/3_1_clusterfeedback}
+\caption{\label{3.1.clusterfeedback} An ideal cluster feedback screen that appears after completing 19 trials. Upper bar: speed, lower bar: accuracy. Bottom right: indicator to  press the skip button to advance}
 \end{center}
 \end{figure}
 
-[Figure 3.1.feedbackGraphRT] [Figure 3.1.feedbackGraphAccuracy.fig]
 \begin{figure}[h]
 \begin{center}
 \vspace{7mm}
 \includegraphics[width=0.45\textwidth]{pics/3_1_feedbackGraphAccuracy}
 \includegraphics[width=0.45\textwidth]{pics/3_1_feedbackGraphRT}
-\caption{\label{3.1.feedbackGraphs} Relation between performance and displayed feedback bars. Performance (left: RT, right: RA) is drawn along the X-axis, and Length of the bars in \% is drawn along the Y-Axis.}
+\caption{\label{3.1.feedbackGraphs} Relation between performance and displayed feedback bars. Performance (left: RA, right: RT) is drawn along the X-axis, and length of the bars in \% is drawn along the Y-Axis.}
 \end{center}
 \end{figure}
 
@@ -140,12 +156,12 @@ Syntactically, the sentences used an equal number of subject-relative and object
 In order to minimize confounding effects, these two conditions were designed to show as little auditory distinction as possible.
 The structure of the final sentences is displayed in table \ref{3.1.sentences}.
 
-\vspace{5mm}
 \begin{table}[htb]
+\vspace{5mm}
 \begin{center}
 \begin{tabular}{c|cccccccc}
-Original & Wo & ist & das & Tier, & das & der & Hund & malt?\\
-Translated & Where & is & the & animal$_{OBJ}$, & which & the$_{NOM}$ & dog$_{SUBJ}$ & paints?\\
+Original & Wo & ist & das & Tier, & das & der & Tiger & malt?\\
+Translated & Where & is & the & animal$_{OBJ}$, & which & the$_{NOM}$ & tiger$_{SUBJ}$ & paints?\\
 Word index & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8
 \end{tabular}
 \caption{\label{3.1.sentences} Example stimulus sentence. Top: original spelling in German. Middle: Literal translation in English. Bottom: Word index within the sentence.}
@@ -224,9 +240,10 @@ All results from the ANOVA were transformed back into milisecond space with the 
 \subsection{Sensor-space activity}
 
 \paragraph{Preprocessing and HPI correction}
-Signal-space separation (in MaxFilter) was used to reduce noise in the data by suppressing magnetic interference coming from outside and inside the sensory array.
-MEG recordings were corrected for HPI movements, and co-registered across blocks to the inital head position for each individual (processing in MaxFilter).
-Data were then subjected to a 0.4Hz FIR highpass filter (Hamming window design, 4367 coefficients, -130db damping at 0Hz, processing in Matlab) to remove slow trends.
+Signal-space separation [3.2.SSS] was used to reduce noise in the data by suppressing magnetic interference coming from outside and inside the sensory array.
+MEG recordings were corrected for HPI movements, and co-registered across blocks to the inital head position for each individual.
+All of these steps were computed with MaxFilter.
+Data were then subjected to a 0.4Hz FIR highpass filter (Hamming window design, 4367 coefficients, -130db suppression at 0Hz, -3db at 0.4Hz, processing in Matlab) to remove slow trends.
 
 \paragraph{Artifact removal}
 MEG channels with abnormally high noise levels as identified by visual inspection were rejected from further analysis. A median of 1 channel (maximum: 3 channels) was removed.
@@ -257,18 +274,23 @@ Second, all trials from the selected part were pooled.
 
 Third, sensor data was pooled by calculating the mean from one of four different sensor groups.
 General locations were selected according to previous literature findings.
-The equivalent sensor selections were determined by the MNE function read\_selection, and are visualized in [Fig. 3.3.2.sensors].
+The equivalent sensor selections were determined by the MNE function read\_selection, and are visualized in Fig. \ref{3.3.sensors}.
 
 Finally, clusters were computed by the MNE function stats.permutation\_cluster\_test [8].
 The function was run with 2500 permutations, and an t-threshold of 1.0.
 
 For visualization purposes, grand average activity was also calculated for each sensor group and condition, separately for children and adults.
 
-
-* [Fig. 3.3.sensors]: General locations for the sensor-level analysis *
- * "'Description"', "'Visualization"' *
- * "'Left/Right - frontal, temporal, parietal"', [6 plots] *
-
+\begin{figure}[h]
+\begin{center}
+\vspace{7mm}
+\includegraphics[width=0.24\textwidth]{pics/3_3_occipital_sensors}
+\includegraphics[width=0.24\textwidth]{pics/3_3_parietal_sensors}
+\includegraphics[width=0.24\textwidth]{pics/3_3_temporal_sensors}
+\includegraphics[width=0.24\textwidth]{pics/3_3_frontal_sensors}
+\caption{\label{3.3.sensors} Selected channels for each sensor location. From left to right: occipital, parietal, temporal, frontal. The right hemisphere (in red) is also depicted on the right side in each illustration.}
+\end{center}
+\end{figure}
 
 \subsection{Source space activity}
 
@@ -343,7 +365,7 @@ Similarly, pSTS and pSTG were combined into pSTS+G.
 The final regions of interest on the reference brain are visualized in [Fig. 3.3.3.ROI].
 Regions were automatically valid for all other subjects as well, since the inverse operator was already calculated in respect to the morphed reference brain.
 
-[Fig. 3.3.ROI: Left: selected regions on the natural cortex. Right: selected regions on the inflated cortex.]
+[Fig. 3.3.ROI: Left: selected regions on the folded cortex. Right: selected regions on the inflated cortex.]
 
 The inverse operator was used to calculate inverse solutions from MEG sensor data.
 Inverse solutions were calculated for each time point, region, trial and subject individually.

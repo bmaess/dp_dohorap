@@ -81,13 +81,13 @@ MEG acquisition consists of three preparation steps: Getting written consent, ap
 This preparation typically requires 25 minutes for children and 15 minutes for experienced adults.
 Including EEG acquisition would have added several lengthy steps to this procedure: Fitting the gel electrode cap, ensuring a good connection for each electrode, and plugging in each of the 63 cables individually.
 These additional steps would have extended the preparation time to at least 60 minutes.
-Since patience is not a strong trait in children, we wanted to minimize any idle waiting times between their arrival and the experiment [footnote: Implementing details with the goal to prevent boredom was a common theme in this study, as explained in more detail in chapter 3.].
+Since patience is not a strong trait in children\footnote{Implementing details with the goal to prevent boredom was a common theme in this study, as explained in more detail in chapter 3.}, we wanted to minimize any idle waiting times between their arrival and the experiment.
 Therefore, we only acquired MEG data during this study.
 
 Once the signals were acquired by the MEG, there were a few possible decisions for preprocessing.
-- Highpass instead of baseline (pros and cons)
-- ICA instead of artifact rejection
-- Lowpass Filtering
+Traditionally, 
+- Highpass or baseline (pros and cons)
+- ICA or artifact rejection
 
 [Timewindow estimation]
 The acquired signals need to be explored for the impact of the conditional effect.

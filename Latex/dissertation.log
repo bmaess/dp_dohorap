@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.19)  19 FEB 2015 01:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.19)  19 FEB 2015 22:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -627,11 +627,11 @@ Overfull \hbox (7.01439pt too wide) in paragraph at lines 19--25
 ]) were re-cruited from the in-ter-nal par-tic-i-pants database.
  []
 
-[7] <pics/2_screen.png, id=48, 473.77pt x 355.3275pt>
+[7] <pics/2_screen.png, id=48, 433.62pt x 325.215pt>
 File: pics/2_screen.png Graphic file (type png)
  <use pics/2_screen.png>
 Package pdftex.def Info: pics/2_screen.png used on input line 50.
-(pdftex.def)             Requested size: 298.75394pt x 224.06894pt.
+(pdftex.def)             Requested size: 298.75394pt x 224.07603pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -698,38 +698,91 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[14]
+[14] <pics/3_1_screen.png, id=77, 433.62pt x 325.215pt>
+File: pics/3_1_screen.png Graphic file (type png)
+
+<use pics/3_1_screen.png>
+Package pdftex.def Info: pics/3_1_screen.png used on input line 96.
+(pdftex.def)             Requested size: 199.1693pt x 149.3774pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<pics/3_1_activities.png, id=78, 2492.31125pt x 380.42125pt>
+File: pics/3_1_activities.png Graphic file (type png)
+
+<use pics/3_1_activities.png>
+Package pdftex.def Info: pics/3_1_activities.png used on input line 107.
+(pdftex.def)             Requested size: 394.35739pt x 60.18948pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<pics/3_1_feedback.png, id=79, 433.62pt x 325.215pt>
+File: pics/3_1_feedback.png Graphic file (type png)
+
+<use pics/3_1_feedback.png>
+Package pdftex.def Info: pics/3_1_feedback.png used on input line 123.
+(pdftex.def)             Requested size: 199.1693pt x 149.3774pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[15]
-Overfull \hbox (15.61096pt too wide) in paragraph at lines 146--150
+[15] <pics/3_1_clusterfeedback.png, id=83, 1027.84pt x 770.88pt>
+File: pics/3_1_clusterfeedback.png Graphic file (type png)
+
+<use pics/3_1_clusterfeedback.png>
+Package pdftex.def Info: pics/3_1_clusterfeedback.png used on input line 136.
+(pdftex.def)             Requested size: 199.1693pt x 149.3741pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<pics/3_1_feedbackGraphAccuracy.png, id=84, 854.19125pt x 621.32124pt>
+File: pics/3_1_feedbackGraphAccuracy.png Graphic file (type png)
+
+<use pics/3_1_feedbackGraphAccuracy.png>
+Package pdftex.def Info: pics/3_1_feedbackGraphAccuracy.png used on input line 
+144.
+(pdftex.def)             Requested size: 179.25114pt x 130.37701pt.
+
+<pics/3_1_feedbackGraphRT.png, id=85, 854.19125pt x 621.32124pt>
+File: pics/3_1_feedbackGraphRT.png Graphic file (type png)
+
+<use pics/3_1_feedbackGraphRT.png>
+Package pdftex.def Info: pics/3_1_feedbackGraphRT.png used on input line 145.
+(pdftex.def)             Requested size: 179.25114pt x 130.37701pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[16 <./pics/3_1_screen.png> <./pics/3_1_activities.png>]
+Overfull \hbox (15.61096pt too wide) in paragraph at lines 178--182
  \T1/ptm/b/n/10.95 Au-dio for-mat[] \T1/ptm/m/n/10.95 Sen-tences were spo-ken b
 y a pro-fes-sional fe-male na-tive speaker in an unisonous
  []
 
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[16]
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 161.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 193.
 LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <5> on input line 161.
+(Font)              <5> on input line 193.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 161.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 193.
 
+Underfull \vbox (badness 3977) has occurred while \output is active []
 
-LaTeX Warning: Command \textdegree invalid in math mode on input line 177.
-
-
-LaTeX Warning: Command \textdegree invalid in math mode on input line 179.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -737,36 +790,94 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[17]
+[17 <./pics/3_1_feedback.png>]
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 209.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 211.
+
+
+Underfull \vbox (badness 2205) has occurred while \output is active []
+
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[18]
+[18 <./pics/3_1_clusterfeedback.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[19]
+[19 <./pics/3_1_feedbackGraphAccuracy.png (PNG copy)> <./pics/3_1_feedbackGraph
+RT.png (PNG copy)>]
+Underfull \vbox (badness 3386) has occurred while \output is active []
+
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[20]
+[20] <pics/3_3_occipital_sensors.png, id=106, 569.7285pt x 569.7285pt>
+File: pics/3_3_occipital_sensors.png Graphic file (type png)
+
+<use pics/3_3_occipital_sensors.png>
+Package pdftex.def Info: pics/3_3_occipital_sensors.png used on input line 286.
+
+(pdftex.def)             Requested size: 95.60344pt x 95.60072pt.
+
+<pics/3_3_parietal_sensors.png, id=107, 569.7285pt x 569.7285pt>
+File: pics/3_3_parietal_sensors.png Graphic file (type png)
+
+<use pics/3_3_parietal_sensors.png>
+Package pdftex.def Info: pics/3_3_parietal_sensors.png used on input line 287.
+(pdftex.def)             Requested size: 95.60344pt x 95.60072pt.
+
+<pics/3_3_temporal_sensors.png, id=108, 569.7285pt x 569.7285pt>
+File: pics/3_3_temporal_sensors.png Graphic file (type png)
+
+<use pics/3_3_temporal_sensors.png>
+Package pdftex.def Info: pics/3_3_temporal_sensors.png used on input line 288.
+(pdftex.def)             Requested size: 95.60344pt x 95.60072pt.
+
+<pics/3_3_frontal_sensors.png, id=109, 569.7285pt x 569.7285pt>
+File: pics/3_3_frontal_sensors.png Graphic file (type png)
+
+<use pics/3_3_frontal_sensors.png>
+Package pdftex.def Info: pics/3_3_frontal_sensors.png used on input line 289.
+(pdftex.def)             Requested size: 95.60344pt x 95.60072pt.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[21]
-Overfull \hbox (53.63847pt too wide) in paragraph at lines 342--348
+[21 <./pics/3_3_occipital_sensors.png (PNG copy)> <./pics/3_3_parietal_sensors.
+png (PNG copy)> <./pics/3_3_temporal_sensors.png (PNG copy)> <./pics/3_3_fronta
+l_sensors.png (PNG copy)>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[22]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[23]
+Overfull \hbox (53.63847pt too wide) in paragraph at lines 379--385
 \T1/ptm/m/n/10.95 BA45 and BA6v). Clus-ters were again de-ter-mined with the MN
 E func-tion stats.permutation_cluster_test
  []
@@ -778,11 +889,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[22] [23
+[24] [25
 
-] [24] (./chapter/Results.tex
+] [26] (./chapter/Results.tex
 Chapter 4.
-[25
+[27
 
 ]) (./chapter/Discussion.tex
 
@@ -791,34 +902,34 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[26]
+[28]
 Chapter 5.
-) (./chapter/Conclusion.tex [27
+) (./chapter/Conclusion.tex [29
 
-] [28
+] [30
 
 ]
 Chapter 6.
-) (./chapter/Appendix.tex [29] [30
+) (./chapter/Appendix.tex [31] [32
 
 ]
 Appendix A.
-) [31] [32
+) [33] [34
 
-] (./dissertation.bbl) [33
+] (./dissertation.bbl) [35
 
 
 
-] [34
+] [36
 
 
 ] (./dissertation.lof)
 \tf@lof=\write4
 \openout4 = `dissertation.lof'.
 
- [35
+ [37
 
-] [36
+] [38
 
 
 ]
@@ -826,12 +937,12 @@ Appendix A.
 \tf@lot=\write5
 \openout5 = `dissertation.lot'.
 
- [37
+ [39
 
-] [38
+] [40
 
 
-] (./chapter/cv.tex) [39
+] (./chapter/cv.tex) [41
 
 ] (./chapter/selbst.tex)
 Overfull \hbox (31.22636pt too wide) in paragraph at lines 7--238
@@ -847,16 +958,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--238
 Overfull \vbox (3.67326pt too high) has occurred while \output is active []
 
 
-[40] [41] (./dissertation.aux)
+[42] [43] (./dissertation.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 5475 strings out of 494522
- 80844 string characters out of 6167205
- 151913 words of memory out of 5000000
- 8532 multiletter control sequences out of 15000+600000
+ 5531 strings out of 494522
+ 82425 string characters out of 6167205
+ 152979 words of memory out of 5000000
+ 8578 multiletter control sequences out of 15000+600000
  69728 words of font info for 85 fonts, out of 8000000 for 9000
  320 hyphenation exceptions out of 8191
  38i,12n,47p,1166b,401s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -870,10 +981,10 @@ msy9.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/eurosym/fe
 ymr10.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/urw/times/utmb8a
 .pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
 </usr/local/texlive/2014basic/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on dissertation.pdf (47 pages, 355749 bytes).
+Output written on dissertation.pdf (49 pages, 1183921 bytes).
 PDF statistics:
- 200 PDF objects out of 1000 (max. 8388607)
- 135 compressed objects within 2 object streams
+ 217 PDF objects out of 1000 (max. 8388607)
+ 140 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 

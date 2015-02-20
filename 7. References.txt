@@ -2,6 +2,12 @@
 
 [1.4.SNR] Volegov, P., Matlachov, A., Mosher, J., Espy, M., & Kraus, R. (2004). Noise-free magnetoencephalography recordings of brain function. Physics in Medicine and Biology, 49(10), 2117–2128. doi:10.1088/0031-9155/49/10/020
 
+[1.4.MEG.a] Hämäläinen, M. S., Hari, R., Ilmoniemi, R. J., Knuutila, J., & Lounasmaa, O. V. (1993). Magnetoencephalography – theory, instrumentation, and applications to noninvasive studies of the working human brain. Reviews of Modern Physics, 65, 413-497.
+
+[1.4.MEG.b] Baillet, S., Mosher, J. C., & Leahy, R. M. (2001). Electromagnetic brain mapping. IEEE Signal Processing Magazine, 18, 14-30. 
+
+[1.4.MEG.c] Vrba, J, & Robinson, S. E. (2001). Signal processing in magnetoencephalography. Methods, 25, 249-271. 
+
 [1.4.tissues.a] Geddes, L., Baker, L., 1967. The specific resistance of biological material. A compendium of data for the biomedical engineer and physiologist. Med. Biol. Eng. 5, 271 – 293.
 
 [1.4.tissues.b] Haueisen, J., 1996. Methods of numerical field calculation for neuromagnetic source localization. PhD thesis, Shaker-Verlag Aachen, ISBN 3-8265-1691-5.
@@ -21,6 +27,8 @@
 [1.4.L2]: M.S. Hämäläinen and R.J. Ilmoniemi. Interpreting measured magnetic fields of the brain: Estimates of current distributions. Techn. Report TKK- F-A559, Helsinki University of Technology, 1984.
 
 [1.4.L1.b]: M. Wagner, M. Fuchs, H.-A. Wischmann, R. Drenckhahn, and Th. Köhler. Current density reconstructions using the L1-norm. In Proc. of the 10th Int.Conf.of Biomagnetism; Santa Fe, pages 158–207. Biomag96, 1996.
+
+[1.4.highpass]: Tervaniemi M, Kujala A, Alho K, Virtanen J, Ilmoniemi RJ, Näätänen R (1999): Functional specialization of the human auditory cortex in processing phonetic and musical sounds: a Magnetoencephalographic (MEG) study. NeuroImage 9:330 – 336.
 
 
 % Chapter 2
@@ -45,7 +53,7 @@ MNE-Python:
 MEG acquisition methods:
 [3] Cicmil, N., Bridge, H., Parker, A. J., Woolrich, M. W., & Krug, K. (2014). Localization of MEG human brain responses to retinotopic visual stimuli with contrasting source reconstruction approaches. Frontiers in Neuroscience, 8, 127. doi:10.3389/fnins.2014.00127
 
-[8] Cluster permutation algorithm: Maris/Oostenveld (2007), "Nonparametric statistical testing of EEG- and MEG-data", Journal of Neuroscience Methods, Vol. 164, No. 1., pp. 177-190.
+[8] Cluster permutation algorithm: Maris/Oostenveld (2007), -Nonparametric statistical testing of EEG- and MEG-data-, Journal of Neuroscience Methods, Vol. 164, No. 1., pp. 177-190.
 
 Visual stimuli:
 [5] Schipke, C. S., Friederici, A. D., & Oberecker, R. (2011). Brain responses to case-marking violations in German preschool children. Neuroreport, 22(16), 850–4. doi:10.1097/WNR.0b013e32834c1578
@@ -57,5 +65,7 @@ MRI acquisition methods:
 [levtest]
 
 [swtest]
+
+[3.2.SSS] Taulu, S., Kajola, M., & Simola, J. (2004). Suppression of interference and artifacts by the signal space separation method. Brain Topography, 16, 269-275. 
 
 [3.3.nuintensity] Zheng, W., Chee, M., & Zagorodnov, V. (2009). Improvement of brain segmentation accuracy by optimizing non-uniformity correction using N3. NeuroImage, 48(1), 73–83. doi:10.1016/j.neuroimage.2009.06.039

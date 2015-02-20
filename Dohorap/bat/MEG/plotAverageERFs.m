@@ -43,6 +43,11 @@ directions = {'Left', 'Right'};
 locations = {'frontal', 'parietal', 'temporal'};
 sensortypes = {'mag','grad'};
 
+effects = cell(2,2,3); % group, direction, location
+effects{2,1,2} = [1617,1769];
+effects{1,1,1} = [1508,1667];
+effects{1,1,3} = [1371,1624];
+
 averageData = cell(2,2);
 stdevData = cell(2,2);
 for sensorID = 1:2
@@ -127,14 +132,20 @@ for sensID = [2, 1]
             direction = directions{d};
             for l = 1:numel(locations)
                 location = locations{l};
+                e = effects{g, d, l};
                 f = figure();
-
                 % Design the main line plot
                 plotSub = axes('Parent',f,'Position',[0.1 0.25 0.8 0.7]);
                 hold(plotSub,'all');
                 set(plotSub,'ColorOrder', distinguishable_colors(10));
                 set(plotSub,'Box', 'on', 'LineWidth', 2);
                 titleText = ['Grand average ' metrics{sensID} ' in ' direction '-' location ' ' sensors 's'];
+                % Significance tint
+                if ~isempty(e)
+                    xFill = [timescale(e(1)), timescale(e(1)), timescale(e(2)), timescale(e(2))];
+                    yFill = [ylims(1), ylims(2), ylims(2), ylims(1)];
+                    fill(xFill, yFill, [0,0.75,0], 'EdgeColor', [0,0.5,0], 'FaceAlpha', 0.2, 'Parent', plotSub);
+                end;
                 aData = zeros(2,5001);
                 for c = 1:numel(conditions)
                     condition = conditions{c};
@@ -191,7 +202,7 @@ for sensID = [2, 1]
 
                 % Save the result
                 filename = [groupText{g} ' - comparison of ' direction '-' location ' ' sensors ' activity'];
-                savefig(f, [filename '.fig']);
+                %savefig(f, [filename '.fig']);
                 print(f, [filename '.png'], '-dpng');
                 close(f);
             end
