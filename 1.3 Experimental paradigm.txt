@@ -17,3 +17,6 @@ specifically, cases E and F (unambiguous subject- and object-relative clauses wi
 significant fMRI effect in:
 left: IFG (pars opercularis), pSTG, pSTS, inferior frontal junction, ventral premotor cortex, interparietal sulcus
 right: interparietal sulcus
+
+Repeated-measures design
+Stationarity assumption
