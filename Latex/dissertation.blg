@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2014)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: dissertation.aux
 The style file: apacite.bst
@@ -12,45 +12,47 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: bibliography.bib
+Warning--I didn't find a database entry for "AFIFI98"
 apacite.bst [2013/07/21 v6.03 APA bibliography style]
-You've used 3 entries,
+You've used 11 entries,
             6951 wiz_defined-function locations,
-            1290 strings with 11010 characters,
-and the built_in function-call counts, 5008 in all, are:
-= -- 648
-> -- 42
-< -- 182
-+ -- 215
-- -- 6
-* -- 282
-:= -- 858
-add.period$ -- 12
-call.type$ -- 3
-change.case$ -- 51
+            1360 strings with 13625 characters,
+and the built_in function-call counts, 23620 in all, are:
+= -- 2843
+> -- 205
+< -- 1180
++ -- 1280
+- -- 23
+* -- 1644
+:= -- 4411
+add.period$ -- 41
+call.type$ -- 11
+change.case$ -- 203
 chr.to.int$ -- 0
-cite$ -- 6
-duplicate$ -- 146
-empty$ -- 221
-format.name$ -- 72
-if$ -- 1010
+cite$ -- 22
+duplicate$ -- 676
+empty$ -- 910
+format.name$ -- 370
+if$ -- 4344
 int.to.chr$ -- 0
-int.to.str$ -- 9
+int.to.str$ -- 37
 missing$ -- 0
-newline$ -- 78
-num.names$ -- 24
-pop$ -- 123
+newline$ -- 318
+num.names$ -- 88
+pop$ -- 302
 preamble$ -- 1
-purify$ -- 12
+purify$ -- 44
 quote$ -- 0
-skip$ -- 322
+skip$ -- 1463
 stack$ -- 0
-substring$ -- 248
-swap$ -- 74
-text.length$ -- 6
+substring$ -- 1382
+swap$ -- 399
+text.length$ -- 22
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 240
+type$ -- 880
 warning$ -- 0
-while$ -- 21
+while$ -- 124
 width$ -- 0
-write$ -- 95
+write$ -- 396
+(There was 1 warning)

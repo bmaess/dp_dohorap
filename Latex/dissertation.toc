@@ -25,16 +25,17 @@
 \contentsline {subsection}{\numberline {3.1.2}Task}{13}
 \contentsline {paragraph}{MEG tutorial section}{14}
 \contentsline {paragraph}{MEG main section}{14}
-\contentsline {paragraph}{Structure of a single trial}{15}
+\contentsline {paragraph}{Structure of a single trial}{14}
 \contentsline {subsection}{\numberline {3.1.3}Visual stimuli}{15}
 \contentsline {paragraph}{Character motivation}{15}
 \contentsline {paragraph}{Trial feedback}{15}
-\contentsline {paragraph}{Cluster feedback}{15}
+\contentsline {paragraph}{Cluster feedback}{16}
 \contentsline {subsection}{\numberline {3.1.4}Auditory stimuli}{16}
 \contentsline {paragraph}{Sentence content}{16}
-\contentsline {paragraph}{Tutorial sentences}{16}
+\contentsline {paragraph}{Tutorial sentences}{17}
 \contentsline {paragraph}{Audio format}{17}
 \contentsline {paragraph}{Trial feedback}{17}
+\contentsline {subsection}{\numberline {3.1.5}Experimental setup}{18}
 \contentsline {section}{\numberline {3.2}Data acquisition}{18}
 \contentsline {subsection}{\numberline {3.2.1}MEG}{18}
 \contentsline {subsection}{\numberline {3.2.2}MRI}{19}
@@ -45,29 +46,28 @@
 \contentsline {paragraph}{Artifact removal}{20}
 \contentsline {paragraph}{Epoching}{21}
 \contentsline {paragraph}{Establishing time windows of interest}{21}
-\contentsline {subsection}{\numberline {3.3.3}Source space activity}{21}
-\contentsline {paragraph}{Anatomical preprocessing}{21}
+\contentsline {subsection}{\numberline {3.3.3}Source space activity}{22}
+\contentsline {paragraph}{Anatomical preprocessing}{22}
 \contentsline {paragraph}{Forward and inverse operator}{22}
 \contentsline {paragraph}{Inverse solution}{23}
-\contentsline {subsection}{\numberline {3.3.4}Interaction analysis}{24}
-\contentsline {part}{II\hspace {1em}Empirical Part}{25}
-\contentsline {chapter}{\numberline {4}Results}{27}
-\contentsline {section}{\numberline {4.1}Behavioral results}{27}
-\contentsline {subsection}{\numberline {4.1.1}Response times}{27}
-\contentsline {subsection}{\numberline {4.1.2}Response accuracy}{27}
-\contentsline {subsection}{\numberline {4.1.3}Analysis of combined performance data}{28}
-\contentsline {section}{\numberline {4.2}Sensor--space activity}{28}
-\contentsline {subsection}{\numberline {4.2.1}Preprocessing review}{28}
-\contentsline {subsection}{\numberline {4.2.2}Comparison of regional activity}{28}
-\contentsline {section}{\numberline {4.3}Reconstructed cortical activity}{28}
-\contentsline {subsection}{\numberline {4.3.1}Inverse models review}{28}
-\contentsline {subsection}{\numberline {4.3.2}Comparison of regional activity}{28}
-\contentsline {chapter}{\numberline {5}Discussion}{29}
-\contentsline {section}{\numberline {5.1}Impact on hypotheses}{29}
-\contentsline {section}{\numberline {5.2}Comparison to previous results}{29}
-\contentsline {section}{\numberline {5.3}Limitations and possibilities of this study}{29}
-\contentsline {chapter}{\numberline {6}Conclusion}{31}
-\contentsline {chapter}{\numberline {A}Appendix}{33}
-\contentsline {chapter}{References}{35}
-\contentsline {chapter}{List of Figures}{37}
-\contentsline {chapter}{List of Tables}{39}
+\contentsline {part}{II\hspace {1em}Empirical Part}{27}
+\contentsline {chapter}{\numberline {4}Results}{29}
+\contentsline {section}{\numberline {4.1}Behavioral results}{29}
+\contentsline {subsection}{\numberline {4.1.1}Response times}{29}
+\contentsline {subsection}{\numberline {4.1.2}Response accuracy}{29}
+\contentsline {subsection}{\numberline {4.1.3}Analysis of combined performance data}{30}
+\contentsline {section}{\numberline {4.2}Sensor--space activity}{30}
+\contentsline {subsection}{\numberline {4.2.1}Preprocessing review}{30}
+\contentsline {subsection}{\numberline {4.2.2}Comparison of regional activity}{30}
+\contentsline {section}{\numberline {4.3}Reconstructed cortical activity}{30}
+\contentsline {subsection}{\numberline {4.3.1}Inverse models review}{30}
+\contentsline {subsection}{\numberline {4.3.2}Comparison of regional activity}{30}
+\contentsline {chapter}{\numberline {5}Discussion}{31}
+\contentsline {section}{\numberline {5.1}Impact on hypotheses}{31}
+\contentsline {section}{\numberline {5.2}Comparison to previous results}{31}
+\contentsline {section}{\numberline {5.3}Limitations and possibilities of this study}{31}
+\contentsline {chapter}{\numberline {6}Conclusion}{33}
+\contentsline {chapter}{\numberline {A}Appendix}{35}
+\contentsline {chapter}{References}{37}
+\contentsline {chapter}{List of Figures}{39}
+\contentsline {chapter}{List of Tables}{41}

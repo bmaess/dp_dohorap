@@ -1,3 +1,5 @@
+Entries with ">" are files in my ReadCube library, "-" are only references
+
 % Chapter 1
 
 [1.4.SNR] Volegov, P., Matlachov, A., Mosher, J., Espy, M., & Kraus, R. (2004). Noise-free magnetoencephalography recordings of brain function. Physics in Medicine and Biology, 49(10), 2117–2128. doi:10.1088/0031-9155/49/10/020
@@ -44,28 +46,26 @@
 
 % Chapter 3
 
-MNE:
-[1] A. Gramfort, M. Luessi, E. Larson, D. Engemann, D. Strohmeier, C. Brodbeck, L. Parkkonen, M. Hämäläinen, MNE software for processing MEG and EEG data, NeuroImage, Volume 86, 1 February 2014, Pages 446-460, ISSN 1053-8119, [DOI]
+-[3.1.LQ] Oldfield RC (1971) The assessment and analysis of handedness: the Edinburgh inventory. Neuropsychologia 9: 97–113 (http://www.ncbi.nlm.nih.gov/pubmed/5146491)
 
-MNE-Python:
-[2] A. Gramfort, M. Luessi, E. Larson, D. Engemann, D. Strohmeier, C. Brodbeck, R. Goj, M. Jas, T. Brooks, L. Parkkonen, M. Hämäläinen, MEG and EEG data analysis with MNE-Python, Frontiers in Neuroscience, Volume 7, 2013, ISSN 1662-453X, [DOI]
+>[3.1.animals] Schipke, C. S., Friederici, A. D., & Oberecker, R. (2011). Brain responses to case-marking violations in German preschool children. Neuroreport, 22(16), 850–4. doi:10.1097/WNR.0b013e32834c1578
 
-MEG acquisition methods:
-[3] Cicmil, N., Bridge, H., Parker, A. J., Woolrich, M. W., & Krug, K. (2014). Localization of MEG human brain responses to retinotopic visual stimuli with contrasting source reconstruction approaches. Frontiers in Neuroscience, 8, 127. doi:10.3389/fnins.2014.00127
+>[3.2.mprage] Mugler, J., & Brookeman, J. (1991). Rapid three‐dimensional T1‐weighted MR imaging with the MP‐RAGE sequence. Journal of Magnetic Resonance Imaging, 1(5), 561–567. doi:10.1002/jmri.1880010509
 
-[8] Cluster permutation algorithm: Maris/Oostenveld (2007), -Nonparametric statistical testing of EEG- and MEG-data-, Journal of Neuroscience Methods, Vol. 164, No. 1., pp. 177-190.
+-[3.2.space] Lichy, MP, Wietek, BM, III, M. J., & Horger, W. (2005). …  imaging of the body trunk using a single-slab, 3-dimensional, T2-weighted turbo-spin-echo sequence with high sampling efficiency (SPACE) for high spatial …. Investigative  …. doi:10.1097/00004424-200512000-00002
 
-Visual stimuli:
-[5] Schipke, C. S., Friederici, A. D., & Oberecker, R. (2011). Brain responses to case-marking violations in German preschool children. Neuroreport, 22(16), 850–4. doi:10.1097/WNR.0b013e32834c1578
+>[3.2.MEGexample] Cicmil, N., Bridge, H., Parker, A. J., Woolrich, M. W., & Krug, K. (2014). Localization of MEG human brain responses to retinotopic visual stimuli with contrasting source reconstruction approaches. Frontiers in Neuroscience, 8, 127. doi:10.3389/fnins.2014.00127
 
-MRI acquisition methods:
-[6] MPRAGE sequence
-[7] SPACE sequence
+-[3.3.MNE] A. Gramfort, M. Luessi, E. Larson, D. Engemann, D. Strohmeier, C. Brodbeck, L. Parkkonen, M. Hämäläinen, MNE software for processing MEG and EEG data, NeuroImage, Volume 86, 1 February 2014, Pages 446-460, ISSN 1053-8119, doi:10.1016/j.neuroimage.2013.10.027
 
-[levtest]
+-[3.3.MNEpython] A. Gramfort, M. Luessi, E. Larson, D. Engemann, D. Strohmeier, C. Brodbeck, R. Goj, M. Jas, T. Brooks, L. Parkkonen, M. Hämäläinen, MEG and EEG data analysis with MNE-Python, Frontiers in Neuroscience, Volume 7, 2013, ISSN 1662-453X, doi: 10.3389/fnins.2013.00267
 
-[swtest]
+[3.3.levtest] Schultz, BB. (1985). Levene’s test for relative variation. Systematic Biology. doi:10.1093/sysbio/34.4.449
 
-[3.2.SSS] Taulu, S., Kajola, M., & Simola, J. (2004). Suppression of interference and artifacts by the signal space separation method. Brain Topography, 16, 269-275. 
+[3.3.swtest] Shapiro, SS, & Wilk, MB. (1965). An analysis of variance test for normality (complete samples). Biometrika. Retrieved from http://www.jstor.org/stable/2333709
 
-[3.3.nuintensity] Zheng, W., Chee, M., & Zagorodnov, V. (2009). Improvement of brain segmentation accuracy by optimizing non-uniformity correction using N3. NeuroImage, 48(1), 73–83. doi:10.1016/j.neuroimage.2009.06.039
+-[3.3.SSS] Taulu, S., Kajola, M., & Simola, J. (2004). Suppression of interference and artifacts by the signal space separation method. Brain Topography, 16, 269-275. 
+
+-[3.3.clustertest] Maris, E., & Oostenveld, R. (2007). Nonparametric statistical testing of EEG- and MEG-data. Journal of Neuroscience Methods, 164(1). doi:10.1016/j.jneumeth.2007.03.024
+
+> [3.3.nuintensity] Zheng, W., Chee, M., & Zagorodnov, V. (2009). Improvement of brain segmentation accuracy by optimizing non-uniformity correction using N3. NeuroImage, 48(1), 73–83. doi:10.1016/j.neuroimage.2009.06.039

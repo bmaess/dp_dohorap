@@ -1,7 +1,9 @@
 A positive effect indicates that activity evoked by object-relative clauses was more positive than activity evoked by subject-relative clauses. In the case of gradiometers, "more positive" means a higher regional RMS. With localized data, "more positive" means a higher z-score from the sLORETA source reconstruction.
 
 
-Temporal clusters
+Sensor-level activity
+
+Clusteranalysis
 
 Comparing activity between conditions yielded several temporal clusters.
 
@@ -14,22 +16,11 @@ For adults, clusters of significant differences were observed by left-temporal g
 Left temporal gradiometers showed a positive effect between 257ms and 454ms (p = 2.0%).
 Left parietal magnetometers showed a positive effect between 618ms and 769ms (p = 0.28%).
 
-
-Sensor-level activity
+Average data
 
 We computed average event-related fields (ERF) for each subject and sensor region.
-Activity from these ERF was selected with two different types of time windows.
 
-First, ERF activity was compared by using the time windows of region-specific clusters.
-In children, the first (159ms-374ms) and the second (345ms-622ms) time window yielded effects.
-The positive effect during the first time window was captured by the right parietal magnetometers (p = 3.1%, F = 5.3).
-A negative effect during the second timewindow was mainly captured by the left frontal magnetometers (p = 4.5%, F = 4.5).
-This effect was also (weakly) captured by the left temporal magnetometers (p = 9.1%, F = 3.1).
-The weak effect from the right temporal magnetometers pointed in the opposite direction (p = 7.2%, F = 3.6).
-In adults, only the second time window (618ms-769ms) yielded an effect.
-This positive effect was weakly captured by the left temporal gradiometers (p = 5.2%, F = 4.0).
-
-Second, ERF activity was compared blindly between 0 and 1200ms after onset in 100ms intervals from all regions.
+We compared ERF activity blindly between 0 and 1200ms after onset in 100ms intervals from all regions.
 The comparisons across these time windows yielded no effects in adults, and two positive effects in children.
 Both effects occurred between 400ms and 500ms after onset.
 One effect was captured the by right frontal gradiometer group.
