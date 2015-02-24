@@ -29,7 +29,7 @@ A magnetoenecephalograph (MEG) consists of several dozens of these sensors distr
 MEG and EEG are currently the only non-invasive acquisition methods that measure brain activity with a milisecond resolution [1.4.MEG.a][1.4.MEG.b][1.4.MEG.c].
 The focus of this project is on cognitive processes that require timespans in the single-digit second range to complete.
 Considering these small time frames, a good temporal resolution is integral for yielding a sufficient amount of data from every processing step.
-This is the reason why we decided to use a EEG/MEG method, while using the highest available temporal resolution.
+This is the reason why I decided to use a EEG/MEG method, while using the highest available temporal resolution.
 
 Compared to EEG, the MEG-based measuring strategy has a few advantages and drawbacks.
 
@@ -58,7 +58,6 @@ The magnetic permeability of water, which most human tissue is based on, is only
 As a rule of thumb, only metal-based materials are substantially less permeable than water.
 Since the human head doesn't contain metal in considerable quantities, it practically allows magnetic fields to pass without distortion. [1.4.tissues.a]
 
-
 This circumstance does not imply, unfortunately, that every neural transmission arrives at the magnetic sensors with equal strength.
 There are three main reasons for that.
 
@@ -66,7 +65,7 @@ First, the main source of electrical and magnetical activity are the pyramidal c
 The activity of a single neuron, besides being highly unlikely in vivo, doesn't create a field with sufficient strength to elict a response in contemporary EEG or MEG sensors.
 Only the combined and synchronous activity of larger clusters of neurons can cross the detection threshold.
 
-Second, the human cortex is folded.
+Second, the human cortex is folded into gyri and sulci.
 When two neural groups at opposite cortical walls produce identical activity, the two created electric and magnetic fields are directly opposed to each other.
 Opposing fields cancel each other out, so the original signal will be systematically underestimated by surrounding sensors.
 
@@ -76,31 +75,76 @@ Fibers that lie parallel to the head surface, in contrast, create strong electri
 The implication on measurements of neural activity is that EEG is most sensitive for gyri and sulci, and MEG is most sensitive for the radial walls inbetween.
 To counteract this particular measurement bias, EEG and MEG data would have to be acquired simultaneously.
 
-Side note: although the simultaneous acqusisition of EEG and MEG data provides theoretical benefits to the signal quality, we ultimately decided against this strategy.
+Side note: although the simultaneous acqusisition of EEG and MEG data provides theoretical benefits to the signal quality, I ultimately decided against this strategy.
 MEG acquisition consists of three preparation steps: Getting written consent, applying the HPI coils and ocular electrodes, and digitizing the head.
 This preparation typically requires 25 minutes for children and 15 minutes for experienced adults.
 Including EEG acquisition would have added several lengthy steps to this procedure: Fitting the gel electrode cap, ensuring a good connection for each electrode, and plugging in each of the 63 cables individually.
 These additional steps would have extended the preparation time to at least 60 minutes.
-Since patience is not a strong trait in children\footnote{Implementing details with the goal to prevent boredom was a common theme in this study, as explained in more detail in chapter 3.}, we wanted to minimize any idle waiting times between their arrival and the experiment.
-Therefore, we only acquired MEG data during this study.
+Since patience is not a strong trait in children\footnote{Implementing details with the goal to prevent boredom was a common theme in this study, as explained in more detail in chapter 3.}, I wanted to minimize any idle waiting times between their arrival and the experiment.
+Therefore, I only acquired MEG data during this study.
 
-Once the signals were acquired by the MEG, there were a few possible decisions for preprocessing.
-Traditionally, 
-- Highpass or baseline (pros and cons)
-- ICA or artifact rejection
+[Preprocessing]
+
+Once the signals were acquired by the MEG, there were a two necessary decisions for preprocessing.
+The first decision concerns the removal of DC bias that is often caused by slow sensor drift.
+Traditionally, for the exploration of effects in ERP and ERF, a subtractive baseline correction is applied to every trial before averaging.
+For this purpose, the average is computed from roughly 100 to 500 (typically 200) miliseconds of activity before the conditional cue.
+This initial interval is assumed to originate from brain activity unrelated to the post-cue task.
+The computed average value is then subtracted from activity data in the corresponding trial.
+This procedure assures that different DC components from long-term trends (for either technical or cognitive reasons) don't disturb the trigger-dependent effect.
+However, there is a fundamental issue with the baseline correction.
+Because the stimuli are spoken sentences in this study, there is no silent time window around the critical words.
+Therefore, the pre-cue interval reflects electric fields from unrelated brain activity.
+By computing the average from unrelated activity, I effectively introduces a random DC error into the correction procedure.
+This issue makes a subtractive baseline correction a tradeoff between the original DC error and a random DC error.
+A process to remove DC components without this tradeoff is to use a highpass filter [1.4.highpass].
+Since my longest expected evoked field, the ELAN, has a base frequency of 5Hz, I choose a much lower value of 0.4Hz for the high-pass.
+
+The second decision concerns the removal of various measuring artifacts.
+There are four major types of artifacts during the acquisition of electric or magnetic fields.
+
+The fist type of artifact is caused from cardiac activity.
+Cardiac muscles create an almost continuous, very regular field with low frequency and medium strength.
+
+The second type of artifact is caused by ocular movements.
+Since the eyeballs are electrically charged, all eye movements are associated with a continuously changing field of low frequency and medium strength.
+
+The third type of artifact is caused by muscle movements.
+Muscle activity creates relatively long and strong distortions in a wide frequency band.
+
+The final type of artifact is caused by oversaturation in MEG sensors.
+Oversaturation happens randomly when no high pass is in use, and reduces the sensitivity of the affected channel to zero.
+This condition is remedied with an automatic reset, which in turn produces a single very short and very large jump in amplitude.
+
+The first two artifacts can be eliminated with the help of three additional acquisition channels.
+With electrodes attached to the chest and to the eye sockets, electric fields from ocular and cardiac activity are measured directly.
+MEG data is then deconstructed into independent data components with an independent component analysis.
+The artifact channels are used to identify artifact components in the measured MEG data.
+If the extracted data component is similar enough to one of the measured artifact channels, it is removed. 
+The remaining components are then assembled to a data composition, ideally containing no cardiac or ocular artifacts.
+
+The last two artifacts can be removed with a simple threshold detection.
+Their high amplitude make it possible to set a manual amplitude threshold, and reject segments that exceed this threshold in any channel.
+I determined the threshold manually after visual artifact inspection, and decided to reject entire trials if this threshold is exceeded.
 
 [Timewindow estimation]
 The acquired signals need to be explored for the impact of the conditional effect.
 This effect is usually spatially and temporally limited.
-For establishing time and spatial regions of interest, there are two possible approaches.
-First, 
-- Two possible strategies: guided by literature, or bootstrapping
-- Two bootstrapping methods: interval checking or cluster analysis
-We decided to use each approach for different purposes:
-Comparisons within previously discovered time windows provide results that can be compared with earlier studies.
-Additionally, blind comparisons with a cluster analysis enables the detection of new time windows.
-For the blind comparisons, we still relied on known cortical regions instead of extending to a blind spatial search.
-Since we need to be correct for multiple comparisons, this attempt would have sacrificed too much of the contrast to produce viable results.
+For establishing time intervals (TOI) and spatial regions of interest (ROI), there are two possible approaches.
+
+First, existing literature can be consulted for activity effects from syntax contrasts in similar experiments.
+
+Second, a bootstrapping approach can be used.
+For this approach, the measured activity is compared between conditions.
+The TOI and ROI that involve considerable contrast between conditions can then be selected for the comparison of mean activity.
+The drawback to this approach is both spurious contrast and activity from different cognitive processes are considered as condition effect.
+The statistical testing will therefore systematically overestimate the condition effect.
+This issue is known as "double dipping" [1.4.Kriegeskorte].
+However, for exploratory analysis, bootstrapping is a valuable tool that can uncover previously unknown TOI and ROI.
+
+I decided to use both approaches with different purposes:
+First, comparisons within previously discovered ROI and TOI provide results that can be compared well to the findings of earlier studies.
+Second, a bootstrapped comparison allows for the exploration of spatial and temporal properties of the syntactic effect.
 
 [Localization]
 Magnetic fields, when induced by the brain, arrive at MEG sensors only as mixture of many cortical sources.
@@ -143,7 +187,7 @@ The most popular norm today is the L2-norm [1.4.L2], and implementations are wid
 Alternatively, the L1-norm [1.4.L1a, 1.4.L1b] can result in a more focally reconstructed activity.
 This process is usually computed separately for every temporal sample.
 Popular implementations include dSPM (Dale et al., 2000), MNE (Hammalaien, 2005) and sLORETA (Pascual-Marqui, 2002)).
-We opted for this approach because the spatial filtering approaches aren't recommended for localizing cortical activity, and the quality of results from the dipole fit models depend too strongly on the inital parameters.
+I opted for this approach because the spatial filtering approaches aren't recommended for localizing cortical activity, and the quality of results from the dipole fit models depend too strongly on the inital parameters.
 
 L2-norm-based solutions have two major drawbacks.
 First, the solution has a relatively low spatial resolution.
@@ -151,7 +195,7 @@ This issue leads to spatially distributed activity clusters even if the real sou
 If the sources are in close proximity, unintended mixing of reconstructed source activity can occur as well.
 Second, generic L2-normal solutions contain a mandatory systematical spatial bias.
 The sLORETA algorithm, by contrast, has been designed to create solutions with zero bias.
-Since this algorithm has minimal drawbacks out of all readiliy available software, it became the method of choice for our source localization purposes.
+Since this algorithm has minimal drawbacks out of all readiliy available software, it became the method of choice for my source localization purposes.
 
 [Information transfer]
 Meaning of information transfer

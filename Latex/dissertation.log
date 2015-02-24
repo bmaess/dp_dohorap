@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.19)  23 FEB 2015 02:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.19)  24 FEB 2015 16:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -621,12 +621,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 Chapter 2.
-
-Overfull \hbox (7.01439pt too wide) in paragraph at lines 19--25
- \T1/ptm/b/n/10.95 Par-tic-i-pants[] \T1/ptm/m/n/10.95 21 chil-dren ([9 fe-male
-]) were re-cruited from the in-ter-nal par-tic-i-pants database.
- []
-
 [7] <pics/2_screen.png, id=48, 433.62pt x 325.215pt>
 File: pics/2_screen.png Graphic file (type png)
  <use pics/2_screen.png>
@@ -666,6 +660,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [10 <./pics/2_RTgraph.png> <./pics/2_RAgraph.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -699,30 +696,15 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 File: pics/3_1_screen.png Graphic file (type png)
 
 <use pics/3_1_screen.png>
-Package pdftex.def Info: pics/3_1_screen.png used on input line 88.
+Package pdftex.def Info: pics/3_1_screen.png used on input line 89.
 (pdftex.def)             Requested size: 199.1693pt x 149.3774pt.
-
-Overfull \hbox (16.83188pt too wide) in paragraph at lines 93--95
-[]\T1/ptm/m/n/10.95 Image com-po-nents were adapted with per-mis-sion and kind 
-ad-vice from []Schipke, Friederici,
- []
 
 <pics/3_1_activities.png, id=78, 2492.31125pt x 380.42125pt>
 File: pics/3_1_activities.png Graphic file (type png)
 
 <use pics/3_1_activities.png>
-Package pdftex.def Info: pics/3_1_activities.png used on input line 99.
+Package pdftex.def Info: pics/3_1_activities.png used on input line 100.
 (pdftex.def)             Requested size: 394.35739pt x 60.18948pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<pics/3_1_feedback.png, id=79, 433.62pt x 325.215pt>
-File: pics/3_1_feedback.png Graphic file (type png)
-
-<use pics/3_1_feedback.png>
-Package pdftex.def Info: pics/3_1_feedback.png used on input line 115.
-(pdftex.def)             Requested size: 199.1693pt x 149.3774pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -734,6 +716,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [15 <./pics/3_1_screen.png>]
+<pics/3_1_feedback.png, id=82, 433.62pt x 325.215pt>
+File: pics/3_1_feedback.png Graphic file (type png)
+
+<use pics/3_1_feedback.png>
+Package pdftex.def Info: pics/3_1_feedback.png used on input line 115.
+(pdftex.def)             Requested size: 199.1693pt x 149.3774pt.
+
 <pics/3_1_clusterfeedback.png, id=83, 1027.84pt x 770.88pt>
 File: pics/3_1_clusterfeedback.png Graphic file (type png)
 
@@ -761,10 +750,6 @@ Package pdftex.def Info: pics/3_1_feedbackGraphRT.png used on input line 137.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \vbox (badness 3049) has occurred while \output is active []
-
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -818,7 +803,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 File: pics/3_3_occipital_sensors.png Graphic file (type png)
 
 <use pics/3_3_occipital_sensors.png>
-Package pdftex.def Info: pics/3_3_occipital_sensors.png used on input line 283.
+Package pdftex.def Info: pics/3_3_occipital_sensors.png used on input line 285.
 
 (pdftex.def)             Requested size: 95.60344pt x 95.60072pt.
 
@@ -826,72 +811,22 @@ Package pdftex.def Info: pics/3_3_occipital_sensors.png used on input line 283.
 File: pics/3_3_parietal_sensors.png Graphic file (type png)
 
 <use pics/3_3_parietal_sensors.png>
-Package pdftex.def Info: pics/3_3_parietal_sensors.png used on input line 284.
+Package pdftex.def Info: pics/3_3_parietal_sensors.png used on input line 286.
 (pdftex.def)             Requested size: 95.60344pt x 95.60072pt.
 
 <pics/3_3_temporal_sensors.png, id=108, 569.7285pt x 569.7285pt>
 File: pics/3_3_temporal_sensors.png Graphic file (type png)
 
 <use pics/3_3_temporal_sensors.png>
-Package pdftex.def Info: pics/3_3_temporal_sensors.png used on input line 285.
+Package pdftex.def Info: pics/3_3_temporal_sensors.png used on input line 287.
 (pdftex.def)             Requested size: 95.60344pt x 95.60072pt.
 
 <pics/3_3_frontal_sensors.png, id=109, 569.7285pt x 569.7285pt>
 File: pics/3_3_frontal_sensors.png Graphic file (type png)
 
 <use pics/3_3_frontal_sensors.png>
-Package pdftex.def Info: pics/3_3_frontal_sensors.png used on input line 286.
+Package pdftex.def Info: pics/3_3_frontal_sensors.png used on input line 288.
 (pdftex.def)             Requested size: 95.60344pt x 95.60072pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[21 <./pics/3_3_occipital_sensors.png (PNG copy)> <./pics/3_3_parietal_sensors.
-png (PNG copy)> <./pics/3_3_temporal_sensors.png (PNG copy)> <./pics/3_3_fronta
-l_sensors.png (PNG copy)>]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[22] <pics/dh55a-pial-lh.png, id=116, 1686.3pt x 1028.84375pt>
-File: pics/dh55a-pial-lh.png Graphic file (type png)
-
-<use pics/dh55a-pial-lh.png>
-Package pdftex.def Info: pics/dh55a-pial-lh.png used on input line 362.
-(pdftex.def)             Requested size: 195.1881pt x 119.07593pt.
-
-<pics/dh55a-pial-rh.png, id=117, 1686.3pt x 1028.84375pt>
-File: pics/dh55a-pial-rh.png Graphic file (type png)
-
-<use pics/dh55a-pial-rh.png>
-Package pdftex.def Info: pics/dh55a-pial-rh.png used on input line 363.
-(pdftex.def)             Requested size: 195.1881pt x 119.07593pt.
-
-<pics/dh55a-inflated-lh.png, id=118, 1686.3pt x 1028.84375pt>
-File: pics/dh55a-inflated-lh.png Graphic file (type png)
-
-<use pics/dh55a-inflated-lh.png>
-Package pdftex.def Info: pics/dh55a-inflated-lh.png used on input line 364.
-(pdftex.def)             Requested size: 195.1881pt x 119.07593pt.
-
-<pics/dh55a-inflated-rh.png, id=119, 1686.3pt x 1028.84375pt>
-File: pics/dh55a-inflated-rh.png Graphic file (type png)
-
-<use pics/dh55a-inflated-rh.png>
-Package pdftex.def Info: pics/dh55a-inflated-rh.png used on input line 365.
-(pdftex.def)             Requested size: 195.1881pt x 119.07593pt.
-
-<pics/3_3_ROIlegend.png, id=120, 626.34pt x 145.54375pt>
-File: pics/3_3_ROIlegend.png Graphic file (type png)
-
-<use pics/3_3_ROIlegend.png>
-Package pdftex.def Info: pics/3_3_ROIlegend.png used on input line 366.
-(pdftex.def)             Requested size: 394.35739pt x 91.63974pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -902,7 +837,64 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[23])
+[21]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[22 <./pics/3_3_occipital_sensors.png (PNG copy)> <./pics/3_3_parietal_sensors.
+png (PNG copy)> <./pics/3_3_temporal_sensors.png (PNG copy)> <./pics/3_3_fronta
+l_sensors.png (PNG copy)>]
+<pics/dh55a-pial-lh.png, id=116, 1686.3pt x 1028.84375pt>
+File: pics/dh55a-pial-lh.png Graphic file (type png)
+
+<use pics/dh55a-pial-lh.png>
+Package pdftex.def Info: pics/dh55a-pial-lh.png used on input line 361.
+(pdftex.def)             Requested size: 195.1881pt x 119.07593pt.
+
+<pics/dh55a-pial-rh.png, id=117, 1686.3pt x 1028.84375pt>
+File: pics/dh55a-pial-rh.png Graphic file (type png)
+
+<use pics/dh55a-pial-rh.png>
+Package pdftex.def Info: pics/dh55a-pial-rh.png used on input line 362.
+(pdftex.def)             Requested size: 195.1881pt x 119.07593pt.
+
+<pics/dh55a-inflated-lh.png, id=118, 1686.3pt x 1028.84375pt>
+File: pics/dh55a-inflated-lh.png Graphic file (type png)
+
+<use pics/dh55a-inflated-lh.png>
+Package pdftex.def Info: pics/dh55a-inflated-lh.png used on input line 363.
+(pdftex.def)             Requested size: 195.1881pt x 119.07593pt.
+
+<pics/dh55a-inflated-rh.png, id=119, 1686.3pt x 1028.84375pt>
+File: pics/dh55a-inflated-rh.png Graphic file (type png)
+
+<use pics/dh55a-inflated-rh.png>
+Package pdftex.def Info: pics/dh55a-inflated-rh.png used on input line 364.
+(pdftex.def)             Requested size: 195.1881pt x 119.07593pt.
+
+<pics/3_3_ROIlegend.png, id=120, 626.34pt x 145.54375pt>
+File: pics/3_3_ROIlegend.png Graphic file (type png)
+
+<use pics/3_3_ROIlegend.png>
+Package pdftex.def Info: pics/3_3_ROIlegend.png used on input line 365.
+(pdftex.def)             Requested size: 298.75394pt x 69.4227pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[23]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -911,7 +903,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [24 <./pics/dh55a-pial-lh.png (PNG copy)> <./pics/dh55a-pial-rh.png (PNG copy)>
  <./pics/dh55a-inflated-lh.png (PNG copy)> <./pics/dh55a-inflated-rh.png (PNG c
-opy)> <./pics/3_3_ROIlegend.png>]
+opy)> <./pics/3_3_ROIlegend.png>])
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -1094,10 +1086,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--238
  []
 
 
-Overfull \vbox (3.67326pt too high) has occurred while \output is active []
+Overfull \vbox (20.17003pt too high) has occurred while \output is active []
 
 
-[44] [45] (./dissertation.aux)
+[44] (./dissertation.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1121,10 +1113,10 @@ ymr10.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/urw/courier/ucrr
 8a.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/urw/times/utmb8a.pf
 b></usr/local/texlive/2014basic/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></u
 sr/local/texlive/2014basic/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on dissertation.pdf (51 pages, 3339543 bytes).
+Output written on dissertation.pdf (50 pages, 3340194 bytes).
 PDF statistics:
- 232 PDF objects out of 1000 (max. 8388607)
- 147 compressed objects within 2 object streams
+ 229 PDF objects out of 1000 (max. 8388607)
+ 145 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  91 words of extra memory for PDF output out of 10000 (max. 10000000)
 

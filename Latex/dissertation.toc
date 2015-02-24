@@ -34,20 +34,20 @@
 \contentsline {paragraph}{Sentence content}{16}
 \contentsline {paragraph}{Tutorial sentences}{17}
 \contentsline {paragraph}{Audio format}{17}
-\contentsline {paragraph}{Trial feedback}{17}
+\contentsline {paragraph}{Trial feedback}{18}
 \contentsline {subsection}{\numberline {3.1.5}Experimental setup}{18}
 \contentsline {section}{\numberline {3.2}Data acquisition}{18}
 \contentsline {subsection}{\numberline {3.2.1}MEG}{18}
 \contentsline {subsection}{\numberline {3.2.2}MRI}{19}
 \contentsline {section}{\numberline {3.3}Data analysis}{19}
-\contentsline {subsection}{\numberline {3.3.1}Behavioral data}{19}
+\contentsline {subsection}{\numberline {3.3.1}Behavioral data}{20}
 \contentsline {subsection}{\numberline {3.3.2}Sensor-space activity}{20}
 \contentsline {paragraph}{Preprocessing and HPI correction}{20}
 \contentsline {paragraph}{Artifact removal}{20}
 \contentsline {paragraph}{Epoching}{21}
 \contentsline {paragraph}{Establishing time windows of interest}{21}
-\contentsline {subsection}{\numberline {3.3.3}Source space activity}{22}
-\contentsline {paragraph}{Anatomical preprocessing}{22}
+\contentsline {subsection}{\numberline {3.3.3}Source space activity}{21}
+\contentsline {paragraph}{Anatomical preprocessing}{21}
 \contentsline {paragraph}{Forward and inverse operator}{22}
 \contentsline {paragraph}{Inverse solution}{23}
 \contentsline {part}{II\hspace {1em}Empirical Part}{27}
