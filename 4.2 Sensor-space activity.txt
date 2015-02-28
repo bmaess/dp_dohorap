@@ -16,11 +16,21 @@ For adults, clusters of significant differences were observed by left-temporal g
 Left temporal gradiometers showed a positive effect between 257ms and 454ms (p = 2.0%).
 Left parietal magnetometers showed a positive effect between 618ms and 769ms (p = 0.28%).
 
-Average data
+Comparisons of average activity
 
 We computed average event-related fields (ERF) for each subject and sensor region.
+Activity from these ERF was selected with two different types of time windows.
 
-We compared ERF activity blindly between 0 and 1200ms after onset in 100ms intervals from all regions.
+First, ERF activity was compared by using the time windows of region-specific clusters.
+In children, the first (159ms-374ms) and the second (345ms-622ms) time window yielded effects.
+The positive effect during the first time window was captured by the right parietal magnetometers (p = 3.1%, F = 5.3).
+A negative effect during the second timewindow was mainly captured by the left frontal magnetometers (p = 4.5%, F = 4.5).
+This effect was also (weakly) captured by the left temporal magnetometers (p = 9.1%, F = 3.1).
+The weak effect from the right temporal magnetometers pointed in the opposite direction (p = 7.2%, F = 3.6).
+In adults, only the second time window (618ms-769ms) yielded an effect.
+This positive effect was weakly captured by the left temporal gradiometers (p = 5.2%, F = 4.0).
+
+Second, ERF activity was compared blindly between 0 and 1200ms after onset in 100ms intervals from all regions.
 The comparisons across these time windows yielded no effects in adults, and two positive effects in children.
 Both effects occurred between 400ms and 500ms after onset.
 One effect was captured the by right frontal gradiometer group.
@@ -28,35 +38,3 @@ It indicated that activity was slightly stronger during object-related clauses (
 The other effect was captured by the right temporal magnetometer group.
 It indicated that evoked fields were slightly more positive during object-related clauses (p = 3.4%, t = 4.84).
 These statistical results were Bonferroni-corrected with 66 comparisons (2 hemispheres, 3 sensory regions, 11 time intervals).
-
-
-Source-level activity
-
-We estimated cortical activity with sLORETA localization on a subject-specific BEM model.
-The localized activity was acquired with two different strategies: pooled (higher values represent stronger activity) and signed (higher values represent stronger activity, but currect direction with respect to the cortex outer normal is preserved).
-This activity was compared within 7 anatomically defined cortical regions: PAC, pSTS, aSTG, BA44, BA45, BA6v
-
-First, localized activity was compared by using the time windows from the cluster analysis.
-Comparisons in children only yielded an effect during the third time window (1426ms-1660ms).
-This positive effect was represented in signed activity from the left precentral sulcus (p=4.7%, F=4.4).
-Comparisons in adults only yielded an effect during the second time window (618ms-769ms).
-This positive effect could be observed in pooled activity from the right pSTS (p=3.8%, F=4.6).
-It also appeared in signed activity from the left BA45 (p=4.5%, F=4.3) and the right PAC (p=4.4%, F=4.4).
-
-Second, localized activity was compared in 4 cortical regions between 0 and 2500ms after onset in 100ms intervals.
-These statistical results were FDR-corrected with 25 comparisons.
-PAC-rh: 0-100ms
-
-PAC-rh: 400-800ms
-BA45-lh: 400-800ms
-BA44-lh: 700-800ms
-pSTS-rh: 400-900ms
-BA6-rh: 500-700ms
-
-PAC-rh: 1300-1600ms
-pSTS-rh: 1300-1600ms
-BA6-rh: 1400-1600ms
-
-PAC-rh: 1800-2000ms
-pSTS-rh: 1900-2100ms
-BA6-rh: 1800-1900ms

@@ -156,7 +156,7 @@ Original & Wo & ist & das & Tier, & das & der & Tiger & malt?\\
 Translated & Where & is & the & animal$_{OBJ}$, & which & the$_{NOM}$ & tiger$_{SUBJ}$ & paints?\\
 Word index & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8
 \end{tabular}
-\caption{\label{3.1.sentences} Example stimulus sentence. Top: original spelling in German. Middle: Literal translation in English. Bottom: Word index within the sentence.}
+\caption{\label{3.1.sentences} Example stimulus sentence. Top: original spelling in German. Middle: Literal translation in English. Bottom: Word index within the sentence. NOM: Nominative case.}
 \end{center}
 \end{table}
 
@@ -260,22 +260,27 @@ The main trigger was set at the condition onset (described in section 3.1.4).
 Epochs were created between 1000ms before and 4000ms after the main trigger.
 An epoch was rejected if the trial was skipped, or answered too slow (more than 4000ms) or answered incorrectly.
 This procedure yielded an average of [] trials in children and [] trials in adults.
-Data were filtered before epoching with a 45Hz FIR lowpass for visualization purposes only.
+Data were filtered before epoching with a 45Hz FIR lowpass (using the MNE function $raw.filter()$) exclusively for the following two steps.
 
-\paragraph{Establishing time windows of interest}
+\paragraph{Cluster analysis}
 The condition effect was used to determine suitable time windows.
 Selecting data purely based on contrast will include spurious differences as well as the condition-based differences in activity.
 Since there the subsequent statistical analysis compares the same contrast, it is prone to overestimate the condition effect.
 This problem was resolved with a cluster-level permutation comparison.
 Spurious differences in activity should vary randomly between trials and subjects, while the condition contrast is expected with a roughly equal delay and duration.
+
+One pair of trials was pooled for each syntax condition over all trials in a group.
+Each trial consisted of mean activity from one of each of three sensor groups (from parietal, temporal and frontal locations).
+Clusters were computed by running the MNE function $stats.permutation\_cluster\_test()$ \cite{3.3.clustertest} over the pair of trials.
+The function was run with 2500 permutations, and an t-threshold of 2.0.
 Since the group had a strong impact on RT (see [4.1.1]), effective time windows were estimated separately for children and adults.
 
-First, the mean was computed for data from all trials, separately for each subject and condition.
-
-Second, sensor data was pooled by calculating the mean within each of three sensor groups (from parietal, temporal and frontal locations).
-These locations were selected according to previous literature findings.
-Finally, clusters were computed by the MNE function $stats.permutation\_cluster\_test()$ \cite{3.3.clustertest}.
-The function was run with 500 permutations, and an t-threshold of 2.0.
+\paragraph{Interval analysis}
+Additionally, a blind comparison was performed for sensor activity in a series of time intervals.
+10 time intervals were established from 0ms to 2200ms\footnote{As determined in the following analysis of response times, these intervals cover 95\% of childrens' trials completely, and 98\% of the adults'.} after onset, spanning 200ms each.
+The mean sensor activity was computed for each sensor group (3), hemisphere (2), time interval (10), yielding 60 activity values for each subject and condition.
+The corresponding values were pooled over all subjects within each of the two groups, and compared between syntax conditions with a paired Student's T-test.
+Results from each hemisphere and sensor group were adjusted with the false discovery rate correction (10 comparisons).
 
 For visualization purposes, grand average activity was also calculated for each sensor group and condition, separately for children and adults.
 
@@ -349,11 +354,11 @@ Seventh, the regularization factor was computed by dividing the lower cutoff by 
 The inverse operator was computed from these three components by the method \linebreak $mne\_do\_inverse\_operator()$. The regularization factor was supplied with the option \linebreak "'--megreg"'.
 
 \paragraph{Inverse solution}
-For determining regional cortical activity, 8 regions needed to be defined: the primary auditory cortex (PAC), the anterior and posterior parts of the superior temporal sulcus (a/pSTS), the anterior and posterior parts of the superior temporal gyrus (a/pSTG), Brodmann area 45 (BA45), Brodmann area 44 (BA44) and the ventral Brodmann area 6 (BA6v).
-The regions were spatially defined manually on the cortex of the reference subject.
+For determining regional cortical activity, 8 regions needed to be defined: the primary auditory cortex (PAC), the anterior and posterior parts of the superior temporal sulcus and gyrus (aSTS, pSTS, aSTG and pSTG), Brodmann area 45 (BA45), Brodmann area 44 (BA44) and the ventral Brodmann area 6 (BA6v).
+These regions were spatially defined manually on the cortex of the reference subject.
 Freesurfer provided the aparc.a2009s segmentation, which became the basis for this regional selection.
 The final regions of interest on the reference brain are visualized in Fig. \ref{3.3.ROI}.
-These regions were mapped from the reference cortex onto the cortices of all other subjects during the next step.
+Regions were then mapped from the reference cortex onto the cortices of all other subjects during the next step.
 
 \begin{figure}[h]
 \begin{center}
@@ -370,25 +375,54 @@ These regions were mapped from the reference cortex onto the cortices of all oth
 The inverse operator was then used to calculate inverse solutions from MEG sensor data.
 Inverse solutions were calculated for each time point, region, trial and subject individually.
 The process was performed by the function $mne.minimum\_norm.apply\_inverse\_epochs()$, with sLORETA as the inverse method.
-The option "'pick\_ori=normal"' ensured that currents leaving and entering the cortex were designated positive and negative, respectively.
-Due to the combination of passive and active noise reduction and artifact suppression, I assumed a fairly high signal-to-noise-ratio (SNR) of 100:1 for each individual source.
-The regularization factor was estimated by $\frac{1}{SNR} = 10^{-4}$.
+The option "'pick\_ori=normal"' designated currents leaving and entering the cortex as positive and negative, respectively.
+Due to the combination of passive and active noise reduction and artifact suppression, I assumed a fairly high signal-to-noise-ratio (SNR) of 50:1 for each individual source.
+The regularization factor was estimated by $\frac{1}{SNR} = 2.5*10^{-3}$.
 The result was a series of activation patterns within each region.
 Finally, the mean of regional node activity was calculated for each time point, region, trial and subject.
 
 
-The resulting localized activity was again subjected to a cluster analysis.
-Extracted trials were split into a 4 parts (2 groups x 2 conditions).
-The two groups were evaluated separately.
-Trials contained average data from six regions (PAC, aSTS+G, pSTS+G, BA44, BA45 and BA6v).
-Clusters were determined with the MNE function $stats.permutation\_cluster\_test()$ \cite{3.3.clustertest}.
+The resulting localized activity was subjected to a cluster analysis.
+Extracted trials were pooled over all subjects within a group.
+Within each group, two sets of trials were created from the two syntax conditions.
+Each trial contained mean activity from eight regions (PAC, aSTS, aSTG, pSTS, pSTG, BA44, BA45 and BA6v).
+Clusters were determined by running the MNE function $stats.permutation\_cluster\_test()$ \cite{3.3.clustertest} over the two sets of trials.
 The function was run with 2500 permutations, and an t-threshold of 2.0.
+The results from each group was evaluated separately.
+
+Additionally, a blind comparison was performed for sensor activity in a series of time intervals.
+10 time intervals were established from 0ms to 2200ms after onset, spanning 200ms each.
+The mean activity was computed for each region (8), hemisphere (2), and time interval (10), yielding 160 activity values for each subject and condition.
+The corresponding values were pooled over all subjects within each of the two groups, and compared between syntax conditions with a paired Student's T-test.
+Results from each hemisphere and region were adjusted with the false discovery rate correction (10 comparisons).
 
 For visualization purposes, grand average activity was calculated for each cortical region, group and condition.
 
 
-% \subsection{Interaction analysis}
+\subsection{Interaction analysis}
 
-% The TRENtool software was used for exploring transfered entropy between cortical areas.
-% - Role of embedding, Ragwitz optimization
-% - statistical tests between conditions and multiple comparisons
+The TRENtool software was used for exploring entropy transfers between cortical areas.
+For this purpuse, data was prepared for each subject individually.
+The previous interval analysis yielded three distinct time intervals with syntax effects: 0ms - 300ms, 400ms - 800ms and 1000ms - 1600ms.
+For each of these intervals, mean localized activity was computed from each cortical region.
+Cortical regions were selected if they showed syntax effects either in the cluster analysis or the interval analysis.
+This process yielded six relevant cortical regions: PAC, aSTG, pSTS, BA44, BA45 and BA6v.
+Comparisons between these regions were performed for all regions along each of three pathways (see Fig. \ref{3.4.regions})
+The dorsal pathway I connects PAC and BA6v, yielding exactly one comparison ($PAC_{lh} \rightarrow BA6v_{lh}$).
+The dorsal pathway II connects PAC, pSTS and BA44, yielding 3 unique comparisons ($PAC_{lh} \rightarrow pSTS_{lh}$, $PAC_{lh} \rightarrow BA44_{lh}$, $pSTS_{lh} \rightarrow BA44_{lh}$).
+The ventral pathway connects PAC, aSTG and BA45, yielding 3 unique comparisons ($PAC_{lh} \rightarrow aSTG_{lh}$, $PAC_{lh}-BA45_{lh}$, $aSTG_{lh} \rightarrow BA45_{lh}$).
+PAC and pSTS showed effects across both hemispheres.
+Therefore, I included comparisons across hemispheres for each of these regions (2 comparisons, $PAC_{lh} \rightarrow PAC_rh$ and $pSTS_{lh} \rightarrow pSTS_rh$) and their direct neighbors (3 comparisons, $PAC_rh \rightarrow pSTS_{lh}$, $PAC_{lh} \rightarrow pSTS_rh$, $pSTS_rh \rightarrow BA44_{lh}$).
+Finally, for each of these 11 comparisons, the reverse direction was included as well.
+
+\begin{figure}[h]
+\begin{center}
+\vspace{7mm}
+\includegraphics[width=0.49\textwidth]{pics/3_4_regions.png}
+\caption{\label{3.4.regions} Connections of selected cortical regions for the computation of transfered entropy. The regions not included in the explorative analysis are shaded in a lighter tone.}
+\end{center}
+\end{figure}
+
+- Role of embedding, Ragwitz optimization
+Embedding 
+- statistical tests between conditions and multiple comparisons
