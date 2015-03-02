@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.19)  24 FEB 2015 16:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.19)  2 MAR 2015 23:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -683,6 +683,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [12]
 Chapter 3.
+
+LaTeX Warning: Citation `3.1.LQ' undefined on input line 14.
+
 [13
 
 ]
@@ -696,14 +699,17 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 File: pics/3_1_screen.png Graphic file (type png)
 
 <use pics/3_1_screen.png>
-Package pdftex.def Info: pics/3_1_screen.png used on input line 89.
+Package pdftex.def Info: pics/3_1_screen.png used on input line 90.
 (pdftex.def)             Requested size: 199.1693pt x 149.3774pt.
+
+
+LaTeX Warning: Citation `3.1.animals' undefined on input line 95.
 
 <pics/3_1_activities.png, id=78, 2492.31125pt x 380.42125pt>
 File: pics/3_1_activities.png Graphic file (type png)
 
 <use pics/3_1_activities.png>
-Package pdftex.def Info: pics/3_1_activities.png used on input line 100.
+Package pdftex.def Info: pics/3_1_activities.png used on input line 101.
 (pdftex.def)             Requested size: 394.35739pt x 60.18948pt.
 
 
@@ -720,14 +726,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 File: pics/3_1_feedback.png Graphic file (type png)
 
 <use pics/3_1_feedback.png>
-Package pdftex.def Info: pics/3_1_feedback.png used on input line 115.
+Package pdftex.def Info: pics/3_1_feedback.png used on input line 116.
 (pdftex.def)             Requested size: 199.1693pt x 149.3774pt.
 
 <pics/3_1_clusterfeedback.png, id=83, 1027.84pt x 770.88pt>
 File: pics/3_1_clusterfeedback.png Graphic file (type png)
 
 <use pics/3_1_clusterfeedback.png>
-Package pdftex.def Info: pics/3_1_clusterfeedback.png used on input line 128.
+Package pdftex.def Info: pics/3_1_clusterfeedback.png used on input line 129.
 (pdftex.def)             Requested size: 199.1693pt x 149.3741pt.
 
 
@@ -738,14 +744,14 @@ File: pics/3_1_feedbackGraphAccuracy.png Graphic file (type png)
 
 <use pics/3_1_feedbackGraphAccuracy.png>
 Package pdftex.def Info: pics/3_1_feedbackGraphAccuracy.png used on input line 
-136.
+137.
 (pdftex.def)             Requested size: 179.25114pt x 130.37701pt.
 
 <pics/3_1_feedbackGraphRT.png, id=85, 854.19125pt x 621.32124pt>
 File: pics/3_1_feedbackGraphRT.png Graphic file (type png)
 
 <use pics/3_1_feedbackGraphRT.png>
-Package pdftex.def Info: pics/3_1_feedbackGraphRT.png used on input line 137.
+Package pdftex.def Info: pics/3_1_feedbackGraphRT.png used on input line 138.
 (pdftex.def)             Requested size: 179.25114pt x 130.37701pt.
 
 
@@ -766,11 +772,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [17 <./pics/3_1_clusterfeedback.png>]
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 193.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 194.
 LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <5> on input line 193.
+(Font)              <5> on input line 194.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 193.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 194.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -781,10 +787,26 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [18 <./pics/3_1_feedbackGraphAccuracy.png (PNG copy)> <./pics/3_1_feedbackGraph
 RT.png (PNG copy)>]
 
-LaTeX Warning: Command \textdegree invalid in math mode on input line 209.
+LaTeX Warning: Citation `3.2.mprage' undefined on input line 210.
 
 
-LaTeX Warning: Command \textdegree invalid in math mode on input line 211.
+LaTeX Warning: Command \textdegree invalid in math mode on input line 210.
+
+
+LaTeX Warning: Citation `3.2.space' undefined on input line 212.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 212.
+
+
+LaTeX Warning: Citation `3.3.MNE' undefined on input line 219.
+
+
+LaTeX Warning: Citation `3.3.MNEpython' undefined on input line 219.
+
+
+Underfull \vbox (badness 6526) has occurred while \output is active []
+
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -794,16 +816,35 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [19]
 
+LaTeX Warning: Citation `3.3.swtest' undefined on input line 231.
+
+
+LaTeX Warning: Citation `3.3.levtest' undefined on input line 232.
+
+
+LaTeX Warning: Citation `3.3.SSS' undefined on input line 244.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[20] <pics/3_3_occipital_sensors.png, id=106, 569.7285pt x 569.7285pt>
+[20]
+
+LaTeX Warning: Citation `3.3.clustertest' undefined on input line 275.
+
+LaTeX Font Info:    External font `cmex7' loaded for size
+(Font)              <7> on input line 281.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 281.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 281.
+<pics/3_3_occipital_sensors.png, id=106, 569.7285pt x 569.7285pt>
 File: pics/3_3_occipital_sensors.png Graphic file (type png)
 
 <use pics/3_3_occipital_sensors.png>
-Package pdftex.def Info: pics/3_3_occipital_sensors.png used on input line 285.
+Package pdftex.def Info: pics/3_3_occipital_sensors.png used on input line 291.
 
 (pdftex.def)             Requested size: 95.60344pt x 95.60072pt.
 
@@ -811,25 +852,22 @@ Package pdftex.def Info: pics/3_3_occipital_sensors.png used on input line 285.
 File: pics/3_3_parietal_sensors.png Graphic file (type png)
 
 <use pics/3_3_parietal_sensors.png>
-Package pdftex.def Info: pics/3_3_parietal_sensors.png used on input line 286.
+Package pdftex.def Info: pics/3_3_parietal_sensors.png used on input line 292.
 (pdftex.def)             Requested size: 95.60344pt x 95.60072pt.
 
 <pics/3_3_temporal_sensors.png, id=108, 569.7285pt x 569.7285pt>
 File: pics/3_3_temporal_sensors.png Graphic file (type png)
 
 <use pics/3_3_temporal_sensors.png>
-Package pdftex.def Info: pics/3_3_temporal_sensors.png used on input line 287.
+Package pdftex.def Info: pics/3_3_temporal_sensors.png used on input line 293.
 (pdftex.def)             Requested size: 95.60344pt x 95.60072pt.
 
 <pics/3_3_frontal_sensors.png, id=109, 569.7285pt x 569.7285pt>
 File: pics/3_3_frontal_sensors.png Graphic file (type png)
 
 <use pics/3_3_frontal_sensors.png>
-Package pdftex.def Info: pics/3_3_frontal_sensors.png used on input line 288.
+Package pdftex.def Info: pics/3_3_frontal_sensors.png used on input line 294.
 (pdftex.def)             Requested size: 95.60344pt x 95.60072pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -839,6 +877,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [21]
 
+LaTeX Warning: Citation `3.3.nuintensity' undefined on input line 306.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
@@ -847,52 +888,48 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [22 <./pics/3_3_occipital_sensors.png (PNG copy)> <./pics/3_3_parietal_sensors.
 png (PNG copy)> <./pics/3_3_temporal_sensors.png (PNG copy)> <./pics/3_3_fronta
 l_sensors.png (PNG copy)>]
-<pics/dh55a-pial-lh.png, id=116, 1686.3pt x 1028.84375pt>
-File: pics/dh55a-pial-lh.png Graphic file (type png)
-
-<use pics/dh55a-pial-lh.png>
-Package pdftex.def Info: pics/dh55a-pial-lh.png used on input line 361.
-(pdftex.def)             Requested size: 195.1881pt x 119.07593pt.
-
-<pics/dh55a-pial-rh.png, id=117, 1686.3pt x 1028.84375pt>
-File: pics/dh55a-pial-rh.png Graphic file (type png)
-
-<use pics/dh55a-pial-rh.png>
-Package pdftex.def Info: pics/dh55a-pial-rh.png used on input line 362.
-(pdftex.def)             Requested size: 195.1881pt x 119.07593pt.
-
-<pics/dh55a-inflated-lh.png, id=118, 1686.3pt x 1028.84375pt>
-File: pics/dh55a-inflated-lh.png Graphic file (type png)
-
-<use pics/dh55a-inflated-lh.png>
-Package pdftex.def Info: pics/dh55a-inflated-lh.png used on input line 363.
-(pdftex.def)             Requested size: 195.1881pt x 119.07593pt.
-
-<pics/dh55a-inflated-rh.png, id=119, 1686.3pt x 1028.84375pt>
-File: pics/dh55a-inflated-rh.png Graphic file (type png)
-
-<use pics/dh55a-inflated-rh.png>
-Package pdftex.def Info: pics/dh55a-inflated-rh.png used on input line 364.
-(pdftex.def)             Requested size: 195.1881pt x 119.07593pt.
-
-<pics/3_3_ROIlegend.png, id=120, 626.34pt x 145.54375pt>
-File: pics/3_3_ROIlegend.png Graphic file (type png)
-
-<use pics/3_3_ROIlegend.png>
-Package pdftex.def Info: pics/3_3_ROIlegend.png used on input line 365.
-(pdftex.def)             Requested size: 298.75394pt x 69.4227pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[23]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[23] <pics/dh55a-pial-lh.png, id=119, 1686.3pt x 1028.84375pt>
+File: pics/dh55a-pial-lh.png Graphic file (type png)
+
+<use pics/dh55a-pial-lh.png>
+Package pdftex.def Info: pics/dh55a-pial-lh.png used on input line 367.
+(pdftex.def)             Requested size: 195.1881pt x 119.07593pt.
+
+<pics/dh55a-pial-rh.png, id=120, 1686.3pt x 1028.84375pt>
+File: pics/dh55a-pial-rh.png Graphic file (type png)
+
+<use pics/dh55a-pial-rh.png>
+Package pdftex.def Info: pics/dh55a-pial-rh.png used on input line 368.
+(pdftex.def)             Requested size: 195.1881pt x 119.07593pt.
+
+<pics/dh55a-inflated-lh.png, id=121, 1686.3pt x 1028.84375pt>
+File: pics/dh55a-inflated-lh.png Graphic file (type png)
+
+<use pics/dh55a-inflated-lh.png>
+Package pdftex.def Info: pics/dh55a-inflated-lh.png used on input line 369.
+(pdftex.def)             Requested size: 195.1881pt x 119.07593pt.
+
+<pics/dh55a-inflated-rh.png, id=122, 1686.3pt x 1028.84375pt>
+File: pics/dh55a-inflated-rh.png Graphic file (type png)
+
+<use pics/dh55a-inflated-rh.png>
+Package pdftex.def Info: pics/dh55a-inflated-rh.png used on input line 370.
+(pdftex.def)             Requested size: 195.1881pt x 119.07593pt.
+
+<pics/3_3_ROIlegend.png, id=123, 1919.17pt x 313.17pt>
+File: pics/3_3_ROIlegend.png Graphic file (type png)
+
+<use pics/3_3_ROIlegend.png>
+Package pdftex.def Info: pics/3_3_ROIlegend.png used on input line 371.
+(pdftex.def)             Requested size: 298.75394pt x 48.74632pt.
+
+Underfull \vbox (badness 1917) has occurred while \output is active []
 
 
 
@@ -903,179 +940,255 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [24 <./pics/dh55a-pial-lh.png (PNG copy)> <./pics/dh55a-pial-rh.png (PNG copy)>
  <./pics/dh55a-inflated-lh.png (PNG copy)> <./pics/dh55a-inflated-rh.png (PNG c
-opy)> <./pics/3_3_ROIlegend.png>])
+opy)> <./pics/3_3_ROIlegend.png>]
+
+LaTeX Warning: Citation `3.4.gpuTE' undefined on input line 419.
+
+
+LaTeX Warning: Citation `3.4.pathways' undefined on input line 422.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[25] [26
+[25] <pics/3_4_regions.png, id=131, 1650.165pt x 922.44624pt>
+File: pics/3_4_regions.png Graphic file (type png)
 
-] [27] [28] (./chapter/Results.tex
+<use pics/3_4_regions.png>
+Package pdftex.def Info: pics/3_4_regions.png used on input line 436.
+(pdftex.def)             Requested size: 195.1881pt x 109.09825pt.
+
+
+LaTeX Warning: Reference `4.3' on page 26 undefined on input line 443.
+
+
+Underfull \vbox (badness 1147) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[26 <./pics/3_4_regions.png>])
+Underfull \vbox (badness 3407) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[27]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[28] [29
+
+] [30] (./chapter/Results.tex
 Chapter 4.
-[29
+[31
 
-]) (./chapter/Discussion.tex
+]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[30]
-Chapter 5.
-) (./chapter/Conclusion.tex [31
+[32]
+<pics/children_Left-frontal-magnetometers.png, id=154, 578.16pt x 433.62pt>
+File: pics/children_Left-frontal-magnetometers.png Graphic file (type png)
 
-] [32
+<use pics/children_Left-frontal-magnetometers.png>
+Package pdftex.def Info: pics/children_Left-frontal-magnetometers.png used on i
+nput line 82.
+(pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
+
+<pics/children_Right-frontal-magnetometers.png, id=155, 578.16pt x 433.62pt>
+File: pics/children_Right-frontal-magnetometers.png Graphic file (type png)
+
+<use pics/children_Right-frontal-magnetometers.png>
+Package pdftex.def Info: pics/children_Right-frontal-magnetometers.png used on 
+input line 83.
+(pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
+
+<pics/children_Left-temporal-magnetometers.png, id=156, 578.16pt x 433.62pt>
+File: pics/children_Left-temporal-magnetometers.png Graphic file (type png)
+
+<use pics/children_Left-temporal-magnetometers.png>
+Package pdftex.def Info: pics/children_Left-temporal-magnetometers.png used on 
+input line 84.
+(pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
+
+<pics/children_Right-temporal-magnetometers.png, id=157, 578.16pt x 433.62pt>
+File: pics/children_Right-temporal-magnetometers.png Graphic file (type png)
+
+<use pics/children_Right-temporal-magnetometers.png>
+Package pdftex.def Info: pics/children_Right-temporal-magnetometers.png used on
+ input line 85.
+(pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
+
+<pics/children_Left-parietal-magnetometers.png, id=158, 578.16pt x 433.62pt>
+File: pics/children_Left-parietal-magnetometers.png Graphic file (type png)
+
+<use pics/children_Left-parietal-magnetometers.png>
+Package pdftex.def Info: pics/children_Left-parietal-magnetometers.png used on 
+input line 86.
+(pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
+
+<pics/children_Right-parietal-magnetometers.png, id=159, 578.16pt x 433.62pt>
+File: pics/children_Right-parietal-magnetometers.png Graphic file (type png)
+
+<use pics/children_Right-parietal-magnetometers.png>
+Package pdftex.def Info: pics/children_Right-parietal-magnetometers.png used on
+ input line 87.
+(pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<pics/adults_Left-frontal-magnetometers.png, id=160, 578.16pt x 433.62pt>
+File: pics/adults_Left-frontal-magnetometers.png Graphic file (type png)
+
+<use pics/adults_Left-frontal-magnetometers.png>
+Package pdftex.def Info: pics/adults_Left-frontal-magnetometers.png used on inp
+ut line 103.
+(pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
+
+<pics/adults_Right-frontal-magnetometers.png, id=161, 578.16pt x 433.62pt>
+File: pics/adults_Right-frontal-magnetometers.png Graphic file (type png)
+
+<use pics/adults_Right-frontal-magnetometers.png>
+Package pdftex.def Info: pics/adults_Right-frontal-magnetometers.png used on in
+put line 104.
+(pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
+
+<pics/adults_Left-temporal-magnetometers.png, id=162, 578.16pt x 433.62pt>
+File: pics/adults_Left-temporal-magnetometers.png Graphic file (type png)
+
+<use pics/adults_Left-temporal-magnetometers.png>
+Package pdftex.def Info: pics/adults_Left-temporal-magnetometers.png used on in
+put line 105.
+(pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
+
+<pics/adults_Right-temporal-magnetometers.png, id=163, 578.16pt x 433.62pt>
+File: pics/adults_Right-temporal-magnetometers.png Graphic file (type png)
+
+<use pics/adults_Right-temporal-magnetometers.png>
+Package pdftex.def Info: pics/adults_Right-temporal-magnetometers.png used on i
+nput line 106.
+(pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
+
+<pics/adults_Left-parietal-magnetometers.png, id=164, 578.16pt x 433.62pt>
+File: pics/adults_Left-parietal-magnetometers.png Graphic file (type png)
+
+<use pics/adults_Left-parietal-magnetometers.png>
+Package pdftex.def Info: pics/adults_Left-parietal-magnetometers.png used on in
+put line 107.
+(pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
+
+<pics/adults_Right-parietal-magnetometers.png, id=165, 578.16pt x 433.62pt>
+File: pics/adults_Right-parietal-magnetometers.png Graphic file (type png)
+
+<use pics/adults_Right-parietal-magnetometers.png>
+Package pdftex.def Info: pics/adults_Right-parietal-magnetometers.png used on i
+nput line 108.
+(pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) (./chapter/Discussion.tex
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[33]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[34 <./pics/children_Left-frontal-magnetometers.png (PNG copy)> <./pics/childre
+n_Right-frontal-magnetometers.png (PNG copy)> <./pics/children_Left-temporal-ma
+gnetometers.png (PNG copy)> <./pics/children_Right-temporal-magnetometers.png (
+PNG copy)> <./pics/children_Left-parietal-magnetometers.png (PNG copy)> <./pics
+/children_Right-parietal-magnetometers.png (PNG copy)>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[35 <./pics/adults_Left-frontal-magnetometers.png (PNG copy)> <./pics/adults_Ri
+ght-frontal-magnetometers.png (PNG copy)> <./pics/adults_Left-temporal-magnetom
+eters.png (PNG copy)> <./pics/adults_Right-temporal-magnetometers.png (PNG copy
+)> <./pics/adults_Left-parietal-magnetometers.png (PNG copy)> <./pics/adults_Ri
+ght-parietal-magnetometers.png (PNG copy)>] [36
+
+]
+Chapter 5.
+) (./chapter/Conclusion.tex [37] [38
 
 ]
 Chapter 6.
-) (./chapter/Appendix.tex [33] [34
+) (./chapter/Appendix.tex [39] [40
 
 ]
 Appendix A.
-) [35] [36
+) [41] [42
 
 ]
 
 LaTeX Warning: Citation `AFIFI98' undefined on input line 200.
 
-(./dissertation.bbl
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 31.
-
-(/usr/local/texlive/2014basic/texmf-dist/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
-Underfull \hbox (badness 3861) in paragraph at lines 14--36
-[]\T1/ptm/m/n/10.95 Gramfort, A., Luessi, M., Lar-son, E., En-ge-mann, D., Stro
-hmeier, D., Brod-
- []
+No file dissertation.bbl.
+(./dissertation.lof)
+\tf@lof=\write4
+\openout4 = `dissertation.lof'.
 
 
-Underfull \hbox (badness 4060) in paragraph at lines 14--36
-\T1/ptm/m/n/10.95 beck, C., ... Hämäläi-nen, M.  (2013a).  MEG and EEG data ana
-l-
- []
+Underfull \vbox (badness 1515) has occurred while \output is active []
+
+ [43
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 14--36
-\T1/ptm/m/n/10.95 y-sis with MNE-Python.  \T1/ptm/m/it/10.95 Fron-tiers in Neu-
-ro-science\T1/ptm/m/n/10.95 , \T1/ptm/m/it/10.95 7\T1/ptm/m/n/10.95 .  Re-triev
-ed
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 14--36
-\T1/ptm/m/n/10.95 from \T1/pcr/m/n/10.95 http://dx.doi.org/10.3389/fnins.2013.0
-0267   \T1/ptm/m/n/10.95 doi:
- []
-
-
-Underfull \hbox (badness 7344) in paragraph at lines 48--70
-[]\T1/ptm/m/n/10.95 Gramfort, A., Luessi, M., Lar-son, E., En-ge-mann, D. A., S
-trohmeier, D.,
- []
-
-
-Underfull \hbox (badness 4686) in paragraph at lines 48--70
-\T1/ptm/m/n/10.95 Brod-beck, C., ... Hämäläi-nen, M. S.  (2013b).  MNE soft-war
-e for
- []
-
-
-Underfull \hbox (badness 6477) in paragraph at lines 48--70
-\T1/ptm/m/n/10.95 pro-cess-ing MEG and EEG data.  \T1/ptm/m/it/10.95 Neu-roIm-a
-ge\T1/ptm/m/n/10.95 , \T1/ptm/m/it/10.95 86\T1/ptm/m/n/10.95 .  Re-trieved from
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 48--70
-\T1/pcr/m/n/10.95 http://dx.doi.org/doi:10.1016/j.neuroimage.2013.10.027
- []
-
-
-Underfull \hbox (badness 1152) in paragraph at lines 120--138
-[]\T1/ptm/m/n/10.95 Maris, E., & Oost-en-veld, R.  (2007).  Non-para-met-ric st
-a-tis-ti-cal test-ing of EEG-
- []
-
-
-Underfull \hbox (badness 4647) in paragraph at lines 120--138
-\T1/ptm/m/n/10.95 and MEG-data.  \T1/ptm/m/it/10.95 Jour-nal of Neu-ro-science 
-Meth-ods\T1/ptm/m/n/10.95 , \T1/ptm/m/it/10.95 164\T1/ptm/m/n/10.95 (1).  Re-tr
-ieved
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 152--170
-[]\T1/ptm/m/n/10.95 Mugler, J. P., & Brooke-man, J. R.  (1991).  Rapid three-di
-mensional
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 152--170
-\T1/ptm/m/n/10.95 t1-weighted MR imag-ing with the MP-RAGE se-quence.  \T1/ptm/
-m/it/10.95 Jour-nal
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 152--170
-\T1/ptm/m/it/10.95 of Mag-netic Res-o-nance Imag-ing\T1/ptm/m/n/10.95 , \T1/ptm
-/m/it/10.95 1\T1/ptm/m/n/10.95 (5), 561-567.  Re-trieved from
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 152--170
-\T1/pcr/m/n/10.95 http://dx.doi.org/10.1002/jmri.1880010509   \T1/ptm/m/n/10.95
- doi:
- []
-
-
-Underfull \vbox (badness 7030) has occurred while \output is active []
-
- [37
 
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 329--348
-\T1/ptm/m/n/10.95 from \T1/pcr/m/n/10.95 http://dx.doi.org/10.1016/j.neuroimage
-.2009.06.039
- []
-
-)
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[38] (./dissertation.lof)
-\tf@lof=\write4
-\openout4 = `dissertation.lof'.
-
- [39
-
-
-
-] [40
-
-
-] (./dissertation.lot)
+[44] (./dissertation.lot)
 \tf@lot=\write5
 \openout5 = `dissertation.lot'.
 
- [41
+ [45
 
-] [42
 
+
+] [46
+
+
+] (./chapter/cv.tex) [47
 
 ]
-(./chapter/cv.tex) [43
-
-] (./chapter/selbst.tex)
+(./chapter/selbst.tex)
 Overfull \hbox (31.22636pt too wide) in paragraph at lines 7--238
 [][]
  []
@@ -1089,19 +1202,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--238
 Overfull \vbox (20.17003pt too high) has occurred while \output is active []
 
 
-[44] (./dissertation.aux)
+[48] (./dissertation.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 5625 strings out of 494522
- 84121 string characters out of 6167205
- 153778 words of memory out of 5000000
- 8662 multiletter control sequences out of 15000+600000
- 70349 words of font info for 87 fonts, out of 8000000 for 9000
+ 5668 strings out of 494522
+ 86559 string characters out of 6167205
+ 152684 words of memory out of 5000000
+ 8688 multiletter control sequences out of 15000+600000
+ 82620 words of font info for 107 fonts, out of 8000000 for 9000
  320 hyphenation exceptions out of 8191
- 38i,12n,48p,1166b,409s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,12n,48p,1166b,401s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014basic/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/lo
 cal/texlive/2014basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
 r/local/texlive/2014basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
@@ -1109,14 +1222,13 @@ r/local/texlive/2014basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
 fb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 8.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/amsfonts/cm/c
 msy9.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/eurosym/fe
-ymr10.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/urw/courier/ucrr
-8a.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/urw/times/utmb8a.pf
-b></usr/local/texlive/2014basic/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></u
-sr/local/texlive/2014basic/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on dissertation.pdf (50 pages, 3340194 bytes).
+ymr10.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/urw/times/utmb8a
+.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+</usr/local/texlive/2014basic/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on dissertation.pdf (54 pages, 3891129 bytes).
 PDF statistics:
- 229 PDF objects out of 1000 (max. 8388607)
- 145 compressed objects within 2 object streams
+ 250 PDF objects out of 1000 (max. 8388607)
+ 150 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 91 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 156 words of extra memory for PDF output out of 10000 (max. 10000000)
 

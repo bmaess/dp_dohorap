@@ -1,3 +1,4 @@
+
 \chapter{Methods}\label{methods}
 
 \section {Participants and stimuli}
@@ -427,19 +428,19 @@ The secondary dorsal pathway connects PAC, pSTG and BA44, yielding six unique co
 The ventral pathway connects PAC, aSTG and BA45, yielding three unique connections ($PAC_{lh} \rightarrow aSTG_{lh}$, $PAC_{rh}-aSTG_{lh}$ and $aSTG_{lh} \rightarrow BA45_{lh}$).
 Since BA44 and BA45 are direct neighbors, their connections ($BA44_lh \rightarrow BA45_lh$) was included too.
 Finally, the end points of secondary dorsal and ventral tract were added to the comparison, yielding four connections in total ($PAC_{lh} \rightarrow BA44_{lh}$, $PAC_{rh} \rightarrow BA44_{lh}$, $PAC_{lh} \rightarrow BA45_{lh}$ and $PAC_{rh} \rightarrow BA45_{lh}$).
-The reverse direction was added for each of these 18 comparisons, yielding 36 comparisons in total.
+The reverse direction was added for each of these 18 comparisons, yielding 36 pair-wise comparisons in total.
 
 \begin{figure}[h]
 \begin{center}
 \vspace{7mm}
 \includegraphics[width=0.49\textwidth]{pics/3_4_regions.png}
-\caption{\label{3.4.regions} Connections of selected cortical regions for the computation of transfered entropy. The regions not included in the explorative analysis are shaded in a lighter tone.}
+\caption{\label{3.4.regions} Connections of selected cortical regions for the computation of transfered entropy. Left of PAC: ventral pathway; top left of PAC: primary dorsal pathway; right of PAC: secondary dorsal pathway.}
 \end{center}
 \end{figure}
 
 The third component concerned a set of parameters for the data preparation.
 
-The previous interval analysis yielded three distinct time intervals with syntax effects: 0ms - 300ms, 400ms - 800ms and 1000ms - 1600ms.
+The interval analysis yielded (see chapter \ref{4.3}) three distinct time intervals with syntax effects: 0ms - 300ms, 400ms - 800ms and 1000ms - 1600ms.
 I supplied those intervals for the estimation of transfer entropy with the parameter $cfg.toi$ in three subsequent analyses.
 
 The transfer entropy estimation fundamentally relies on the comparison between two probability density functions.

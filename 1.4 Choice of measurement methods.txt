@@ -198,7 +198,9 @@ The sLORETA algorithm, by contrast, has been designed to create solutions with z
 Since this algorithm has minimal drawbacks out of all readiliy available software, it became the method of choice for my source localization purposes.
 
 [Information transfer]
-Meaning of information transfer
+After localization, activity in my selected cortical regions is ready for the analysis of transfered information.
+There are two fundamentally different approaches to this task.
+
 modelling vs. model-free, linear vs. nonlinear
 Transfer Entropy is suited best for highly complex, nonlinear timescale data
 Potential pitfall: Volume conduction (can also come from bad localization)

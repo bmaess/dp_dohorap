@@ -20,3 +20,28 @@ right: interparietal sulcus
 
 Repeated-measures design
 Stationarity assumption
+
+[]
+" information processing can be broken down into the three components of
+ information storage, information transfer, and information modification [1–4]. These components can be
+ easily identified in theoretical, or technical, information processing systems, such as ordinary comput-
+ ers, based on the specialized machinery for and the spatial separation of these component functions. In
+ these examples, a separation of the components of information processing via a specialized mathematical
+ formalism seems almost superfluous. However, in biological systems in general, and in the brain in par-
+ ticular, we deal with a form of distributed information processing based on a large number of interacting
+ agents (neurons), and each agent at each moment in time subserves any of the three component functions
+ to a varying degree. In neural systems it is indeed crucial to understand where and when information
+ storage, transfer and modification take place, to constrain possible algorithms run by the system. While
+ there is still a struggle to properly define a measure for information modification [5,6] and its proper mea-
+ sure [7–10], well established measures for (local active) information storage [11], information transfer [12],
+ and its localization in time [13] exist.
+ Especially the measure for information transfer, transfer entropy (TE), has seen a dramatic surge
+ of interest in neuroscience [14–31], physiology [32–34], and other fields [5, 13, 26, 35, 36]. Nevertheless,
+ conceptual and practical problems still exist. On the conceptual side, information transfer has been for a
+ while confused with causal interactions, and only some recent studies [37–39] made clear that there can be
+ no one-to-one mapping between causal interactions and information transfer, because causal interactions
+ will subserve all three components of information processing (transfer, storage, modification). However,
+ it is information transfer, rather than causal interactions, we might be interested in when trying to
+ understand a computational process in the brain [38]."
+
+The 

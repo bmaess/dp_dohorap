@@ -10,7 +10,10 @@
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Relation between performance and displayed feedback bars. Performance (left: RA, right: RT) is drawn along the X-axis, and length of the bars in \% is drawn along the Y-Axis.\relax }}{18}
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Selected channels for each sensor location. From left to right: occipital, parietal, temporal, frontal. The right hemisphere (in red) is also depicted on the right side in each illustration.\relax }}{22}
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Selected regions of interest on the reference brain. Top: selected regions on the folded cortex. Bottom: selected regions on the inflated cortex.\relax }}{24}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Connections of selected cortical regions for the computation of transfered entropy. Left of PAC: ventral pathway; top left of PAC: primary dorsal pathway; right of PAC: secondary dorsal pathway.\relax }}{26}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Combined activity from children in separate sensor groups. Only magnetometers are displayed. Top: frontal sensor activity; middle: temporal sensor activity; bottom: parietal sensor activity\relax }}{34}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Combined activity from adults in separate sensor groups. Only magnetometers are displayed. Top: frontal sensor activity; middle: temporal sensor activity; bottom: parietal sensor activity\relax }}{35}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
