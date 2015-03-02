@@ -401,19 +401,33 @@ For visualization purposes, grand average activity was calculated for each corti
 
 \subsection{Interaction analysis}
 
-The TRENtool software was used for exploring entropy transfers between cortical areas.
+The TRENtool software (version 3.3.1, February 2015) was used for exploring entropy transfers between cortical areas.
 For this purpuse, data was prepared for each subject individually.
-The previous interval analysis yielded three distinct time intervals with syntax effects: 0ms - 300ms, 400ms - 800ms and 1000ms - 1600ms.
-For each of these intervals, mean localized activity was computed from each cortical region.
+The procedure took place in three sections.
+
+
+During the first section, the input datasets were prepared.
+The preparation required three components: regional activity from single trials, a list of regional comparisons and a set of parameters.
+
+For the first component, two sets of single trials were selected from each subject.
+Mean regional activity were then extracted from each trial.
 Cortical regions were selected if they showed syntax effects either in the cluster analysis or the interval analysis.
 This process yielded six relevant cortical regions: PAC, aSTG, pSTS, BA44, BA45 and BA6v.
-Comparisons between these regions were performed for all regions along each of three pathways (see Fig. \ref{3.4.regions})
-The dorsal pathway I connects PAC and BA6v, yielding exactly one comparison ($PAC_{lh} \rightarrow BA6v_{lh}$).
-The dorsal pathway II connects PAC, pSTS and BA44, yielding 3 unique comparisons ($PAC_{lh} \rightarrow pSTS_{lh}$, $PAC_{lh} \rightarrow BA44_{lh}$, $pSTS_{lh} \rightarrow BA44_{lh}$).
-The ventral pathway connects PAC, aSTG and BA45, yielding 3 unique comparisons ($PAC_{lh} \rightarrow aSTG_{lh}$, $PAC_{lh}-BA45_{lh}$, $aSTG_{lh} \rightarrow BA45_{lh}$).
-PAC and pSTS showed effects across both hemispheres.
-Therefore, I included comparisons across hemispheres for each of these regions (2 comparisons, $PAC_{lh} \rightarrow PAC_rh$ and $pSTS_{lh} \rightarrow pSTS_rh$) and their direct neighbors (3 comparisons, $PAC_rh \rightarrow pSTS_{lh}$, $PAC_{lh} \rightarrow pSTS_rh$, $pSTS_rh \rightarrow BA44_{lh}$).
-Finally, for each of these 11 comparisons, the reverse direction was included as well.
+
+For the second component, I selected only the most relevant functional connections between cortical regions.
+There are 720 unique possiblities to compare these regions, which would overwhelm\footnote{The comparison over one pair of cortical regions (in forward and reverse directions, over two conditions) required a computation time of 3 minutes per subject and timewindow. 18 comparisons in this study took a total of 90 hours to calculate; the task of computing 720 comparisons would be a sufficient reason to switch a GPU-based algorithm\cite{3.4.gpuTE}} my computational capacities, I limited the comparisons to regions connected along an axonal fiber bundle.
+
+Comparisons between these regions were performed for all regions along three pathways (see Fig. \ref{3.4.regions}).
+The regions associated to each pathway are derived from \cite{3.4.pathways}.
+First, PAC and pSTG showed effects across both hemispheres.
+Therefore, I included comparisons across hemispheres between the mirrored regions (two connections: $PAC_{lh} \rightarrow PAC_rh$ and $pSTG_{lh} \rightarrow pSTG_rh$).
+Whenever PAC or pSTG were involved in a pathway, I included the regions from both hemispheres.
+The primary dorsal pathway connects PAC and BA6v, yielding two connections ($PAC_{lh} \rightarrow BA6v_{lh}$ and $PAC_{rh} \rightarrow BA6v_{lh}$).
+The secondary dorsal pathway connects PAC, pSTG and BA44, yielding six unique connections ($PAC_{lh} \rightarrow pSTG_{lh}$, $PAC_{lh} \rightarrow pSTG_{rh}$, $PAC_{rh} \rightarrow pSTG_{lh}$, $PAC_{rh} \rightarrow pSTG_{rh}$, $pSTG_{lh} \rightarrow BA44_{lh}$ and $pSTG_{rh} \rightarrow BA44_{lh}$).
+The ventral pathway connects PAC, aSTG and BA45, yielding three unique connections ($PAC_{lh} \rightarrow aSTG_{lh}$, $PAC_{rh}-aSTG_{lh}$ and $aSTG_{lh} \rightarrow BA45_{lh}$).
+Since BA44 and BA45 are direct neighbors, their connections ($BA44_lh \rightarrow BA45_lh$) was included too.
+Finally, the end points of secondary dorsal and ventral tract were added to the comparison, yielding four connections in total ($PAC_{lh} \rightarrow BA44_{lh}$, $PAC_{rh} \rightarrow BA44_{lh}$, $PAC_{lh} \rightarrow BA45_{lh}$ and $PAC_{rh} \rightarrow BA45_{lh}$).
+The reverse direction was added for each of these 18 comparisons, yielding 36 comparisons in total.
 
 \begin{figure}[h]
 \begin{center}
@@ -423,6 +437,43 @@ Finally, for each of these 11 comparisons, the reverse direction was included as
 \end{center}
 \end{figure}
 
-- Role of embedding, Ragwitz optimization
-Embedding 
-- statistical tests between conditions and multiple comparisons
+The third component concerned a set of parameters for the data preparation.
+
+The previous interval analysis yielded three distinct time intervals with syntax effects: 0ms - 300ms, 400ms - 800ms and 1000ms - 1600ms.
+I supplied those intervals for the estimation of transfer entropy with the parameter $cfg.toi$ in three subsequent analyses.
+
+The transfer entropy estimation fundamentally relies on the comparison between two probability density functions.
+These mathematical constructs can only be approximated by using scalar time series.
+For this purpose, time series from individual trials were combined into a multidimensional state space by TrenTOOL.
+This multidimensional space was then reduced into probability density function in a process called embedding.
+For optimizing the embedding procedure, I selected the Ragwitz criterion ($cfg.optimizemethod = 'ragwitz'$).
+The parameters were supplied as ranges: the relative embedding delay $cfg.ragtaurange = 0.15:0.3$ and the embedding dimension $cfg.ragdim = 2:8$.
+
+For the embedding process, a considerable section of data is necessary to estimate the baseline entropy before the interaction time cue occurs.
+This section of data is referred to as embedding delay, and won't be included in the analysis of transfer entropy.
+The required embedding delay for this combination of data and embedding parameters was 753ms.
+I extended the lower time limit of each analysis time window by the same amount.
+The Ragwitz criterion then optimized the embedding parameters for each set of time series (once per subject, time window and condition).
+The most common optimal embedding dimension was 7, and the mean optimal relative embedding delay was 0.2.
+
+Finally, the parameter $cfg.repPred$ indicated the amount of samples that would be used for the interaction analysis.
+I maximized this value by calculating $cfg.repPred = sampleLength - embeddingDelay - 1$, with $sampleLength$ as the amount of samples in the selected time window and $embeddingDelay$\footnote{Unfortunately, TrenTOOL doesn't display the embedding delay. The formula I used to calculate it is, in Matlab notation, $(max(cfg.ragdim)-1) * max(cfg.ragtaurange) + cfg.predicttimemax_u + max(ACT)$. ACT (the delay for the first minimum of the autocorrelation), in turn, is only computed during the preprocessing phase. Due to time constraints, I opted for a manual approach. An error message printed the current max(ACT) if cfg.repPred was too small, so I could supply this value into the configuration variable and re-run the preprocessing phase. After a few iterations, the absolute maximum ACT was found, allowing me to adjust the time windows and finish the preprocessing phase.} the amount of samples in the absolute embedding delay.
+This is the largest possible value that doesn't violate the assumptions behind the transfer analysis algorithm.
+
+
+During the second section, TrenTOOL performed a interaction shift test.
+This procedure (performed with the function $InteractionDelayReconstruction_calculate()$) counteracts bias introduced by noise, for example the common false positive detection of an interaction from a less noisy to a more noisy data set.
+The shift test establishes the optimal delay of transfered entropy for each comparison of activity.
+Transfer entropy was computed for a time range of possible interaction delays: 1ms to 40ms in steps of 5ms.
+TrenTOOL then selected the interaction delay with the biggest associated transfer entropy as the most likely representation of the signal delay caused by cognitive processes and anatomic constraints.
+To alleviate issues with volume conduction, I supplied the option $cfg.extracond = 'Faes_method'$.
+The optimal dimension for each data set was considered with the option $cfg.optdimusage = 'indivdim'$.
+For significance testing, TrenTOOL creates surrogate data.
+This data was created by shuffling existing trials ($cfg.surrogatetype = 'trialshuffling'$).
+The significance level for this procedure was $cfg.alpha = 0.05$.
+I used t-values to represent the statistical results of the shift test ($cfg.permstatstype = 'indepsamplesT'$).
+These results indicate the likelihood if an entropy transfer has occurred between the selected pair of regional activity.
+
+
+The third section evaluated the impact of the syntax condition on the whole group.
+For this purpose, a comparison was conducted between conditions over all subjects within a group.

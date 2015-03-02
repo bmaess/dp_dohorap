@@ -1,0 +1,5 @@
+run from $DATDIR:
+python bat/Localized/writeRdata.py
+bat/Localized/PrepareStatsAnalysis.sh
+Rscript bat/Localized/group_activity_anova_syntax.r
+python bat/Localized/summarizeStats.py

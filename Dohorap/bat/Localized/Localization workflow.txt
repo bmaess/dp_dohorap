@@ -1,0 +1,87 @@
+Basis:
+- [3a] individual MRI data (MRI/dh16a/T1/t1mprsagADNI32Ch.nii)
+- [3b] empty room measurements (MEG/dh16a/dh16ap.fif)
+- [3c] manually created MEG/MRI coregistration (MRI/freesurfer/dh16a/mri/T1-neuromag/sets/COR-dh16a-aligned.fif)
+
+
+Preparation of the inverse model
+--------------------------------
+
+Creating a covariance matrix
+Input: empty room measurements from [3b]
+Script: bat/MEG/calculateCovariance.py
+Output: [4a] covariance matrix (MEG/dh16a/emptyRoom-cov.fif)
+
+Running Freesurfer
+Input: individual MRI data from [1a]
+Script: Freesurfer/runFreesurfer3.py
+Output: [4b] Freesurfer output
+
+Build a BEM model
+Input: Freesurfer output from [4b]
+Script: bat/Headmodel/mnePrepareBEM.sh
+Output:
+- [4c] source dipole positions (MRI/freesurfer/dh16a/bem/dh16a-ico-5p-src.fif)
+- [4d] BEM model (MRI/freesurfer/dh16a/bem/dh16a-5120-bem.fif)
+
+Build inverse model
+Input:
+- evoked activity from [2b]
+- MEG/MRI coregistration from [3c]
+- covariance matrix from [4a]
+- source dipole positions from [4c]
+- BEM model from [4d]
+Script: Localized/MNEcalculateInverse.sh
+Output:
+- [4c] Forward model (BEM/dh16a/dh16a__-5120-ico-5p-dh16a-aligned-fwd.fif)
+- [4d] Inverse model (BEM/dh16a/dh16a__-5120-ico-5p-dh16a-aligned-inv.fif)
+
+
+Localization
+------------
+
+Calculate cortical activity
+Input:
+- Inverse model from [4c]
+- Evoked activity from [2b]
+Script: bat/Localized/MNEcalculateSTCs.sh (.py for multicore processing)
+Output: [5a] Average localized cortical activity (Localized_avg/dh16a/Vis_average-lh.stc)
+Time:
+- 12 minutes per subject on Kuba (4 cores simultaneously)
+- 2:30 min per subject on Eber (16 cores simultaneously)
+
+Select and average activity from ROI
+Input: individual localized cortical activity from [5a]
+Scripts:
+- bat/Localized/averageSTC.m
+- bat/Localized/combineGroupSTCinROI.py
+Output: [5b] group-level ROI-based cortical activity (Localized_avg/average-kids-Obj_norm-rh.mat)
+
+Select and average individual activity from ROI
+Input: individual localized cortical activity from [5a]
+Script: bat/Localized/combineIndividualSTCinROIs.py
+Output: [5c] individual ROI-based cortical activity (Localized_avg/dh12a/Obj_norm-lh.mat)
+
+Single-trial individual ROI localization
+Input:
+- Condition-specific epochs from [2c]
+- Inverse model from [4d]
+Script: bat/Localized/extractROIactivity.py
+Output: [5d] ROI-based cortical activity (Localized_trials/dh16a/Obj_normal-epo.mat)
+Time: 71 minutes per subject and core on Paraguay, requires 6GB of RAM per process on average (10GB peak)
+
+
+Plotting
+--------
+
+Plot group-level average data
+Input: Group-level ROI-based cortical activity from [5b]
+Script: bat/Localized/plotLocalizedActivity.m
+Output:
+- ROI-specific condition comparisons (doc/ROIactivity/kids-BA44.png)
+- condition-specific ROI comparisons (doc/ROIactivity/kids-Obj.png)
+
+Plot individual average data
+Input: Individual ROI-based cortical activity from [5c]
+Script: bat/Localized/plotCombinedIndividualLocalizedActivity.m
+

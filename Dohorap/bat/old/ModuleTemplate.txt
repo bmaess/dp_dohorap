@@ -1,0 +1,1041 @@
+./runBEM.py
+-----------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./start.sh
+
+./plot_cluster_stats_spatio_temporal.py
+---------------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+
+./MRIPreprocessing.py
+---------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./start.sh
+
+./mnePrepareBEM.sh
+------------------
+Process:
+Input:
+Output:
+Dependencies:
+
+./mneComputeForward.sh
+----------------------
+Process:
+Input:
+Output:
+Dependencies:
+
+./mneMakeSTC.sh
+---------------
+Process:
+Input:
+Output:
+Dependencies:
+
+./mneMakeMOV.sh
+---------------
+Process:
+Input:
+Output:
+Dependencies:
+
+./GenerateHeadModel.m
+---------------------
+Process:
+Input:
+Output:
+Dependencies:
+strong: ./Anisotropy/DWIDistortionCorrection_job.m
+strong: ./Anisotropy/CoregisterT1toDWI_job.m
+strong: ./Anisotropy/DWIMotionCorrection_job.m
+strong: ./Anisotropy/MakeBrainMask_job.m
+strong: ./Anisotropy/FitDiffusionTensor_job.m
+strong: ./Segmentation/segmentMRIdata_job.m
+weak: ./GenerateHeadModel.m
+weak: ./writeAnisotropicVistaMesh.m
+weak: ./Anisotropy/CalculateDiffusionTensor.m
+weak: ./Anisotropy/CalculateAnisotropy.m
+weak: ./Headmodel/mesh.py
+weak: ./Headmodel/make_mesh.py
+weak: ./Segmentation/make_segmentation_realistic_3T.m
+weak: ./Segmentation/segmentMRIdata.m
+weak: ./Segmentation/mask.m
+weak: ./Segmentation/clean.py
+weak: ./Segmentation/mask.py
+
+./Do_Trigger_Count.sh
+---------------------
+Process:
+Input:
+Output:
+Dependencies:
+strong: ./Do_Trigger_Count.sh
+
+./combineMneAveraging.m
+-----------------------
+Process:
+Input:
+Output:
+Dependencies:
+
+./MNE_estimates_stc.sh
+----------------------
+Process:
+Input:
+Output:
+Dependencies:
+strong: ./MNE_estimates_stc.sh
+
+./Do_Analysis.sh
+----------------
+Process:
+Input:
+Output:
+Dependencies:
+strong: ./Do_Analysis.sh
+strong: ./start.sh
+
+./createModulesTemplate.py
+--------------------------
+Process:
+Input:
+Output:
+Dependencies:
+strong: ./ModuleTemplate.txt
+
+./start.sh
+----------
+Process:
+Input:
+Output:
+Dependencies:
+
+./getMRI.py
+-----------
+Process:
+Input:
+Output:
+Dependencies:
+strong: ./config/subjectIDs.txt
+
+./combineTissueLayers.m
+-----------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./combineTissueLayers.m
+weak: ./Segmentation/clean.py
+weak: ./Segmentation/combineTissueLayers.m
+
+./plot_ica_from_raw.py
+----------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./start.sh
+weak: ./Segmentation/clean.py
+
+./ModuleTemplate.txt
+--------------------
+Process:
+Input:
+Output:
+Dependencies:
+
+./audializeMEG.m
+----------------
+Process:
+Input:
+Output:
+Dependencies:
+
+./writeAnisotropicVistaMesh.m
+-----------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./writeAnisotropicVistaMesh.m
+weak: ./Headmodel/write_vista_mesh.m
+weak: ./Headmodel/mesh.py
+
+./readme.txt
+------------
+Process:
+Input:
+Output:
+Dependencies:
+strong: ./Modules.txt
+
+./Create_MNE_coregistration_aligned.sh
+--------------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+
+./config/subjectIDs.txt
+-----------------------
+Process:
+Input:
+Output:
+Dependencies:
+
+./config/topup.cnf
+------------------
+Process:
+Input:
+Output:
+Dependencies:
+
+./old/findTriggers.m
+--------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./start.sh
+weak: ./old/findTriggers.m
+weak: ./MEG/findTriggers.m
+
+./old/GenerateHeadModel_withIterativeInterpolation.m
+----------------------------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./Headmodel/mesh.py
+weak: ./Segmentation/clean.py
+
+./old/createInverseBEM.sh
+-------------------------
+Process:
+Input:
+Output:
+Dependencies:
+
+./old/createCovMatrix.m
+-----------------------
+Process:
+Input:
+Output:
+Dependencies:
+
+./old/subjectT1.csv
+-------------------
+Process:
+Input:
+Output:
+Dependencies:
+
+./old/dh_mat_to_mne_evoked.m
+----------------------------
+Process:
+Input:
+Output:
+Dependencies:
+
+./old/createSubjectT1.py
+------------------------
+Process:
+Input:
+Output:
+Dependencies:
+strong: ./old/subjectT1.csv
+
+./old/CalculateDiffusionTensor_3DMatrix.m
+-----------------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./Anisotropy/EVfunction.m
+
+./old/fetchPossibleMRIs.py
+--------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./start.sh
+
+./old/oldMRTPreprocessing.sh
+----------------------------
+Process:
+Input:
+Output:
+Dependencies:
+strong: ./config/topup.cnf
+
+./old/meeg_artefact_rejection_std.m
+-----------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./old/meeg_artefact_rejection_std.m
+
+./old/DWIunwarping.py
+---------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./start.sh
+weak: ./Segmentation/clean.py
+
+./old/MRTchildPreprocessing.py
+------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+
+./old/EVfunction_outerloop.m
+----------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./Anisotropy/EVfunction.m
+
+./old/T1PreprocessingFreesurfer.py
+----------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+
+./Anisotropy/CalculateDiffusionTensor.m
+---------------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./Anisotropy/EVfunction.m
+weak: ./Segmentation/mask.m
+weak: ./Segmentation/mask.py
+
+./Anisotropy/DWIDistortionCorrection_job.m
+------------------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+
+./Anisotropy/CoregisterT1toDWI_job.m
+------------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./Segmentation/mask.m
+weak: ./Segmentation/mask.py
+
+./Anisotropy/CalculateAnisotropy.m
+----------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./Anisotropy/DiffusionTensorToConductivity.m
+weak: ./Headmodel/mesh.py
+
+./Anisotropy/DWIMotionCorrection_job.m
+--------------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+
+./Anisotropy/MakeBrainMask_job.m
+--------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./Segmentation/mask.m
+weak: ./Segmentation/mask.py
+
+./Anisotropy/DiffusionTensorToConductivity.m
+--------------------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./Anisotropy/DiffusionTensorToConductivity.m
+weak: ./Segmentation/mask.m
+weak: ./Segmentation/mask.py
+
+./Anisotropy/EVfunction.m
+-------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./Anisotropy/EVfunction.m
+weak: ./Segmentation/mask.m
+weak: ./Segmentation/mask.py
+
+./Anisotropy/FitDiffusionTensor_job.m
+-------------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+
+./MEG/averageSTC.m
+------------------
+Process:
+Input:
+Output:
+Dependencies:
+
+./MEG/findTriggers.m
+--------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./old/findTriggers.m
+weak: ./MEG/findTriggers.m
+weak: ./MEG/correctPresentationConditions.m
+weak: ./MEG/readEventFile.m
+weak: ./MEG/extractPresentationEvents.m
+
+./MEG/testCausalityOverLocalizedActivity.m
+------------------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+
+./MEG/summarizeRejectedTrials.m
+-------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+
+./MEG/fiff_filter_raw_data.m
+----------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./start.sh
+weak: ./MEG/fiff_filter_raw_data.m
+
+./MEG/detectDeviations.m
+------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./MEG/detectDeviations.m
+
+./MEG/MEGDefineTrials.m
+-----------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./old/findTriggers.m
+weak: ./MEG/findTriggers.m
+weak: ./MEG/MEGDefineTrials.m
+weak: ./MEG/ft_definetrial.log
+
+./MEG/writeEnhancedEventFileHeader.m
+------------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./MEG/writeEnhancedEventFileHeader.m
+
+./MEG/correctPresentationConditions.m
+-------------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./MEG/writeEnhancedEventFileHeader.m
+weak: ./MEG/correctPresentationConditions.m
+
+./MEG/FieldtripAveraging.m
+--------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./MEG/FieldtripAveraging.m
+weak: ./MEG/plotButterfly.m
+
+./MEG/plotERP.m
+---------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./MEG/plotERP.m
+
+./MEG/writeCovarianceMatrix.m
+-----------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./MEG/writeCovarianceMatrix.m
+
+./MEG/writeAverageFif.m
+-----------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./MEG/writeAverageFif.m
+
+./MEG/FieldtripTopoPlot.m
+-------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./MEG/FieldtripTopoPlot.m
+
+./MEG/extractSingleTrials.m
+---------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./start.sh
+
+./MEG/MEGlowpass.m
+------------------
+Process:
+Input:
+Output:
+Dependencies:
+strong: ./MEG/hp_004_4367pts_1000Hz.fir
+weak: ./MEG/fiff_filter_raw_data.m
+weak: ./MEG/MEGlowpass.m
+
+./MEG/MEGepochSegmentation.m
+----------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./MEG/MEGepochSegmentation.m
+
+./MEG/readEventFile.m
+---------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./MEG/readEventFile.m
+
+./MEG/hp_004_4367pts_1000Hz.fir
+-------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+
+./MEG/FieldtripAveragingConditions.m
+------------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./MEG/FieldtripAveraging.m
+weak: ./MEG/plotERP.m
+weak: ./MEG/FieldtripAveragingConditions.m
+
+./MEG/importPresentationLog.m
+-----------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./MEG/importPresentationLog.m
+
+./MEG/batchMEGPreprocessing.m
+-----------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./MEG/MEG_Preprocessing.m
+weak: ./MEG/rejectLowPerformers.m
+
+./MEG/ft_definetrial.log
+------------------------
+Process:
+Input:
+Output:
+Dependencies:
+
+./MEG/rejectDeviations.m
+------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./MEG/rejectDeviations.m
+
+./MEG/extractPresentationEvents.m
+---------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./MEG/importPresentationLog.m
+weak: ./MEG/extractPresentationEvents.m
+
+./MEG/plotMEG.m
+---------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./MEG/plotMEG.m
+
+./MEG/MEG_Preprocessing.m
+-------------------------
+Process:
+Input:
+Output:
+Dependencies:
+strong: ./plot_ica_from_raw.py
+weak: ./MEG/detectDeviations.m
+weak: ./MEG/MEGDefineTrials.m
+weak: ./MEG/FieldtripAveraging.m
+weak: ./MEG/writeCovarianceMatrix.m
+weak: ./MEG/writeAverageFif.m
+weak: ./MEG/FieldtripTopoPlot.m
+weak: ./MEG/MEGlowpass.m
+weak: ./MEG/MEGepochSegmentation.m
+weak: ./MEG/FieldtripAveragingConditions.m
+weak: ./MEG/MEG_Preprocessing.m
+weak: ./MEG/rejectLowPerformers.m
+
+./MEG/convertPresentationLog.m
+------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./MEG/importPresentationLog.m
+
+./MEG/rejectLowPerformers.m
+---------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./MEG/rejectLowPerformers.m
+
+./MEG/plotButterfly.m
+---------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./MEG/plotButterfly.m
+
+./MEG/old/FTrejectJumps.m
+-------------------------
+Process:
+Input:
+Output:
+Dependencies:
+
+./MEG/old/FieldtripCompareConditions.m
+--------------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+
+./MEG/old/FTrejectEOG.m
+-----------------------
+Process:
+Input:
+Output:
+Dependencies:
+
+./MEG/old/FieldtripCompareConditionsButterfly.m
+-----------------------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+
+./Behavioral/visualizeGroupRT.m
+-------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./config/subjectIDs.txt
+
+./Behavioral/writeResponseTimes.m
+---------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+
+./Behavioral/visualizeIndividualRT.m
+------------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./Behavioral/visualizeIndividualRT.m
+
+./Headmodel/write_vista_mesh.m
+------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+strong: ./Headmodel/write_vista_mesh.m
+weak: ./Headmodel/mesh.py
+
+./Headmodel/plotCoregistration.m
+--------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./Headmodel/mesh.py
+
+./Headmodel/extractROIactivity.py
+---------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./start.sh
+weak: ./config/subjectIDs.txt
+weak: ./Segmentation/clean.py
+
+./Headmodel/mesh.py
+-------------------
+Process:
+Input:
+Output:
+Dependencies:
+strong: ./Headmodel/mesh.py
+
+./Headmodel/hex2rgb.py
+----------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./Headmodel/hex2rgb.py
+
+./Headmodel/plotROIactivity.py
+------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./config/subjectIDs.txt
+weak: ./Segmentation/clean.py
+
+./Headmodel/write_dip.m
+-----------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./Headmodel/write_dip.m
+weak: ./Headmodel/sb_write_dip.m
+weak: ./Segmentation/alignMeshToHeadCoordinates.m
+
+./Headmodel/write_label.py
+--------------------------
+Process:
+Input:
+Output:
+Dependencies:
+strong: ./Headmodel/write_label.py
+
+./Headmodel/lightenColor.py
+---------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./Headmodel/hex2rgb.py
+weak: ./Headmodel/lightenColor.py
+
+./Headmodel/write_vistamesh.m
+-----------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./Headmodel/write_vista_mesh.m
+weak: ./Headmodel/mesh.py
+weak: ./Segmentation/alignMeshToHeadCoordinates.m
+
+./Headmodel/write_vistamesh.py
+------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+strong: ./Headmodel/mesh.py
+strong: ./Headmodel/write_vistamesh.m
+strong: ./Headmodel/write_vistamesh.py
+
+./Headmodel/plotROI.py
+----------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./config/subjectIDs.txt
+
+./Headmodel/make_mesh.py
+------------------------
+Process:
+Input:
+Output:
+Dependencies:
+strong: ./Headmodel/mesh.py
+strong: ./Headmodel/make_mesh.py
+
+./Headmodel/affine_mod.py
+-------------------------
+Process:
+Input:
+Output:
+Dependencies:
+strong: ./Headmodel/affine_mod.py
+
+./Headmodel/writeSensorPositions.m
+----------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./Headmodel/write_grd_file_neuromag.m
+
+./Headmodel/write_grd_file_neuromag.m
+-------------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./Headmodel/write_grd_file_neuromag.m
+
+./Headmodel/compareLocaliedTrials.m
+-----------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./Headmodel/compareLocaliedTrials.m
+
+./Headmodel/assembleVistaMesh.sh
+--------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+strong: ./start.sh
+strong: ./Headmodel/mesh.py
+strong: ./Headmodel/write_label.py
+strong: ./Headmodel/write_vistamesh.py
+strong: ./Headmodel/make_mesh.py
+strong: ./Headmodel/make_sourcespace.py
+strong: ./Segmentation/clean.py
+strong: ./Segmentation/mask.py
+strong: ./Segmentation/thicken_grey.py
+weak: ./Headmodel/write_vistamesh.m
+weak: ./Headmodel/assembleVistaMesh.sh
+weak: ./Segmentation/mask.m
+
+./Headmodel/make_sourcespace.py
+-------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+strong: ./Headmodel/write_dip.m
+strong: ./Headmodel/make_sourcespace.py
+weak: ./Headmodel/mesh.py
+weak: ./Headmodel/boundary.py
+weak: ./Segmentation/mask.m
+weak: ./Segmentation/mask.py
+
+./Headmodel/computeROIDifferences.py
+------------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./Segmentation/clean.py
+
+./Headmodel/sb_write_dip.m
+--------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./Headmodel/write_dip.m
+weak: ./Headmodel/sb_write_dip.m
+
+./Headmodel/boundary.py
+-----------------------
+Process:
+Input:
+Output:
+Dependencies:
+strong: ./Headmodel/boundary.py
+weak: ./Headmodel/mesh.py
+
+./Freesurfer/coregisterT1toT2.m
+-------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+strong: ./Freesurfer/coregisterT1toT2_job.m
+weak: ./Freesurfer/coregisterT1toT2.m
+
+./Freesurfer/runFreesurfer3.py
+------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./start.sh
+
+./Freesurfer/coregisterT1toT2_job.m
+-----------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./Segmentation/mask.m
+weak: ./Segmentation/mask.py
+
+./Freesurfer/prepareFreesurfer.sh
+---------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+
+./Segmentation/make_segmentation_realistic_3T.m
+-----------------------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./Segmentation/make_segmentation_realistic_3T.m
+weak: ./Segmentation/mask.m
+weak: ./Segmentation/clean.py
+weak: ./Segmentation/mask.py
+
+./Segmentation/segmentMRIdata_job.m
+-----------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./Segmentation/clean.py
+
+./Segmentation/segmentMRIdata.m
+-------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+strong: ./Segmentation/segmentMRIdata_job.m
+weak: ./Segmentation/segmentMRIdata.m
+
+./Segmentation/alignMeshToHeadCoordinates.m
+-------------------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./Segmentation/alignMeshToHeadCoordinates.m
+
+./Segmentation/mask.m
+---------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./Segmentation/mask.m
+weak: ./Segmentation/mask.py
+
+./Segmentation/clean.py
+-----------------------
+Process:
+Input:
+Output:
+Dependencies:
+strong: ./Segmentation/clean.py
+weak: ./Segmentation/mask.m
+weak: ./Segmentation/mask.py
+
+./Segmentation/mask.py
+----------------------
+Process:
+Input:
+Output:
+Dependencies:
+strong: ./Segmentation/mask.py
+weak: ./Segmentation/mask.m
+
+./Segmentation/combineTissueLayers.m
+------------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./combineTissueLayers.m
+weak: ./Segmentation/clean.py
+weak: ./Segmentation/combineTissueLayers.m
+
+./Segmentation/sb_write_meg.m
+-----------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./Headmodel/write_grd_file_neuromag.m
+weak: ./Segmentation/sb_write_meg.m
+
+./Segmentation/thicken_grey.py
+------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+strong: ./Segmentation/thicken_grey.py
+

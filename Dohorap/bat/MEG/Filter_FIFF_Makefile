@@ -1,0 +1,3 @@
+${OUT}: ${IN} ${COEFF}	
+	echo "run_single_file_filter_raw_data('${OUT}','${IN}','${COEFF}');" >/tmp/$$.m && \
+	matlab -v 7.14 -nosplash </tmp/$$.m;

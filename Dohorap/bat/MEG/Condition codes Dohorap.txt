@@ -1,0 +1,12 @@
+Condition codes Dohorap
+
+Pcodes: 212, 211, 221, 222
+Sounds: 64a, 104a, 35a, 10a
+Speech: der, der, den, den
+
+“Wo ist das Tier, das der Affe kämmt” -> Object first, condition 1
+“Wo ist das Tier, das den Hund kämmt” -> Subject first, Condition 2
+
+Skeide:
+SRC: der kleine Käfer, der den Fuchs trägt / das Tier, das den Affen kämmt
+ORC: der kleine Käfer, den der Fuchs trägt / das Tier, das der Affe kämmt

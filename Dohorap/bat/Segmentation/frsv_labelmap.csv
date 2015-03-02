@@ -1,0 +1,187 @@
+0,0,Unknown ,
+1,0,Left-Cerebral-Exterior ,
+2,1,Left-Cerebral-White-Matter ,white matter of left cerebral hemisphere 
+3,2,Left-Cerebral-Cortex ,cortex of left cerebral hemisphere 
+4,3,Left-Lateral-Ventricle ,left lateral ventricle 
+5,3,Left-Inf-Lat-Vent ,temporal horn of left lateral ventricle 
+6,0,Left-Cerebellum-Exterior ,
+7,1,Left-Cerebellum-White-Matter ,white matter of left hemisphere of cerebellum 
+8,2,Left-Cerebellum-Cortex ,left cerebellar cortex 
+9,1,Left-Thalamus ,left thalamus 
+10,1,Left-Thalamus-Proper ,
+11,1,Left-Caudate ,left caudate nucleus 
+12,1,Left-Putamen ,left putamen 
+13,1,Left-Pallidum ,left globus pallidus 
+14,3,3rd-Ventricle ,third ventricle 
+15,3,4th-Ventricle ,fourth ventricle 
+16,1,Brain-Stem ,brainstem 
+17,1,Left-Hippocampus ,left hippocampus proper 
+18,1,Left-Amygdala ,left amygdala 
+19,2,Left-Insula ,left insula 
+20,2,Left-Operculum ,opercular part of left inferior frontal gyrus 
+21,0,Line-1 ,
+22,0,Line-2 ,
+23,0,Line-3 ,
+24,3,CSF ,cerebrospinal fluid 
+25,0,Left-Lesion ,
+26,1,Left-Accumbens-area ,left nucleus accumbens 
+27,1,Left-Substancia-Nigra ,left substantia nigra 
+28,1,Left-VentralDC ,
+29,0,Left-undetermined ,
+30,4,Left-vessel ,
+31,1,Left-choroid-plexus ,choroid plexus of left cerebral hemisphere 
+32,0,Left-F3orb ,orbital part of left inferior frontal gyrus 
+33,0,Left-lOg ,left lateral orbital gyrus 
+34,0,Left-aOg ,
+35,0,Left-mOg ,left medial orbital gyrus 
+36,0,Left-pOg ,left posterior orbital gyrus 
+37,0,Left-Stellate ,
+38,0,Left-Porg ,left posterior orbital gyrus 
+39,0,Left-Aorg ,left anterior orbital gyrus 
+40,0,Right-Cerebral-Exterior ,
+41,1,Right-Cerebral-White-Matter ,white matter of right cerebral hemisphere 
+42,2,Right-Cerebral-Cortex ,cortex of right cerebral hemisphere 
+43,3,Right-Lateral-Ventricle ,right lateral ventricle 
+44,3,Right-Inf-Lat-Vent ,temporal horn of right lateral ventricle 
+45,0,Right-Cerebellum-Exterior ,
+46,1,Right-Cerebellum-White-Matter ,white matter of right hemisphere of cerebellum 
+47,2,Right-Cerebellum-Cortex ,right cerebellar cortex 
+48,1,Right-Thalamus ,right thalamus 
+49,1,Right-Thalamus-Proper ,
+50,1,Right-Caudate ,right caudate nucleus 
+51,1,Right-Putamen ,right putamen 
+52,1,Right-Pallidum ,right globus pallidus 
+53,1,Right-Hippocampus ,right hippocampus proper 
+54,1,Right-Amygdala ,right amygdala 
+55,2,Right-Insula ,right insula 
+56,2,Right-Operculum ,opercular part of right inferior frontal gyrus 
+57,0,Right-Lesion ,
+58,1,Right-Accumbens-area ,right nucleus accumbens 
+59,1,Right-Substancia-Nigra ,right substantia nigra 
+60,1,Right-VentralDC ,
+61,0,Right-undetermined ,
+62,4,Right-vessel ,
+63,1,Right-choroid-plexus ,choroid plexus of right cerebral hemisphere 
+64,0,Right-F3orb ,orbital part of right inferior frontal gyrus 
+65,0,Right-lOg ,right lateral orbital gyrus 
+66,0,Right-aOg ,
+67,0,Right-mOg ,right medial orbital gyrus 
+68,0,Right-pOg ,right posterior orbital gyrus 
+69,0,Right-Stellate ,
+70,0,Right-Porg ,right posterior orbital gyrus 
+71,0,Right-Aorg ,right anterior orbital gyrus 
+72,3,5th-Ventricle ,septum pellucidum 
+73,0,Left-Interior ,
+74,0,Right-Interior ,
+75,3,Left-Lateral-Ventricles ,left lateral ventricle 
+76,3,Right-Lateral-Ventricles ,right lateral ventricle 
+77,1,WM-hypointensities ,
+78,1,Left-WM-hypointensities ,
+79,1,Right-WM-hypointensities ,
+80,2,non-WM-hypointensities ,
+81,2,Left-non-WM-hypointensities ,
+82,2,Right-non-WM-hypointensities ,
+83,0,Left-F1 ,left superior frontal gyrus 
+84,0,Right-F1 ,right superior frontal gyrus 
+85,1,Optic-Chiasm ,optic chiasm 
+86,0,Corpus_Callosum ,corpus callosum 
+96,0,Left-Amygdala-Anterior ,left anterior amygdaloid area 
+97,0,Right-Amygdala-Anterior ,right anterior amygdaloid area 
+98,0,Dura ,dura mater 
+100,0,Left-wm-intensity-abnormality ,
+101,0,Left-caudate-intensity-abnormality ,
+102,0,Left-putamen-intensity-abnormality ,
+103,0,Left-accumbens-intensity-abnormality ,
+104,0,Left-pallidum-intensity-abnormality ,
+105,0,Left-amygdala-intensity-abnormality ,
+106,0,Left-hippocampus-intensity-abnormality ,
+107,0,Left-thalamus-intensity-abnormality ,
+108,0,Left-VDC-intensity-abnormality ,
+109,0,Right-wm-intensity-abnormality ,
+110,0,Right-caudate-intensity-abnormality ,
+111,0,Right-putamen-intensity-abnormality ,
+112,0,Right-accumbens-intensity-abnormality ,
+113,0,Right-pallidum-intensity-abnormality ,
+114,0,Right-amygdala-intensity-abnormality ,
+115,0,Right-hippocampus-intensity-abnormality ,
+116,0,Right-thalamus-intensity-abnormality ,
+117,0,Right-VDC-intensity-abnormality ,
+118,0,Epidermis ,
+119,0,Conn-Tissue ,
+120,0,SC-Fat/Muscle ,
+121,0,Cranium ,
+122,0,CSF-SA ,
+123,0,Muscle ,
+124,0,Ear ,
+125,0,Adipose ,
+126,0,Spinal-Cord ,spinal cord 
+127,0,Soft-Tissue ,
+128,0,Nerve ,
+129,0,Bone ,
+130,0,Air ,
+131,0,Orbital-Fat ,
+132,0,Tongue ,
+133,0,Nasal-Structures ,
+134,0,Globe ,
+135,0,Teeth ,
+136,0,Left-Caudate/Putamen ,
+137,0,Right-Caudate/Putamen ,
+138,0,Left-Claustrum ,left claustrum 
+139,0,Right-Claustrum ,right claustrum 
+140,0,Cornea ,
+142,0,Diploe ,
+143,0,Vitreous-Humor ,
+144,0,Lens ,
+145,0,Aqueous-Humor ,
+146,0,Outer-Table ,
+147,0,Inner-Table ,
+148,0,Periosteum ,
+149,0,Endosteum ,
+150,0,R/C/S ,
+151,0,Iris ,
+152,0,SC-Adipose/Muscle ,
+153,0,SC-Tissue ,
+154,0,Orbital-Adipose ,
+155,0,Left-IntCapsule-Ant ,
+156,0,Right-IntCapsule-Ant ,
+157,0,Left-IntCapsule-Pos ,
+158,0,Right-IntCapsule-Pos ,
+193,0,Left-hippocampal_fissure ,
+194,0,Left-CADG-head ,left hippocampal formation 
+195,0,Left-subiculum ,left subiculum 
+196,0,Left-fimbria ,fimbria of left hippocampus 
+197,0,Right-hippocampal_fissure ,
+198,0,Right-CADG-head ,right hippocampal formation 
+199,0,Right-subiculum ,right subiculum 
+200,0,Right-fimbria ,fimbria of right hippocampus 
+201,0,alveus ,alveus of hippocampus 
+202,0,perforant_pathway ,
+203,0,parasubiculum ,parasubiculum 
+204,0,presubiculum ,presubiculum 
+205,0,subiculum ,subiculum 
+206,0,CA1 ,CA1 field 
+207,0,CA2 ,CA2 field 
+208,0,CA3 ,CA3 field 
+209,0,CA4 ,cA4 field 
+210,0,GC-DG ,dentate gyrus of hippocampus 
+211,0,HATA ,
+212,0,fimbria ,fimbria of hippocampus 
+213,0,lateral_ventricle ,lateral ventricle 
+214,0,molecular_layer_HP ,
+215,0,hippocampal_fissure ,
+216,0,entorhinal_cortex ,entorhinal area 
+217,0,molecular_layer_subiculum ,
+218,0,Amygdala ,amygdala 
+219,0,Cerebral_White_Matter ,cerebral white matter 
+220,0,Cerebral_Cortex ,cerebral cortex 
+221,0,Inf_Lat_Vent ,temporal horn of lateral ventricle 
+222,0,Perirhinal ,parahippocampal gyrus 
+223,0,Cerebral_White_Matter_Edge ,
+224,0,Background ,
+225,0,Ectorhinal ,fusiform gyrus 
+250,0,Fornix ,
+251,2,CC_Posterior ,
+252,2,CC_Mid_Posterior ,
+253,2,CC_Central ,
+254,2,CC_Mid_Anterior ,
+255,2,CC_Anterior ,

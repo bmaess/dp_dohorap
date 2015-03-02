@@ -1,0 +1,848 @@
+Scripts:
+
+./audializeMEG.m
+----------------
+Process:
+- Import the raw MEG signal
+- Increase the signal pitch by a factor of 48 (towards audible frequencies)
+- Write each pitched channel to a temporary .wav file
+- Place the channels as point speakers in a virtual room (according to their original locations)
+- Place two virtual microphones inside the virtual head
+- Calculate the signal propagation from speakers to microphones
+- Save the microphone signal as a stereo sound file
+Input: any continuous MEG data in .fif format
+Output: continuous stereo sound data as .wav file
+Dependencies:
+- Fieldtrip
+- VDP toolbox (especially: VDPgain_dist, Vplot, V_delay)
+
+./combineMneAveraging.m
+-----------------------
+Process: Plot MNE-generated average amplitude separately for gradiometers and magnetometers
+Input: Trigger-related MNE average .fif files ('dh52a1_ssh00l30_son.fif')
+Output: Subject-specific and overall amplitude plots ('dh52a1_grad.png')
+Dependencies: Fieldtrip
+
+./runBEM.py
+-----------
+Process: Create the BEM model from the Freesurfer segmentation (multicore enabled)
+Input: segmented surfaces from Freesurfer (SUBJECTSDIR/dh58a/surf/lh.seghead)
+Output: single-shell BEM model (SUBJECTDIR/dh58a/bem/dh58a-head.fif)
+Dependencies: MNE
+
+./plot_cluster_stats_spatio_temporal.py
+---------------------------------------
+Process: Clusters cortical activity and performs a significance test between two conditions (doesn't work)
+Input: subject-specific cortical activity (EXPDIR/dh58a/dh58a-c1-lh.stc)
+Output: visualized significance on cluster-level (clusters-lh.png)
+Dependencies: MNE
+
+./MRIPreprocessing.py
+---------------------
+Process:
+Input:
+Output:
+Dependencies:
+
+./mnePrepareBEM.sh
+------------------
+Process: Create the BEM model from the Freesurfer segmentation
+Input: segmented surfaces from Freesurfer (SUBJECTSDIR/dh58a/surf/lh.seghead)
+Output: single-shell BEM model (SUBJECTDIR/dh58a/bem/dh58a-head.fif)
+Dependencies: MNE
+
+./mneComputeForward.sh
+----------------------
+Process: Computes the forward model from the head model and average ERPs
+Input:
+- Trigger-based average ERPs from MNE (EXPDIR/dh58a/dh58a_mc-decision-quick-averageEpochs-c1.fif)
+- MRI/MEG co-alignment files (SUBJECTSDIR/dh58a/mri/T1-neuromag/sets/COR-dh58a-aligned.fif)
+- BEM model (SUBJECTSDIR/dh58a/bem/dh58a-5120-bem-sol.fif)
+- Dipole locations (SUBJECTSDIR/dh58a/bem/dh58a-ico-5-src.fif)
+- Covariance matrix (EXPDIR/dh58a/dh58a_mc-covariance.fif)
+Output:
+- Forward model (EXPDIR/dh58a/dh58a__-5120-ico-5-dh58a-aligned-fwd.fif)
+- Inverse model (EXPDIR/dh58a/dh58a__-5120-ico-5-dh58a-aligned-inv.fif)
+Dependencies: mne_setup_fwdinv.sh
+
+./mneMakeSTC.sh
+---------------
+Process: Computes cortical activity for one subject
+Input:
+- Inverse model (EXPDIR/dh58a/dh58a__-5120-ico-5-dh58a-aligned-inv.fif)
+- trigger-dependent averaged MEG data (EXPDIR/dh58a/dh58a_mc-decision-averageEpochs-c1.fif)
+Output:
+- subject-specific cortical activity (EXPDIR/dh58a/dh58a-decision-c1.stc)
+Dependencies: MNE
+
+./mneMakeMOV.sh
+---------------
+Process: Renders grand average cortical activity into a movie
+Input: grand-average cortical activity (EXPDIR/average-adults-c1-lh.stc)
+Output: movie of an inflated left cortex (EXPDIR/average-adults-c1.mov)
+Dependencies: MNE
+
+./GenerateHeadModel.m
+---------------------
+Process: Generates a Vista headmodel from MRI/DTI data
+Dependencies:
+- Fieldtrip
+- SPM
+- Nifti toolkit
+- ./Segmentation/segmentMRIdata_job.m
+- ./Segmentation/make_segmentation_realistic_3T.m
+- ./writeAnisotropicVistaMesh.m
+- ./Anisotropy/DWIMotionCorrection_job.m
+- ./Anisotropy/DWIDistortionCorrection_job.m
+- ./Anisotropy/CoregisterT1toDWI_job.m
+- ./Anisotropy/FitDiffusionTensor_job.m
+- ./Anisotropy/MakeBrainMask_job.m
+- ./Anisotropy/CalculateDiffusionTensor.m
+- ./Anisotropy/CalculateAnisotropy.m
+- ./Headmodel/make_mesh.py
+
+./Do_Trigger_Count.sh
+---------------------
+Process: Counts the amount of trials for each of the two conditions (as a sanity check)
+Input: event trigger files (EXPDIR/dh58a/dh58a_ss.eve)
+Output: printed text
+Dependencies: Perl
+
+./MNE_estimates_stc.sh
+----------------------
+Process: Computes cortical activity for all subjects
+Input:
+- Inverse model (EXPDIR/dh58a/dh58a__-5120-ico-5-dh58a-aligned-inv.fif)
+- trigger-dependent averaged MEG data (EXPDIR/dh58a/dh58a-l12h0.4-average-onset_forward.fif)
+Output:
+- subject-specific cortical activity (EXPDIR/subject_estimates_MNE_dh58a_unsigned/dh58a_l12h0.4_avr-ico-5p-onset_forward-lh.stc)
+- grand-average cortical activity (EXPDIR/grandaverage_estimates_MNE_dh58a_unsigned/Dohorap_MNE_dh58a_onset-forward-lh.stc)
+Dependencies: MNE
+
+./Do_Analysis.sh
+----------------
+Process: Movement correction (and averaging trigger-dependent MEG data, disabled)
+Input:
+- raw MEG data (EXPDIR/dh58a/dh58a1.fif)
+- trigger-related configuration (cfg/mne_dohorap_son.cfg)
+- preprocessing configuration (cfg/mne_process_raw_h00l30.cfg)
+- event trigger files (EXPDIR/dh58a/dh58a1-enhanced.eve)
+Output:
+- motion-corrected MEG data (EXPDIR/dh58a/dh58a1_mc.fif)
+Dependencies: MNE
+
+./getMRI.py
+-----------
+Process: Looks up study-related subject IDs and fetches the associated MRI files
+Input:
+- ./config/subjectIDs.txt
+- /a/probands/bdb/
+- /scr/mrincoming/
+- /media/truecrypt1/SCR/kids/
+Output:
+- /SCR/Dohorap/Main/Data/MRI/
+Dependencies: none
+
+./plot_ica_from_raw.py
+----------------------
+Process: EOG artifact correction with ICA
+Input: filtered raw MEG data (EXPDIR/dh58a/dh58a1_mc_hp004.fif)
+Output: artifact-corrected filtered MEG data (EXPDIR/dh58a/dh58a1_mc_hp004_EOG.fif)
+Dependencies: MNE
+
+./writeAnisotropicVistaMesh.m
+-----------------------------
+Process: Write anisotropic head model in Vista format
+Input:
+- MRI/dh58a/Segmented/segmentation_mesh.mat
+- MRI/dh58a/DWI/TensorData/DiffusionTensor.mat
+Output: MRI/dh58a/HeadModel.v
+Dependencies: Simbio toolbox from Fieldtrip
+
+./Create_MNE_coregistration_aligned.sh
+--------------------------------------
+Process: Links the best head/sensor alignment file to a generic file
+Input: MRI/freesurfer/dh58a/mri/T1-neuromag/sets/COR-portain-130801-160639.fif
+Output: COR-dh58a-aligned.fif
+Dependencies: none
+
+./Anisotropy/DWIMotionCorrection_job.m
+--------------------------------------
+Process: Correct motion-induced artifacts in DWI images
+Input:
+- Static DWI images (MRI/dh58a/DWI/AP/0000.nii, 0001.nii)
+- Potentially affected DWI images (MRI/dh58a/DWI/AP/0002.nii)
+Output:
+- Motion-corrected DWI images (MRI/dh58a/DWI/MovementCorrected/r0002.nii)
+Dependencies: SPM/Diffusiontools
+
+./Anisotropy/DWIDistortionCorrection_job.m
+------------------------------------------
+Process: Correct measuring artifacts in DWI images
+- Compute the translation matrix between the forward/backward B0 images
+- Compute the translation matrix between the forward/backward B1000 images
+- Correct all forward images with the average of the two translation matrices
+Input:
+- forward-directed DWI images (MRI/dh58a/DWI/AP/0000.nii, MovementCorrected/r0002.nii)
+- backward-directed DWI images (MRI/dh58a/DWI/PA/0000.nii)
+Output:
+- distortion-corrected forward DWI images (MRI/dh58a/DWI/DistortionCorrected/u0000.nii, ur0002.nii)
+Dependencies: SPM/Diffusiontools
+
+./Anisotropy/CoregisterT1toDWI_job.m
+------------------------------------
+Process: Coregister T1 image to DWI image, and scale segmented images to DWI dimensions
+Input:
+- motion-corrected B0 DWI image (MRI/dh58a/DWI/DistortionCorrected/u0000.nii)
+- raw T1 image (MRI/dh58a/T1/t1mprsagADNI32Ch.nii)
+- grey matter layer (MRI/dh58a/Segmented/c1t1mprsagADNI32Ch.nii)
+- white matter layer (MRI/dh58a/Segmented/c2t1mprsagADNI32Ch.nii)
+Output:
+- distortion-corrected grey matter layer (/DWI/DistortionCorrected/rc1t1mprsagADNI32Ch.nii)
+- distortion-corrected white matter layer (/DWI/DistortionCorrected/rc2t1mprsagADNI32Ch.nii)
+Dependencies: SPM/Diffusiontools
+
+./Anisotropy/FitDiffusionTensor_job.m
+-------------------------------------
+Process: Fit a diffusion tensor into every voxel of the DWI images
+Input: distortion-corrected forward DWI images (MRI/dh58a/DWI/DistortionCorrected/u0000.nii, ur0002.nii)
+Output: Tensor data files (MRI/dh58a/DWI/TensorData/*.nii)
+Dependencies: SPM/Diffusiontools
+
+./Anisotropy/MakeBrainMask_job.m
+--------------------------------
+Process: 
+Input:
+- distortion-corrected forward DWI images (MRI/dh58a/DWI/DistortionCorrected/u0000.nii, ur0002.nii)
+Output:
+- White matter mask (MRI/dh58a/DWI/Masked/MSK_rc1t1mprsagADNI32Ch.nii)
+- corrected, white-matter-masked DWI images (MRI/dh58a/DWI/Masked/M_u0000.nii, M_ur0002.nii)
+Dependencies: SPM/Diffusiontools
+
+./Anisotropy/CalculateDiffusionTensor.m
+---------------------------------------
+Process: Convert fitted tensor files from SPM/Diffusiontools to a single diffusion tensor
+Input:
+- Tensor data files (MRI/dh58a/DWI/TensorData/*.nii)
+- White matter mask (MRI/dh58a/DWI/Masked/MSK_rc1t1mprsagADNI32Ch.nii)
+Output: Diffusion Tensor (MRI/dh58a/DWI/TensorData/DiffusionTensor.mat)
+Dependencies: EVfunction, Nifti Toolbox
+
+./Anisotropy/EVfunction.m
+-------------------------
+Process: Calculate diffusion tensor from the cardinal eigenvectors (only for voxels inside the mask)
+Input: White matter mask, Eigenvalues, Eigenvectors
+Output: Diffusion Tensor
+Dependencies: none
+
+./Anisotropy/CalculateAnisotropy.m
+----------------------------------
+Process: Converts diffusion to conductivity tensor
+Input:
+- Diffusion Tensor (MRI/dh58a/DWI/TensorData/DiffusionTensor.mat)
+- White matter mask (MRI/dh58a/Segmented/rc2t1mprsagADNI32Ch.nii)
+- Grey matter mask (MRI/dh58a/Segmented/rc1t1mprsagADNI32Ch.nii)
+Output: Conductivity tensor (MRI/dh58a/DWI/TensorData/ConductivityTensor.mat)
+Dependencies: ./Anisotropy/DiffusionTensorToConductivity.m
+
+./Anisotropy/DiffusionTensorToConductivity.m
+--------------------------------------------
+Process: Rescale Diffusion to Conductivity tensor (following Rullmann et al, NeuroImage 2009)
+Input: Diffusion tensor, White matter mask, grey matter mask
+Output: Conductivity tensor
+Dependencies: Nifti toolbox
+
+./MEG/averageSTC.m
+------------------
+Process: Creates grand average cortical activity
+Input: subject-specific cortical activity (EXPDIR/dh58a/dh58a-decision-c1-lc.stc)
+Output: grand average cortical activity (EXPDIR/average-adults-c1-lc.stc)
+Dependencies: MNE
+
+./MEG/findTriggers.m
+--------------------
+Process: Finds epochs, corrects events from Presentation logfiles, and compiles a table of epoch-related metadata
+Input:
+- continuous MEG data (cfg.dataset)
+Output:
+- table containing epoch information (trl)
+Dependencies:
+- ./MEG/readEventFile.m
+- ./MEG/extractPresentationEvents.m
+- ./MEG/correctPresentationConditions.m
+
+./MEG/summarizeRejectedTrials.m
+-------------------------------
+Process: Save the results of the EOG/Jump rejection step
+Input: EXPDIR/dh58a/dh58a1_ss-rejectionLists.mat
+Output:
+- rejectedJumps.mat
+- rejectedEOGs.mat
+- rejectedTrialCount.mat
+Dependencies: none
+
+./MEG/fiff_filter_raw_data.m
+----------------------------
+Process: Filters the rawfile, writing the output to a new file.
+Input:
+- unfiltered MEG data (cfg.rawfile)
+- filter vector (cfg.filtvec)
+Output: filtered MEG data (cfg.outfile)
+Dependencies: none
+
+./MEG/detectDeviations.m
+------------------------
+Process: detects jump and EOG artifacts if they deviate from a moving average
+Input: epochs, suffix, channels, timeWindow, rejectionThreshold
+Output:  trialsWithArtifacts
+Dependencies: none
+
+./MEG/rejectDeviations.m
+------------------------
+Process: returns trials whose deviation exceeds from a moving average
+Input: epochs, trigger, channels, timeWindow, rejectionThreshold
+Output: trialsWithArtifacts
+Dependencies: none
+
+./MEG/MEGDefineTrials.m
+-----------------------
+Process: loads MEG epochs in Fieldtrip-style format
+Input: artifact-corrected filtered MEG data (EXPDIR/dh58a/dh58a1_mc_hp004_EOG.fif)
+Output: cfgOut
+Dependencies: ./MEG/findTriggers.m
+
+./MEG/writeEnhancedEventFileHeader.m
+------------------------------------
+Process: Writes the header for the enhanced event file
+Input: eventFileName
+Output: eventFile
+Dependencies: none
+
+./MEG/correctPresentationConditions.m
+-------------------------------------
+Process: Corrects an event list according to the entries from a Presentation log file
+Input: outFileName, presentationEvents, fifEventValues, fifEventSamples, fifEventTimes
+Output:
+- correctedFifEvents, eventTrials
+- corrected event file (outFileName)
+Dependencies: ./MEG/writeEnhancedEventFileHeader.m
+
+./MEG/FieldtripAveraging.m
+--------------------------
+Process: Calculates average ERPs from epoched MEG data
+Input: epochs, suffix, rejectionList, doPrint, folderComment
+Output: averageData
+Dependencies: ./MEG/plotButterfly.m (for plotting)
+
+./MEG/plotERP.m
+---------------
+Process: plots the average ERPs and saves the graph to disk
+Input: averageData, validTrials, magChannels, gradChannels, suffix, folderComment
+Output: plots of average ERPs (DOCDIR/fieldtripERPquick/58-ft_avg-decision.png)
+Dependencies: none
+
+./MEG/writeCovarianceMatrix.m
+-----------------------------
+Process: Writes the covariance matrix after Fieldtrip averaging
+Input: generic covariance matrix (MEG/pa99a2_mch05l30ss_avr-cov.fif)
+Output: subject-specific covariance matrix (MEG/dh58a/dh58a_mc-covariance-c1.fif)
+Dependencies: MNE
+
+./MEG/writeAverageFif.m
+-----------------------
+Process: Write subject-specific average data to Nifti file
+Input:
+- generic raw MEG data (MEG/dh52a/dh52a1.fif)
+- avgData
+Output: average ERP data (MEG/dh52a/dh52a_mc-decision-quick-averageEpochs.fif)
+Dependencies: MNE
+
+./MEG/FieldtripTopoPlot.m
+-------------------------
+Process: Visualize average ERP data on a topographical plot
+Input: data, subject, suffix, folderComment
+Output: Topoplot (DOCDIR/fieldtripTopo-quick/dh58a-ft_avg-decision.png)
+Dependencies: Fieldtrip
+
+./MEG/extractSingleTrials.m
+---------------------------
+Process: Reads the epochs in Matlab format and writes them out into a Nifti
+Input: 
+- header from raw MEG data (EXPDIR/dh58a/dh58a1_mc.fif)
+- artifact-rejected epochs (EXPDIR/dh58a/dh58a_mc-decision-rejectedEpochs.mat)
+Output:
+- continuous, gapless epochs (EXPDIR/dh58a/mc-decision-rejectedEpochs.fif)
+- timestamps for epochs (EXPDIR/dh58a/mc-decision-rejectedEpochs.eve)
+Dependencies: MNE
+
+./MEG/MEGlowpass.m
+------------------
+Process: Performs a 0.4Hz highpass filter on any MEG data
+Input: infile
+Output: outfile
+Dependencies:
+- ./MEG/hp_004_4367pts_1000Hz.fir
+- ./MEG/fiff_filter_raw_data.m (MNE)
+
+./MEG/MEGepochSegmentation.m
+----------------------------
+Process: Decide on a Fieldtrip filtering strategy depending on the goal
+Input: cfg, goal
+Output: cfg, epochs
+Dependencies: Fieldtrip
+
+./MEG/readEventFile.m
+---------------------
+Process: Read Fieldtrip-formatted events from an .eve file
+Input: the shortest .eve file in EXPDIR/dh58a
+Output: events
+Dependencies: none
+
+./MEG/hp_004_4367pts_1000Hz.fir
+-------------------------------
+Process: Filter coefficients for a 0.4Hz Highpass, with a very strong falloff at 0Hz
+
+./MEG/FieldtripAveragingConditions.m
+------------------------------------
+Process: averages single-trial epochs to average ERP data (and plots that)
+Input: epochs, suffix, rejectionList, doPrint, folderComment
+Output: averageData
+Dependencies:
+- Fieldtrip
+- ./MEG/plotERP.m
+
+./MEG/batchMEGPreprocessing.m
+-----------------------------
+Process: runs the MEG preprocessing for all subjects
+Dependencies: ./MEG/MEG_Preprocessing.m
+
+./MEG/extractPresentationEvents.m
+---------------------------------
+Process: Extracts Fieldtrip-formatted event codes from a presentation logfile
+Input:
+- Presentation logfile (Presentation/dh58a/dh58a-mainA_v07.log)
+- Image/Condition relationship file (Main/Experiment/Pictures/ImageConditions.txt)
+- Sound/Condition relationship file (Main/Experiment/Speech/wavconditions.txt)
+Output: Fieldtrip-formatted events (presentationEvents)
+Dependencies: ./MEG/importPresentationLog.m
+
+./MEG/plotMEG.m
+---------------
+Process: plots whole MEG stream (in Fieldtrip format)
+Input: data, subject, channelString
+Output: visualized channel activity (DOCDIR/MEG/dh58a.png)
+Dependencies: none
+
+./MEG/convertPresentationLog.m
+------------------------------
+Process: Converts Presentation log file into minimal-styled text files
+Input: presentation log file (*.log)
+Output: presentation text file (*.txt) with the fields [time, ttime, trial, eventcode, description]
+Dependencies: ./MEG/importPresentationLog.m
+
+./MEG/MEG_Preprocessing.m
+-------------------------
+Process:
+- Find jump artifacts
+- Split continuous MEG data into epochs
+- Reject jump artifacts
+- Reject low performers
+- Glue two blocks together
+- Fieldtrip-based averaging
+- Write as nifti files
+- Plot average activity on a topographical map
+Input:
+- Configuration variables (subject, suffix, recreate, paths, do)
+- prefiltered continuous MEG data (EXPDIR/dh58a/dh58a1_mc_hp004_EOG.fif), as defined in ./MEG/MEGDefineTrials.m
+Output:
+- artifact-free Epochs (EXPDIR/dh58a/dh58a1_mc-decision-rejectedEpochs.mat)
+- list of rejected epochs (EXPDIR/dh58a/dh58a1_mc-decision-rejectedLists.mat)
+- average ERP data in Matlab format (EXPDIR/dh58a/dh58a1_mc-decision-quick-averageEpochs.mat)
+- average ERP data in Nifti format (EXPDIR/dh58a/dh58a1_mc-decision-quick-averageEpochs.fif)
+Dependencies:
+- ./MEG/MEGDefineTrials.m
+- ./MEG/MEGepochSegmentation.m
+- ./MEG/detectDeviations.m
+- calculateHighpassFilename
+- ./MEG/MEGlowpass.m
+- calculateEOGFilename
+- ./MEG/rejectLowPerformers.m
+- ./MEG/FieldtripAveragingConditions.m
+- ./MEG/FieldtripAveraging.m
+- ./MEG/writeAverageFif.m
+- ./MEG/writeCovarianceMatrix.m
+- ./MEG/FieldtripTopoPlot.m
+
+
+./MEG/rejectLowPerformers.m
+---------------------------
+Process: cuts off a certain percentage of trials with the slowest response time
+Input: trials (from ./MEG/findTriggers.m), upperCutOffPercentage
+Output: slowTrials
+Dependencies: none
+
+./MEG/plotButterfly.m
+---------------------
+Process: plot every channel of average ERP data in the same chart
+Input: averageData{condition}.avg(channel,timepoint)
+Output: DOCDIR/fieldtripERP-quick/58-ft_avg-decision.png
+Dependencies: none
+
+./Behavioral/visualizeGroupRT.m
+-------------------------------
+Process: visualizes response time, comparing across groups and conditions
+Input: EXPDIR/ResponseTimes.mat
+Output: DOCDIR/Behavioral/ComparisonStatistics.txt
+Dependencies: none
+
+./Behavioral/writeResponseTimes.m
+---------------------------------
+Process: Write out individual behavioral data to a .txt file
+Input: EXPDIR/dh58a/dh58a1_mc-behavioral-decision.mat
+Output: EXPDIR/dh58a/BehavioralData.txt
+Dependencies: none
+
+./Behavioral/visualizeIndividualRT.m
+------------------------------------
+Process: visualizes response time and accuracy for all trials chronologically
+Input: EXPDIR/ResponseTimes.mat
+Output: DOCDIR/Behavioral/linearRT-58.png
+Dependencies: none
+
+./Headmodel/write_vista_mesh.m
+------------------------------
+Process: Writes hexagonal mesh to Vista format
+Input:
+- x/y/z positions of the nodes (nodes)
+- 8 elements per node (elements)
+- element labels (labels)
+- tensor conductivity values (tensors)
+Output: vista mesh file
+Dependencies: write_vista_mesh.mexa64
+
+./Headmodel/plotCoregistration.m
+--------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./Headmodel/mesh.py
+
+./Headmodel/extractROIactivity.py
+---------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./start.sh
+weak: ./config/subjectIDs.txt
+weak: ./Segmentation/clean.py
+
+./Headmodel/mesh.py
+-------------------
+Process:
+Input:
+Output:
+Dependencies:
+strong: ./Headmodel/mesh.py
+
+./Headmodel/hex2rgb.py
+----------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./Headmodel/hex2rgb.py
+
+./Headmodel/plotROIactivity.py
+------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./config/subjectIDs.txt
+weak: ./Segmentation/clean.py
+
+./Headmodel/write_dip.m
+-----------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./Headmodel/write_dip.m
+weak: ./Headmodel/sb_write_dip.m
+weak: ./Segmentation/alignMeshToHeadCoordinates.m
+
+./Headmodel/write_label.py
+--------------------------
+Process:
+Input:
+Output:
+Dependencies:
+strong: ./Headmodel/write_label.py
+
+./Headmodel/lightenColor.py
+---------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./Headmodel/hex2rgb.py
+weak: ./Headmodel/lightenColor.py
+
+./Headmodel/write_vistamesh.m
+-----------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./Headmodel/write_vista_mesh.m
+weak: ./Headmodel/mesh.py
+weak: ./Segmentation/alignMeshToHeadCoordinates.m
+
+./Headmodel/write_vistamesh.py
+------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+strong: ./Headmodel/mesh.py
+strong: ./Headmodel/write_vistamesh.m
+strong: ./Headmodel/write_vistamesh.py
+
+./Headmodel/plotROI.py
+----------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./config/subjectIDs.txt
+
+./Headmodel/make_mesh.py
+------------------------
+Process:
+Input:
+Output:
+Dependencies:
+strong: ./Headmodel/mesh.py
+strong: ./Headmodel/make_mesh.py
+
+./Headmodel/affine_mod.py
+-------------------------
+Process:
+Input:
+Output:
+Dependencies:
+strong: ./Headmodel/affine_mod.py
+
+./Headmodel/writeSensorPositions.m
+----------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./Headmodel/write_grd_file_neuromag.m
+
+./Headmodel/write_grd_file_neuromag.m
+-------------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./Headmodel/write_grd_file_neuromag.m
+
+./Headmodel/compareLocaliedTrials.m
+-----------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./Headmodel/compareLocaliedTrials.m
+
+./Headmodel/assembleVistaMesh.sh
+--------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+strong: ./start.sh
+strong: ./Headmodel/mesh.py
+strong: ./Headmodel/write_label.py
+strong: ./Headmodel/write_vistamesh.py
+strong: ./Headmodel/make_mesh.py
+strong: ./Headmodel/make_sourcespace.py
+strong: ./Segmentation/clean.py
+strong: ./Segmentation/mask.py
+strong: ./Segmentation/thicken_grey.py
+weak: ./Headmodel/write_vistamesh.m
+weak: ./Headmodel/assembleVistaMesh.sh
+weak: ./Segmentation/mask.m
+
+./Headmodel/make_sourcespace.py
+-------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+strong: ./Headmodel/write_dip.m
+strong: ./Headmodel/make_sourcespace.py
+weak: ./Headmodel/mesh.py
+weak: ./Headmodel/boundary.py
+weak: ./Segmentation/mask.m
+weak: ./Segmentation/mask.py
+
+./Headmodel/computeROIDifferences.py
+------------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./Segmentation/clean.py
+
+./Headmodel/sb_write_dip.m
+--------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./Headmodel/write_dip.m
+weak: ./Headmodel/sb_write_dip.m
+
+./Headmodel/boundary.py
+-----------------------
+Process:
+Input:
+Output:
+Dependencies:
+strong: ./Headmodel/boundary.py
+weak: ./Headmodel/mesh.py
+
+./Freesurfer/coregisterT1toT2.m
+-------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+strong: ./Freesurfer/coregisterT1toT2_job.m
+weak: ./Freesurfer/coregisterT1toT2.m
+
+./Freesurfer/runFreesurfer3.py
+------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./start.sh
+
+./Freesurfer/coregisterT1toT2_job.m
+-----------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./Segmentation/mask.m
+weak: ./Segmentation/mask.py
+
+./Freesurfer/prepareFreesurfer.sh
+---------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+
+./Segmentation/make_segmentation_realistic_3T.m
+-----------------------------------------------
+Process: Compile and clean the resulting probability maps into a single segmentation file
+Input:
+Output:
+Dependencies:
+
+./Segmentation/segmentMRIdata_job.m
+-----------------------------------
+Process: Run the segmentation over the T1 dataset (using my custom TPM maps)
+Input:
+Output:
+Dependencies:
+
+./Segmentation/segmentMRIdata.m
+-------------------------------
+Process: Framework for running the segmentation outside of a batch script
+Dependencies: segmentMRIdata_job.m
+
+./Segmentation/alignMeshToHeadCoordinates.m
+-------------------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./Segmentation/alignMeshToHeadCoordinates.m
+
+./Segmentation/mask.m
+---------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./Segmentation/mask.m
+weak: ./Segmentation/mask.py
+
+./Segmentation/clean.py
+-----------------------
+Process:
+Input:
+Output:
+Dependencies:
+strong: ./Segmentation/clean.py
+weak: ./Segmentation/mask.m
+weak: ./Segmentation/mask.py
+
+./Segmentation/mask.py
+----------------------
+Process:
+Input:
+Output:
+Dependencies:
+strong: ./Segmentation/mask.py
+weak: ./Segmentation/mask.m
+
+./Segmentation/combineTissueLayers.m
+------------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./combineTissueLayers.m
+weak: ./Segmentation/clean.py
+weak: ./Segmentation/combineTissueLayers.m
+
+./Segmentation/sb_write_meg.m
+-----------------------------
+Process:
+Input:
+Output:
+Dependencies:
+weak: ./Headmodel/write_grd_file_neuromag.m
+weak: ./Segmentation/sb_write_meg.m
+
+./Segmentation/thicken_grey.py
+------------------------------
+Process:
+Input:
+Output:
+Dependencies:
+strong: ./Segmentation/thicken_grey.py
+
+
+Functions:
+
+./combineTissueLayers.m
+-----------------------
+Process: Combines (3D) segmentation layers from SPM into a single 4D segmentation
+Input: Results from SPM-based T1 segmentation ('c4T1.nii')
+- Folder with segmented files
+- Full name of the original T1 file
+- Number of segmentation layers
+Output: Combined 4D .nii file ('segmented.nii')
+Dependencies: Nifti toolbox
+
+

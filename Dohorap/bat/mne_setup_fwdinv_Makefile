@@ -1,0 +1,18 @@
+FWDFIF=${EXPDIR}${SUBJECT}/${SUBJECT}__-${BEMSTRING}-${SRCSTRING}-${CORSTRING}-fwd.fif
+INVFIF=${EXPDIR}${SUBJECT}/${SUBJECT}__-${BEMSTRING}-${SRCSTRING}-${CORSTRING}-inv.fif
+
+all: ${FWDFIF} ${INVFIF}
+
+${FWDFIF}: ${MEASFILE} ${MRIFILE} ${SRCFILE} ${BEMFILE}
+	mne_do_forward_solution --subject ${FSLSUBJECT} --src ${SRCFILE} \
+	--bem ${BEMFILE} \
+	--meas ${MEASFILE} \
+	--mri ${MRIFILE} \
+	--fwd $@ --overwrite 
+#	--megonly
+${INVFIF}: ${FWDFIF} ${MEASFILE} ${COVFILE}
+	mne_do_inverse_operator --fwd ${FWDFIF} \
+	--meas ${MEASFILE} \
+	--noisecov ${COVFILE} \
+	--loose 0.2 \
+	--inv $@

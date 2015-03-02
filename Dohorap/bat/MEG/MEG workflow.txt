@@ -1,0 +1,53 @@
+Basis: [1a] Raw MEG data (MEG/dh16a/dh16a1.fif)
+
+General preprocessing
+---------------------
+
+Motion correction:
+Input: Raw MEG data from [1a]
+Script: bat/MEG/Do_Analysis.sh
+Output: [1b] Motion-corrected MEG data (MEG_mc/dh16a/block1.fif)
+
+Highpass filtering:
+Input:
+- Motion-corrected MEG data from [1b]
+- Filter coefficients (bat/MEG/hp_004_4367pts_1000Hz.coeff)
+Script: bat/MEG/Do_MNE_Filtering.sh
+Output: [1c] Highpass-filtered MEG data (MEG_mc_hp004/dh16a/block1.fif)
+
+ICA correction:
+Input: Highpass-filtered MEG data from [1c]
+Scripts:
+- bat/MEG/runEOGica.py
+- bat/MEG/removeICAcomponents.py
+Output: [1d] ICA-corrected MEG data (MEG_mc_hp004_ica/dh16a/block1.fif)
+
+
+Epoch-level processing
+----------------------
+
+Calculate covariance matrices:
+Input: Empty-room measurements (MEG/dh16a/dh16ap.fif)
+Script: bat/MEG/calculateCovariance.py
+Output: [2a] Covariance matrix (MEG/dh16a/emptyRoom-cov.fif)
+Time: 73 seconds per subject
+
+Extracting epochs from raw files:
+Input:
+- MEG data from [1d]
+- Event files (MEG_mc/dh16a/block1_eh-nocomments.eve)
+Script: bat/MEG/MNEcalculateEvoked.py
+Output:
+- [2b] Condition-specific evoked activity (MEG_mc_hp004_ica_l50/dh16a/Vis_average-ave.fif)
+- [2c] Condition-specific epochs (MEG_mc_hp004_ica_l50/dh16a/Vis-epo.fif) 
+- Metadata for the evoked activity (MEG_mc_hp004_ica_l50/dh16a/epochCount.txt)
+Time: 6 minutes per subject
+
+
+Plotting
+--------
+
+Script: bat/MEG/MNEplotEvoked.py
+Output:
+- Individual evoked power (doc/MNE-Power-ica/dh16a/conditions-temporal.png)
+- Group-level evoked power (doc/MNE-power-ica/Feed-Power.png)
