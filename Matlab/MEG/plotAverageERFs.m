@@ -43,173 +43,182 @@ directions = {'Left', 'Right'};
 locations = {'frontal', 'parietal', 'temporal'};
 sensortypes = {'mag','grad'};
 
-effects = cell(2,2,3); % group, direction, location
+effects = cell(2,2,3); % group, sensortype, direction, location
 % From the cluster analysis
-effects{1,2,2} = [1159,1374];
-effects{1,1,3} = [1345,1622];
-effects{1,2,3} = [2426,2660];
-effects{2,1,3} = [1257,1454];
-effects{2,1,2} = [1618,1769];
-
-% From the previous time windows
-
+% Children:
+effects{1,1,2,2} = [1159,1374, 0.014];
+effects{1,1,1,1} = [1375,1666, 0.018];
+effects{1,1,1,3} = [1349,1627, 0.008];
+effects{1,2,2,3} = [2384,2663, 0.038];
+% Adults:
+effects{2,2,1,1} = [1131, 1284, 0.063];
+effects{2,2,1,3} = [1257, 1480, 0.021];
+effects{2,1,1,2} = [1618, 1765, 0.006];
+effects{2,1,1,3} = [2351, 2491, 0.084];
 
 averageData = cell(2,2);
 stdevData = cell(2,2);
-sensorID = 1
-sensortype = sensortypes{sensorID};
-for g = 1:numel(groups)
-    group = groups{g};
-    n = numel(group);
-    subjectData = zeros(numel(group), numel(conditions), numel(directions), numel(locations), 5001);
-    for s = 1:size(group,1)
-        subject = group(s,:);
-        for c = 1:numel(conditions)
-            condition = conditions{c};
-            epochFile = [aveDir '/' subject '/' condition '_average-ave.fif'];
-            epoch = fiff_read_evoked(epochFile);
-            for d = 1:numel(directions)
-                direction = directions{d};
-                for l = 1:numel(locations)
-                    location = locations{l};
-                    eval(['channelSelection = ' direction '_' location '_' sensortype '+1;']);
-                    % Averaging over selected channels
-                    if strcmp(sensortype, 'mag')
-                        data = mean(epoch.evoked.epochs(channelSelection,:))';
-                    else
-                        data = sqrt(mean(epoch.evoked.epochs(channelSelection,:).^2,1))';
+for sensorID = [1,2]
+    sensortype = sensortypes{sensorID};
+    for g = 1:numel(groups)
+        group = groups{g};
+        n = numel(group);
+        subjectData = zeros(numel(group), numel(conditions), numel(directions), numel(locations), 5001);
+        for s = 1:size(group,1)
+            subject = group(s,:);
+            for c = 1:numel(conditions)
+                condition = conditions{c};
+                epochFile = [aveDir '/' subject '/' condition '_average-ave.fif'];
+                epoch = fiff_read_evoked(epochFile);
+                for d = 1:numel(directions)
+                    direction = directions{d};
+                    for l = 1:numel(locations)
+                        location = locations{l};
+                        eval(['channelSelection = ' direction '_' location '_' sensortype '+1;']);
+                        % Averaging over selected channels
+                        if strcmp(sensortype, 'mag')
+                            data = mean(epoch.evoked.epochs(channelSelection,:))';
+                        else
+                            data = sqrt(mean(epoch.evoked.epochs(channelSelection,:).^2,1))';
+                        end
+                        subjectData(s,c,d,l,:) = squeeze(subjectData(s,c,d,l,:)) + data;
                     end
-                    subjectData(s,c,d,l,:) = squeeze(subjectData(s,c,d,l,:)) + data;
                 end
             end
         end
+        % Build a grand average and grand standard deviation
+        averageData{sensorID,g} = squeeze(mean(subjectData,1));
+        varianceEstimator = zeros(numel(conditions), numel(directions), numel(locations), 5001);
+        for s = 1:size(group,1)
+            varianceEstimator = varianceEstimator + (squeeze(subjectData(s,:,:,:,:)) - averageData{sensorID,g}).^2;
+        end
+        correctedStd = sqrt(varianceEstimator) ./ (n-1.5);
+        stdevData{sensorID,g} = correctedStd;
     end
-    % Build a grand average and grand standard deviation
-    averageData{sensorID,g} = squeeze(mean(subjectData,1));
-    varianceEstimator = zeros(numel(conditions), numel(directions), numel(locations), 5001);
-    for s = 1:size(group,1)
-        varianceEstimator = varianceEstimator + (squeeze(subjectData(s,:,:,:,:)) - averageData{sensorID,g}).^2;
+
+    %% Load the trigger times
+    triggerPath = '/Users/goocy/Documents/141212 Status Dohorap/Experiment/Dohorap/Speech/';
+    triggerFiles = {[triggerPath 'offsets_der.txt'], [triggerPath 'offsets_den.txt']};
+    triggerData = [];
+    for i = 1:2
+        triggerData = [triggerData; importdata(triggerFiles{i})];
     end
-    correctedStd = sqrt(varianceEstimator) ./ (n-1.5);
-    stdevData{sensorID,g} = correctedStd;
-end
-
-%% Load the trigger times
-triggerPath = '/Users/goocy/Documents/141212 Status Dohorap/Experiment/Dohorap/Speech/';
-triggerFiles = {[triggerPath 'offsets_der.txt'], [triggerPath 'offsets_den.txt']};
-triggerData = [];
-for i = 1:2
-    triggerData = [triggerData; importdata(triggerFiles{i})];
-end
 
 
-%% Plot the whole thing
+    %% Plot the whole thing
 
-conditionColors = [[0.6 0 0]; [0 0 1]];
-timescale = -1.0:0.001:4.0;
-xText = 'Time after condition trigger in s';
-yText = {'Evoked field activity in fT', 'Evoked RMS activity in fT/cm'};
-sensorText = {'magnetometer', 'gradiometer'};
-conditionText = {'Object-relative clauses', 'Subject-relative clauses'};
-groupText = {'children', 'adults'};
-metrics = {'ERF', 'RMS activity'};
+    conditionColors = [[0.6 0 0]; [0 0 1]];
+    timescale = -1.0:0.001:4.0;
+    xText = 'Time after condition trigger in s';
+    yText = {'Evoked field activity in fT', 'Evoked RMS activity in fT/cm'};
+    sensorText = {'magnetometer', 'gradiometer'};
+    conditionText = {'Object-relative clauses', 'Subject-relative clauses'};
+    groupText = {'children', 'adults'};
+    metrics = {'ERF', 'RMS activity'};
 
-% Prepare sensor layout
-sensorPositions = zeros(306,3);
-for i = 1:306
-    sensorPositions(i,:) = epoch.info.chs(i).coil_trans(1:3,4);
-end
-[ttheta,tphi,~]=cart2sph(sensorPositions(:,1),sensorPositions(:,2),sensorPositions(:,3));
-[sensorsX,sensorsY]=pol2cart(ttheta,pi/2-tphi);
+    % Prepare sensor layout
+    sensorPositions = zeros(306,3);
+    for i = 1:306
+        sensorPositions(i,:) = epoch.info.chs(i).coil_trans(1:3,4);
+    end
+    [ttheta,tphi,~]=cart2sph(sensorPositions(:,1),sensorPositions(:,2),sensorPositions(:,3));
+    [sensorsX,sensorsY]=pol2cart(ttheta,pi/2-tphi);
 
-scalings = {1e15, 1e13};
-xlims = [-0.5, 2.5];
-layoutPositions = {[0.6 0.2 0.35 0.35], [0.05 0.62 0.35 0.35]};
-sensID = 1;
-sensors = sensorText{sensID};
-scaling = scalings{sensID};
-for g = 1:numel(groups)
-    group = groups{g};
-    % Determine maximal amplitude
-    ylims = [min(averageData{sensID,g}(:)), max(averageData{sensID,g}(:));] * 1.1 * scaling;
-    if sensID == 2; ylims(1) = 0; end
-    for d = 1:numel(directions)
-        direction = directions{d};
-        for l = 1:numel(locations)
-            location = locations{l};
-            e = effects{g, d, l};
-            f = figure();
-            % Design the main line plot
-            plotSub = axes('Parent',f,'Position',[0.1 0.25 0.8 0.7]);
-            hold(plotSub,'all');
-            set(plotSub,'ColorOrder', distinguishable_colors(10));
-            set(plotSub,'Box', 'on', 'LineWidth', 2);
-            titleText = ['Grand average ' metrics{sensID} ' in ' direction '-' location ' ' sensors 's'];
-            % Significance tint
-            if ~isempty(e)
-                xFill = [timescale(e(1)), timescale(e(1)), timescale(e(2)), timescale(e(2))];
-                yFill = [ylims(1), ylims(2), ylims(2), ylims(1)];
-                fill(xFill, yFill, [0,0.75,0], 'EdgeColor', [0,0.5,0], 'FaceAlpha', 0.2, 'Parent', plotSub);
-            end;
-            aData = zeros(2,5001);
-            for c = 1:numel(conditions)
-                condition = conditions{c};
-                color = conditionColors(c,:);
-                a = squeeze(averageData{sensID,g}(c,d,l,:))' * scaling;
-                s = squeeze(stdevData{sensID,g}(c,d,l,:))' * scaling;
-                % Plot the filled charts
-                xFill = [-2, timescale, 6, fliplr(timescale), -2];
-                yFill = [0, a-s, 0, fliplr(a+s), 0];
-                fill(xFill, yFill, color, 'EdgeColor', 'None', 'FaceAlpha', 0.2);
-                aData(c,:) = a;
+    scalings = {1e15, 1e13};
+    xlims = [-0.5, 2.5];
+    layoutPositions = {[0.6 0.2 0.35 0.35], [0.05 0.62 0.35 0.35]};
+    sensors = sensorText{sensorID};
+    scaling = scalings{sensorID};
+    for g = 1:numel(groups)
+        group = groups{g};
+        % Determine maximal amplitude
+        ylims = [min(averageData{sensorID,g}(:)), max(averageData{sensorID,g}(:));] * 1.1 * scaling;
+        if sensorID == 2; ylims(1) = 0; end
+        for d = 1:numel(directions)
+            direction = directions{d};
+            for l = 1:numel(locations)
+                location = locations{l};
+                e = effects{g, sensorID, d, l};
+                f = figure();
+                % Design the main line plot
+                plotSub = axes('Parent',f,'Position',[0.1 0.25 0.8 0.7]);
+                hold(plotSub,'all');
+                set(plotSub,'ColorOrder', distinguishable_colors(10));
+                set(plotSub,'Box', 'on', 'LineWidth', 2);
+                titleText = ['Grand average ' metrics{sensorID} ' in ' direction '-' location ' ' sensors 's'];
+                % Significance tint
+                if ~isempty(e)
+                    xFill = [timescale(e(1)), timescale(e(1)), timescale(e(2)), timescale(e(2))];
+                    yFill = [ylims(1), ylims(2), ylims(2), ylims(1)];
+                    if e(3) < 0.01
+                        alpha = 0.5;
+                    elseif e(3) < 0.05
+                        alpha = 0.3;
+                    elseif e(3) < 0.1
+                        alpha = 0.1;
+                    end
+                    fill(xFill, yFill, [0,0.75,0], 'EdgeColor', [0,0.5,0], 'FaceAlpha', alpha, 'Parent', plotSub);
+                end;
+                aData = zeros(2,5001);
+                for c = 1:numel(conditions)
+                    condition = conditions{c};
+                    color = conditionColors(c,:);
+                    a = squeeze(averageData{sensorID,g}(c,d,l,:))' * scaling;
+                    s = squeeze(stdevData{sensorID,g}(c,d,l,:))' * scaling;
+                    % Plot the filled charts
+                    xFill = [-2, timescale, 6, fliplr(timescale), -2];
+                    yFill = [0, a-s, 0, fliplr(a+s), 0];
+                    fill(xFill, yFill, color, 'EdgeColor', 'None', 'FaceAlpha', 0.2);
+                    aData(c,:) = a;
+                end
+                % Plot the line charts
+                p = plot(timescale, aData, 'LineWidth', 2);
+                for i=1:2; set(p(i), 'Color', conditionColors(i,:)); end;
+
+                % Plot decorators
+                xlim(xlims);
+                ylim(ylims);
+                title(titleText);
+                ylabel(yText{sensorID}); xlabel(xText);
+                leg = legend(p, conditionText{1}, conditionText{2}, 'Location', 'NorthEast');
+                set(leg, 'LineWidth',2);
+                posAxes = get(plotSub, 'Position');
+
+                % Overlay the sensor layout
+                eval(['channelSelection = ' direction '_' location '_' sensortypes{sensorID} '+1;']);
+                layoutSub = axes('Parent',f, 'Position', layoutPositions{sensorID});
+                scatter(sensorsX(allMags), sensorsY(allMags),'Marker','o', 'Parent', layoutSub);
+                hold(layoutSub,'all');
+                scatter(sensorsX(channelSelection), sensorsY(channelSelection), 'MarkerFaceColor','r', 'Parent', layoutSub);
+                set(layoutSub, 'DataAspectRatio', [1 1 1]);
+                set(layoutSub, 'Color', 'None');
+                set(layoutSub, 'Visible', 'off');
+
+                % Overlay the sentence trigger
+                triggerSub = axes('Parent',f);
+                set(triggerSub, 'Box', 'on', 'LineWidth', 2);
+                set(triggerSub, 'Position', [0.1 0.07 0.8 0.04]);
+                set(triggerSub, 'Color', [1 1 1]);
+                hold(triggerSub, 'all');
+                for i = 1:length(triggerData)
+                    t = triggerData(i);
+                    w = 0.001;
+                    X = [t-w,t-w,t+w,t+w];
+                    Y = [0,1,1,0];
+                    patch(X,Y,[0 0 0],'EdgeColor','None','Parent',triggerSub,'FaceAlpha',0.3);
+                end
+                xlabel('End of sentence');
+                hold(triggerSub,'off');
+                xlim(xlims);
+                set(triggerSub, 'XTick', []);
+                set(triggerSub, 'YTick', []);
+
+                % Save the result
+                filename = [groupText{g} '_' direction '-' location '-' sensors];
+                %savefig(f, [filename '.fig']);
+                print(f, [filename '.png'], '-dpng');
+                close(f);
             end
-            % Plot the line charts
-            p = plot(timescale, aData, 'LineWidth', 2);
-            for i=1:2; set(p(i), 'Color', conditionColors(i,:)); end;
-
-            % Plot decorators
-            xlim(xlims);
-            ylim(ylims);
-            title(titleText);
-            ylabel(yText{sensID}); xlabel(xText);
-            leg = legend(p, conditionText{1}, conditionText{2}, 'Location', 'NorthEast');
-            set(leg, 'LineWidth',2);
-            posAxes = get(plotSub, 'Position');
-
-            % Overlay the sensor layout
-            eval(['channelSelection = ' direction '_' location '_' sensortypes{sensID} '+1;']);
-            layoutSub = axes('Parent',f, 'Position', layoutPositions{sensID});
-            scatter(sensorsX(allMags), sensorsY(allMags),'Marker','o', 'Parent', layoutSub);
-            hold(layoutSub,'all');
-            scatter(sensorsX(channelSelection), sensorsY(channelSelection), 'MarkerFaceColor','r', 'Parent', layoutSub);
-            set(layoutSub, 'DataAspectRatio', [1 1 1]);
-            set(layoutSub, 'Color', 'None');
-            set(layoutSub, 'Visible', 'off');
-
-            % Overlay the sentence trigger
-            triggerSub = axes('Parent',f);
-            set(triggerSub, 'Box', 'on', 'LineWidth', 2);
-            set(triggerSub, 'Position', [0.1 0.07 0.8 0.04]);
-            set(triggerSub, 'Color', [1 1 1]);
-            hold(triggerSub, 'all');
-            for i = 1:length(triggerData)
-                t = triggerData(i);
-                w = 0.001;
-                X = [t-w,t-w,t+w,t+w];
-                Y = [0,1,1,0];
-                patch(X,Y,[0 0 0],'EdgeColor','None','Parent',triggerSub,'FaceAlpha',0.3);
-            end
-            xlabel('End of sentence');
-            hold(triggerSub,'off');
-            xlim(xlims);
-            set(triggerSub, 'XTick', []);
-            set(triggerSub, 'YTick', []);
-
-            % Save the result
-            filename = [groupText{g} ' - comparison of ' direction '-' location ' ' sensors ' activity'];
-            %savefig(f, [filename '.fig']);
-            print(f, [filename '.png'], '-dpng');
-            close(f);
         end
     end
 end
