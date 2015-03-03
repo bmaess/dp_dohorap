@@ -1,7 +1,7 @@
 # Create the intro chapter
 echo "" > "chapter/Introduction.tex"
 cat ../"1.1 The role of white matter tracts in syntax processing.tex" >> "chapter/Introduction.tex"
-cat ../"1.2 Functional anatomy of syntax processing.tex" >> "chapter/Introduction.tex"
+#cat ../"1.2 Functional anatomy of syntax processing.tex" >> "chapter/Introduction.tex"
 cat ../"1.3 Experimental paradigm.tex" >> "chapter/Introduction.tex"
 cat ../"1.4 Choice of measurement methods.tex" >> "chapter/Introduction.tex"
 cat ../"1.5 Research questions.tex" >> "chapter/Introduction.tex"
@@ -21,7 +21,7 @@ cat ../"4.2 Sensor-space activity.tex" >> "chapter/Results.tex"
 
 # Create the discussion chapter
 echo "" > "chapter/Discussion.tex"
-cat ../""
+cat ../"5. Discussion.tex" >> "chapter/Discussion.tex"
 
 pdflatex dissertation.tex
 

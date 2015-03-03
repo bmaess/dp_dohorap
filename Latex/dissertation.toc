@@ -1,71 +1,75 @@
 \contentsline {part}{I\hspace {1em}Theoretical Part}{1}
 \contentsline {chapter}{\numberline {1}Introduction}{3}
-\contentsline {section}{\numberline {1.1}Functional anatomy of language processing}{3}
+\contentsline {section}{\numberline {1.1}The role of white matter tracts in syntax processing}{3}
 \contentsline {subsection}{\numberline {1.1.1}White fiber tracts}{3}
 \contentsline {subsection}{\numberline {1.1.2}Language network}{3}
-\contentsline {subsection}{\numberline {1.1.3}Cortical activity}{3}
-\contentsline {section}{\numberline {1.2}Developmental aspects}{4}
-\contentsline {section}{\numberline {1.3}Research questions}{4}
-\contentsline {subsection}{\numberline {1.3.1}Hypotheses}{5}
-\contentsline {section}{\numberline {1.4}Choice of measurement methods}{5}
-\contentsline {subsection}{\numberline {1.4.1}Acquisition}{5}
-\contentsline {subsection}{\numberline {1.4.2}Forward models}{5}
-\contentsline {subsection}{\numberline {1.4.3}Localization}{5}
-\contentsline {subsection}{\numberline {1.4.4}Information transfer}{5}
-\contentsline {chapter}{\numberline {2}Pilot Study}{7}
-\contentsline {paragraph}{Experimental paradigm}{7}
-\contentsline {paragraph}{Participants}{7}
-\contentsline {paragraph}{Task and Stimuli}{7}
-\contentsline {paragraph}{Analysis}{9}
-\contentsline {paragraph}{Results}{10}
-\contentsline {paragraph}{Discussion}{10}
-\contentsline {chapter}{\numberline {3}Methods}{13}
-\contentsline {section}{\numberline {3.1}Participants and stimuli}{13}
-\contentsline {subsection}{\numberline {3.1.1}Participants}{13}
-\contentsline {subsection}{\numberline {3.1.2}Task}{13}
-\contentsline {paragraph}{MEG tutorial section}{14}
-\contentsline {paragraph}{MEG main section}{14}
-\contentsline {paragraph}{Structure of a single trial}{14}
-\contentsline {subsection}{\numberline {3.1.3}Visual stimuli}{15}
-\contentsline {paragraph}{Character motivation}{15}
-\contentsline {paragraph}{Trial feedback}{15}
-\contentsline {paragraph}{Cluster feedback}{16}
-\contentsline {subsection}{\numberline {3.1.4}Auditory stimuli}{16}
-\contentsline {paragraph}{Sentence content}{16}
-\contentsline {paragraph}{Tutorial sentences}{17}
-\contentsline {paragraph}{Audio format}{17}
-\contentsline {paragraph}{Trial feedback}{18}
-\contentsline {subsection}{\numberline {3.1.5}Experimental setup}{18}
-\contentsline {section}{\numberline {3.2}Data acquisition}{18}
-\contentsline {subsection}{\numberline {3.2.1}MEG}{18}
-\contentsline {subsection}{\numberline {3.2.2}MRI}{19}
-\contentsline {section}{\numberline {3.3}Data analysis}{19}
-\contentsline {subsection}{\numberline {3.3.1}Behavioral data}{20}
-\contentsline {subsection}{\numberline {3.3.2}Sensor-space activity}{20}
-\contentsline {paragraph}{Preprocessing and HPI correction}{20}
-\contentsline {paragraph}{Artifact removal}{20}
-\contentsline {paragraph}{Epoching}{21}
-\contentsline {paragraph}{Cluster analysis}{21}
-\contentsline {paragraph}{Interval analysis}{21}
-\contentsline {subsection}{\numberline {3.3.3}Source space activity}{22}
-\contentsline {paragraph}{Anatomical preprocessing}{22}
-\contentsline {paragraph}{Forward and inverse operator}{22}
-\contentsline {paragraph}{Inverse solution}{23}
-\contentsline {subsection}{\numberline {3.3.4}Interaction analysis}{25}
-\contentsline {part}{II\hspace {1em}Empirical Part}{29}
-\contentsline {chapter}{\numberline {4}Results}{31}
-\contentsline {section}{\numberline {4.1}Behavioral results}{31}
-\contentsline {subsection}{\numberline {4.1.1}Response times}{31}
-\contentsline {subsection}{\numberline {4.1.2}Response accuracy}{31}
-\contentsline {subsection}{\numberline {4.1.3}Analysis of combined performance data}{32}
-\contentsline {section}{\numberline {4.2}Sensor-space activity}{32}
-\contentsline {subsection}{\numberline {4.2.1}Interval analysis}{32}
-\contentsline {subsection}{\numberline {4.2.2}Cluster analysis}{33}
-\contentsline {chapter}{\numberline {5}Discussion}{37}
-\contentsline {section}{\numberline {5.1}Impact on hypotheses}{37}
-\contentsline {section}{\numberline {5.2}Comparison to previous results}{37}
-\contentsline {section}{\numberline {5.3}Limitations and possibilities of this study}{37}
-\contentsline {chapter}{\numberline {6}Conclusion}{39}
-\contentsline {chapter}{\numberline {A}Appendix}{41}
-\contentsline {chapter}{List of Figures}{43}
-\contentsline {chapter}{List of Tables}{45}
+\contentsline {section}{\numberline {1.2}Experimental paradigm}{4}
+\contentsline {section}{\numberline {1.3}Choice of measurement methods}{4}
+\contentsline {subsection}{\numberline {1.3.1}Acquisition}{4}
+\contentsline {paragraph}{Neuroanatomic principles}{4}
+\contentsline {paragraph}{Available acquisition methods}{5}
+\contentsline {paragraph}{Choice of acquisition methods}{5}
+\contentsline {subsection}{\numberline {1.3.2}Preprocessing}{7}
+\contentsline {paragraph}{DC bias removal}{7}
+\contentsline {paragraph}{Artifact removal}{8}
+\contentsline {subsection}{\numberline {1.3.3}Timewindow estimation}{8}
+\contentsline {subsection}{\numberline {1.3.4}Source localization}{9}
+\contentsline {paragraph}{Motivation}{9}
+\contentsline {paragraph}{Choice of source model}{9}
+\contentsline {subsection}{\numberline {1.3.5}Information transfer}{11}
+\contentsline {section}{\numberline {1.4}Research questions}{12}
+\contentsline {subsection}{\numberline {1.4.1}Expected discoveries}{12}
+\contentsline {subsection}{\numberline {1.4.2}Hypotheses}{12}
+\contentsline {chapter}{\numberline {2}Pilot Study}{13}
+\contentsline {paragraph}{Experimental paradigm}{13}
+\contentsline {paragraph}{Participants}{13}
+\contentsline {paragraph}{Task and Stimuli}{13}
+\contentsline {paragraph}{Analysis}{15}
+\contentsline {paragraph}{Results}{16}
+\contentsline {paragraph}{Discussion}{16}
+\contentsline {chapter}{\numberline {3}Methods}{19}
+\contentsline {section}{\numberline {3.1}Participants and stimuli}{19}
+\contentsline {subsection}{\numberline {3.1.1}Participants}{19}
+\contentsline {subsection}{\numberline {3.1.2}Task}{19}
+\contentsline {paragraph}{MEG tutorial section}{20}
+\contentsline {paragraph}{MEG main section}{20}
+\contentsline {paragraph}{Structure of a single trial}{20}
+\contentsline {subsection}{\numberline {3.1.3}Visual stimuli}{21}
+\contentsline {paragraph}{Character motivation}{21}
+\contentsline {paragraph}{Trial feedback}{21}
+\contentsline {paragraph}{Cluster feedback}{22}
+\contentsline {subsection}{\numberline {3.1.4}Auditory stimuli}{22}
+\contentsline {paragraph}{Sentence content}{22}
+\contentsline {paragraph}{Tutorial sentences}{23}
+\contentsline {paragraph}{Audio format}{23}
+\contentsline {paragraph}{Trial feedback}{24}
+\contentsline {subsection}{\numberline {3.1.5}Experimental setup}{24}
+\contentsline {section}{\numberline {3.2}Data acquisition}{24}
+\contentsline {subsection}{\numberline {3.2.1}MEG}{24}
+\contentsline {subsection}{\numberline {3.2.2}MRI}{25}
+\contentsline {section}{\numberline {3.3}Data analysis}{25}
+\contentsline {subsection}{\numberline {3.3.1}Behavioral data}{26}
+\contentsline {subsection}{\numberline {3.3.2}Sensor-space activity}{26}
+\contentsline {paragraph}{Preprocessing and HPI correction}{26}
+\contentsline {paragraph}{Artifact removal}{26}
+\contentsline {paragraph}{Epoching}{27}
+\contentsline {paragraph}{Cluster analysis}{27}
+\contentsline {paragraph}{Interval analysis}{27}
+\contentsline {subsection}{\numberline {3.3.3}Source space activity}{28}
+\contentsline {paragraph}{Anatomical preprocessing}{28}
+\contentsline {paragraph}{Forward and inverse operator}{28}
+\contentsline {paragraph}{Inverse solution}{29}
+\contentsline {subsection}{\numberline {3.3.4}Interaction analysis}{31}
+\contentsline {part}{II\hspace {1em}Empirical Part}{35}
+\contentsline {chapter}{\numberline {4}Results}{37}
+\contentsline {section}{\numberline {4.1}Behavioral results}{37}
+\contentsline {subsection}{\numberline {4.1.1}Response times}{37}
+\contentsline {subsection}{\numberline {4.1.2}Response accuracy}{37}
+\contentsline {subsection}{\numberline {4.1.3}Analysis of combined performance data}{38}
+\contentsline {section}{\numberline {4.2}Sensor-space activity}{38}
+\contentsline {subsection}{\numberline {4.2.1}Interval analysis}{38}
+\contentsline {subsection}{\numberline {4.2.2}Cluster analysis}{39}
+\contentsline {chapter}{\numberline {5}Conclusion}{43}
+\contentsline {chapter}{\numberline {A}Appendix}{45}
+\contentsline {chapter}{List of Figures}{47}
+\contentsline {chapter}{List of Tables}{49}

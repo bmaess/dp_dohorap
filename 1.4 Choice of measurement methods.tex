@@ -1,7 +1,8 @@
-1.4 Choice of measurement methods
+\section{Choice of measurement methods}
 
-[Acquisition]
+\subsection{Acquisition}
 
+\paragraph{Neuroanatomic principles}
 Neuronal activity consists of a mixture of electrical and magnetic fields.
 On a cellular level, activating a neuron causes depolarization, which in turn creates a weak electric field.
 Most neurons are equipped with a long axonal fibre that transmits a relatively strong postsynaptic signal.
@@ -20,10 +21,12 @@ Signal delay in technical applications is generally small enough to be disregard
 In the brain however, two interconnected neurons at opposite sides of the head can generate output simultaneously, but their signals will be offset by several miliseconds by the time they arrive.
 For any neural network, delayed information is therefore an widely expected issue and must be properly factored into signal processing.
 
+\paragraph {Available acquisition methods}
 Due to the long axon and the low transmission speed, transmitted signals will create a electrical field that moves along the axon during a non-trivial time window.
 Aggregated electric fields from thousands of similar signals can be acquired with an electroencephalograph (EEG).
-This process involves measuring the voltage at two or more arbitrary points in the brain; typically, on the surface of the head or the cortex.
-However, every electric signal that travels along a conducting wire also induces a magnetic field.
+This process involves measuring the voltage at two or more arbitrary points in the brain; typically, on the surface of the head or the cortex (which is called intracranial EEG, or iEEG).
+
+Every electric signal that travels along a conducting wire also induces a magnetic field.
 Since an axon is no exception to this rule, any transmitted neuron-to-neuron signal can also be acquired with a magnetic sensor.
 A magnetoenecephalograph (MEG) consists of several dozens of these sensors distributed around the head.
 MEG and EEG are currently the only non-invasive acquisition methods that measure brain activity with a milisecond resolution [1.4.MEG.a][1.4.MEG.b][1.4.MEG.c].
@@ -31,9 +34,10 @@ The focus of this project is on cognitive processes that require timespans in th
 Considering these small time frames, a good temporal resolution is integral for yielding a sufficient amount of data from every processing step.
 This is the reason why I decided to use a EEG/MEG method, while using the highest available temporal resolution.
 
+\paragraph{Choice of acquisition methods}
 Compared to EEG, the MEG-based measuring strategy has a few advantages and drawbacks.
 
-The first major difference between MEG and EEG is due to the sensor technology.
+The first difference between MEG and EEG is due to the sensor technology.
 While both methods rely on strong amplification of very small input signals, only MEG uses superconducting sensors.
 Contemporary superconductors require cooling with liquid helium.
 Magnetic fields from neurons are also weaker than environmental magnetic noise by several magnitudes.
@@ -48,13 +52,13 @@ But since the amplifier noise depends directly on their operating temperature, s
 Generally, EEG and MEG are considered equally sensitive [1.4.MEG.a][1.4.MEG.c].
 However, the addition of magnetic shielding can elevate signal-to-noise ratios in MEG measurements above equivalent acquisitions from EEG [1.4.SNR].
 
-The main advantage of MEG is the drastically lower distortion from surrounding tissue.
+The second difference between MEG and EEG is the drastically different distortion from surrounding tissue.
 For an EEG to be able to measure a potential difference on the skin surface, an electrical current needs to pass the tissues surrounding the cortical surface [1.4.tissues.b].
 Some of these tissue layers, like blood vessels or cerebreal spinal fluid (CSF), are 5 times more conductive than gray matter; so they smooth and diffuse electric fields [1.4.tissues.a][1.4.tissues.b].
 Other tissue layers, especially the compact bone, conduct electricity 78 times worse than gray matter; so they distort and attenuate every passing signal [1.4.tissues.a].
 After these tissues have been passed, the original signal has substantially decreased in intensity, and changed drastically in shape and location.
 In contrast to electrical fields, the same tissues are highly permeable to magnetic fields.
-The magnetic permeability of water, which most human tissue is based on, is only 0.0008% different from vacuum.
+The magnetic permeability of water, which most human tissue is based on, is only 0.0008\% different from vacuum.
 As a rule of thumb, only metal-based materials are substantially less permeable than water.
 Since the human head doesn't contain metal in considerable quantities, it practically allows magnetic fields to pass without distortion. [1.4.tissues.a]
 
@@ -75,7 +79,7 @@ Fibers that lie parallel to the head surface, in contrast, create strong electri
 The implication on measurements of neural activity is that EEG is most sensitive for gyri and sulci, and MEG is most sensitive for the radial walls inbetween.
 To counteract this particular measurement bias, EEG and MEG data would have to be acquired simultaneously.
 
-Side note: although the simultaneous acqusisition of EEG and MEG data provides theoretical benefits to the signal quality, I ultimately decided against this strategy.
+Although the simultaneous acqusisition of EEG and MEG data provides theoretical benefits to the signal quality, I ultimately decided against this strategy.
 MEG acquisition consists of three preparation steps: Getting written consent, applying the HPI coils and ocular electrodes, and digitizing the head.
 This preparation typically requires 25 minutes for children and 15 minutes for experienced adults.
 Including EEG acquisition would have added several lengthy steps to this procedure: Fitting the gel electrode cap, ensuring a good connection for each electrode, and plugging in each of the 63 cables individually.
@@ -83,9 +87,11 @@ These additional steps would have extended the preparation time to at least 60 m
 Since patience is not a strong trait in children\footnote{Implementing details with the goal to prevent boredom was a common theme in this study, as explained in more detail in chapter 3.}, I wanted to minimize any idle waiting times between their arrival and the experiment.
 Therefore, I only acquired MEG data during this study.
 
-[Preprocessing]
+\subsection{Preprocessing}
 
-Once the signals were acquired by the MEG, there were a two necessary decisions for preprocessing.
+Once the signals were acquired by the MEG, there were two necessary decisions for preprocessing.
+
+\paragraph{DC bias removal}
 The first decision concerns the removal of DC bias that is often caused by slow sensor drift.
 Traditionally, for the exploration of effects in ERP and ERF, a subtractive baseline correction is applied to every trial before averaging.
 For this purpose, the average is computed from roughly 100 to 500 (typically 200) miliseconds of activity before the conditional cue.
@@ -100,10 +106,11 @@ This issue makes a subtractive baseline correction a tradeoff between the origin
 A process to remove DC components without this tradeoff is to use a highpass filter [1.4.highpass].
 Since my longest expected evoked field, the ELAN, has a base frequency of 5Hz, I choose a much lower value of 0.4Hz for the high-pass.
 
+\paragraph{Artifact removal}
 The second decision concerns the removal of various measuring artifacts.
 There are four major types of artifacts during the acquisition of electric or magnetic fields.
 
-The fist type of artifact is caused from cardiac activity.
+The first type of artifact is caused from cardiac activity.
 Cardiac muscles create an almost continuous, very regular field with low frequency and medium strength.
 
 The second type of artifact is caused by ocular movements.
@@ -127,7 +134,7 @@ The last two artifacts can be removed with a simple threshold detection.
 Their high amplitude make it possible to set a manual amplitude threshold, and reject segments that exceed this threshold in any channel.
 I determined the threshold manually after visual artifact inspection, and decided to reject entire trials if this threshold is exceeded.
 
-[Timewindow estimation]
+\subsection{Timewindow estimation}
 The acquired signals need to be explored for the impact of the conditional effect.
 This effect is usually spatially and temporally limited.
 For establishing time intervals (TOI) and spatial regions of interest (ROI), there are two possible approaches.
@@ -139,14 +146,16 @@ For this approach, the measured activity is compared between conditions.
 The TOI and ROI that involve considerable contrast between conditions can then be selected for the comparison of mean activity.
 The drawback to this approach is both spurious contrast and activity from different cognitive processes are considered as condition effect.
 The statistical testing will therefore systematically overestimate the condition effect.
-This issue is known as "double dipping" [1.4.Kriegeskorte].
+This issue is known as "'double dipping"' [1.4.Kriegeskorte].
 However, for exploratory analysis, bootstrapping is a valuable tool that can uncover previously unknown TOI and ROI.
 
 I decided to use both approaches with different purposes:
 First, comparisons within previously discovered ROI and TOI provide results that can be compared well to the findings of earlier studies.
 Second, a bootstrapped comparison allows for the exploration of spatial and temporal properties of the syntactic effect.
 
-[Localization]
+\subsection{Source localization}
+
+\paragraph{Motivation}
 Magnetic fields, when induced by the brain, arrive at MEG sensors only as mixture of many cortical sources.
 Demixing these signals is a fundamentally flawed process.
 The problem of discerning these signal sources is equivalent to finding the location and intensity of all the flames in a hot air balloon, while only looking at the outside of the hull.
@@ -157,6 +166,8 @@ Because of the different dimensionality, the task of creating this map is an und
 This means that there are infinitely many possible locations and intensities for magnetic fields that can generate the exact same signal pattern in the MEG sensors.
 This multitude of possible solutions needs to be constrained to make the results meaningful.
 One popular set of constraints is the use of a source model.
+
+\paragraph{Choice of source model}
 A source model assumes that there is a limited number of discrete current sources distributed throughout the brain.
 Usually, these current sources are assumed to be generated by neuronal tissue.
 There are three popular types of source modelling.
@@ -168,7 +179,7 @@ This assumption is especially detrimental to the analysis of cortical signals, s
 
 In the focal source model, neural current flow is represented by a limited set of point-shaped current dipoles.
 There are are three subcategories to this model: an unconstrained variant (the moving dipole model), dipoles with a fixed position (the rotating dipole model) and dipoles with a fixed position and rotation (the fixed dipole model).
-Popular applications of this approach include "multiple signal classification" (MUSIC) [1.4.music] and "multi-start spatio-temporal multiple-dipole modeling" [1.4.simplex]
+Popular applications of this approach include "'multiple signal classification"' (MUSIC) [1.4.music] and "'multi-start spatio-temporal multiple-dipole modeling"' [1.4.simplex]
 Dipole models have had limited success with representing neuronal responses for two main reasons.
 First, reducing extended neuroanatomical structures to a point current source introduces a systematic model error.
 Second, the number and location of dipoles has a strong influence on the localized results, yet is hard to estimate in advance (Huang et al., 1998).
@@ -197,9 +208,34 @@ Second, generic L2-normal solutions contain a mandatory systematical spatial bia
 The sLORETA algorithm, by contrast, has been designed to create solutions with zero bias.
 Since this algorithm has minimal drawbacks out of all readiliy available software, it became the method of choice for my source localization purposes.
 
-[Information transfer]
+\subsection{Information transfer}
 After localization, activity in my selected cortical regions is ready for the analysis of transfered information.
+According to the Wiener principle [1.4.information], information processing consists of three separate tasks: information storage, information manipulation and information transfer.
+In comparison to true causality, which involves all three tasks, the analysis of transfered information is feasible on discrete electrophysiological data. 
 There are two fundamentally different approaches to this task.
+
+
+"'' information processing can be broken down into the three components of
+ information storage, information transfer, and information modification [1-4]. These components can be
+ easily identified in theoretical, or technical, information processing systems, such as ordinary comput-
+ ers, based on the specialized machinery for and the spatial separation of these component functions. In
+ these examples, a separation of the components of information processing via a specialized mathematical
+ formalism seems almost superfluous. However, in biological systems in general, and in the brain in par-
+ ticular, we deal with a form of distributed information processing based on a large number of interacting
+ agents (neurons), and each agent at each moment in time subserves any of the three component functions
+ to a varying degree. In neural systems it is indeed crucial to understand where and when information
+ storage, transfer and modification take place, to constrain possible algorithms run by the system. While
+ there is still a struggle to properly define a measure for information modification [5,6] and its proper mea-
+ sure [7-10], well established measures for (local active) information storage [11], information transfer [12],
+ and its localization in time [13] exist.
+ Especially the measure for information transfer, transfer entropy (TE), has seen a dramatic surge
+ of interest in neuroscience [14-31], physiology [32-34], and other fields [5, 13, 26, 35, 36]. Nevertheless,
+ conceptual and practical problems still exist. On the conceptual side, information transfer has been for a
+ while confused with causal interactions, and only some recent studies [37-39] made clear that there can be
+ no one-to-one mapping between causal interactions and information transfer, because causal interactions
+ will subserve all three components of information processing (transfer, storage, modification). However,
+ it is information transfer, rather than causal interactions, we might be interested in when trying to
+ understand a computational process in the brain [38]."''
 
 modelling vs. model-free, linear vs. nonlinear
 Transfer Entropy is suited best for highly complex, nonlinear timescale data
