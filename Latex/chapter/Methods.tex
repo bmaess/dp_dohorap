@@ -416,7 +416,7 @@ Cortical regions were selected if they showed syntax effects either in the clust
 This process yielded six relevant cortical regions: PAC, aSTG, pSTS, BA44, BA45 and BA6v.
 
 For the second component, I selected only the most relevant functional connections between cortical regions.
-There are 720 unique possiblities to compare these regions, which would overwhelm\footnote{The comparison over one pair of cortical regions (in forward and reverse directions, over two conditions) required a computation time of 3 minutes per subject and timewindow. 18 comparisons in this study took a total of 90 hours to calculate; the task of computing 720 comparisons would be a sufficient reason to switch a GPU-based algorithm\cite{3.4.gpuTE}} my computational capacities, I limited the comparisons to regions connected along an axonal fiber bundle.
+There are 720 unique possiblities to compare these regions, which would overwhelm\footnote{The comparison over one pair of cortical regions (in forward and reverse directions, over two conditions) required a computation time of 4 hours per subject and timewindow. Calculating transfer entropy between 36 pairs of regions took a total of 70 hours. The task of computing 720 comparisons would take two months - a sufficient reason to switch a GPU-based algorithm\cite{3.4.gpuTE}.} my computational capacities, I limited the comparisons to regions connected along an axonal fiber bundle.
 
 Comparisons between these regions were performed for all regions along three pathways (see Fig. \ref{3.4.regions}).
 The regions associated to each pathway are derived from \cite{3.4.pathways}.
@@ -433,7 +433,7 @@ The reverse direction was added for each of these 18 comparisons, yielding 36 pa
 \begin{figure}[h]
 \begin{center}
 \vspace{7mm}
-\includegraphics[width=0.49\textwidth]{pics/3_4_regions.png}
+\includegraphics[width=0.75\textwidth]{pics/3_4_regions.png}
 \caption{\label{3.4.regions} Connections of selected cortical regions for the computation of transfered entropy. Left of PAC: ventral pathway; top left of PAC: primary dorsal pathway; right of PAC: secondary dorsal pathway.}
 \end{center}
 \end{figure}
@@ -455,7 +455,7 @@ This section of data is referred to as embedding delay, and won't be included in
 The required embedding delay for this combination of data and embedding parameters was 753ms.
 I extended the lower time limit of each analysis time window by the same amount.
 The Ragwitz criterion then optimized the embedding parameters for each set of time series (once per subject, time window and condition).
-The most common optimal embedding dimension was 7, and the mean optimal relative embedding delay was 0.2.
+The most common optimal embedding dimension was 8, and the mean optimal relative embedding delay was 0.2.
 
 Finally, the parameter \emph{cfg.repPred} indicated the amount of samples that would be used for the interaction analysis.
 I maximized this value by calculating \emph{cfg.repPred = sampleLength - embeddingDelay - 1}, with \emph{sampleLength} as the amount of samples in the selected time window and \emph{embeddingDelay}\footnote{Unfortunately, TrenTOOL doesn't display the embedding delay. The formula I used to calculate it is, in Matlab notation, \emph{(max(cfg.ragdim)-1) $\cdot$ max(cfg.ragtaurange) + cfg.predicttimemax\_u + max(ACT)}. \emph{ACT} (the delay for the first minimum of the autocorrelation), in turn, is only computed during the preprocessing phase. Due to time constraints, I opted for a manual approach. An error message printed the current \emph{max(ACT)} if \emph{cfg.repPred} was too small, so I could supply this value into the configuration variable and re-run the preprocessing phase. After a few iterations, the absolute maximum ACT was found, allowing me to adjust the time windows and finish the preprocessing phase.} the amount of samples in the absolute embedding delay.
@@ -468,6 +468,8 @@ The shift test establishes the optimal delay of transfered entropy for each comp
 Transfer entropy was computed for a time range of possible interaction delays: 1ms to 40ms in steps of 5ms.
 TrenTOOL then selected the interaction delay with the biggest associated transfer entropy as the most likely representation of the signal delay caused by cognitive processes and anatomic constraints.
 To alleviate issues with volume conduction, I supplied the option \emph{cfg.extracond = 'Faes\_method'}.
+Unfortunately, using this method prevents the determination of the precise signal delay.
+Since the signal delay is not relevant to my research goals, this trade-off was trivial to solve.
 The optimal dimension for each data set was considered with the option \emph{cfg.optdimusage = 'indivdim'}.
 For significance testing, TrenTOOL creates surrogate data.
 This data was created by shuffling existing trials (\emph{cfg.surrogatetype = 'trialshuffling'}).

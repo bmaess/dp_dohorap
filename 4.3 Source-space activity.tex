@@ -1,4 +1,4 @@
-\section{Source-space activity}
+\section{Source-space activity}\label{4.3}
 
 \subsection{Comparison of means}
 Localized activity from eight regions of interest (PAC, aSTS, aSTG, pSTS, pSTG, BA44, BA45 and BA6v) were examined for a syntactic effect.
@@ -27,7 +27,7 @@ The right PAC showed a very late, distinctly negative effect ($p = 0.9\%$, $t_{1
 Very weak positive effects ($p < 8\%$, $t_{17} = 2.4$) were observed in the right pSTG (1000ms to 1200ms) and the left aSTG (1400ms to 1600ms).
 At the same time (1400ms to 1600ms), the left aSTS showed a very weak effect as well, but with opposite polarity ($p = 6.6\%$, $t_{17} = -3.0$).
 
-\begin{figure}[h]
+\begin{figure}[H]
 \begin{center}
 \includegraphics[width=0.49\textwidth]{pics/signed-adults-PAC-lh.png}
 \includegraphics[width=0.49\textwidth]{pics/signed-adults-PAC-rh.png}
@@ -42,7 +42,7 @@ At the same time (1400ms to 1600ms), the left aSTS showed a very weak effect as 
 \end{figure}
 
 
-\begin{figure}[h]
+\begin{figure}[H]
 \begin{center}
 \includegraphics[width=0.49\textwidth]{pics/signed-adults-BA6v-lh.png}
 \includegraphics[width=0.49\textwidth]{pics/signed-adults-BA6v-rh.png}
@@ -56,6 +56,7 @@ At the same time (1400ms to 1600ms), the left aSTS showed a very weak effect as 
 \end{center}
 \end{figure}
 
+\clearpage
 
 The interval analysis yielded no non-spurious effects ($p > 5\%$) from children.
 This fact prompted a more extensive investigation.
@@ -65,15 +66,63 @@ This fact prompted a more extensive investigation.
 Compared to the sensor-space analysis, source-space data yielded much more pronounced effects in adults.
 Since this effect differentiation was the main goal of the localization process, these results were in line with my expectations.
 However, localization of cortical activity in children failed to yield a similar improvement.
+The localization procedure was identical for both groups, so no procedural difference could have affected the results.
 
-There were two major possibilities for these unexpected results.
+That left two major possibilities for these unexpected results.
 
-First, the localization process could have been produced drastically worse inverse solutions for children than for adults.
+\paragraph{Possible explanations}
+First, the localization process may have produced drastically worse inverse solutions for children than for adults.
 Due to the hands-off approach of the generation of cortical surfaces, there are no parameters for the transfer of regional boundaries between the (adult) reference brain and each infant brain.
 This automated process could have resulted in a systematically higher spatial error between my regional definitions and the actual functional regions in infants than in adults.
 Less realistic regional definitions in children than in adults can result in unintended overlap between functional regions, and lead to a diminished experimental effect in each region.
 It is also be possible that the automated segmentation process, that Freesurfer uses for extracting the cortex surface, is not optimized for infant brains.
 An imprecise definition of the cortical surface would result in a skewed spatial location of the source dipoles, again causing regional overlapping and diminishing the experimental effect.
+If the localization performed drastically worse for children, the extraction of relevant time intervals and regional connections from the conditional effect would be impossible.
 
-Second, 
+Second, it is possible that the cognitive strategies were stable within each subject, but those of my young subjects were  more diverse than those of my adults.
+Both cluster analysis and interval analysis are based on the assumption that all subjects in one group use the same cognitive strategy.
+If this assumption is true for adults, but not for children, different processing strategies could cancel each other out and produce no effect.
+Both the average localized activity and pooled single trials would be vulnerable to this violation.
 
+Third, it is possible that cognitive strategies varied within subjects for children, but not for adults.
+This circumstance would lead the conditional effect to appear in different regions over the course of the task.
+Mean regional activity would be blurred because the stationarity assumption would be violated, and the overall effect would be diminshed.
+
+\paragraph{Exploring the explanations}
+Unfortunately, in order to compare the first possibility, a ground truth for the dipole locations and activations would be necessary.
+This type of reference data is only available in phantom models, therefore the first possibility remains elusive for direct statistical tests.
+However, since neither set of localization software was designed for processing infant brains, this possibility remains the  default explanation.
+
+To decide whether the second possibility was responsible for the skewed results, I conducted two tests:
+First, if the cognitive processes were much more varied in children than in adults, this circumstance should be reflected in a more homogenuous evoked activity within the adults.
+To test this hypothesis, I calculated the individual deviation from the group-average activity and compared deviations between both groups.
+
+Second, if the cognitive strategy was less stable in children than in adults, localized activity in children should show more intra-subject variation.
+To test this hypothesis, I calculated the individual deviation from the individual-average activity and compared deviations between both groups.
+
+\paragraph{Test results}
+For the first test, localized pooled activity (evoked by object-relative clauses) was selected from the time window 0ms to 2200ms.
+The mean activity was computed from this selected activity from all subjects within each group.
+The difference between individual and mean activity was then computed for each cortical region, yielding a time series.
+Each time series was reduced to a single value by computing the variance over time.
+Variances from both groups were tested for systematic differences with Welch's test.
+The Welch test doesn't assume equal variances and allows for unequal sample sizes.
+It was implemented in Python with the function \emph{scipy.stats.ttest\_ind()}.
+Variances from both groups differed only weakly ($p \approx 5\%$, $t \approx -2.8$) after FDR correction with 8 comparisons.
+There was a considerable bias in six regions (all expect for pSTS and pSTG) towards higher group-level variances in adults.
+This finding weakened the second possibility (stronger inter-subject variation in children), and indirectly supported the first possibility (better localization in adults).
+
+The second test was based on the same data set as the first test.
+Reference activity was calculated by computing the mean of all trials from one subject.
+Then, the difference between single trials and the reference trial were computed and reduced by calculating the variance over time.
+A single value for each subject was determined by computing the mean of all subject-specific variances.
+Again, Welch's test compared individual variance scores between both groups.
+The FDR-corrected results (8 comparisons) yielded no significant ($p > 50\%$, $t \approx -1.0$) differences.
+This finding weakened the third possibility (stronger intra-subject variation in children), and indirectly supported the first possibility (better localization in adults).
+
+\paragraph{Conclusion}
+The deterioration of the syntactical effect in children before and after the source localization can not be explained by a wider spectrum of cognitive strategies.
+If anything, adults showed a wider, not a smaller variety of localized activity than children.
+By the refutation of the second and third possibilities, the first assumption was strengthened in comparison.
+Therefore, I had to conclude that the inverse solution for childrens' cortical activity failed to match the accuracy of the adults'.
+Without the spatio-temporal distribution of condition effects in children, the task of determining their relevant TOI and ROI for the following section showed little promise.

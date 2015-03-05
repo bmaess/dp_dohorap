@@ -3,8 +3,8 @@ echo "" > "chapter/Introduction.tex"
 cat ../"1.1 The role of white matter tracts in syntax processing.tex" >> "chapter/Introduction.tex"
 cat ../"1.2 Functional anatomy of syntax processing.tex" >> "chapter/Introduction.tex"
 cat ../"1.3 Experimental paradigm.tex" >> "chapter/Introduction.tex"
-cat ../"1.4 Choice of measurement methods.tex" >> "chapter/Introduction.tex"
-cat ../"1.5 Research questions.tex" >> "chapter/Introduction.tex"
+cat ../"1.4 Research questions.tex" >> "chapter/Introduction.tex"
+cat ../"1.5 Choice of measurement methods.tex" >> "chapter/Introduction.tex"
 
 # Create the methods chapter
 echo "" > "chapter/Methods.tex"
