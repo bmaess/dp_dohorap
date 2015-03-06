@@ -29,7 +29,7 @@ This process involves measuring the voltage at two or more arbitrary points in t
 Every electric signal that travels along a conducting wire also induces a magnetic field.
 Since an axon is no exception to this rule, any transmitted neuron-to-neuron signal can also be acquired with a magnetic sensor.
 A magnetoenecephalograph (MEG) consists of several dozens of these sensors distributed around the head.
-MEG and EEG are currently the only non-invasive acquisition methods that measure brain activity with a milisecond resolution [1.4.MEG.a][1.4.MEG.b][1.4.MEG.c].
+MEG and EEG are currently the only non-invasive acquisition methods that measure brain activity with a milisecond resolution [1.5.MEG.a][1.5.MEG.b][1.5.MEG.c].
 The focus of this project is on cognitive processes that require timespans in the single-digit second range to complete.
 Considering these small time frames, a good temporal resolution is integral for yielding a sufficient amount of data from every processing step.
 This is the reason why I decided to use a EEG/MEG method, while using the highest available temporal resolution.
@@ -43,24 +43,24 @@ Contemporary superconductors require cooling with liquid helium.
 Magnetic fields from neurons are also weaker than environmental magnetic noise by several magnitudes.
 To limit measurements to neural activity, the MEG device need to be shielded with large quantities of highly magnetically permeable material (most commonly, an nickel-iron alloy).
 These requirements makes MEG much less portable, and equally more expensive, than EEG.
-Passive shielding already reduces environmental noise levels by 25-60db [1.4.SNR].
-In addition to that, it is possible to dampen noise levels by another 60db with adaptive noise reduction [1.4.SNR].
+Passive shielding already reduces environmental noise levels by 25-60db [1.5.SNR].
+In addition to that, it is possible to dampen noise levels by another 60db with adaptive noise reduction [1.5.SNR].
 Good adaptive noise reduction requires large external coils that can counteract outside magnetic fields.
 The use of superconducting MEG sensors is necessary due to the extreme weakness of neural magnetic fields.
 With the large amplification factors involved in both methods, amplifiers contribute a large amount of noise to the signal.
-But since the amplifier noise depends directly on their operating temperature, suspending the amplifiers in liquid helium drastically lowers the noise level [1.4.MEG.a].
-Generally, EEG and MEG are considered equally sensitive [1.4.MEG.a][1.4.MEG.c].
-However, the addition of magnetic shielding can elevate signal-to-noise ratios in MEG measurements above equivalent acquisitions from EEG [1.4.SNR].
+But since the amplifier noise depends directly on their operating temperature, suspending the amplifiers in liquid helium drastically lowers the noise level [1.5.MEG.a].
+Generally, EEG and MEG are considered equally sensitive [1.5.MEG.a][1.5.MEG.c].
+However, the addition of magnetic shielding can elevate signal-to-noise ratios in MEG measurements above equivalent acquisitions from EEG [1.5.SNR].
 
 The second difference between MEG and EEG is the drastically different distortion from surrounding tissue.
-For an EEG to be able to measure a potential difference on the skin surface, an electrical current needs to pass the tissues surrounding the cortical surface [1.4.tissues.b].
-Some of these tissue layers, like blood vessels or cerebreal spinal fluid (CSF), are 5 times more conductive than gray matter; so they smooth and diffuse electric fields [1.4.tissues.a][1.4.tissues.b].
-Other tissue layers, especially the compact bone, conduct electricity 78 times worse than gray matter; so they distort and attenuate every passing signal [1.4.tissues.a].
+For an EEG to be able to measure a potential difference on the skin surface, an electrical current needs to pass the tissues surrounding the cortical surface [1.5.tissues.b].
+Some of these tissue layers, like blood vessels or cerebreal spinal fluid (CSF), are 5 times more conductive than gray matter; so they smooth and diffuse electric fields [1.5.tissues.a][1.5.tissues.b].
+Other tissue layers, especially the compact bone, conduct electricity 78 times worse than gray matter; so they distort and attenuate every passing signal [1.5.tissues.a].
 After these tissues have been passed, the original signal has substantially decreased in intensity, and changed drastically in shape and location.
 In contrast to electrical fields, the same tissues are highly permeable to magnetic fields.
 The magnetic permeability of water, which most human tissue is based on, differs from the magnetic permeability of vacuum only by 0.0008\%.
 As a general rule, only metal-based materials are substantially less permeable than water.
-Since the human head doesn't contain metal in considerable quantities, it practically allows magnetic fields to pass without distortion. [1.4.tissues.a]
+Since the human head doesn't contain metal in considerable quantities, it practically allows magnetic fields to pass without distortion. [1.5.tissues.a]
 
 This circumstance does not imply, unfortunately, that every neural transmission arrives at the magnetic sensors with equal strength.
 There are three main reasons for that.
@@ -103,7 +103,7 @@ Because the stimuli are spoken sentences in this study, there is no silent time 
 Therefore, the pre-cue interval reflects electric fields from unrelated brain activity.
 By computing the average from unrelated activity, I effectively introduces a random DC error into the correction procedure.
 This issue makes a subtractive baseline correction a tradeoff between the original DC error and a random DC error.
-A process to remove DC components without this tradeoff is to use a highpass filter [1.4.highpass].
+A process to remove DC components without this tradeoff is to use a highpass filter [1.5.highpass].
 Since my longest expected evoked field, the ELAN, has a base frequency of 5Hz, I choose a much lower value of 0.4Hz for the high-pass.
 
 \paragraph{Artifact removal}
@@ -146,7 +146,7 @@ For this approach, the measured activity is compared between conditions.
 The TOI and ROI that involve considerable contrast between conditions can then be selected for the comparison of mean activity.
 The drawback to this approach is both spurious contrast and activity from different cognitive processes are considered as condition effect.
 The statistical testing will therefore systematically overestimate the condition effect.
-This issue is known as "'double dipping"' [1.4.Kriegeskorte].
+This issue is known as "'double dipping"' [1.5.Kriegeskorte].
 However, for exploratory analysis, bootstrapping is a valuable tool that can uncover previously unknown TOI and ROI.
 
 I decided to use both approaches with different purposes:
@@ -173,13 +173,13 @@ Usually, these current sources are assumed to be generated by neuronal tissue.
 There are three popular types of source modelling.
 
 The first type of source modelling uses spatial filtering.
-A popular spatial filtering strategy is the single-core beamformer method (Barnes and Hillebrand, 2003; Gross and Ioannides, 1999; Gross et al., 2001; Hillebrand and Barnes, 2003; Robinson and Vrba, 1999; Sekihara et al., 2001; Van Veen et al., 1997).
+The most common spatial filtering strategy is the single-core beamformer method [1.5.Beamformer].
 Its main weakness is the assumption that data from different sources is completely uncorrelated.
-This assumption is especially detrimental to the analysis of cortical signals, since neuronal-level synchronizity is one of the fundamental principles behind attention and learning (Kandel et al., 2000).
+This assumption is especially detrimental to the analysis of cortical signals, since neuronal-level synchronizity is one of the fundamental principles behind attention and learning [1.5.synchronizity].
 
 In the focal source model, neural current flow is represented by a limited set of point-shaped current dipoles.
 There are are three subcategories to this model: an unconstrained variant (the moving dipole model), dipoles with a fixed position (the rotating dipole model) and dipoles with a fixed position and rotation (the fixed dipole model).
-Popular applications of this approach include "'multiple signal classification"' (MUSIC) [1.4.music] and "'multi-start spatio-temporal multiple-dipole modeling"' [1.4.simplex]
+Popular applications of this approach include "'multiple signal classification"' (MUSIC) [1.5.music] and "'multi-start spatio-temporal multiple-dipole modeling"' [1.5.simplex]
 Dipole models have had limited success with representing neuronal responses for two main reasons.
 First, reducing extended neuroanatomical structures to a point current source introduces a systematic model error.
 Second, the number and location of dipoles has a strong influence on the localized results, yet is hard to estimate in advance (Huang et al., 1998).
@@ -194,10 +194,10 @@ Simulated activity then is optimized so that the error to the reference sensor a
 Because every sensor activity pattern can be created by infinitely many source configurations, the localization process is facilitated with two processes.
 First, dipole activity is spatially regularized with a predefined factor.
 Second, the best pattern of localized sources is selected by minimizing the norm over all dipoles.
-The most popular norm today is the L2-norm [1.4.L2], and implementations are widely available.
-Alternatively, the L1-norm [1.4.L1a, 1.4.L1b] can result in a more focally reconstructed activity.
+The most popular norm today is the L2-norm [1.5.L2], and implementations are widely available.
+Alternatively, the L1-norm [1.5.L1a, 1.5.L1b] can result in a more focally reconstructed activity.
 This process is usually computed separately for every temporal sample.
-Popular implementations include dSPM (Dale et al., 2000), MNE (Hammalaien, 2005) and sLORETA (Pascual-Marqui, 2002)).
+Popular implementations include dSPM [1.5.dSPM], MNE [1.5.MNE] and sLORETA [1.5.sLORETA]).
 I opted for this approach because the spatial filtering approaches aren't recommended for localizing cortical activity, and the quality of results from the dipole fit models depend too strongly on the inital parameters.
 
 L2-norm-based solutions have two major drawbacks.
@@ -217,7 +217,7 @@ By measuring the time intervals and spatial extends of dynamic connections, it i
 My task was to determine two maps of dynamic connections, one for each experimental condition, and compare the differences.
 
 \paragraph{Two types of information interaction}
-According to the Wiener principle [1.4.information], information processing in general consists of three separate tasks: information storage, information modification and information transfer.
+According to the Wiener principle [1.5.information], information processing in general consists of three separate tasks: information storage, information modification and information transfer.
 This definition is important for determining the task that can be measured with practical methods.
 In the literature, a common question is whether a signal transfer was causal or not.
 However, reconstructing true causal relationships between signal processors involves measuring all three tasks.
@@ -226,7 +226,7 @@ Since these processes leave few traces in the form of electric or magnetic field
 In contrast to these tasks, information transfer can reconstructed reasonably well from discrete, brain-wide electrophysiological measurements.
 Although the practical restrictions limit us to the analysis of information transfer, this measure, rather than true causality, may actually be the more interesting factor for understanding a computational process in the brain [Wollstadt 48].
 
-Historically, information transfer has been explored by calculating functional connectivity.
+Historically, information transfer has been explored by calculating functional connectivity [1.5.connectivity].
 Functional connectivity is defined as the temporal correlation between activity of different cortical regions.
 While this approach is suitable for a wide spectrum of acquisition methods (EEG, MEG, fMRI, PET), it fails to uncover the directionality of any interaction.
 For this goal, a relatively new approach is necessary, effective connectivity.
@@ -239,20 +239,20 @@ There are two fundamentally different approaches to the analysis of effective co
 The first type of analysis involves fitting each acquired time series to a well-defined model.
 These types of models approaches commonly involve on biophysical properties, e.g. varying neuronal firing rates or varying strengths of dendritic connections.
 Once the model parameters are established, the implied interactions between the models can be explored.
-The commonly used model-based approaches are statistic equation modelling [Raatikainen 35] and dynamic causal modelling [Raatikainen 13].
+The commonly used model-based approaches are statistic equation modelling [1.5.SEM] and dynamic causal modelling [1.5.DCM].
 Due to their large parameter space and high computational demands, these approaches are better suited for small networks.
 I ultimately decided against a model-based approach because of the non-trivial task of parameter optimization.
 
 The second type of analysis works without an underlying model or other metadata.
 
 \paragraph{Granger-Causality derivatives}
-This data-driven approach was incepted with Granger causality, which is built on Wiener's assumption that causes precede their effects in time.
+This data-driven approach was incepted with Granger causality [1.5.Granger], which is built on Wiener's assumption that causes precede their effects in time.
 If the future time series of a signal can be better predicted by the past time series of a second signal than by its own past, then the second signal has had a causal effect on the first signal.
 There are different implementations within this family of approaches with minor conceptual differences.
 Granger causality, for example, can accomodate a maximum of two time series.
 An effort to generalize this method to multiple data sources and to frequency space led to the development of the directed transfer function.
 
-Importantly, all following methods are robust against a common effect in realistic electrophysical data: volume conduction [Raatikainen 44].
+Importantly, all following methods are robust against a common effect in realistic electrophysical data: volume conduction [1.5.PDC].
 Since the brain is enveloped in cerebral spinal fluid, a highly conductive material, any cortical activity can spread practically immediately across wide distances.
 Due to its small amplitude and almost random content, this effect is negligible for traditional trigger-locked approaches, in which a signal stationarity can be assumed.
 However, during the analysis of effective connectivity, volume conduction leads to an instantaneous signal transfer, competing with the much more meaningful signal transfer by axonal fibers.
@@ -261,14 +261,14 @@ Volume conduction especially overestimates the amount of signal transfer in EEG 
 Because the directed transfer function fails to distinguish between direct and indirect interactions in a multivariate network, the partial directed coherence (PDC) method was developed.
 PDC, which represents data as a multivariate autoregressive model, is able to select only direct interactions.
 PDC shows a few minor issues, most famously its susceptibility to different levels of amplitude.
-All of these issues are resolved with the generalized PDC (gPDC).
+All of these issues are resolved with the generalized PDC (gPDC) [1.5.gPDC].
 
 All derivative approaches of Granger causality can only capture linear interactions between data streams.
 This limitation leads to a systematic underestimation of effective connectivity when non-linear interactions are involved in creating the measured activity.
 
 \paragraph{Information-theoretic approaches}
-Next to mutual information and joint entropy, transfer entropy (TE) is by far the most advanced information-theoretic approach [Raatikainen 14].
-TE is a non-linear, model-free approach, is resistant to indirect causal effects and volume conduction, and incorporates both dynamical and directional information [Raatikainen 15].
+Next to mutual information and joint entropy, transfer entropy (TE) is by far the most advanced information-theoretic approach [1.5.TEcomparison].
+TE is a non-linear, model-free approach, is resistant to indirect causal effects and volume conduction, and incorporates both dynamical and directional information [3.4.TE].
 It is, just like Granger causality, based on Wiener's assumption of temporal delays between cause and effect.
 The core principle is the comparison within and between two streams of entropy.
 If the future entropy of one data stream can be explained better by adding entropy from another data stream, an entropy transfer must have occurred.
@@ -276,4 +276,4 @@ This entropy transfer is quantified and secured against false positive detection
 This surrogate data needs to be constructed so that the causal relationship between data streams is destroyed.
 TE also requires relatively large amounts of data, which shows at least some stationarity.
 Both requirements are solved by supplying trigger-locked single trials with generous time limits and a high sampling rate.
-The most popular implementation of TE, TrenTOOL, allows for computing group-level statistics and impacts of conditional effects, making it the ideal software for the goal of my study.
+The most extensive implementation of TE, TrenTOOL, allows for computing group-level statistics and impacts of conditional effects, making it the ideal software for the goal of my study.
