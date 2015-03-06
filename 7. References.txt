@@ -1,6 +1,14 @@
 Entries with ">" are files in my ReadCube library, "-" are only references
 
-% Chapter 1
+% Chapter 1.1
+
+[1.1.whitematter] doi:10.1038/scientificamerican0308-54
+
+[1.1.history] Schmahmann, J., & Pandya, D. (2007). Cerebral White Matter — Historical Evolution of Facts and Notions Concerning the Organization of the Fiber Pathways of the Brain. Journal of the History of the Neurosciences, 16(3), 237267. doi:10.1080/09647040500495896
+
+[1.1.firstDiffusion] http://dx.doi.org/10.1016%2F0022-2364%2885%2990111-8
+
+% Chapter 1.5
 
 [1.5.SNR] Volegov, P., Matlachov, A., Mosher, J., Espy, M., & Kraus, R. (2004). Noise-free magnetoencephalography recordings of brain function. Physics in Medicine and Biology, 49(10), 2117–2128. doi:10.1088/0031-9155/49/10/020
 
@@ -44,24 +52,23 @@ Entries with ">" are files in my ReadCube library, "-" are only references
 
 [1.5.SEM]: F. Darvas and R.M. Leahy, ‘’Functional Imaging of Brain Activity and Connectivity with MEG’’, in Handbook of Brain Connectivity, 1st Edition, Springer, 1999, pp.201-220.
 
-[1.5.DCM]: O. David, S.J. Kiebel, L.M. Harrison, J. Mattout, J.M. Kilner, K.J. Friston, ‘’Dynamic Causal Modeling of Evoked Responses in EEG and MEG’’, Neuroimage, vol.3, no.4, pp.1255-1272, May2006. http://dx.doi.org/10.1016/j.neuroimage.2005.10.045 
+[1.5.DCM]: O. David, S.J. Kiebel, L.M. Harrison, J. Mattout, J.M. Kilner, K.J. Friston, ‘’Dynamic Causal Modeling of Evoked Responses in EEG and MEG’’, Neuroimage, vol.3, no.4, pp.1255-1272, May2006. http://dx.doi.org/10.1016/j.neuroimage.2005.10.045
 
 [1.5.connectivity]: Sakkalis, V. (2011). Review of advanced techniques for the estimation of brain connectivity measured with EEG/MEG. Computers in biology and medicine, 41(12), 1110–7. doi:10.1016/j.compbiomed.2011.06.020
 
 [1.5.PDC]: B. Schelter, J. Timmer, M. Eichler, ‘’Assessing the Strength of Directed Influences Among Neural Signals Using Renormalized Partial Directed Coherence’’, J Neurosci Methods, vol.179, no.1, pp.121-130, Apr. 2009. http://dx.doi.org/10.1016/j.jneumeth.2009.01.006 
 
-[1.5.gPDC]: L.A. Baccala, D.Y. Takahashi, K. Sameshima, ‘‘Generalized Partial Directed 
- Coherence’’, Proceedings of the 15th International Conference on Digital Signal 
- Processing. IEEE, Cardiff, Jul.2007, pp.163-166. 
- http://dx.doi.org/10.1109/ICDSP.2007.4288544 
+[1.5.gPDC]: L.A. Baccala, D.Y. Takahashi, K. Sameshima, ‘‘Generalized Partial Directed Coherence’’, Proceedings of the 15th International Conference on Digital Signal Processing. IEEE, Cardiff, Jul.2007, pp.163-166. http://dx.doi.org/10.1109/ICDSP.2007.4288544 
 
- [1.5.TEcomparison]: M. Garofalo, T. Nieus, P. Massobrio, S. Martinoia, ‘‘Evaluation of the 
- Performance of Information Theory-Based Methods and Cross-Correlation to Estimate 
- the Functional Connectivity in Cortical Networks’’, PLoS ONE, vol.4, no.8, Mar.2009. 
- http://dx.doi.org/10.1371/journal.pone.0006482
+[1.5.TEcomparison]: M. Garofalo, T. Nieus, P. Massobrio, S. Martinoia, ‘‘Evaluation of the Performance of Information Theory-Based Methods and Cross-Correlation to Estimate the Functional Connectivity in Cortical Networks’’, PLoS ONE, vol.4, no.8, Mar.2009. http://dx.doi.org/10.1371/journal.pone.0006482
 
 [1.5.Kriegeskorte]: Kriegeskorte, N., & Bandettini, P. A. (2007). Analyzing for information, not activation, to exploit high-resolution fMRI. NeuroImage, 38, 649-662. 
 
+[1.5.Beamformer]:
+einer der folgenden:
+Barnes and Hillebrand, 2003; Gross and Ioannides, 1999; Gross et al., 2001; Hillebrand and Barnes, 2003; Robinson and Vrba, 1999; Sekihara et al., 2001; Van Veen et al., 1997
+
+[1.5.synchronizity]: Kandel et al., 2000
 
 % Chapter 2
 
