@@ -209,35 +209,71 @@ The sLORETA algorithm, by contrast, has been designed to create solutions with z
 Since this algorithm has minimal drawbacks out of all readiliy available software, it became the method of choice for my source localization purposes.
 
 \subsection{Information transfer}
-After localization, activity in my selected cortical regions is ready for the analysis of transfered information.
-According to the Wiener principle [1.4.information], information processing consists of three separate tasks: information storage, information modification and information transfer.
-In comparison to true causality, which involves all three tasks, the analysis of transfered information is feasible on discrete electrophysiological data. 
-There are two fundamentally different approaches to this task.
+Cognitive processes are based on the interaction of dynamically and statically coupled neural networks.
+Statical coupling is established with nerve fiber connections, mainly representing the upper limit of possible functional connections to other areas.
+The other type of coupling are dynamic connections, which establish the exchange of information by synchronizing neuron clusters to a common frequency.
+Especially the latter coupling strategy plays a big role in understanding cognitive processes, since dynamic connections are - due to bandwidth constraints - only upheld as long as meaningul information needs to be transfered.
+By measuring the time intervals and spatial extends of dynamic connections, it is possible to construct a spatiotemporal graph of interactions between all cortical regions involved in a cognitive task.
+My task was to determine two maps of dynamic connections, one for each experimental condition, and compare the differences.
 
+\paragraph{Two types of information interaction}
+According to the Wiener principle [1.4.information], information processing in general consists of three separate tasks: information storage, information modification and information transfer.
+This definition is important for determining the task that can be measured with practical methods.
+In the literature, a common question is whether a signal transfer was causal or not.
+However, reconstructing true causal relationships between signal processors involves measuring all three tasks.
+Both information storage and information modification take place on a cellular level.
+Since these processes leave few traces in the form of electric or magnetic fields, our only way to resolve their details is by analyzing single cells with microscopic probes.
+In contrast to these tasks, information transfer can reconstructed reasonably well from discrete, brain-wide electrophysiological measurements.
+Although the practical restrictions limit us to the analysis of information transfer, this measure, rather than true causality, may actually be the more interesting factor for understanding a computational process in the brain [Wollstadt 48].
 
-% "'' information processing can be broken down into the three components of
-%  information storage, information transfer, and information modification [1-4]. These components can be
-%  easily identified in theoretical, or technical, information processing systems, such as ordinary comput-
-%  ers, based on the specialized machinery for and the spatial separation of these component functions. In
-%  these examples, a separation of the components of information processing via a specialized mathematical
-%  formalism seems almost superfluous. However, in biological systems in general, and in the brain in par-
-%  ticular, we deal with a form of distributed information processing based on a large number of interacting
-%  agents (neurons), and each agent at each moment in time subserves any of the three component functions
-%  to a varying degree. In neural systems it is indeed crucial to understand where and when information
-%  storage, transfer and modification take place, to constrain possible algorithms run by the system. While
-%  there is still a struggle to properly define a measure for information modification [5,6] and its proper mea-
-%  sure [7-10], well established measures for (local active) information storage [11], information transfer [12],
-%  and its localization in time [13] exist.
-%  Especially the measure for information transfer, transfer entropy (TE), has seen a dramatic surge
-%  of interest in neuroscience [14-31], physiology [32-34], and other fields [5, 13, 26, 35, 36]. Nevertheless,
-%  conceptual and practical problems still exist. On the conceptual side, information transfer has been for a
-%  while confused with causal interactions, and only some recent studies [37-39] made clear that there can be
-%  no one-to-one mapping between causal interactions and information transfer, because causal interactions
-%  will subserve all three components of information processing (transfer, storage, modification). However,
-%  it is information transfer, rather than causal interactions, we might be interested in when trying to
-%  understand a computational process in the brain [38]."''
+Historically, information transfer has been explored by calculating functional connectivity.
+Functional connectivity is defined as the temporal correlation between activity of different cortical regions.
+While this approach is suitable for a wide spectrum of acquisition methods (EEG, MEG, fMRI, PET), it fails to uncover the directionality of any interaction.
+For this goal, a relatively new approach is necessary, effective connectivity.
+Next to functional and structural (anatomical) connectivity, this is a fundamentally different type of approach.
+It explores the influence that one cortical region has over another cortical region, and is uniquely able to determine directional properties of signal interactions.
 
-% modelling vs. model-free, linear vs. nonlinear
-% Transfer Entropy is suited best for highly complex, nonlinear timescale data
-% Potential pitfall: Volume conduction (can also come from bad localization)
-% TrenTOOL can correct volume conduction
+\paragraph{Choice of analysis approach}
+There are two fundamentally different approaches to the analysis of effective connectivity.
+
+The first type of analysis involves fitting each acquired time series to a well-defined model.
+These types of models approaches commonly involve on biophysical properties, e.g. varying neuronal firing rates or varying strengths of dendritic connections.
+Once the model parameters are established, the implied interactions between the models can be explored.
+The commonly used model-based approaches are statistic equation modelling [Raatikainen 35] and dynamic causal modelling [Raatikainen 13].
+Due to their large parameter space and high computational demands, these approaches are better suited for small networks.
+I ultimately decided against a model-based approach because of the non-trivial task of parameter optimization.
+
+The second type of analysis works without an underlying model or other metadata.
+
+\paragraph{Granger-Causality derivatives}
+This data-driven approach was incepted with Granger causality, which is built on Wiener's assumption that causes precede their effects in time.
+If the future time series of a signal can be better predicted by the past time series of a second signal than by its own past, then the second signal has had a causal effect on the first signal.
+There are different implementations within this family of approaches with minor conceptual differences.
+Granger causality, for example, can accomodate a maximum of two time series.
+An effort to generalize this method to multiple data sources and to frequency space led to the development of the directed transfer function.
+
+Importantly, all following methods are robust against a common effect in realistic electrophysical data: volume conduction [Raatikainen 44].
+Since the brain is enveloped in cerebral spinal fluid, a highly conductive material, any cortical activity can spread practically immediately across wide distances.
+Due to its small amplitude and almost random content, this effect is negligible for traditional trigger-locked approaches, in which a signal stationarity can be assumed.
+However, during the analysis of effective connectivity, volume conduction leads to an instantaneous signal transfer, competing with the much more meaningful signal transfer by axonal fibers.
+Volume conduction especially overestimates the amount of signal transfer in EEG data, in which the electrical activity from neuronal clusters are mixed with electric fields in the liquid layer around the cortex.
+
+Because the directed transfer function fails to distinguish between direct and indirect interactions in a multivariate network, the partial directed coherence (PDC) method was developed.
+PDC, which represents data as a multivariate autoregressive model, is able to select only direct interactions.
+PDC shows a few minor issues, most famously its susceptibility to different levels of amplitude.
+All of these issues are resolved with the generalized PDC (gPDC).
+
+All derivative approaches of Granger causality can only capture linear interactions between data streams.
+This limitation leads to a systematic underestimation of effective connectivity when non-linear interactions are involved in creating the measured activity.
+
+\paragraph{Information-theoretic approaches}
+Next to mutual information and joint entropy, transfer entropy (TE) is by far the most advanced information-theoretic approach [Raatikainen 14].
+TE is a non-linear, model-free approach, is resistant to indirect causal effects and volume conduction, and incorporates both dynamical and directional information [Raatikainen 15].
+It is, just like Granger causality, based on Wiener's assumption of temporal delays between cause and effect.
+The core principle is the comparison within and between two streams of entropy.
+If the future entropy of one data stream can be explained better by adding entropy from another data stream, an entropy transfer must have occurred.
+This entropy transfer is quantified and secured against false positive detection with a statistical comparison against surrogate data.
+This surrogate data needs to be constructed so that the causal relationship between data streams is destroyed.
+TE also requires relatively large amounts of data, which shows at least some stationarity.
+Both requirements are solved by supplying trigger-locked single trials with generous time limits and a high sampling rate.
+The most popular implementation of TE, TrenTOOL, allows for computing group-level statistics and impacts of conditional effects, making it the ideal software for the goal of my study.
