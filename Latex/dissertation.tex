@@ -53,6 +53,7 @@
 \usepackage{dcolumn}            % formatting command for tables
 %\usepackage{parskip}           % free line between paragraphs and no indentation on the next line
 \usepackage{fancyhdr}           % adjust footer and header
+\usepackage{siunitx}
 \usepackage[inner=4cm,
             outer=3cm,
             top=3cm,
@@ -74,7 +75,7 @@
 % more formattings %
 %%%%%%%%%%%%%%%%%%%%
 
-\doublespacing % bzw. \doublespacing, \singlespacing
+\singlespacing % bzw. \doublespacing, \singlespacing
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
 % penalty customization %
@@ -120,6 +121,7 @@
 %%%%%%%%
 
 \begin{document}
+\scrollmode
 
 %%%%%%%%%
 % title %
@@ -238,3 +240,4 @@
 %%%%%%%
 
 \end{document}
+\batchmode

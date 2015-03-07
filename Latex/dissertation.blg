@@ -12,47 +12,51 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: bibliography.bib
+Warning--entry type for "1.5.information" isn't style-file defined
+--line 199 of file bibliography.bib
+Warning--I didn't find a database entry for "1.1.firstDiffusion"
 Warning--I didn't find a database entry for "AFIFI98"
 apacite.bst [2013/07/21 v6.03 APA bibliography style]
-You've used 11 entries,
+Warning--No address in 1.5.L2
+You've used 42 entries,
             6951 wiz_defined-function locations,
-            1360 strings with 13625 characters,
-and the built_in function-call counts, 23620 in all, are:
-= -- 2843
-> -- 205
-< -- 1180
-+ -- 1280
-- -- 23
-* -- 1644
-:= -- 4411
-add.period$ -- 41
-call.type$ -- 11
-change.case$ -- 203
+            1574 strings with 19165 characters,
+and the built_in function-call counts, 87308 in all, are:
+= -- 10578
+> -- 762
+< -- 4430
++ -- 4506
+- -- 85
+* -- 5909
+:= -- 16340
+add.period$ -- 172
+call.type$ -- 42
+change.case$ -- 732
 chr.to.int$ -- 0
-cite$ -- 22
-duplicate$ -- 676
-empty$ -- 910
-format.name$ -- 370
-if$ -- 4344
+cite$ -- 85
+duplicate$ -- 2372
+empty$ -- 3338
+format.name$ -- 1311
+if$ -- 16239
 int.to.chr$ -- 0
-int.to.str$ -- 37
+int.to.str$ -- 130
 missing$ -- 0
-newline$ -- 318
-num.names$ -- 88
-pop$ -- 302
+newline$ -- 1115
+num.names$ -- 328
+pop$ -- 1253
 preamble$ -- 1
-purify$ -- 44
+purify$ -- 167
 quote$ -- 0
-skip$ -- 1463
+skip$ -- 5519
 stack$ -- 0
-substring$ -- 1382
-swap$ -- 399
-text.length$ -- 22
+substring$ -- 4863
+swap$ -- 1421
+text.length$ -- 108
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 880
-warning$ -- 0
-while$ -- 124
+type$ -- 3648
+warning$ -- 1
+while$ -- 435
 width$ -- 0
-write$ -- 396
-(There was 1 warning)
+write$ -- 1417
+(There were 4 warnings)

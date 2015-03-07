@@ -6,35 +6,49 @@
 The human brain can be regarded as an information-processing system, processing and storing environmental stimuli in order to create meaningful actions. 
 In a very simplified information-processing perspective, it can be reduced to two functional components: computational units in the grey matter and signal relays in the white matter.
 Contrary to other common information-theoretical systems, there is no fundamental distinction between hardware and software in the brain.
-Both structural elements (e.g., dendritic spines) and computational units (e.g., astroglial cells) are part of an inseparable process.
-The fact that anatomical features can't be clearly mapped to a functional role violates the naïve reductionist approach, and puts cognitive science more in line with other fields that explore dynamical systems, such as physics, theoretical computer science or meteorology.
-Although the exploration of anatomic features (e.g., the classification of cortical regions based on myeloarchitecture ) led to several ground-breaking discoveries in psychology, these findings tend to serve as a base for more specialized studies, rather than creating a framework for understanding cognitive processes.
+Both structural elements (e.g., dendritic spines) and computational units (e.g., astroglial cells) are part of an inseparable information process.
+The fact that anatomical features can't be clearly mapped to a functional role violates the naive reductionist approach, and puts cognitive science more in line with other fields that explore dynamical systems, such as physics, theoretical computer science or meteorology.
+Although the exploration of anatomic features (e.g., the classification of cortical regions based on myeloarchitecture) led to several ground-breaking discoveries in psychology, these findings tend to serve as a base for more specialized studies, rather than creating a framework for understanding cognitive processes.
 
-In recent years, another anatomic feature became accessible for exploration due to advances in neuroimaging.
-The cerebral white matter, containing mainly myelinated axons and glial cells, was suspected to play a role in signal transmission as early as 1710 [1.1.history].
-In the writings of Pourfoir de Petit (1664-1741), nerve fiber bundles were theorized to transmit animal spirits from the cortex to the medulla oblongata.
-The complete signal transmission chain, continuing the activation from the medulla to the extremities via the spinal cord was made by Emanuel Swedenborg between 1738 and 1744 [1.1.history].
+Most anatomical features offered a direct link between their structure and functional roles, providing a solid basis for functional research.
+In the context of the human brain, there was one major exception: cerebral white matter, comprised of myelinated axons and glial cells.
+The role of cerebral nerve fibers eluded scientific inquiry for centuries, mainly due to their microscopic structure and the unknown function of their end connection points.
+The idea that they played a role in signal transmission (in the loosest sense) can be traced back as early as 1710 \cite{1.1.history}.
+In the writings of Pourfoir de Petit, nerve fiber bundles were theorized to transmit animal spirits from the cortex to the medulla oblongata.
+The complete motor transmission chain as known today, including the path from from the medulla to the extremities via the spinal cord, was discovered only 40 years later by Emanuel Swedenborg \cite{1.1.history}.
 However, during the next 250 years, the exploration of the role of cerebral fiber tracts was stifled by the lack of a non-invasive, large-scale measurement method.
-These circumstances abruptly changed in 1972 [1.1.history], when the discovery of the autoradiographic method allowed tracing the precise interneural connections with radioactive markers.
-This method was very widely used to fill existing knowledge gaps in cognitive science, but one fundamental flaw has prevented its application in humans: not only is the tracer very invasive, but the subject needs to be killed and dissected in the course of the experiment.
+
+These circumstances abruptly changed in 1972 \cite{1.1.history}, when the discovery of the autoradiographic method allowed tracing the precise interneural connections with radioactive markers.
+Radioactive tracing was very widely used to fill existing knowledge gaps in cognitive science, but one fundamental flaw has prevented its application in humans: not only is the tracer very invasive, but the subject needs to be killed and dissected in the course of the experiment.
 This drawback has prevented the study of the role of human fiber bundles, and not all knowledge gaps could be filled with equivalent results from lab animals.
+
 One of the most important set of fiber bundles that eluded autoradiographic study was the human language network.
-Only with the advent of main-stream diffusion imaging [1.1.firstDiffusion] in the mid-1980s, examinations of human fiber bundles in vivo started to be possible.
+Only with the advent of main-stream diffusion imaging \cite{1.1.firstDiffusion} in the mid-1980s, examinations of human fiber bundles in vivo started to be possible.
 The analysis of the previously elusive language-related fiber bundles is still ongoing, while new methods in both acquisition and data processing proceed to advance.
 But before I give an overview over the language network, some fundamentals need to be explained first.
 
 \paragraph{The role of myelination}
-When regarding the brain from an information-theoretical perspective, there are two biophysical properties, which, in combination, create a unique set of constraints: myelination and limited space.
-Nerve fibers typically transmit signals between exactly two sets of neuronal clusters.
-The transmission process relies on a combination of ion flux and activation voltages.
+When regarding the brain from an information-theoretical perspective, it is important to consider that it is a self-optimizing structure with two important optimization constraints: the mechanism of myelination and limited space.
+
+The importance of myelination becomes clear when regarding the mechanism of long-distance cerebral signal transmission.
+Nerve fibers typically transmit signals in the form of electric fields between two sets of neuronal clusters.
+The transmission process relies on the interplay of ion channels and electric currents.
 Since the signal propagation is based on an activation cascade of ion channels, the transmitted signal is strictly binary in nature, is limited in bandwidth by a refractory period of $\approx 1ms$ and can only travel in one direction at a time.
-The typical propagation speed of a nerve fiber is only $0.1\frac{m}{s}$, but can be increased by several magnitudes in the presence of myelinating sheath cells, the oligodentrocytes.
-Additional myelination layers reduce the amount of electrical current lost to the extracellular (usually liquid) environment.
+The typical propagation speed of a nerve fiber is only $0.1\frac{m}{s}$, but can be increased by several magnitudes when enveloped by myelin layers.
+Myelin layers, produced by myelinating sheath cells, reduce the amount of electrical current lost to the extracellular (usually liquid) environment.
 This effect causes not only a higher propagation speed, but also an equally increased maximum signal bandwidth, since the refractory period stays constant.
 
+\begin{figure}[h]
+\begin{center}
+\vspace{7mm}
+\includegraphics[width=0.75\textwidth]{pics/1_1_myelin_sheath}
+\caption{\label{1.1.neuron.illustrated} Illustration of an axonal fiber, wrapped in myelin sections. Adapted from Mosby's Medical Dictionary, 8th edition. \textcopyright 2009, Elsevier.}
+\end{center}
+\end{figure}
+
 However, myelination has a major drawback: it increases the volume of the nerve fiber drastically.
-For an practical illustration, A-\gamma-fibers, responsible for relaying hot and cold sensations, have a diameter of 3µm and propagate signals at $50\frac{m}{s}$.
-In comparison, A-\beta-fibers, responsible for sensing touch on the skin, have a diameter of 10µm and propagate signals with a speed of $50\frac{m}{s}$.
+For an practical illustration, A-$\gamma$-fibers, responsible for relaying hot and cold sensations, have a diameter of \SI{3}{\um} and propagate signals at $15\frac{m}{s}$.
+In comparison, A-$\beta$-fibers, responsible for sensing touch on the skin, have a diameter of \SI{10}{\um} and propagate signals with a speed of $50\frac{m}{s}$.
 The cross section of this fiber class is 11 times bigger, although its effective bandwidth is only three times higher.
 The volume requirements of myelination follow a law of diminishing returns: a single fiber with a high propagation speed requires more space than two fibers at half the speed, although the combined bandwidth is equivalent.
 
@@ -42,8 +56,8 @@ Since the brain is situated in an inflexible skull cavity, overall volume for th
 Myelination is flexible and adaptive, so bandwidth can be increased by adding additional myelin layers to fibers in high demand.
 However, due to the volume constraints, this is only possible when neighboring fibers are reduced in diameter by the same volume.
 
-This combination of constraints has apparently led to the prominent "small-world" topology featured in every level of the central nervous system [1.1.smallWorld].
-This type of network is characterized by a large number of very local connections; in fact, most nodes are only connected to their direct neighbors.
+This combination of constraints has apparently led to the prominent "'small-world"'' topology featured in every level of the central nervous system \cite{1.1.smallWorld}.
+This type of network is characterized by a large number of very local connections; in fact, almost the majority (47.8\%) of all nodes are only connected to their nearest neighbors.
 The small-world topology is a natural result of the trade-off that is created by minimizing the network distance between nodes while using the smallest amount of connections.
 It is also responsible for one of the most convenient characteristics in cognitive science, the specialized brain region.
 In a strongly local network, neural clusters in close proximity can share their information most effectively in closest network proximity.
@@ -52,39 +66,60 @@ In a small-world-topology, this functional proximity becomes a spatial proximity
 Therefore, the optimal solution for information processing at any network level is to group neuronal clusters with similar tasks into a common spatial region.
 As a result, the brain is highly structured into distinct functional regions, and regions in close proximity usually work together.
 
-The combination of volume constraints and myelation properties creates another trade-off in one of the most fundamental tasks of the brain: learning.
+The combination of volume constraints and myelination properties creates another trade-off in one of the most fundamental tasks of the brain: learning.
 Learning, on a neural level, always requires some form of change.
 This change can occur within the neuron, for example by tweaking the input weights of established connections.
 In other cases, new signal sources are necessary to accomplish the recently learned task.
-Finding new signal sources requires movement, either by growing new fiber strands or by repositioning or remyelating existing fibers.
+Finding new signal sources requires movement, either by growing new fiber strands or by repositioning or remyelinating existing fibers.
 In extreme cases, even the neuron body can move, at up to 10mm per hour.
-Again, due to volume constraints, movement requires space, which is usually acquired by demyelating existing fibers.
+Again, due to volume constraints, movement requires space, which is usually acquired by demyelinating existing fibers.
 In order to preserve the effective bandwidth even in slower fibers, neural clusters at the end points have the option of compressing the signal.
 An example for a compression strategy is to employ two clusters of redundant information at both ends of the fiber, and only transmit the reference to the cluster that contains this information.
 Signal compression inevitably increases the local network complexity at the fiber end points, but can still create effective volume savings.
 Especially in long-distance connections, fiber diameter has a very large impact on overall volume.
-Long-distance connections make up only 2\% of all connections but 85?\% of the brain's volume [1.1.fiberstats].
+Long-distance connections make up only 2\% of all connections but occupy two thirds of white matter volume [1.1.fiberstats].
 
 The volume constraints put a constant metaphoric pressure on both length and diameter of long-distance connections.
 When a bundle of fibers maintains its length and myelination thickness beyond the first few years of development, it automatically implies that the underlying signals require both high bandwidth and high priority.
 
 \subsection{Language network}
-In the case of human spoken language, there are two fiber tracts that seem to be responsible for relaying signals with high density and demand.
-- important fiber tracts for language: ECFS and UF
-- two information processing streams along two fiber tracts
-- cortial regions at the end points of the tracts
+The language fiber network, as previously mentioned, has been explored only in the recent two centuries.
+There are four fiber tracts that seem to be responsible for relaying language-related signals, which we can reasonably assume to be responsible for relaying signals with high bandwidth and priority.
+All of those four fiber tracts connect regions of the frontal cortex with regions of the temporal cortex.
+They can be grouped into two sets, a dorsal and a ventral set.
+
+The dorsal set consists of the arcuate fascile (AF) and the superior longitudinal fascile (SLF) \cite{1.1.Gierhan}.
+The SLF consists of three individual sections, which connect different pairs of anatomical features.
+SLF II connects the angular gyrus with the frontal cortex, SLF III connects the frontal cortex to the supramarginal gyrus and SLF-tp connects the angular gyrus with the temporal cortex.
+The AF connects pars opercularis and the posterior superior temporal gyrus (pSTG).
+
+The ventral set consists of the inferior fronto-occipital fascicle (IFOF, also known as ECFS) and the unicate fasicle (UF).
+The IFOF connects the frontal cortex with the posterior temporal cortex, as well as to occipital and parietal regions.
+The UF connects the anterior interior region of the frontal cortex and the anterior temporal cortex.
+
+The regions at the end points of these fiber tracts are responsible for forwarding and receiving language-related signals.
+In order to examine their role in language processing, it is necessary to define these regions with the least amount of functional overlap as possible.
+For this purpose, it is helpful to include a definition based on functional roles, rather than purely by their anatomical properties.
+This perspective \ref{pathways} yields much more narrowly defined functional regions, which are still directly connected by the four major pathways.
+Because these connections are defined by their functional roles, Friederici refers to pathways rather than fiber tracts.
+There are, as before, four pathways:
+
+Ventral pathway I connects, via the IFOF, 
+
+Dorsal pathway I connects, via the SLF, Wernicke's area and the premotor cortex.
+Dorsal pathway II connects, via the AF, Broca's area and Wernicke's area.
+
+"A recent model describing the neural language circuit with respect to the information flow [5] has suggested the particular roles of the two dorsal pathways to be as follows: the pathway connecting the posterior TC to the PMC, probably mediated via the PC, supports input driven auditory-to-motor mapping, as in speech repetition, whereas the pathway connecting Broca’s area and posterior STG directly (the AF) supports the processing of syntactically complex sentences, possibly by providing top-down predictions for the incoming input."
+
 - role of each cortical region
-- pSTG: role not yet known
 - pSTG is known to be used in SRC/ORC grammar tasks (from fMRI)
 - information streams from and to pSTG -> indication of its role
 
-Dorsal \& Ventral streams
 The ventral stream uses two major long-distance fiber tracts: ECFS and UF
 Ventral pathway I (ECFS): STG to BA45
 Ventral pathway II (UF): aSTG to FOP
 The dorsal stream uses two major long-distance fiber tracts: The arcuate fascicle and the superior longitudinal fascicle.
 Dorsal pathway I (SLF): pSTG to premotor cortex in BA6
-Dorsal pathway II (AF): pSTG to BA44
 
 During sentence processing, the IFG and posterior superior temporal regions have been proposed to exchange information via
  the dorsally located Arcuate Fasciculus/Superior Longitudinal Fasciculus (AF/SLF; Friederici, 2011; Meyer, Obleser, Anwander, \& Friederici, 2012; Wilson et al., 2011). This proposal still awaits direct causal support, since it is based either on tractography in healthy participants (Catani, Jones, \& ffytche, 2005; Friederici, Bahlmann, Heim, Schubotz, \& Anwander, 2006; Glasser \& Rilling, 2008; Meyer et al., 2012; Parker et al., 2005; Saur et al., 2010; Weiller, Musso, Rijntjes, \& Saur, 2009) or data from sentence-processing-impaired conduction aphasics whose lesions mostly involve both gray- and white-matter damage (Baldo, Klostermann, \& Dronkers, 2008; Buchsbaum et al., 2011; Friedmann \& Gvion, 2003) and primary progressive aphasics (Galantucci et al., 2011; Wilson et al., 2010, 2011). The AF/SLF has been taken to be particularly relevant for the

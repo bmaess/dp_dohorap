@@ -1,85 +1,12 @@
-Entries with ">" are files in my ReadCube library, "-" are only references
-
 % Chapter 1.1
 
-[1.1.whitematter] doi:10.1038/scientificamerican0308-54
+[1.1.fiberstats] Schuz, A. Braitenberg, V. (2002). "The human cortical white matter: Quantitative aspects of cortico-cortical long-range connectivity". Cortical Areas: Unity and Diversity, Conceptual Advances in Brain Research. pp 377–386 Taylor and Francis London. ISBN 978-0-415-27723-5
 
-[1.1.history] Schmahmann, J., & Pandya, D. (2007). Cerebral White Matter — Historical Evolution of Facts and Notions Concerning the Organization of the Fiber Pathways of the Brain. Journal of the History of the Neurosciences, 16(3), 237267. doi:10.1080/09647040500495896
+[1.1.firstDiffusion] http://dx.doi.org/10.1148%2Fradiology.161.2.3763909
 
-[1.1.firstDiffusion] http://dx.doi.org/10.1016%2F0022-2364%2885%2990111-8
-
-[1.1.smallWorld] Sporns, Olaf; Chialvo DR; Kaiser M; Hilgetag CC (2004). "Organization, development and function of complex brain networks". Trends Cogn Sci. 8 (9): 418–425. doi:10.1016/j.tics.2004.07.008. PMID 15350243.
-
-
+[1.1.DIIa] Catani, M.; Jones, D. K. (2005). "Perisylvian language networks of the human brain". Annals of neurology 57 (1): 8–16. doi:10.1002/ana.20319
 
 % Chapter 1.5
 
-[1.5.SNR] Volegov, P., Matlachov, A., Mosher, J., Espy, M., & Kraus, R. (2004). Noise-free magnetoencephalography recordings of brain function. Physics in Medicine and Biology, 49(10), 2117–2128. doi:10.1088/0031-9155/49/10/020
-
-[1.5.MEG.a] Hämäläinen, M. S., Hari, R., Ilmoniemi, R. J., Knuutila, J., & Lounasmaa, O. V. (1993). Magnetoencephalography – theory, instrumentation, and applications to noninvasive studies of the working human brain. Reviews of Modern Physics, 65, 413-497.
-
-[1.5.MEG.b] Baillet, S., Mosher, J. C., & Leahy, R. M. (2001). Electromagnetic brain mapping. IEEE Signal Processing Magazine, 18, 14-30. 
-
-[1.5.MEG.c] Vrba, J, & Robinson, S. E. (2001). Signal processing in magnetoencephalography. Methods, 25, 249-271. 
-
-[1.5.tissues.a] Geddes, L., Baker, L., 1967. The specific resistance of biological material. A compendium of data for the biomedical engineer and physiologist. Med. Biol. Eng. 5, 271 – 293.
-
-[1.5.tissues.b] Haueisen, J., 1996. Methods of numerical field calculation for neuromagnetic source localization. PhD thesis, Shaker-Verlag Aachen, ISBN 3-8265-1691-5.
-
-[1.5.music] Mosher, J., & Leahy, R. (1998). Recursive MUSIC: A framework for EEG and MEG source localization. IEEE Transactions on Biomedical Engineering, 45(11), 13421354. doi:10.1109/10.725331
-
-[1.5.simplex] Huang, M., Aine, C., Supek, S., Best, E., Ranken, D., & Flynn, E. (1998). Multi-start downhill simplex method for spatio-temporal source localization in magnetoencephalography. Electroencephalography and clinical neurophysiology, 108(1), 32–44. doi:10.1016/S0168-5597(97)00091-9
-
-[1.5.focal.a]: H.G. Vaughan, Jr. The analysis of scalp-recorded brain potentials. In R.F. Thompson and M.M. Patterson, editors, Bioelectric Recording Techniques, pages 158–207. Part B. Academic Press, New York, 1974.
-
-[1.5.focal.b]: M. Scherg and D. von Cramon. Two bilateral sources of the late AEP as identified by a spatio-temporal dipole model. Electroenc. Clin. Neurophysiol., 62:32–44, 1985.
-
-[1.5.focal.c]: J.C. Mosher, P.S. Lewis, and R.M. Leahy. Multiple dipole modeling and localization from spatio-temporal MEG data. IEEE Trans. Biomed. Eng., 39(6):541–557, 1992.
-
-[1.5.focal.d]: C.H. Wolters, R.F. Beckmann, A. Rienäcker, and H. Buchner. Comparing regularized and non-regularized nonlinear dipole fit methods: A study in a simulated sulcus structure. Brain Top., 12(1):3–18, 1999.
-
-[1.5.L2]: M.S. Hämäläinen and R.J. Ilmoniemi. Interpreting measured magnetic fields of the brain: Estimates of current distributions. Techn. Report TKK- F-A559, Helsinki University of Technology, 1984.
-
-[1.5.L1.b]: M. Wagner, M. Fuchs, H.-A. Wischmann, R. Drenckhahn, and Th. Köhler. Current density reconstructions using the L1-norm. In Proc. of the 10th Int.Conf.of Biomagnetism; Santa Fe, pages 158–207. Biomag96, 1996.
-
-[1.5.highpass]: Tervaniemi M, Kujala A, Alho K, Virtanen J, Ilmoniemi RJ, Näätänen R (1999): Functional specialization of the human auditory cortex in processing phonetic and musical sounds: a Magnetoencephalographic (MEG) study. NeuroImage 9:330 – 336.
-
-[1.5.information]: Wiener N: The theory of prediction. In Modern Mathematics for the Engineer. Edited by: Beckmann EF. McGraw-Hill, New York; 1956
-
-[1.5.dSPM]: Dale et al., 2000
-
-[1.5.MNE]: Hammalaien, 2005
-
-[1.5.sLORETA]: Pascual-Marqui, 2002
-
-[1.5.Granger]: Granger CWJ: Investigating causal relations by econometric models and cross-spectral methods. Econometrica 1969, 37:424-438
-
-[1.5.SEM]: F. Darvas and R.M. Leahy, ‘’Functional Imaging of Brain Activity and Connectivity with MEG’’, in Handbook of Brain Connectivity, 1st Edition, Springer, 1999, pp.201-220.
-
-[1.5.DCM]: O. David, S.J. Kiebel, L.M. Harrison, J. Mattout, J.M. Kilner, K.J. Friston, ‘’Dynamic Causal Modeling of Evoked Responses in EEG and MEG’’, Neuroimage, vol.3, no.4, pp.1255-1272, May2006. http://dx.doi.org/10.1016/j.neuroimage.2005.10.045
-
-[1.5.connectivity]: Sakkalis, V. (2011). Review of advanced techniques for the estimation of brain connectivity measured with EEG/MEG. Computers in biology and medicine, 41(12), 1110–7. doi:10.1016/j.compbiomed.2011.06.020
-
-[1.5.PDC]: B. Schelter, J. Timmer, M. Eichler, ‘’Assessing the Strength of Directed Influences Among Neural Signals Using Renormalized Partial Directed Coherence’’, J Neurosci Methods, vol.179, no.1, pp.121-130, Apr. 2009. http://dx.doi.org/10.1016/j.jneumeth.2009.01.006 
-
-[1.5.gPDC]: L.A. Baccala, D.Y. Takahashi, K. Sameshima, ‘‘Generalized Partial Directed Coherence’’, Proceedings of the 15th International Conference on Digital Signal Processing. IEEE, Cardiff, Jul.2007, pp.163-166. http://dx.doi.org/10.1109/ICDSP.2007.4288544 
-
-[1.5.TEcomparison]: M. Garofalo, T. Nieus, P. Massobrio, S. Martinoia, ‘‘Evaluation of the Performance of Information Theory-Based Methods and Cross-Correlation to Estimate the Functional Connectivity in Cortical Networks’’, PLoS ONE, vol.4, no.8, Mar.2009. http://dx.doi.org/10.1371/journal.pone.0006482
-
-[1.5.Kriegeskorte]: Kriegeskorte, N., & Bandettini, P. A. (2007). Analyzing for information, not activation, to exploit high-resolution fMRI. NeuroImage, 38, 649-662. 
-
-[1.5.Beamformer]:
-einer der folgenden:
-Barnes and Hillebrand, 2003; Gross and Ioannides, 1999; Gross et al., 2001; Hillebrand and Barnes, 2003; Robinson and Vrba, 1999; Sekihara et al., 2001; Van Veen et al., 1997
-
-[1.5.synchronizity]: Kandel et al., 2000
-
-% Chapter 2
-
-[2.1] Skeide, M. A. (2012). Syntax and semantics networks in the developing brain. PhD Thesis, Max Planck Institute for Human Cognitive and Brain Sciences, Leipzig.
-
-[2.2] Evan Kidd , Silke Brandt , Elena Lieven & Michael Tomasello (2007). Object relatives made easy: A cross-linguistic comparison of the constraints influencing young children's processing of relative clauses, Language and Cognitive Processes, 22:6, 860-897, DOI: 10.1080/01690960601155284
-
-[2.3] Corrêa, L. (1995). An alternative assessment of children’s comprehension of relative clauses. Journal of Psycholinguistic Research, 24(3), 183203. doi:10.1007/BF02145355
-
-[2.4] Weighall, A., & Altmann, G. (2011). The role of working memory and contextual constraints in children’s processing of relative clauses. Journal of child language, 38(3), 579–605. doi:10.1017/s0305000910000267
+[1.5.causality]: Lizier JT, Prokopenko M (2010) Differentiating information transfer and causal
+ effect. Eur Phys J B 73: 605–615
