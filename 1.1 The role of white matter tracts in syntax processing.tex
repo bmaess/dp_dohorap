@@ -10,43 +10,66 @@ Both structural elements (e.g., dendritic spines) and computational units (e.g.,
 The fact that anatomical features can't be clearly mapped to a functional role violates the naïve reductionist approach, and puts cognitive science more in line with other fields that explore dynamical systems, such as physics, theoretical computer science or meteorology.
 Although the exploration of anatomic features (e.g., the classification of cortical regions based on myeloarchitecture ) led to several ground-breaking discoveries in psychology, these findings tend to serve as a base for more specialized studies, rather than creating a framework for understanding cognitive processes.
 
-In recent years, another antomic feature became accessible for exploration due to advances in neuroimaging.
+In recent years, another anatomic feature became accessible for exploration due to advances in neuroimaging.
 The cerebral white matter, containing mainly myelinated axons and glial cells, was suspected to play a role in signal transmission as early as 1710 [1.1.history].
 In the writings of Pourfoir de Petit (1664-1741), nerve fiber bundles were theorized to transmit animal spirits from the cortex to the medulla oblongata.
 The complete signal transmission chain, continuing the activation from the medulla to the extremities via the spinal cord was made by Emanuel Swedenborg between 1738 and 1744 [1.1.history].
 However, during the next 250 years, the exploration of the role of cerebral fiber tracts was stifled by the lack of a non-invasive, large-scale measurement method.
-These circumstances apruptly changed in 1972 [1.1.history], when the discovery of the autoradiographic method allowed tracing the precise interneural connections with radioactive markers.
+These circumstances abruptly changed in 1972 [1.1.history], when the discovery of the autoradiographic method allowed tracing the precise interneural connections with radioactive markers.
 This method was very widely used to fill existing knowledge gaps in cognitive science, but one fundamental flaw has prevented its application in humans: not only is the tracer very invasive, but the subject needs to be killed and dissected in the course of the experiment.
 This drawback has prevented the study of the role of human fiber bundles, and not all knowledge gaps could be filled with equivalent results from lab animals.
 One of the most important set of fiber bundles that eluded autoradiographic study was the human language network.
-Only with the advent of diffusion imaging
+Only with the advent of main-stream diffusion imaging [1.1.firstDiffusion] in the mid-1980s, examinations of human fiber bundles in vivo started to be possible.
+The analysis of the previously elusive language-related fiber bundles is still ongoing, while new methods in both acquisition and data processing proceed to advance.
+But before I give an overview over the language network, some fundamentals need to be explained first.
 
+\paragraph{The role of myelination}
+When regarding the brain from an information-theoretical perspective, there are two biophysical properties, which, in combination, create a unique set of constraints: myelination and limited space.
+Nerve fibers typically transmit signals between exactly two sets of neuronal clusters.
+The transmission process relies on a combination of ion flux and activation voltages.
+Since the signal propagation is based on an activation cascade of ion channels, the transmitted signal is strictly binary in nature, is limited in bandwidth by a refractory period of $\approx 1ms$ and can only travel in one direction at a time.
+The typical propagation speed of a nerve fiber is only $0.1\frac{m}{s}$, but can be increased by several magnitudes in the presence of myelinating sheath cells, the oligodentrocytes.
+Additional myelination layers reduce the amount of electrical current lost to the extracellular (usually liquid) environment.
+This effect causes not only a higher propagation speed, but also an equally increased maximum signal bandwidth, since the refractory period stays constant.
 
-There are a few biophysical properties that pose unique constraints to this perspective.
-Connections between computational units (neuronal clusters) are commonly realized as nerve fibers, usually in the form of singular, branchless axons.
-The diameter of each axon directly influences its transmission speed.
-However, due to the limited amount of space in the skull cavity, the brain is fundamentally volume-constrained.
-New connections can therefore only be created in two ways: either another connection is reduced in volume, allowing the 
+However, myelination has a major drawback: it increases the volume of the nerve fiber drastically.
+For an practical illustration, A-\gamma-fibers, responsible for relaying hot and cold sensations, have a diameter of 3µm and propagate signals at $50\frac{m}{s}$.
+In comparison, A-\beta-fibers, responsible for sensing touch on the skin, have a diameter of 10µm and propagate signals with a speed of $50\frac{m}{s}$.
+The cross section of this fiber class is 11 times bigger, although its effective bandwidth is only three times higher.
+The volume requirements of myelination follow a law of diminishing returns: a single fiber with a high propagation speed requires more space than two fibers at half the speed, although the combined bandwidth is equivalent.
 
-The most important task of the brain, learning, requires the creation of new connections between existing neuronal clusters[1.1.whitematter].
+Since the brain is situated in an inflexible skull cavity, overall volume for the whole network (and, in effect, for every nerve fiber) is fundamentally volume-constrained.
+Myelination is flexible and adaptive, so bandwidth can be increased by adding additional myelin layers to fibers in high demand.
+However, due to the volume constraints, this is only possible when neighboring fibers are reduced in diameter by the same volume.
 
-- fibers are expensive, brain tries to save space and energy
-- most connections are local, "small world"
-- local connections mean that neighboring neuronal clusters have similar tasks
-- local connections cause gyration
-- also lead to automatic grouping of task-related neuronal clusters into task-specialized cortical regions
+This combination of constraints has apparently led to the prominent "small-world" topology featured in every level of the central nervous system [1.1.smallWorld].
+This type of network is characterized by a large number of very local connections; in fact, most nodes are only connected to their direct neighbors.
+The small-world topology is a natural result of the trade-off that is created by minimizing the network distance between nodes while using the smallest amount of connections.
+It is also responsible for one of the most convenient characteristics in cognitive science, the specialized brain region.
+In a strongly local network, neural clusters in close proximity can share their information most effectively in closest network proximity.
+And since neural clusters can choose to connect to other clusters most relevant to their task, this network proximity also becomes a functional proximity.
+In a small-world-topology, this functional proximity becomes a spatial proximity.
+Therefore, the optimal solution for information processing at any network level is to group neuronal clusters with similar tasks into a common spatial region.
+As a result, the brain is highly structured into distinct functional regions, and regions in close proximity usually work together.
 
-- biophysical connection between bandwidth and volume
-- learning requires shrinking old fibers and increased bandwidth compression (for both old and new fibers)
-- volume-constrained optimization process: pressure on long-distance
+The combination of volume constraints and myelation properties creates another trade-off in one of the most fundamental tasks of the brain: learning.
+Learning, on a neural level, always requires some form of change.
+This change can occur within the neuron, for example by tweaking the input weights of established connections.
+In other cases, new signal sources are necessary to accomplish the recently learned task.
+Finding new signal sources requires movement, either by growing new fiber strands or by repositioning or remyelating existing fibers.
+In extreme cases, even the neuron body can move, at up to 10mm per hour.
+Again, due to volume constraints, movement requires space, which is usually acquired by demyelating existing fibers.
+In order to preserve the effective bandwidth even in slower fibers, neural clusters at the end points have the option of compressing the signal.
+An example for a compression strategy is to employ two clusters of redundant information at both ends of the fiber, and only transmit the reference to the cluster that contains this information.
+Signal compression inevitably increases the local network complexity at the fiber end points, but can still create effective volume savings.
+Especially in long-distance connections, fiber diameter has a very large impact on overall volume.
+Long-distance connections make up only 2\% of all connections but 85?\% of the brain's volume [1.1.fiberstats].
 
-- existing long-distance fiber bundles, although requiring a large volume, have survived this optimization
-- therefore, bandwidth compression and signal complexity must be very high on these fiber bundles
-- end points of bundles play role of information integration and (de-)compression
-- fiber bundles, in the framework of the connectome, have only recently been explored
-
+The volume constraints put a constant metaphoric pressure on both length and diameter of long-distance connections.
+When a bundle of fibers maintains its length and myelination thickness beyond the first few years of development, it automatically implies that the underlying signals require both high bandwidth and high priority.
 
 \subsection{Language network}
+In the case of human spoken language, there are two fiber tracts that seem to be responsible for relaying signals with high density and demand.
 - important fiber tracts for language: ECFS and UF
 - two information processing streams along two fiber tracts
 - cortial regions at the end points of the tracts

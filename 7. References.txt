@@ -8,6 +8,10 @@ Entries with ">" are files in my ReadCube library, "-" are only references
 
 [1.1.firstDiffusion] http://dx.doi.org/10.1016%2F0022-2364%2885%2990111-8
 
+[1.1.smallWorld] Sporns, Olaf; Chialvo DR; Kaiser M; Hilgetag CC (2004). "Organization, development and function of complex brain networks". Trends Cogn Sci. 8 (9): 418–425. doi:10.1016/j.tics.2004.07.008. PMID 15350243.
+
+
+
 % Chapter 1.5
 
 [1.5.SNR] Volegov, P., Matlachov, A., Mosher, J., Espy, M., & Kraus, R. (2004). Noise-free magnetoencephalography recordings of brain function. Physics in Medicine and Biology, 49(10), 2117–2128. doi:10.1088/0031-9155/49/10/020
