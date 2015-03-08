@@ -21,6 +21,16 @@
  cortico-subcortical electrostimulations. Brain  2005,
  128:797-810.
 
+[1.1.D1a] Friederici  AD: The cortical  language circuit: from auditory
+ perception to sentence comprehension. Trends Cogn  Sci  2012,
+ 16:262-268.
+
+[1.1.D1b] Saur D, Kreher BW, Schnell  S, Ku ¨ mmerer D, Kellmeyer P, Vry MS,
+ Umarova RM, Glauche V, Abel  S, Huber W  et  al.: Ventral  and
+ dorsal  pathways for  language. Proc Natl  Acad  Sci  USA 2008,
+ 105:18035-18040.
+
+[1.1.causality] Meyer, L, Cunitz, K, Obleser, J, & Friederici, AD. (2014). Sentence processing and verbal working memory in a white-matter-disconnection patient. Neuropsychologia. Retrieved from http://www.sciencedirect.com/science/article/pii/S002839321400195X 
 
 % Chapter 1.5
 
