@@ -4,7 +4,23 @@
 
 [1.1.firstDiffusion] http://dx.doi.org/10.1148%2Fradiology.161.2.3763909
 
-[1.1.DIIa] Catani, M.; Jones, D. K. (2005). "Perisylvian language networks of the human brain". Annals of neurology 57 (1): 8–16. doi:10.1002/ana.20319
+[1.1.tracts.lesions] Galantucci  S, Tartaglia MC, Wilson  SM, Henry ML, Filippi  M,
+ Agosta F, Dronkers N, Henry RG, Ogar JM, Miller BL, Gorno-
+ Tempini  ML: White matter  damage in  primary  progressive
+ aphasias: a diffusion  tensor  tractography  study. Brain  2011,
+ 134:3011-3029.
+
+[1.1.tracts.interference.a] Hamer PCDW, Moritz-Gasser S, Gatignol  P, Duffau  H: Is the
+ human  left middle longitudinal  fascicle essential  for
+ language?  A  brain  electrostimulation  study. Hum Brain  Mapp
+ 2011, 32:962-973.
+
+[1.1.tracts.interference.b] Duffau H, Gatignol  P, Mandonnet  E, Peruzzi  P, Tzourio-
+ Mazoyer N, Capelle L: New  insights into the anatomo-
+ functional connectivity of the semantic  system:  a study  using
+ cortico-subcortical electrostimulations. Brain  2005,
+ 128:797-810.
+
 
 % Chapter 1.5
 

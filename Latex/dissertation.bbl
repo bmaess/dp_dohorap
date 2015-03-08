@@ -263,6 +263,34 @@ Geddes, L.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Gierhan%
+}{%
+Gierhan%
+}{%
+{\protect \APACyear {2013}}%
+}]{%
+1.1.Gierhan}
+\APACinsertmetastar {%
+1.1.Gierhan}%
+\begin{APACrefauthors}%
+Gierhan, S\BPBI M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Connections for auditory language in the human brain.}
+  {Connections for auditory language in the human brain.}{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Brain and language}{127}{2}{205-221}.
+\newblock
+\begin{APACrefURL} \url{http://dx.doi.org/10.1016/j.bandl.2012.11.002}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1016/j.bandl.2012.11.002} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Gramfort%
 \ \protect \BOthers {.}}{%
 Gramfort%
@@ -1098,7 +1126,7 @@ Wagner%
 , Fuchs%
 , Wischmann%
 , Drenckhahn%
-\BCBL {}\ \BBA {} Köhler%
+\BCBL {}\ \BBA {} K"ohler%
 }{%
 Wagner%
 \ \protect \BOthers {.}}{%
@@ -1112,7 +1140,7 @@ Wagner, M.%
 , Fuchs, M.%
 , Wischmann, H\BHBI A.%
 , Drenckhahn, R.%
-\BCBL {}\ \BBA {} Köhler, T.%
+\BCBL {}\ \BBA {} K"ohler, T.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
