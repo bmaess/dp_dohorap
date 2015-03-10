@@ -1,8 +1,7 @@
 \chapter{Introduction}
 
-\section{The role of white matter tracts in syntax processing}
-
-\subsection{Exploration of white matter tracts}
+\section{Neurobiological background}
+\subsection{Exploration strategies of white matter tracts}
 The human brain can be regarded as an information-processing system, processing and storing environmental stimuli in order to create meaningful actions. 
 In a very simplified information-processing perspective, it can be reduced to two functional components: computational units in the grey matter and signal relays in the white matter.
 Contrary to other common information-theoretical systems, there is no fundamental distinction between hardware and software in the brain.
@@ -27,7 +26,15 @@ Only with the advent of main-stream diffusion imaging \cite{1.1.firstDiffusion} 
 The analysis of the previously elusive language-related fiber bundles is still ongoing, while new methods in both acquisition and data processing proceed to advance.
 But before I give an overview over the language network, some fundamentals need to be explained first.
 
-\paragraph{The role of myelination}
+\begin{figure}[h]
+\begin{center}
+\vspace{7mm}
+\includegraphics[width=0.75\textwidth]{pics/1_1_myelin_sheath}
+\caption{\label{1.1.neuron.illustrated} Illustration of an axonal fiber, wrapped in myelin layers. Adapted from Mosby's Medical Dictionary, 8th edition. \textcopyright 2009, Elsevier.}
+\end{center}
+\end{figure}
+
+\subsection{The role of myelination}\label{1.1.myelin}
 When regarding the brain from an information-theoretical perspective, it is important to consider that it is a self-optimizing structure with two important optimization constraints: the mechanism of myelination and limited space.
 
 The importance of myelination becomes clear when regarding the mechanism of long-distance cerebral signal transmission.
@@ -38,15 +45,7 @@ The typical propagation speed of a nerve fiber is only $0.1\frac{m}{s}$, but can
 Myelin layers, produced by myelinating sheath cells, reduce the amount of electrical current lost to the extracellular (usually liquid) environment.
 This effect causes not only a higher propagation speed, but also an equally increased maximum signal bandwidth, since the refractory period stays constant.
 
-\begin{figure}[h]
-\begin{center}
-\vspace{7mm}
-\includegraphics[width=0.75\textwidth]{pics/1_1_myelin_sheath}
-\caption{\label{1.1.neuron.illustrated} Illustration of an axonal fiber, wrapped in myelin sections. Adapted from Mosby's Medical Dictionary, 8th edition. \textcopyright 2009, Elsevier.}
-\end{center}
-\end{figure}
-
-However, myelination has a major drawback: it increases the volume of the nerve fiber drastically.
+Myelination causes not only positive aspects, but also creates a major drawback: it increases the volume of the nerve fiber drastically.
 For an practical illustration, A-$\gamma$-fibers, responsible for relaying hot and cold sensations, have a diameter of \SI{3}{\um} and propagate signals at $15\frac{m}{s}$.
 In comparison, A-$\beta$-fibers, responsible for sensing touch on the skin, have a diameter of \SI{10}{\um} and propagate signals with a speed of $50\frac{m}{s}$.
 The cross section of this fiber class is 11 times bigger, although its effective bandwidth is only three times higher.
@@ -54,7 +53,7 @@ The volume requirements of myelination follow a law of diminishing returns: a si
 
 Since the brain is situated in an inflexible skull cavity, overall volume for the whole network (and, in effect, for every nerve fiber) is fundamentally volume-constrained.
 Myelination is flexible and adaptive, so bandwidth can be increased by adding additional myelin layers to fibers in high demand.
-However, due to the volume constraints, this is only possible when neighboring fibers are reduced in diameter by the same volume.
+Due to the volume constraints, this is only possible when neighboring fibers are reduced in diameter by the same volume.
 
 This combination of constraints has apparently led to the prominent "'small-world"'' topology featured in every level of the central nervous system \cite{1.1.smallWorld}.
 This type of network is characterized by a large number of very local connections; in fact, almost the majority (47.8\%) of all nodes are only connected to their nearest neighbors.
@@ -64,7 +63,7 @@ In a strongly local network, neural clusters in close proximity can share their 
 And since neural clusters can choose to connect to other clusters most relevant to their task, this network proximity also becomes a functional proximity.
 In a small-world-topology, this functional proximity becomes a spatial proximity.
 Therefore, the optimal solution for information processing at any network level is to group neuronal clusters with similar tasks into a common spatial region.
-As a result, the brain is highly structured into distinct functional regions, and regions in close proximity usually work together.
+As a result, the brain is highly structured into distinct functional regions, and regions in close proximity usually exchange signals with each other.
 
 The combination of volume constraints and myelination properties creates another trade-off in one of the most fundamental tasks of the brain: learning.
 Learning, on a neural level, always requires some form of change.
@@ -77,14 +76,14 @@ In order to preserve the effective bandwidth even in slower fibers, neural clust
 An example for a compression strategy is to employ two clusters of redundant information at both ends of the fiber, and only transmit the reference to the cluster that contains this information.
 Signal compression inevitably increases the local network complexity at the fiber end points, but can still create effective volume savings.
 Especially in long-distance connections, fiber diameter has a very large impact on overall volume.
-Long-distance connections make up only 2\% of all connections but occupy two thirds of white matter volume [1.1.fiberstats].
+Long-distance connections make up only 2\% of all connections but occupy two thirds of white matter volume \cite{1.1.fiberstats}.
 
 The volume constraints put a constant metaphoric pressure on both length and diameter of long-distance connections.
-When a bundle of fibers maintains its length and myelination thickness beyond the first few years of development, it automatically implies that the underlying signals require both high bandwidth and high priority.
+A highly myelinated bundle of fibers that maintains its length and diameter beyond the first years of development implies that it plays an essential role in the network and that its signals require high bandwidth.
 
-\subsection{Language network}
-The language fiber network, as previously mentioned, has been explored only in the recent two centuries.
-There are four fiber tracts that seem to be responsible for relaying language-related signals, which we can reasonably assume to be responsible for relaying signals with high bandwidth and priority.
+\subsection{The language network}
+The language fiber network, as previously mentioned, has been explored only during the recent two centuries.
+There are four fiber tracts that seem to be responsible for relaying language-related signals.
 All of those four fiber tracts connect regions of the frontal cortex with regions of the temporal cortex.
 They can be grouped into two sets, a dorsal and a ventral set \cite{1.1.Gierhan}.
 
@@ -100,7 +99,7 @@ The UF connects the anterior interior region of the frontal cortex and the anter
 The regions at the end points of these fiber tracts are responsible for forwarding and receiving language-related signals.
 In order to examine their role in language processing, it is necessary to define these regions with the least amount of functional overlap as possible.
 For this purpose, it is helpful to include a definition based on functional roles, rather than purely by their anatomical properties.
-This perspective \ref{1.1.pathways} yields much more narrowly defined functional regions, which are still directly connected by the four major pathways.
+This perspective \cite{1.1.pathways} yields much more narrowly defined functional regions, which are still directly connected by the four major pathways.
 Because these connections are defined by their functional roles, I'll refer to them as pathways rather than fiber tracts.
 There are, as before, four pathways in two groups: two ventral pathways and two dorsal pathways.
 
@@ -111,7 +110,7 @@ There are, as before, four pathways in two groups: two ventral pathways and two 
 \vspace{7mm}
 \includegraphics[width=0.49\textwidth]{pics/1_1_tracts_ventral}
 \includegraphics[width=0.49\textwidth]{pics/1_1_tracts_dorsal}
-\caption{\label{1.1.tracts}Illustration of the most probable course of language-related fiber tracts, assembled in a meta-study \ref{1.1.Gierhan}. Left: ventral fiber tracts, right: dorsal fiber tracts. Numbers indicate Brodmann areas. Abbreviations: AG - angular gyrus, dPMC - dorsal premotor cortex, FOP - frontal operculum, Fpole - frontal pole, IFOF - inferior fronto-occipital fascicle, ILF - inferior longitudinal fascicle, MdLF - middle longitudinal fascicle, N. N. - nomen nescio, Occ - occipital cortex, Orb - orbitofrontal cortex, pSTG - posterior superior temporal gyrus, MTG - middle temporal gyrus, PTL - posterior temporal lobe, SLF II/III/-tp - second/third/temporoparietal component of superior longitudinal fascicle, SMG - supramarginal gyrus, Tpole - temporal pole, UF - uncinate fascicle, vPMC - ventral premotor cortex.}
+\caption{\label{1.1.tracts}Illustration of the most probable course of language-related fiber tracts, assembled in a meta-study \cite{1.1.Gierhan}. Left: ventral fiber tracts, right: dorsal fiber tracts. Numbers indicate Brodmann areas. Abbreviations: AG - angular gyrus, dPMC - dorsal premotor cortex, FOP - frontal operculum, Fpole - frontal pole, IFOF - inferior fronto-occipital fascicle, ILF - inferior longitudinal fascicle, MdLF - middle longitudinal fascicle, N. N. - nomen nescio, Occ - occipital cortex, Orb - orbitofrontal cortex, pSTG - posterior superior temporal gyrus, MTG - middle temporal gyrus, PTL - posterior temporal lobe, SLF II/III/-tp - second/third/temporoparietal component of superior longitudinal fascicle, SMG - supramarginal gyrus, Tpole - temporal pole, UF - uncinate fascicle, vPMC - ventral premotor cortex.}
 \end{center}
 \end{figure}
 
@@ -127,25 +126,34 @@ Ventral pathway 2 connects a series of wide-spread regions via the IFOF.
 Starting at the occipital cortex, it connects to the pSTG/MTG region and terminates in three frontal areas: the frontal pole, frontal operculum and BA45.
 Most areas connected to this pathway, including BA45, MTG, aSTG and pSTG, are known for their involvement in semantic language processing.
 Based on the similarities, ventral pathway 1 was hypothesized to be responsible for semantic processing and comprehension.
-This hypothesis was confirmed in a series of studies [1.1.tracts.lesions, 1.1.tracts.interference.a, 1.1.tracts.interference.b], which showed that semantic deficits appeared exclusively when physically interfering with the IFOF.
+This hypothesis was confirmed in a series of studies \cite{1.1.tracts.lesions, 1.1.tracts.interference.a, 1.1.tracts.interference.b}, which showed that semantic deficits appeared exclusively when physically interfering with the IFOF.
 
 Dorsal pathway 1 connects Wernicke's area and the premotor cortex via the SLF.
 Wernicke's area is a central structure for language, and is involved during both execution and comprehension of most language-related tasks.
 The premotor cortex, in contrast, is mainly responsible for movement planning and recognition.
-When these two regions use the dorsal pathway 1, they probably perform two tasks: sensor-to-movement mapping [1.1.D1a] and speech repetition [1.1.D1b].
-These tasks aren't independent from each other: speech repetition depends on sensor-to-movement mapping for basic comprehension.
+When these two regions use the dorsal pathway 1, they probably perform two tasks: sensor-to-movement mapping \cite{1.1.D1a} and speech repetition \cite{1.1.D1b}.
+These tasks aren't entirely separate, since speech repetition depends on sensor-to-movement mapping for basic comprehension.
 
 Dorsal pathway 2 connects Broca's area and Wernicke's area via the AF.
-Broca's area and Wernicke's area typically collaborate in tasks that involve complex syntactical structures [1.1.D1a].
+Broca's area and Wernicke's area typically collaborate in tasks that involve complex syntactical structures \cite{1.1.D1a}.
 Dorsal pathway 2 is hypothesized to transport top-down predictions from Broca's area for facilitating input processing.
-This hypothesis is not yet confirmed with studies of causal signal flow, since existing literature is either based on tractography in healthy subjects or on lesioned subjects with damage in both white and gray matter [1.1.causality].
+This hypothesis is not yet confirmed with studies of causal signal flow, since existing literature is either based on tractography in healthy subjects or on lesioned subjects with damage in both white and gray matter \cite{1.1.causality}.
+
+% "'Neuroimaging studies have tried to characterise the neural substrate for representing human action. Many of these studies have followed a different tradition in psychophysics and developmental psychology of investigating the perception of "'biological motion"' - that is, the characteristic articulated motion of chordate animal bodies (e.g. Vaina, Solomon, Chowdhury, Sinha, \& Belliveau, 2001; Grossman \& Blake, 2002; Beauchamp, Lee, Haxby, \& Martin, 2002; Pelphrey, Mitchell, McKeown, Goldstein, Allison, \& McCarthy, 2003) or body and face parts (e.g. Hoffman \& Haxby, 2000; Hooker et al. 2003; Kilts et al. 2003; Pelphrey et al., 2003). Biological motion can also be perceived from the relative motion of just a few dots ("'point-light walkers"', Johansson, 1973); if the dots are spatially or temporally rearranged, the percept is destroyed. These neuroimaging studies suggest that one brain region, the posterior superior temporal sulcus, is particularly involved in the representation of biological motion.
+% Two sets of recent neuroimaging data suggest that the role of the posterior superior temporal sulcus (pSTS) may extend beyond a response to biological motion, to more abstract representations of intentional action. First, Castelli, Happe, Frith, \& Frith, (2000) and Schultz, Grelotti, Klin, Kleinman, Van der Gaag, Marois, \& Skudlarski, (2003) reported that a region of the pSTS showed a significantly higher response to animations of moving geometric shapes that depicted complex social interactions than to animations depicting inanimate motion. Second, using movies of human actors engaged in structured goal-directed actions (e.g. cleaning the kitchen), Zacks, Braver, Sheridan, Donaldson, Snyder, Ollinger, Buckner, \& Raichle, (2001) found that activity in the pSTS was enhanced when the agent switched from one action to another, suggesting that this region encodes the goal-structure of actions. Both of these results are consistent with a role for a region of pSTS cortex in representing intentional action, and not just biological motion."' (doi:10.1016/j.neuropsychologia.2004.04.015)
+
+
+% "'hierarchy construction might be supported by left inferior frontal (particularly BA44/45) and posterior superior temporal regions: (Ben-Shachar et al., 2003, 2004; Caplan et al., 2002; Just et al., 1996; Röder et al., 2002; Stromswold et al., 1996)"'
+
+% "'the enhanced inferior frontal (BA 44/45) activation observed for these sentence types is engendered by highly specialized aspects of syntactic processing, namely by syntactic transformations (Ben-Shachar et al., 2003, 2004; Grodzinsky, 2000)."'
+
 
 \begin{figure}[h]
 \begin{center}
 \vspace{7mm}
 \includegraphics[width=0.75\textwidth]{pics/1_1_tracts_function}
-\caption{\label{1.1.neuron.illustrated} Illustration of an axonal fiber, wrapped in myelin sections. Adapted from Mosby's Medical Dictionary, 8th edition. \textcopyright 2009, Elsevier.}
+\caption{\label{1.1.neuron.illustrated} Most probable course of language-related fiber tracts and their most likely functions \cite{1.1.Gierhan}. Numbers indicate Brodmann areas. AF - arcuate fascicle, AG - angular gyrus, dPMC - dorsal premotor cortex, FOP - frontal operculum, Fpole - frontal pole, ILF - inferior longitudinal fascicle, IFOF - inferior fronto-occipital fascicle, MdLF - middle longitudinal fascicle, MTG - middle temporal gyrus, N. N. - nomen nescio, Occ - occipital cortex, Orb - orbitofrontal cortex, pSTG - posterior superior temporal gyrus, PTL - posterior temporal lobe, SLF II/III/-tp - second/third/temporoparietal component of superior longitudinal fascicle, SMG - supramarginal gyrus, Tpole - temporal pole, UF - uncinate fascicle, vPMC - ventral premotor cortex}
 \end{center}
 \end{figure}
 
-The narrow knowledge about information flow on dorsal pathway 2 will be extended with this study.
+My goal is to extend the narrow knowledge about information flow on dorsal pathway 2 with this study.

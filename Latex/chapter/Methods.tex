@@ -140,7 +140,7 @@ In order to maximize the amount of usable trials for further analysis, the visua
 \end{center}
 \end{figure}
 
-\subsection{Auditory stimuli}
+\subsection{Auditory stimuli}\label{3.1.stimuli.auditory}
 
 \paragraph{Sentence content}
 Each pair of images was presented with a spoken question.
@@ -193,6 +193,7 @@ Sound arrived in the subjects' ears via ER3-14A/B earplugs (Etymotic Research In
 \subsection {MEG}
 MEG data were collected with an Elekta Neuromag VectorView\textsuperscript{\textregistered} MEG scanner in Bennewitz, at the development unit for Magnetoencephalography and Cortical Networks, Institute for Cognitive and Brain sciences, Leipzig, Germany.
 The scanner comprised 306 MEG-channel sensors (102 magnetometers, 204 planar gradiometers).
+It was passively shielded with two layers of \SI{\micro}-metal and one layer of aluminium, dampening external signals between 40db (at 0.1Hz) and 80db (at 500Hz).
 Sensors were tuned prior to each MEG recording session to limit noise levels to approximately $2.5 \frac{fT\sqrt{Hz}}{cm}$.
 Sensors that became very noisy during a recording block would be individually re-tuned at the next inter-block break, either by using the fine-tuning options or the selective heating function.
 Continuous MEG data were recorded at 1000 Hz sampling rate (330 Hz lowpass filter).
@@ -420,21 +421,20 @@ There are 720 unique possiblities to compare these regions, which would overwhel
 
 Comparisons between these regions were performed for all regions along three pathways (see Fig. \ref{3.4.regions}).
 The regions associated to each pathway are derived from \cite{1.1.pathways}.
-First, PAC and pSTG showed effects across both hemispheres.
+PAC and pSTG showed effects across both hemispheres.
 Therefore, I included comparisons across hemispheres between the mirrored regions (two connections: $PAC_{lh} \rightarrow PAC_rh$ and $pSTG_{lh} \rightarrow pSTG_rh$).
 Whenever PAC or pSTG were involved in a pathway, I included the regions from both hemispheres.
-The primary dorsal pathway connects PAC and BA6v, yielding two connections ($PAC_{lh} \rightarrow BA6v_{lh}$ and $PAC_{rh} \rightarrow BA6v_{lh}$).
+The primary dorsal pathway connects PAC and the left BA6v, yielding two connections ($PAC_{lh} \rightarrow BA6v_{lh}$ and $PAC_{rh} \rightarrow BA6v_{lh}$).
 The secondary dorsal pathway connects PAC, pSTG and BA44, yielding six unique connections ($PAC_{lh} \rightarrow pSTG_{lh}$, $PAC_{lh} \rightarrow pSTG_{rh}$, $PAC_{rh} \rightarrow pSTG_{lh}$, $PAC_{rh} \rightarrow pSTG_{rh}$, $pSTG_{lh} \rightarrow BA44_{lh}$ and $pSTG_{rh} \rightarrow BA44_{lh}$).
 The ventral pathway connects PAC, aSTG and BA45, yielding three unique connections ($PAC_{lh} \rightarrow aSTG_{lh}$, $PAC_{rh}-aSTG_{lh}$ and $aSTG_{lh} \rightarrow BA45_{lh}$).
-Since BA44 and BA45 are direct neighbors, their connections ($BA44_lh \rightarrow BA45_lh$) was included too.
-Finally, the end points of secondary dorsal and ventral tract were added to the comparison, yielding four connections in total ($PAC_{lh} \rightarrow BA44_{lh}$, $PAC_{rh} \rightarrow BA44_{lh}$, $PAC_{lh} \rightarrow BA45_{lh}$ and $PAC_{rh} \rightarrow BA45_{lh}$).
-The reverse direction was added for each of these 18 comparisons, yielding 36 pair-wise comparisons in total.
+Since BA44 and BA45 are direct neighbors, their connection ($BA44_lh \rightarrow BA45_lh$) was included too.
+The reverse direction was added for each of these 14 comparisons, yielding 28 pair-wise comparisons in total.
 
 \begin{figure}[h]
 \begin{center}
 \vspace{7mm}
 \includegraphics[width=0.75\textwidth]{pics/3_4_regions.png}
-\caption{\label{3.4.regions} Connections of selected cortical regions for the computation of transfered entropy. Left of PAC: ventral pathway; top left of PAC: primary dorsal pathway; right of PAC: secondary dorsal pathway.}
+\caption{\label{3.4.regions} Connections of selected cortical regions for the computation of transfered entropy. Left of PAC: ventral pathway; right of PAC: dorsal pathways 1 and 2.}
 \end{center}
 \end{figure}
 
@@ -462,8 +462,8 @@ I maximized this value by calculating \emph{cfg.repPred = sampleLength - embeddi
 This is the largest possible value that doesn't violate the assumptions behind the transfer analysis algorithm.
 
 
-During the second section, TrenTOOL performed a interaction shift test.
-This procedure (performed with the function \emph{InteractionDelayReconstruction\_calculate()}) counteracts bias introduced by noise, for example the common false positive detection of an interaction from a less noisy to a more noisy data set.
+During the second section, I performed a interaction shift test.
+This procedure (performed with the TrenTOOL function \emph{InteractionDelayReconstruction\_calculate()}) counteracts bias introduced by noise, for example the common false positive detection of an interaction from a less noisy to a more noisy data set.
 The shift test establishes the optimal delay of transfered entropy for each comparison of activity.
 Transfer entropy was computed for a time range of possible interaction delays: 1ms to 40ms in steps of 5ms.
 TrenTOOL then selected the interaction delay with the biggest associated transfer entropy as the most likely representation of the signal delay caused by cognitive processes and anatomic constraints.
@@ -477,6 +477,13 @@ The significance level for this procedure was \emph{cfg.alpha = 0.05}.
 I used t-values to represent the statistical results of the shift test (\emph{cfg.permstatstype = 'indepsamplesT'}).
 These results indicate the likelihood if an entropy transfer has occurred between the selected pair of regional activity.
 
+I then combined these subject-level results in Matlab to obtain group-level results.
+First, surrogate test results were combined with Stouffer's combined probability test.
+These combined test results were corrected with Benjamini & Hochberg's procedure for controlling the false discovery rate.
+Second, signal delay estimations were obtain by calculating the mean over all subjects.
 
-The third section evaluated the impact of the syntax condition on the whole group.
-For this purpose, a comparison was conducted between conditions over all subjects within a group.
+
+For the third section, I evaluated the impact of the syntax condition on all subjects.
+A clustered T-test compared transfer entropy between conditions over all subjects.
+For this group-level comparison, the TrenTOOL function \emph{TEgroup\_stats} was used.
+One comparison was conducted for each of the three timewindows.

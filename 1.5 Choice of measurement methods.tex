@@ -1,123 +1,151 @@
-\section{Choice of measurement methods}
+\section{Choice of measurement methods}\label{1.5}
 
-\subsection{Acquisition}
+In order to test these hypotheses, I needed to decide how to acquire and analyze my subjects' brain activity.
+This process is best explained by starting with the basis for cortical signals.
 
-\paragraph{Neuroanatomic principles}
-Neuronal activity creates a combination of electrical and magnetic fields.
-On a cellular level, activating a neuron causes depolarization, which in turn creates a weak electric field.
-Most neurons are equipped with a long axonal fibre that transmits a relatively strong postsynaptic signal.
-Especially in pyramidal cells which are responsible for long-distance transmissions, this axon can span several centimeters in length.
-Since signals along axons travel by a complex combination of transmitter binding, ion flux and electric fields, neuron-to-neuron data transmission exhibits three important restrictions.
+\subsection{Signal creation}
+Neuronal activity is represented as a combination of electrical and magnetic fields.
+Activating a neuron causes depolarization, which manifests itself in a temporarily positively charged cell.
+Most neurons are equipped with a long axonal fibre that propagates this positive charge, the action potential.
+The signal propagation is primarily based on a cascade of ion channels.
+Ion channels are depolarized by the arriving positive charge, and create a positive charge in response.
+This process causes a current that travels along the axon.
+As indicated in section \ref{1.1.myelin}, axons can be enveloped with myelin sheaths, which locally bypass the ion channel cascade and cause the signal to be transmitted via direct current flow.
+Especially for pyramidal cells, which are typically used for long-distance transmissions, this axon can span several centimeters in length.
+
+Since signals along axons travel by a complex combination of ion channels and electric currents, neuron-to-neuron data transmission exhibits three important properties.
 First, a successful signal transmission requires a short refractory period until the next transmission is possible again.
 This leads to the phenomenon that transmissions can only travel one way, and overlapping signals on the same fiber are impossible.
 Second, axonal transmissions can only be binary.
 If the minimum threshold voltage is reached, the signal will be transmitted at maximum speed along the entire fibre.
 Below the threshold, no transmission can occur.
 Third, maximum transmission speed is relatively low at approximately $100\frac{m}{s}$.
-Other commonly used transmission fibers, for comparison, achieve speeds of $2\cdot10^8\frac{m}{s}$ (copper wire) or even $3\cdot10^8\frac{m}{s}$ (glass fibre).
-Additionally, transmision speed depends on the thickness of the fiber, with the thinnest fibers transmitting as slowly as 0.1m/s.
+Other commonly used transmission fibers in technical applications, for comparison, achieve speeds of $2\cdot10^8\frac{m}{s}$ (copper wire) or even $3\cdot10^8\frac{m}{s}$ (glass fiber).
+Additionally, transmision speed depends on the amount of myelination, with the thinnest fibers transmitting as slowly as 0.1m/s.
 This property causes a considerable delay when transmitting signals over macroscopic distances.
 Signal delay in technical applications is generally small enough to be disregarded or considered an inescapable nuisance.
 In the brain however, two interconnected neurons at opposite sides of the head can generate output simultaneously, but their signals will be offset by several miliseconds by the time they arrive.
 For any neural network, delayed information is therefore an widely expected issue and must be properly factored into signal processing.
 
-\paragraph {Available acquisition methods}
-Due to the long axon and the low transmission speed, transmitted signals will create a electrical field that moves along the axon during a non-trivial time window.
-Aggregated electric fields from thousands of similar signals can be acquired with an electroencephalograph (EEG).
-This process involves measuring the voltage at two or more arbitrary points in the brain; typically, on the surface of the head or the cortex (which is called intracranial EEG, or iEEG).
+\subsection{Signal Acquisition}
+\paragraph{Available acquisition methods}
+Each neuron is supplied with electric currents (the primary currents) from other cells via its dendrites.
+The accumulation of these currents creates a positive or negative electric charge in the neuron body, generating an action potential in response.
+Nerve fibers are usually embedded in the conductive extracellular fluid.
+Each primary current that flows through axons or dendrites induces an opposite electric current, the volume current.
+Aggregated volume currents from thousands of simultaneous currents in parallel dendrites are strong enough to be measured with an electroencephalograph (EEG).
+This method compares the electric potential at one or more arbitrary points around the brain against a reference point.
+Typically, the electrodes for measuring the potentials are connected to the surface of the head, or directly to the cortical surface.
+Measuring potentials in cortical electrodes is called electrocorticography.
 
-Every electric signal that travels along a conducting wire also induces a magnetic field.
-Since an axon is no exception to this rule, any transmitted neuron-to-neuron signal can also be acquired with a magnetic sensor.
-A magnetoenecephalograph (MEG) consists of several dozens of these sensors distributed around the head.
+Every electrical current that travels along a nerve fiber also induces a magnetic field.
+Especially primary currents in parallel dendrites create magnetic fields that can be measured by a magnetoenecephalograph (MEG).
+A MEG measures magnetic fields by inducing a current in sensing coils that are distributed in short distance around the head.
+The sensing coils can have different shapes, with different properties.
+The induced current in the sensing coils is transmitted to a coupling coil.
+Finally, the magnetic field of the current coil is measured by a SQUID (superconducting quantum interference device) sensor.
+
 MEG and EEG are currently the only non-invasive acquisition methods that measure brain activity with a milisecond resolution \cite{1.5.MEG.a}\cite{1.5.MEG.b}\cite{1.5.MEG.c}.
 The focus of this project is on cognitive processes that require timespans in the single-digit second range to complete.
-Considering these small time frames, a good temporal resolution is integral for yielding a sufficient amount of data from every processing step.
-This is the reason why I decided to use a EEG/MEG method, while using the highest available temporal resolution.
+Considering these small time frames, a good temporal resolution is integral for yielding a sufficient amount of data from each processing step.
+This is the reason why I decided to use a EEG or MEG method, while using the highest available temporal resolution.
 
 \paragraph{Choice of acquisition methods}
 Compared to EEG, the MEG-based measuring strategy has a few advantages and drawbacks.
+
 
 The first difference between MEG and EEG is due to the sensor technology.
 While both methods rely on strong amplification of very small input signals, only MEG uses superconducting sensors.
 Contemporary superconductors require cooling with liquid helium.
 Magnetic fields from neurons are also weaker than environmental magnetic noise by several magnitudes.
-To limit measurements to neural activity, the MEG device need to be shielded with large quantities of highly magnetically permeable material (most commonly, an nickel-iron alloy).
-These requirements makes MEG much less portable, and equally more expensive, than EEG.
+To limit measurements to neural activity, the MEG device needs to be shielded with large quantities of highly magnetically permeable material (most commonly, \SI{\micro}-metal - a nickel-iron alloy).
+These requirements makes MEG much less portable, and more expensive, than EEG.
 Passive shielding already reduces environmental noise levels by 25-60db \cite{1.5.SNR}.
-In addition to that, it is possible to dampen noise levels by another 60db with adaptive noise reduction \cite{1.5.SNR}.
-Good adaptive noise reduction requires large external coils that can counteract outside magnetic fields.
-The use of superconducting MEG sensors is necessary due to the extreme weakness of neural magnetic fields.
-With the large amplification factors involved in both methods, amplifiers contribute a large amount of noise to the signal.
-But since the amplifier noise depends directly on their operating temperature, suspending the amplifiers in liquid helium drastically lowers the noise level \cite{1.5.MEG.a}.
+The use of superconducting MEG sensors is necessary due to the extremely low amplitude of neural magnetic fields.
 Generally, EEG and MEG are considered equally sensitive \cite{1.5.MEG.a}\cite{1.5.MEG.c}.
-However, the addition of magnetic shielding can elevate signal-to-noise ratios in MEG measurements above equivalent acquisitions from EEG \cite{1.5.SNR}.
+A more nuanced view shows that MEG is more sensitive for flat, tangential sources, while EEG favors flat, radial and deep sources \cite{1.5.sensitivity}.
+With magnetic shielding, signal-to-noise ratios in MEG measurements can be better than in equivalent acquisitions from EEG \cite{1.5.SNR}.
+Finally, constructing a EEG forward model requires the digitization of the exact electrode positions and a coregistration with a MRI-derived head surface.
+Since the MEG sensors are fixed in location and orientation, constructing the MEG forward model is more straightforward.
 
-The second difference between MEG and EEG is the drastically different distortion from surrounding tissue.
+
+The second difference between MEG and EEG is the drastically different amount of distortion from surrounding tissue.
 For an EEG to be able to measure a potential difference on the skin surface, an electrical current needs to pass the tissues surrounding the cortical surface \cite{1.5.tissues.b}.
 Some of these tissue layers, like blood vessels or cerebreal spinal fluid (CSF), are 5 times more conductive than gray matter; so they smooth and diffuse electric fields \cite{1.5.tissues.a}\cite{1.5.tissues.b}.
 Other tissue layers, especially the compact bone, conduct electricity 78 times worse than gray matter; so they distort and attenuate every passing signal \cite{1.5.tissues.a}.
-After these tissues have been passed, the original signal has substantially decreased in intensity, and changed drastically in shape and location.
+After these tissues have been passed, the original signal has decreased in intensity by approximately four orders of magnitude, and changed drastically in shape and location.
 In contrast to electrical fields, the same tissues are highly permeable to magnetic fields.
 The magnetic permeability of water, which most human tissue is based on, differs from the magnetic permeability of vacuum only by 0.0008\%.
 As a general rule, only metal-based materials are substantially less permeable than water.
 Since the human head doesn't contain metal in considerable quantities, it practically allows magnetic fields to pass without distortion \cite{1.5.tissues.a}.
 
-This circumstance does not imply, unfortunately, that every neural transmission arrives at the magnetic sensors with equal strength.
-There are three main reasons for that.
+Due to the availability of both methods and the obvious technical advantages of MEG, I chose MEG for the data acquisition for this study.
 
-First, the main source of electrical and magnetical activity are the pyramidal cells in the cortical tissue on the brain surface.
-The activity of a single neuron, besides being highly unlikely in vivo, doesn't create a field with sufficient strength to elict a response in contemporary EEG or MEG sensors.
-Only the combined and synchronous activity of larger clusters of neurons can cross the detection threshold.
+
+The favorable distortion properties does not imply, unfortunately, that every neural transmission arrives at the magnetic sensors with equal strength.
+There are three major reasons for that.
+
+First, the magnetic field of a single neuron (or one of its extremities) is far too weak to be discriminated by the magnetic sensors.
+Only the simultaneous and parallel activity of larger clusters of neurons can cross the detection threshold.
 
 Second, the human cortex is folded into gyri and sulci.
-When two neural groups at opposite cortical walls produce identical activity, the two created electric and magnetic fields are directly opposed to each other.
-Opposing fields cancel each other out, so the original signal will be systematically underestimated by surrounding sensors.
+When two neural groups at opposite cortical walls produce identical activity, the induced magnetic fields are directly opposed to each other.
+Opposing fields eliminate each other before reaching the sensors, so the original signal will be systematically underestimated by surrounding sensors.
 
 Third, their basic physical properties imply that electric and magnetic fields are orthagonal to each other.
-Signals that travel along fibers orthogonally to the head surface create the strongest magnetic activation in surrounding sensors, but the weakest voltage in surface electrodes.
+Currents along fibers that run radial to the head surface create only a negligible activation in MEG sensors, but the highest electric potential in EEG electrodes.
 Fibers that lie parallel to the head surface, in contrast, create strong electric but weak magnetic activation.
-The implication on measurements of neural activity is that EEG is most sensitive for gyri and sulci, and MEG is most sensitive for the radial walls inbetween.
 To counteract this particular measurement bias, EEG and MEG data would have to be acquired simultaneously.
 
-Although the simultaneous acqusisition of EEG and MEG data provides theoretical benefits to the signal quality, I ultimately decided against this strategy.
-MEG acquisition consists of three preparation steps: Getting written consent, applying the HPI coils and ocular electrodes, and digitizing the head.
-This preparation typically requires 25 minutes for children and 15 minutes for experienced adults.
-Including EEG acquisition would have added several lengthy steps to this procedure: Fitting the gel electrode cap, ensuring a good connection for each electrode, and plugging in each of the 63 cables individually.
-These additional steps would have extended the preparation time to at least 60 minutes.
-Since patience is not a strong trait in children\footnote{Implementing details with the goal to prevent boredom was a common theme in this study, as explained in more detail in chapter 3.}, I wanted to minimize any idle waiting times between their arrival and the experiment.
-Therefore, I only acquired MEG data during this study.
 
-\subsection{Preprocessing}
+Although the simultaneous acqusisition of EEG and MEG data provides theoretical benefits to the signal quality, I ultimately decided against this strategy due to two reasons.
+
+First, MEG acquisition consists of three preparation steps: Getting written consent, applying the HPI coils and ocular electrodes, and digitizing the head.
+This preparation typically requires 25 minutes for children and 15 minutes for experienced adults.
+Including EEG acquisition would have added two lengthy steps to this procedure: Fitting and digitizing the gel electrodes, and additional fine-tuning for an overall low impedance.
+These additional steps would have extended the preparation time to 60 minutes.
+Patience is not a strong trait in 10-year-old children, and additional preparation meant additional idle waiting time between their arrival and the experiment.
+In order to prevent motivational deficits due to boredom and low engagement\footnote{Implementing details with the goal to sustain a high level of motivation and engagement was a common theme in this study, and will be explained in more detail in chapter 3.}, I attempted to keep waiting times as short as possible.
+
+Second, to my knowledge, there is no dedicated software support for the combined analysis of MEG and EEG data streams.
+Two separate processing workflows would have been necessary, including the solution of two different inverse models and the combination of the reconstructed source activity.
+Although promising in principle, the doubled complexity of this procedure would have multiplied the amount of issues with parameter optimization and signal compatibility.
+Ultimately, the forseeable procedural drawbacks outweighed the incremental increase in data quality.
+
+For these reasons, I only acquired MEG data during this study.
+
+\subsection{Data preprocessing}
 
 Once the signals were acquired by the MEG, there were two necessary decisions for preprocessing.
 
 \paragraph{DC bias removal}
-The first decision concerns the removal of DC bias that is often caused by slow sensor drift.
-Traditionally, for the exploration of effects in ERP and ERF, a subtractive baseline correction is applied to every trial before averaging.
-For this purpose, the average is computed from roughly 100 to 500 (typically 200) miliseconds of activity before the conditional cue.
-This initial interval is assumed to originate from brain activity unrelated to the post-cue task.
-The computed average value is then subtracted from activity data in the corresponding trial.
+The first decision concerns the removal of DC bias that is inherent to each MEG sensor.
+For the exploration of effects in event-related potentials (ERP) or event-related fields (ERF), a baseline correction is applied to every trial before averaging.
+For this purpose, the average activity is computed from roughly 100 to 500 (typically 200) miliseconds before the conditional cue.
+This time interval is assumed to contain brain activity unrelated to the post-cue task.
+The computed average value, an estimation of the momentary DC offset, is then subtracted from activity data in each corresponding trial.
 This procedure assures that different DC components from long-term trends (for either technical or cognitive reasons) don't disturb the trigger-dependent effect.
+
 However, there is a fundamental issue with the baseline correction.
-Because the stimuli are spoken sentences in this study, there is no silent time window around the critical words.
-Therefore, the pre-cue interval reflects electric fields from unrelated brain activity.
-By computing the average from unrelated activity, I effectively introduces a random DC error into the correction procedure.
-This issue makes a subtractive baseline correction a tradeoff between the original DC error and a random DC error.
-A process to remove DC components without this tradeoff is to use a highpass filter \cite{1.5.highpass}.
-Since my longest expected evoked field, the ELAN, has a base frequency of 5Hz, I choose a much lower value of 0.4Hz for the high-pass.
+The location of the conditional cue in the middle of a sentence (see \ref{3.1.stimuli.auditory}) ensures that there is no silent time interval before or after the trigger.
+Therefore, both pre-cue and post-cue intervals result in trigger-locked activity.
+By computing the average from pre-cue activity, I effectively introduce a systematic DC error into the correction procedure.
+A process to remove DC components without this error is to use a highpass filter \cite{1.5.highpass}.
+I choose a highpass filter of 0.4Hz to preserve the shape of the slowest of my expected evoked components, the P600.
 
 \paragraph{Artifact removal}
 The second decision concerns the removal of various measuring artifacts.
 There are four major types of artifacts during the acquisition of electric or magnetic fields.
 
 The first type of artifact is caused from cardiac activity.
-Cardiac muscles create an almost continuous, very regular field with low frequency and medium strength.
+Cardiac muscles create a very regular electric field pattern, the QRS-complex \cite{1.5.ecg.a}.
+Its power spectrum shows two distinct peaks; one between 0.04Hz and 0.12Hz, and one between 0.2Hz and 0.3Hz \cite{1.5.ecg.b}.
 
 The second type of artifact is caused by ocular movements.
-Since the eyeballs are electrically charged, all eye movements are associated with a continuously changing field of low frequency and medium strength.
+Since the eyeballs are electrically charged [?]], all eye movements are associated with a continuously changing field of ? [frequency] and ? [strength].
 
 The third type of artifact is caused by muscle movements.
-Muscle activity creates relatively long and strong distortions in a wide frequency band.
+Muscle activity creates ? [duration] and ? [amplitude] distortions in a wide frequency band.
 
 The final type of artifact is caused by oversaturation in MEG sensors.
 Oversaturation happens randomly when no high pass is in use, and reduces the sensitivity of the affected channel to zero.
@@ -224,7 +252,7 @@ However, reconstructing true causal relationships between signal processors invo
 Both information storage and information modification take place on a cellular level.
 Since these processes leave few traces in the form of electric or magnetic fields, our only way to resolve their details is by analyzing single cells with microscopic probes.
 In contrast to these tasks, information transfer can reconstructed reasonably well from discrete, brain-wide electrophysiological measurements.
-Although the practical restrictions limit us to the analysis of information transfer, this measure, rather than true causality, may actually be the more interesting factor for understanding a computational process in the brain [1.5.causality].
+Although the practical restrictions limit us to the analysis of information transfer, this measure, rather than true causality, may actually be the more interesting factor for understanding a computational process in the brain \cite{1.5.causality}.
 
 Historically, information transfer has been explored by calculating functional connectivity \cite{1.5.connectivity}.
 Functional connectivity is defined as the temporal correlation between activity of different cortical regions.

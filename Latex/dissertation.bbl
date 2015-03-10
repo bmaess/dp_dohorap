@@ -85,6 +85,108 @@ Barnes, R.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Bihan%
+\ \protect \BOthers {.}}{%
+Bihan%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {1986}}%
+}]{%
+1.1.firstDiffusion}
+\APACinsertmetastar {%
+1.1.firstDiffusion}%
+\begin{APACrefauthors}%
+Bihan, D\BPBI L.%
+, Breton, E.%
+, Lallemand, D.%
+, Grenier, P.%
+, Cabanis, E.%
+\BCBL {}\ \BBA {} Laval-Jeantet, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1986}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {MR imaging of intravoxel incoherent motions: application
+  to diffusion and perfusion in neurologic disorders.} {Mr imaging of
+  intravoxel incoherent motions: application to diffusion and perfusion in
+  neurologic disorders.}{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Radiology}{161}{2}{401-407}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Bornkessel%
+, Zysset%
+, Friederici%
+, Cramon%
+\BCBL {}\ \BBA {} Schlesewsky%
+}{%
+Bornkessel%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2005}}%
+}]{%
+1.3.Bornkessel}
+\APACinsertmetastar {%
+1.3.Bornkessel}%
+\begin{APACrefauthors}%
+Bornkessel, I.%
+, Zysset, S.%
+, Friederici, A.%
+, Cramon, D.%
+\BCBL {}\ \BBA {} Schlesewsky, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2005}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Who did what to whom? The neural basis of argument
+  hierarchies during language comprehension} {Who did what to whom? the neural
+  basis of argument hierarchies during language comprehension}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{{NeuroImage}}{26}{1}{}.
+\newblock
+\begin{APACrefURL} \url{http://dx.doi.org/10.1016/j.neuroimage.2005.01.032}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1016/j.neuroimage.2005.01.032} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Constable%
+\ \protect \BOthers {.}}{%
+Constable%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2004}}%
+}]{%
+1.3.Constable}
+\APACinsertmetastar {%
+1.3.Constable}%
+\begin{APACrefauthors}%
+Constable, R\BPBI T.%
+, Pugh, K\BPBI R.%
+, Berroya, E.%
+, Mencl, W\BPBI E.%
+, Westerveld, M.%
+, Ni, W.%
+\BCBL {}\ \BBA {} Shankweiler, D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2004}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Sentence complexity and input modality effects in
+  sentence comprehension: an {fMRI} study} {Sentence complexity and input
+  modality effects in sentence comprehension: an {fMRI} study}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{{NeuroImage}}{22}{1}{}.
+\newblock
+\begin{APACrefURL} \url{http://dx.doi.org/10.1016/j.neuroimage.2004.01.001}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1016/j.neuroimage.2004.01.001} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Dale%
 \ \protect \BOthers {.}}{%
 Dale%
@@ -173,10 +275,65 @@ David, O.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Friederici%
+Duffau%
+\ \protect \BOthers {.}}{%
+Duffau%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2005}}%
+}]{%
+1.1.tracts.interference.b}
+\APACinsertmetastar {%
+1.1.tracts.interference.b}%
+\begin{APACrefauthors}%
+Duffau, H.%
+, Gatignol, P.%
+, Mandonnet, E.%
+, Peruzzi, P.%
+, Tzourio-Mazoyer, N.%
+\BCBL {}\ \BBA {} Capelle, L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2005}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {New insights into the anatomo--functional connectivity
+  of the semantic system: a study using cortico-subcortical
+  electrostimulations} {New insights into the anatomo--functional connectivity
+  of the semantic system: a study using cortico-subcortical
+  electrostimulations}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Brain}{128}{}{797-810}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+A.~Friederici%
+}{%
+A.~Friederici%
+}{%
+{\protect \APACyear {2012}}%
+}]{%
+1.1.D1a}
+\APACinsertmetastar {%
+1.1.D1a}%
+\begin{APACrefauthors}%
+Friederici, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The cortical language circuit: from auditory perception
+  to sentence comprehension} {The cortical language circuit: from auditory
+  perception to sentence comprehension}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Trends. Cogn. Sci.}{16}{}{262-268}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+A\BPBI D.~Friederici%
 \ \BBA {} Gierhan%
 }{%
-Friederici%
+A\BPBI D.~Friederici%
 \ \BBA {} Gierhan%
 }{%
 {\protect \APACyear {2013}}%
@@ -200,6 +357,36 @@ Friederici, A\BPBI D.%
   \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.1016/j.conb.2012.10.002} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Galantucci%
+\ \protect \BOthers {.}}{%
+Galantucci%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2011}}%
+}]{%
+1.1.tracts.lesions}
+\APACinsertmetastar {%
+1.1.tracts.lesions}%
+\begin{APACrefauthors}%
+Galantucci, S.%
+, Tartaglia, M.%
+, Wilson, S.%
+, Henry, M.%
+, Filippi, M.%
+, Agosta, F.%
+\BDBL {}Gorno-Tempini, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2011}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {White matter damage in primary progressive aphasias: a
+  diffusion tensor tractography study} {White matter damage in primary
+  progressive aphasias: a diffusion tensor tractography study}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Brain}{134}{}{3011-3029}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -471,6 +658,37 @@ H"am"al"ainen, M.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Hamer%
+, Moritz-Gasser%
+, Gatignol%
+\BCBL {}\ \BBA {} Duffau%
+}{%
+Hamer%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2011}}%
+}]{%
+1.1.tracts.interference.a}
+\APACinsertmetastar {%
+1.1.tracts.interference.a}%
+\begin{APACrefauthors}%
+Hamer, P.%
+, Moritz-Gasser, S.%
+, Gatignol, P.%
+\BCBL {}\ \BBA {} Duffau, H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2011}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Is the human left middle longitudinal fascicle essential
+  for language? A brain electrostimulation study} {Is the human left middle
+  longitudinal fascicle essential for language? a brain electrostimulation
+  study}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Hum. Brain. Mapp.}{32}{}{962-973}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Haueisen%
 }{%
 Haueisen%
@@ -492,6 +710,41 @@ Haueisen, J.%
   neuromagnetic source localization. phd thesis}.
 \newblock
 \APACaddressPublisher{}{Shaker-Verlag Aachen}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Hillebrand%
+\ \BBA {} Barnes%
+}{%
+Hillebrand%
+\ \BBA {} Barnes%
+}{%
+{\protect \APACyear {2002}}%
+}]{%
+1.5.sensitivity}
+\APACinsertmetastar {%
+1.5.sensitivity}%
+\begin{APACrefauthors}%
+Hillebrand, A.%
+\BCBT {}\ \BBA {} Barnes, G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2002}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A Quantitative Assessment of the Sensitivity of
+  Whole-Head \{MEG\} to Activity in the Adult Human Cortex} {A quantitative
+  assessment of the sensitivity of whole-head \{MEG\} to activity in the adult
+  human cortex}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{NeuroImage}{16}{3, Part A}{638 - 650}.
+\newblock
+\begin{APACrefURL}
+  \url{http://www.sciencedirect.com/science/article/pii/S105381190291102X}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{http://dx.doi.org/10.1006/nimg.2002.1102}
+  \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -523,6 +776,32 @@ Huang, M.%
 \newblock
 \APACjournalVolNumPages{Electroencephalography and clinical
   neurophysiology}{108}{1}{32-44}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+J.T.%
+\ \BBA {} M.%
+}{%
+J.T.%
+\ \BBA {} M.%
+}{%
+{\protect \APACyear {2010}}%
+}]{%
+1.5.causality}
+\APACinsertmetastar {%
+1.5.causality}%
+\begin{APACrefauthors}%
+J.T., L.%
+\BCBT {}\ \BBA {} M., P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2010}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Differentiating information transfer and causal effect}
+  {Differentiating information transfer and causal effect}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Eur. Phys. J. B.}{73}{}{605-615}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -618,6 +897,72 @@ Maris, E.%
   \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.1016/j.jneumeth.2007.03.024} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+McSharry%
+, Clifford%
+, Tarassenko%
+\BCBL {}\ \BBA {} Smith%
+}{%
+McSharry%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2003}}%
+}]{%
+1.5.ecg.a}
+\APACinsertmetastar {%
+1.5.ecg.a}%
+\begin{APACrefauthors}%
+McSharry, P\BPBI E.%
+, Clifford, G\BPBI D.%
+, Tarassenko, L.%
+\BCBL {}\ \BBA {} Smith, L\BPBI A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2003}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A dynamical model for generating synthetic
+  electrocardiogram signals} {A dynamical model for generating synthetic
+  electrocardiogram signals}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{{IEEE} Transactions on Biomedical
+  Engineering}{50}{3}{289-294}.
+\newblock
+\begin{APACrefURL} \url{http://dx.doi.org/10.1109/TBME.2003.808805}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1109/TBME.2003.808805} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Meyer%
+, Cunitz%
+, Obleser%
+\BCBL {}\ \BBA {} Friederici%
+}{%
+Meyer%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2014}}%
+}]{%
+1.1.causality}
+\APACinsertmetastar {%
+1.1.causality}%
+\begin{APACrefauthors}%
+Meyer, L.%
+, Cunitz, ., K%
+, Obleser, J.%
+\BCBL {}\ \BBA {} Friederici, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Sentence processing and verbal working memory in a
+  white-matter-disconnection patient} {Sentence processing and verbal working
+  memory in a white-matter-disconnection patient}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Neuropsychologia}{61}{}{190-196}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -770,6 +1115,72 @@ Sakkalis, V.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Sands%
+, Appel%
+, Lilly%
+, Schoen%
+\BCBL {}\ \BBA {} Mudge%
+}{%
+Sands%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {1989}}%
+}]{%
+1.5.ecg.b}
+\APACinsertmetastar {%
+1.5.ecg.b}%
+\begin{APACrefauthors}%
+Sands, K.%
+, Appel, M.%
+, Lilly, L.%
+, Schoen, F.%
+\BCBL {}\ \BBA {} Mudge, G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1989}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Power spectrum analysis of heart rate variability in
+  human cardiac transplant recipients.} {Power spectrum analysis of heart rate
+  variability in human cardiac transplant recipients.}{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Circulation}{}{79}{76-82}.
+\newblock
+\begin{APACrefURL} \url{http://dx.doi.org/10.1161/01.CIR.79.1.76}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1161/01.CIR.79.1.76} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Saur%
+\ \protect \BOthers {.}}{%
+Saur%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2008}}%
+}]{%
+1.1.D1b}
+\APACinsertmetastar {%
+1.1.D1b}%
+\begin{APACrefauthors}%
+Saur, D.%
+, Kreher, B.%
+, Schnell, S.%
+, Ku"mmerer, D.%
+, Kellmeyer, P.%
+, Vry, M.%
+\BDBL {}Weillera, C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2008}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Ventral and dorsal pathways for language} {Ventral and
+  dorsal pathways for language}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Proc. Natl. Acad. Sci.}{105}{}{18035-18040}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Schelter%
 , Timmer%
 \BCBL {}\ \BBA {} Eichler%
@@ -909,6 +1320,37 @@ Schultz, B\BPBI B.%
   \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.1093/sysbio/34.4.449} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Schuz%
+\ \BBA {} Braitenberg%
+}{%
+Schuz%
+\ \BBA {} Braitenberg%
+}{%
+{\protect \APACyear {2002}}%
+}]{%
+1.1.fiberstats}
+\APACinsertmetastar {%
+1.1.fiberstats}%
+\begin{APACrefauthors}%
+Schuz, A.%
+\BCBT {}\ \BBA {} Braitenberg, V.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2002}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The human cortical white matter: Quantitative aspects of
+  cortico-cortical long-range connectivity} {The human cortical white matter:
+  Quantitative aspects of cortico-cortical long-range connectivity}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Cortical Areas: Unity and Diversity, Conceptual Advances
+  in Brain Research} {Cortical areas: Unity and diversity, conceptual advances
+  in brain research}\ (\BPG~377–386).
+\newblock
+\APACaddressPublisher{}{Taylor and Francis London}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%

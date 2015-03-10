@@ -22,7 +22,7 @@ function connectedRegions = connectRegions()
 	connections = [forwardConnections; reverseConnections];
 	% Assemble a cell array
 	connectedRegions = {};
-	for i = 1:size(connections,2)
+	for i = 1:size(connections,1)
 		connection = connections(i,:);
 		connectedRegions{i,1} = regions{connection(1)};
 		connectedRegions{i,2} = regions{connection(2)};
