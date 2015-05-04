@@ -1,6 +1,6 @@
 \section{Data analysis}
 
-Data were preprocessed with the three software packages: Elekta Neuromag\textsuperscript{\textregistered} MaxFilter (version 2.2, \cite{3.3.MNE}), Matlab (version 2014a) and MNE-Python (version 0.8.6, \cite{3.3.MNEpython}).
+Data preprocessing  three software packages: Elekta Neuromag\textsuperscript{\textregistered} MaxFilter (version 2.2, \cite{3.3.MNE}), Matlab (version 2014a) and MNE-Python (version 0.8.6, \cite{3.3.MNEpython}).
 
 \subsection{Behavioral data}
 
@@ -48,9 +48,9 @@ This procedure yielded an average of [] trials in children and [] trials in adul
 Data were filtered before epoching with a 45Hz FIR lowpass (using the MNE function \emph{raw.filter()}) exclusively for the following two steps.
 
 \paragraph{Cluster analysis}
-The condition effect was used to determine suitable time windows.
-Selecting data purely based on contrast will include spurious differences as well as the condition-based differences in activity.
-Since there the subsequent statistical analysis compares the same contrast, it is prone to overestimate the condition effect.
+The condition effect was used to determine relevant time intervals.
+Selecting data purely based on the contrast between experimental conditions will include spurious differences as well as the condition-based differences in activity.
+Since the subsequent statistical analysis compares the same contrast, it is prone to overestimate the condition effect.
 This problem was resolved with a cluster-level permutation comparison.
 Spurious differences in activity should vary randomly between trials and subjects, while the condition contrast is expected with a roughly equal delay and duration.
 
@@ -186,7 +186,7 @@ For visualization purposes, grand average activity was calculated for each corti
 
 \subsection{Interaction analysis}
 
-The TRENtool software (version 3.3.1, February 2015) was used for exploring entropy transfers between cortical areas.
+The TRENTOOL software (version 3.3.1, February 2015) was used for exploring entropy transfers between cortical areas.
 For this purpuse, data was prepared for each subject individually.
 The procedure took place in three sections.
 
@@ -228,7 +228,7 @@ I supplied those intervals for the estimation of transfer entropy with the param
 
 The transfer entropy estimation fundamentally relies on the comparison between two probability density functions.
 These mathematical constructs can only be approximated by using scalar time series.
-For this purpose, time series from individual trials were combined into a multidimensional state space by TrenTOOL.
+For this purpose, time series from individual trials were combined into a multidimensional state space by TRENTOOL.
 This multidimensional space was then reduced into probability density function in a process called embedding.
 For optimizing the embedding procedure, I selected the Ragwitz criterion (\emph{cfg.optimizemethod = 'ragwitz'}).
 The parameters were supplied as ranges: the relative embedding delay \emph{cfg.ragtaurange = 0.15:0.3} and the embedding dimension \emph{cfg.ragdim = 2:8}.
@@ -241,20 +241,20 @@ The Ragwitz criterion then optimized the embedding parameters for each set of ti
 The most common optimal embedding dimension was 8, and the mean optimal relative embedding delay was 0.2.
 
 Finally, the parameter \emph{cfg.repPred} indicated the amount of samples that would be used for the interaction analysis.
-I maximized this value by calculating \emph{cfg.repPred = sampleLength - embeddingDelay - 1}, with \emph{sampleLength} as the amount of samples in the selected time window and \emph{embeddingDelay}\footnote{Unfortunately, TrenTOOL doesn't display the embedding delay. The formula I used to calculate it is, in Matlab notation, \emph{(max(cfg.ragdim)-1) $\cdot$ max(cfg.ragtaurange) + cfg.predicttimemax\_u + max(ACT)}. \emph{ACT} (the delay for the first minimum of the autocorrelation), in turn, is only computed during the preprocessing phase. Due to time constraints, I opted for a manual approach. An error message printed the current \emph{max(ACT)} if \emph{cfg.repPred} was too small, so I could supply this value into the configuration variable and re-run the preprocessing phase. After a few iterations, the absolute maximum ACT was found, allowing me to adjust the time windows and finish the preprocessing phase.} the amount of samples in the absolute embedding delay.
+I maximized this value by calculating \emph{cfg.repPred = sampleLength - embeddingDelay - 1}, with \emph{sampleLength} as the amount of samples in the selected time window and \emph{embeddingDelay}\footnote{Unfortunately, TRENTOOL doesn't display the embedding delay. The formula I used to calculate it is, in Matlab notation, \emph{(max(cfg.ragdim)-1) $\cdot$ max(cfg.ragtaurange) + cfg.predicttimemax\_u + max(ACT)}. \emph{ACT} (the delay for the first minimum of the autocorrelation), in turn, is only computed during the preprocessing phase. Due to time constraints, I opted for a manual approach. An error message printed the current \emph{max(ACT)} if \emph{cfg.repPred} was too small, so I could supply this value into the configuration variable and re-run the preprocessing phase. After a few iterations, the absolute maximum ACT was found, allowing me to adjust the time windows and finish the preprocessing phase.} the amount of samples in the absolute embedding delay.
 This is the largest possible value that doesn't violate the assumptions behind the transfer analysis algorithm.
 
 
 During the second section, I performed a interaction shift test.
-This procedure (performed with the TrenTOOL function \emph{InteractionDelayReconstruction\_calculate()}) counteracts bias introduced by noise, for example the common false positive detection of an interaction from a less noisy to a more noisy data set.
+This procedure (performed with the TRENTOOL function \emph{InteractionDelayReconstruction\_calculate()}) counteracts bias introduced by noise, for example the common false positive detection of an interaction from a less noisy to a more noisy data set.
 The shift test establishes the optimal delay of transfered entropy for each comparison of activity.
 Transfer entropy was computed for a time range of possible interaction delays: 1ms to 40ms in steps of 5ms.
-TrenTOOL then selected the interaction delay with the biggest associated transfer entropy as the most likely representation of the signal delay caused by cognitive processes and anatomic constraints.
+TRENTOOL then selected the interaction delay with the biggest associated transfer entropy as the most likely representation of the signal delay caused by cognitive processes and anatomic constraints.
 To alleviate issues with volume conduction, I supplied the option \emph{cfg.extracond = 'Faes\_method'}.
 Unfortunately, using this method prevents the determination of the precise signal delay.
 Since the signal delay is not relevant to my research goals, this trade-off was trivial to solve.
 The optimal dimension for each data set was considered with the option \emph{cfg.optdimusage = 'indivdim'}.
-For significance testing, TrenTOOL creates surrogate data.
+For significance testing, TRENTOOL creates surrogate data.
 This data was created by shuffling existing trials (\emph{cfg.surrogatetype = 'trialshuffling'}).
 The significance level for this procedure was \emph{cfg.alpha = 0.05}.
 I used t-values to represent the statistical results of the shift test (\emph{cfg.permstatstype = 'indepsamplesT'}).
@@ -268,5 +268,5 @@ Second, signal delay estimations were obtain by calculating the mean over all su
 
 For the third section, I evaluated the impact of the syntax condition on all subjects.
 A clustered T-test compared transfer entropy between conditions over all subjects.
-For this group-level comparison, the TrenTOOL function \emph{TEgroup\_stats} was used.
+For this group-level comparison, the TRENTOOL function \emph{TEgroup\_stats} was used.
 One comparison was conducted for each of the three timewindows.

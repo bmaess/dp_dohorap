@@ -1,0 +1,19 @@
+doi: 10.3389/fnevo.2011.00011
+
+found that dorsal pathway is stronger lateralized in humans than in chimpanzees
+found that ventral pathway isn't lateralized in neither species
+
+left MTG: neural epicenter for lexical–semantic processing in the human brain:
+- Turken, A. U., and Dronkers, N. F. (2011). The neural architecture of the language compre- hension network: converging evi- dence from lesion and connectivity analyses. Front. Syst. Neurosci. 5:1. doi:10.3389/fnsys.2011.00001
+- Lesion evidence:
+	- Damasio, H., Grabowski, T. J., Tranel, D., Hichwa, R. D., and Damasio, A. R. (1996). A neural basis for lexical retrieval. Nature 380, 499–505.
+	- Dronkers, N. F., Wilkins, D. P., Van Valin, R. D. Jr., Redfern, B. B., and Jaeger, J. J. (2004). Lesion analysis of the brain areas involved in language comprehension. Cognition 92, 145–177.
+- fMRI evidence:
+	- Binder, J. R., Desai, R. H., Graves, W. W., and Conant, L. L. (2009). Where is the semantic system? A critical review and meta-analysis of 120 functional neuroimaging stud- ies. Cereb. Cortex 19, 2767–2796.
+	- Price, C. J. (2010). The anatomy of lan- guage: a review of 100 fMRI studies published in 2009. Ann. N. Y. Acad. Sci. 1191, 62–88.
+- structural and functional connectivity:
+	- Glasser, M. F., and Rilling, J. K. (2008). DTI tractography of the human brain’s language pathways. Cereb. Cortex 18, 2471–2482.
+	- Turken, A. U., and Dronkers, N. F. (2011). The neural architecture of the language compre- hension network: converging evi- dence from lesion and connectivity analyses. Front. Syst. Neurosci. 5:1. doi:10.3389/fnsys.2011.00001
+
+mSTS as a core region involved in syntax: fMRI evidence by:
+	- Grodzinsky, Y., and Friederici, A. D. (2006). Neuroimaging of syntax and syntactic processing. Curr Opin Neurobiol 16, 240–246.
