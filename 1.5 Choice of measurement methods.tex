@@ -51,10 +51,10 @@ Considering these small time frames, a good temporal resolution is integral for 
 This is the reason why I decided to use a EEG or MEG method, while using the highest available temporal resolution.
 
 \paragraph{Choice of acquisition methods}
-Compared to EEG, the MEG-based measuring strategy has a few advantages and drawbacks.
+Compared to EEG, the MEG-based measuring strategy has both advantages and drawbacks.
 
 
-The first difference between MEG and EEG is due to the sensor technology.
+The first difference between MEG and EEG is the sensor technology.
 While both methods rely on strong amplification of very small input signals, only MEG uses superconducting sensors.
 Contemporary superconductors require cooling with liquid helium.
 Magnetic fields from neurons are also weaker than environmental magnetic noise by several magnitudes.
@@ -75,14 +75,14 @@ Some of these tissue layers, like blood vessels or cerebreal spinal fluid (CSF),
 Other tissue layers, especially the compact bone, conduct electricity 78 times worse than gray matter; so they distort and attenuate every passing signal \cite{1.5.tissues.a}.
 After these tissues have been passed, the original signal has decreased in intensity by approximately four orders of magnitude, and changed drastically in shape and location.
 In contrast to electrical fields, the same tissues are highly permeable to magnetic fields.
-The magnetic permeability of water, which most human tissue is based on, differs from the magnetic permeability of vacuum only by 0.0008\%.
-As a general rule, only metal-based materials are substantially less permeable than water.
+The magnetic permeability of water, which most human tissue is based on, differs from the magnetic permeability of air only by 0.0008\%\footnote{All non-metallic materials have a relative magnetic permeability very close to 1 (Air: 1.00000037\cite{1.5.magneticProperties}, Vacuum: excatly 1 by definition, Water: 0.999992\cite{1.5.magneticProperties}). For the purposes of magnetic imaging, only materials with markedly bigger or smaller values than 1 (e.g., iron with a factor of 5000\cite{1.5.magneticProperties}) affect imaging accuracy to a noticable degree.}.
+As a general rule, only metal-based materials are substantially more permeable than water.
 Since the human head doesn't contain metal in considerable quantities, it practically allows magnetic fields to pass without distortion \cite{1.5.tissues.a}.
 
 Due to the availability of both methods and the obvious technical advantages of MEG, I chose MEG for the data acquisition for this study.
 
 
-The favorable distortion properties does not imply, unfortunately, that every neural transmission arrives at the magnetic sensors with equal strength.
+These favorable properties of MEG however don't imply that every neural transmission yields an equivalent signal at the magnetic sensors.
 There are three major reasons for that.
 
 First, the magnetic field of a single neuron (or one of its extremities) is far too weak to be discriminated by the magnetic sensors.
@@ -107,9 +107,9 @@ These additional steps would have extended the preparation time to 60 minutes.
 Patience is not a strong trait in 10-year-old children, and additional preparation meant additional idle waiting time between their arrival and the experiment.
 In order to prevent motivational deficits due to boredom and low engagement\footnote{Implementing details with the goal to sustain a high level of motivation and engagement was a common theme in this study, and will be explained in more detail in chapter 3.}, I attempted to keep waiting times as short as possible.
 
-Second, to my knowledge, there is no dedicated software support for the combined analysis of MEG and EEG data streams.
-Two separate processing workflows would have been necessary, including the solution of two different inverse models and the combination of the reconstructed source activity.
-Although promising in principle, the doubled complexity of this procedure would have multiplied the amount of issues with parameter optimization and signal compatibility.
+Second, and more importantly, there is no freely available software for the combined analysis of MEG and EEG data streams.
+Building two separate processing workflows would have been necessary, which involves the especially difficult tasks of solving two different inverse models, and the combination of two separate sets of reconstructed source activity.
+Although promising in principle, the doubled complexity of this procedure would have multiplied the likelihood for issues with parameter optimization and signal compatibility.
 Ultimately, the forseeable procedural drawbacks outweighed the incremental increase in data quality.
 
 For these reasons, I only acquired MEG data during this study.
@@ -129,9 +129,9 @@ This procedure assures that different DC components from long-term trends (for e
 However, there is a fundamental issue with the baseline correction.
 The location of the conditional cue in the middle of a sentence (see \ref{3.1.stimuli.auditory}) ensures that there is no silent time interval before or after the trigger.
 Therefore, both pre-cue and post-cue intervals result in trigger-locked activity.
-By computing the average from pre-cue activity, I effectively introduce a systematic DC error into the correction procedure.
+By computing the average from pre-cue activity, I would effectively introduce a systematic DC error into the correction procedure.
 A process to remove DC components without this error is to use a highpass filter \cite{1.5.highpass}.
-I choose a highpass filter of 0.4Hz to preserve the shape of the slowest of my expected evoked components, the P600.
+I employed a highpass filter of 0.4Hz to preserve the shape of the slowest of my expected evoked components, the P600.
 
 \paragraph{Artifact removal}
 The second decision concerns the removal of various measuring artifacts.
@@ -142,13 +142,13 @@ Cardiac muscles create a very regular electric field pattern, the QRS-complex \c
 Its power spectrum shows two distinct peaks; one between 0.04Hz and 0.12Hz, and one between 0.2Hz and 0.3Hz \cite{1.5.ecg.b}.
 
 The second type of artifact is caused by ocular movements.
-Since the eyeballs are electrically charged [?]], all eye movements are associated with a continuously changing field of ? [frequency] and ? [strength].
+Since the eyeballs are electrically charged [?], all eye movements (but especially blinks) introduce an electric field peak with a duration of 30-80ms. This electric field also creates magnetic field artifacts in the same shape and an amplitude of typically 2-3fT.
 
 The third type of artifact is caused by muscle movements.
 Muscle activity creates ? [duration] and ? [amplitude] distortions in a wide frequency band.
 
 The final type of artifact is caused by oversaturation in MEG sensors.
-Oversaturation happens randomly when no high pass is in use, and reduces the sensitivity of the affected channel to zero.
+Oversaturation occurs randomly when no high pass is in use, and reduces the sensitivity of the affected channel to zero.
 This condition is remedied with an automatic reset, which in turn produces a single very short and very large jump in amplitude.
 
 The first two artifacts can be eliminated with the help of three additional acquisition channels.

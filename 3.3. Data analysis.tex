@@ -28,7 +28,7 @@ All results from the ANOVA were transformed back into milisecond space with the 
 Signal-space separation \cite{3.3.SSS} was used to reduce noise in the data by suppressing magnetic interference coming from outside and inside the sensory array.
 MEG recordings were corrected for HPI movements, and co-registered across blocks to the inital head position for each individual.
 All of these steps were computed with MaxFilter.
-Data were then subjected to a 0.4Hz FIR highpass filter (Hamming window design, 4367 coefficients, -130db suppression at 0Hz, -3db at 0.4Hz,processing in Matlab) to remove slow trends.
+Data were then subjected to a FIR highpass filter (Hamming window design, 4367 coefficients, -130db suppression at 0Hz, 3db breakpoint at 0.5Hz, processing in Matlab) to remove slow trends.
 
 \paragraph{Artifact removal}
 MEG channels with abnormally high noise levels as identified by visual inspection were rejected from further analysis. A median of 1 channel (maximum: 3 channels) was removed.
