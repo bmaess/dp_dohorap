@@ -21,7 +21,6 @@ This transformation was accomplished with the inverted sigmoid function:
 All results from the ANOVA were transformed back into milisecond space with the sigmoid function:
 \[ r = \frac{1}{1+e^{-\hat{r}}} \]
 
-
 \subsection{Sensor-space activity}
 
 \paragraph{Preprocessing and HPI correction}
@@ -180,13 +179,13 @@ For visualization purposes, grand average activity was calculated for each corti
 
 \subsection{Interaction analysis}
 
-The TRENTOOL software (version 3.3.1, February 2015) was used for exploring entropy transfers between cortical areas.
+The TRENTOOL software (version 3.3.1beta, 27 May 2015) was used with Matlab 2013a for exploring entropy transfers between cortical areas.
 For this purpuse, data was prepared for each subject individually.
-The procedure took place in three sections.
+The procedure consisted of three sections.
 
 
 During the first section, the input datasets were prepared.
-The preparation required three components: regional activity from single trials, a list of regional comparisons and a set of parameters.
+This preparation consisted of three components: regional activity from single trials, a list of regional comparisons and a set of parameters.
 
 For the first component, two sets of single trials were selected from each subject.
 Mean regional activity were then extracted from each trial.
@@ -198,16 +197,24 @@ This filter introduced a signal lag of 79ms, and selected time windows were shif
 For the second component, I selected only the most relevant functional connections between cortical regions.
 There are 720 unique possiblities to compare these regions, which would overwhelm\footnote{The comparison over one pair of cortical regions, in forward and reverse directions, over two conditions and 50 separate shift delays, required a computation time of 35 CPU cores * hours per subject and timewindow. Calculating transfer entropy between 36 pairs of regions took a total of 3150 CPU cores * hours, which - thanks to the work of Christian Labadie and Hermann Sonntag - amounted to 48 actual hours of calculation time. The task of computing the full set of 720 comparisons would have required 63000 CPU cores * hours - for other groups, a sufficient reason to switch a GPU-based algorithm\cite{3.4.gpuTE}.} the computational capacity at my disposal. For this reason, I limited the calculation to comparisons between regions along the same axonal fiber bundle.
 
-Comparisons between these regions were performed for all regions along three pathways (see Fig. \ref{3.4.regions}).
-The regions associated to each pathway are derived from \cite{1.1.pathways}.
-PAC and pSTG showed effects across both hemispheres.
-Therefore, I included comparisons across hemispheres between the mirrored regions (two connections: $PAC_{lh} \rightarrow PAC_rh$ and $pSTG_{lh} \rightarrow pSTG_rh$).
-Whenever PAC or pSTG were involved in a pathway, I included the regions from both hemispheres.
-The primary dorsal pathway connects PAC and the left BA6v, yielding two connections ($PAC_{lh} \rightarrow BA6v_{lh}$ and $PAC_{rh} \rightarrow BA6v_{lh}$).
-The secondary dorsal pathway connects PAC, pSTG and BA44, yielding six unique connections ($PAC_{lh} \rightarrow pSTG_{lh}$, $PAC_{lh} \rightarrow pSTG_{rh}$, $PAC_{rh} \rightarrow pSTG_{lh}$, $PAC_{rh} \rightarrow pSTG_{rh}$, $pSTG_{lh} \rightarrow BA44_{lh}$ and $pSTG_{rh} \rightarrow BA44_{lh}$).
-The ventral pathway connects PAC, aSTG and BA45, yielding three unique connections ($PAC_{lh} \rightarrow aSTG_{lh}$, $PAC_{rh}-aSTG_{lh}$ and $aSTG_{lh} \rightarrow BA45_{lh}$).
-Since BA44 and BA45 are direct neighbors, their connection ($BA44_lh \rightarrow BA45_lh$) was included too.
-The reverse direction was added for each of these 14 comparisons, yielding 28 pair-wise comparisons in total.
+I computed comparisons between all speech-related regions along three pathways (see Fig. \ref{3.4.regions}).
+The following regions associated to each pathway are derived from \cite{1.1.pathways}.
+Dorsal pathway II, via the arcuate fascicle, connects the regions PAC, pSTG and BA44.
+Along this pathway, there are two short connections ($PAC_{lh} \rightarrow pSTG_{lh}$ and $pSTG_{lh} \rightarrow BA44_{lh}$) and one long connection ($PAC_{lh} \rightarrow BA44_{lh}$).
+
+Ventral pathway II, via the inferior fronto-occipital fascicle, connects the regions PAC, aSTG and BA45.
+This layout yields two short connections ()
+The secondary dorsal pathway connects PAC, pSTG and BA44, yielding two direct connections ($PAC_{lh} \rightarrow pSTG_{lh}$) and one indirect connection.
+
+Dorsal pathway I, via the nomen nescio and the third component of the superior longitudinal fascicle, connects the regions pSTG, SMG and BA6v.
+SMG is a substantially larger region than pSTG and BA6v, and apparently assists in sensory integration.
+Task-related effects tend to disappear when averaging over large regions, even when these regions are primarily involved in task-related processing.
+Due to this effect, and the minimal role of SMG in object-subject paradigms, I decided to skip the connections $pSTG_{lh} \rightarrow SMG_{lh}$ and $SMG_{lh} \rightarrow BA6v_{lh}$ in the signal transfer calculations.
+Consequently, the motor component via dorsal pathway I will be represented by the long connection $pSTG_{lh} \rightarrow BA6v_{lh}$.
+
+The ventral pathway connects PAC, aSTG and BA45, yielding three direct connections ($PAC_{lh} \rightarrow aSTG_{lh}$, $PAC_{rh}-aSTG_{lh}$ and $aSTG_{lh} \rightarrow BA45_{lh}$).
+Connections between direct neighbors  ($BA44_lh \rightarrow BA45_lh$) was included too.
+The reverse direction was added for each of these 9 comparisons, yielding 18 pair-wise comparisons in total.
 
 \begin{figure}[h]
 \begin{center}
@@ -217,25 +224,26 @@ The reverse direction was added for each of these 14 comparisons, yielding 28 pa
 \end{center}
 \end{figure}
 
-The third component concerned a set of parameters for the data preparation.
+The third component concerned the set of parameters for the data preparation.
 
 The interval analysis yielded (see chapter \ref{4.3}) three distinct time intervals with syntax effects: 0ms - 300ms, 400ms - 800ms and 1000ms - 1600ms.
 I supplied those intervals for the estimation of transfer entropy with the parameter \emph{cfg.toi} in three subsequent analyses.
 
 The transfer entropy estimation fundamentally relies on the comparison between two probability density functions.
 These mathematical constructs can only be approximated by using scalar time series.
-For this purpose, time series from individual trials were combined into a multidimensional state space by TRENTOOL.
-This multidimensional space was then reduced into probability density function in a process called embedding.
-For optimizing the embedding procedure, I selected the Ragwitz criterion (\emph{cfg.optimizemethod = 'ragwitz'}).
-Two parameters were supplied as search ranges: the relative embedding delay (\emph{cfg.ragtaurange = 0.05:0.25}) and the embedding dimension (\emph{cfg.ragdim = 5:10}).
-During the preparation phase, Trentool scans through all possible parameter values and selects the combination that maximizes 
+For this purpose, time series from individual trials are combined into a multidimensional state space by TRENTOOL.
+This multidimensional space is then reduced into probability density function in a process called embedding.
+For optimizing the embedding procedure, I followed the recommendations described in the Trentool tutorial \cite{3.3.TrentoolTutorial}.	
+As recommended for MEG data, I selected the Ragwitz criterion (\emph{cfg.optimizemethod = 'ragwitz'}) for optimizing the embedding parameters.
+The relative embedding delay, set to a search range between 0.2 and 0.5 times of the autocorrelation delay,  (\emph{cfg.ragtaurange = 0.05:0.25}) and the embedding dimension (\emph{cfg.ragdim = 2:10}).
 
 For the embedding process, a considerable section of data is necessary to estimate the baseline entropy before the interaction time cue occurs.
 This section of data is referred to as embedding delay, and won't be included in the analysis of transfer entropy.
-The required embedding delay for this combination of data and embedding parameters was 753ms.
+The minimal embedding delay for these parameters was Xms.
+By including all data points before the time interval of interest, the embedding interval was extended by 
 I extended the lower time limit of each analysis time window by the same amount.
 The Ragwitz criterion then optimized the embedding parameters for each set of time series (once per subject, time window and condition).
-The most common optimal embedding dimension was 10, and the mean optimal relative embedding delay was 0.2.
+The most common optimal embedding dimension was 12, and the optimal relative embedding delay was always 0.44.
 
 Finally, the parameter \emph{cfg.repPred} indicated the amount of samples that would be used for the interaction analysis.
 I maximized this value by calculating \emph{cfg.repPred = sampleLength - embeddingDelay - 1}, with \emph{sampleLength} as the amount of samples in the selected time window and \emph{embeddingDelay}\footnote{Unfortunately, TRENTOOL doesn't display the embedding delay. The formula I used to calculate it is, in Matlab notation, \emph{(max(cfg.ragdim)-1) $\cdot$ max(cfg.ragtaurange) + cfg.predicttimemax\_u + max(ACT)}. \emph{ACT} (the delay for the first minimum of the autocorrelation), in turn, is only computed during the preprocessing phase. Due to time constraints, I opted for a manual approach. An error message printed the current \emph{max(ACT)} if \emph{cfg.repPred} was too small, so I could supply this value into the configuration variable and re-run the preprocessing phase. After a few iterations, the absolute maximum ACT was found, allowing me to adjust the time windows and finish the preprocessing phase.} the amount of samples in the absolute embedding delay.
