@@ -197,24 +197,28 @@ This filter introduced a signal lag of 79ms, and selected time windows were shif
 For the second component, I selected only the most relevant functional connections between cortical regions.
 There are 720 unique possiblities to compare these regions, which would overwhelm\footnote{The comparison over one pair of cortical regions, in forward and reverse directions, over two conditions and 50 separate shift delays, required a computation time of 35 CPU cores * hours per subject and timewindow. Calculating transfer entropy between 36 pairs of regions took a total of 3150 CPU cores * hours, which - thanks to the work of Christian Labadie and Hermann Sonntag - amounted to 48 actual hours of calculation time. The task of computing the full set of 720 comparisons would have required 63000 CPU cores * hours - for other groups, a sufficient reason to switch a GPU-based algorithm\cite{3.4.gpuTE}.} the computational capacity at my disposal. For this reason, I limited the calculation to comparisons between regions along the same axonal fiber bundle.
 
-I computed comparisons between all speech-related regions along three pathways (see Fig. \ref{3.4.regions}).
+I selected comparisons between all language-related regions along three pathways (see Fig. \ref{3.4.regions}) that are known to be involved in subject-object-paradigms.
 The following regions associated to each pathway are derived from \cite{1.1.pathways}.
-Dorsal pathway II, via the arcuate fascicle, connects the regions PAC, pSTG and BA44.
-Along this pathway, there are two short connections ($PAC_{lh} \rightarrow pSTG_{lh}$ and $pSTG_{lh} \rightarrow BA44_{lh}$) and one long connection ($PAC_{lh} \rightarrow BA44_{lh}$).
 
-Ventral pathway II, via the inferior fronto-occipital fascicle, connects the regions PAC, aSTG and BA45.
-This layout yields two short connections ()
-The secondary dorsal pathway connects PAC, pSTG and BA44, yielding two direct connections ($PAC_{lh} \rightarrow pSTG_{lh}$) and one indirect connection.
+The second dorsal language pathway, via the arcuate fascicle, connects the regions PAC, pSTG and BA44.
+This pathway is therefore represented by two short connections ($PAC_{lh} \rightarrow pSTG_{lh}$ and $pSTG_{lh} \rightarrow BA44_{lh}$) and one long connection ($PAC_{lh} \rightarrow BA44_{lh}$).
 
-Dorsal pathway I, via the nomen nescio and the third component of the superior longitudinal fascicle, connects the regions pSTG, SMG and BA6v.
-SMG is a substantially larger region than pSTG and BA6v, and apparently assists in sensory integration.
+The second ventral language pathway, via the inferior fronto-occipital fascicle, connects the regions PAC, aSTG and BA45.
+This layout yields two short connections ($PAC_{lh} \rightarrow aSTG_{lh}$, $aSTG_{lh} \rightarrow BA45_{lh}$) and one long connection, $PAC_{lh} \rightarrow BA45_{lh}$.
+
+The first dorsal language pathway, via the nomen nescio and the third component of the superior longitudinal fascicle, connects the regions pSTG, SMG and BA6v.
+SMG is a substantially larger region than pSTG and BA6v, and is apparently responsible for sensory integration.
 Task-related effects tend to disappear when averaging over large regions, even when these regions are primarily involved in task-related processing.
 Due to this effect, and the minimal role of SMG in object-subject paradigms, I decided to skip the connections $pSTG_{lh} \rightarrow SMG_{lh}$ and $SMG_{lh} \rightarrow BA6v_{lh}$ in the signal transfer calculations.
-Consequently, the motor component via dorsal pathway I will be represented by the long connection $pSTG_{lh} \rightarrow BA6v_{lh}$.
+Consequently, the motor component of the language network will be represented by the long connection $pSTG_{lh} \rightarrow BA6v_{lh}$.
 
-The ventral pathway connects PAC, aSTG and BA45, yielding three direct connections ($PAC_{lh} \rightarrow aSTG_{lh}$, $PAC_{rh}-aSTG_{lh}$ and $aSTG_{lh} \rightarrow BA45_{lh}$).
-Connections between direct neighbors  ($BA44_lh \rightarrow BA45_lh$) was included too.
-The reverse direction was added for each of these 9 comparisons, yielding 18 pair-wise comparisons in total.
+The analysis included two functional regions (BA44/BA45 and aSTG/pSTG) that share a common gyrus.
+Since gyri are highly interconnected, a certain degree of information exchange can be expected.
+Connections between those regions were examined as well, yielding another two short connections ($BA44_{lh} \rightarrow BA45_{lh}$ and $aSTG_{lh} \rightarrow pSTG_{lh}$).
+
+In order to compute forward and backward directions, two separate calculations are necessary for each comparison.
+Therefore, examing the information transfer along these nine regional connections requires 18 sets of calculations.
+
 
 \begin{figure}[h]
 \begin{center}
@@ -224,18 +228,26 @@ The reverse direction was added for each of these 9 comparisons, yielding 18 pai
 \end{center}
 \end{figure}
 
-The third component concerned the set of parameters for the data preparation.
+The third component was the set of parameters for the data preparation.
 
-The interval analysis yielded (see chapter \ref{4.3}) three distinct time intervals with syntax effects: 0ms - 300ms, 400ms - 800ms and 1000ms - 1600ms.
-I supplied those intervals for the estimation of transfer entropy with the parameter \emph{cfg.toi} in three subsequent analyses.
+First, I needed to define a time interval that is analyzed for transfer entropy.
+The interval analysis showed (see chapter \ref{4.3}) that syntax effects occurred predominantly up to 1000ms after onset.
+These effects were based on group analysis, while the following interaction analysis was based on a single-subject, single-trial analysis.
+Due to these circumstances, I decided against limiting the interaction analysis to the previously discovered time intervals, and for exploring the full time range between 0ms and 1000ms (after stimulus onset) instead.
+As a reasonable tradeoff between time resolution and data content, I fragmented the analysis into five segments of 200ms.
+I set those segments with the parameter \emph{cfg.toi} during five subsequent analyses.
 
-The transfer entropy estimation fundamentally relies on the comparison between two probability density functions.
-These mathematical constructs can only be approximated by using scalar time series.
+Next, I needed to choose embedding parameters.
+To understand embedding, it is relevant to know that the transfer entropy estimation fundamentally relies on the comparison between two probability density functions.
+These mathematical constructs can only be approximated from scalar time series.
 For this purpose, time series from individual trials are combined into a multidimensional state space by TRENTOOL.
 This multidimensional space is then reduced into probability density function in a process called embedding.
-For optimizing the embedding procedure, I followed the recommendations described in the Trentool tutorial \cite{3.3.TrentoolTutorial}.	
-As recommended for MEG data, I selected the Ragwitz criterion (\emph{cfg.optimizemethod = 'ragwitz'}) for optimizing the embedding parameters.
-The relative embedding delay, set to a search range between 0.2 and 0.5 times of the autocorrelation delay,  (\emph{cfg.ragtaurange = 0.05:0.25}) and the embedding dimension (\emph{cfg.ragdim = 2:10}).
+There are four important embedding parameters: the embedding criterion, the embedding interval, the embedding delay range and the embedding dimension range.
+
+For choosing suitable parameter ranges, I followed the recommendations described in the Trentool tutorial \cite{3.3.TrentoolTutorial}.
+As recommended for EEG/MEG data, I selected the Ragwitz criterion (\emph{cfg.optimizemethod = 'ragwitz'}) for optimizing the embedding parameters.
+The embedding delay is denominated in multiples of the autocorrelation time. Trentool parameter setup relies heavily on this metric.
+I set the relative embedding delay to a search range between 0.2 and 0.5 times of the autocorrelation delay,  (\emph{cfg.ragtaurange = 0.05:0.25}) and the embedding dimension (\emph{cfg.ragdim = 2:10}).
 
 For the embedding process, a considerable section of data is necessary to estimate the baseline entropy before the interaction time cue occurs.
 This section of data is referred to as embedding delay, and won't be included in the analysis of transfer entropy.
