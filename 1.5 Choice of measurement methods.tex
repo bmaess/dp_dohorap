@@ -301,12 +301,13 @@ This limitation leads to a systematic underestimation of effective connectivity 
 
 \paragraph{Information-theoretic approaches}
 Next to mutual information and joint entropy, transfer entropy (TE) is by far the most advanced information-theoretic approach \cite{1.5.TEcomparison}.
-TE is a non-linear, model-free approach, is resistant to indirect causal effects and volume conduction, and incorporates both dynamical and directional information \cite{3.4.TE}.
+TE is a non-linear, model-free approach, is resistant to indirect causal effects and volume conduction, and incorporates both dynamical and directional information \cite{3.4.TE.a}, \cite{3.4.TE.b}.
 It is, just like Granger causality, based on Wiener's assumption of temporal delays between cause and effect.
 The core principle is the comparison within and between two streams of entropy.
 If the future entropy of one data stream can be explained better by adding entropy from another data stream, an entropy transfer must have occurred.
 This entropy transfer is quantified and secured against false positive detection with a statistical comparison against surrogate data.
 This surrogate data needs to be constructed so that the causal relationship between data streams is destroyed.
-TE also requires relatively large amounts of data, which shows at least some stationarity.
+TE also requires relatively large amounts of data that exhibits at least some stationarity.
 Both requirements are solved by supplying trigger-locked single trials with generous time limits and a high sampling rate.
-The most extensive implementation of TE, TRENTOOL, allows for computing group-level statistics and effects of experimental conditions, making it the ideal software for the goal of my study.
+The most extensive implementation of TE is the software Trentool \cite{3.4.Trentool}.
+Trentool can compute group-level statistics and effects of experimental conditions, making it the ideal software for the goal of this study.
