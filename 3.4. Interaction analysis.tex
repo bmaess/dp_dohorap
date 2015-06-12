@@ -1,22 +1,21 @@
 \subsection{Interaction analysis}
 
-The software Trentool (\cite{3.4.Trentool}, version 3.3.1beta, 30 May 2015) was used with Matlab 2013a for exploring entropy transfers between cortical areas.
-For this purpuse, data was prepared for each subject individually.
-The procedure consisted of three sections.
+The software Trentool (\cite{3.4.Trentool}, version 3.3.2, 6th June 2015) was used with Matlab 2013a for exploring entropy transfers between cortical areas.
+The procedure consisted of three sections: Preparation, transfer entropy calculation and evaluation of the results.
 
-\paragraph{Input preparation}
-During the first procedural section, the input datasets were prepared for the analysis.
-This preparation consisted of three components: regional activity from single trials, a list of regional comparisons and a set of parameters.
+\paragraph{Preparation}
+For the first procedural section, the input datasets were prepared for the analysis.
+This dataset consisted of three parts: regional activity from single trials, a list of regional connections and a set of parameters.
 
-For the first component, two sets of single trials were selected from each subject.
-Mean regional activity were then extracted from each trial.
-Cortical regions were selected if they showed syntax effects either in the cluster analysis or the interval analysis.
+To create the first dataset part, two sets of single trials (one for each condition) were selected from each subject.
+For this step, cortical regions were selected if they showed syntax effects either in the cluster analysis or the interval analysis.
 This process yielded six relevant cortical regions: PAC, aSTG, pSTS, BA44, BA45 and BA6v.
-Data from these regions were lowpass filtered with a digital, single-pass FIR filter (passband frequency of 250Hz, stopband frequency of 300Hz, ripple of 1db, stopband attenuation of 120db; implemented with the \emph{filter} function in Matlab) to suppress the influence from the HPI coils.
+Mean activity from these regions was lowpass filtered with a digital, single-pass FIR filter \footnote{passband frequency of 250Hz, stopband frequency of 300Hz, ripple of 1db, stopband attenuation of 120db; implemented with the \emph{filter} function in Matlab} to suppress the influence from the HPI coils.
 This filter introduced a signal lag of 79ms, and selected time windows were shifted accordingly.
 
-For the second component, I selected only the most relevant functional connections between cortical regions.
-There are 720 unique possiblities to compare these regions, which would overwhelm\footnote{The comparison over one pair of cortical regions, in forward and reverse directions, over two conditions and 50 separate shift delays, required a computation time of 35 CPU cores * hours per subject and timewindow. Calculating transfer entropy between 36 pairs of regions took a total of 3150 CPU cores * hours, which - thanks to the work of Christian Labadie and Hermann Sonntag - amounted to 48 actual hours of calculation time. The task of computing the full set of 720 comparisons would have required 63000 CPU cores * hours - for other groups, a sufficient reason to switch a GPU-based algorithm\cite{3.4.gpuTE}.} the computational capacity at my disposal. For this reason, I limited the calculation to comparisons between regions along the same axonal fiber bundle.
+To create the second dataset part, I examined which were the most relevant functional connections between cortical regions.
+There are 720 unique possiblities to compare the previously mentioned six regions, which would overwhelm\footnote{The comparison over one pair of cortical regions, in forward and reverse directions, over two conditions and 50 separate shift delays, required a computation time of 35 CPU cores * hours per subject and timewindow. Calculating transfer entropy between 36 pairs of regions took a total of 3150 CPU cores * hours, which - thanks to the work of Christian Labadie and Hermann Sonntag - amounted to 48 actual hours of calculation time. The task of computing the full set of 720 comparisons would have required 63000 CPU cores * hours - for other groups, a sufficient reason to switch a GPU-based algorithm\cite{3.4.gpuTE}.} the computational capacity at my disposal and yield a large proportion of meaningless results.
+For these reason, I limited the calculation to comparisons between regions along the same axonal fiber bundle.
 
 I selected comparisons between all language-related regions along three pathways (see Fig. \ref{3.4.regions}) that are known to be involved in subject-object-paradigms.
 The following regions associated to each pathway are derived from \cite{1.1.pathways}.
@@ -40,16 +39,15 @@ Connections between those regions were examined as well, yielding another two sh
 In order to compute forward and backward directions, two separate calculations are necessary for each comparison.
 Therefore, examing the information transfer along these nine regional connections requires 18 sets of calculations.
 
-
 \begin{figure}[h]
 \begin{center}
 \vspace{7mm}
 \includegraphics[width=0.75\textwidth]{pics/3_4_regions.png}
-\caption{\label{3.4.regions} Connections of selected cortical regions for the computation of transfered entropy. Left of PAC: ventral pathway; right of PAC: dorsal pathways 1 and 2.}
+\caption{\label{3.4.regions} Connections of selected cortical regions for the computation of transfered entropy.}
 \end{center}
 \end{figure}
 
-The third component was the set of parameters for the data preparation.
+To create the third dataset part, I selected a set of parameters for the data preparation.
 
 First, I needed to define a time interval that is analyzed for transfer entropy.
 The interval analysis showed (see chapter \ref{4.3}) that syntax effects occurred predominantly up to 1000ms after onset.
@@ -92,16 +90,22 @@ Since tau depends on ACT, which in turn is different for each data set, it is im
 This implementation leads to a sliding TOI (fixed length, but with varying onset) for the actual information transfer calculations.
 Since the intention was to explore signal interactions at clearly defined time intervals, the Trentool implementation was too imprecise for my goals.
 In order to achieve a higher degree of control across trials and subjects, I modified the routine \emph{transferentropy.m} (for a detailed explanation, see \ref{Appendix.A}) to use a fixed TOI for its calculations.
-After the modification, Trentool expanded the start of the TOI dynamically with the length of the embedding interval.
+With this modification, Trentool adapted the start - instead of the end - of the internal data interval dynamically to the length of the embedding interval.
 To achieve this effect, \emph{cfg.toi} was set to the start and end of the TOI, plus a fixed filter delay of 79ms.
 \emph{cfg.repPred} was set to the length of the TOI in samples, i.e., 200.
 
-With these parameter ranges, Trentool used the Ragwitz criterion to optimize the embedding parameters for each set of time series (once per subject, time window and condition).
-The most common optimal embedding dimension was 14, and the optimal relative embedding delay was 0.44.
-The minimal embedding interval for this combination of parameters was Xms.
+Using this dataset, Trentool used the Ragwitz criterion to optimize the embedding parameters for each collection of trials.
+This process was repeated for each subject, time window and condition.
+The most common optimal embedding dimension was 14 (minimum: 12).
+
+After the individual parameter optimization, the process was repeated to prepare the datasets for group comparisons.
+Originally, this process was intented to be conducted by the function \emph{TE_groupprepare}.
+Since this function was designed to run on a single computer (requiring a calculation time of more that 50 hours in this case), I replaced it with an equivalent routine that allowed distributed computing (see \ref{Appendix.A}).
+
+\paragraph{Transfer entropy calculations}
 
 After embedding, Trentool performed an interaction shift test.
-This procedure (performed with the function \emph{InteractionDelayReconstruction\_calculate()}) counteracts bias introduced by noise, especially the common false positive detection of an interaction between two data sets with different signal-to-noise levels.
+This procedure (performed with the function \emph{InteractionDelayReconstruction\_calculate}) counteracts bias introduced by noise, especially the common false positive detection of an interaction between two data sets with different signal-to-noise levels.
 The shift test establishes the optimal delay of transfered entropy for each comparison of activity.
 Transfer entropy was computed for a time range of possible interaction delays: 1ms to 50ms in steps of 1ms.
 TRENTOOL then selected the interaction delay with the biggest associated transfer entropy as the most likely representation of the signal delay caused by cognitive processes and anatomic constraints.
@@ -109,19 +113,27 @@ To alleviate issues with volume conduction, I supplied the option \emph{cfg.extr
 Unfortunately, using this method prevents the determination of the precise signal delay.
 Since the signal delay is not relevant to my research goals, this trade-off was trivial to solve.
 The optimal dimension for each data set was considered with the option \emph{cfg.optdimusage = 'indivdim'}.
-For significance testing, TRENTOOL creates surrogate data.
-This data was created by shuffling existing trials (\emph{cfg.surrogatetype = 'trialshuffling'}).
-The significance level for this procedure was \emph{cfg.alpha = 0.05}.
+
+During testing for the impact of experimental conditions, real effects are commonly confounded with spurious effect due to random differences.
+To counteract this issue, Trentool offers the creation of surrogate data.
+This possibility allows for comparing transfer entropy between real and surrogate data, rather than between conditions.
+The surrogate data was created by shuffling existing trials (\emph{cfg.surrogatetype = 'trialshuffling'}).
+The significance level for this procedure was 1\% (\emph{cfg.alpha = 0.01}).
 I used t-values to represent the statistical results of the shift test (\emph{cfg.permstatstype = 'indepsamplesT'}).
-These results indicate the likelihood if an entropy transfer has occurred between the selected pair of regional activity.
+These results indicated the likelihood if an entropy transfer has occurred between the selected pair of regional activity.
 
-I then combined these subject-level results in Matlab to obtain group-level results.
-First, surrogate test results were combined with Stouffer's combined probability test.
-These combined test results were corrected with Benjamini & Hochberg's procedure for controlling the false discovery rate.
-Second, signal delay estimations were obtain by calculating the mean over all subjects.
+If three or more significant interactions were detected within a single dataset, the results were corrected for cascade effects and simple common mode drive effects with the Trentool function \emph{TEgraphanalysis}.
+The detection threshold was 3ms (\emph{cfg.threshold = 3}) and I used FDR-uncorrected probability values to select signficant interactions (\emph{cfg.cmc = 0}).
 
+\paragraph{Result evaluation}
 
-For the third section, I evaluated the impact of the syntax condition on all subjects.
-A clustered T-test compared transfer entropy between conditions over all subjects.
-For this group-level comparison, the TRENTOOL function \emph{TEgroup\_stats} was used.
-One comparison was conducted for each of the three timewindows.
+I combined these subject-level results in Matlab to obtain group-level results.
+As suggested by \cite{3.4.binomialtest}, I performed a binomial test (implemented in Matlab with the function \emph{binofit}) to examine whether more significant results (p < 5\%) occur than expected when assuming that the null probability of a significant result is 5\%.
+This probability was corrected for multiple comparisons \cite{3.4.FDR.a} with the Matlab function \emph{fdr_bh} with an alpha of 5\% \cite{3.4.FDR.implementation}.
+Furthermore, I estimated the extent of transfer entropy for every functional connection by calculating a  mean across all subjects.
+For calculating the mean transfer entropy, only interactions were considered that passed the surrogate test.
+
+Finally, I evaluated the impact of the syntax condition on all subjects.
+For this group-level comparison, a clustered T-test compared transfer entropy between conditions over all subjects by using the Trentool function \emph{TEgroup\_stats}.
+
+A separate comparison was conducted for each of the five timewindows.

@@ -5,7 +5,7 @@ Three software packages were used for data preprocessing: Elekta Neuromag\textsu
 \subsection{Behavioral data}
 
 Two types of behavioral data were analyzed for group and condition effects: response time (RT) and response accuracy (RA).
-Response time was measured at the condition onset, i.e. at the "'d"' sound of "'den"' or "'der"' (in the subject-relative clause or the object-relative clause, respectively).
+Response time was measured at the condition onset, i.e. at the ``d`` sound of ``den`` or ``der`` (in the subject-relative clause or the object-relative clause, respectively).
 Trials were omitted when the subject skipped or answered them incorrectly.
 Trials were also omitted if the response took longer than 4000ms.
 This procedure removed 11.1\% of the childrens' trials, and 2.5\% of the adults' trials.
@@ -35,7 +35,7 @@ The resulting pre-processed data contained major artifacts from spontaneous chan
 Jump amplitudes were detected by selecting peaks in the z-transformed continuous data that exceeded a threshold of 12 standard deviations.
 Segments of 2 seconds in the pre-processed continuous data were rejected if any magnitude channel exceeded an amplitude of $6\cdot10^{-12}T$ (gradiometer channels: $4\cdot10^{-12}\frac{T}{cm}$).
 Continuous data were then decomposed into independent components (ICA) that explained 99\% of the variance.
-Components that correlated with EOG or ECG channels were removed with the MNE functions \emph{preprocessing.ica\_find\_ecg\_events()} and \emph{preprocessing.ica\_find\_eog\_events()}, respectively.
+Components that correlated with EOG or ECG channels were removed with the MNE functions \emph{preprocessing.ica\_find\_ecg\_events} and \emph{preprocessing.ica\_find\_eog\_events}, respectively.
 ICA-based correction removed an average of 2.1 components per subject and block (minimum: 1, maximum: 4).
 The remaining ICA components were used to reconstruct continuous data.
 
@@ -44,13 +44,13 @@ The main trigger was set at the condition onset (described in section 3.1.4).
 Epochs were created between 1000ms before and 4000ms after the main trigger.
 An epoch was rejected if the trial was skipped, or answered too slow (more than 4000ms) or answered incorrectly.
 This procedure yielded an average of [] trials in children and [] trials in adults.
-Data were filtered before epoching with a 45Hz FIR lowpass (using the MNE function \emph{raw.filter()}) exclusively for the following two steps.
+Data were filtered before epoching with a 45Hz FIR lowpass (using the MNE function \emph{raw.filter}) exclusively for the following two steps.
 
 \paragraph{Cluster analysis}
 Each trial consisted of mean activity from one of each of three sensor groups (from parietal, temporal and frontal locations).
 Trials from each syntax condition were pooled into a pair of trial sets.
 Since the group had a strong impact on RT (see [4.1.1]), effective time windows were estimated separately for children and adults.
-Clusters were computed by running the MNE function \emph{stats.permutation\_cluster\_test()} \cite{3.3.clustertest} with the pair of trial sets as input data.
+Clusters were computed by running the MNE function \emph{stats.permutation\_cluster\_test} \cite{3.3.clustertest} with the pair of trial sets as input data.
 The function was run with 2500 permutations, and an t-threshold of 2.0.
 
 \paragraph{Interval analysis}
@@ -76,16 +76,15 @@ For visualization purposes, grand average activity was also calculated for each 
 \subsection{Source space activity}
 
 \paragraph{Anatomical preprocessing}
-Cortical reconstruction and volumetric segmentation was performed with the Freesurfer image analysis suite, which is documented and freely available for download online (\emph{http://surfer.nmr.mgh.harvard.edu/}).
-The technical details of these procedures are described in prior publications (Dale et al., 1999; Dale and Sereno, 1993; Fischl and Dale, 2000; Fischl et al., 2001; Fischl et al., 2002; Fischl et al., 2004a; Fischl et al., 1999a; Fischl et al., 1999b; Fischl et al., 2004b; Han et al., 2006; Jovicich et al., 2006; Segonne et al., 2004, Reuter et al. 2010, Reuter et al. 2012).
-I followed the recommended processing pipeline ("'recon-all"'), with three optional functions.
+Cortical reconstruction and volumetric segmentation was performed with the Freesurfer image analysis suite [Martinos Center for Biomedical Imaging, Harvard-MIT, Boston USA].
+I followed the recommended processing pipeline (``recon-all``), with three optional functions.
 
-First, the option "'-nuintensitycor-3T"' improved brain segmentation accuracy by optimizing the bias field correction \cite{3.3.nuintensity}.
+First, the option ``-nuintensitycor-3T`` improved brain segmentation accuracy by optimizing the bias field correction \cite{3.3.nuintensity}.
 
-Second, by invoking "'-notal-check"', I skipped the Talairach registration checks.
+Second, by invoking ``-notal-check``, I skipped the Talairach registration checks.
 Talairach registration was prone to failure especially in the infant subjects, and uneccessary for our further processing steps.
 
-Third, I supplied and included T2-weighted MRI datasets with the options "'-T2"' and "'-T2pial"'.
+Third, I supplied and included T2-weighted MRI datasets with the options ``-T2`` and ``-T2pial``.
 The combination of T1- and T2-weighted images improves tissue differentiation especially around the pia mater, yielding a more accurate cortex segmentation.
 This pipeline yielded a continuous, antomically plausible cortical surface in MRI space.
 
@@ -108,7 +107,7 @@ It was performed for each subject individually using the MNE package \emph{mne\_
 The initial fit was done manually, with visual error feedback.
 The following fine adjustment was performed automatically.
 This process was repeated until the average spatial error was less than 2mm.
-These three components were assembled into a forward operator by the method \emph{mne\_do\_forward\_solution()}.
+These three components were assembled into a forward operator by the method \emph{mne\_do\_forward\_solution}.
 
 
 For the inverse operator, three components were necessary: the forward model, a noise covariance matrix, and a regularization factor.
@@ -117,7 +116,7 @@ Each component was calculated individually for each subject.
 The first component, the forward model, was supplied by the previous step.
 
 For the second component, the noise covariance matrix, the 1000ms after visual onset were extracted from each trial.
-Then, the covariance matrix was computed from this data with the function \emph{mne.compute\_covariance()}.
+Then, the covariance matrix was computed from this data with the function \emph{mne.compute\_covariance}.
 
 The third component, the regularization factor was determined from this noise covariance matrix.
 First, only coefficients from gradiometer channels were selected.
@@ -129,7 +128,8 @@ Sixth, the lower cutoff was defined as the value at this index, plus 15\%.
 Seventh, the regularization factor was computed by dividing the lower cutoff by the higher cutoff.
 
 
-The inverse operator was computed from these three components by the method \linebreak \emph{mne\_do\_inverse\_operator()}. The regularization factor was supplied with the option \linebreak "'--megreg"'.
+The inverse operator was computed from these three components by the method \linebreak \emph{mne\_do\_inverse\_operator}.
+The regularization factor was supplied with the option \linebreak ``--megreg``.
 
 \paragraph{Inverse solution}
 For determining regional cortical activity, 8 regions needed to be defined: the primary auditory cortex (PAC), the anterior and posterior parts of the superior temporal sulcus and gyrus (aSTS, pSTS, aSTG and pSTG), Brodmann area 45 (BA45), Brodmann area 44 (BA44) and the ventral Brodmann area 6 (BA6v).
@@ -152,19 +152,18 @@ Regions were then mapped from the reference cortex onto the cortices of all othe
 
 The inverse operator was then used to calculate inverse solutions from MEG sensor data.
 Inverse solutions were calculated for each time point, region, trial and subject individually.
-The process was performed by the function \emph{mne.minimum\_norm.apply\_inverse\_epochs()}, with sLORETA as the inverse method.
-The option "'pick\_ori=normal"' designated currents leaving and entering the cortex as positive and negative, respectively.
+The process was performed by the function \emph{mne.minimum\_norm.apply\_inverse\_epochs}, with sLORETA as the inverse method.
+The option ``pick\_ori=normal`` designated currents leaving and entering the cortex as positive and negative, respectively.
 Due to the combination of passive and active noise reduction and artifact suppression, I assumed a fairly high signal-to-noise-ratio (SNR) of 50:1 for each individual source.
 The regularization factor was estimated by $\frac{1}{SNR} = 2.5*10^{-3}$.
 The result was a series of activation patterns within each region.
 Finally, the mean of regional node activity was calculated for each time point, region, trial and subject.
 
-
 The resulting localized activity was subjected to a cluster analysis.
 Extracted trials were pooled over all subjects within a group.
 Within each group, two sets of trials were created from the two syntax conditions.
 Each trial contained mean activity from eight regions (PAC, aSTS, aSTG, pSTS, pSTG, BA44, BA45 and BA6v).
-Clusters were determined by running the MNE function $stats.permutation\_cluster\_test()$ \cite{3.3.clustertest} over the two sets of trials.
+Clusters were determined by running the MNE function \emph{stats.permutation\_cluster\_test} \cite{3.3.clustertest} over the two sets of trials.
 The function was run with 2500 permutations, and an t-threshold of 2.0.
 The results from each group was evaluated separately.
 

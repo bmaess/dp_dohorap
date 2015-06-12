@@ -59,7 +59,7 @@ There was no interaction effect between group and sentence condition ($F < 0.1$,
 We computed average event-related fields (ERF) for each subject and sensor region.
 Activity from these ERF was selected with two different types of time windows.
 
-A positive effect indicates that activity evoked by object-relative clauses was more positive than activity evoked by subject-relative clauses. In the case of gradiometers, "'more positive"' means a higher regional RMS. With localized data, "'more positive"' means a higher z-score from the sLORETA source reconstruction.
+A positive effect indicates that activity evoked by object-relative clauses was more positive than activity evoked by subject-relative clauses. In the case of gradiometers, ``more positive`` means a higher regional RMS. With localized data, ``more positive`` means a higher z-score from the sLORETA source reconstruction.
 
 
 \subsection{Interval analysis}
@@ -308,41 +308,107 @@ By the refutation of the second and third possibilities, the first assumption wa
 Therefore, I had to conclude that the inverse solution for childrens' cortical activity failed to match the accuracy of the adults'.
 Without the spatio-temporal distribution of condition effects in children, the task of determining their relevant TOI and ROI for the following section showed little promise.\section{Source-space interactions}
 
-Localized activity in eight cortical regions was analyzed for 28 possible signal interactions.
-The following preliminary results were calculated with a reduced timing resolution of 2ms and a low upper time delay (20ms).
-As such, these results may systematically underestimate both the effective transfer entropy and the delay of signal interactions.
+Transfer entropy was examined across 9 possible functional connections for five time intervals, spanning an interaction delay between 1ms and 50ms.
+Time intervals (relative to stimulus onset) are abbreviated with T1 (0ms - 200ms), T2 (200ms - 400ms), T3 (400ms - 600ms), T4 (600ms - 800ms) and T5 (800ms - 1000ms).
 
 First, transfer entropy was compared against surrogate data.
 The surrogate test determined whether the transfered entropy (TE) was erroneously detected due to random coincidence.
-This test revealed that all interactions were due to a real information transfer at a 5\% significance level (FDR-corrected with 28 comparisons).
-At a 0.1\% level (Bonferroni-corrected with 28 comparisons), a significance pattern emerged.
-Detailed significance results for all interactions at this threshold are visualized in figure \ref{4.4.networkgraph} in the form of arrow shading.
-During the time window 0ms-300ms, 17 interactions were significant in the ORC condition and 15 in the SRC condition.
-During the time window 400-800ms, 18 interactions were significant in the ORC condition and 17 in the SRC condition.
-During the time window 1000ms-1600ms, 22 interactions were significant in the ORC condition and 21 in the SRC condition.
-
 The effective TE was calculated from the difference between surrogate TE and raw TE.
-Detailed TE values for all interactions are visualized in figure \ref{4.4.networkgraph} in the form of arrow thickness.
-During the time window 0ms-300ms, the median TE was 7.6 in the ORC condition and 6.6 in the SRC condition.
-During the time window 400-800ms, the median TE was 8.5 in the ORC condition and 8.3 in the SRC condition.
-During the time window 1000ms-1600ms, the median TE was 8.7 in the ORC condition and 8.5 in the SRC condition.
-The three biggest TE across all time windows were estimated for the interactions $PAC_{rh} \rightarrow PAC_{lh}$, $PAC_{rh} \rightarrow pSTG_{rh}$ and $PAC_{lh} \rightarrow pSTG_{rh}$.
+These values are listed in tables \ref{4.4.TEvalues.a} and \ref{4.4.TEvalues.b}, and visualized in figures \ref{4.4.networkgraph.a} and \ref{4.4.networkgraph.b}.
 
-The estimated delay between interactions was determined by selecting the signal shift that yielded the maximum TE.
-Detailed delay values for all interactions are described in figure \ref{4.4.networkgraph} as number below each arrow.
-The median delay was 11ms, with the 5\% smallest delays at 9ms and the 5\% largest delays at 14ms.
-The longest delay was 15ms, from left BA6v to the right pSTG.
-The shortest delay was 8ms, from left pSTG to the right pSTG.
+\vspace{5mm}
+\begin{table}[h]
+\begin{center}
+% Header design from http://www.tablesgenerator.com/
+\begin{tabular}{cccccccccccc}
+Origin & Target & \multicolumn{10}{c}{ORC condition}\\
+ROI & ROI & \multicolumn{5}{c}{Transfer Entropy} & \multicolumn{5}{c}{Probability}\\
+ & & T1 & T2 & T3 & T4 & \multicolumn{1}{c|}{T5} & T1 & T2 & T3 & T4 & T5\\ \hline
+ % Table contents created with assembleResults.m
+ pSTG & BA6v & N.S. & 67.8 & N.S. & N.S. & N.S. & 21\% & 5\% & 21\% & <1\% & 5\%\\ 
+PAC & pSTG & 19.0 & 15.1 & 14.3 & 20.5 & N.S. & <0.1\% & <0.1\% & <0.1\% & <1\% & <0.1\%\\ 
+pSTG & BA44 & N.S. & 38.2 & N.S. & 37.3 & N.S. & <1\% & <1\% & 5\% & 5\% & 21\%\\ 
+PAC & BA44 & 26.7 & N.S. & N.S. & N.S. & N.S. & 21\% & <1\% & 5\% & 21\% & 58\%\\ 
+PAC & aSTG & N.S. & N.S. & N.S. & N.S. & N.S. & 58\% & 58\% & 5\% & 5\% & 21\%\\ 
+aSTG & BA45 & N.S. & N.S. & N.S. & N.S. & N.S. & <1\% & 100\% & 100\% & 100\% & <1\%\\ 
+PAC & BA45 & N.S. & N.S. & N.S. & N.S. & N.S. & 5\% & 58\% & 58\% & 5\% & <1\%\\ 
+BA44 & BA45 & N.S. & 22.2 & N.S. & N.S. & N.S. & 5\% & <1\% & 58\% & 5\% & 21\%\\ 
+pSTG & aSTG & 29.2 & 19.6 & N.S. & 21.3 & 11.7 & <1\% & <1\% & <0.1\% & 5\% & 21\%\\ 
+BA6v & pSTG & N.S. & 24.3 & 65.5 & 21.2 & 47.7 & <0.1\% & <0.1\% & <1\% & 5\% & <1\%\\ 
+pSTG & PAC & N.S. & 204.9 & N.S. & 68.9 & 16.4 & <0.1\% & <0.1\% & 5\% & <1\% & <0.1\%\\ 
+BA44 & pSTG & N.S. & N.S. & N.S. & N.S. & 35.4 & 5\% & <0.1\% & <1\% & <1\% & 5\%\\ 
+BA44 & PAC & 23.5 & 36.8 & N.S. & 28.2 & N.S. & <0.1\% & 5\% & <1\% & 21\% & 58\%\\ 
+aSTG & PAC & 25.6 & N.S. & N.S. & N.S. & 20.7 & 58\% & 5\% & 21\% & 21\% & <1\%\\ 
+BA45 & aSTG & 207.1 & N.S. & N.S. & N.S. & 13.0 & 5\% & 58\% & <1\% & 58\% & <1\%\\ 
+BA45 & PAC & N.S. & N.S. & N.S. & 342.2 & N.S. & 5\% & 58\% & 5\% & <1\% & 5\%\\ 
+BA45 & BA44 & N.S. & N.S. & N.S. & N.S. & 25.2 & 58\% & 58\% & 58\% & 21\% & 58\%\\ 
+aSTG & pSTG & N.S. & N.S. & 20.4 & 43.1 & 28.0 & 21\% & 58\% & 5\% & 58\% & 21\%\\ 
+\end{tabular}
+\caption{\label{4.4.TEvalues.a} Transfer entropy and binomial test results for the interaction analysis between selected regions of interest for object-relative clauses. The field probability contains the likelihood that subject-specific significance values are randomly distributed. N.S.: not significant}
+\end{center}
+\end{table}
+\vspace{5mm}
+
+\begin{table}[h]
+\begin{center}
+% Header design from http://www.tablesgenerator.com/
+\begin{tabular}{cccccccccccc}
+Origin & Target & \multicolumn{10}{c}{SRC condition}\\
+ROI & ROI & \multicolumn{5}{c}{Transfer Entropy} & \multicolumn{5}{c}{Probability}\\
+ & & T1 & T2 & T3 & T4 & \multicolumn{1}{c|}{T5} & T1 & T2 & T3 & T4 & T5\\ \hline
+pSTG & BA6v & N.S. & N.S. & N.S. & N.S. & 21.0 & <1\% & <1\% & <1\% & <1\% & <1\%\\ 
+PAC & pSTG & 38.1 & 60.9 & N.S. & N.S. & N.S. & <0.1\% & <1\% & <1\% & <1\% & <1\%\\ 
+pSTG & BA44 & N.S. & N.S. & 18.9 & N.S. & N.S. & <1\% & 5\% & <1\% & 5\% & <1\%\\ 
+PAC & BA44 & 32.4 & N.S. & 122.0 & N.S. & 31.6 & <0.1\% & 21\% & <1\% & <1\% & 5\%\\ 
+PAC & aSTG & N.S. & N.S. & 23.8 & N.S. & N.S. & 21\% & 21\% & 5\% & 21\% & <1\%\\ 
+aSTG & BA45 & N.S. & 27.6 & 378.3 & 35.0 & N.S. & 21\% & 21\% & 5\% & 21\% & 58\%\\ 
+PAC & BA45 & N.S. & N.S. & N.S. & 21.7 & 27.9 & 21\% & 58\% & 21\% & <1\% & 21\%\\ 
+BA44 & BA45 & 24.8 & 13.7 & 17.3 & N.S. & 24.0 & 21\% & 58\% & <1\% & 21\% & 58\%\\ 
+pSTG & aSTG & 20.9 & N.S. & N.S. & 25.5 & N.S. & <1\% & 21\% & 5\% & 21\% & <0.1\%\\ 
+BA6v & pSTG & 77.6 & 32.6 & N.S. & N.S. & 30.1 & <0.1\% & <0.1\% & <1\% & <1\% & <1\%\\ 
+pSTG & PAC & N.S. & N.S. & 19.0 & 31.2 & N.S. & <1\% & <1\% & <1\% & <0.1\% & <0.1\%\\ 
+BA44 & pSTG & N.S. & N.S. & 34.8 & N.S. & 28.2 & <1\% & <1\% & <1\% & 21\% & <0.1\%\\ 
+BA44 & PAC & N.S. & N.S. & N.S. & N.S. & N.S. & 21\% & <0.1\% & <1\% & 21\% & 5\%\\ 
+aSTG & PAC & N.S. & N.S. & N.S. & N.S. & N.S. & <1\% & 5\% & <1\% & 5\% & 21\%\\ 
+BA45 & aSTG & N.S. & N.S. & N.S. & N.S. & 34.3 & 58\% & <1\% & 21\% & 5\% & <1\%\\ 
+BA45 & PAC & N.S. & N.S. & 19.6 & 24.9 & N.S. & 58\% & <1\% & 21\% & 5\% & 5\%\\ 
+BA45 & BA44 & N.S. & N.S. & 58.8 & 56.6 & 17.4 & <1\% & 5\% & 21\% & 5\% & 58\%\\ 
+aSTG & pSTG & 19.0 & N.S. & 55.4 & 43.1 & 129.0 & 21\% & <0.1\% & <0.1\% & 5\% & <1\%\\ 
+\end{tabular}
+\caption{\label{4.4.TEvalues.b} Transfer entropy and binomial test results for the interaction analysis between selected regions of interest for subject-relative clauses. The field probability contains the likelihood that subject-specific significance values are randomly distributed. N.S.: not significant}
+\end{center}
+\end{table}
+\vspace{5mm}
+
 
 \begin{figure}[h]
 \begin{center}
 \vspace{7mm}
-\includegraphics[width=\textwidth]{pics/TE_results.png}
-\caption{\label{4.4.networkgraph} Graph of the estimated transfer entropy and signal delay between selected cortical regions. Arrow labels refer to the estimated signal delay and the effective transfer entropy. Arrow thickness is depicted relative to the effective transfer entropy. Values are averages over all time windows and conditions.}
+\includegraphics[width=0.49\textwidth]{pics/TEobj/S1.png}
+\includegraphics[width=0.49\textwidth]{pics/TEsubj/S1.png}
+\includegraphics[width=0.49\textwidth]{pics/TEobj/S2.png}
+\includegraphics[width=0.49\textwidth]{pics/TEsubj/S2.png}
+\caption{\label{4.4.networkgraph.a} Graph of significant functional connections between selected cortical regions. Arrow labels describe the estimated transfer entropy. Arrow thickness is relative to the effective transfer entropy. Left: Results from the ORC condition, Right: Results from the SRC condition. From top to bottom: Results from selected time intervals T1 and T2.}
 \end{center}
 \end{figure}
 
-Second, the impact of the syntax condition on the transfer entropy was determined with a group-level cluster comparison.
-During the time window 0ms-300ms, a weak effect ($p = 5.8\%$, $\DELTA TE = 4.0$) appeared on the interaction $BA45_{lh} \rightarrow BA44_{lh}$.
-During the time window 400-800ms, a weak effect ($p = 8.0\%$, $\DELTA TE = 3.0$) appeared on the interaction $pSTG_{lh} \rightarrow pSTG_{rh}$.
-During the time window 1000ms-1600ms, no effects appeared on any interaction.
+\begin{figure}[h]
+\begin{center}
+\vspace{7mm}
+\includegraphics[width=0.49\textwidth]{pics/TEobj/S3.png}
+\includegraphics[width=0.49\textwidth]{pics/TEsubj/S3.png}
+\includegraphics[width=0.49\textwidth]{pics/TEobj/S4.png}
+\includegraphics[width=0.49\textwidth]{pics/TEsubj/S4.png}
+\includegraphics[width=0.49\textwidth]{pics/TEobj/S5.png}
+\includegraphics[width=0.49\textwidth]{pics/TEsubj/S5.png}
+\caption{\label{4.4.networkgraph.b} Graph of significant functional connections between selected cortical regions. Arrow labels describe the estimated transfer entropy. Arrow thickness is relative to the effective transfer entropy. Left: Results from the ORC condition, Right: Results from the SRC condition. From top to bottom: Results from selected time intervals T3 to T5.}
+\end{center}
+\end{figure}
+
+
+Second, the impact of the syntax condition on transfer entropy was determined with a group-level cluster comparison.
+Only three functional connections showed a significant syntax effect: $PAC_{lh} \rightarrow pSTG_{lh}$, $PAC_{lh} \rightarrow BA45_{lh}$ and $BA6v_{lh} \rightarrow pSTG_{lh}$.
+All of these syntax effects showed at the time intervals T4 and T5.
+$PAC_{lh} \rightarrow pSTG_{lh}$ and $BA6v_{lh} \rightarrow pSTG_{lh}$ showed a significantly stronger transfer entropy in the SRC condition than in the ORC condition ($p = 2.3\%$ and $0.2\%$, $t(17) = -2.2$ and $-3.7$).
+$PAC_{lh} \rightarrow BA45_{lh}$ showed a significantly weaker transfer entropy in the SRC condition than in the ORC condition ($p = 1.9\%$, $t(17) = 2.3$).
+No functional connections showed a syntax condition effect after correcting for multiple comparisons.

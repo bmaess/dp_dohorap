@@ -75,7 +75,7 @@ Some of these tissue layers, like blood vessels or cerebreal spinal fluid (CSF),
 Other tissue layers, especially the compact bone, conduct electricity 78 times worse than gray matter; so they distort and attenuate every passing signal \cite{1.5.tissues.a}.
 After these tissues have been passed, the original signal has decreased in intensity by approximately four orders of magnitude, and changed drastically in shape and location.
 In contrast to electrical fields, the same tissues are highly permeable to magnetic fields.
-The magnetic permeability of water, which most human tissue is based on, differs from the magnetic permeability of air only by 0.0008\%\footnote{All non-metallic materials have a relative magnetic permeability very close to 1 (Air: 1.00000037\cite{1.5.magneticProperties}, Vacuum: excatly 1 by definition, Water: 0.999992\cite{1.5.magneticProperties}). For the purposes of magnetic imaging, only materials with markedly bigger or smaller values than 1 (e.g., iron with a factor of 5000\cite{1.5.magneticProperties}) affect imaging accuracy to a noticable degree.}.
+The magnetic permeability of water, which most human tissue is based on, differs from the magnetic permeability of air only by 0.0008\%\footnote{All non-metallic materials have a relative magnetic permeability very close to 1 (Air: 1.00000037, Vacuum: exactly 1 (by definition), Water: 0.999992). For the purposes of magnetic imaging, only materials with markedly bigger or smaller values than 1 (e.g., iron with a factor of 5000) affect imaging accuracy to a noticable degree.}\cite{1.5.magneticProperties}.
 As a general rule, only metal-based materials are substantially more permeable than water.
 Since the human head doesn't contain metal in considerable quantities, it practically allows magnetic fields to pass without distortion \cite{1.5.tissues.a}.
 
@@ -174,10 +174,10 @@ For this approach, the measured activity is compared between conditions.
 The time intervals (TOI) and regions of interest (ROI) that involve considerable contrast between conditions can then be selected for the comparison of mean activity.
 The drawback to this approach is both spurious contrast and activity from different cognitive processes are considered as condition effect.
 The statistical testing will therefore systematically overestimate the condition effect.
-This issue is known as "'double dipping"' \cite{1.5.Kriegeskorte}.
+This issue is known as ``double dipping`` \cite{1.5.Kriegeskorte}.
 
 Selecting data purely based on contrast causes spurious differences in activity to be falsely classified as condition effect.
-This bias can be prevented with a cluster-level permutation comparison (or "'cluster analysis"').
+This bias can be prevented with a cluster-level permutation comparison (or ``cluster analysis``).
 Cluster analysis relies on the assumption that spurious signal contrasts vary randomly, while the underlying signal contrast between conditions remains at least partially stable across trials.
 
 I decided to use both approaches with different purposes:
@@ -189,7 +189,7 @@ Second, a bootstrapped comparison allows for the exploration of spatial and temp
 \paragraph{Motivation}
 MEG sensors are inherently impartial when measuring magnetic fields.
 Due to their high sensitivity, MEG sensors measure a mixture of several types of sources.
-"'Outside"' (as in "'not inside the skull"') sources, for example the earth's magnetic field, can overpower brain activity by several orders of magnitude.
+``Outside`` (as in ``not inside the skull``) sources, for example the earth's magnetic field, can overpower brain activity by several orders of magnitude.
 Even though outside sources can be mostly removed during preprocessing, the magnetic fields from different cortical sources strongly overlap at the sensors.
 Demixing these signals is a fundamentally flawed process.
 The problem of discerning these signal sources is equivalent to finding the location and intensity of all the flames in a hot air balloon, while only looking at the outside of the hull.
@@ -212,7 +212,7 @@ Synchronous signals appear highly correlated when measured, resulting in skewed 
 
 In the second type of source modelling, the focal source model, neural current flow is represented by a limited set of point-shaped current dipoles.
 There are are three subcategories to this model: an unconstrained variant (the moving dipole model), dipoles with a fixed position (the rotating dipole model) and dipoles with a fixed position and rotation (the fixed dipole model).
-Popular applications of this approach include "'multiple signal classification"' (MUSIC) \cite{1.5.music} and "'multi-start spatio-temporal multiple-dipole modeling"' \cite{1.5.simplex}
+Popular applications of this approach include ``multiple signal classification`` (MUSIC) \cite{1.5.music} and ``multi-start spatio-temporal multiple-dipole modeling`` \cite{1.5.simplex}
 Dipole models have had limited success with representing neuronal responses for two main reasons.
 First, reducing extended neuroanatomical structures to a point current source introduces a systematic model error.
 Second, the number and location of dipoles has a strong influence on the localized results, yet is hard to estimate in advance (Huang et al., 1998).

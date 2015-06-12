@@ -1,3 +1,4 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \contentsline {chapter}{\numberline {1}Introduction}{1}
 \contentsline {section}{\numberline {1.1}Neurobiological background}{1}
 \contentsline {subsection}{\numberline {1.1.1}Exploration strategies of white matter tracts}{1}
@@ -18,12 +19,12 @@
 \contentsline {subsection}{\numberline {1.4.4}Timewindow estimation}{15}
 \contentsline {subsection}{\numberline {1.4.5}Source localization}{16}
 \contentsline {paragraph}{Motivation}{16}
-\contentsline {paragraph}{Choice of source model}{16}
-\contentsline {subsection}{\numberline {1.4.6}Information transfer}{17}
+\contentsline {paragraph}{Source reconstruction methods}{16}
+\contentsline {subsection}{\numberline {1.4.6}Information transfer}{18}
 \contentsline {paragraph}{Two types of information interaction}{18}
-\contentsline {paragraph}{Choice of analysis approach}{18}
+\contentsline {paragraph}{Choice of analysis approach}{19}
 \contentsline {paragraph}{Granger-Causality derivatives}{19}
-\contentsline {paragraph}{Information-theoretic approaches}{19}
+\contentsline {paragraph}{Information-theoretic approaches}{20}
 \contentsline {chapter}{\numberline {2}Pilot Study}{21}
 \contentsline {paragraph}{Experimental paradigm}{21}
 \contentsline {paragraph}{Participants}{21}
@@ -59,30 +60,28 @@
 \contentsline {paragraph}{Epoching}{35}
 \contentsline {paragraph}{Cluster analysis}{35}
 \contentsline {paragraph}{Interval analysis}{35}
-\contentsline {subsection}{\numberline {3.3.3}Source space activity}{36}
-\contentsline {paragraph}{Anatomical preprocessing}{36}
+\contentsline {subsection}{\numberline {3.3.3}Source space activity}{35}
+\contentsline {paragraph}{Anatomical preprocessing}{35}
 \contentsline {paragraph}{Forward and inverse operator}{36}
 \contentsline {paragraph}{Inverse solution}{37}
-\contentsline {subsection}{\numberline {3.3.4}Interaction analysis}{39}
-\contentsline {chapter}{\numberline {4}Results}{43}
-\contentsline {section}{\numberline {4.1}Behavioral results}{43}
-\contentsline {subsection}{\numberline {4.1.1}Response times}{43}
-\contentsline {subsection}{\numberline {4.1.2}Response accuracy}{43}
-\contentsline {subsection}{\numberline {4.1.3}Analysis of combined performance data}{44}
-\contentsline {section}{\numberline {4.2}Sensor-space activity}{44}
-\contentsline {subsection}{\numberline {4.2.1}Interval analysis}{44}
-\contentsline {subsection}{\numberline {4.2.2}Cluster analysis}{45}
-\contentsline {section}{\numberline {4.3}Source-space activity}{53}
-\contentsline {subsection}{\numberline {4.3.1}Comparison of means}{53}
-\contentsline {paragraph}{Cluster analysis}{53}
-\contentsline {paragraph}{Interval analysis}{53}
-\contentsline {subsection}{\numberline {4.3.2}Post-hoc analysis}{56}
-\contentsline {paragraph}{Possible explanations}{56}
-\contentsline {paragraph}{Exploring the explanations}{57}
-\contentsline {paragraph}{Test results}{57}
-\contentsline {paragraph}{Conclusion}{58}
-\contentsline {section}{\numberline {4.4}Source-space interactions}{58}
+\contentsline {chapter}{\numberline {4}Results}{41}
+\contentsline {section}{\numberline {4.1}Behavioral results}{41}
+\contentsline {subsection}{\numberline {4.1.1}Response times}{41}
+\contentsline {subsection}{\numberline {4.1.2}Response accuracy}{41}
+\contentsline {subsection}{\numberline {4.1.3}Analysis of combined performance data}{42}
+\contentsline {section}{\numberline {4.2}Sensor-space activity}{42}
+\contentsline {subsection}{\numberline {4.2.1}Interval analysis}{42}
+\contentsline {subsection}{\numberline {4.2.2}Cluster analysis}{43}
+\contentsline {section}{\numberline {4.3}Source-space activity}{51}
+\contentsline {subsection}{\numberline {4.3.1}Comparison of means}{51}
+\contentsline {paragraph}{Cluster analysis}{51}
+\contentsline {paragraph}{Interval analysis}{51}
+\contentsline {subsection}{\numberline {4.3.2}Post-hoc analysis}{54}
+\contentsline {paragraph}{Possible explanations}{54}
+\contentsline {paragraph}{Exploring the explanations}{55}
+\contentsline {paragraph}{Test results}{55}
+\contentsline {paragraph}{Conclusion}{56}
+\contentsline {section}{\numberline {4.4}Source-space interactions}{56}
 \contentsline {chapter}{\numberline {A}Appendix}{61}
-\contentsline {chapter}{References}{63}
-\contentsline {chapter}{List of Figures}{69}
-\contentsline {chapter}{List of Tables}{71}
+\contentsline {chapter}{List of Figures}{65}
+\contentsline {chapter}{List of Tables}{69}

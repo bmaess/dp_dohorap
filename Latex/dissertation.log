@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.19)  30 MAY 2015 21:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.19)  12 JUN 2015 03:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -57,22 +57,256 @@ Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 ))
-(/usr/local/texlive/2014basic/texmf-dist/tex/latex/apacite/apacite.sty
-Package: apacite 2013/07/21 v6.03 APA citation
-\c@BibCnt=\count89
-\bibleftmargin=\skip43
-\bibindent=\skip44
-\bibparsep=\skip45
-\bibitemsep=\skip46
-\biblabelsep=\skip47
-)
-(/usr/local/texlive/2014basic/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2014basic/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2015/04/19 v3.0 programmable bibliographies (PK/JW/AB)
 
+
+Package biblatex Warning: No "backend" specified, using Biber backend.
+(biblatex)                To use BibTeX, load biblatex with 
+(biblatex)                the "backend=bibtex" option.
+
+(/usr/local/texlive/2014basic/texmf-dist/tex/latex/biblatex/biblatex2.sty
+Package: biblatex2 2015/04/19 v3.0 programmable bibliographies (biber) (PK/JW/A
+B)
+
+(/usr/local/texlive/2014basic/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2011/01/03 v2.1 e-TeX tools for LaTeX
+
+(/usr/local/texlive/2014basic/texmf-dist/tex/latex/etex-pkg/etex.sty
+Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
+\et@xins=\count89
+)
+\etb@tempcnta=\count90
+)
 (/usr/local/texlive/2014basic/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks16
 )
+(/usr/local/texlive/2014basic/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(/usr/local/texlive/2014basic/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count91
+
+(/usr/local/texlive/2014basic/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+(/usr/local/texlive/2014basic/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/local/texlive/2014basic/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+\c@tabx@nest=\count92
+\c@listtotal=\count93
+\c@listcount=\count94
+\c@liststart=\count95
+\c@liststop=\count96
+\c@citecount=\count97
+\c@citetotal=\count98
+\c@multicitecount=\count99
+\c@multicitetotal=\count100
+\c@instcount=\count101
+\c@maxnames=\count102
+\c@minnames=\count103
+\c@maxitems=\count104
+\c@minitems=\count105
+\c@citecounter=\count106
+\c@savedcitecounter=\count107
+\c@uniquelist=\count108
+\c@uniquename=\count109
+\c@refsection=\count110
+\c@refsegment=\count111
+\c@maxextratitle=\count112
+\c@maxextratitleyear=\count113
+\c@maxextrayear=\count114
+\c@maxextraalpha=\count115
+\c@abbrvpenalty=\count116
+\c@highnamepenalty=\count117
+\c@lownamepenalty=\count118
+\c@maxparens=\count119
+\c@parenlevel=\count120
+\blx@tempcnta=\count121
+\blx@tempcntb=\count122
+\blx@tempcntc=\count123
+\blx@maxsection=\count124
+\blx@maxsegment@0=\count125
+\blx@notetype=\count126
+\blx@parenlevel@text=\count127
+\blx@parenlevel@foot=\count128
+\blx@sectionciteorder@0=\count129
+\labelnumberwidth=\skip43
+\labelalphawidth=\skip44
+\biblabelsep=\skip45
+\bibitemsep=\skip46
+\bibnamesep=\skip47
+\bibinitsep=\skip48
+\bibparsep=\skip49
+\bibhang=\skip50
+\blx@bcfin=\read1
+\blx@bcfout=\write3
+\c@mincomprange=\count130
+\c@maxcomprange=\count131
+\c@mincompwidth=\count132
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(/usr/local/texlive/2014basic/texmf-dist/tex/latex/biblatex/blx-dm.def)
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count133
+\c@savedafterword=\count134
+\c@annotator=\count135
+\c@savedannotator=\count136
+\c@author=\count137
+\c@savedauthor=\count138
+\c@bookauthor=\count139
+\c@savedbookauthor=\count140
+\c@commentator=\count141
+\c@savedcommentator=\count142
+\c@editor=\count143
+\c@savededitor=\count144
+\c@editora=\count145
+\c@savededitora=\count146
+\c@editorb=\count147
+\c@savededitorb=\count148
+\c@editorc=\count149
+\c@savededitorc=\count150
+\c@foreword=\count151
+\c@savedforeword=\count152
+\c@holder=\count153
+\c@savedholder=\count154
+\c@introduction=\count155
+\c@savedintroduction=\count156
+\c@namea=\count157
+\c@savednamea=\count158
+\c@nameb=\count159
+\c@savednameb=\count160
+\c@namec=\count161
+\c@savednamec=\count162
+\c@translator=\count163
+\c@savedtranslator=\count164
+\c@shortauthor=\count165
+\c@savedshortauthor=\count166
+\c@shorteditor=\count167
+\c@savedshorteditor=\count168
+\c@labelname=\count169
+\c@savedlabelname=\count170
+\c@institution=\count171
+\c@savedinstitution=\count172
+\c@lista=\count173
+\c@savedlista=\count174
+\c@listb=\count175
+\c@savedlistb=\count176
+\c@listc=\count177
+\c@savedlistc=\count178
+\c@listd=\count179
+\c@savedlistd=\count180
+\c@liste=\count181
+\c@savedliste=\count182
+\c@listf=\count183
+\c@savedlistf=\count184
+\c@location=\count185
+\c@savedlocation=\count186
+\c@organization=\count187
+\c@savedorganization=\count188
+\c@origlocation=\count189
+\c@savedoriglocation=\count190
+\c@origpublisher=\count191
+\c@savedorigpublisher=\count192
+\c@publisher=\count193
+\c@savedpublisher=\count194
+\c@language=\count195
+\c@savedlanguage=\count196
+\c@pageref=\count197
+\c@savedpageref=\count198
+\shorthandwidth=\skip51
+\shortjournalwidth=\skip52
+\shortserieswidth=\skip53
+\shorttitlewidth=\skip54
+\shortauthorwidth=\skip55
+\shorteditorwidth=\skip56
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(/usr/local/texlive/2014basic/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2015/04/19 v3.0 biblatex compatibility (PK/JW/AB)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+
+(/usr/local/texlive/2014basic/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 
+\c@textcitecount=\count199
+\c@textcitetotal=\count200
+\c@textcitemaxnames=\count201
+\c@biburlnumpenalty=\count202
+\c@biburlucpenalty=\count203
+\c@biburllcpenalty=\count204
+\c@smartand=\count205
+)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+
+(/usr/local/texlive/2014basic/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
+File: numeric.bbx 2015/04/19 v3.0 biblatex bibliography style (PK/JW/AB)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(/usr/local/texlive/2014basic/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2015/04/19 v3.0 biblatex bibliography style (PK/JW/AB)
+\c@bbx:relatedcount=\count206
+\c@bbx:relatedtotal=\count207
+))
+Package biblatex Info: Trying to load citation style 'numeric'...
+Package biblatex Info: ... file 'numeric.cbx' found.
+
+(/usr/local/texlive/2014basic/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
+File: numeric.cbx 2015/04/19 v3.0 biblatex citation style (PK/JW/AB)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(/usr/local/texlive/2014basic/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+)))
+(/usr/local/texlive/2014basic/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
 (/usr/local/texlive/2014basic/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
 
@@ -86,14 +320,7 @@ Package graphics Info: Driver file: pdftex.def on input line 91.
 
 (/usr/local/texlive/2014basic/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
-
-(/usr/local/texlive/2014basic/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
-)
-(/usr/local/texlive/2014basic/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
-)
-\Gread@gobject=\count90
+\Gread@gobject=\count208
 ))
 \Gin@req@height=\dimen104
 \Gin@req@width=\dimen105
@@ -108,52 +335,48 @@ Package color Info: Driver file: pdftex.def on input line 137.
 )
 (/usr/local/texlive/2014basic/texmf-dist/tex/latex/rotating/rotating.sty
 Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
-
-(/usr/local/texlive/2014basic/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-)
-\c@r@tfl@t=\count91
-\rotFPtop=\skip48
-\rotFPbot=\skip49
+\c@r@tfl@t=\count209
+\rotFPtop=\skip57
+\rotFPbot=\skip58
 \rot@float@box=\box26
 \rot@mess@toks=\toks17
 )
 (/usr/local/texlive/2014basic/texmf-dist/tex/latex/subfigure/subfigure.sty
 Package: subfigure 2002/03/15 v2.1.5 subfigure package
-\subfigtopskip=\skip50
-\subfigcapskip=\skip51
+\subfigtopskip=\skip59
+\subfigcapskip=\skip60
 \subfigcaptopadj=\dimen106
-\subfigbottomskip=\skip52
+\subfigbottomskip=\skip61
 \subfigcapmargin=\dimen107
-\subfiglabelskip=\skip53
-\c@subfigure=\count92
-\c@lofdepth=\count93
-\c@subtable=\count94
-\c@lotdepth=\count95
+\subfiglabelskip=\skip62
+\c@subfigure=\count210
+\c@lofdepth=\count211
+\c@subtable=\count212
+\c@lotdepth=\count213
 
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
 (/usr/local/texlive/2014basic/texmf-dist/tex/latex/subfigure/subfigure.cfg)
-\subfig@top=\skip54
-\subfig@bottom=\skip55
+\subfig@top=\skip63
+\subfig@bottom=\skip64
 )
 (/usr/local/texlive/2014basic/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
-\LTleft=\skip56
-\LTright=\skip57
-\LTpre=\skip58
-\LTpost=\skip59
-\LTchunksize=\count96
+\LTleft=\skip65
+\LTright=\skip66
+\LTpre=\skip67
+\LTpost=\skip68
+\LTchunksize=\count214
 \LTcapwidth=\dimen108
 \LT@head=\box27
 \LT@firsthead=\box28
 \LT@foot=\box29
 \LT@lastfoot=\box30
-\LT@cols=\count97
-\LT@rows=\count98
-\c@LT@tables=\count99
-\c@LT@chunks=\count100
+\LT@cols=\count215
+\LT@rows=\count216
+\c@LT@tables=\count217
+\c@LT@chunks=\count218
 \LT@p@ftn=\toks18
 )
 (/usr/local/texlive/2014basic/texmf-dist/tex/latex/psnfss/times.sty
@@ -215,16 +438,16 @@ Package: setspace 2011/12/19 v6.7a set line spacing
 )
 (/usr/local/texlive/2014basic/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count101
-\calc@Bcount=\count102
+\calc@Acount=\count219
+\calc@Bcount=\count220
 \calc@Adimen=\dimen110
 \calc@Bdimen=\dimen111
-\calc@Askip=\skip60
-\calc@Bskip=\skip61
+\calc@Askip=\skip69
+\calc@Bskip=\skip70
 LaTeX Info: Redefining \setlength on input line 75.
 LaTeX Info: Redefining \addtolength on input line 76.
-\calc@Ccount=\count103
-\calc@Cskip=\skip62
+\calc@Ccount=\count221
+\calc@Cskip=\skip71
 )
 (/usr/local/texlive/2014basic/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
@@ -240,7 +463,7 @@ Package caption3 Info: TeX engine: e-TeX on input line 57.
 \caption@parindent=\dimen117
 \caption@hangindent=\dimen118
 )
-\c@ContinuedFloat=\count104
+\c@ContinuedFloat=\count222
 Package caption Info: longtable package is loaded.
 
 (/usr/local/texlive/2014basic/texmf-dist/tex/latex/caption/ltcaption.sty
@@ -251,20 +474,20 @@ Package caption Info: subfigure package is loaded.
 )
 (/usr/local/texlive/2014basic/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2014/10/28 v1.8i multicolumn formatting (FMi)
-\c@tracingmulticols=\count105
+\c@tracingmulticols=\count223
 \mult@box=\box31
 \multicol@leftmargin=\dimen119
-\c@unbalance=\count106
-\c@collectmore=\count107
-\doublecol@number=\count108
-\multicoltolerance=\count109
-\multicolpretolerance=\count110
+\c@unbalance=\count224
+\c@collectmore=\count225
+\doublecol@number=\count226
+\multicoltolerance=\count227
+\multicolpretolerance=\count228
 \full@width=\dimen120
 \page@free=\dimen121
 \premulticols=\dimen122
 \postmulticols=\dimen123
-\multicolsep=\skip63
-\multicolbaselineskip=\skip64
+\multicolsep=\skip72
+\multicolbaselineskip=\skip73
 \partial@page=\box32
 \last@line=\box33
 \maxbalancingoverflow=\dimen124
@@ -289,14 +512,14 @@ Package: multicol 2014/10/28 v1.8i multicolumn formatting (FMi)
 \@tempa=\box52
 \@tempa=\box53
 \@tempa=\box54
-\c@columnbadness=\count111
-\c@finalcolumnbadness=\count112
+\c@columnbadness=\count229
+\c@finalcolumnbadness=\count230
 \last@try=\dimen125
 \multicolovershoot=\dimen126
 \multicolundershoot=\dimen127
 \mult@nat@firstbox=\box55
 \colbreak@box=\box56
-\mc@col@check@num=\count113
+\mc@col@check@num=\count231
 )
 (/usr/local/texlive/2014basic/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
@@ -310,12 +533,13 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \cmidrulesep=\dimen135
 \cmidrulekern=\dimen136
 \defaultaddspace=\dimen137
-\@cmidla=\count114
-\@cmidlb=\count115
+\@cmidla=\count232
+\@cmidlb=\count233
 \@aboverulesep=\dimen138
 \@belowrulesep=\dimen139
-\@thisruleclass=\count116
-\@lastruleclass=\count117
+Normal \count register pool exhausted, switching to extended pool.
+\@thisruleclass=\count277
+\@lastruleclass=\count278
 \@thisrulewidth=\dimen140
 )
 (/usr/local/texlive/2014basic/texmf-dist/tex/latex/tools/dcolumn.sty
@@ -326,19 +550,19 @@ Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen141
 \extrarowheight=\dimen142
 \NC@list=\toks19
-\extratabsurround=\skip65
-\backup@length=\skip66
+\extratabsurround=\skip74
+\backup@length=\skip75
 ))
 (/usr/local/texlive/2014basic/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-\fancy@headwidth=\skip67
-\f@ncyO@elh=\skip68
-\f@ncyO@erh=\skip69
-\f@ncyO@olh=\skip70
-\f@ncyO@orh=\skip71
-\f@ncyO@elf=\skip72
-\f@ncyO@erf=\skip73
-\f@ncyO@olf=\skip74
-\f@ncyO@orf=\skip75
+\fancy@headwidth=\skip76
+\f@ncyO@elh=\skip77
+\f@ncyO@erh=\skip78
+\f@ncyO@olh=\skip79
+\f@ncyO@orh=\skip80
+\f@ncyO@elf=\skip81
+\f@ncyO@erf=\skip82
+\f@ncyO@olf=\skip83
+\f@ncyO@orf=\skip84
 )
 (/usr/local/texlive/2014basic/texmf-dist/tex/latex/siunitx/siunitx.sty
 (/usr/local/texlive/2014basic/texmf-dist/tex/latex/l3kernel/expl3.sty
@@ -347,11 +571,6 @@ Package: expl3 2015/02/13 v5524 L3 programming layer (loader)
 (/usr/local/texlive/2014basic/texmf-dist/tex/latex/l3kernel/expl3-code.tex
 Package: expl3 2015/02/13 v5524 L3 programming layer (code) 
 L3 Module: l3bootstrap 2015/01/27 v5500 L3 Bootstrap code
-
-(/usr/local/texlive/2014basic/texmf-dist/tex/latex/etex-pkg/etex.sty
-Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
-\et@xins=\count118
-)
 L3 Module: l3names 2014/08/22 v5343 L3 Namespace for primitives
 L3 Module: l3basics 2015/01/27 v5500 L3 Basic definitions
 L3 Module: l3expan 2014/11/27 v5472 L3 Argument expansion
@@ -359,24 +578,24 @@ L3 Module: l3tl 2015/01/27 v5500 L3 Token lists
 L3 Module: l3str 2014/08/24 v5368 L3 Strings
 L3 Module: l3seq 2014/08/23 v5354 L3 Sequences and stacks
 L3 Module: l3int 2014/09/14 v5421 L3 Integers
-\c_max_int=\count119
-\l_tmpa_int=\count120
-\l_tmpb_int=\count121
-\g_tmpa_int=\count122
-\g_tmpb_int=\count123
+\c_max_int=\count279
+\l_tmpa_int=\count280
+\l_tmpb_int=\count281
+\g_tmpa_int=\count282
+\g_tmpb_int=\count283
 L3 Module: l3quark 2014/08/23 v5354 L3 Quarks
 L3 Module: l3prg 2014/08/23 v5354 L3 Control structures
-\g__prg_map_int=\count124
+\g__prg_map_int=\count284
 L3 Module: l3clist 2014/08/23 v5354 L3 Comma separated lists
 L3 Module: l3token 2014/09/15 v5422 L3 Experimental token manipulation
 L3 Module: l3prop 2014/08/23 v5354 L3 Property lists
 L3 Module: l3msg 2014/08/24 v5358 L3 Messages
 L3 Module: l3file 2014/08/24 v5369 L3 File and I/O operations
-\l_iow_line_count_int=\count125
-\l__iow_target_count_int=\count126
-\l__iow_current_line_int=\count127
-\l__iow_current_word_int=\count128
-\l__iow_current_indentation_int=\count129
+\l_iow_line_count_int=\count285
+\l__iow_target_count_int=\count286
+\l__iow_current_line_int=\count287
+\l__iow_current_word_int=\count288
+\l__iow_current_indentation_int=\count289
 L3 Module: l3skip 2014/08/23 v5354 L3 Dimensions and skips
 \c_zero_dim=\dimen143
 \c_max_dim=\dimen144
@@ -384,31 +603,31 @@ L3 Module: l3skip 2014/08/23 v5354 L3 Dimensions and skips
 \l_tmpb_dim=\dimen146
 \g_tmpa_dim=\dimen147
 \g_tmpb_dim=\dimen148
-\c_zero_skip=\skip76
-\c_max_skip=\skip77
-\l_tmpa_skip=\skip78
-\l_tmpb_skip=\skip79
-\g_tmpa_skip=\skip80
-\g_tmpb_skip=\skip81
-\c_zero_muskip=\muskip10
-\c_max_muskip=\muskip11
-\l_tmpa_muskip=\muskip12
-\l_tmpb_muskip=\muskip13
-\g_tmpa_muskip=\muskip14
-\g_tmpb_muskip=\muskip15
+\c_zero_skip=\skip85
+\c_max_skip=\skip86
+\l_tmpa_skip=\skip87
+\l_tmpb_skip=\skip88
+\g_tmpa_skip=\skip89
+\g_tmpb_skip=\skip90
+\c_zero_muskip=\muskip11
+\c_max_muskip=\muskip12
+\l_tmpa_muskip=\muskip13
+\l_tmpb_muskip=\muskip14
+\g_tmpa_muskip=\muskip15
+\g_tmpb_muskip=\muskip16
 L3 Module: l3keys 2015/01/27 v5500 L3 Key-value interfaces
-\g__keyval_level_int=\count130
-\l_keys_choice_int=\count131
+\g__keyval_level_int=\count290
+\l_keys_choice_int=\count291
 L3 Module: l3fp 2014/08/22 v5336 L3 Floating points
-\c__fp_leading_shift_int=\count132
-\c__fp_middle_shift_int=\count133
-\c__fp_trailing_shift_int=\count134
-\c__fp_big_leading_shift_int=\count135
-\c__fp_big_middle_shift_int=\count136
-\c__fp_big_trailing_shift_int=\count137
-\c__fp_Bigg_leading_shift_int=\count138
-\c__fp_Bigg_middle_shift_int=\count139
-\c__fp_Bigg_trailing_shift_int=\count140
+\c__fp_leading_shift_int=\count292
+\c__fp_middle_shift_int=\count293
+\c__fp_trailing_shift_int=\count294
+\c__fp_big_leading_shift_int=\count295
+\c__fp_big_middle_shift_int=\count296
+\c__fp_big_trailing_shift_int=\count297
+\c__fp_Bigg_leading_shift_int=\count298
+\c__fp_Bigg_middle_shift_int=\count299
+\c__fp_Bigg_trailing_shift_int=\count300
 L3 Module: l3box 2014/08/23 v5354 L3 Experimental boxes
 \c_empty_box=\box57
 \l_tmpa_box=\box58
@@ -458,15 +677,15 @@ L3 Module: l3candidates 2015/02/12 v5523 L3 Experimental additions to l3kernel
 File: l3unicode-data.def 2015/02/12 v5523 L3 Unicode data
 ) (/usr/local/texlive/2014basic/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
 File: l3pdfmode.def 2015/02/12 v5523 L3 Experimental driver: PDF mode
-\l__driver_color_stack_int=\count141
+\l__driver_color_stack_int=\count301
 ))
 (/usr/local/texlive/2014basic/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2014/11/25 v5471 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count142
-\l__xparse_m_args_int=\count143
-\l__xparse_mandatory_args_int=\count144
-\l__xparse_processor_int=\count145
-\l__xparse_v_nesting_int=\count146
+\l__xparse_current_arg_int=\count302
+\l__xparse_m_args_int=\count303
+\l__xparse_mandatory_args_int=\count304
+\l__xparse_processor_int=\count305
+\l__xparse_v_nesting_int=\count306
 )
 Package: siunitx 2015/01/21 v2.6e A comprehensive (SI) units package
  (/usr/local/texlive/2014basic/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -484,32 +703,32 @@ Package: l3keys2e 2014/11/25 v5471 LaTeX2e option processing using LaTeX3 keys
 Variant \tl_if_blank:VTF already defined; not changing it on line 50
 \l__siunitx_tmp_box=\box72
 \l__siunitx_tmp_dim=\dimen175
-\l__siunitx_tmp_int=\count147
+\l__siunitx_tmp_int=\count307
 Variant \prop_get:NVNT already defined; not changing it on line 380
 Variant \prop_get:NVNF already defined; not changing it on line 381
 Variant \prop_get:NVNTF already defined; not changing it on line 382
-\l__siunitx_number_mantissa_length_int=\count148
-\l__siunitx_number_uncert_length_int=\count149
-\l__siunitx_round_int=\count150
-\l__siunitx_process_decimal_int=\count151
-\l__siunitx_process_uncertainty_int=\count152
-\l__siunitx_process_fixed_int=\count153
-\l__siunitx_process_integer_min_int=\count154
-\l__siunitx_process_precision_int=\count155
-\l__siunitx_group_min_int=\count156
+\l__siunitx_number_mantissa_length_int=\count308
+\l__siunitx_number_uncert_length_int=\count309
+\l__siunitx_round_int=\count310
+\l__siunitx_process_decimal_int=\count311
+\l__siunitx_process_uncertainty_int=\count312
+\l__siunitx_process_fixed_int=\count313
+\l__siunitx_process_integer_min_int=\count314
+\l__siunitx_process_precision_int=\count315
+\l__siunitx_group_min_int=\count316
 \l__siunitx_angle_marker_box=\box73
 \l__siunitx_angle_unit_box=\box74
 \l__siunitx_angle_marker_dim=\dimen176
 \l__siunitx_angle_unit_dim=\dimen177
-\l__siunitx_unit_int=\count157
-\l__siunitx_unit_denominator_int=\count158
-\l__siunitx_unit_numerator_int=\count159
-\l__siunitx_unit_prefix_int=\count160
-\l__siunitx_unit_prefix_base_int=\count161
-\l__siunitx_unit_prefix_gram_int=\count162
-\l__siunitx_number_product_int=\count163
-\c__siunitx_one_fill_skip=\skip82
-\l__siunitx_table_unit_align_skip=\skip83
+\l__siunitx_unit_int=\count317
+\l__siunitx_unit_denominator_int=\count318
+\l__siunitx_unit_numerator_int=\count319
+\l__siunitx_unit_prefix_int=\count320
+\l__siunitx_unit_prefix_base_int=\count321
+\l__siunitx_unit_prefix_gram_int=\count322
+\l__siunitx_number_product_int=\count323
+\c__siunitx_one_fill_skip=\skip91
+\l__siunitx_table_unit_align_skip=\skip92
 \l__siunitx_table_exponent_dim=\dimen178
 \l__siunitx_table_integer_dim=\dimen179
 \l__siunitx_table_mantissa_dim=\dimen180
@@ -523,8 +742,8 @@ Variant \prop_get:NVNTF already defined; not changing it on line 382
 \l__siunitx_table_post_box=\box76
 \l__siunitx_table_mantissa_box=\box77
 \l__siunitx_table_result_box=\box78
-\l__siunitx_table_number_align_skip=\skip84
-\l__siunitx_table_text_align_skip=\skip85
+\l__siunitx_table_number_align_skip=\skip93
+\l__siunitx_table_text_align_skip=\skip94
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
@@ -642,7 +861,7 @@ Variant \prop_get:NVNTF already defined; not changing it on line 382
 . 
 . Defining command \__siunitx_bookmark_si:w with sig. 'om' on line 7348.
 .................................................
-\g__file_internal_ior=\read1
+\g__file_internal_ior=\read2
 
 (/usr/local/texlive/2014basic/texmf-dist/tex/latex/beamer/translator/translator
 .sty
@@ -664,9 +883,9 @@ Package ifvtex Info: VTeX not detected.
 (/usr/local/texlive/2014basic/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count164
-\Gm@cntv=\count165
-\c@Gm@tempcnt=\count166
+\Gm@cnth=\count324
+\Gm@cntv=\count325
+\c@Gm@tempcnt=\count326
 \Gm@bindingoffset=\dimen187
 \Gm@wd@mp=\dimen188
 \Gm@odd@mp=\dimen189
@@ -693,6 +912,18 @@ german -- \language number for Austrian undefined, default 11 used.
 Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
 \@eurobox=\box79
 )
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(/usr/local/texlive/2014basic/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2015/04/19 v3.0 biblatex localization (PK/JW/AB)
+)
+
+Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
+(biblatex)                Loading 'csquotes' recommended.
+
+\@quotelevel=\count327
+\@quotereset=\count328
 (./dissertation.aux
 
 LaTeX Warning: Label `1.1.neuron.illustrated' multiply defined.
@@ -703,56 +934,55 @@ LaTeX Warning: Label `4.3.activity.adults.ventral' multiply defined.
 )
 \openout1 = `dissertation.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 123.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 124.
  (/usr/local/texlive/2014basic/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
-\c@maskedRefs=\count167
+Package biblatex Info: Input encoding 'ansinew' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'ansinew'.
+\openout3 = `dissertation.bcf'.
 
-(/usr/local/texlive/2014basic/texmf-dist/tex/latex/apacite/english.apc
-File: english.apc 2013/07/21 v6.03 apacite language file
-LaTeX Info: Redefining \BPBI on input line 129.
-LaTeX Info: Redefining \BHBI on input line 130.
-)
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'dissertation.bbl' found.
+
+(./dissertation.bbl)
+Package biblatex Info: Reference section=0 on input line 124.
+Package biblatex Info: Reference segment=0 on input line 124.
+
 (/usr/local/texlive/2014basic/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count168
+\scratchcounter=\count329
 \scratchdimen=\dimen196
 \scratchbox=\box80
-\nofMPsegments=\count169
-\nofMParguments=\count170
+\nofMPsegments=\count330
+\nofMParguments=\count331
 \everyMPshowfont=\toks22
-\MPscratchCnt=\count171
+\MPscratchCnt=\count332
 \MPscratchDim=\dimen197
-\MPnumerator=\count172
-\makeMPintoPDFobject=\count173
+\MPnumerator=\count333
+\makeMPintoPDFobject=\count334
 \everyMPtoPDFconversion=\toks23
 ) (/usr/local/texlive/2014basic/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(/usr/local/texlive/2014basic/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-)
-(/usr/local/texlive/2014basic/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+) (/usr/local/texlive/2014basic/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
 (/usr/local/texlive/2014basic/texmf-dist/tex/latex/oberdiek/grfext.sty
@@ -760,19 +990,7 @@ Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 
 (/usr/local/texlive/2014basic/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
-)) (/usr/local/texlive/2014basic/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
-
-(/usr/local/texlive/2014basic/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
-
-(/usr/local/texlive/2014basic/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-)))
+))
 Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
@@ -828,39 +1046,39 @@ File: siunitx-abbreviations.cfg 2015/01/21 v2.6e siunitx: Abbreviated units
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c__siunitx_mathsf_int=\count174
+\c__siunitx_mathsf_int=\count335
 LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 12
-3.
+4.
 (/usr/local/texlive/2014basic/texmf-dist/tex/latex/psnfss/ot1ptmcm.fd
 File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
 )
 LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 12
-3.
+4.
 
 (/usr/local/texlive/2014basic/texmf-dist/tex/latex/psnfss/omlptmcm.fd
 File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
 )
 LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 12
-3.
+4.
 
 (/usr/local/texlive/2014basic/texmf-dist/tex/latex/psnfss/omspzccm.fd
 File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
 )
 LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <6> on input line 123.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 123.
+(Font)              <6> on input line 124.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 124.
 
 
 (/usr/local/texlive/2014basic/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 123.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 124.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 123.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 124.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 123.
-\c__siunitx_mathtt_int=\count175
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 124.
+\c__siunitx_mathtt_int=\count336
 
 (./chapter/Titlepage.tex
 Overfull \hbox (14.22636pt too wide) in paragraph at lines 14--14
@@ -892,18 +1110,18 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <9> not available
 
 ])
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 170.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 171.
  (./dissertation.toc
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 2.
  [1
 
 
 
 
 ])
-\tf@toc=\write3
-\openout3 = `dissertation.toc'.
+\tf@toc=\write4
+\openout4 = `dissertation.toc'.
 
 
 
@@ -920,10 +1138,24 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 4.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 5.
+
+LaTeX Warning: Citation '1.1.history' on page 1 undefined on input line 16.
+
+
+LaTeX Warning: Citation '1.1.history' on page 1 undefined on input line 18.
+
 [1
 
 
-] <pics/1_1_myelin_sheath.jpg, id=28, 123.3408pt x 70.94505pt>
+]
+
+LaTeX Warning: Citation '1.1.history' on page 2 undefined on input line 21.
+
+
+LaTeX Warning: Citation '1.1.firstDiffusion' on page 2 undefined on input line 
+26.
+
+<pics/1_1_myelin_sheath.jpg, id=28, 123.3408pt x 70.94505pt>
 File: pics/1_1_myelin_sheath.jpg Graphic file (type jpg)
 
 <use pics/1_1_myelin_sheath.jpg>
@@ -950,6 +1182,9 @@ LaTeX Font Info:    Try loading font information for TS1+ptm on input line 50.
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
 
+LaTeX Warning: Citation '1.1.smallWorld' on page 3 undefined on input line 59.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
@@ -957,12 +1192,21 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [3]
 
+LaTeX Warning: Citation '1.1.fiberstats' on page 4 undefined on input line 80.
+
+
+LaTeX Warning: Citation '1.1.Gierhan' on page 4 undefined on input line 89.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [4]
+
+LaTeX Warning: Citation '1.1.pathways' on page 5 undefined on input line 103.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -983,100 +1227,31 @@ File: pics/1_1_tracts_dorsal.png Graphic file (type png)
 Package pdftex.def Info: pics/1_1_tracts_dorsal.png used on input line 113.
 (pdftex.def)             Requested size: 195.1881pt x 148.38092pt.
 
-! Illegal parameter number in definition of \reserved@a.
-<to be read again> 
-                   }
-l.114 ...ascicle, vPMC - ventral premotor cortex.}
-                                                  
-You meant to type ## instead of #, right?
-Or maybe a } was forgotten somewhere earlier, and things
-are all screwed up? I'm going to assume that you meant ##.
 
-! Illegal parameter number in definition of \reserved@a.
-<to be read again> 
-                   3
-l.114 ...ascicle, vPMC - ventral premotor cortex.}
-                                                  
-You meant to type ## instead of #, right?
-Or maybe a } was forgotten somewhere earlier, and things
-are all screwed up? I'm going to assume that you meant ##.
+LaTeX Warning: Citation '1.1.Gierhan' on page 6 undefined on input line 114.
 
-! Illegal parameter number in definition of \reserved@a.
-<to be read again> 
-                   1
-l.114 ...ascicle, vPMC - ventral premotor cortex.}
-                                                  
-You meant to type ## instead of #, right?
-Or maybe a } was forgotten somewhere earlier, and things
-are all screwed up? I'm going to assume that you meant ##.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 114.
 
-! Illegal parameter number in definition of \reserved@a.
-<to be read again> 
-                   2
-l.114 ...ascicle, vPMC - ventral premotor cortex.}
-                                                  
-You meant to type ## instead of #, right?
-Or maybe a } was forgotten somewhere earlier, and things
-are all screwed up? I'm going to assume that you meant ##.
+LaTeX Warning: Citation '1.1.Gierhan' on page 6 undefined on input line 114.
 
-! Illegal parameter number in definition of \reserved@a.
-<to be read again> 
-                   }
-l.114 ...ascicle, vPMC - ventral premotor cortex.}
-                                                  
-You meant to type ## instead of #, right?
-Or maybe a } was forgotten somewhere earlier, and things
-are all screwed up? I'm going to assume that you meant ##.
 
-! Illegal parameter number in definition of \reserved@a.
-<to be read again> 
-                   3
-l.114 ...ascicle, vPMC - ventral premotor cortex.}
-                                                  
-You meant to type ## instead of #, right?
-Or maybe a } was forgotten somewhere earlier, and things
-are all screwed up? I'm going to assume that you meant ##.
+LaTeX Warning: Citation '1.1.tracts.lesions' on page 6 undefined on input line 
+130.
 
-! Illegal parameter number in definition of \reserved@a.
-<to be read again> 
-                   1
-l.114 ...ascicle, vPMC - ventral premotor cortex.}
-                                                  
-You meant to type ## instead of #, right?
-Or maybe a } was forgotten somewhere earlier, and things
-are all screwed up? I'm going to assume that you meant ##.
 
-! Illegal parameter number in definition of \reserved@a.
-<to be read again> 
-                   2
-l.114 ...ascicle, vPMC - ventral premotor cortex.}
-                                                  
-You meant to type ## instead of #, right?
-Or maybe a } was forgotten somewhere earlier, and things
-are all screwed up? I'm going to assume that you meant ##.
+LaTeX Warning: Citation '1.1.tracts.interference.a' on page 6 undefined on inpu
+t line 130.
 
-! Argument of \caption@ydblarg has an extra }.
-<inserted text> 
-                \par 
-l.114 ...ascicle, vPMC - ventral premotor cortex.}
-                                                  
-I've run across a `}' that doesn't seem to match anything.
-For example, `\def\a#1{...}' and `\a}' would produce
-this error. If you simply proceed now, the `\par' that
-I've just inserted will cause me to report a runaway
-argument that might be the root of the problem. But if
-your `}' was spurious, just type `2' and it will go away.
 
-Runaway argument?
-{\@caption \@captype }{\@cite }\def \reserved@b {\@cite <>}\futurelet \ETC.
-! Paragraph ended before \caption@ydblarg was complete.
-<to be read again> 
-                   \par 
-l.114 ...ascicle, vPMC - ventral premotor cortex.}
-                                                  
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
+LaTeX Warning: Citation '1.1.tracts.interference.b' on page 6 undefined on inpu
+t line 130.
+
+
+LaTeX Warning: Citation '1.1.D1a' on page 6 undefined on input line 135.
+
+
+LaTeX Warning: Citation '1.1.D1b' on page 6 undefined on input line 135.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1091,6 +1266,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [6
 
  <./pics/1_1_tracts_ventral.png> <./pics/1_1_tracts_dorsal.png>]
+
+LaTeX Warning: Citation '1.1.D1a' on page 7 undefined on input line 139.
+
+
+LaTeX Warning: Citation '1.1.causality' on page 7 undefined on input line 141.
+
 <pics/1_1_tracts_function.png, id=53, 978.65625pt x 657.45625pt>
 File: pics/1_1_tracts_function.png Graphic file (type png)
 
@@ -1098,100 +1279,11 @@ File: pics/1_1_tracts_function.png Graphic file (type png)
 Package pdftex.def Info: pics/1_1_tracts_function.png used on input line 155.
 (pdftex.def)             Requested size: 298.75394pt x 200.69942pt.
 
-! Illegal parameter number in definition of \reserved@a.
-<to be read again> 
-                   }
-l.156 ...fascicle, vPMC - ventral premotor cortex}
-                                                  
-You meant to type ## instead of #, right?
-Or maybe a } was forgotten somewhere earlier, and things
-are all screwed up? I'm going to assume that you meant ##.
 
-! Illegal parameter number in definition of \reserved@a.
-<to be read again> 
-                   3
-l.156 ...fascicle, vPMC - ventral premotor cortex}
-                                                  
-You meant to type ## instead of #, right?
-Or maybe a } was forgotten somewhere earlier, and things
-are all screwed up? I'm going to assume that you meant ##.
+LaTeX Warning: Citation '1.1.Gierhan' on page 7 undefined on input line 156.
 
-! Illegal parameter number in definition of \reserved@a.
-<to be read again> 
-                   1
-l.156 ...fascicle, vPMC - ventral premotor cortex}
-                                                  
-You meant to type ## instead of #, right?
-Or maybe a } was forgotten somewhere earlier, and things
-are all screwed up? I'm going to assume that you meant ##.
 
-! Illegal parameter number in definition of \reserved@a.
-<to be read again> 
-                   2
-l.156 ...fascicle, vPMC - ventral premotor cortex}
-                                                  
-You meant to type ## instead of #, right?
-Or maybe a } was forgotten somewhere earlier, and things
-are all screwed up? I'm going to assume that you meant ##.
-
-! Illegal parameter number in definition of \reserved@a.
-<to be read again> 
-                   }
-l.156 ...fascicle, vPMC - ventral premotor cortex}
-                                                  
-You meant to type ## instead of #, right?
-Or maybe a } was forgotten somewhere earlier, and things
-are all screwed up? I'm going to assume that you meant ##.
-
-! Illegal parameter number in definition of \reserved@a.
-<to be read again> 
-                   3
-l.156 ...fascicle, vPMC - ventral premotor cortex}
-                                                  
-You meant to type ## instead of #, right?
-Or maybe a } was forgotten somewhere earlier, and things
-are all screwed up? I'm going to assume that you meant ##.
-
-! Illegal parameter number in definition of \reserved@a.
-<to be read again> 
-                   1
-l.156 ...fascicle, vPMC - ventral premotor cortex}
-                                                  
-You meant to type ## instead of #, right?
-Or maybe a } was forgotten somewhere earlier, and things
-are all screwed up? I'm going to assume that you meant ##.
-
-! Illegal parameter number in definition of \reserved@a.
-<to be read again> 
-                   2
-l.156 ...fascicle, vPMC - ventral premotor cortex}
-                                                  
-You meant to type ## instead of #, right?
-Or maybe a } was forgotten somewhere earlier, and things
-are all screwed up? I'm going to assume that you meant ##.
-
-! Argument of \caption@ydblarg has an extra }.
-<inserted text> 
-                \par 
-l.156 ...fascicle, vPMC - ventral premotor cortex}
-                                                  
-I've run across a `}' that doesn't seem to match anything.
-For example, `\def\a#1{...}' and `\a}' would produce
-this error. If you simply proceed now, the `\par' that
-I've just inserted will cause me to report a runaway
-argument that might be the root of the problem. But if
-your `}' was spurious, just type `2' and it will go away.
-
-Runaway argument?
-{\@caption \@captype }{\@cite }\def \reserved@b {\@cite <>}\futurelet \ETC.
-! Paragraph ended before \caption@ydblarg was complete.
-<to be read again> 
-                   \par 
-l.156 ...fascicle, vPMC - ventral premotor cortex}
-                                                  
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
+LaTeX Warning: Citation '1.1.Gierhan' on page 7 undefined on input line 156.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1205,6 +1297,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [7 <./pics/1_1_tracts_function.png>]
 
+LaTeX Warning: Citation '1.3.Constable' on page 8 undefined on input line 189.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
@@ -1212,13 +1307,17 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [8]
 
+LaTeX Warning: Citation '1.3.Bornkessel' on page 9 undefined on input line 200.
+
+
+
 ! LaTeX Error: Command \textcurrency unavailable in encoding T1.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.205 ...hlt, dass der Junge den Lehrern hilft."'}
+l.205 ...hlt, dass der Junge den Lehrern hilft.``}
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1231,7 +1330,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.206 ...hlt, dass dem Junge die Lehrer helfen."'}
+l.206 ...hlt, dass dem Junge die Lehrer helfen.``}
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1251,6 +1350,15 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [10]
+
+LaTeX Warning: Citation '1.5.MEG.a' on page 11 undefined on input line 296.
+
+
+LaTeX Warning: Citation '1.5.MEG.b' on page 11 undefined on input line 296.
+
+
+LaTeX Warning: Citation '1.5.MEG.c' on page 11 undefined on input line 296.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -1299,23 +1407,62 @@ l.309 ...ble material (most commonly, \SI{\micro}-
 |...............................................
 
 
+LaTeX Warning: Citation '1.5.SNR' on page 12 undefined on input line 311.
+
+
+LaTeX Warning: Citation '1.5.MEG.a' on page 12 undefined on input line 313.
+
+
+LaTeX Warning: Citation '1.5.MEG.c' on page 12 undefined on input line 313.
+
+
+LaTeX Warning: Citation '1.5.sensitivity' on page 12 undefined on input line 31
+4.
+
+
+LaTeX Warning: Citation '1.5.SNR' on page 12 undefined on input line 315.
+
+
+LaTeX Warning: Citation '1.5.tissues.b' on page 12 undefined on input line 321.
+
+
+
+LaTeX Warning: Citation '1.5.tissues.a' on page 12 undefined on input line 322.
+
+
+
+LaTeX Warning: Citation '1.5.tissues.b' on page 12 undefined on input line 322.
+
+
+
+LaTeX Warning: Citation '1.5.tissues.a' on page 12 undefined on input line 323.
+
+
+LaTeX Font Info:    External font `cmex7' loaded for size
+(Font)              <7> on input line 326.
+LaTeX Font Info:    External font `cmex7' loaded for size
+(Font)              <5> on input line 326.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 326.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 326.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 326.
+
+LaTeX Warning: Citation '1.5.magneticProperties' on page 12 undefined on input 
+line 326.
+
+
+LaTeX Warning: Citation '1.5.tissues.a' on page 12 undefined on input line 328.
+
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [12]
-LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <7> on input line 356.
-LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <5> on input line 356.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 356.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 356.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 356.
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -1324,23 +1471,24 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [13]
 
+LaTeX Warning: Citation '1.5.highpass' on page 14 undefined on input line 381.
+
+
+LaTeX Warning: Citation '1.5.ecg.a' on page 14 undefined on input line 389.
+
+
+LaTeX Warning: Citation '1.5.ecg.b' on page 14 undefined on input line 390.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [14]
-! Misplaced alignment tab character &.
-<argument> Kriegeskorte\ \BBA {} &
-                                  ~Bandettini
-l.425 ...'double dipping"' \cite{1.5.Kriegeskorte}
-                                                  .
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
+
+LaTeX Warning: Citation '1.5.Kriegeskorte' on page 15 undefined on input line 4
+25.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1350,12 +1498,49 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [15]
 
+LaTeX Warning: Citation '1.5.Beamformer-a' on page 16 undefined on input line 4
+54.
+
+
+LaTeX Warning: Citation '1.5.Beamformer-b' on page 16 undefined on input line 4
+54.
+
+
+LaTeX Warning: Citation '1.5.synchronicity' on page 16 undefined on input line 
+458.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [16]
+
+LaTeX Warning: Citation '1.5.music' on page 17 undefined on input line 463.
+
+
+LaTeX Warning: Citation '1.5.simplex' on page 17 undefined on input line 463.
+
+
+LaTeX Warning: Citation '1.5.L2' on page 17 undefined on input line 478.
+
+
+LaTeX Warning: Citation '1.5.L1' on page 17 undefined on input line 479.
+
+
+LaTeX Warning: Citation '1.5.dSPM' on page 17 undefined on input line 481.
+
+
+LaTeX Warning: Citation '1.5.MNE' on page 17 undefined on input line 481.
+
+
+LaTeX Warning: Citation '1.5.sLORETA' on page 17 undefined on input line 481.
+
+
+Underfull \vbox (badness 3815) has occurred while \output is active []
+
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -1364,12 +1549,45 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [17]
 
+LaTeX Warning: Citation '1.5.information' on page 18 undefined on input line 50
+1.
+
+
+LaTeX Warning: Citation '1.5.causality' on page 18 undefined on input line 508.
+
+
+
+Overfull \hbox (12.31511pt too wide) in paragraph at lines 501--509
+ \T1/ptm/b/n/10.95 Two types of in-for-ma-tion in-ter-ac-tion[] \T1/ptm/m/n/10.
+95 Ac-cord-ing to the Wiener prin-ci-ple [[]],
+ []
+
+
+LaTeX Warning: Citation '1.5.connectivity' on page 18 undefined on input line 5
+10.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[18]) (./chapter/Pilotstudy.tex
+[18]
+
+LaTeX Warning: Citation '1.5.SEM' on page 19 undefined on input line 523.
+
+
+LaTeX Warning: Citation '1.5.DCM' on page 19 undefined on input line 523.
+
+
+LaTeX Warning: Citation '1.5.Granger' on page 19 undefined on input line 530.
+
+
+LaTeX Warning: Citation '1.5.PDC' on page 19 undefined on input line 536.
+
+
+LaTeX Warning: Citation '1.5.gPDC' on page 19 undefined on input line 545.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -1377,6 +1595,31 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [19]
+
+LaTeX Warning: Citation '1.5.TEcomparison' on page 20 undefined on input line 5
+51.
+
+
+LaTeX Warning: Citation '3.4.TE.a' on page 20 undefined on input line 552.
+
+
+LaTeX Warning: Citation '3.4.TE.b' on page 20 undefined on input line 552.
+
+
+LaTeX Warning: Citation '3.4.Trentool' on page 20 undefined on input line 560.
+
+) (./chapter/Pilotstudy.tex
+Underfull \hbox (badness 1803) in paragraph at lines 551--1
+ \T1/ptm/b/n/10.95 Information-theoretic ap-proaches[] \T1/ptm/m/n/10.95 Next t
+o mu-tual in-for-ma-tion and joint en-tropy,
+ []
+
+
+Underfull \hbox (badness 1874) in paragraph at lines 551--1
+\T1/ptm/m/n/10.95 trans-fer en-tropy (TE) is by far the most ad-vanced informat
+ion-theoretic ap-proach
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -1449,6 +1692,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [26]
 Chapter 3.
+
+LaTeX Warning: Citation '3.1.LQ' on page 27 undefined on input line 14.
+
 [27
 
 ]
@@ -1464,6 +1710,9 @@ File: pics/3_1_screen.png Graphic file (type png)
 <use pics/3_1_screen.png>
 Package pdftex.def Info: pics/3_1_screen.png used on input line 90.
 (pdftex.def)             Requested size: 199.1693pt x 149.3774pt.
+
+
+LaTeX Warning: Citation '3.1.animals' on page 29 undefined on input line 95.
 
 <pics/3_1_activities.png, id=132, 2492.31125pt x 380.42125pt>
 File: pics/3_1_activities.png Graphic file (type png)
@@ -1583,10 +1832,23 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [32 <./pics/3_1_feedbackGraphAccuracy.png (PNG copy)> <./pics/3_1_feedbackGraph
 RT.png (PNG copy)>]
 
+LaTeX Warning: Citation '3.2.mprage' on page 33 undefined on input line 211.
+
+
 LaTeX Warning: Command \textdegree invalid in math mode on input line 211.
 
 
+LaTeX Warning: Citation '3.2.space' on page 33 undefined on input line 213.
+
+
 LaTeX Warning: Command \textdegree invalid in math mode on input line 213.
+
+
+LaTeX Warning: Citation '3.3.MNE' on page 33 undefined on input line 220.
+
+
+LaTeX Warning: Citation '3.3.MNEpython' on page 33 undefined on input line 220.
+
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1596,6 +1858,15 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [33]
 
+LaTeX Warning: Citation '3.3.swtest' on page 34 undefined on input line 232.
+
+
+LaTeX Warning: Citation '3.3.levtest' on page 34 undefined on input line 233.
+
+
+LaTeX Warning: Citation '3.3.SSS' on page 34 undefined on input line 244.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
@@ -1603,39 +1874,51 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [34]
 
+LaTeX Warning: Citation '3.3.clustertest' on page 35 undefined on input line 27
+0.
+
+<pics/3_3_occipital_sensors.png, id=158, 569.7285pt x 569.7285pt>
+File: pics/3_3_occipital_sensors.png Graphic file (type png)
+
+<use pics/3_3_occipital_sensors.png>
+Package pdftex.def Info: pics/3_3_occipital_sensors.png used on input line 285.
+
+(pdftex.def)             Requested size: 95.60344pt x 95.60072pt.
+
+<pics/3_3_parietal_sensors.png, id=159, 569.7285pt x 569.7285pt>
+File: pics/3_3_parietal_sensors.png Graphic file (type png)
+
+<use pics/3_3_parietal_sensors.png>
+Package pdftex.def Info: pics/3_3_parietal_sensors.png used on input line 286.
+(pdftex.def)             Requested size: 95.60344pt x 95.60072pt.
+
+<pics/3_3_temporal_sensors.png, id=160, 569.7285pt x 569.7285pt>
+File: pics/3_3_temporal_sensors.png Graphic file (type png)
+
+<use pics/3_3_temporal_sensors.png>
+Package pdftex.def Info: pics/3_3_temporal_sensors.png used on input line 287.
+(pdftex.def)             Requested size: 95.60344pt x 95.60072pt.
+
+<pics/3_3_frontal_sensors.png, id=161, 569.7285pt x 569.7285pt>
+File: pics/3_3_frontal_sensors.png Graphic file (type png)
+
+<use pics/3_3_frontal_sensors.png>
+Package pdftex.def Info: pics/3_3_frontal_sensors.png used on input line 288.
+(pdftex.def)             Requested size: 95.60344pt x 95.60072pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[35] <pics/3_3_occipital_sensors.png, id=161, 569.7285pt x 569.7285pt>
-File: pics/3_3_occipital_sensors.png Graphic file (type png)
+[35]
 
-<use pics/3_3_occipital_sensors.png>
-Package pdftex.def Info: pics/3_3_occipital_sensors.png used on input line 292.
-
-(pdftex.def)             Requested size: 95.60344pt x 95.60072pt.
-
-<pics/3_3_parietal_sensors.png, id=162, 569.7285pt x 569.7285pt>
-File: pics/3_3_parietal_sensors.png Graphic file (type png)
-
-<use pics/3_3_parietal_sensors.png>
-Package pdftex.def Info: pics/3_3_parietal_sensors.png used on input line 293.
-(pdftex.def)             Requested size: 95.60344pt x 95.60072pt.
-
-<pics/3_3_temporal_sensors.png, id=163, 569.7285pt x 569.7285pt>
-File: pics/3_3_temporal_sensors.png Graphic file (type png)
-
-<use pics/3_3_temporal_sensors.png>
-Package pdftex.def Info: pics/3_3_temporal_sensors.png used on input line 294.
-(pdftex.def)             Requested size: 95.60344pt x 95.60072pt.
-
-<pics/3_3_frontal_sensors.png, id=164, 569.7285pt x 569.7285pt>
-File: pics/3_3_frontal_sensors.png Graphic file (type png)
-
-<use pics/3_3_frontal_sensors.png>
-Package pdftex.def Info: pics/3_3_frontal_sensors.png used on input line 295.
-(pdftex.def)             Requested size: 95.60344pt x 95.60072pt.
+LaTeX Warning: Citation '3.3.nuintensity' on page 36 undefined on input line 29
+9.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1646,48 +1929,62 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [36 <./pics/3_3_occipital_sensors.png (PNG copy)> <./pics/3_3_parietal_sensors.
 png (PNG copy)> <./pics/3_3_temporal_sensors.png (PNG copy)> <./pics/3_3_fronta
 l_sensors.png (PNG copy)>]
+Underfull \hbox (badness 1466) in paragraph at lines 348--350
+\T1/ptm/m/it/10.95 mne_do_inverse_operator\T1/ptm/m/n/10.95 . The reg-u-lar-iza
+-tion fac-tor was sup-plied with the op-tion
+ []
+
+<pics/dh55a-pial-lh.png, id=168, 1686.3pt x 1028.84375pt>
+File: pics/dh55a-pial-lh.png Graphic file (type png)
+
+<use pics/dh55a-pial-lh.png>
+Package pdftex.def Info: pics/dh55a-pial-lh.png used on input line 361.
+(pdftex.def)             Requested size: 195.1881pt x 119.07593pt.
+
+<pics/dh55a-pial-rh.png, id=169, 1686.3pt x 1028.84375pt>
+File: pics/dh55a-pial-rh.png Graphic file (type png)
+
+<use pics/dh55a-pial-rh.png>
+Package pdftex.def Info: pics/dh55a-pial-rh.png used on input line 362.
+(pdftex.def)             Requested size: 195.1881pt x 119.07593pt.
+
+<pics/dh55a-inflated-lh.png, id=170, 1686.3pt x 1028.84375pt>
+File: pics/dh55a-inflated-lh.png Graphic file (type png)
+
+<use pics/dh55a-inflated-lh.png>
+Package pdftex.def Info: pics/dh55a-inflated-lh.png used on input line 363.
+(pdftex.def)             Requested size: 195.1881pt x 119.07593pt.
+
+<pics/dh55a-inflated-rh.png, id=171, 1686.3pt x 1028.84375pt>
+File: pics/dh55a-inflated-rh.png Graphic file (type png)
+
+<use pics/dh55a-inflated-rh.png>
+Package pdftex.def Info: pics/dh55a-inflated-rh.png used on input line 364.
+(pdftex.def)             Requested size: 195.1881pt x 119.07593pt.
+
+<pics/3_3_ROIlegend.png, id=172, 1919.17pt x 313.17pt>
+File: pics/3_3_ROIlegend.png Graphic file (type png)
+
+<use pics/3_3_ROIlegend.png>
+Package pdftex.def Info: pics/3_3_ROIlegend.png used on input line 365.
+(pdftex.def)             Requested size: 298.75394pt x 48.74632pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[37] <pics/dh55a-pial-lh.png, id=172, 1686.3pt x 1028.84375pt>
-File: pics/dh55a-pial-lh.png Graphic file (type png)
+[37]
 
-<use pics/dh55a-pial-lh.png>
-Package pdftex.def Info: pics/dh55a-pial-lh.png used on input line 368.
-(pdftex.def)             Requested size: 195.1881pt x 119.07593pt.
+LaTeX Warning: Citation '3.3.clustertest' on page 38 undefined on input line 38
+3.
 
-<pics/dh55a-pial-rh.png, id=173, 1686.3pt x 1028.84375pt>
-File: pics/dh55a-pial-rh.png Graphic file (type png)
 
-<use pics/dh55a-pial-rh.png>
-Package pdftex.def Info: pics/dh55a-pial-rh.png used on input line 369.
-(pdftex.def)             Requested size: 195.1881pt x 119.07593pt.
-
-<pics/dh55a-inflated-lh.png, id=174, 1686.3pt x 1028.84375pt>
-File: pics/dh55a-inflated-lh.png Graphic file (type png)
-
-<use pics/dh55a-inflated-lh.png>
-Package pdftex.def Info: pics/dh55a-inflated-lh.png used on input line 370.
-(pdftex.def)             Requested size: 195.1881pt x 119.07593pt.
-
-<pics/dh55a-inflated-rh.png, id=175, 1686.3pt x 1028.84375pt>
-File: pics/dh55a-inflated-rh.png Graphic file (type png)
-
-<use pics/dh55a-inflated-rh.png>
-Package pdftex.def Info: pics/dh55a-inflated-rh.png used on input line 371.
-(pdftex.def)             Requested size: 195.1881pt x 119.07593pt.
-
-<pics/3_3_ROIlegend.png, id=176, 1919.17pt x 313.17pt>
-File: pics/3_3_ROIlegend.png Graphic file (type png)
-
-<use pics/3_3_ROIlegend.png>
-Package pdftex.def Info: pics/3_3_ROIlegend.png used on input line 372.
-(pdftex.def)             Requested size: 298.75394pt x 48.74632pt.
-
-Underfull \vbox (badness 1917) has occurred while \output is active []
+Underfull \vbox (badness 4967) has occurred while \output is active []
 
 
 
@@ -1698,53 +1995,18 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [38 <./pics/dh55a-pial-lh.png (PNG copy)> <./pics/dh55a-pial-rh.png (PNG copy)>
  <./pics/dh55a-inflated-lh.png (PNG copy)> <./pics/dh55a-inflated-rh.png (PNG c
-opy)> <./pics/3_3_ROIlegend.png>]
-Underfull \hbox (badness 1067) in paragraph at lines 422--432
-[]\T1/ptm/m/n/10.95 Comparisons be-tween these re-gions were per-formed for all
- re-gions along three
- []
-
+opy)> <./pics/3_3_ROIlegend.png>]) (./chapter/Results.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[39] <pics/3_4_regions.png, id=183, 2409.0pt x 1806.75pt>
-File: pics/3_4_regions.png Graphic file (type png)
+[39] [40
 
-<use pics/3_4_regions.png>
-Package pdftex.def Info: pics/3_4_regions.png used on input line 436.
-(pdftex.def)             Requested size: 298.75394pt x 224.05122pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[40 <./pics/3_4_regions.png>]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
+]
+Chapter 4.
 [41]
-! Misplaced alignment tab character &.
-l.482 ...t results were corrected with Benjamini &
-                                                   Hochberg's procedure for ...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-) (./chapter/Results.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -1752,18 +2014,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [42]
-Chapter 4.
-[43
-
-]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[44]
-<pics/children_Left-frontal-magnetometer.png, id=202, 578.16pt x 434.1018pt>
+<pics/children_Left-frontal-magnetometer.png, id=192, 578.16pt x 434.1018pt>
 File: pics/children_Left-frontal-magnetometer.png Graphic file (type png)
 
 <use pics/children_Left-frontal-magnetometer.png>
@@ -1771,7 +2022,7 @@ Package pdftex.def Info: pics/children_Left-frontal-magnetometer.png used on in
 put line 81.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/children_Right-frontal-magnetometer.png, id=203, 578.16pt x 434.1018pt>
+<pics/children_Right-frontal-magnetometer.png, id=193, 578.16pt x 434.1018pt>
 File: pics/children_Right-frontal-magnetometer.png Graphic file (type png)
 
 <use pics/children_Right-frontal-magnetometer.png>
@@ -1779,7 +2030,7 @@ Package pdftex.def Info: pics/children_Right-frontal-magnetometer.png used on i
 nput line 82.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/children_Left-frontal-gradiometer.png, id=204, 578.16pt x 434.1018pt>
+<pics/children_Left-frontal-gradiometer.png, id=194, 578.16pt x 434.1018pt>
 File: pics/children_Left-frontal-gradiometer.png Graphic file (type png)
 
 <use pics/children_Left-frontal-gradiometer.png>
@@ -1787,7 +2038,7 @@ Package pdftex.def Info: pics/children_Left-frontal-gradiometer.png used on inp
 ut line 83.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/children_Right-frontal-gradiometer.png, id=205, 578.16pt x 434.1018pt>
+<pics/children_Right-frontal-gradiometer.png, id=195, 578.16pt x 434.1018pt>
 File: pics/children_Right-frontal-gradiometer.png Graphic file (type png)
 
 <use pics/children_Right-frontal-gradiometer.png>
@@ -1795,14 +2046,14 @@ Package pdftex.def Info: pics/children_Right-frontal-gradiometer.png used on in
 put line 84.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/kids_Left-frontal_mag.png, id=206, 578.16pt x 433.62pt>
+<pics/kids_Left-frontal_mag.png, id=196, 578.16pt x 433.62pt>
 File: pics/kids_Left-frontal_mag.png Graphic file (type png)
 
 <use pics/kids_Left-frontal_mag.png>
 Package pdftex.def Info: pics/kids_Left-frontal_mag.png used on input line 85.
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/kids_Right-frontal_mag.png, id=207, 578.16pt x 433.62pt>
+<pics/kids_Right-frontal_mag.png, id=197, 578.16pt x 433.62pt>
 File: pics/kids_Right-frontal_mag.png Graphic file (type png)
 
 <use pics/kids_Right-frontal_mag.png>
@@ -1810,7 +2061,7 @@ Package pdftex.def Info: pics/kids_Right-frontal_mag.png used on input line 86.
 
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/kids_Left-frontal_grad.png, id=208, 578.16pt x 433.62pt>
+<pics/kids_Left-frontal_grad.png, id=198, 578.16pt x 433.62pt>
 File: pics/kids_Left-frontal_grad.png Graphic file (type png)
 
 <use pics/kids_Left-frontal_grad.png>
@@ -1818,7 +2069,7 @@ Package pdftex.def Info: pics/kids_Left-frontal_grad.png used on input line 87.
 
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/kids_Right-frontal_grad.png, id=209, 578.16pt x 433.62pt>
+<pics/kids_Right-frontal_grad.png, id=199, 578.16pt x 433.62pt>
 File: pics/kids_Right-frontal_grad.png Graphic file (type png)
 
 <use pics/kids_Right-frontal_grad.png>
@@ -1832,7 +2083,7 @@ LaTeX Warning: Float too large for page by 31.89198pt on input line 91.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<pics/children_Left-temporal-magnetometer.png, id=210, 578.16pt x 434.1018pt>
+<pics/children_Left-temporal-magnetometer.png, id=200, 578.16pt x 434.1018pt>
 File: pics/children_Left-temporal-magnetometer.png Graphic file (type png)
 
 <use pics/children_Left-temporal-magnetometer.png>
@@ -1840,7 +2091,7 @@ Package pdftex.def Info: pics/children_Left-temporal-magnetometer.png used on i
 nput line 96.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/children_Right-temporal-magnetometer.png, id=211, 578.16pt x 434.1018pt>
+<pics/children_Right-temporal-magnetometer.png, id=201, 578.16pt x 434.1018pt>
 File: pics/children_Right-temporal-magnetometer.png Graphic file (type png)
 
 <use pics/children_Right-temporal-magnetometer.png>
@@ -1848,7 +2099,7 @@ Package pdftex.def Info: pics/children_Right-temporal-magnetometer.png used on
 input line 97.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/children_Left-temporal-gradiometer.png, id=212, 578.16pt x 434.1018pt>
+<pics/children_Left-temporal-gradiometer.png, id=202, 578.16pt x 434.1018pt>
 File: pics/children_Left-temporal-gradiometer.png Graphic file (type png)
 
 <use pics/children_Left-temporal-gradiometer.png>
@@ -1856,7 +2107,7 @@ Package pdftex.def Info: pics/children_Left-temporal-gradiometer.png used on in
 put line 98.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/children_Right-temporal-gradiometer.png, id=213, 578.16pt x 434.1018pt>
+<pics/children_Right-temporal-gradiometer.png, id=203, 578.16pt x 434.1018pt>
 File: pics/children_Right-temporal-gradiometer.png Graphic file (type png)
 
 <use pics/children_Right-temporal-gradiometer.png>
@@ -1864,7 +2115,7 @@ Package pdftex.def Info: pics/children_Right-temporal-gradiometer.png used on i
 nput line 99.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/kids_Left-temporal_mag.png, id=214, 578.16pt x 433.62pt>
+<pics/kids_Left-temporal_mag.png, id=204, 578.16pt x 433.62pt>
 File: pics/kids_Left-temporal_mag.png Graphic file (type png)
 
 <use pics/kids_Left-temporal_mag.png>
@@ -1872,7 +2123,7 @@ Package pdftex.def Info: pics/kids_Left-temporal_mag.png used on input line 100
 .
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/kids_Right-temporal_mag.png, id=215, 578.16pt x 433.62pt>
+<pics/kids_Right-temporal_mag.png, id=205, 578.16pt x 433.62pt>
 File: pics/kids_Right-temporal_mag.png Graphic file (type png)
 
 <use pics/kids_Right-temporal_mag.png>
@@ -1880,7 +2131,7 @@ Package pdftex.def Info: pics/kids_Right-temporal_mag.png used on input line 10
 1.
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/kids_Left-temporal_grad.png, id=216, 578.16pt x 433.62pt>
+<pics/kids_Left-temporal_grad.png, id=206, 578.16pt x 433.62pt>
 File: pics/kids_Left-temporal_grad.png Graphic file (type png)
 
 <use pics/kids_Left-temporal_grad.png>
@@ -1888,7 +2139,7 @@ Package pdftex.def Info: pics/kids_Left-temporal_grad.png used on input line 10
 2.
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/kids_Right-temporal_grad.png, id=217, 578.16pt x 433.62pt>
+<pics/kids_Right-temporal_grad.png, id=207, 578.16pt x 433.62pt>
 File: pics/kids_Right-temporal_grad.png Graphic file (type png)
 
 <use pics/kids_Right-temporal_grad.png>
@@ -1902,7 +2153,7 @@ LaTeX Warning: Float too large for page by 31.89198pt on input line 106.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<pics/children_Left-parietal-magnetometer.png, id=218, 578.16pt x 434.1018pt>
+<pics/children_Left-parietal-magnetometer.png, id=208, 578.16pt x 434.1018pt>
 File: pics/children_Left-parietal-magnetometer.png Graphic file (type png)
 
 <use pics/children_Left-parietal-magnetometer.png>
@@ -1910,7 +2161,7 @@ Package pdftex.def Info: pics/children_Left-parietal-magnetometer.png used on i
 nput line 111.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/children_Right-parietal-magnetometer.png, id=219, 578.16pt x 434.1018pt>
+<pics/children_Right-parietal-magnetometer.png, id=209, 578.16pt x 434.1018pt>
 File: pics/children_Right-parietal-magnetometer.png Graphic file (type png)
 
 <use pics/children_Right-parietal-magnetometer.png>
@@ -1918,7 +2169,7 @@ Package pdftex.def Info: pics/children_Right-parietal-magnetometer.png used on
 input line 112.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/children_Left-parietal-gradiometer.png, id=220, 578.16pt x 434.1018pt>
+<pics/children_Left-parietal-gradiometer.png, id=210, 578.16pt x 434.1018pt>
 File: pics/children_Left-parietal-gradiometer.png Graphic file (type png)
 
 <use pics/children_Left-parietal-gradiometer.png>
@@ -1926,7 +2177,7 @@ Package pdftex.def Info: pics/children_Left-parietal-gradiometer.png used on in
 put line 113.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/children_Right-parietal-gradiometer.png, id=221, 578.16pt x 434.1018pt>
+<pics/children_Right-parietal-gradiometer.png, id=211, 578.16pt x 434.1018pt>
 File: pics/children_Right-parietal-gradiometer.png Graphic file (type png)
 
 <use pics/children_Right-parietal-gradiometer.png>
@@ -1934,7 +2185,7 @@ Package pdftex.def Info: pics/children_Right-parietal-gradiometer.png used on i
 nput line 114.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/kids_Left-parietal_mag.png, id=222, 578.16pt x 433.62pt>
+<pics/kids_Left-parietal_mag.png, id=212, 578.16pt x 433.62pt>
 File: pics/kids_Left-parietal_mag.png Graphic file (type png)
 
 <use pics/kids_Left-parietal_mag.png>
@@ -1942,7 +2193,7 @@ Package pdftex.def Info: pics/kids_Left-parietal_mag.png used on input line 115
 .
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/kids_Right-parietal_mag.png, id=223, 578.16pt x 433.62pt>
+<pics/kids_Right-parietal_mag.png, id=213, 578.16pt x 433.62pt>
 File: pics/kids_Right-parietal_mag.png Graphic file (type png)
 
 <use pics/kids_Right-parietal_mag.png>
@@ -1950,7 +2201,7 @@ Package pdftex.def Info: pics/kids_Right-parietal_mag.png used on input line 11
 6.
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/kids_Left-parietal_grad.png, id=224, 578.16pt x 433.62pt>
+<pics/kids_Left-parietal_grad.png, id=214, 578.16pt x 433.62pt>
 File: pics/kids_Left-parietal_grad.png Graphic file (type png)
 
 <use pics/kids_Left-parietal_grad.png>
@@ -1958,7 +2209,7 @@ Package pdftex.def Info: pics/kids_Left-parietal_grad.png used on input line 11
 7.
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/kids_Right-parietal_grad.png, id=225, 578.16pt x 433.62pt>
+<pics/kids_Right-parietal_grad.png, id=215, 578.16pt x 433.62pt>
 File: pics/kids_Right-parietal_grad.png Graphic file (type png)
 
 <use pics/kids_Right-parietal_grad.png>
@@ -1978,14 +2229,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[45]
+[43]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[46 <./pics/children_Left-frontal-magnetometer.png (PNG copy)> <./pics/children
+[44 <./pics/children_Left-frontal-magnetometer.png (PNG copy)> <./pics/children
 _Right-frontal-magnetometer.png (PNG copy)> <./pics/children_Left-frontal-gradi
 ometer.png (PNG copy)> <./pics/children_Right-frontal-gradiometer.png (PNG copy
 )> <./pics/kids_Left-frontal_mag.png> <./pics/kids_Right-frontal_mag.png> <./pi
@@ -1996,7 +2247,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[47 <./pics/children_Left-temporal-magnetometer.png (PNG copy)> <./pics/childre
+[45 <./pics/children_Left-temporal-magnetometer.png (PNG copy)> <./pics/childre
 n_Right-temporal-magnetometer.png (PNG copy)> <./pics/children_Left-temporal-gr
 adiometer.png (PNG copy)> <./pics/children_Right-temporal-gradiometer.png (PNG 
 copy)> <./pics/kids_Left-temporal_mag.png> <./pics/kids_Right-temporal_mag.png>
@@ -2007,12 +2258,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[48 <./pics/children_Left-parietal-magnetometer.png (PNG copy)> <./pics/childre
+[46 <./pics/children_Left-parietal-magnetometer.png (PNG copy)> <./pics/childre
 n_Right-parietal-magnetometer.png (PNG copy)> <./pics/children_Left-parietal-gr
 adiometer.png (PNG copy)> <./pics/children_Right-parietal-gradiometer.png (PNG 
 copy)> <./pics/kids_Left-parietal_mag.png> <./pics/kids_Right-parietal_mag.png>
  <./pics/kids_Left-parietal_grad.png> <./pics/kids_Right-parietal_grad.png>]
-<pics/adults_Left-frontal-magnetometer.png, id=250, 578.16pt x 434.1018pt>
+<pics/adults_Left-frontal-magnetometer.png, id=242, 578.16pt x 434.1018pt>
 File: pics/adults_Left-frontal-magnetometer.png Graphic file (type png)
 
 <use pics/adults_Left-frontal-magnetometer.png>
@@ -2020,7 +2271,7 @@ Package pdftex.def Info: pics/adults_Left-frontal-magnetometer.png used on inpu
 t line 133.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/adults_Right-frontal-magnetometer.png, id=251, 578.16pt x 434.1018pt>
+<pics/adults_Right-frontal-magnetometer.png, id=243, 578.16pt x 434.1018pt>
 File: pics/adults_Right-frontal-magnetometer.png Graphic file (type png)
 
 <use pics/adults_Right-frontal-magnetometer.png>
@@ -2028,7 +2279,7 @@ Package pdftex.def Info: pics/adults_Right-frontal-magnetometer.png used on inp
 ut line 134.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/adults_Left-frontal-gradiometer.png, id=252, 578.16pt x 434.1018pt>
+<pics/adults_Left-frontal-gradiometer.png, id=244, 578.16pt x 434.1018pt>
 File: pics/adults_Left-frontal-gradiometer.png Graphic file (type png)
 
 <use pics/adults_Left-frontal-gradiometer.png>
@@ -2036,7 +2287,7 @@ Package pdftex.def Info: pics/adults_Left-frontal-gradiometer.png used on input
  line 135.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/adults_Right-frontal-gradiometer.png, id=253, 578.16pt x 434.1018pt>
+<pics/adults_Right-frontal-gradiometer.png, id=245, 578.16pt x 434.1018pt>
 File: pics/adults_Right-frontal-gradiometer.png Graphic file (type png)
 
 <use pics/adults_Right-frontal-gradiometer.png>
@@ -2044,7 +2295,7 @@ Package pdftex.def Info: pics/adults_Right-frontal-gradiometer.png used on inpu
 t line 136.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/adults_Left-frontal_mag.png, id=254, 578.16pt x 433.62pt>
+<pics/adults_Left-frontal_mag.png, id=246, 578.16pt x 433.62pt>
 File: pics/adults_Left-frontal_mag.png Graphic file (type png)
 
 <use pics/adults_Left-frontal_mag.png>
@@ -2052,7 +2303,7 @@ Package pdftex.def Info: pics/adults_Left-frontal_mag.png used on input line 13
 7.
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/adults_Right-frontal_mag.png, id=255, 578.16pt x 433.62pt>
+<pics/adults_Right-frontal_mag.png, id=247, 578.16pt x 433.62pt>
 File: pics/adults_Right-frontal_mag.png Graphic file (type png)
 
 <use pics/adults_Right-frontal_mag.png>
@@ -2060,7 +2311,7 @@ Package pdftex.def Info: pics/adults_Right-frontal_mag.png used on input line 1
 38.
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/adults_Left-frontal_grad.png, id=256, 578.16pt x 433.62pt>
+<pics/adults_Left-frontal_grad.png, id=248, 578.16pt x 433.62pt>
 File: pics/adults_Left-frontal_grad.png Graphic file (type png)
 
 <use pics/adults_Left-frontal_grad.png>
@@ -2068,7 +2319,7 @@ Package pdftex.def Info: pics/adults_Left-frontal_grad.png used on input line 1
 39.
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/adults_Right-frontal_grad.png, id=257, 578.16pt x 433.62pt>
+<pics/adults_Right-frontal_grad.png, id=249, 578.16pt x 433.62pt>
 File: pics/adults_Right-frontal_grad.png Graphic file (type png)
 
 <use pics/adults_Right-frontal_grad.png>
@@ -2082,7 +2333,7 @@ LaTeX Warning: Float too large for page by 31.89198pt on input line 143.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<pics/adults_Left-temporal-magnetometer.png, id=258, 578.16pt x 434.1018pt>
+<pics/adults_Left-temporal-magnetometer.png, id=250, 578.16pt x 434.1018pt>
 File: pics/adults_Left-temporal-magnetometer.png Graphic file (type png)
 
 <use pics/adults_Left-temporal-magnetometer.png>
@@ -2090,7 +2341,7 @@ Package pdftex.def Info: pics/adults_Left-temporal-magnetometer.png used on inp
 ut line 148.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/adults_Right-temporal-magnetometer.png, id=259, 578.16pt x 434.1018pt>
+<pics/adults_Right-temporal-magnetometer.png, id=251, 578.16pt x 434.1018pt>
 File: pics/adults_Right-temporal-magnetometer.png Graphic file (type png)
 
 <use pics/adults_Right-temporal-magnetometer.png>
@@ -2098,7 +2349,7 @@ Package pdftex.def Info: pics/adults_Right-temporal-magnetometer.png used on in
 put line 149.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/adults_Left-temporal-gradiometer.png, id=260, 578.16pt x 434.1018pt>
+<pics/adults_Left-temporal-gradiometer.png, id=252, 578.16pt x 434.1018pt>
 File: pics/adults_Left-temporal-gradiometer.png Graphic file (type png)
 
 <use pics/adults_Left-temporal-gradiometer.png>
@@ -2106,7 +2357,7 @@ Package pdftex.def Info: pics/adults_Left-temporal-gradiometer.png used on inpu
 t line 150.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/adults_Right-temporal-gradiometer.png, id=261, 578.16pt x 434.1018pt>
+<pics/adults_Right-temporal-gradiometer.png, id=253, 578.16pt x 434.1018pt>
 File: pics/adults_Right-temporal-gradiometer.png Graphic file (type png)
 
 <use pics/adults_Right-temporal-gradiometer.png>
@@ -2114,7 +2365,7 @@ Package pdftex.def Info: pics/adults_Right-temporal-gradiometer.png used on inp
 ut line 151.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/adults_Left-temporal_mag.png, id=262, 578.16pt x 433.62pt>
+<pics/adults_Left-temporal_mag.png, id=254, 578.16pt x 433.62pt>
 File: pics/adults_Left-temporal_mag.png Graphic file (type png)
 
 <use pics/adults_Left-temporal_mag.png>
@@ -2122,7 +2373,7 @@ Package pdftex.def Info: pics/adults_Left-temporal_mag.png used on input line 1
 52.
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/adults_Right-temporal_mag.png, id=263, 578.16pt x 433.62pt>
+<pics/adults_Right-temporal_mag.png, id=255, 578.16pt x 433.62pt>
 File: pics/adults_Right-temporal_mag.png Graphic file (type png)
 
 <use pics/adults_Right-temporal_mag.png>
@@ -2130,7 +2381,7 @@ Package pdftex.def Info: pics/adults_Right-temporal_mag.png used on input line
 153.
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/adults_Left-temporal_grad.png, id=264, 578.16pt x 433.62pt>
+<pics/adults_Left-temporal_grad.png, id=256, 578.16pt x 433.62pt>
 File: pics/adults_Left-temporal_grad.png Graphic file (type png)
 
 <use pics/adults_Left-temporal_grad.png>
@@ -2138,7 +2389,7 @@ Package pdftex.def Info: pics/adults_Left-temporal_grad.png used on input line
 154.
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/adults_Right-temporal_grad.png, id=265, 578.16pt x 433.62pt>
+<pics/adults_Right-temporal_grad.png, id=257, 578.16pt x 433.62pt>
 File: pics/adults_Right-temporal_grad.png Graphic file (type png)
 
 <use pics/adults_Right-temporal_grad.png>
@@ -2152,7 +2403,7 @@ LaTeX Warning: Float too large for page by 31.89198pt on input line 158.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<pics/adults_Left-parietal-magnetometer.png, id=266, 578.16pt x 434.1018pt>
+<pics/adults_Left-parietal-magnetometer.png, id=258, 578.16pt x 434.1018pt>
 File: pics/adults_Left-parietal-magnetometer.png Graphic file (type png)
 
 <use pics/adults_Left-parietal-magnetometer.png>
@@ -2160,7 +2411,7 @@ Package pdftex.def Info: pics/adults_Left-parietal-magnetometer.png used on inp
 ut line 163.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/adults_Right-parietal-magnetometer.png, id=267, 578.16pt x 434.1018pt>
+<pics/adults_Right-parietal-magnetometer.png, id=259, 578.16pt x 434.1018pt>
 File: pics/adults_Right-parietal-magnetometer.png Graphic file (type png)
 
 <use pics/adults_Right-parietal-magnetometer.png>
@@ -2168,7 +2419,7 @@ Package pdftex.def Info: pics/adults_Right-parietal-magnetometer.png used on in
 put line 164.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/adults_Left-parietal-gradiometer.png, id=268, 578.16pt x 434.1018pt>
+<pics/adults_Left-parietal-gradiometer.png, id=260, 578.16pt x 434.1018pt>
 File: pics/adults_Left-parietal-gradiometer.png Graphic file (type png)
 
 <use pics/adults_Left-parietal-gradiometer.png>
@@ -2176,7 +2427,7 @@ Package pdftex.def Info: pics/adults_Left-parietal-gradiometer.png used on inpu
 t line 165.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/adults_Right-parietal-gradiometer.png, id=269, 578.16pt x 434.1018pt>
+<pics/adults_Right-parietal-gradiometer.png, id=261, 578.16pt x 434.1018pt>
 File: pics/adults_Right-parietal-gradiometer.png Graphic file (type png)
 
 <use pics/adults_Right-parietal-gradiometer.png>
@@ -2184,7 +2435,7 @@ Package pdftex.def Info: pics/adults_Right-parietal-gradiometer.png used on inp
 ut line 166.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/adults_Left-parietal_mag.png, id=270, 578.16pt x 433.62pt>
+<pics/adults_Left-parietal_mag.png, id=262, 578.16pt x 433.62pt>
 File: pics/adults_Left-parietal_mag.png Graphic file (type png)
 
 <use pics/adults_Left-parietal_mag.png>
@@ -2192,7 +2443,7 @@ Package pdftex.def Info: pics/adults_Left-parietal_mag.png used on input line 1
 67.
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/adults_Right-parietal_mag.png, id=271, 578.16pt x 433.62pt>
+<pics/adults_Right-parietal_mag.png, id=263, 578.16pt x 433.62pt>
 File: pics/adults_Right-parietal_mag.png Graphic file (type png)
 
 <use pics/adults_Right-parietal_mag.png>
@@ -2200,7 +2451,7 @@ Package pdftex.def Info: pics/adults_Right-parietal_mag.png used on input line
 168.
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/adults_Left-parietal_grad.png, id=272, 578.16pt x 433.62pt>
+<pics/adults_Left-parietal_grad.png, id=264, 578.16pt x 433.62pt>
 File: pics/adults_Left-parietal_grad.png Graphic file (type png)
 
 <use pics/adults_Left-parietal_grad.png>
@@ -2208,7 +2459,7 @@ Package pdftex.def Info: pics/adults_Left-parietal_grad.png used on input line
 169.
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/adults_Right-parietal_grad.png, id=273, 578.16pt x 433.62pt>
+<pics/adults_Right-parietal_grad.png, id=265, 578.16pt x 433.62pt>
 File: pics/adults_Right-parietal_grad.png Graphic file (type png)
 
 <use pics/adults_Right-parietal_grad.png>
@@ -2228,7 +2479,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[49
+[47
 
 ]
 
@@ -2237,7 +2488,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[50 <./pics/adults_Left-frontal-magnetometer.png (PNG copy)> <./pics/adults_Rig
+[48 <./pics/adults_Left-frontal-magnetometer.png (PNG copy)> <./pics/adults_Rig
 ht-frontal-magnetometer.png (PNG copy)> <./pics/adults_Left-frontal-gradiometer
 .png (PNG copy)> <./pics/adults_Right-frontal-gradiometer.png (PNG copy)> <./pi
 cs/adults_Left-frontal_mag.png> <./pics/adults_Right-frontal_mag.png> <./pics/a
@@ -2248,7 +2499,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[51 <./pics/adults_Left-temporal-magnetometer.png (PNG copy)> <./pics/adults_Ri
+[49 <./pics/adults_Left-temporal-magnetometer.png (PNG copy)> <./pics/adults_Ri
 ght-temporal-magnetometer.png (PNG copy)> <./pics/adults_Left-temporal-gradiome
 ter.png (PNG copy)> <./pics/adults_Right-temporal-gradiometer.png (PNG copy)> <
 ./pics/adults_Left-temporal_mag.png> <./pics/adults_Right-temporal_mag.png> <./
@@ -2259,26 +2510,26 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[52 <./pics/adults_Left-parietal-magnetometer.png (PNG copy)> <./pics/adults_Ri
+[50 <./pics/adults_Left-parietal-magnetometer.png (PNG copy)> <./pics/adults_Ri
 ght-parietal-magnetometer.png (PNG copy)> <./pics/adults_Left-parietal-gradiome
 ter.png (PNG copy)> <./pics/adults_Right-parietal-gradiometer.png (PNG copy)> <
 ./pics/adults_Left-parietal_mag.png> <./pics/adults_Right-parietal_mag.png> <./
 pics/adults_Left-parietal_grad.png> <./pics/adults_Right-parietal_grad.png>]
-<pics/signed-adults-PAC-lh.png, id=299, 578.16pt x 433.62pt>
+<pics/signed-adults-PAC-lh.png, id=291, 578.16pt x 433.62pt>
 File: pics/signed-adults-PAC-lh.png Graphic file (type png)
 
 <use pics/signed-adults-PAC-lh.png>
 Package pdftex.def Info: pics/signed-adults-PAC-lh.png used on input line 213.
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/signed-adults-PAC-rh.png, id=300, 578.16pt x 433.62pt>
+<pics/signed-adults-PAC-rh.png, id=292, 578.16pt x 433.62pt>
 File: pics/signed-adults-PAC-rh.png Graphic file (type png)
 
 <use pics/signed-adults-PAC-rh.png>
 Package pdftex.def Info: pics/signed-adults-PAC-rh.png used on input line 214.
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/signed-adults-aSTS-lh.png, id=301, 578.16pt x 433.62pt>
+<pics/signed-adults-aSTS-lh.png, id=293, 578.16pt x 433.62pt>
 File: pics/signed-adults-aSTS-lh.png Graphic file (type png)
 
 <use pics/signed-adults-aSTS-lh.png>
@@ -2286,7 +2537,7 @@ Package pdftex.def Info: pics/signed-adults-aSTS-lh.png used on input line 215.
 
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/signed-adults-aSTS-rh.png, id=302, 578.16pt x 433.62pt>
+<pics/signed-adults-aSTS-rh.png, id=294, 578.16pt x 433.62pt>
 File: pics/signed-adults-aSTS-rh.png Graphic file (type png)
 
 <use pics/signed-adults-aSTS-rh.png>
@@ -2294,7 +2545,7 @@ Package pdftex.def Info: pics/signed-adults-aSTS-rh.png used on input line 216.
 
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/signed-adults-aSTG-lh.png, id=303, 578.16pt x 433.62pt>
+<pics/signed-adults-aSTG-lh.png, id=295, 578.16pt x 433.62pt>
 File: pics/signed-adults-aSTG-lh.png Graphic file (type png)
 
 <use pics/signed-adults-aSTG-lh.png>
@@ -2302,7 +2553,7 @@ Package pdftex.def Info: pics/signed-adults-aSTG-lh.png used on input line 217.
 
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/signed-adults-aSTG-rh.png, id=304, 578.16pt x 433.62pt>
+<pics/signed-adults-aSTG-rh.png, id=296, 578.16pt x 433.62pt>
 File: pics/signed-adults-aSTG-rh.png Graphic file (type png)
 
 <use pics/signed-adults-aSTG-rh.png>
@@ -2310,7 +2561,7 @@ Package pdftex.def Info: pics/signed-adults-aSTG-rh.png used on input line 218.
 
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/signed-adults-BA45-lh.png, id=305, 578.16pt x 433.62pt>
+<pics/signed-adults-BA45-lh.png, id=297, 578.16pt x 433.62pt>
 File: pics/signed-adults-BA45-lh.png Graphic file (type png)
 
 <use pics/signed-adults-BA45-lh.png>
@@ -2318,7 +2569,7 @@ Package pdftex.def Info: pics/signed-adults-BA45-lh.png used on input line 219.
 
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/signed-adults-BA45-rh.png, id=306, 578.16pt x 433.62pt>
+<pics/signed-adults-BA45-rh.png, id=298, 578.16pt x 433.62pt>
 File: pics/signed-adults-BA45-rh.png Graphic file (type png)
 
 <use pics/signed-adults-BA45-rh.png>
@@ -2329,7 +2580,7 @@ Package pdftex.def Info: pics/signed-adults-BA45-rh.png used on input line 220.
 
 LaTeX Warning: Float too large for page by 31.56667pt on input line 223.
 
-<pics/signed-adults-BA6v-lh.png, id=307, 578.16pt x 433.62pt>
+<pics/signed-adults-BA6v-lh.png, id=299, 578.16pt x 433.62pt>
 File: pics/signed-adults-BA6v-lh.png Graphic file (type png)
 
 <use pics/signed-adults-BA6v-lh.png>
@@ -2337,7 +2588,7 @@ Package pdftex.def Info: pics/signed-adults-BA6v-lh.png used on input line 228.
 
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/signed-adults-BA6v-rh.png, id=308, 578.16pt x 433.62pt>
+<pics/signed-adults-BA6v-rh.png, id=300, 578.16pt x 433.62pt>
 File: pics/signed-adults-BA6v-rh.png Graphic file (type png)
 
 <use pics/signed-adults-BA6v-rh.png>
@@ -2345,7 +2596,7 @@ Package pdftex.def Info: pics/signed-adults-BA6v-rh.png used on input line 229.
 
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/signed-adults-pSTS-lh.png, id=309, 578.16pt x 433.62pt>
+<pics/signed-adults-pSTS-lh.png, id=301, 578.16pt x 433.62pt>
 File: pics/signed-adults-pSTS-lh.png Graphic file (type png)
 
 <use pics/signed-adults-pSTS-lh.png>
@@ -2353,7 +2604,7 @@ Package pdftex.def Info: pics/signed-adults-pSTS-lh.png used on input line 230.
 
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/signed-adults-pSTS-rh.png, id=310, 578.16pt x 433.62pt>
+<pics/signed-adults-pSTS-rh.png, id=302, 578.16pt x 433.62pt>
 File: pics/signed-adults-pSTS-rh.png Graphic file (type png)
 
 <use pics/signed-adults-pSTS-rh.png>
@@ -2361,7 +2612,7 @@ Package pdftex.def Info: pics/signed-adults-pSTS-rh.png used on input line 231.
 
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/signed-adults-pSTG-lh.png, id=311, 578.16pt x 433.62pt>
+<pics/signed-adults-pSTG-lh.png, id=303, 578.16pt x 433.62pt>
 File: pics/signed-adults-pSTG-lh.png Graphic file (type png)
 
 <use pics/signed-adults-pSTG-lh.png>
@@ -2369,7 +2620,7 @@ Package pdftex.def Info: pics/signed-adults-pSTG-lh.png used on input line 232.
 
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/signed-adults-pSTG-rh.png, id=312, 578.16pt x 433.62pt>
+<pics/signed-adults-pSTG-rh.png, id=304, 578.16pt x 433.62pt>
 File: pics/signed-adults-pSTG-rh.png Graphic file (type png)
 
 <use pics/signed-adults-pSTG-rh.png>
@@ -2377,7 +2628,7 @@ Package pdftex.def Info: pics/signed-adults-pSTG-rh.png used on input line 233.
 
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/signed-adults-BA44-lh.png, id=313, 578.16pt x 433.62pt>
+<pics/signed-adults-BA44-lh.png, id=305, 578.16pt x 433.62pt>
 File: pics/signed-adults-BA44-lh.png Graphic file (type png)
 
 <use pics/signed-adults-BA44-lh.png>
@@ -2385,7 +2636,7 @@ Package pdftex.def Info: pics/signed-adults-BA44-lh.png used on input line 234.
 
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/signed-adults-BA44-rh.png, id=314, 578.16pt x 433.62pt>
+<pics/signed-adults-BA44-rh.png, id=306, 578.16pt x 433.62pt>
 File: pics/signed-adults-BA44-rh.png Graphic file (type png)
 
 <use pics/signed-adults-BA44-rh.png>
@@ -2402,7 +2653,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[53
+[51
 
 ]
 
@@ -2411,7 +2662,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[54 <./pics/signed-adults-PAC-lh.png (PNG copy)> <./pics/signed-adults-PAC-rh.p
+[52 <./pics/signed-adults-PAC-lh.png (PNG copy)> <./pics/signed-adults-PAC-rh.p
 ng (PNG copy)> <./pics/signed-adults-aSTS-lh.png (PNG copy)> <./pics/signed-adu
 lts-aSTS-rh.png (PNG copy)> <./pics/signed-adults-aSTG-lh.png (PNG copy)> <./pi
 cs/signed-adults-aSTG-rh.png (PNG copy)> <./pics/signed-adults-BA45-lh.png (PNG
@@ -2422,7 +2673,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[55 <./pics/signed-adults-BA6v-lh.png (PNG copy)> <./pics/signed-adults-BA6v-rh
+[53 <./pics/signed-adults-BA6v-lh.png (PNG copy)> <./pics/signed-adults-BA6v-rh
 .png (PNG copy)> <./pics/signed-adults-pSTS-lh.png (PNG copy)> <./pics/signed-a
 dults-pSTS-rh.png (PNG copy)> <./pics/signed-adults-pSTG-lh.png (PNG copy)> <./
 pics/signed-adults-pSTG-rh.png (PNG copy)> <./pics/signed-adults-BA44-lh.png (P
@@ -2433,7 +2684,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[56
+[54
 
 ]
 
@@ -2442,41 +2693,90 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[57] <pics/TE_results.png, id=331, 2409.0pt x 1806.75pt>
-File: pics/TE_results.png Graphic file (type png)
-
-<use pics/TE_results.png>
-Package pdftex.def Info: pics/TE_results.png used on input line 340.
-(pdftex.def)             Requested size: 398.3386pt x 298.73497pt.
+[55]
+Overfull \hbox (56.09206pt too wide) in paragraph at lines 323--347
+ [] 
+ []
 
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-[58]
-! Undefined control sequence.
-<recently read> \DELTA 
-                       
-l.346 ...00ms, a weak effect ($p = 5.8\%$, $\DELTA
-                                                   TE = 4.0$) appeared on th...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
-! Undefined control sequence.
-<recently read> \DELTA 
-                       
-l.347 ...00ms, a weak effect ($p = 8.0\%$, $\DELTA
-                                                   TE = 3.0$) appeared on th...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+Overfull \hbox (54.36172pt too wide) in paragraph at lines 355--378
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<pics/TEobj/S1.png, id=323, 1244.65pt x 1204.5pt>
+File: pics/TEobj/S1.png Graphic file (type png)
+ <use pics/TEobj/S1.png>
+Package pdftex.def Info: pics/TEobj/S1.png used on input line 387.
+(pdftex.def)             Requested size: 195.1881pt x 188.88269pt.
+
+<pics/TEsubj/S1.png, id=324, 1244.65pt x 1204.5pt>
+File: pics/TEsubj/S1.png Graphic file (type png)
+ <use pics/TEsubj/S1.png>
+Package pdftex.def Info: pics/TEsubj/S1.png used on input line 388.
+(pdftex.def)             Requested size: 195.1881pt x 188.88269pt.
+
+<pics/TEobj/S2.png, id=325, 1244.65pt x 1204.5pt>
+File: pics/TEobj/S2.png Graphic file (type png)
+ <use pics/TEobj/S2.png>
+Package pdftex.def Info: pics/TEobj/S2.png used on input line 389.
+(pdftex.def)             Requested size: 195.1881pt x 188.88269pt.
+
+<pics/TEsubj/S2.png, id=326, 1244.65pt x 1204.5pt>
+File: pics/TEsubj/S2.png Graphic file (type png)
+ <use pics/TEsubj/S2.png>
+Package pdftex.def Info: pics/TEsubj/S2.png used on input line 390.
+(pdftex.def)             Requested size: 195.1881pt x 188.88269pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<pics/TEobj/S3.png, id=327, 1244.65pt x 1204.5pt>
+File: pics/TEobj/S3.png Graphic file (type png)
+ <use pics/TEobj/S3.png>
+Package pdftex.def Info: pics/TEobj/S3.png used on input line 398.
+(pdftex.def)             Requested size: 195.1881pt x 188.88269pt.
+
+<pics/TEsubj/S3.png, id=328, 1244.65pt x 1204.5pt>
+File: pics/TEsubj/S3.png Graphic file (type png)
+ <use pics/TEsubj/S3.png>
+Package pdftex.def Info: pics/TEsubj/S3.png used on input line 399.
+(pdftex.def)             Requested size: 195.1881pt x 188.88269pt.
+
+<pics/TEobj/S4.png, id=329, 1244.65pt x 1204.5pt>
+File: pics/TEobj/S4.png Graphic file (type png)
+ <use pics/TEobj/S4.png>
+Package pdftex.def Info: pics/TEobj/S4.png used on input line 400.
+(pdftex.def)             Requested size: 195.1881pt x 188.88269pt.
+
+<pics/TEsubj/S4.png, id=330, 1244.65pt x 1204.5pt>
+File: pics/TEsubj/S4.png Graphic file (type png)
+ <use pics/TEsubj/S4.png>
+Package pdftex.def Info: pics/TEsubj/S4.png used on input line 401.
+(pdftex.def)             Requested size: 195.1881pt x 188.88269pt.
+
+<pics/TEobj/S5.png, id=331, 1244.65pt x 1204.5pt>
+File: pics/TEobj/S5.png Graphic file (type png)
+ <use pics/TEobj/S5.png>
+Package pdftex.def Info: pics/TEobj/S5.png used on input line 402.
+(pdftex.def)             Requested size: 195.1881pt x 188.88269pt.
+
+<pics/TEsubj/S5.png, id=332, 1244.65pt x 1204.5pt>
+File: pics/TEsubj/S5.png Graphic file (type png)
+ <use pics/TEsubj/S5.png>
+Package pdftex.def Info: pics/TEsubj/S5.png used on input line 403.
+(pdftex.def)             Requested size: 195.1881pt x 188.88269pt.
+
+
+LaTeX Warning: Float too large for page by 43.57141pt on input line 406.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 ) (./chapter/Discussion.tex) (./chapter/Conclusion.tex) (./chapter/Appendix.tex
 
@@ -2485,173 +2785,90 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[59 <./pics/TE_results.png>] [60
+[56]
 
-]
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[57]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[58]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[59 <./pics/TEobj/S1.png> <./pics/TEsubj/S1.png> <./pics/TEobj/S2.png> <./pics/
+TEsubj/S2.png>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[60 <./pics/TEobj/S3.png> <./pics/TEsubj/S3.png> <./pics/TEobj/S4.png> <./pics/
+TEsubj/S4.png> <./pics/TEobj/S5.png> <./pics/TEsubj/S5.png>]
 Appendix A.
-) [61] [62
+) [61
+
+] [62
 
 ]
 
-LaTeX Warning: Citation `AFIFI98' undefined on input line 198.
+! Package biblatex Error: '\bibliographystyle' invalid.
 
-(./dissertation.bbl
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 148.
-
-(/usr/local/texlive/2014basic/texmf-dist/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
-Underfull \hbox (badness 6284) in paragraph at lines 132--153
-[]\T1/ptm/m/n/10.95 Bornkessel, I., Zys-set, S., Friederici, A., Cra-mon, D., &
- Schle-sewsky, M.
- []
+See the biblatex package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.198 \bibliographystyle{apacite}
+                                 
+Use the package option 'style' instead.
+I'm ignoring this command.
 
 
-Underfull \hbox (badness 2012) in paragraph at lines 132--153
-\T1/ptm/m/n/10.95 (2005).  Who did what to whom? the neu-ral ba-sis of ar-gu-me
-nt hi-er-ar-
- []
+LaTeX Warning: Citation 'AFIFI98' undefined on input line 199.
 
 
-Underfull \hbox (badness 1087) in paragraph at lines 132--153
-\T1/ptm/m/n/10.95 chies dur-ing lan-guage com-pre-hen-sion.  \T1/ptm/m/it/10.95
- Neu-roIm-age\T1/ptm/m/n/10.95 , \T1/ptm/m/it/10.95 26\T1/ptm/m/n/10.95 (1).  R
-e-trieved from
- []
-
-
-Underfull \hbox (badness 2050) in paragraph at lines 132--153
-\T1/pcr/m/n/10.95 http://dx.doi.org/10.1016/j.neuroimage.2005.01.032   \T1/ptm/
-m/n/10.95 doi:
- []
-
-
-Underfull \hbox (badness 2050) in paragraph at lines 165--188
-\T1/pcr/m/n/10.95 http://dx.doi.org/10.1016/j.neuroimage.2004.01.001   \T1/ptm/
-m/n/10.95 doi:
- []
-
-
-! LaTeX Error: Command \texteuro unavailable in encoding T1.
+! LaTeX Error: Can be used only in preamble.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.216 ...urnalVolNumPages{Neuron.}{26}{1}{55â€“67}
-                                                  .
+l.206 \bibliography
+                   {bibliography}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \vbox (badness 4531) has occurred while \output is active []
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
 
- [63
+[63
 
 
+] [64
+
+
+] (./dissertation.lof
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 3.
+ [65
 
 ]
-Underfull \hbox (badness 7740) in paragraph at lines 345--361
-[]\T1/ptm/m/n/10.95 Friederici, A. D., & Gier-han, S. M.  (2013).  The lan-guag
-e net-work.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 345--361
-\T1/ptm/m/it/10.95 Cur-rent opin-ion in neu-ro-bi-ol-ogy\T1/ptm/m/n/10.95 , \T1
-/ptm/m/it/10.95 23\T1/ptm/m/n/10.95 (2), 250-254.  Re-trieved from
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 345--361
-\T1/pcr/m/n/10.95 http://dx.doi.org/10.1016/j.conb.2012.10.002   \T1/ptm/m/n/10
-.95 doi:
- []
-
-
-! LaTeX Error: Command \texteuro unavailable in encoding T1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.449 ...mPages{Med. Biol. Eng.}{5}{}{271 â€“ 293}
-                                                  .
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 6592) in paragraph at lines 463--479
-[]\T1/ptm/m/n/10.95 Gierhan, S. M.  (2013).  Con-nec-tions for au-di-tory lan-g
-uage in the hu-
- []
-
-
-Underfull \hbox (badness 6047) in paragraph at lines 463--479
-\T1/ptm/m/n/10.95 man brain.  \T1/ptm/m/it/10.95 Brain and lan-guage\T1/ptm/m/n
-/10.95 , \T1/ptm/m/it/10.95 127\T1/ptm/m/n/10.95 (2), 205-221.  Re-trieved from
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 463--479
-\T1/pcr/m/n/10.95 http://dx.doi.org/10.1016/j.bandl.2012.11.002   \T1/ptm/m/n/1
-0.95 doi:
- []
-
-
-Underfull \hbox (badness 3861) in paragraph at lines 491--513
-[]\T1/ptm/m/n/10.95 Gramfort, A., Luessi, M., Lar-son, E., En-ge-mann, D., Stro
-hmeier, D., Brod-
- []
-
-
-Underfull \hbox (badness 4060) in paragraph at lines 491--513
-\T1/ptm/m/n/10.95 beck, C., ... Hämäläi-nen, M.  (2013a).  MEG and EEG data ana
-l-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 491--513
-\T1/ptm/m/n/10.95 y-sis with MNE-Python.  \T1/ptm/m/it/10.95 Fron-tiers in Neu-
-ro-science\T1/ptm/m/n/10.95 , \T1/ptm/m/it/10.95 7\T1/ptm/m/n/10.95 .  Re-triev
-ed
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 491--513
-\T1/ptm/m/n/10.95 from \T1/pcr/m/n/10.95 http://dx.doi.org/10.3389/fnins.2013.0
-0267   \T1/ptm/m/n/10.95 doi:
- []
-
-
-Underfull \hbox (badness 7344) in paragraph at lines 525--547
-[]\T1/ptm/m/n/10.95 Gramfort, A., Luessi, M., Lar-son, E., En-ge-mann, D. A., S
-trohmeier, D.,
- []
-
-
-Underfull \hbox (badness 4686) in paragraph at lines 525--547
-\T1/ptm/m/n/10.95 Brod-beck, C., ... Hämäläi-nen, M. S.  (2013b).  MNE soft-war
-e for
- []
-
-
-Underfull \hbox (badness 6477) in paragraph at lines 525--547
-\T1/ptm/m/n/10.95 pro-cess-ing MEG and EEG data.  \T1/ptm/m/it/10.95 Neu-roIm-a
-ge\T1/ptm/m/n/10.95 , \T1/ptm/m/it/10.95 86\T1/ptm/m/n/10.95 .  Re-trieved from
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 525--547
-\T1/pcr/m/n/10.95 http://dx.doi.org/doi:10.1016/j.neuroimage.2013.10.027
- []
-
-
-Underfull \vbox (badness 3815) has occurred while \output is active []
+Underfull \vbox (badness 1571) has occurred while \output is active []
 
 
 
@@ -2660,221 +2877,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[64]
-Underfull \hbox (badness 10000) in paragraph at lines 728--749
-[]\T1/ptm/m/n/10.95 Hillebrand, A., & Barnes, G.  (2002).  A quan-ti-ta-tive as
--sess-ment of
- []
+[66])
+\tf@lof=\write5
+\openout5 = `dissertation.lof'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 728--749
-\T1/ptm/m/n/10.95 the sen-si-tiv-ity of whole-head {MEG} to ac-tiv-ity in the a
-dult hu-
- []
-
-
-Underfull \hbox (badness 3271) in paragraph at lines 728--749
-\T1/ptm/m/n/10.95 man cor-tex.  \T1/ptm/m/it/10.95 Neu-roIm-age\T1/ptm/m/n/10.9
-5 , \T1/ptm/m/it/10.95 16\T1/ptm/m/n/10.95 (3, Part A), 638 - 650.  Re-trieved 
-from
- []
-
-
-Overfull \hbox (62.50058pt too wide) in paragraph at lines 728--749
-\T1/pcr/m/n/10.95 http://www.sciencedirect.com/science/article/pii/S10538119029
-1102X
- []
-
-! Misplaced alignment tab character &.
-l.821 \BCBT {}\ \BBA {} &
-                         ~Bandettini, P\BPBI A.%
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-
-Underfull \hbox (badness 1152) in paragraph at lines 883--901
-[]\T1/ptm/m/n/10.95 Maris, E., & Oost-en-veld, R.  (2007).  Non-para-met-ric st
-a-tis-ti-cal test-ing of EEG-
- []
-
-
-Underfull \hbox (badness 4647) in paragraph at lines 883--901
-\T1/ptm/m/n/10.95 and MEG-data.  \T1/ptm/m/it/10.95 Jour-nal of Neu-ro-science 
-Meth-ods\T1/ptm/m/n/10.95 , \T1/ptm/m/it/10.95 164\T1/ptm/m/n/10.95 (1).  Re-tr
-ieved
- []
-
-
-Underfull \hbox (badness 4467) in paragraph at lines 916--937
-\T1/ptm/m/n/10.95 nam-i-cal model for gen-er-at-ing syn-thetic elec-tro-car-dio
--gram sig-nals.  \T1/ptm/m/it/10.95 IEEE
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 916--937
-\T1/ptm/m/it/10.95 Trans-ac-tions on Biomed-i-cal En-gi-neer-ing\T1/ptm/m/n/10.
-95 , \T1/ptm/m/it/10.95 50\T1/ptm/m/n/10.95 (3), 289-294.  Re-trieved
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 916--937
-\T1/ptm/m/n/10.95 from \T1/pcr/m/n/10.95 http://dx.doi.org/10.1109/TBME.2003.80
-8805   \T1/ptm/m/n/10.95 doi:
- []
-
-
-Underfull \vbox (badness 2865) has occurred while \output is active []
-
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[65]
-Underfull \hbox (badness 10000) in paragraph at lines 1009--1027
-[]\T1/ptm/m/n/10.95 Mugler, J. P., & Brooke-man, J. R.  (1991).  Rapid three-di
-mensional
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1009--1027
-\T1/ptm/m/n/10.95 t1-weighted MR imag-ing with the MP-RAGE se-quence.  \T1/ptm/
-m/it/10.95 Jour-nal
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1009--1027
-\T1/ptm/m/it/10.95 of Mag-netic Res-o-nance Imag-ing\T1/ptm/m/n/10.95 , \T1/ptm
-/m/it/10.95 1\T1/ptm/m/n/10.95 (5), 561-567.  Re-trieved from
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1009--1027
-\T1/pcr/m/n/10.95 http://dx.doi.org/10.1002/jmri.1880010509   \T1/ptm/m/n/10.95
- doi:
- []
-
-
-! LaTeX Error: Command \texteuro unavailable in encoding T1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1114   medicine}{41}{12}{1110â€“1117}
-                                       .
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Command \texteuro unavailable in encoding T1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1268 ...tion of the fiber pathways of the brain}
-                                                  .{\BBCQ}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Command \texteuro unavailable in encoding T1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1351   in brain research}\ (\BPG~377â€
-                                        “386).
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \vbox (badness 1735) has occurred while \output is active []
-
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[66]
-
-! LaTeX Error: Command \texteuro unavailable in encoding T1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1473 ...olNumPages{NeuroImage}{9}{}{330 â€“ 336}
-                                                  .
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Command \texteuro unavailable in encoding T1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1537 ...dicine and Biology}{49}{10}{2117â€“2128}
-                                                  .
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Command \texteuro unavailable in encoding T1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1595 ...h int.conf.of biomagnetism}\ (\BPG~158â€
-                                                  “207).
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 1881) in paragraph at lines 1635--1654
-[]\T1/ptm/m/n/10.95 Wollstadt, P., M, M., & Vi-cente, R.  (2014).  Ef-fi-cient 
-trans-fer en-tropy anal-
- []
-
-
-Underfull \hbox (badness 3977) in paragraph at lines 1635--1654
-\T1/ptm/m/n/10.95 y-sis of non-stationary neu-ral time se-ries.  \T1/ptm/m/it/1
-0.95 Plos One\T1/ptm/m/n/10.95 , \T1/ptm/m/it/10.95 9\T1/ptm/m/n/10.95 (7).  Re
--trieved
- []
-
-
-Underfull \hbox (badness 1515) in paragraph at lines 1635--1654
-\T1/ptm/m/n/10.95 from \T1/pcr/m/n/10.95 http://dx.doi.org/10.1371/journal.pone
-.0102833   \T1/ptm/m/n/10.95 doi:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1668--1687
-\T1/ptm/m/n/10.95 from \T1/pcr/m/n/10.95 http://dx.doi.org/10.1016/j.neuroimage
-.2009.06.039
- []
-
-)
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -2884,670 +2891,25 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [67] [68
 
 
-] (./dissertation.lof
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 2.
+] (./dissertation.lot)
+\tf@lot=\write6
+\openout6 = `dissertation.lot'.
 
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...eta-study \def \BCA {########}{1}2##
-                                                  ######3{\BCA {########1}{#...
-l.3 ... ){)}\let \reserved@d =<\def {\@@par }}}{6}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
+ [69
 
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...a-study \def \BCA {########}{1}2####
-                                                  ####3{\BCA {########1}{###...
-l.3 ... ){)}\let \reserved@d =<\def {\@@par }}}{6}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
+] [70
 
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...study \def \BCA {########}{1}2######
-                                                  ##3{\BCA {########1}{#####...
-l.3 ... ){)}\let \reserved@d =<\def {\@@par }}}{6}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
 
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...udy \def \BCA {########}{1}2########
-                                                  3{\BCA {########1}{#######...
-l.3 ... ){)}\let \reserved@d =<\def {\@@par }}}{6}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-\BCA ->##
-         ##
-l.3 ... ){)}\let \reserved@d =<\def {\@@par }}}{6}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-\BCA ->####
-           
-l.3 ... ){)}\let \reserved@d =<\def {\@@par }}}{6}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...BCA {########}{1}2########3{\BCA {##
-                                                  ######1}{########2}}\def \...
-l.3 ... ){)}\let \reserved@d =<\def {\@@par }}}{6}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...A {########}{1}2########3{\BCA {####
-                                                  ####1}{########2}}\def \BC...
-l.3 ... ){)}\let \reserved@d =<\def {\@@par }}}{6}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...{########}{1}2########3{\BCA {######
-                                                  ##1}{########2}}\def \BCA ...
-l.3 ... ){)}\let \reserved@d =<\def {\@@par }}}{6}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...#######}{1}2########3{\BCA {########
-                                                  1}{########2}}\def \BCA {#...
-l.3 ... ){)}\let \reserved@d =<\def {\@@par }}}{6}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...##}{1}2########3{\BCA {########1}{##
-                                                  ######2}}\def \BCA {######...
-l.3 ... ){)}\let \reserved@d =<\def {\@@par }}}{6}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...}{1}2########3{\BCA {########1}{####
-                                                  ####2}}\def \BCA {########...
-l.3 ... ){)}\let \reserved@d =<\def {\@@par }}}{6}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...1}2########3{\BCA {########1}{######
-                                                  ##2}}\def \BCA {########}{...
-l.3 ... ){)}\let \reserved@d =<\def {\@@par }}}{6}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...2########3{\BCA {########1}{########
-                                                  2}}\def \BCA {########}{1}...
-l.3 ... ){)}\let \reserved@d =<\def {\@@par }}}{6}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...#######2}}\def \BCA {########}{1}2##
-                                                  ######3{\BCA {########1}{#...
-l.3 ... ){)}\let \reserved@d =<\def {\@@par }}}{6}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...#####2}}\def \BCA {########}{1}2####
-                                                  ####3{\BCA {########1}{###...
-l.3 ... ){)}\let \reserved@d =<\def {\@@par }}}{6}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...###2}}\def \BCA {########}{1}2######
-                                                  ##3{\BCA {########1}{#####...
-l.3 ... ){)}\let \reserved@d =<\def {\@@par }}}{6}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...#2}}\def \BCA {########}{1}2########
-                                                  3{\BCA {########1}{#######...
-l.3 ... ){)}\let \reserved@d =<\def {\@@par }}}{6}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-\BCA ->##
-         ##
-l.3 ... ){)}\let \reserved@d =<\def {\@@par }}}{6}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-\BCA ->####
-           
-l.3 ... ){)}\let \reserved@d =<\def {\@@par }}}{6}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...BCA {########}{1}2########3{\BCA {##
-                                                  ######1}{########2}}\def (...
-l.3 ... ){)}\let \reserved@d =<\def {\@@par }}}{6}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...A {########}{1}2########3{\BCA {####
-                                                  ####1}{########2}}\def ({(...
-l.3 ... ){)}\let \reserved@d =<\def {\@@par }}}{6}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...{########}{1}2########3{\BCA {######
-                                                  ##1}{########2}}\def ({(}\...
-l.3 ... ){)}\let \reserved@d =<\def {\@@par }}}{6}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...#######}{1}2########3{\BCA {########
-                                                  1}{########2}}\def ({(}\de...
-l.3 ... ){)}\let \reserved@d =<\def {\@@par }}}{6}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...##}{1}2########3{\BCA {########1}{##
-                                                  ######2}}\def ({(}\def ){)...
-l.3 ... ){)}\let \reserved@d =<\def {\@@par }}}{6}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...}{1}2########3{\BCA {########1}{####
-                                                  ####2}}\def ({(}\def ){)}\...
-l.3 ... ){)}\let \reserved@d =<\def {\@@par }}}{6}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...1}2########3{\BCA {########1}{######
-                                                  ##2}}\def ({(}\def ){)}\le...
-l.3 ... ){)}\let \reserved@d =<\def {\@@par }}}{6}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...2########3{\BCA {########1}{########
-                                                  2}}\def ({(}\def ){)}\let ...
-l.3 ... ){)}\let \reserved@d =<\def {\@@par }}}{6}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! Missing control sequence inserted.
-<inserted text> 
-                \inaccessible 
-l.3 ... ){)}\let \reserved@d =<\def {\@@par }}}{6}
-                                                  
-Please don't say `\def cs{...}', say `\def\cs{...}'.
-I've inserted an inaccessible control sequence so that your
-definition will be completed without mixing me up too badly.
-You can recover graciously from this error, if you're
-careful; see exercise 27.2 in The TeXbook.
-
-! Missing control sequence inserted.
-<inserted text> 
-                \inaccessible 
-l.3 ... ){)}\let \reserved@d =<\def {\@@par }}}{6}
-                                                  
-Please don't say `\def cs{...}', say `\def\cs{...}'.
-I've inserted an inaccessible control sequence so that your
-definition will be completed without mixing me up too badly.
-You can recover graciously from this error, if you're
-careful; see exercise 27.2 in The TeXbook.
-
-! Missing control sequence inserted.
-<inserted text> 
-                \inaccessible 
-l.3 ... ){)}\let \reserved@d =<\def {\@@par }}}{6}
-                                                  
-Please don't say `\def cs{...}', say `\def\cs{...}'.
-I've inserted an inaccessible control sequence so that your
-definition will be completed without mixing me up too badly.
-You can recover graciously from this error, if you're
-careful; see exercise 27.2 in The TeXbook.
-
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...functions \def \BCA {########}{1}2##
-                                                  ######3{\BCA {########1}{#...
-l.4 ... ){)}\let \reserved@d =<\def {\@@par }}}{7}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...nctions \def \BCA {########}{1}2####
-                                                  ####3{\BCA {########1}{###...
-l.4 ... ){)}\let \reserved@d =<\def {\@@par }}}{7}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...tions \def \BCA {########}{1}2######
-                                                  ##3{\BCA {########1}{#####...
-l.4 ... ){)}\let \reserved@d =<\def {\@@par }}}{7}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...ons \def \BCA {########}{1}2########
-                                                  3{\BCA {########1}{#######...
-l.4 ... ){)}\let \reserved@d =<\def {\@@par }}}{7}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-\BCA ->##
-         ##
-l.4 ... ){)}\let \reserved@d =<\def {\@@par }}}{7}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-\BCA ->####
-           
-l.4 ... ){)}\let \reserved@d =<\def {\@@par }}}{7}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...BCA {########}{1}2########3{\BCA {##
-                                                  ######1}{########2}}\def \...
-l.4 ... ){)}\let \reserved@d =<\def {\@@par }}}{7}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...A {########}{1}2########3{\BCA {####
-                                                  ####1}{########2}}\def \BC...
-l.4 ... ){)}\let \reserved@d =<\def {\@@par }}}{7}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...{########}{1}2########3{\BCA {######
-                                                  ##1}{########2}}\def \BCA ...
-l.4 ... ){)}\let \reserved@d =<\def {\@@par }}}{7}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...#######}{1}2########3{\BCA {########
-                                                  1}{########2}}\def \BCA {#...
-l.4 ... ){)}\let \reserved@d =<\def {\@@par }}}{7}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...##}{1}2########3{\BCA {########1}{##
-                                                  ######2}}\def \BCA {######...
-l.4 ... ){)}\let \reserved@d =<\def {\@@par }}}{7}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...}{1}2########3{\BCA {########1}{####
-                                                  ####2}}\def \BCA {########...
-l.4 ... ){)}\let \reserved@d =<\def {\@@par }}}{7}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...1}2########3{\BCA {########1}{######
-                                                  ##2}}\def \BCA {########}{...
-l.4 ... ){)}\let \reserved@d =<\def {\@@par }}}{7}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...2########3{\BCA {########1}{########
-                                                  2}}\def \BCA {########}{1}...
-l.4 ... ){)}\let \reserved@d =<\def {\@@par }}}{7}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...#######2}}\def \BCA {########}{1}2##
-                                                  ######3{\BCA {########1}{#...
-l.4 ... ){)}\let \reserved@d =<\def {\@@par }}}{7}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...#####2}}\def \BCA {########}{1}2####
-                                                  ####3{\BCA {########1}{###...
-l.4 ... ){)}\let \reserved@d =<\def {\@@par }}}{7}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...###2}}\def \BCA {########}{1}2######
-                                                  ##3{\BCA {########1}{#####...
-l.4 ... ){)}\let \reserved@d =<\def {\@@par }}}{7}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...#2}}\def \BCA {########}{1}2########
-                                                  3{\BCA {########1}{#######...
-l.4 ... ){)}\let \reserved@d =<\def {\@@par }}}{7}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-\BCA ->##
-         ##
-l.4 ... ){)}\let \reserved@d =<\def {\@@par }}}{7}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-\BCA ->####
-           
-l.4 ... ){)}\let \reserved@d =<\def {\@@par }}}{7}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...BCA {########}{1}2########3{\BCA {##
-                                                  ######1}{########2}}\def (...
-l.4 ... ){)}\let \reserved@d =<\def {\@@par }}}{7}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...A {########}{1}2########3{\BCA {####
-                                                  ####1}{########2}}\def ({(...
-l.4 ... ){)}\let \reserved@d =<\def {\@@par }}}{7}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...{########}{1}2########3{\BCA {######
-                                                  ##1}{########2}}\def ({(}\...
-l.4 ... ){)}\let \reserved@d =<\def {\@@par }}}{7}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...#######}{1}2########3{\BCA {########
-                                                  1}{########2}}\def ({(}\de...
-l.4 ... ){)}\let \reserved@d =<\def {\@@par }}}{7}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...##}{1}2########3{\BCA {########1}{##
-                                                  ######2}}\def ({(}\def ){)...
-l.4 ... ){)}\let \reserved@d =<\def {\@@par }}}{7}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...}{1}2########3{\BCA {########1}{####
-                                                  ####2}}\def ({(}\def ){)}\...
-l.4 ... ){)}\let \reserved@d =<\def {\@@par }}}{7}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...1}2########3{\BCA {########1}{######
-                                                  ##2}}\def ({(}\def ){)}\le...
-l.4 ... ){)}\let \reserved@d =<\def {\@@par }}}{7}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> ...2########3{\BCA {########1}{########
-                                                  2}}\def ({(}\def ){)}\let ...
-l.4 ... ){)}\let \reserved@d =<\def {\@@par }}}{7}
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! Missing control sequence inserted.
-<inserted text> 
-                \inaccessible 
-l.4 ... ){)}\let \reserved@d =<\def {\@@par }}}{7}
-                                                  
-Please don't say `\def cs{...}', say `\def\cs{...}'.
-I've inserted an inaccessible control sequence so that your
-definition will be completed without mixing me up too badly.
-You can recover graciously from this error, if you're
-careful; see exercise 27.2 in The TeXbook.
-
-! Missing control sequence inserted.
-<inserted text> 
-                \inaccessible 
-l.4 ... ){)}\let \reserved@d =<\def {\@@par }}}{7}
-                                                  
-Please don't say `\def cs{...}', say `\def\cs{...}'.
-I've inserted an inaccessible control sequence so that your
-definition will be completed without mixing me up too badly.
-You can recover graciously from this error, if you're
-careful; see exercise 27.2 in The TeXbook.
-
-! Missing control sequence inserted.
-<inserted text> 
-                \inaccessible 
-l.4 ... ){)}\let \reserved@d =<\def {\@@par }}}{7}
-                                                  
-Please don't say `\def cs{...}', say `\def\cs{...}'.
-I've inserted an inaccessible control sequence so that your
-definition will be completed without mixing me up too badly.
-You can recover graciously from this error, if you're
-careful; see exercise 27.2 in The TeXbook.
-
-[69
-
-])
-\tf@lof=\write4
-\openout4 = `dissertation.lof'.
-
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[70] (./dissertation.lot)
-\tf@lot=\write5
-\openout5 = `dissertation.lot'.
-
- [71
-
-
-
-] [72
-
-
-] (./chapter/cv.tex) [73
+] (./chapter/cv.tex) [71
 
 ]
 (./chapter/selbst.tex)
-Overfull \hbox (31.22636pt too wide) in paragraph at lines 7--236
+Overfull \hbox (31.22636pt too wide) in paragraph at lines 7--237
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7--236
+Underfull \hbox (badness 10000) in paragraph at lines 7--237
 
  []
 
@@ -3555,22 +2917,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--236
 Overfull \vbox (20.17003pt too high) has occurred while \output is active []
 
 
-[74] (./dissertation.aux)
+[72] (./dissertation.aux)
 
 LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                dissertation
+(biblatex)                and rerun LaTeX afterwards.
+
+Package logreq Info: Writing requests to 'dissertation.run.xml'.
+\openout1 = `dissertation.run.xml'.
+
  ) 
 Here is how much of TeX's memory you used:
- 14599 strings out of 494522
- 298669 string characters out of 6167205
- 302391 words of memory out of 5000000
- 17491 multiletter control sequences out of 15000+600000
- 90545 words of font info for 127 fonts, out of 8000000 for 9000
+ 19220 strings out of 494522
+ 384696 string characters out of 6167205
+ 750475 words of memory out of 5000000
+ 22070 multiletter control sequences out of 15000+600000
+ 88436 words of font info for 122 fonts, out of 8000000 for 9000
  320 hyphenation exceptions out of 8191
- 38i,12n,48p,10401b,744s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,12n,48p,10401b,1657s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014basic/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/lo
 cal/texlive/2014basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
 r/local/texlive/2014basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
@@ -3578,15 +2948,14 @@ r/local/texlive/2014basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
 fb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 8.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/amsfonts/cm/c
 msy9.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/eurosym/fe
-ymr10.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/urw/courier/ucrr
-8a.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/urw/symbol/usyr.pfb
-></usr/local/texlive/2014basic/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></us
-r/local/texlive/2014basic/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/loc
-al/texlive/2014basic/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on dissertation.pdf (80 pages, 8100126 bytes).
+ymr10.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/urw/symbol/usyr.
+pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><
+/usr/local/texlive/2014basic/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/
+local/texlive/2014basic/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on dissertation.pdf (78 pages, 8247588 bytes).
 PDF statistics:
- 429 PDF objects out of 1000 (max. 8388607)
- 214 compressed objects within 3 object streams
+ 434 PDF objects out of 1000 (max. 8388607)
+ 206 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 441 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 481 words of extra memory for PDF output out of 10000 (max. 10000000)
 
