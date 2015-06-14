@@ -58,7 +58,7 @@ As a reasonable tradeoff between time resolution and data content, I fragmented 
 Next, I needed to choose embedding parameters.
 To understand embedding, it is important to know that the transfer entropy estimation fundamentally relies on the comparison between two probability density functions.
 These mathematical constructs can only be approximated from scalar time series.
-For this purpose, time series from individual trials are combined into a multidimensional state space by TRENTOOL.
+For this purpose, time series from individual trials are combined into a multidimensional state space by Trentool.
 The reduction of this multidimensional space into a probability density function is the process called embedding.
 There are four important embedding parameters: the embedding criterion, the embedding time, the embedding delay range and the embedding dimension range.
 
@@ -85,7 +85,7 @@ This section of data is referred to as embedding time, and won't be included in 
 It is necessary to define the embedding time and TOI with a combination of two variables, \emph{cfg.toi} and \emph{cfg.repPred}.
 repPred denominates the length of the TOI that is actually used for the information transfer calculation.
 With a sampling rate of 1000 samples per second and a desired time window of 200ms, I set it to \emph{cfg.repPred = 200}.
-Due to an implementation quirk in Trentool, selecting a fixed data interval for the signal transfer calculation is not possible\footnote{According to the comment section of \emph{transferentropy.m}: "The span of time needed for embedding is: (max(dim)-1)*max(tau). The prediction time starts after this embedding time. Hence the span of time defined in cfg.toi must be a good deal longer than the embedding time, at least embedding time plus 150 samples or max(cfg.predicttime_u)."
+Due to an implementation quirk in Trentool, selecting a fixed data interval for the signal transfer calculation is not possible\footnote{According to the comment section of \emph{transferentropy.m}: ``The span of time needed for embedding is: (max(dim)-1)*max(tau). The prediction time starts after this embedding time. Hence the span of time defined in cfg.toi must be a good deal longer than the embedding time, at least embedding time plus 150 samples or max(cfg.predicttime\_u).``
 Since tau depends on ACT, which in turn is different for each data set, it is impossible to compute a fixed embedding time for all data sets.}. The Trentool authors expect their users to set a very broad TOI, leaving enough samples to both include the relevant data and the embedding time in all cases.
 This implementation leads to a sliding TOI (fixed length, but with varying onset) for the actual information transfer calculations.
 Since the intention was to explore signal interactions at clearly defined time intervals, the Trentool implementation was too imprecise for my goals.
@@ -99,7 +99,7 @@ This process was repeated for each subject, time window and condition.
 The most common optimal embedding dimension was 14 (minimum: 12).
 
 After the individual parameter optimization, the process was repeated to prepare the datasets for group comparisons.
-Originally, this process was intented to be conducted by the function \emph{TE_groupprepare}.
+Originally, this process was intented to be conducted by the function \emph{TE\_groupprepare}.
 Since this function was designed to run on a single computer (requiring a calculation time of more that 50 hours in this case), I replaced it with an equivalent routine that allowed distributed computing (see \ref{Appendix.A}).
 
 \paragraph{Transfer entropy calculations}
@@ -108,7 +108,7 @@ After embedding, Trentool performed an interaction shift test.
 This procedure (performed with the function \emph{InteractionDelayReconstruction\_calculate}) counteracts bias introduced by noise, especially the common false positive detection of an interaction between two data sets with different signal-to-noise levels.
 The shift test establishes the optimal delay of transfered entropy for each comparison of activity.
 Transfer entropy was computed for a time range of possible interaction delays: 1ms to 50ms in steps of 1ms.
-TRENTOOL then selected the interaction delay with the biggest associated transfer entropy as the most likely representation of the signal delay caused by cognitive processes and anatomic constraints.
+Trentool then selected the interaction delay with the biggest associated transfer entropy as the most likely representation of the signal delay caused by cognitive processes and anatomic constraints.
 To alleviate issues with volume conduction, I supplied the option \emph{cfg.extracond = 'Faes\_method'}.
 Unfortunately, using this method prevents the determination of the precise signal delay.
 Since the signal delay is not relevant to my research goals, this trade-off was trivial to solve.
@@ -129,7 +129,7 @@ The detection threshold was 3ms (\emph{cfg.threshold = 3}) and I used FDR-uncorr
 
 I combined these subject-level results in Matlab to obtain group-level results.
 As suggested by \cite{3.4.binomialtest}, I performed a binomial test (implemented in Matlab with the function \emph{binofit}) to examine whether more significant results (p < 5\%) occur than expected when assuming that the null probability of a significant result is 5\%.
-This probability was corrected for multiple comparisons \cite{3.4.FDR.a} with the Matlab function \emph{fdr_bh} with an alpha of 5\% \cite{3.4.FDR.implementation}.
+This probability was corrected for multiple comparisons \cite{3.4.FDR.a} with the Matlab function \emph{fdr\_bh} with an alpha of 5\% \cite{3.4.FDR.implementation}.
 Furthermore, I estimated the extent of transfer entropy for every functional connection by calculating a  mean across all subjects.
 For calculating the mean transfer entropy, only interactions were considered that passed the surrogate test.
 

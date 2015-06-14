@@ -2307,6 +2307,13 @@
     <bcf:citekey order="68">3.3.clustertest</bcf:citekey>
     <bcf:citekey order="69">3.3.nuintensity</bcf:citekey>
     <bcf:citekey order="70">3.3.clustertest</bcf:citekey>
-    <bcf:citekey order="71">AFIFI98</bcf:citekey>
+    <bcf:citekey order="71">3.4.Trentool</bcf:citekey>
+    <bcf:citekey order="72">3.4.gpuTE</bcf:citekey>
+    <bcf:citekey order="73">1.1.pathways</bcf:citekey>
+    <bcf:citekey order="74">3.3.TrentoolTutorial</bcf:citekey>
+    <bcf:citekey order="75">3.4.binomialtest</bcf:citekey>
+    <bcf:citekey order="76">3.4.FDR.a</bcf:citekey>
+    <bcf:citekey order="77">3.4.FDR.implementation</bcf:citekey>
+    <bcf:citekey order="78">AFIFI98</bcf:citekey>
   </bcf:section>
 </bcf:controlfile>

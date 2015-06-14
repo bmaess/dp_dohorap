@@ -11,6 +11,7 @@ echo "" > "chapter/Methods.tex"
 cat ../"3.1. Participants and Stimuli.tex" >> "chapter/Methods.tex"
 cat ../"3.2. Data acquisition.tex" >> "chapter/Methods.tex"
 cat ../"3.3. Data analysis.tex" >> "chapter/Methods.tex"
+cat ../"3.4. Interaction analysis.tex" >> "chapter/Methods.tex"
 
 # Create the results chapter
 echo "" > "chapter/Results.tex"

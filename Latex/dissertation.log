@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.19)  12 JUN 2015 03:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.19)  14 JUN 2015 04:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1995,18 +1995,58 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [38 <./pics/dh55a-pial-lh.png (PNG copy)> <./pics/dh55a-pial-rh.png (PNG copy)>
  <./pics/dh55a-inflated-lh.png (PNG copy)> <./pics/dh55a-inflated-rh.png (PNG c
-opy)> <./pics/3_3_ROIlegend.png>]) (./chapter/Results.tex
+opy)> <./pics/3_3_ROIlegend.png>]
+
+LaTeX Warning: Citation '3.4.Trentool' on page 39 undefined on input line 395.
+
+
+LaTeX Warning: Citation '3.4.gpuTE' on page 39 undefined on input line 409.
+
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 409.
+
+LaTeX Warning: Citation '1.1.pathways' on page 39 undefined on input line 413.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[39] [40
+[39] <pics/3_4_regions.png, id=183, 1606.0pt x 937.5025pt>
+File: pics/3_4_regions.png Graphic file (type png)
 
-]
-Chapter 4.
+<use pics/3_4_regions.png>
+Package pdftex.def Info: pics/3_4_regions.png used on input line 437.
+(pdftex.def)             Requested size: 298.75394pt x 174.39369pt.
+
+Underfull \vbox (badness 1521) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[40 <./pics/3_4_regions.png>]
+
+LaTeX Warning: Citation '3.3.TrentoolTutorial' on page 41 undefined on input li
+ne 457.
+
+
+LaTeX Warning: Reference `Appendix.A' on page 41 undefined on input line 484.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
 [41]
+
+LaTeX Warning: Reference `Appendix.A' on page 42 undefined on input line 495.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -2014,7 +2054,37 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [42]
-<pics/children_Left-frontal-magnetometer.png, id=192, 578.16pt x 434.1018pt>
+
+LaTeX Warning: Citation '3.4.binomialtest' on page 43 undefined on input line 5
+23.
+
+
+LaTeX Warning: Citation '3.4.FDR.a' on page 43 undefined on input line 524.
+
+
+LaTeX Warning: Citation '3.4.FDR.implementation' on page 43 undefined on input 
+line 524.
+
+) (./chapter/Results.tex
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[43] [44
+
+]
+Chapter 4.
+[45]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[46]
+<pics/children_Left-frontal-magnetometer.png, id=208, 578.16pt x 434.1018pt>
 File: pics/children_Left-frontal-magnetometer.png Graphic file (type png)
 
 <use pics/children_Left-frontal-magnetometer.png>
@@ -2022,7 +2092,7 @@ Package pdftex.def Info: pics/children_Left-frontal-magnetometer.png used on in
 put line 81.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/children_Right-frontal-magnetometer.png, id=193, 578.16pt x 434.1018pt>
+<pics/children_Right-frontal-magnetometer.png, id=209, 578.16pt x 434.1018pt>
 File: pics/children_Right-frontal-magnetometer.png Graphic file (type png)
 
 <use pics/children_Right-frontal-magnetometer.png>
@@ -2030,7 +2100,7 @@ Package pdftex.def Info: pics/children_Right-frontal-magnetometer.png used on i
 nput line 82.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/children_Left-frontal-gradiometer.png, id=194, 578.16pt x 434.1018pt>
+<pics/children_Left-frontal-gradiometer.png, id=210, 578.16pt x 434.1018pt>
 File: pics/children_Left-frontal-gradiometer.png Graphic file (type png)
 
 <use pics/children_Left-frontal-gradiometer.png>
@@ -2038,7 +2108,7 @@ Package pdftex.def Info: pics/children_Left-frontal-gradiometer.png used on inp
 ut line 83.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/children_Right-frontal-gradiometer.png, id=195, 578.16pt x 434.1018pt>
+<pics/children_Right-frontal-gradiometer.png, id=211, 578.16pt x 434.1018pt>
 File: pics/children_Right-frontal-gradiometer.png Graphic file (type png)
 
 <use pics/children_Right-frontal-gradiometer.png>
@@ -2046,14 +2116,14 @@ Package pdftex.def Info: pics/children_Right-frontal-gradiometer.png used on in
 put line 84.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/kids_Left-frontal_mag.png, id=196, 578.16pt x 433.62pt>
+<pics/kids_Left-frontal_mag.png, id=212, 578.16pt x 433.62pt>
 File: pics/kids_Left-frontal_mag.png Graphic file (type png)
 
 <use pics/kids_Left-frontal_mag.png>
 Package pdftex.def Info: pics/kids_Left-frontal_mag.png used on input line 85.
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/kids_Right-frontal_mag.png, id=197, 578.16pt x 433.62pt>
+<pics/kids_Right-frontal_mag.png, id=213, 578.16pt x 433.62pt>
 File: pics/kids_Right-frontal_mag.png Graphic file (type png)
 
 <use pics/kids_Right-frontal_mag.png>
@@ -2061,7 +2131,7 @@ Package pdftex.def Info: pics/kids_Right-frontal_mag.png used on input line 86.
 
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/kids_Left-frontal_grad.png, id=198, 578.16pt x 433.62pt>
+<pics/kids_Left-frontal_grad.png, id=214, 578.16pt x 433.62pt>
 File: pics/kids_Left-frontal_grad.png Graphic file (type png)
 
 <use pics/kids_Left-frontal_grad.png>
@@ -2069,7 +2139,7 @@ Package pdftex.def Info: pics/kids_Left-frontal_grad.png used on input line 87.
 
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/kids_Right-frontal_grad.png, id=199, 578.16pt x 433.62pt>
+<pics/kids_Right-frontal_grad.png, id=215, 578.16pt x 433.62pt>
 File: pics/kids_Right-frontal_grad.png Graphic file (type png)
 
 <use pics/kids_Right-frontal_grad.png>
@@ -2083,7 +2153,7 @@ LaTeX Warning: Float too large for page by 31.89198pt on input line 91.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<pics/children_Left-temporal-magnetometer.png, id=200, 578.16pt x 434.1018pt>
+<pics/children_Left-temporal-magnetometer.png, id=216, 578.16pt x 434.1018pt>
 File: pics/children_Left-temporal-magnetometer.png Graphic file (type png)
 
 <use pics/children_Left-temporal-magnetometer.png>
@@ -2091,7 +2161,7 @@ Package pdftex.def Info: pics/children_Left-temporal-magnetometer.png used on i
 nput line 96.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/children_Right-temporal-magnetometer.png, id=201, 578.16pt x 434.1018pt>
+<pics/children_Right-temporal-magnetometer.png, id=217, 578.16pt x 434.1018pt>
 File: pics/children_Right-temporal-magnetometer.png Graphic file (type png)
 
 <use pics/children_Right-temporal-magnetometer.png>
@@ -2099,7 +2169,7 @@ Package pdftex.def Info: pics/children_Right-temporal-magnetometer.png used on
 input line 97.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/children_Left-temporal-gradiometer.png, id=202, 578.16pt x 434.1018pt>
+<pics/children_Left-temporal-gradiometer.png, id=218, 578.16pt x 434.1018pt>
 File: pics/children_Left-temporal-gradiometer.png Graphic file (type png)
 
 <use pics/children_Left-temporal-gradiometer.png>
@@ -2107,7 +2177,7 @@ Package pdftex.def Info: pics/children_Left-temporal-gradiometer.png used on in
 put line 98.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/children_Right-temporal-gradiometer.png, id=203, 578.16pt x 434.1018pt>
+<pics/children_Right-temporal-gradiometer.png, id=219, 578.16pt x 434.1018pt>
 File: pics/children_Right-temporal-gradiometer.png Graphic file (type png)
 
 <use pics/children_Right-temporal-gradiometer.png>
@@ -2115,7 +2185,7 @@ Package pdftex.def Info: pics/children_Right-temporal-gradiometer.png used on i
 nput line 99.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/kids_Left-temporal_mag.png, id=204, 578.16pt x 433.62pt>
+<pics/kids_Left-temporal_mag.png, id=220, 578.16pt x 433.62pt>
 File: pics/kids_Left-temporal_mag.png Graphic file (type png)
 
 <use pics/kids_Left-temporal_mag.png>
@@ -2123,7 +2193,7 @@ Package pdftex.def Info: pics/kids_Left-temporal_mag.png used on input line 100
 .
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/kids_Right-temporal_mag.png, id=205, 578.16pt x 433.62pt>
+<pics/kids_Right-temporal_mag.png, id=221, 578.16pt x 433.62pt>
 File: pics/kids_Right-temporal_mag.png Graphic file (type png)
 
 <use pics/kids_Right-temporal_mag.png>
@@ -2131,7 +2201,7 @@ Package pdftex.def Info: pics/kids_Right-temporal_mag.png used on input line 10
 1.
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/kids_Left-temporal_grad.png, id=206, 578.16pt x 433.62pt>
+<pics/kids_Left-temporal_grad.png, id=222, 578.16pt x 433.62pt>
 File: pics/kids_Left-temporal_grad.png Graphic file (type png)
 
 <use pics/kids_Left-temporal_grad.png>
@@ -2139,7 +2209,7 @@ Package pdftex.def Info: pics/kids_Left-temporal_grad.png used on input line 10
 2.
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/kids_Right-temporal_grad.png, id=207, 578.16pt x 433.62pt>
+<pics/kids_Right-temporal_grad.png, id=223, 578.16pt x 433.62pt>
 File: pics/kids_Right-temporal_grad.png Graphic file (type png)
 
 <use pics/kids_Right-temporal_grad.png>
@@ -2153,7 +2223,7 @@ LaTeX Warning: Float too large for page by 31.89198pt on input line 106.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<pics/children_Left-parietal-magnetometer.png, id=208, 578.16pt x 434.1018pt>
+<pics/children_Left-parietal-magnetometer.png, id=224, 578.16pt x 434.1018pt>
 File: pics/children_Left-parietal-magnetometer.png Graphic file (type png)
 
 <use pics/children_Left-parietal-magnetometer.png>
@@ -2161,7 +2231,7 @@ Package pdftex.def Info: pics/children_Left-parietal-magnetometer.png used on i
 nput line 111.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/children_Right-parietal-magnetometer.png, id=209, 578.16pt x 434.1018pt>
+<pics/children_Right-parietal-magnetometer.png, id=225, 578.16pt x 434.1018pt>
 File: pics/children_Right-parietal-magnetometer.png Graphic file (type png)
 
 <use pics/children_Right-parietal-magnetometer.png>
@@ -2169,7 +2239,7 @@ Package pdftex.def Info: pics/children_Right-parietal-magnetometer.png used on
 input line 112.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/children_Left-parietal-gradiometer.png, id=210, 578.16pt x 434.1018pt>
+<pics/children_Left-parietal-gradiometer.png, id=226, 578.16pt x 434.1018pt>
 File: pics/children_Left-parietal-gradiometer.png Graphic file (type png)
 
 <use pics/children_Left-parietal-gradiometer.png>
@@ -2177,7 +2247,7 @@ Package pdftex.def Info: pics/children_Left-parietal-gradiometer.png used on in
 put line 113.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/children_Right-parietal-gradiometer.png, id=211, 578.16pt x 434.1018pt>
+<pics/children_Right-parietal-gradiometer.png, id=227, 578.16pt x 434.1018pt>
 File: pics/children_Right-parietal-gradiometer.png Graphic file (type png)
 
 <use pics/children_Right-parietal-gradiometer.png>
@@ -2185,7 +2255,7 @@ Package pdftex.def Info: pics/children_Right-parietal-gradiometer.png used on i
 nput line 114.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/kids_Left-parietal_mag.png, id=212, 578.16pt x 433.62pt>
+<pics/kids_Left-parietal_mag.png, id=228, 578.16pt x 433.62pt>
 File: pics/kids_Left-parietal_mag.png Graphic file (type png)
 
 <use pics/kids_Left-parietal_mag.png>
@@ -2193,7 +2263,7 @@ Package pdftex.def Info: pics/kids_Left-parietal_mag.png used on input line 115
 .
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/kids_Right-parietal_mag.png, id=213, 578.16pt x 433.62pt>
+<pics/kids_Right-parietal_mag.png, id=229, 578.16pt x 433.62pt>
 File: pics/kids_Right-parietal_mag.png Graphic file (type png)
 
 <use pics/kids_Right-parietal_mag.png>
@@ -2201,7 +2271,7 @@ Package pdftex.def Info: pics/kids_Right-parietal_mag.png used on input line 11
 6.
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/kids_Left-parietal_grad.png, id=214, 578.16pt x 433.62pt>
+<pics/kids_Left-parietal_grad.png, id=230, 578.16pt x 433.62pt>
 File: pics/kids_Left-parietal_grad.png Graphic file (type png)
 
 <use pics/kids_Left-parietal_grad.png>
@@ -2209,7 +2279,7 @@ Package pdftex.def Info: pics/kids_Left-parietal_grad.png used on input line 11
 7.
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/kids_Right-parietal_grad.png, id=215, 578.16pt x 433.62pt>
+<pics/kids_Right-parietal_grad.png, id=231, 578.16pt x 433.62pt>
 File: pics/kids_Right-parietal_grad.png Graphic file (type png)
 
 <use pics/kids_Right-parietal_grad.png>
@@ -2229,14 +2299,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[43]
+[47]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[44 <./pics/children_Left-frontal-magnetometer.png (PNG copy)> <./pics/children
+[48 <./pics/children_Left-frontal-magnetometer.png (PNG copy)> <./pics/children
 _Right-frontal-magnetometer.png (PNG copy)> <./pics/children_Left-frontal-gradi
 ometer.png (PNG copy)> <./pics/children_Right-frontal-gradiometer.png (PNG copy
 )> <./pics/kids_Left-frontal_mag.png> <./pics/kids_Right-frontal_mag.png> <./pi
@@ -2247,7 +2317,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[45 <./pics/children_Left-temporal-magnetometer.png (PNG copy)> <./pics/childre
+[49 <./pics/children_Left-temporal-magnetometer.png (PNG copy)> <./pics/childre
 n_Right-temporal-magnetometer.png (PNG copy)> <./pics/children_Left-temporal-gr
 adiometer.png (PNG copy)> <./pics/children_Right-temporal-gradiometer.png (PNG 
 copy)> <./pics/kids_Left-temporal_mag.png> <./pics/kids_Right-temporal_mag.png>
@@ -2258,12 +2328,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[46 <./pics/children_Left-parietal-magnetometer.png (PNG copy)> <./pics/childre
+[50 <./pics/children_Left-parietal-magnetometer.png (PNG copy)> <./pics/childre
 n_Right-parietal-magnetometer.png (PNG copy)> <./pics/children_Left-parietal-gr
 adiometer.png (PNG copy)> <./pics/children_Right-parietal-gradiometer.png (PNG 
 copy)> <./pics/kids_Left-parietal_mag.png> <./pics/kids_Right-parietal_mag.png>
  <./pics/kids_Left-parietal_grad.png> <./pics/kids_Right-parietal_grad.png>]
-<pics/adults_Left-frontal-magnetometer.png, id=242, 578.16pt x 434.1018pt>
+<pics/adults_Left-frontal-magnetometer.png, id=257, 578.16pt x 434.1018pt>
 File: pics/adults_Left-frontal-magnetometer.png Graphic file (type png)
 
 <use pics/adults_Left-frontal-magnetometer.png>
@@ -2271,7 +2341,7 @@ Package pdftex.def Info: pics/adults_Left-frontal-magnetometer.png used on inpu
 t line 133.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/adults_Right-frontal-magnetometer.png, id=243, 578.16pt x 434.1018pt>
+<pics/adults_Right-frontal-magnetometer.png, id=258, 578.16pt x 434.1018pt>
 File: pics/adults_Right-frontal-magnetometer.png Graphic file (type png)
 
 <use pics/adults_Right-frontal-magnetometer.png>
@@ -2279,7 +2349,7 @@ Package pdftex.def Info: pics/adults_Right-frontal-magnetometer.png used on inp
 ut line 134.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/adults_Left-frontal-gradiometer.png, id=244, 578.16pt x 434.1018pt>
+<pics/adults_Left-frontal-gradiometer.png, id=259, 578.16pt x 434.1018pt>
 File: pics/adults_Left-frontal-gradiometer.png Graphic file (type png)
 
 <use pics/adults_Left-frontal-gradiometer.png>
@@ -2287,7 +2357,7 @@ Package pdftex.def Info: pics/adults_Left-frontal-gradiometer.png used on input
  line 135.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/adults_Right-frontal-gradiometer.png, id=245, 578.16pt x 434.1018pt>
+<pics/adults_Right-frontal-gradiometer.png, id=260, 578.16pt x 434.1018pt>
 File: pics/adults_Right-frontal-gradiometer.png Graphic file (type png)
 
 <use pics/adults_Right-frontal-gradiometer.png>
@@ -2295,7 +2365,7 @@ Package pdftex.def Info: pics/adults_Right-frontal-gradiometer.png used on inpu
 t line 136.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/adults_Left-frontal_mag.png, id=246, 578.16pt x 433.62pt>
+<pics/adults_Left-frontal_mag.png, id=261, 578.16pt x 433.62pt>
 File: pics/adults_Left-frontal_mag.png Graphic file (type png)
 
 <use pics/adults_Left-frontal_mag.png>
@@ -2303,7 +2373,7 @@ Package pdftex.def Info: pics/adults_Left-frontal_mag.png used on input line 13
 7.
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/adults_Right-frontal_mag.png, id=247, 578.16pt x 433.62pt>
+<pics/adults_Right-frontal_mag.png, id=262, 578.16pt x 433.62pt>
 File: pics/adults_Right-frontal_mag.png Graphic file (type png)
 
 <use pics/adults_Right-frontal_mag.png>
@@ -2311,7 +2381,7 @@ Package pdftex.def Info: pics/adults_Right-frontal_mag.png used on input line 1
 38.
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/adults_Left-frontal_grad.png, id=248, 578.16pt x 433.62pt>
+<pics/adults_Left-frontal_grad.png, id=263, 578.16pt x 433.62pt>
 File: pics/adults_Left-frontal_grad.png Graphic file (type png)
 
 <use pics/adults_Left-frontal_grad.png>
@@ -2319,7 +2389,7 @@ Package pdftex.def Info: pics/adults_Left-frontal_grad.png used on input line 1
 39.
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/adults_Right-frontal_grad.png, id=249, 578.16pt x 433.62pt>
+<pics/adults_Right-frontal_grad.png, id=264, 578.16pt x 433.62pt>
 File: pics/adults_Right-frontal_grad.png Graphic file (type png)
 
 <use pics/adults_Right-frontal_grad.png>
@@ -2333,7 +2403,7 @@ LaTeX Warning: Float too large for page by 31.89198pt on input line 143.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<pics/adults_Left-temporal-magnetometer.png, id=250, 578.16pt x 434.1018pt>
+<pics/adults_Left-temporal-magnetometer.png, id=265, 578.16pt x 434.1018pt>
 File: pics/adults_Left-temporal-magnetometer.png Graphic file (type png)
 
 <use pics/adults_Left-temporal-magnetometer.png>
@@ -2341,7 +2411,7 @@ Package pdftex.def Info: pics/adults_Left-temporal-magnetometer.png used on inp
 ut line 148.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/adults_Right-temporal-magnetometer.png, id=251, 578.16pt x 434.1018pt>
+<pics/adults_Right-temporal-magnetometer.png, id=266, 578.16pt x 434.1018pt>
 File: pics/adults_Right-temporal-magnetometer.png Graphic file (type png)
 
 <use pics/adults_Right-temporal-magnetometer.png>
@@ -2349,7 +2419,7 @@ Package pdftex.def Info: pics/adults_Right-temporal-magnetometer.png used on in
 put line 149.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/adults_Left-temporal-gradiometer.png, id=252, 578.16pt x 434.1018pt>
+<pics/adults_Left-temporal-gradiometer.png, id=267, 578.16pt x 434.1018pt>
 File: pics/adults_Left-temporal-gradiometer.png Graphic file (type png)
 
 <use pics/adults_Left-temporal-gradiometer.png>
@@ -2357,7 +2427,7 @@ Package pdftex.def Info: pics/adults_Left-temporal-gradiometer.png used on inpu
 t line 150.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/adults_Right-temporal-gradiometer.png, id=253, 578.16pt x 434.1018pt>
+<pics/adults_Right-temporal-gradiometer.png, id=268, 578.16pt x 434.1018pt>
 File: pics/adults_Right-temporal-gradiometer.png Graphic file (type png)
 
 <use pics/adults_Right-temporal-gradiometer.png>
@@ -2365,7 +2435,7 @@ Package pdftex.def Info: pics/adults_Right-temporal-gradiometer.png used on inp
 ut line 151.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/adults_Left-temporal_mag.png, id=254, 578.16pt x 433.62pt>
+<pics/adults_Left-temporal_mag.png, id=269, 578.16pt x 433.62pt>
 File: pics/adults_Left-temporal_mag.png Graphic file (type png)
 
 <use pics/adults_Left-temporal_mag.png>
@@ -2373,7 +2443,7 @@ Package pdftex.def Info: pics/adults_Left-temporal_mag.png used on input line 1
 52.
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/adults_Right-temporal_mag.png, id=255, 578.16pt x 433.62pt>
+<pics/adults_Right-temporal_mag.png, id=270, 578.16pt x 433.62pt>
 File: pics/adults_Right-temporal_mag.png Graphic file (type png)
 
 <use pics/adults_Right-temporal_mag.png>
@@ -2381,7 +2451,7 @@ Package pdftex.def Info: pics/adults_Right-temporal_mag.png used on input line
 153.
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/adults_Left-temporal_grad.png, id=256, 578.16pt x 433.62pt>
+<pics/adults_Left-temporal_grad.png, id=271, 578.16pt x 433.62pt>
 File: pics/adults_Left-temporal_grad.png Graphic file (type png)
 
 <use pics/adults_Left-temporal_grad.png>
@@ -2389,7 +2459,7 @@ Package pdftex.def Info: pics/adults_Left-temporal_grad.png used on input line
 154.
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/adults_Right-temporal_grad.png, id=257, 578.16pt x 433.62pt>
+<pics/adults_Right-temporal_grad.png, id=272, 578.16pt x 433.62pt>
 File: pics/adults_Right-temporal_grad.png Graphic file (type png)
 
 <use pics/adults_Right-temporal_grad.png>
@@ -2403,7 +2473,7 @@ LaTeX Warning: Float too large for page by 31.89198pt on input line 158.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<pics/adults_Left-parietal-magnetometer.png, id=258, 578.16pt x 434.1018pt>
+<pics/adults_Left-parietal-magnetometer.png, id=273, 578.16pt x 434.1018pt>
 File: pics/adults_Left-parietal-magnetometer.png Graphic file (type png)
 
 <use pics/adults_Left-parietal-magnetometer.png>
@@ -2411,7 +2481,7 @@ Package pdftex.def Info: pics/adults_Left-parietal-magnetometer.png used on inp
 ut line 163.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/adults_Right-parietal-magnetometer.png, id=259, 578.16pt x 434.1018pt>
+<pics/adults_Right-parietal-magnetometer.png, id=274, 578.16pt x 434.1018pt>
 File: pics/adults_Right-parietal-magnetometer.png Graphic file (type png)
 
 <use pics/adults_Right-parietal-magnetometer.png>
@@ -2419,7 +2489,7 @@ Package pdftex.def Info: pics/adults_Right-parietal-magnetometer.png used on in
 put line 164.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/adults_Left-parietal-gradiometer.png, id=260, 578.16pt x 434.1018pt>
+<pics/adults_Left-parietal-gradiometer.png, id=275, 578.16pt x 434.1018pt>
 File: pics/adults_Left-parietal-gradiometer.png Graphic file (type png)
 
 <use pics/adults_Left-parietal-gradiometer.png>
@@ -2427,7 +2497,7 @@ Package pdftex.def Info: pics/adults_Left-parietal-gradiometer.png used on inpu
 t line 165.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/adults_Right-parietal-gradiometer.png, id=261, 578.16pt x 434.1018pt>
+<pics/adults_Right-parietal-gradiometer.png, id=276, 578.16pt x 434.1018pt>
 File: pics/adults_Right-parietal-gradiometer.png Graphic file (type png)
 
 <use pics/adults_Right-parietal-gradiometer.png>
@@ -2435,7 +2505,7 @@ Package pdftex.def Info: pics/adults_Right-parietal-gradiometer.png used on inp
 ut line 166.
 (pdftex.def)             Requested size: 195.1881pt x 146.55272pt.
 
-<pics/adults_Left-parietal_mag.png, id=262, 578.16pt x 433.62pt>
+<pics/adults_Left-parietal_mag.png, id=277, 578.16pt x 433.62pt>
 File: pics/adults_Left-parietal_mag.png Graphic file (type png)
 
 <use pics/adults_Left-parietal_mag.png>
@@ -2443,7 +2513,7 @@ Package pdftex.def Info: pics/adults_Left-parietal_mag.png used on input line 1
 67.
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/adults_Right-parietal_mag.png, id=263, 578.16pt x 433.62pt>
+<pics/adults_Right-parietal_mag.png, id=278, 578.16pt x 433.62pt>
 File: pics/adults_Right-parietal_mag.png Graphic file (type png)
 
 <use pics/adults_Right-parietal_mag.png>
@@ -2451,7 +2521,7 @@ Package pdftex.def Info: pics/adults_Right-parietal_mag.png used on input line
 168.
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/adults_Left-parietal_grad.png, id=264, 578.16pt x 433.62pt>
+<pics/adults_Left-parietal_grad.png, id=279, 578.16pt x 433.62pt>
 File: pics/adults_Left-parietal_grad.png Graphic file (type png)
 
 <use pics/adults_Left-parietal_grad.png>
@@ -2459,7 +2529,7 @@ Package pdftex.def Info: pics/adults_Left-parietal_grad.png used on input line
 169.
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/adults_Right-parietal_grad.png, id=265, 578.16pt x 433.62pt>
+<pics/adults_Right-parietal_grad.png, id=280, 578.16pt x 433.62pt>
 File: pics/adults_Right-parietal_grad.png Graphic file (type png)
 
 <use pics/adults_Right-parietal_grad.png>
@@ -2479,7 +2549,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[47
+[51
 
 ]
 
@@ -2488,7 +2558,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[48 <./pics/adults_Left-frontal-magnetometer.png (PNG copy)> <./pics/adults_Rig
+[52 <./pics/adults_Left-frontal-magnetometer.png (PNG copy)> <./pics/adults_Rig
 ht-frontal-magnetometer.png (PNG copy)> <./pics/adults_Left-frontal-gradiometer
 .png (PNG copy)> <./pics/adults_Right-frontal-gradiometer.png (PNG copy)> <./pi
 cs/adults_Left-frontal_mag.png> <./pics/adults_Right-frontal_mag.png> <./pics/a
@@ -2499,7 +2569,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[49 <./pics/adults_Left-temporal-magnetometer.png (PNG copy)> <./pics/adults_Ri
+[53 <./pics/adults_Left-temporal-magnetometer.png (PNG copy)> <./pics/adults_Ri
 ght-temporal-magnetometer.png (PNG copy)> <./pics/adults_Left-temporal-gradiome
 ter.png (PNG copy)> <./pics/adults_Right-temporal-gradiometer.png (PNG copy)> <
 ./pics/adults_Left-temporal_mag.png> <./pics/adults_Right-temporal_mag.png> <./
@@ -2510,26 +2580,26 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[50 <./pics/adults_Left-parietal-magnetometer.png (PNG copy)> <./pics/adults_Ri
+[54 <./pics/adults_Left-parietal-magnetometer.png (PNG copy)> <./pics/adults_Ri
 ght-parietal-magnetometer.png (PNG copy)> <./pics/adults_Left-parietal-gradiome
 ter.png (PNG copy)> <./pics/adults_Right-parietal-gradiometer.png (PNG copy)> <
 ./pics/adults_Left-parietal_mag.png> <./pics/adults_Right-parietal_mag.png> <./
 pics/adults_Left-parietal_grad.png> <./pics/adults_Right-parietal_grad.png>]
-<pics/signed-adults-PAC-lh.png, id=291, 578.16pt x 433.62pt>
+<pics/signed-adults-PAC-lh.png, id=305, 578.16pt x 433.62pt>
 File: pics/signed-adults-PAC-lh.png Graphic file (type png)
 
 <use pics/signed-adults-PAC-lh.png>
 Package pdftex.def Info: pics/signed-adults-PAC-lh.png used on input line 213.
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/signed-adults-PAC-rh.png, id=292, 578.16pt x 433.62pt>
+<pics/signed-adults-PAC-rh.png, id=306, 578.16pt x 433.62pt>
 File: pics/signed-adults-PAC-rh.png Graphic file (type png)
 
 <use pics/signed-adults-PAC-rh.png>
 Package pdftex.def Info: pics/signed-adults-PAC-rh.png used on input line 214.
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/signed-adults-aSTS-lh.png, id=293, 578.16pt x 433.62pt>
+<pics/signed-adults-aSTS-lh.png, id=307, 578.16pt x 433.62pt>
 File: pics/signed-adults-aSTS-lh.png Graphic file (type png)
 
 <use pics/signed-adults-aSTS-lh.png>
@@ -2537,7 +2607,7 @@ Package pdftex.def Info: pics/signed-adults-aSTS-lh.png used on input line 215.
 
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/signed-adults-aSTS-rh.png, id=294, 578.16pt x 433.62pt>
+<pics/signed-adults-aSTS-rh.png, id=308, 578.16pt x 433.62pt>
 File: pics/signed-adults-aSTS-rh.png Graphic file (type png)
 
 <use pics/signed-adults-aSTS-rh.png>
@@ -2545,7 +2615,7 @@ Package pdftex.def Info: pics/signed-adults-aSTS-rh.png used on input line 216.
 
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/signed-adults-aSTG-lh.png, id=295, 578.16pt x 433.62pt>
+<pics/signed-adults-aSTG-lh.png, id=309, 578.16pt x 433.62pt>
 File: pics/signed-adults-aSTG-lh.png Graphic file (type png)
 
 <use pics/signed-adults-aSTG-lh.png>
@@ -2553,7 +2623,7 @@ Package pdftex.def Info: pics/signed-adults-aSTG-lh.png used on input line 217.
 
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/signed-adults-aSTG-rh.png, id=296, 578.16pt x 433.62pt>
+<pics/signed-adults-aSTG-rh.png, id=310, 578.16pt x 433.62pt>
 File: pics/signed-adults-aSTG-rh.png Graphic file (type png)
 
 <use pics/signed-adults-aSTG-rh.png>
@@ -2561,7 +2631,7 @@ Package pdftex.def Info: pics/signed-adults-aSTG-rh.png used on input line 218.
 
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/signed-adults-BA45-lh.png, id=297, 578.16pt x 433.62pt>
+<pics/signed-adults-BA45-lh.png, id=311, 578.16pt x 433.62pt>
 File: pics/signed-adults-BA45-lh.png Graphic file (type png)
 
 <use pics/signed-adults-BA45-lh.png>
@@ -2569,7 +2639,7 @@ Package pdftex.def Info: pics/signed-adults-BA45-lh.png used on input line 219.
 
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/signed-adults-BA45-rh.png, id=298, 578.16pt x 433.62pt>
+<pics/signed-adults-BA45-rh.png, id=312, 578.16pt x 433.62pt>
 File: pics/signed-adults-BA45-rh.png Graphic file (type png)
 
 <use pics/signed-adults-BA45-rh.png>
@@ -2580,7 +2650,7 @@ Package pdftex.def Info: pics/signed-adults-BA45-rh.png used on input line 220.
 
 LaTeX Warning: Float too large for page by 31.56667pt on input line 223.
 
-<pics/signed-adults-BA6v-lh.png, id=299, 578.16pt x 433.62pt>
+<pics/signed-adults-BA6v-lh.png, id=313, 578.16pt x 433.62pt>
 File: pics/signed-adults-BA6v-lh.png Graphic file (type png)
 
 <use pics/signed-adults-BA6v-lh.png>
@@ -2588,7 +2658,7 @@ Package pdftex.def Info: pics/signed-adults-BA6v-lh.png used on input line 228.
 
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/signed-adults-BA6v-rh.png, id=300, 578.16pt x 433.62pt>
+<pics/signed-adults-BA6v-rh.png, id=314, 578.16pt x 433.62pt>
 File: pics/signed-adults-BA6v-rh.png Graphic file (type png)
 
 <use pics/signed-adults-BA6v-rh.png>
@@ -2596,7 +2666,7 @@ Package pdftex.def Info: pics/signed-adults-BA6v-rh.png used on input line 229.
 
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/signed-adults-pSTS-lh.png, id=301, 578.16pt x 433.62pt>
+<pics/signed-adults-pSTS-lh.png, id=315, 578.16pt x 433.62pt>
 File: pics/signed-adults-pSTS-lh.png Graphic file (type png)
 
 <use pics/signed-adults-pSTS-lh.png>
@@ -2604,7 +2674,7 @@ Package pdftex.def Info: pics/signed-adults-pSTS-lh.png used on input line 230.
 
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/signed-adults-pSTS-rh.png, id=302, 578.16pt x 433.62pt>
+<pics/signed-adults-pSTS-rh.png, id=316, 578.16pt x 433.62pt>
 File: pics/signed-adults-pSTS-rh.png Graphic file (type png)
 
 <use pics/signed-adults-pSTS-rh.png>
@@ -2612,7 +2682,7 @@ Package pdftex.def Info: pics/signed-adults-pSTS-rh.png used on input line 231.
 
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/signed-adults-pSTG-lh.png, id=303, 578.16pt x 433.62pt>
+<pics/signed-adults-pSTG-lh.png, id=317, 578.16pt x 433.62pt>
 File: pics/signed-adults-pSTG-lh.png Graphic file (type png)
 
 <use pics/signed-adults-pSTG-lh.png>
@@ -2620,7 +2690,7 @@ Package pdftex.def Info: pics/signed-adults-pSTG-lh.png used on input line 232.
 
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/signed-adults-pSTG-rh.png, id=304, 578.16pt x 433.62pt>
+<pics/signed-adults-pSTG-rh.png, id=318, 578.16pt x 433.62pt>
 File: pics/signed-adults-pSTG-rh.png Graphic file (type png)
 
 <use pics/signed-adults-pSTG-rh.png>
@@ -2628,7 +2698,7 @@ Package pdftex.def Info: pics/signed-adults-pSTG-rh.png used on input line 233.
 
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/signed-adults-BA44-lh.png, id=305, 578.16pt x 433.62pt>
+<pics/signed-adults-BA44-lh.png, id=319, 578.16pt x 433.62pt>
 File: pics/signed-adults-BA44-lh.png Graphic file (type png)
 
 <use pics/signed-adults-BA44-lh.png>
@@ -2636,7 +2706,7 @@ Package pdftex.def Info: pics/signed-adults-BA44-lh.png used on input line 234.
 
 (pdftex.def)             Requested size: 195.1881pt x 146.39006pt.
 
-<pics/signed-adults-BA44-rh.png, id=306, 578.16pt x 433.62pt>
+<pics/signed-adults-BA44-rh.png, id=320, 578.16pt x 433.62pt>
 File: pics/signed-adults-BA44-rh.png Graphic file (type png)
 
 <use pics/signed-adults-BA44-rh.png>
@@ -2653,7 +2723,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[51
+[55
 
 ]
 
@@ -2662,7 +2732,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[52 <./pics/signed-adults-PAC-lh.png (PNG copy)> <./pics/signed-adults-PAC-rh.p
+[56 <./pics/signed-adults-PAC-lh.png (PNG copy)> <./pics/signed-adults-PAC-rh.p
 ng (PNG copy)> <./pics/signed-adults-aSTS-lh.png (PNG copy)> <./pics/signed-adu
 lts-aSTS-rh.png (PNG copy)> <./pics/signed-adults-aSTG-lh.png (PNG copy)> <./pi
 cs/signed-adults-aSTG-rh.png (PNG copy)> <./pics/signed-adults-BA45-lh.png (PNG
@@ -2673,7 +2743,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[53 <./pics/signed-adults-BA6v-lh.png (PNG copy)> <./pics/signed-adults-BA6v-rh
+[57 <./pics/signed-adults-BA6v-lh.png (PNG copy)> <./pics/signed-adults-BA6v-rh
 .png (PNG copy)> <./pics/signed-adults-pSTS-lh.png (PNG copy)> <./pics/signed-a
 dults-pSTS-rh.png (PNG copy)> <./pics/signed-adults-pSTG-lh.png (PNG copy)> <./
 pics/signed-adults-pSTG-rh.png (PNG copy)> <./pics/signed-adults-BA44-lh.png (P
@@ -2684,7 +2754,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[54
+[58
 
 ]
 
@@ -2693,8 +2763,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[55]
-Overfull \hbox (56.09206pt too wide) in paragraph at lines 323--347
+[59]
+Overfull \hbox (38.26573pt too wide) in paragraph at lines 323--347
  [] 
  []
 
@@ -2702,124 +2772,122 @@ Overfull \hbox (56.09206pt too wide) in paragraph at lines 323--347
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (54.36172pt too wide) in paragraph at lines 355--378
+Overfull \hbox (26.98677pt too wide) in paragraph at lines 355--378
  [] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<pics/TEobj/S1.png, id=323, 1244.65pt x 1204.5pt>
-File: pics/TEobj/S1.png Graphic file (type png)
- <use pics/TEobj/S1.png>
-Package pdftex.def Info: pics/TEobj/S1.png used on input line 387.
-(pdftex.def)             Requested size: 195.1881pt x 188.88269pt.
+<pics/TEobj/Slide1.png, id=337, 1606.0pt x 1036.87375pt>
+File: pics/TEobj/Slide1.png Graphic file (type png)
 
-<pics/TEsubj/S1.png, id=324, 1244.65pt x 1204.5pt>
-File: pics/TEsubj/S1.png Graphic file (type png)
- <use pics/TEsubj/S1.png>
-Package pdftex.def Info: pics/TEsubj/S1.png used on input line 388.
-(pdftex.def)             Requested size: 195.1881pt x 188.88269pt.
+<use pics/TEobj/Slide1.png>
+Package pdftex.def Info: pics/TEobj/Slide1.png used on input line 387.
+(pdftex.def)             Requested size: 195.1881pt x 126.01744pt.
 
-<pics/TEobj/S2.png, id=325, 1244.65pt x 1204.5pt>
-File: pics/TEobj/S2.png Graphic file (type png)
- <use pics/TEobj/S2.png>
-Package pdftex.def Info: pics/TEobj/S2.png used on input line 389.
-(pdftex.def)             Requested size: 195.1881pt x 188.88269pt.
+<pics/TEsubj/Slide1.png, id=338, 1606.0pt x 937.5025pt>
+File: pics/TEsubj/Slide1.png Graphic file (type png)
 
-<pics/TEsubj/S2.png, id=326, 1244.65pt x 1204.5pt>
-File: pics/TEsubj/S2.png Graphic file (type png)
- <use pics/TEsubj/S2.png>
-Package pdftex.def Info: pics/TEsubj/S2.png used on input line 390.
-(pdftex.def)             Requested size: 195.1881pt x 188.88269pt.
+<use pics/TEsubj/Slide1.png>
+Package pdftex.def Info: pics/TEsubj/Slide1.png used on input line 388.
+(pdftex.def)             Requested size: 195.1881pt x 113.94026pt.
+
+<pics/TEobj/Slide2.png, id=339, 1606.0pt x 1036.87375pt>
+File: pics/TEobj/Slide2.png Graphic file (type png)
+
+<use pics/TEobj/Slide2.png>
+Package pdftex.def Info: pics/TEobj/Slide2.png used on input line 396.
+(pdftex.def)             Requested size: 195.1881pt x 126.01744pt.
+
+<pics/TEsubj/Slide2.png, id=340, 1606.0pt x 937.5025pt>
+File: pics/TEsubj/Slide2.png Graphic file (type png)
+
+<use pics/TEsubj/Slide2.png>
+Package pdftex.def Info: pics/TEsubj/Slide2.png used on input line 397.
+(pdftex.def)             Requested size: 195.1881pt x 113.94026pt.
+
+<pics/TEobj/Slide3.png, id=341, 1606.0pt x 1036.87375pt>
+File: pics/TEobj/Slide3.png Graphic file (type png)
+
+<use pics/TEobj/Slide3.png>
+Package pdftex.def Info: pics/TEobj/Slide3.png used on input line 398.
+(pdftex.def)             Requested size: 195.1881pt x 126.01744pt.
+
+<pics/TEsubj/Slide3.png, id=342, 1606.0pt x 937.5025pt>
+File: pics/TEsubj/Slide3.png Graphic file (type png)
+
+<use pics/TEsubj/Slide3.png>
+Package pdftex.def Info: pics/TEsubj/Slide3.png used on input line 399.
+(pdftex.def)             Requested size: 195.1881pt x 113.94026pt.
+
+<pics/TEobj/Slide4.png, id=343, 1606.0pt x 1036.87375pt>
+File: pics/TEobj/Slide4.png Graphic file (type png)
+
+<use pics/TEobj/Slide4.png>
+Package pdftex.def Info: pics/TEobj/Slide4.png used on input line 400.
+(pdftex.def)             Requested size: 195.1881pt x 126.01744pt.
+
+<pics/TEsubj/Slide4.png, id=344, 1606.0pt x 937.5025pt>
+File: pics/TEsubj/Slide4.png Graphic file (type png)
+
+<use pics/TEsubj/Slide4.png>
+Package pdftex.def Info: pics/TEsubj/Slide4.png used on input line 401.
+(pdftex.def)             Requested size: 195.1881pt x 113.94026pt.
+
+<pics/TEobj/Slide5.png, id=345, 1606.0pt x 1036.87375pt>
+File: pics/TEobj/Slide5.png Graphic file (type png)
+
+<use pics/TEobj/Slide5.png>
+Package pdftex.def Info: pics/TEobj/Slide5.png used on input line 402.
+(pdftex.def)             Requested size: 195.1881pt x 126.01744pt.
+
+<pics/TEsubj/Slide5.png, id=346, 1606.0pt x 937.5025pt>
+File: pics/TEsubj/Slide5.png Graphic file (type png)
+
+<use pics/TEsubj/Slide5.png>
+Package pdftex.def Info: pics/TEsubj/Slide5.png used on input line 403.
+(pdftex.def)             Requested size: 195.1881pt x 113.94026pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<pics/TEobj/S3.png, id=327, 1244.65pt x 1204.5pt>
-File: pics/TEobj/S3.png Graphic file (type png)
- <use pics/TEobj/S3.png>
-Package pdftex.def Info: pics/TEobj/S3.png used on input line 398.
-(pdftex.def)             Requested size: 195.1881pt x 188.88269pt.
-
-<pics/TEsubj/S3.png, id=328, 1244.65pt x 1204.5pt>
-File: pics/TEsubj/S3.png Graphic file (type png)
- <use pics/TEsubj/S3.png>
-Package pdftex.def Info: pics/TEsubj/S3.png used on input line 399.
-(pdftex.def)             Requested size: 195.1881pt x 188.88269pt.
-
-<pics/TEobj/S4.png, id=329, 1244.65pt x 1204.5pt>
-File: pics/TEobj/S4.png Graphic file (type png)
- <use pics/TEobj/S4.png>
-Package pdftex.def Info: pics/TEobj/S4.png used on input line 400.
-(pdftex.def)             Requested size: 195.1881pt x 188.88269pt.
-
-<pics/TEsubj/S4.png, id=330, 1244.65pt x 1204.5pt>
-File: pics/TEsubj/S4.png Graphic file (type png)
- <use pics/TEsubj/S4.png>
-Package pdftex.def Info: pics/TEsubj/S4.png used on input line 401.
-(pdftex.def)             Requested size: 195.1881pt x 188.88269pt.
-
-<pics/TEobj/S5.png, id=331, 1244.65pt x 1204.5pt>
-File: pics/TEobj/S5.png Graphic file (type png)
- <use pics/TEobj/S5.png>
-Package pdftex.def Info: pics/TEobj/S5.png used on input line 402.
-(pdftex.def)             Requested size: 195.1881pt x 188.88269pt.
-
-<pics/TEsubj/S5.png, id=332, 1244.65pt x 1204.5pt>
-File: pics/TEsubj/S5.png Graphic file (type png)
- <use pics/TEsubj/S5.png>
-Package pdftex.def Info: pics/TEsubj/S5.png used on input line 403.
-(pdftex.def)             Requested size: 195.1881pt x 188.88269pt.
-
-
-LaTeX Warning: Float too large for page by 43.57141pt on input line 406.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-) (./chapter/Discussion.tex) (./chapter/Conclusion.tex) (./chapter/Appendix.tex
+) (./chapter/Discussion.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[56]
+[60 <./pics/TEobj/Slide1.png> <./pics/TEsubj/Slide1.png>])
+(./chapter/Conclusion.tex) (./chapter/Appendix.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[57]
+[61]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[58]
+[62]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[59 <./pics/TEobj/S1.png> <./pics/TEsubj/S1.png> <./pics/TEobj/S2.png> <./pics/
-TEsubj/S2.png>]
+[63 <./pics/TEobj/Slide2.png> <./pics/TEsubj/Slide2.png> <./pics/TEobj/Slide3.p
+ng> <./pics/TEsubj/Slide3.png> <./pics/TEobj/Slide4.png> <./pics/TEsubj/Slide4.
+png> <./pics/TEobj/Slide5.png> <./pics/TEsubj/Slide5.png>] [64
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[60 <./pics/TEobj/S3.png> <./pics/TEsubj/S3.png> <./pics/TEobj/S4.png> <./pics/
-TEsubj/S4.png> <./pics/TEobj/S5.png> <./pics/TEsubj/S5.png>]
+]
 Appendix A.
-) [61
-
-] [62
+) [65] [66
 
 ]
 
@@ -2856,28 +2924,25 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[63
+[67
 
 
-] [64
+] [68
 
 
 ] (./dissertation.lof
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 3.
- [65
+ [69
 
 ]
-Underfull \vbox (badness 1571) has occurred while \output is active []
-
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[66])
+[70])
 \tf@lof=\write5
 \openout5 = `dissertation.lof'.
 
@@ -2888,19 +2953,19 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[67] [68
+[71] [72
 
 
 ] (./dissertation.lot)
 \tf@lot=\write6
 \openout6 = `dissertation.lot'.
 
- [69
+ [73
 
-] [70
+] [74
 
 
-] (./chapter/cv.tex) [71
+] (./chapter/cv.tex) [75
 
 ]
 (./chapter/selbst.tex)
@@ -2917,7 +2982,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--237
 Overfull \vbox (20.17003pt too high) has occurred while \output is active []
 
 
-[72] (./dissertation.aux)
+[76] (./dissertation.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -2934,11 +2999,11 @@ Package logreq Info: Writing requests to 'dissertation.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 19220 strings out of 494522
- 384696 string characters out of 6167205
- 750475 words of memory out of 5000000
- 22070 multiletter control sequences out of 15000+600000
- 88436 words of font info for 122 fonts, out of 8000000 for 9000
+ 19232 strings out of 494522
+ 385066 string characters out of 6167205
+ 750567 words of memory out of 5000000
+ 22079 multiletter control sequences out of 15000+600000
+ 94087 words of font info for 126 fonts, out of 8000000 for 9000
  320 hyphenation exceptions out of 8191
  44i,12n,48p,10401b,1657s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014basic/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/lo
@@ -2952,10 +3017,10 @@ ymr10.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/urw/symbol/usyr.
 pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><
 /usr/local/texlive/2014basic/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/
 local/texlive/2014basic/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on dissertation.pdf (78 pages, 8247588 bytes).
+Output written on dissertation.pdf (82 pages, 8859900 bytes).
 PDF statistics:
- 434 PDF objects out of 1000 (max. 8388607)
- 206 compressed objects within 3 object streams
+ 449 PDF objects out of 1000 (max. 8388607)
+ 215 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 481 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 486 words of extra memory for PDF output out of 10000 (max. 10000000)
 
