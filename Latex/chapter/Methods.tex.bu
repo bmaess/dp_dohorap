@@ -1,0 +1,531 @@
+
+\chapter{Methods}\label{methods}
+
+\section {Participants and stimuli}
+
+\subsection{Participants}
+
+18 children and 22 adults were recruited from the internal participants database.
+Subjects were selected if they spoke German as native language, if their language development was unremarkable, if their handedness score was above 70, if they fulfilled the prerequisites for MRI scans, and if their medical history was free of cognitive abnormalities.
+4 children and 4 adults dropped out inbetween sessions of the study.
+Two children were excluded from the analysis because their behavioral performance was at chance level.
+12 children (5 female) and 18 adults (9 female) were left for the subsequent analysis.
+Children were aged between 9y11m and 10y9m and described as right-handed by their parents.
+Adults were aged between 22 and 33 years and scored between 73 to 100 (median: 95) on the laterality quotient test \cite{3.1.LQ}.
+The point of reference for these ages is the time of the MEG session.
+Parents gave written informed consent and were compensated with 40\euro \ for the MEG session and 7,50\euro \ for the MRI session.
+Children agreed to participate in the study and were compensated with a 10\euro \ gift voucher for each session.
+Adult participants were compensated with 20\euro.
+All experimental procedures were approved by the University of Leipzig Ethical Review Board.
+
+
+\subsection{Task}
+
+The study consisted of two sessions: an anatomical MRI acquisition (duration: 50 minutes) and an interactive magnetoencephalographic measurement (typical duration: 90 minutes).
+Since they took place in two different locations, there was a delay (median: 98 days, maximum: 243 days) between the two sessions.
+
+The MRI session is described in detail in section 3.2.2.
+
+The MEG session consisted of two sections: a tutorial section and a main section.
+
+\paragraph{MEG tutorial section}
+
+First, the tutorial section described the usage of the interface.
+
+Second, subjects needed to respond to an example stimulus with the spoken sentence written out below the screen.
+
+Third, three example trials followed without the written sentence.
+
+Fourth, an artificially incomprehensible sentence was presented together with otherwise innocuous visual stimuli.
+
+When subjects pressed either response button instead of skipping the trial, they were instructed with the skip function.
+
+Finally, a series of randomized tutorial trials followed.
+When subjects showed behavioral proficiency of the task, the tutorial ended prematurely.
+Two thresholds for proficiency were possible: either an average response time below 3000ms and an accuracy score above 80\%, or an accuracy score above 88\%.
+Either threshold could only be reached after completing at least 5 or 8 trials, respectively.
+When none of these thresholds were met, the tutorial ended after 36 trials.
+
+\paragraph{MEG main section}
+The main section was used for MEG acquisition and consisted of 304 trials grouped in two blocks.
+There was a scheduled break between the blocks (usually 1-2 minutes) which included interaction with the research assistant.
+Subject-specific trial randomization was performed before the task.
+All stimuli-related randomization tasks were implemented with a time-seeded Mersenne-Twister approach in Python 2.7.
+Randomization contained two exceptions: neither the same image nor the same sentence could be played twice in a row.
+Each block consisted of 8 clusters.
+Subjects were shown a feedback screen at the end of each cluster, summarizing their performance throughout the recent cluster.
+Since manual intervention was necessary to proceed to the next cluster, subjects frequently used this opportunity for a tiny break (typically 5-20 seconds).
+Each cluster consisted of 19 trials.
+
+\paragraph{Structure of a single trial}
+Each trial started by showing two pictures side-by-side.
+In one picture, one of the animals performs a social action on the other animal.
+In the other picture, the roles are reversed.
+10ms later, the spoken question started playing.
+The subject could respond by pressing one of the direction buttons or the skip button.
+There were two direction buttons, left or right, signifying that the left or right image contained the answer to the question.
+The skip button was used to mark the trial as invalid for further analysis, and excluded the trial from performance feedback.
+This response was the correct choice when the subject was distracted or failed to comprehend the question immediately.
+This opened a minor pitfall: subjects could have gotten perfect scores by just pressing the skip button each time.
+Fortunately, none of the subjects discovered this opportunity.
+The trial ended with an auditory and visual feedback.
+
+
+\subsection{Visual stimuli}
+
+\paragraph{Character motivation}
+A set of visual stimuli consisted of a two side-by-side images on black background.
+Each image depicted two different animals on a white background.
+I selected selected social activities that were only plausible for antropomorphised characters, not for their real animal counterparts.
+Antropomorphization includes the use of their front limbs for object manipulation and standing on their hindlegs.
+These measures are introduced to prevent associations with real-world animalistic behavior.
+For example, a lion ``catching`` a monkey could resemble predatory behavior.
+This association with chasing and killing would introduce a semantic bias against the reverse interaction: a real-life monkey ``catching`` a lion is much more implausible than the reverse.
+To further detract from a naturalistic view, the animals were represented in a cartoon style.
+To prevent unnecessary stress on this interpretation, I only selected animals whose real-life counterparts were approximately equally sized.
+
+\begin{figure}[h]
+\begin{center}
+\vspace{7mm}
+\includegraphics[width=0.5\textwidth]{pics/3_1_screen}
+\caption{\label{3.1.screen} A typical visual stimulus, featuring two pairs of animals.}
+\end{center}
+\end{figure}
+
+Image components were adapted with permission and kind advice from \cite{3.1.animals}.
+Modifications were performed with Inkscape.
+
+\begin{figure}[h]
+\begin{center}
+\vspace{7mm}
+\includegraphics[width=0.99\textwidth]{pics/3_1_activities}
+\caption{\label{3.1.activities} Illustrations of all five animals performing their social activities. From left to right: catching, combing, pushing, painting and washing}
+\end{center}
+\end{figure}
+
+\paragraph{Trial feedback}
+Immediately after each response, an icon appeared below one of the two displayed animal pairs.
+The presented side was determined by the subject's response.
+In the case of the skip button, the icon appeared at the same height as the others, but in the middle of the screen.
+A green checkmark, a diagonal red cross and a yellow skip symbol signified a correct response, an incorrect response and an invalid trial, respectively.
+The trial feedback screen was presented for a random interval between 400ms and 800ms.
+
+\begin{figure}[h]
+\begin{center}
+\vspace{7mm}
+\includegraphics[width=0.5\textwidth]{pics/3_1_feedback}
+\caption{\label{3.1.feedback} The visual feedback to a correct response.}
+\end{center}
+\end{figure}
+
+\paragraph{Cluster feedback}
+In this experiment, there was an obvious tradeoff between speed and accuracy.
+To encourage a high level of attention and a high number of usable trials, two bar graphs visualized performance speed and accuracy (see Fig. \ref{3.1.clusterfeedback}).
+In order to maximize the amount of usable trials for further analysis, the visualization valued accuracy much more than response time (see Fig. \ref{3.1.feedbackGraphs}).
+
+\begin{figure}[h]
+\begin{center}
+\vspace{7mm}
+\includegraphics[width=0.5\textwidth]{pics/3_1_clusterfeedback}
+\caption{\label{3.1.clusterfeedback} An ideal cluster feedback screen that appears after completing 19 trials. Upper bar: speed, lower bar: accuracy. Bottom right: indicator to  press the skip button to advance}
+\end{center}
+\end{figure}
+
+\begin{figure}[h]
+\begin{center}
+\vspace{7mm}
+\includegraphics[width=0.45\textwidth]{pics/3_1_feedbackGraphAccuracy}
+\includegraphics[width=0.45\textwidth]{pics/3_1_feedbackGraphRT}
+\caption{\label{3.1.feedbackGraphs} Relation between performance and displayed feedback bars. Performance (left: RA, right: RT) is drawn along the X-axis, and length of the bars in \% is drawn along the Y-Axis.}
+\end{center}
+\end{figure}
+
+\subsection{Auditory stimuli}\label{3.1.stimuli.auditory}
+
+\paragraph{Sentence content}
+Each pair of images was presented with a spoken question.
+The question format fit well with the stimulus-response paradigm, and allowed the sentences to be identical until the conditional article (``den`` or ``der``) appeared.
+Syntactically, the sentences used an equal number of subject-relative and object-relative clauses.
+In order to minimize confounding effects, these two conditions were designed to show as little auditory distinction as possible.
+The structure of the final sentences is displayed in table \ref{3.1.sentences}.
+
+\begin{table}[htb]
+\vspace{5mm}
+\begin{center}
+\begin{tabular}{c|cccccccc}
+Original & Wo & ist & das & Tier, & das & der & Tiger & malt?\\
+Translated & Where & is & the & animal$_{OBJ}$, & which & the$_{NOM}$ & tiger$_{SUBJ}$ & paints?\\
+Word index & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8
+\end{tabular}
+\caption{\label{3.1.sentences} Example stimulus sentence. Top: original spelling in German. Middle: Literal translation in English. Bottom: Word index within the sentence. NOM: Nominative case.}
+\end{center}
+\end{table}
+
+\paragraph{Tutorial sentences}
+During the pilot study, children often assumed that the every sentence was a subject-relative construction, miscategorizing ``den`` for ``der``.
+Tutorial sentences made the two animal nouns explicit, so that all sentences were structured in the format ``Where is the monkey that is caught by the dog?``.
+While this setup was creating strong auditory differences, it was easier to comprehend.
+If the children didn't notice the difference by the eighth tutorial trial, the research assistant repeated the question with an exaggerated ``den`` pronounciation.
+
+\paragraph{Audio format}
+Sentences were spoken by a professional female native speaker in an uni\-so\-nous and moderately child-directed prosody.
+Recording and playback was performed at a sampling rate of 44100Hz with one channel.
+Loudness of each sentence was normalized.
+Overall loudness was adjusted to 50db above each subject's individual hearing threshold.
+
+\paragraph{Trial feedback}
+Immediately after each response, one of two short sounds played.
+The sounds were extracted from Microsoft Windows XP.
+The ``external device plugged in`` icon (two bell sounds in ascending tone) and the ``external device removed`` icon (two bell sounds in descending tone) represented correct and incorrect responses, respectively.
+No sound was played after the skip button.
+
+\subsection{Experimental setup}
+The participants were seated on a comfortable chair, inside a shielded, dimly-lit cabin.
+Visual and auditory stimuli were produced by a computer running Presentation (version 14.0) at 60Hz refresh rate and 1024x768 resolution.
+Video signal was routed through a video splitter MSV1235 into a Panasonic PT-D7700 projector.
+Audio signals were generated by a Soundblaster Audigy 2 ZS [SB0350].
+An audio amplifier (Compumedics, Hamburg, Germany) drove a pair of TIP-300 loudspeakers (Nicolet, Biomedical Madison, WI, U.S.A.).
+Sound was routed through a pair of plastic tubes (50cm length, approx. delay of 1.6ms)
+Sound arrived in the subjects' ears via ER3-14A/B earplugs (Etymotic Research Inc., Elk Grove Village IL, U.S.A.).
+
+\section{Data acquisition}
+
+\subsection {MEG}
+MEG data were collected with an Elekta Neuromag VectorView\textsuperscript{\textregistered} MEG scanner in Bennewitz, at the development unit for Magnetoencephalography and Cortical Networks, Institute for Cognitive and Brain sciences, Leipzig, Germany.
+The scanner comprised 306 MEG-channel sensors (102 magnetometers, 204 planar gradiometers).
+It was passively shielded with two layers of \si{\micro}-metal and one layer of aluminium, dampening external signals between 40db (at 0.1Hz) and 80db (at 500Hz).
+Sensors were tuned prior to each MEG recording session to limit noise levels to approximately $2.5 \frac{fT\sqrt{Hz}}{cm}$.
+Sensors that became very noisy during a recording block would be individually re-tuned at the next inter-block break, either by using the fine-tuning options or the selective heating function.
+Continuous MEG data were recorded at 1000 Hz sampling rate (330 Hz lowpass filter).
+
+Prior to data acquisition, all metal and other potential sources of electromagnetic interference were removed from participants.
+Quality of recording was confirmed by visual inspection of a live view of MEG recording before each session without the subject present.
+Electro-oculogram (EOG) and electrocardiogram (ECG) time-series were recorded simultaneously with MEG to track potential noise sources and artifacts.
+Five head position indicator (HPI) coils were attached to the participant's forehead and a Polhemus stylus and digitizer device were used to record the locations of fiducial points (right and left pre-auricular points (RPA, LPA) and nasion), the HPI coils, and between 150 and 200 extra digitizer points on the head surface.
+Prior to the recording of each stimulus block, head location in the scanner was measured with an automatic process that detected the coils.
+Continuous HPI recorded any head movements during data acquisition.
+
+\subsection {MRI}
+Anatomical magnetic resonance imaging (aMRI) data were collected with a 3.0 Tesla TIM Trio scanner, located at the Max-Planck-Institute for Cognitive and Brain sciences.
+Two scans were acquired from each participant in one session: A T1-weighted scan and a T2-weighted scan.
+The T1-weighted scan used the magnetization-prepared rapid gradient echo (MPRAGE, \cite{3.2.mprage}]) sequence (flip angle = $9\si{\degree}$, TR/TE/TI = $2300ms/2.96ms/900ms$).
+This scan was oriented transverse (176 slices) with an isotropic resolution of 1mm.
+The T2-weighted scan used the SPACE sequence by \cite{3.2.space} (flip angle = $120\si{\degree}$, TR/TE = $3200ms/402ms$).
+This scan was oriented transverse (176 slices at 1mm) with an inplane resolution of 0.5mm x 0.5mm.
+All scans used a 32-channel head coil for the acquisition.
+
+
+\section{Data analysis}
+
+Three software packages were used for data preprocessing: Elekta Neuromag\textsuperscript{\textregistered} MaxFilter (version 2.2, \cite{3.3.MNE}), Matlab (version 2014a) and MNE-Python (version 0.8.6, \cite{3.3.MNEpython}).
+
+\subsection{Behavioral data}
+
+Two types of behavioral data were analyzed for group and condition effects: response time (RT) and response accuracy (RA).
+Response time was measured at the condition onset, i.e. at the ``d`` sound of ``den`` or ``der`` (in the subject-relative clause or the object-relative clause, respectively).
+Trials were omitted when the subject skipped or answered them incorrectly.
+Trials were also omitted if the response took longer than 4000ms.
+This procedure removed 11.1\% of the childrens' trials, and 2.5\% of the adults' trials.
+
+RT and RA were determined for each subject separately from the remaining trials.
+Both metrics were tested for the requirements for an analysis of variance (ANOVA).
+Normality of the residuals was tested with a Shapiro-Wilk test \cite{3.3.swtest}, implemented in Matlab.
+Equality of variances was tested with a Levene test\cite{3.3.levtest}, implemented in SPSS.
+RA data failed the normality test.
+To include RA data in the following analysis, they were transformed to fit a normal distribution.
+This transformation was accomplished with the inverted sigmoid function:
+\[ \hat{a} = - log( \frac{1}{a} - 1 ) \]
+All results from the ANOVA were transformed back into milisecond space with the sigmoid function:
+\[ r = \frac{1}{1+e^{-\hat{r}}} \]
+
+\subsection{Sensor-space activity}
+
+\paragraph{Preprocessing and HPI correction}
+Signal-space separation \cite{3.3.SSS} was used to reduce noise in the data by suppressing magnetic interference coming from outside and inside the sensory array.
+MEG recordings were corrected for HPI movements, and co-registered across blocks to the inital head position for each individual.
+All of these steps were computed with MaxFilter.
+Data were then subjected to a FIR highpass filter (Hamming window design, 4367 coefficients, -130db suppression at 0Hz, 3db breakpoint at 0.5Hz, processing in Matlab) to remove slow trends.
+
+\paragraph{Artifact removal}
+MEG channels with abnormally high noise levels as identified by visual inspection were rejected from further analysis. A median of 1 channel (maximum: 3 channels) was removed.
+The resulting pre-processed data contained major artifacts from spontaneous channel jumps, electrocardiographic (ECG) activity and electrooculographic (EOG) activity.
+Jump amplitudes were detected by selecting peaks in the z-transformed continuous data that exceeded a threshold of 12 standard deviations.
+Segments of 2 seconds in the pre-processed continuous data were rejected if any magnitude channel exceeded an amplitude of $6\cdot10^{-12}T$ (gradiometer channels: $4\cdot10^{-12}\frac{T}{cm}$).
+Continuous data were then decomposed into independent components (ICA) that explained 99\% of the variance.
+Components that correlated with EOG or ECG channels were removed with the MNE functions \emph{preprocessing.ica\_find\_ecg\_events} and \emph{preprocessing.ica\_find\_eog\_events}, respectively.
+ICA-based correction removed an average of 2.1 components per subject and block (minimum: 1, maximum: 4).
+The remaining ICA components were used to reconstruct continuous data.
+
+\paragraph{Epoching}
+The main trigger was set at the condition onset (described in section 3.1.4).
+Epochs were created between 1000ms before and 4000ms after the main trigger.
+An epoch was rejected if the trial was skipped, or answered too slow (more than 4000ms) or answered incorrectly.
+This procedure yielded an average of [] trials in children and [] trials in adults.
+Data were filtered before epoching with a 45Hz FIR lowpass (using the MNE function \emph{raw.filter}) exclusively for the following two steps.
+
+\paragraph{Cluster analysis}
+Each trial consisted of mean activity from one of each of three sensor groups (from parietal, temporal and frontal locations).
+Trials from each syntax condition were pooled into a pair of trial sets.
+Since the group had a strong impact on RT (see [4.1.1]), effective time windows were estimated separately for children and adults.
+Clusters were computed by running the MNE function \emph{stats.permutation\_cluster\_test} \cite{3.3.clustertest} with the pair of trial sets as input data.
+The function was run with 2500 permutations, and an t-threshold of 2.0.
+
+\paragraph{Interval analysis}
+Additionally, a blind comparison was performed for sensor activity in a series of time intervals.
+10 time intervals were established from 0ms to 2200ms\footnote{As determined in the following analysis of response times, these intervals cover 95\% of childrens' trials completely, and 98\% of the adults'.} after onset, spanning 200ms each.
+The mean sensor activity was computed for each sensor group (3), hemisphere (2), time interval (10), yielding 60 activity values for each subject and condition.
+The corresponding values were pooled over all subjects within each of the two groups, and compared between syntax conditions with a paired Student's T-test.
+Results from each hemisphere and sensor group were adjusted with the false discovery rate correction (10 comparisons).
+
+For visualization purposes, grand average activity was also calculated for each sensor group and condition, separately for children and adults.
+
+\begin{figure}[h]
+\begin{center}
+\vspace{7mm}
+\includegraphics[width=0.24\textwidth]{pics/3_3_occipital_sensors}
+\includegraphics[width=0.24\textwidth]{pics/3_3_parietal_sensors}
+\includegraphics[width=0.24\textwidth]{pics/3_3_temporal_sensors}
+\includegraphics[width=0.24\textwidth]{pics/3_3_frontal_sensors}
+\caption{\label{3.3.sensors} Selected channels for each sensor location. From left to right: occipital, parietal, temporal, frontal. The right hemisphere (in red) is also depicted on the right side in each illustration.}
+\end{center}
+\end{figure}
+
+\subsection{Source space activity}
+
+\paragraph{Anatomical preprocessing}
+Cortical reconstruction and volumetric segmentation was performed with the Freesurfer image analysis suite [Martinos Center for Biomedical Imaging, Harvard-MIT, Boston USA].
+I followed the recommended processing pipeline (``recon-all``), with three optional functions.
+
+First, the option ``-nuintensitycor-3T`` improved brain segmentation accuracy by optimizing the bias field correction \cite{3.3.nuintensity}.
+
+Second, by invoking ``-notal-check``, I skipped the Talairach registration checks.
+Talairach registration was prone to failure especially in the infant subjects, and uneccessary for our further processing steps.
+
+Third, I supplied and included T2-weighted MRI datasets with the options ``-T2`` and ``-T2pial``.
+The combination of T1- and T2-weighted images improves tissue differentiation especially around the pia mater, yielding a more accurate cortex segmentation.
+This pipeline yielded a continuous, antomically plausible cortical surface in MRI space.
+
+
+\paragraph{Forward and inverse operator}
+For the forward operator, three components were necessary: a source model, a BEM model and a coregistration file.
+
+The cortical surface from Freesurfer was used to construct the source model.
+Sources were generated by the MNE package \emph{mne\_setup\_bem}.
+The result were 20484 sources (10242 per hemisphere), distributed with approximately equal density over the cortical surface.
+
+The head surface from Freesurfer was used to extract a scalp surface layer.
+The BEM was constructed from this scalp layer with the MNE package \emph{mne\_surf2bem}, using the default options.
+This function sampled down the original surface to the 4th subdivision of an icosahedron.
+The finished BEM consisted of 5140 nodes.
+
+Finally, a coregistration file provided the transformation between MRI space and MEG space.
+This coregistration attempted to minimize the distance between digitized head surface points and the head surface extracted from the MRI. 
+It was performed for each subject individually using the MNE package \emph{mne\_analyze}.
+The initial fit was done manually, with visual error feedback.
+The following fine adjustment was performed automatically.
+This process was repeated until the average spatial error was less than 2mm.
+These three components were assembled into a forward operator by the method \emph{mne\_do\_forward\_solution}.
+
+
+For the inverse operator, three components were necessary: the forward model, a noise covariance matrix, and a regularization factor.
+Each component was calculated individually for each subject.
+
+The first component, the forward model, was supplied by the previous step.
+
+For the second component, the noise covariance matrix, the 1000ms after visual onset were extracted from each trial.
+Then, the covariance matrix was computed from this data with the function \emph{mne.compute\_covariance}.
+
+The third component, the regularization factor was determined from this noise covariance matrix.
+First, only coefficients from gradiometer channels were selected.
+Second, these coefficients were transformed with a singular value decomposition.
+Third, the upper cutoff was defined as the first value of the transformed coefficients.
+Fourth, the index at which the transformed coefficients performed the steepest drop in logarithmic value was determined.
+Fifth, this index was defined as the maximum amount of usable dimensions.
+Sixth, the lower cutoff was defined as the value at this index, plus 15\%.
+Seventh, the regularization factor was computed by dividing the lower cutoff by the higher cutoff.
+
+
+The inverse operator was computed from these three components by the method \linebreak \emph{mne\_do\_inverse\_operator}.
+The regularization factor was supplied with the option \linebreak ``--megreg``.
+
+\paragraph{Inverse solution}
+For determining regional cortical activity, 8 regions needed to be defined: the primary auditory cortex (PAC), the anterior and posterior parts of the superior temporal sulcus and gyrus (aSTS, pSTS, aSTG and pSTG), Brodmann area 45 (BA45), Brodmann area 44 (BA44) and the ventral Brodmann area 6 (BA6v).
+These regions were spatially defined manually on the cortex of the reference subject.
+Freesurfer provided the aparc.a2009s segmentation, which became the basis for this regional selection.
+The final regions of interest on the reference brain are visualized in Fig. \ref{3.3.ROI}.
+Regions were then mapped from the reference cortex onto the cortices of all other subjects during the next step.
+
+\begin{figure}[h]
+\begin{center}
+\vspace{7mm}
+\includegraphics[width=0.49\textwidth]{pics/dh55a-pial-lh}
+\includegraphics[width=0.49\textwidth]{pics/dh55a-pial-rh}
+\includegraphics[width=0.49\textwidth]{pics/dh55a-inflated-lh}
+\includegraphics[width=0.49\textwidth]{pics/dh55a-inflated-rh}
+\includegraphics[width=0.75\textwidth]{pics/3_3_ROIlegend}
+\caption{\label{3.3.ROI} Selected regions of interest on the reference brain. Top: selected regions on the folded cortex. Bottom: selected regions on the inflated cortex.}
+\end{center}
+\end{figure}
+
+The inverse operator was then used to calculate inverse solutions from MEG sensor data.
+Inverse solutions were calculated for each time point, region, trial and subject individually.
+The process was performed by the function \emph{mne.minimum\_norm.apply\_inverse\_epochs}, with sLORETA as the inverse method.
+The option ``pick\_ori=normal`` designated currents leaving and entering the cortex as positive and negative, respectively.
+Due to the combination of passive and active noise reduction and artifact suppression, I assumed a fairly high signal-to-noise-ratio (SNR) of 50:1 for each individual source.
+The regularization factor was estimated by $\frac{1}{SNR} = 2.5*10^{-3}$.
+The result was a series of activation patterns within each region.
+Finally, the mean of regional node activity was calculated for each time point, region, trial and subject.
+
+The resulting localized activity was subjected to a cluster analysis.
+Extracted trials were pooled over all subjects within a group.
+Within each group, two sets of trials were created from the two syntax conditions.
+Each trial contained mean activity from eight regions (PAC, aSTS, aSTG, pSTS, pSTG, BA44, BA45 and BA6v).
+Clusters were determined by running the MNE function \emph{stats.permutation\_cluster\_test} \cite{3.3.clustertest} over the two sets of trials.
+The function was run with 2500 permutations, and an t-threshold of 2.0.
+The results from each group was evaluated separately.
+
+Additionally, a blind comparison was performed for sensor activity in a series of time intervals.
+10 time intervals were established from 0ms to 2200ms after onset, spanning 200ms each.
+The mean activity was computed for each region (8), hemisphere (2), and time interval (10), yielding 160 activity values for each subject and condition.
+The corresponding values were pooled over all subjects within each of the two groups, and compared between syntax conditions with a paired Student's T-test.
+Results from each hemisphere and region were adjusted with the false discovery rate correction (10 comparisons).
+
+For visualization purposes, grand average activity was calculated for each cortical region, group and condition.\subsection{Interaction analysis}
+
+The software Trentool (\cite{3.4.Trentool}, version 3.3.2, 6th June 2015) was used with Matlab 2013a for exploring entropy transfers between cortical areas.
+The procedure consisted of three sections: Preparation, transfer entropy calculation and evaluation of the results.
+
+\paragraph{Preparation}
+For the first procedural section, the input datasets were prepared for the analysis.
+This dataset consisted of three parts: regional activity from single trials, a list of regional connections and a set of parameters.
+
+To create the first dataset part, two sets of single trials (one for each condition) were selected from each subject.
+For this step, cortical regions were selected if they showed syntax effects either in the cluster analysis or the interval analysis.
+This process yielded six relevant cortical regions: PAC, aSTG, pSTS, BA44, BA45 and BA6v.
+Mean activity from these regions was lowpass filtered with a digital, single-pass FIR filter \footnote{passband frequency of 250Hz, stopband frequency of 300Hz, ripple of 1db, stopband attenuation of 120db; implemented with the \emph{filter} function in Matlab} to suppress the influence from the HPI coils.
+This filter introduced a signal lag of 79ms, and selected time windows were shifted accordingly.
+
+To create the second dataset part, I examined which were the most relevant functional connections between cortical regions.
+There are 720 unique possiblities to compare the previously mentioned six regions, which would overwhelm\footnote{The comparison over one pair of cortical regions, in forward and reverse directions, over two conditions and 50 separate shift delays, required a computation time of 35 CPU cores * hours per subject and timewindow. Calculating transfer entropy between 36 pairs of regions took a total of 3150 CPU cores * hours, which - thanks to the work of Christian Labadie and Hermann Sonntag - amounted to 48 actual hours of calculation time. The task of computing the full set of 720 comparisons would have required 63000 CPU cores * hours - for other groups, a sufficient reason to switch a GPU-based algorithm\cite{3.4.gpuTE}.} the computational capacity at my disposal and yield a large proportion of meaningless results.
+For these reason, I limited the calculation to comparisons between regions along the same axonal fiber bundle.
+
+I selected comparisons between all language-related regions along three pathways (see Fig. \ref{3.4.regions}) that are known to be involved in subject-object-paradigms.
+The following regions associated to each pathway are derived from \cite{1.1.pathways}.
+
+The second dorsal language pathway, via the arcuate fascicle, connects the regions PAC, pSTG and BA44.
+This pathway is therefore represented by two short connections ($PAC_{lh} \rightarrow pSTG_{lh}$ and $pSTG_{lh} \rightarrow BA44_{lh}$) and one long connection ($PAC_{lh} \rightarrow BA44_{lh}$).
+
+The second ventral language pathway, via the inferior fronto-occipital fascicle, connects the regions PAC, aSTG and BA45.
+This layout yields two short connections ($PAC_{lh} \rightarrow aSTG_{lh}$, $aSTG_{lh} \rightarrow BA45_{lh}$) and one long connection, $PAC_{lh} \rightarrow BA45_{lh}$.
+
+The first dorsal language pathway, via the nomen nescio and the third component of the superior longitudinal fascicle, connects the regions pSTG, SMG and BA6v.
+SMG is a substantially larger region than pSTG and BA6v, and is apparently responsible for sensory integration.
+Task-related effects tend to disappear when averaging over large regions, even when these regions are primarily involved in task-related processing.
+Due to this effect, and the minimal role of SMG in object-subject paradigms, I decided to skip the connections $pSTG_{lh} \rightarrow SMG_{lh}$ and $SMG_{lh} \rightarrow BA6v_{lh}$ in the signal transfer calculations.
+Consequently, the motor component of the language network will be represented by the long connection $pSTG_{lh} \rightarrow BA6v_{lh}$.
+
+The analysis included two functional regions (BA44/BA45 and aSTG/pSTG) that share a common gyrus.
+Since gyri are highly interconnected, a certain degree of information exchange can be expected.
+Connections between those regions were examined as well, yielding another two short connections ($BA44_{lh} \rightarrow BA45_{lh}$ and $aSTG_{lh} \rightarrow pSTG_{lh}$).
+
+In order to compute forward and backward directions, two separate calculations are necessary for each comparison.
+Therefore, examing the information transfer along these nine regional connections requires 18 sets of calculations.
+
+\begin{figure}[h]
+\begin{center}
+\vspace{7mm}
+\includegraphics[width=0.75\textwidth]{pics/3_4_regions.png}
+\caption{\label{3.4.regions} Connections of selected cortical regions for the computation of transfered entropy.}
+\end{center}
+\end{figure}
+
+To create the third dataset part, I selected a set of parameters for the data preparation.
+
+First, I needed to define a time interval that is analyzed for transfer entropy.
+The interval analysis showed (see chapter \ref{4.3}) that syntax effects occurred predominantly up to 1000ms after onset.
+These effects were based on group analysis, while the following interaction analysis was based on a single-subject, single-trial analysis.
+Due to these circumstances, I decided against limiting the interaction analysis to the previously discovered time intervals, and for exploring the full time range between 0ms and 1000ms (after stimulus onset) instead.
+As a reasonable tradeoff between time resolution and data content, I fragmented the analysis into five segments of 200ms.
+
+Next, I needed to choose embedding parameters.
+To understand embedding, it is important to know that the transfer entropy estimation fundamentally relies on the comparison between two probability density functions.
+These mathematical constructs can only be approximated from scalar time series.
+For this purpose, time series from individual trials are combined into a multidimensional state space by Trentool.
+The reduction of this multidimensional space into a probability density function is the process called embedding.
+There are four important embedding parameters: the embedding criterion, the embedding time, the embedding delay range and the embedding dimension range.
+
+For choosing suitable parameter ranges, I followed the recommendations described in the Trentool tutorial \cite{3.3.TrentoolTutorial}.
+As for the embedding criterion, I selected the Ragwitz criterion (\emph{cfg.optimizemethod = 'ragwitz'}).
+It is recommended for EEG/MEG data, while the only other option - the Cao Criterion - is recommended for fMRI data.
+
+The embedding delay is denominated in multiples of the autocorrelation time (ACT).
+The embedding setup relies heavily on this metric.
+The ACT is defined as the first positive minimum of the self-correlation of the signal.
+For my set of single trials, the median ACT was 2ms (90th: 6ms, 95th: 10ms, 99th: 22ms, 99.9th: 34ms).
+The usable embedding interval depends on the maximum ACT, but the embedding interval must be identical for all datasets.
+Hence, a single trial with a high ACT can reduce the effective embedding interval for all other trials.
+I set the parameters \emph{cfg.trialselect = 'ACT'} and \emph{cfg.actthrvalue = 12} so that trials with an ACT greater than 12 were excluded from the analysis.
+This setting caused a rejection of 3.4\% of all trials.
+The relatively high rejection rate was required to ensure that the maximum embedding interval wouldn't exceed 1000 samples in combination with the following embedding delay and embedding dimension.
+
+As recommended, I set the embedding delay to a search range between 0.2 and 0.5 times of the autocorrelation delay, (\emph{cfg.ragtaurange = 0.2:0.5}).
+A preliminary analysis with a embedding dimension range of 2 to 12 yielded 12 as the most common embedding dimension, indicating a ceiling effect.
+To alleviate this ceiling effect, I extended the maximum embedding dimension by two (\emph{cfg.ragdim = 7:14}).
+
+For the embedding process, a considerable section of data is necessary to estimate the baseline entropy before the interaction time cue occurs.
+This section of data is referred to as embedding time, and won't be included in the analysis of transfer entropy.
+It is necessary to define the embedding time and TOI with a combination of two variables, \emph{cfg.toi} and \emph{cfg.repPred}.
+repPred denominates the length of the TOI that is actually used for the information transfer calculation.
+With a sampling rate of 1000 samples per second and a desired time window of 200ms, I set it to \emph{cfg.repPred = 200}.
+Due to an implementation quirk in Trentool, selecting a fixed data interval for the signal transfer calculation is not possible\footnote{According to the comment section of \emph{transferentropy.m}: ``The span of time needed for embedding is: (max(dim)-1)*max(tau). The prediction time starts after this embedding time. Hence the span of time defined in cfg.toi must be a good deal longer than the embedding time, at least embedding time plus 150 samples or max(cfg.predicttime\_u).``
+Since tau depends on ACT, which in turn is different for each data set, it is impossible to compute a fixed embedding time for all data sets.}. The Trentool authors expect their users to set a very broad TOI, leaving enough samples to both include the relevant data and the embedding time in all cases.
+This implementation leads to a sliding TOI (fixed length, but with varying onset) for the actual information transfer calculations.
+Since the intention was to explore signal interactions at clearly defined time intervals, the Trentool implementation was too imprecise for my goals.
+In order to achieve a higher degree of control across trials and subjects, I modified the routine \emph{transferentropy.m} (for a detailed explanation, see \ref{Appendix.A}) to use a fixed TOI for its calculations.
+With this modification, Trentool adapted the start - instead of the end - of the internal data interval dynamically to the length of the embedding interval.
+To achieve this effect, \emph{cfg.toi} was set to the start and end of the TOI, plus a fixed filter delay of 79ms.
+\emph{cfg.repPred} was set to the length of the TOI in samples, i.e., 200.
+
+Using this dataset, Trentool used the Ragwitz criterion to optimize the embedding parameters for each collection of trials.
+This process was repeated for each subject, time window and condition.
+The most common optimal embedding dimension was 14 (minimum: 12).
+
+After the individual parameter optimization, the process was repeated to prepare the datasets for group comparisons.
+Originally, this process was intented to be conducted by the function \emph{TE\_groupprepare}.
+Since this function was designed to run on a single computer (requiring a calculation time of more that 50 hours in this case), I replaced it with an equivalent routine that allowed distributed computing (see \ref{Appendix.A}).
+
+\paragraph{Transfer entropy calculations}
+
+After embedding, Trentool performed an interaction shift test.
+This procedure (performed with the function \emph{InteractionDelayReconstruction\_calculate}) counteracts bias introduced by noise, especially the common false positive detection of an interaction between two data sets with different signal-to-noise levels.
+The shift test establishes the optimal delay of transfered entropy for each comparison of activity.
+Transfer entropy was computed for a time range of possible interaction delays: 1ms to 50ms in steps of 1ms.
+Trentool then selected the interaction delay with the biggest associated transfer entropy as the most likely representation of the signal delay caused by cognitive processes and anatomic constraints.
+To alleviate issues with volume conduction, I supplied the option \emph{cfg.extracond = 'Faes\_method'}.
+Unfortunately, using this method prevents the determination of the precise signal delay.
+Since the signal delay is not relevant to my research goals, this trade-off was trivial to solve.
+The optimal dimension for each data set was considered with the option \emph{cfg.optdimusage = 'indivdim'}.
+
+During testing for the impact of experimental conditions, real effects are commonly confounded with spurious effect due to random differences.
+To counteract this issue, Trentool offers the creation of surrogate data.
+This possibility allows for comparing transfer entropy between real and surrogate data, rather than between conditions.
+The surrogate data was created by shuffling existing trials (\emph{cfg.surrogatetype = 'trialshuffling'}).
+The significance level for this procedure was 1\% (\emph{cfg.alpha = 0.01}).
+I used t-values to represent the statistical results of the shift test (\emph{cfg.permstatstype = 'indepsamplesT'}).
+These results indicated the likelihood if an entropy transfer has occurred between the selected pair of regional activity.
+
+If three or more significant interactions were detected within a single dataset, the results were corrected for cascade effects and simple common mode drive effects with the Trentool function \emph{TEgraphanalysis}.
+The detection threshold was 3ms (\emph{cfg.threshold = 3}) and I used FDR-uncorrected probability values to select signficant interactions (\emph{cfg.cmc = 0}).
+
+\paragraph{Result evaluation}
+
+I combined these subject-level results in Matlab to obtain group-level results.
+As suggested by \cite{3.4.binomialtest}, I performed a binomial test (implemented in Matlab with the function \emph{binofit}) to examine whether more significant results (p < 5\%) occur than expected when assuming that the null probability of a significant result is 5\%.
+This probability was corrected for multiple comparisons \cite{3.4.FDR.a} with the Matlab function \emph{fdr\_bh} with an alpha of 5\% \cite{3.4.FDR.implementation}.
+Furthermore, I estimated the extent of transfer entropy for every functional connection by calculating a  mean across all subjects.
+For calculating the mean transfer entropy, only interactions were considered that passed the surrogate test.
+
+Finally, I evaluated the impact of the syntax condition on all subjects.
+For this group-level comparison, a clustered T-test compared transfer entropy between conditions over all subjects by using the Trentool function \emph{TEgroup\_stats}.
+
+A separate comparison was conducted for each of the five timewindows.

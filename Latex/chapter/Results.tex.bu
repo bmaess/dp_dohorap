@@ -1,0 +1,414 @@
+
+\chapter{Results}\label{results}
+
+\section{Behavioral results}
+
+If not noted otherwise, two comma-separated values in brackets describe the upper and lower values of a 95\% confidence interval.
+
+\subsection{Response times}
+
+A Shapiro-Wilk test was conducted to determine if individual response times were normal distributed.
+All subjects failed this test (p < 0.001), indicating a strong deviation from normality.
+Therefore, I represented individual response times by their median.
+
+Children needed a median time of 1.91s (1.64s, 2.19s) to respond to object-relative clauses.
+For subject-relative clauses, they needed 1.97s (1.69s, 2.25s).
+Adults needed a median time of 1.51s (1.28s, 1.73s) to respond to object-relative clauses.
+For subject-relative clauses, they needed 1.60s (1.37s, 1.82s).
+
+A Shapiro-Wilk test determined that response time data was normal distributed with a probability between 1.5\% and 27\%.
+A Levene's test determined that the probability of median response times being normal distributed was ?\%.
+Supported by these findings, the response times were included into the ANOVA.
+
+\subsection{Response accuracy}
+
+For the analysis of variance (ANOVA), all data must be normal distributed with equal variance.
+A Shapiro-Wilk test determined that the probability of accuracy data being normal distributed was between 2.0 and 20.3\%.
+A Levene's test yielded that the probability that accuracy data were distributed with equal variance was less than p = 0.1\%.
+
+The ANOVA is known to be robust for considerable deviations from the normal distribution.
+However, it is highly vulnerable to violation the assumption of equal variances.
+To meet this requirement, I transformed the accuracy data with the inverse sigmoid function.
+This procedure, however, created singularities in some extreme cases, i.e., when a subject performed with a 100\% accuracy rate.
+To prevent this issue, I added a single incorrect trial to every subject's performance for the following analysis.
+
+After the transformation, the same tests as before were conducted.
+The probability for transformed accuracy data being normal distributed was between 0.5\% and 27\%.
+The probability for transformed accuracy data being distributed with equal variance was p = 72.2\%.
+Supported by these findings, the transformed accuracy data was included in the ANOVA.
+
+\subsection{Analysis of combined performance data}
+
+Two ANOVA were conducted with the transformed accuracy data and the median response times.
+Each subject provided one data point for each metric.
+Data were analyzed with a group x condition design.
+Accuracy estimates were transformed back with the sigmoid function $r = \frac{1}{1+e^{\hat{-r}}}$.
+
+Children responded 0.39s slower than adults (1.94s vs. 1.55s).
+This difference was significant ($F_{56} = 9.4$, $p = 0.3\%$).
+
+Children responded with an average accuracy of 93.8\% (92.2\%, 95.0\%).
+Adults performed much better, with an average accuracy of 97.9\% (97.5\%, 98.3\%).
+This difference was highly significant ($F_{56} = 52$, $p = 1.6*10^{-9}$).
+
+Sentence condition had no impact on median response times ($F = 0.33$, $p = 57\%$) or on response accuracy ($F = 1.3$, $p = 26\%$).
+There was no interaction effect between group and sentence condition ($F < 0.1$, $p > 80\%$).
+
+\section{Sensor-space activity}
+
+We computed average event-related fields (ERF) for each subject and sensor region.
+Activity from these ERF was selected with two different types of time windows.
+
+A positive effect indicates that activity evoked by object-relative clauses was more positive than activity evoked by subject-relative clauses. In the case of gradiometers, ``more positive`` means a higher regional RMS. With localized data, ``more positive`` means a higher z-score from the sLORETA source reconstruction.
+
+
+\subsection{Interval analysis}
+For this analysis, sensor activity from separate regions and hemispheres was compared blindly between 0 and 2200ms after onset in 200ms intervals.
+
+After FDR-correction for 10 comparisons, no sensor region showed any non-spurious effect in either group ($p > 3\%$).
+
+\subsection{Cluster analysis}
+For this analysis, activity was compared between conditions using a temporal cluster analysis.
+
+For children, significant differences were observed in the following sensor groups:
+Right parietal magnetometers showed a negative effect between 159ms and 374ms ($p = 1.4\%$).
+Left frontal magnetometers showed a negative effect between 375ms and 666ms ($p = 1.8\%$).
+Left temporal magnetometers showed a negative effect between 349ms and 627ms ($p = 0.8\%$).
+Right temporal gradiometers showed a positive effect between 1384ms and 1663ms ($p = 3.8\%$).
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=0.49\textwidth]{pics/children_Left-frontal-magnetometer.png}
+\includegraphics[width=0.49\textwidth]{pics/children_Right-frontal-magnetometer.png}
+\includegraphics[width=0.49\textwidth]{pics/children_Left-frontal-gradiometer.png}
+\includegraphics[width=0.49\textwidth]{pics/children_Right-frontal-gradiometer.png}
+\includegraphics[width=0.49\textwidth]{pics/kids_Left-frontal_mag.png}
+\includegraphics[width=0.49\textwidth]{pics/kids_Right-frontal_mag.png}
+\includegraphics[width=0.49\textwidth]{pics/kids_Left-frontal_grad.png}
+\includegraphics[width=0.49\textwidth]{pics/kids_Right-frontal_grad.png}
+\caption{\label{4.2.activity.kids.frontal} Combined frontal sensor activity from children in separate sensor groups. Top row: magnetometer activity; middle row: gradiometer activity; bottom two rows: equivalent results from the cluster analysis. Charts on the left side depict activity from the left hemisphere and vice versa.}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=0.49\textwidth]{pics/children_Left-temporal-magnetometer.png}
+\includegraphics[width=0.49\textwidth]{pics/children_Right-temporal-magnetometer.png}
+\includegraphics[width=0.49\textwidth]{pics/children_Left-temporal-gradiometer.png}
+\includegraphics[width=0.49\textwidth]{pics/children_Right-temporal-gradiometer.png}
+\includegraphics[width=0.49\textwidth]{pics/kids_Left-temporal_mag.png}
+\includegraphics[width=0.49\textwidth]{pics/kids_Right-temporal_mag.png}
+\includegraphics[width=0.49\textwidth]{pics/kids_Left-temporal_grad.png}
+\includegraphics[width=0.49\textwidth]{pics/kids_Right-temporal_grad.png}
+\caption{\label{4.2.activity.kids.temporal} Combined temporal sensor activity from children in separate sensor groups. Top row: magnetometer activity; middle row: gradiometer activity; bottom two rows: equivalent results from the cluster analysis. Charts on the left side depict activity from the left hemisphere and vice versa.}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=0.49\textwidth]{pics/children_Left-parietal-magnetometer.png}
+\includegraphics[width=0.49\textwidth]{pics/children_Right-parietal-magnetometer.png}
+\includegraphics[width=0.49\textwidth]{pics/children_Left-parietal-gradiometer.png}
+\includegraphics[width=0.49\textwidth]{pics/children_Right-parietal-gradiometer.png}
+\includegraphics[width=0.49\textwidth]{pics/kids_Left-parietal_mag.png}
+\includegraphics[width=0.49\textwidth]{pics/kids_Right-parietal_mag.png}
+\includegraphics[width=0.49\textwidth]{pics/kids_Left-parietal_grad.png}
+\includegraphics[width=0.49\textwidth]{pics/kids_Right-parietal_grad.png}
+\caption{\label{4.2.activity.kids.parietal} Combined parietal sensor activity from children in separate sensor groups. Top row: magnetometer activity; middle row: gradiometer activity; bottom two rows: equivalent results from the cluster analysis. Charts on the left side depict activity from the left hemisphere and vice versa.}
+\end{center}
+\end{figure}
+
+\clearpage
+For adults, clusters of significant differences were observed by left-temporal gradiometers and left-parietal magnetometers.
+Left frontal gradiometers showed a weak positive effect between 131ms and 284ms ($p = 6.3\%$).
+Left temporal gradiometers showed a positive effect between 257ms and 480ms ($p = 2.1\%$).
+Left parietal magnetometers showed a positive effect between 618ms and 765ms ($p = 0.64\%$).
+Left temporal magnetometers showed a weak negative effect between 1351 and 1491ms ($p = 8.4\%$).
+
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=0.49\textwidth]{pics/adults_Left-frontal-magnetometer.png}
+\includegraphics[width=0.49\textwidth]{pics/adults_Right-frontal-magnetometer.png}
+\includegraphics[width=0.49\textwidth]{pics/adults_Left-frontal-gradiometer.png}
+\includegraphics[width=0.49\textwidth]{pics/adults_Right-frontal-gradiometer.png}
+\includegraphics[width=0.49\textwidth]{pics/adults_Left-frontal_mag.png}
+\includegraphics[width=0.49\textwidth]{pics/adults_Right-frontal_mag.png}
+\includegraphics[width=0.49\textwidth]{pics/adults_Left-frontal_grad.png}
+\includegraphics[width=0.49\textwidth]{pics/adults_Right-frontal_grad.png}
+\caption{\label{4.2.activity.adults.frontal} Combined frontal sensor activity from adults in separate sensor groups. Top row: magnetometer activity; middle row: gradiometer activity; bottom two rows: equivalent results from the cluster analysis. Charts on the left side depict activity from the left hemisphere and vice versa.}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=0.49\textwidth]{pics/adults_Left-temporal-magnetometer.png}
+\includegraphics[width=0.49\textwidth]{pics/adults_Right-temporal-magnetometer.png}
+\includegraphics[width=0.49\textwidth]{pics/adults_Left-temporal-gradiometer.png}
+\includegraphics[width=0.49\textwidth]{pics/adults_Right-temporal-gradiometer.png}
+\includegraphics[width=0.49\textwidth]{pics/adults_Left-temporal_mag.png}
+\includegraphics[width=0.49\textwidth]{pics/adults_Right-temporal_mag.png}
+\includegraphics[width=0.49\textwidth]{pics/adults_Left-temporal_grad.png}
+\includegraphics[width=0.49\textwidth]{pics/adults_Right-temporal_grad.png}
+\caption{\label{4.2.activity.adults.temporal} Combined temporal sensor activity from adults in separate sensor groups. Top row: magnetometer activity; middle row: gradiometer activity; bottom two rows: equivalent results from the cluster analysis. Charts on the left side depict activity from the left hemisphere and vice versa.}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=0.49\textwidth]{pics/adults_Left-parietal-magnetometer.png}
+\includegraphics[width=0.49\textwidth]{pics/adults_Right-parietal-magnetometer.png}
+\includegraphics[width=0.49\textwidth]{pics/adults_Left-parietal-gradiometer.png}
+\includegraphics[width=0.49\textwidth]{pics/adults_Right-parietal-gradiometer.png}
+\includegraphics[width=0.49\textwidth]{pics/adults_Left-parietal_mag.png}
+\includegraphics[width=0.49\textwidth]{pics/adults_Right-parietal_mag.png}
+\includegraphics[width=0.49\textwidth]{pics/adults_Left-parietal_grad.png}
+\includegraphics[width=0.49\textwidth]{pics/adults_Right-parietal_grad.png}
+\caption{\label{4.2.activity.adults.parietal} Combined parietal sensor activity from adults in separate sensor groups. Top row: magnetometer activity; middle row: gradiometer activity; bottom two rows: equivalent results from the cluster analysis. Charts on the left side depict activity from the left hemisphere and vice versa.}
+\end{center}
+\end{figure}
+
+
+The generally lower significance levels in adults imply an overall weaker impact of syntactic condition on sensor activity.
+Syntactic effects in the left fronto-parietal region occurred earlier in adults (131-480ms) than in children (349-666ms).
+Effects were much more lateralized in children, with a weak but distinct support from right parietal and temporal regions.
+The strong effect in adults' left parietal regions between 618ms and 765ms is unparalleled in children.
+These differences seem to promise a group effect, and will be resolved more accurately in the next section.
+
+\clearpage\section{Source-space activity}\label{4.3}
+
+\subsection{Comparison of means}
+Localized activity from eight regions of interest (PAC, aSTS, aSTG, pSTS, pSTG, BA44, BA45 and BA6v) were examined for a syntactic effect.
+Two different types of analysis were conducted: a cluster-based comparison and an interval-based comparison.
+
+\paragraph{Cluster analysis}
+The cluster comparison yielded only spurious effects in both groups ($p > 7\%$).
+
+\paragraph{Interval analysis}
+The interval comparison (0ms to 2200ms) yielded three distinct effect clusters in adults.
+
+During the first time cluster, 0ms to 200ms, especially the right PAC showed a strong negative effect ($p = 0.5\%$, $t_{17} = -3.7$).
+Other negative effects were visible in the left PAC ($p = 3.0\%$, $t_{17} = -2.9$) and the left BA45 ($p = 5.1\%$, $t_{17} = -2.6$).
+
+The second time cluster, 400ms to 800ms, was signified by simultaneous effects in seven regions.
+Both left and right PAC showed a positive effect ($p = 3.0\%$ and $p < 0.1\%$, $t_{17} = 2.9$ and $t_{17} = 4.8$).
+The right pSTG showed negative effects, which grew more noticable during the progression of the time cluster.
+In the first half of the cluster (400ms to 600ms), the condition effect started very weakly ($p = 7.9\%$, $t_{17} = -2.4$).
+During the second half of the cluster (600ms to 800ms), the effect strengthened noticably ($p = 1.0\%$, $t_{17} = -3.9$).
+The left aSTG showed a similar pattern: weak negative effect between 400ms and 600ms ($p = 2.1\%$, $t_{17} = -3.2$), which became noticably more distinct between 600ms and 800ms ($p = 0.4\%$, $t_{17} = -4.3$).
+The left BA45 showed a constant and strong positive activation effect ($p = 0.6\%$, $t_{17} = 3.9$).
+Otherwise, very weak positive effects ($p < 7\%$, $t_{17} = 3.0$) could be observed in the left BA6v (400ms to 600ms) and the left BA44 (600ms to 800ms).
+
+The third time cluster, 1000ms to 1600ms, only showed effects in three regions.
+The right PAC showed a very late, distinctly negative effect ($p = 0.9\%$, $t_{17} = -3.3$, between 1400ms and 1600ms).
+Very weak positive effects ($p < 8\%$, $t_{17} = 2.4$) were observed in the right pSTG (1000ms to 1200ms) and the left aSTG (1400ms to 1600ms).
+At the same time (1400ms to 1600ms), the left aSTS showed a very weak effect as well, but with opposite polarity ($p = 6.6\%$, $t_{17} = -3.0$).
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.49\textwidth]{pics/signed-adults-PAC-lh.png}
+\includegraphics[width=0.49\textwidth]{pics/signed-adults-PAC-rh.png}
+\includegraphics[width=0.49\textwidth]{pics/signed-adults-aSTS-lh.png}
+\includegraphics[width=0.49\textwidth]{pics/signed-adults-aSTS-rh.png}
+\includegraphics[width=0.49\textwidth]{pics/signed-adults-aSTG-lh.png}
+\includegraphics[width=0.49\textwidth]{pics/signed-adults-aSTG-rh.png}
+\includegraphics[width=0.49\textwidth]{pics/signed-adults-BA45-lh.png}
+\includegraphics[width=0.49\textwidth]{pics/signed-adults-BA45-rh.png}
+\caption{\label{4.3.activity.adults.ventral} Combined activity from adults in separate cortical regions. Top row: PAC; second row: aSTS; third row: aSTG; bottom row: BA45. Charts on the left side depict activity from the left hemisphere and vice versa.}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.49\textwidth]{pics/signed-adults-BA6v-lh.png}
+\includegraphics[width=0.49\textwidth]{pics/signed-adults-BA6v-rh.png}
+\includegraphics[width=0.49\textwidth]{pics/signed-adults-pSTS-lh.png}
+\includegraphics[width=0.49\textwidth]{pics/signed-adults-pSTS-rh.png}
+\includegraphics[width=0.49\textwidth]{pics/signed-adults-pSTG-lh.png}
+\includegraphics[width=0.49\textwidth]{pics/signed-adults-pSTG-rh.png}
+\includegraphics[width=0.49\textwidth]{pics/signed-adults-BA44-lh.png}
+\includegraphics[width=0.49\textwidth]{pics/signed-adults-BA44-rh.png}
+\caption{\label{4.3.activity.adults.ventral} Combined activity from adults in separate cortical regions. Top row: BA6v; second row: pSTS; third row: pSTG; bottom row: BA44. Charts on the left side depict activity from the left hemisphere and vice versa.}
+\end{center}
+\end{figure}
+
+\clearpage
+
+The interval analysis yielded no non-spurious effects ($p > 5\%$) from children.
+This fact prompted a more extensive investigation.
+
+\subsection{Post-hoc analysis}
+
+Compared to the sensor-space analysis, source-space data yielded much more pronounced effects in adults.
+Since this effect differentiation was the main goal of the localization process, these results were in line with my expectations.
+However, localization of cortical activity in children failed to yield a similar improvement.
+The localization procedure was identical for both groups, so no procedural difference could have affected the results.
+
+That left two major possibilities for these unexpected results.
+
+\paragraph{Possible explanations}
+First, the localization process may have produced drastically worse inverse solutions for children than for adults.
+Due to the hands-off approach of the generation of cortical surfaces, there are no parameters for the transfer of regional boundaries between the (adult) reference brain and each infant brain.
+This automated process could have resulted in a systematically higher spatial error between my regional definitions and the actual functional regions in infants than in adults.
+Less realistic regional definitions in children than in adults can result in unintended overlap between functional regions, and lead to a diminished experimental effect in each region.
+It is also be possible that the automated segmentation process, that Freesurfer uses for extracting the cortex surface, is not optimized for infant brains.
+An imprecise definition of the cortical surface would result in a skewed spatial location of the source dipoles, again causing regional overlapping and diminishing the experimental effect.
+If the localization performed drastically worse for children, the extraction of relevant time intervals and regional connections from the conditional effect would be impossible.
+
+Second, it is possible that the cognitive strategies were stable within each subject, but those of my young subjects were  more diverse than those of my adults.
+Both cluster analysis and interval analysis are based on the assumption that all subjects in one group use the same cognitive strategy.
+If this assumption is true for adults, but not for children, different processing strategies could cancel each other out and produce no effect.
+Both the average localized activity and pooled single trials would be vulnerable to this violation.
+
+Third, it is possible that cognitive strategies varied within subjects for children, but not for adults.
+This circumstance would lead the conditional effect to appear in different regions over the course of the task.
+Mean regional activity would be blurred because the stationarity assumption would be violated, and the overall effect would be diminshed.
+
+\paragraph{Exploring the explanations}
+Unfortunately, in order to compare the first possibility, a ground truth for the dipole locations and activations would be necessary.
+This type of reference data is only available in phantom models, therefore the first possibility remains elusive for direct statistical tests.
+However, since neither set of localization software was designed for processing infant brains, this possibility remains the  default explanation.
+
+To decide whether the second possibility was responsible for the skewed results, I conducted two tests:
+First, if the cognitive processes were much more varied in children than in adults, this circumstance should be reflected in a more homogenuous evoked activity within the adults.
+To test this hypothesis, I calculated the individual deviation from the group-average activity and compared deviations between both groups.
+
+Second, if the cognitive strategy was less stable in children than in adults, localized activity in children should show more intra-subject variation.
+To test this hypothesis, I calculated the individual deviation from the individual-average activity and compared deviations between both groups.
+
+\paragraph{Test results}
+For the first test, localized pooled activity (evoked by object-relative clauses) was selected from the time window 0ms to 2200ms.
+The mean activity was computed from this selected activity from all subjects within each group.
+The difference between individual and mean activity was then computed for each cortical region, yielding a time series.
+Each time series was reduced to a single value by computing the variance over time.
+Variances from both groups were tested for systematic differences with Welch's test.
+The Welch test doesn't assume equal variances and allows for unequal sample sizes.
+It was implemented in Python with the function \emph{scipy.stats.ttest\_ind()}.
+Variances from both groups differed only weakly ($p \approx 5\%$, $t \approx -2.8$) after FDR correction with 8 comparisons.
+There was a considerable bias in six regions (all expect for pSTS and pSTG) towards higher group-level variances in adults.
+This finding weakened the second possibility (stronger inter-subject variation in children), and indirectly supported the first possibility (better localization in adults).
+
+The second test was based on the same data set as the first test.
+Reference activity was calculated by computing the mean of all trials from one subject.
+Then, the difference between single trials and the reference trial were computed and reduced by calculating the variance over time.
+A single value for each subject was determined by computing the mean of all subject-specific variances.
+Again, Welch's test compared individual variance scores between both groups.
+The FDR-corrected results (8 comparisons) yielded no significant ($p > 50\%$, $t \approx -1.0$) differences.
+This finding weakened the third possibility (stronger intra-subject variation in children), and indirectly supported the first possibility (better localization in adults).
+
+\paragraph{Conclusion}
+The deterioration of the syntactical effect in children before and after the source localization can not be explained by a wider spectrum of cognitive strategies.
+If anything, adults showed a wider, not a smaller variety of localized activity than children.
+By the refutation of the second and third possibilities, the first assumption was strengthened in comparison.
+Therefore, I had to conclude that the inverse solution for childrens' cortical activity failed to match the accuracy of the adults'.
+Without the spatio-temporal distribution of condition effects in children, the task of determining their relevant TOI and ROI for the following section showed little promise.\section{Source-space interactions}
+
+Transfer entropy was examined across 9 possible functional connections for five time intervals, spanning an interaction delay between 1ms and 50ms.
+Time intervals (relative to stimulus onset) are abbreviated with T1 (0ms - 200ms), T2 (200ms - 400ms), T3 (400ms - 600ms), T4 (600ms - 800ms) and T5 (800ms - 1000ms).
+
+First, transfer entropy was compared against surrogate data.
+The surrogate test determined whether the transfered entropy (TE) was erroneously detected due to random coincidence.
+The effective TE was calculated from the difference between surrogate TE and raw TE.
+These values are listed in tables \ref{4.4.TEvalues.a} and \ref{4.4.TEvalues.b}, and visualized in figures \ref{4.4.networkgraph.a} and \ref{4.4.networkgraph.b}.
+
+\vspace{5mm}
+\begin{table}[h]
+\begin{center}
+% Header design from http://www.tablesgenerator.com/
+\begin{tabular}{cccccccccccc}
+Origin & Target & \multicolumn{10}{c}{ORC condition}\\
+ROI & ROI & \multicolumn{5}{c}{Transfer Entropy} & \multicolumn{5}{c}{Probability}\\
+ & & T1 & T2 & T3 & T4 & \multicolumn{1}{c|}{T5} & T1 & T2 & T3 & T4 & T5\\ \hline
+ % Table contents created with assembleResults.m
+ pSTG & BA6v & N.S. & 67.8 & N.S. & N.S. & N.S. & 21\% & 5\% & 21\% & <1\% & 5\%\\ 
+PAC & pSTG & 19.0 & 15.1 & 14.3 & 20.5 & N.S. & <.1\% & <.1\% & <.1\% & <1\% & <.1\%\\ 
+pSTG & BA44 & N.S. & 38.2 & N.S. & 37.3 & N.S. & <1\% & <1\% & 5\% & 5\% & 21\%\\ 
+PAC & BA44 & 26.7 & N.S. & N.S. & N.S. & N.S. & 21\% & <1\% & 5\% & 21\% & 58\%\\ 
+PAC & aSTG & N.S. & N.S. & N.S. & N.S. & N.S. & 58\% & 58\% & 5\% & 5\% & 21\%\\ 
+aSTG & BA45 & N.S. & N.S. & N.S. & N.S. & N.S. & <1\% & 100\% & 100\% & 100\% & <1\%\\ 
+PAC & BA45 & N.S. & N.S. & N.S. & N.S. & N.S. & 5\% & 58\% & 58\% & 5\% & <1\%\\ 
+BA44 & BA45 & N.S. & 22.2 & N.S. & N.S. & N.S. & 5\% & <1\% & 58\% & 5\% & 21\%\\ 
+pSTG & aSTG & 29.2 & 19.6 & N.S. & 21.3 & 11.7 & <1\% & <1\% & <.1\% & 5\% & 21\%\\ 
+BA6v & pSTG & N.S. & 24.3 & 65.5 & 21.2 & 47.7 & <.1\% & <.1\% & <1\% & 5\% & <1\%\\ 
+pSTG & PAC & N.S. & 204.9 & N.S. & 68.9 & 16.4 & <.1\% & <.1\% & 5\% & <1\% & <.1\%\\ 
+BA44 & pSTG & N.S. & N.S. & N.S. & N.S. & 35.4 & 5\% & <.1\% & <1\% & <1\% & 5\%\\ 
+BA44 & PAC & 23.5 & 36.8 & N.S. & 28.2 & N.S. & <.1\% & 5\% & <1\% & 21\% & 58\%\\ 
+aSTG & PAC & 25.6 & N.S. & N.S. & N.S. & 20.7 & 58\% & 5\% & 21\% & 21\% & <1\%\\ 
+BA45 & aSTG & 207.1 & N.S. & N.S. & N.S. & 13.0 & 5\% & 58\% & <1\% & 58\% & <1\%\\ 
+BA45 & PAC & N.S. & N.S. & N.S. & 342.2 & N.S. & 5\% & 58\% & 5\% & <1\% & 5\%\\ 
+BA45 & BA44 & N.S. & N.S. & N.S. & N.S. & 25.2 & 58\% & 58\% & 58\% & 21\% & 58\%\\ 
+aSTG & pSTG & N.S. & N.S. & 20.4 & 43.1 & 28.0 & 21\% & 58\% & 5\% & 58\% & 21\%\\ 
+\end{tabular}
+\caption{\label{4.4.TEvalues.a} Transfer entropy and binomial test results for the interaction analysis between selected regions of interest for object-relative clauses. The field probability contains the likelihood that subject-specific significance values are randomly distributed. N.S.: not significant}
+\end{center}
+\end{table}
+\vspace{5mm}
+
+\begin{table}[h]
+\begin{center}
+% Header design from http://www.tablesgenerator.com/
+\begin{tabular}{cccccccccccc}
+Origin & Target & \multicolumn{10}{c}{SRC condition}\\
+ROI & ROI & \multicolumn{5}{c}{Transfer Entropy} & \multicolumn{5}{c}{Probability}\\
+ & & T1 & T2 & T3 & T4 & \multicolumn{1}{c|}{T5} & T1 & T2 & T3 & T4 & T5\\ \hline
+pSTG & BA6v & N.S. & N.S. & N.S. & N.S. & 21.0 & <1\% & <1\% & <1\% & <1\% & <1\%\\ 
+PAC & pSTG & 38.1 & 60.9 & N.S. & N.S. & N.S. & <.1\% & <1\% & <1\% & <1\% & <1\%\\ 
+pSTG & BA44 & N.S. & N.S. & 18.9 & N.S. & N.S. & <1\% & 5\% & <1\% & 5\% & <1\%\\ 
+PAC & BA44 & 32.4 & N.S. & 122.0 & N.S. & 31.6 & <.1\% & 21\% & <1\% & <1\% & 5\%\\ 
+PAC & aSTG & N.S. & N.S. & 23.8 & N.S. & N.S. & 21\% & 21\% & 5\% & 21\% & <1\%\\ 
+aSTG & BA45 & N.S. & 27.6 & 378.3 & 35.0 & N.S. & 21\% & 21\% & 5\% & 21\% & 58\%\\ 
+PAC & BA45 & N.S. & N.S. & N.S. & 21.7 & 27.9 & 21\% & 58\% & 21\% & <1\% & 21\%\\ 
+BA44 & BA45 & 24.8 & 13.7 & 17.3 & N.S. & 24.0 & 21\% & 58\% & <1\% & 21\% & 58\%\\ 
+pSTG & aSTG & 20.9 & N.S. & N.S. & 25.5 & N.S. & <1\% & 21\% & 5\% & 21\% & <.1\%\\ 
+BA6v & pSTG & 77.6 & 32.6 & N.S. & N.S. & 30.1 & <.1\% & <.1\% & <1\% & <1\% & <1\%\\ 
+pSTG & PAC & N.S. & N.S. & 19.0 & 31.2 & N.S. & <1\% & <1\% & <1\% & <.1\% & <.1\%\\ 
+BA44 & pSTG & N.S. & N.S. & 34.8 & N.S. & 28.2 & <1\% & <1\% & <1\% & 21\% & <.1\%\\ 
+BA44 & PAC & N.S. & N.S. & N.S. & N.S. & N.S. & 21\% & <.1\% & <1\% & 21\% & 5\%\\ 
+aSTG & PAC & N.S. & N.S. & N.S. & N.S. & N.S. & <1\% & 5\% & <1\% & 5\% & 21\%\\ 
+BA45 & aSTG & N.S. & N.S. & N.S. & N.S. & 34.3 & 58\% & <1\% & 21\% & 5\% & <1\%\\ 
+BA45 & PAC & N.S. & N.S. & 19.6 & 24.9 & N.S. & 58\% & <1\% & 21\% & 5\% & 5\%\\ 
+BA45 & BA44 & N.S. & N.S. & 58.8 & 56.6 & 17.4 & <1\% & 5\% & 21\% & 5\% & 58\%\\ 
+aSTG & pSTG & 19.0 & N.S. & 55.4 & 43.1 & 129.0 & 21\% & <.1\% & <.1\% & 5\% & <1\%\\ 
+\end{tabular}
+\caption{\label{4.4.TEvalues.b} Transfer entropy and binomial test results for the interaction analysis between selected regions of interest for subject-relative clauses. The field probability contains the likelihood that subject-specific significance values are randomly distributed. N.S.: not significant}
+\end{center}
+\end{table}
+\vspace{5mm}
+
+
+\begin{figure}[h]
+\begin{center}
+\vspace{7mm}
+\includegraphics[width=0.49\textwidth]{pics/TEobj/Slide1.png}
+\includegraphics[width=0.49\textwidth]{pics/TEsubj/Slide1.png}
+\caption{\label{4.4.networkgraph.a} Graph of significant functional connections between selected cortical regions. Arrow labels describe the estimated transfer entropy. Arrow thickness is relative to the effective transfer entropy. Left: Results from the ORC condition, Right: Results from the SRC condition. From top to bottom: Results from selected time interval T1.}
+\end{center}
+\end{figure}
+
+\begin{figure}[h]
+\begin{center}
+\vspace{7mm}
+\includegraphics[width=0.49\textwidth]{pics/TEobj/Slide2.png}
+\includegraphics[width=0.49\textwidth]{pics/TEsubj/Slide2.png}
+\includegraphics[width=0.49\textwidth]{pics/TEobj/Slide3.png}
+\includegraphics[width=0.49\textwidth]{pics/TEsubj/Slide3.png}
+\includegraphics[width=0.49\textwidth]{pics/TEobj/Slide4.png}
+\includegraphics[width=0.49\textwidth]{pics/TEsubj/Slide4.png}
+\includegraphics[width=0.49\textwidth]{pics/TEobj/Slide5.png}
+\includegraphics[width=0.49\textwidth]{pics/TEsubj/Slide5.png}
+\caption{\label{4.4.networkgraph.b} Graph of significant functional connections between selected cortical regions. Arrow labels describe the estimated transfer entropy. Arrow thickness is relative to the effective transfer entropy. Left: Results from the ORC condition, Right: Results from the SRC condition. From top to bottom: Results from selected time intervals T2 to T5.}
+\end{center}
+\end{figure}
+
+
+Second, the impact of the syntax condition on transfer entropy was determined with a group-level cluster comparison.
+Only three functional connections showed a significant syntax effect: $PAC_{lh} \rightarrow pSTG_{lh}$, $PAC_{lh} \rightarrow BA45_{lh}$ and $BA6v_{lh} \rightarrow pSTG_{lh}$.
+All of these syntax effects showed at the time intervals T4 and T5.
+$PAC_{lh} \rightarrow pSTG_{lh}$ and $BA6v_{lh} \rightarrow pSTG_{lh}$ showed a significantly stronger transfer entropy in the SRC condition than in the ORC condition ($p = 2.3\%$ and $0.2\%$, $t(17) = -2.2$ and $-3.7$).
+$PAC_{lh} \rightarrow BA45_{lh}$ showed a significantly weaker transfer entropy in the SRC condition than in the ORC condition ($p = 1.9\%$, $t(17) = 2.3$).
+No functional connections showed a syntax condition effect after correcting for multiple comparisons.

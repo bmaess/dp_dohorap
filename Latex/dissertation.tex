@@ -29,18 +29,17 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Dissertation by Stefan Zysset and Claudia Danielmeier %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\RequirePackage[l2tabu, orthodox]{nag}
 \documentclass[a4paper,11pt,twoside]{book}
 
 \usepackage[english]{babel}     % english, or usepackage[ngerman]{babel} for german
-\usepackage[ansinew]{inputenc}   % latin1 input encoding
+\usepackage[utf8]{inputenc}   % latin1 input encoding
 \usepackage[T1]{fontenc}        % font encoding
-\usepackage{biblatex}
-%\usepackage{apacite}            % citations style
+\usepackage{apacite}            % citations style
 \usepackage{graphicx}           % for including pictures
 \usepackage{color}              % for color stuff
 \usepackage{rotating}           % rotating tables, figures, ...
-\usepackage{subfigure}          % for side by side pictures
+%\usepackage{subfigure}          % for side by side pictures
 \usepackage{longtable}          % multiple pages tables 
 \usepackage{times}              % Adobe PostScript Fonts
 \usepackage{mathptm}            % Adobe PostScript Fonts
@@ -52,9 +51,8 @@
 \usepackage{multicol}           % text with multiple columns
 \usepackage{booktabs}           % formatting command for tables
 \usepackage{dcolumn}            % formatting command for tables
-%\usepackage{parskip}           % free line between paragraphs and no indentation on the next line
+\usepackage{parskip}           % free line between paragraphs and no indentation on the next line
 \usepackage{fancyhdr}           % adjust footer and header
-\usepackage{siunitx}
 \usepackage[inner=4cm,
             outer=3cm,
             top=3cm,
@@ -62,7 +60,10 @@
             includeheadfoot]{geometry} % Seitenlayout bei zweiseitigen Dokumenten (book, ...)
 
 \usepackage{german}
+\usepackage{siunitx}
 \usepackage{eurosym}
+\usepackage{url}
+\AtBeginDocument{\urlstyle{APACsame}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % new table and figure captions %
@@ -76,7 +77,7 @@
 % more formattings %
 %%%%%%%%%%%%%%%%%%%%
 
-\onehalfspacing % bzw. \doublespacing, \singlespacing, \onehalfspacing
+\doublespacing % bzw. \doublespacing, \singlespacing
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
 % penalty customization %
@@ -122,7 +123,6 @@
 %%%%%%%%
 
 \begin{document}
-\scrollmode
 
 %%%%%%%%%
 % title %
@@ -137,11 +137,11 @@
 %\input{chapter/thanks}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Wenn du möchtest, dass Vorspann, Hauptteil und Nachspann deines Dokuments seperat    %
+% Wenn du mï¿½chtest, dass Vorspann, Hauptteil und Nachspann deines Dokuments seperat    %
 % nummeriert werden, dann trenne diese Teile mittels \frontmatter, \mainmatter und     %
-% \backmatter. Alles zwischen den ersten beiden bekommt (standardmässig) römische      %
-% Ziffern, nach \mainmatter wird alphanumerisch gezählt (von Eins an), und \backmatter %
-% zählt (standardmässig) weiter, das lässt sich aber konfigurieren                     %
+% \backmatter. Alles zwischen den ersten beiden bekommt (standardmï¿½ssig) rï¿½mische      %
+% Ziffern, nach \mainmatter wird alphanumerisch gezï¿½hlt (von Eins an), und \backmatter %
+% zï¿½hlt (standardmï¿½ssig) weiter, das lï¿½sst sich aber konfigurieren                     %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \frontmatter
@@ -231,7 +231,7 @@
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Selbständigkeitserklärung %
+% Selbstï¿½ndigkeitserklï¿½rung %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \input{chapter/selbst}
 \newpage
@@ -241,4 +241,3 @@
 %%%%%%%
 
 \end{document}
-\batchmode

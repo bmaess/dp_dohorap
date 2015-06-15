@@ -5,6 +5,7 @@ cat ../"1.1 The role of white matter tracts in syntax processing.tex" >> "chapte
 cat ../"1.3 Experimental paradigm.tex" >> "chapter/Introduction.tex"
 cat ../"1.4 Research questions.tex" >> "chapter/Introduction.tex"
 cat ../"1.5 Choice of measurement methods.tex" >> "chapter/Introduction.tex"
+sed -i.bu "s/\`\`/\"'/g" "chapter/Introduction.tex"
 
 # Create the methods chapter
 echo "" > "chapter/Methods.tex"
@@ -12,6 +13,7 @@ cat ../"3.1. Participants and Stimuli.tex" >> "chapter/Methods.tex"
 cat ../"3.2. Data acquisition.tex" >> "chapter/Methods.tex"
 cat ../"3.3. Data analysis.tex" >> "chapter/Methods.tex"
 cat ../"3.4. Interaction analysis.tex" >> "chapter/Methods.tex"
+sed -i.bu "s/\`\`/\"'/g" "chapter/Methods.tex"
 
 # Create the results chapter
 echo "" > "chapter/Results.tex"
@@ -19,10 +21,12 @@ cat ../"4.1 Behavioral results.tex" >> "chapter/Results.tex"
 cat ../"4.2 Sensor-space activity.tex" >> "chapter/Results.tex"
 cat ../"4.3 Source-space activity.tex" >> "chapter/Results.tex"
 cat ../"4.4 Source-space interactions.tex" >> "chapter/Results.tex"
+sed -i.bu "s/\`\`/\"'/g" "chapter/Results.tex"
 
 # Create the discussion chapter
 echo "" > "chapter/Discussion.tex"
-#cat ../"5. Discussion.tex" >> "chapter/Discussion.tex"
+cat ../"5. Discussion.tex" >> "chapter/Discussion.tex"
+sed -i.bu "s/\`\`/\"'/g" "chapter/Discussion.tex"
 
 # Create the bibliography file
 echo "" > bibliography.bib
