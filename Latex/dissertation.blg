@@ -17,15 +17,15 @@ apacite.bst [2013/07/21 v6.03 APA bibliography style]
 Warning--No address in 1.5.L2
 You've used 64 entries,
             6951 wiz_defined-function locations,
-            1708 strings with 23771 characters,
-and the built_in function-call counts, 135728 in all, are:
-= -- 16318
+            1708 strings with 23768 characters,
+and the built_in function-call counts, 135706 in all, are:
+= -- 16316
 > -- 1218
-< -- 6977
-+ -- 7169
+< -- 6975
++ -- 7167
 - -- 129
-* -- 9210
-:= -- 25541
+* -- 9204
+:= -- 25531
 add.period$ -- 262
 call.type$ -- 64
 change.case$ -- 1107
@@ -34,7 +34,7 @@ cite$ -- 129
 duplicate$ -- 3788
 empty$ -- 5098
 format.name$ -- 2149
-if$ -- 25046
+if$ -- 25044
 int.to.chr$ -- 0
 int.to.str$ -- 196
 missing$ -- 0
@@ -44,9 +44,9 @@ pop$ -- 2006
 preamble$ -- 1
 purify$ -- 255
 quote$ -- 0
-skip$ -- 8377
+skip$ -- 8381
 stack$ -- 0
-substring$ -- 7724
+substring$ -- 7722
 swap$ -- 2224
 text.length$ -- 161
 text.prefix$ -- 0

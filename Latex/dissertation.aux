@@ -16,8 +16,8 @@
 \citation{1.1.smallWorld}
 \citation{1.1.fiberstats}
 \citation{1.1.Gierhan}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.3}The language network}{5}}
 \citation{1.1.pathways}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.3}The language network}{6}}
 \citation{1.1.Gierhan}
 \citation{1.1.Gierhan}
 \citation{1.1.tracts.lesions}
@@ -41,7 +41,7 @@
 \@writefile{toc}{\contentsline {paragraph}{Explorative questions}{11}}
 \@writefile{toc}{\contentsline {section}{\numberline {1.4}Choice of measurement methods}{12}}
 \newlabel{1.5}{{1.4}{12}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.1}Signal creation}{13}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.1}Signal creation}{12}}
 \citation{1.5.MEG.a}
 \citation{1.5.MEG.b}
 \citation{1.5.MEG.c}
@@ -59,20 +59,19 @@
 \citation{1.5.magneticProperties}
 \citation{1.5.tissues.a}
 \@writefile{toc}{\contentsline {paragraph}{Choice of acquisition methods}{15}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.3}Data preprocessing}{17}}
 \citation{1.5.highpass}
 \citation{1.5.ecg.a}
 \citation{1.5.ecg.b}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.3}Data preprocessing}{18}}
 \@writefile{toc}{\contentsline {paragraph}{DC bias removal}{18}}
 \@writefile{toc}{\contentsline {paragraph}{Artifact removal}{18}}
 \citation{1.5.Kriegeskorte}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.4}Timewindow estimation}{20}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.4}Timewindow estimation}{19}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.5}Source localization}{20}}
+\@writefile{toc}{\contentsline {paragraph}{Motivation}{20}}
 \citation{1.5.Beamformer-a}
 \citation{1.5.Beamformer-b}
 \citation{1.5.synchronicity}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.5}Source localization}{21}}
-\@writefile{toc}{\contentsline {paragraph}{Motivation}{21}}
-\@writefile{toc}{\contentsline {paragraph}{Source reconstruction methods}{21}}
 \citation{1.5.music}
 \citation{1.5.simplex}
 \citation{1.5.L2}
@@ -80,23 +79,24 @@
 \citation{1.5.dSPM}
 \citation{1.5.MNE}
 \citation{1.5.sLORETA}
+\@writefile{toc}{\contentsline {paragraph}{Source reconstruction methods}{21}}
 \citation{1.5.information}
 \citation{1.5.causality}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.6}Information transfer}{23}}
 \citation{1.5.connectivity}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.6}Information transfer}{23}}
+\@writefile{toc}{\contentsline {paragraph}{Two types of information interaction}{23}}
 \citation{1.5.SEM}
 \citation{1.5.DCM}
-\@writefile{toc}{\contentsline {paragraph}{Two types of information interaction}{24}}
-\@writefile{toc}{\contentsline {paragraph}{Choice of analysis approach}{24}}
 \citation{1.5.Granger}
+\@writefile{toc}{\contentsline {paragraph}{Choice of analysis approach}{24}}
+\@writefile{toc}{\contentsline {paragraph}{Granger-Causality derivatives}{24}}
 \citation{1.5.PDC}
 \citation{1.5.gPDC}
-\@writefile{toc}{\contentsline {paragraph}{Granger-Causality derivatives}{25}}
 \citation{1.5.TEcomparison}
 \citation{3.4.TE.a}
 \citation{3.4.TE.b}
 \citation{3.4.Trentool}
-\@writefile{toc}{\contentsline {paragraph}{Information-theoretic approaches}{26}}
+\@writefile{toc}{\contentsline {paragraph}{Information-theoretic approaches}{25}}
 \@writefile{toc}{\contentsline {chapter}{\numberline {2}Pilot Study}{27}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
@@ -178,9 +178,9 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces  Selected regions of interest on the reference brain. Top: selected regions on the folded cortex. Bottom: selected regions on the inflated cortex.\relax }}{49}}
 \newlabel{3.3.ROI}{{3.7}{49}}
 \citation{3.4.Trentool}
+\citation{3.4.gpuTE}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3.4}Interaction analysis}{50}}
 \@writefile{toc}{\contentsline {paragraph}{Preparation}{50}}
-\citation{3.4.gpuTE}
 \citation{1.1.pathways}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces  Connections of selected cortical regions for the computation of transfered entropy.\relax }}{52}}
 \newlabel{3.4.regions}{{3.8}{52}}
@@ -250,7 +250,136 @@
 \bibstyle{apacite}
 \citation{AFIFI98}
 \bibdata{bibliography}
+\bibcite{1.5.gPDC}{\citeauthoryear {Baccala, Takahashi,{}\ \BBA{} Sameshima}{Baccala\ \BOthers {.}}{{\APACyear {2007}}}}
+\APACbibcite{1.5.gPDC}{\citeauthoryear {Baccala, Takahashi,{}\ \BBA{} Sameshima}{Baccala\ \BOthers {.}}{{\APACyear {2007}}}}
+\bibcite{1.5.MEG.b}{\citeauthoryear {Baillet, Mosher,{}\ \BBA{} Leahy}{Baillet\ \BOthers {.}}{{\APACyear {2001}}}}
+\APACbibcite{1.5.MEG.b}{\citeauthoryear {Baillet, Mosher,{}\ \BBA{} Leahy}{Baillet\ \BOthers {.}}{{\APACyear {2001}}}}
+\bibcite{1.5.Beamformer-b}{\citeauthoryear {Barnes\ \BBA{} Hillebrand}{Barnes\ \BBA{} Hillebrand}{{\APACyear {2003}}}}
+\APACbibcite{1.5.Beamformer-b}{\citeauthoryear {Barnes\ \BBA{} Hillebrand}{Barnes\ \BBA{} Hillebrand}{{\APACyear {2003}}}}
+\bibcite{3.4.FDR.a}{\citeauthoryear {Benjamini\ \BBA{} Hochberg}{Benjamini\ \BBA{} Hochberg}{{\APACyear {1995}}}}
+\APACbibcite{3.4.FDR.a}{\citeauthoryear {Benjamini\ \BBA{} Hochberg}{Benjamini\ \BBA{} Hochberg}{{\APACyear {1995}}}}
+\bibcite{1.1.firstDiffusion}{\citeauthoryear {Bihan\ \BOthers {.}}{Bihan\ \BOthers {.}}{{\APACyear {1986}}}}
+\APACbibcite{1.1.firstDiffusion}{\citeauthoryear {Bihan\ \BOthers {.}}{Bihan\ \BOthers {.}}{{\APACyear {1986}}}}
+\bibcite{1.3.Bornkessel}{\citeauthoryear {Bornkessel, Zysset, Friederici, Cramon,{}\ \BBA{} Schlesewsky}{Bornkessel\ \BOthers {.}}{{\APACyear {2005}}}}
+\APACbibcite{1.3.Bornkessel}{\citeauthoryear {Bornkessel, Zysset, Friederici, Cramon,{}\ \BBA{} Schlesewsky}{Bornkessel\ \BOthers {.}}{{\APACyear {2005}}}}
+\bibcite{1.3.Constable}{\citeauthoryear {Constable\ \BOthers {.}}{Constable\ \BOthers {.}}{{\APACyear {2004}}}}
+\APACbibcite{1.3.Constable}{\citeauthoryear {Constable\ \BOthers {.}}{Constable\ \BOthers {.}}{{\APACyear {2004}}}}
+\@writefile{toc}{\contentsline {chapter}{References}{83}}
+\bibcite{1.5.magneticProperties}{\citeauthoryear {Cullity\ \BBA{} Graham}{Cullity\ \BBA{} Graham}{{\APACyear {2008}}}}
+\APACbibcite{1.5.magneticProperties}{\citeauthoryear {Cullity\ \BBA{} Graham}{Cullity\ \BBA{} Graham}{{\APACyear {2008}}}}
+\bibcite{1.5.dSPM}{\citeauthoryear {Dale\ \BOthers {.}}{Dale\ \BOthers {.}}{{\APACyear {2000}}}}
+\APACbibcite{1.5.dSPM}{\citeauthoryear {Dale\ \BOthers {.}}{Dale\ \BOthers {.}}{{\APACyear {2000}}}}
+\bibcite{1.5.SEM}{\citeauthoryear {Darvas\ \BBA{} Leahy}{Darvas\ \BBA{} Leahy}{{\APACyear {1999}}}}
+\APACbibcite{1.5.SEM}{\citeauthoryear {Darvas\ \BBA{} Leahy}{Darvas\ \BBA{} Leahy}{{\APACyear {1999}}}}
+\bibcite{1.5.DCM}{\citeauthoryear {David\ \BOthers {.}}{David\ \BOthers {.}}{{\APACyear {2006}}}}
+\APACbibcite{1.5.DCM}{\citeauthoryear {David\ \BOthers {.}}{David\ \BOthers {.}}{{\APACyear {2006}}}}
+\bibcite{1.1.tracts.interference.b}{\citeauthoryear {Duffau\ \BOthers {.}}{Duffau\ \BOthers {.}}{{\APACyear {2005}}}}
+\APACbibcite{1.1.tracts.interference.b}{\citeauthoryear {Duffau\ \BOthers {.}}{Duffau\ \BOthers {.}}{{\APACyear {2005}}}}
+\bibcite{1.1.D1a}{\citeauthoryear {A.~Friederici}{A.~Friederici}{{\APACyear {2012}}}}
+\APACbibcite{1.1.D1a}{\citeauthoryear {A.~Friederici}{A.~Friederici}{{\APACyear {2012}}}}
+\bibcite{1.1.pathways}{\citeauthoryear {A\BPBI  D.~Friederici\ \BBA{} Gierhan}{A\BPBI  D.~Friederici\ \BBA{} Gierhan}{{\APACyear {2013}}}}
+\APACbibcite{1.1.pathways}{\citeauthoryear {A\BPBI  D.~Friederici\ \BBA{} Gierhan}{A\BPBI  D.~Friederici\ \BBA{} Gierhan}{{\APACyear {2013}}}}
+\bibcite{1.1.tracts.lesions}{\citeauthoryear {Galantucci\ \BOthers {.}}{Galantucci\ \BOthers {.}}{{\APACyear {2011}}}}
+\APACbibcite{1.1.tracts.lesions}{\citeauthoryear {Galantucci\ \BOthers {.}}{Galantucci\ \BOthers {.}}{{\APACyear {2011}}}}
+\bibcite{1.5.TEcomparison}{\citeauthoryear {Garofalo, Nieus, Massobrio,{}\ \BBA{} S.}{Garofalo\ \BOthers {.}}{{\APACyear {2009}}}}
+\APACbibcite{1.5.TEcomparison}{\citeauthoryear {Garofalo, Nieus, Massobrio,{}\ \BBA{} S.}{Garofalo\ \BOthers {.}}{{\APACyear {2009}}}}
+\bibcite{1.5.tissues.a}{\citeauthoryear {Geddes\ \BBA{} Baker}{Geddes\ \BBA{} Baker}{{\APACyear {1967}}}}
+\APACbibcite{1.5.tissues.a}{\citeauthoryear {Geddes\ \BBA{} Baker}{Geddes\ \BBA{} Baker}{{\APACyear {1967}}}}
+\bibcite{1.1.Gierhan}{\citeauthoryear {Gierhan}{Gierhan}{{\APACyear {2013}}}}
+\APACbibcite{1.1.Gierhan}{\citeauthoryear {Gierhan}{Gierhan}{{\APACyear {2013}}}}
+\bibcite{3.3.MNEpython}{\citeauthoryear {Gramfort\ \BOthers {.}}{Gramfort\ \BOthers {.}}{{\APACyear {2013}}{\APACexlab {{\BCnt {1}}}}}}
+\APACbibcite{3.3.MNEpython}{\citeauthoryear {Gramfort\ \BOthers {.}}{Gramfort\ \BOthers {.}}{{\APACyear {2013}}{\APACexlab {{\BCnt {1}}}}}}
+\bibcite{3.3.MNE}{\citeauthoryear {Gramfort\ \BOthers {.}}{Gramfort\ \BOthers {.}}{{\APACyear {2013}}{\APACexlab {{\BCnt {2}}}}}}
+\APACbibcite{3.3.MNE}{\citeauthoryear {Gramfort\ \BOthers {.}}{Gramfort\ \BOthers {.}}{{\APACyear {2013}}{\APACexlab {{\BCnt {2}}}}}}
+\bibcite{1.5.Granger}{\citeauthoryear {Granger}{Granger}{{\APACyear {1969}}}}
+\APACbibcite{1.5.Granger}{\citeauthoryear {Granger}{Granger}{{\APACyear {1969}}}}
+\bibcite{3.4.FDR.implementation}{\citeauthoryear {Groppe}{Groppe}{{\APACyear {2015}}}}
+\APACbibcite{3.4.FDR.implementation}{\citeauthoryear {Groppe}{Groppe}{{\APACyear {2015}}}}
+\bibcite{1.5.MEG.a}{\citeauthoryear {H\active@dq  \dq@prtct{a}m\active@dq  \dq@prtct{a}l\active@dq  \dq@prtct{a}inen, Hari, Ilmoniemi, Knuutila,{}\ \BBA{} Lounasmaa}{H\active@dq  \dq@prtct{a}m\active@dq  \dq@prtct{a}l\active@dq  \dq@prtct{a}inen\ \BOthers {.}}{{\APACyear {1993}}}}
+\APACbibcite{1.5.MEG.a}{\citeauthoryear {H\active@dq  \dq@prtct{a}m\active@dq  \dq@prtct{a}l\active@dq  \dq@prtct{a}inen, Hari, Ilmoniemi, Knuutila,{}\ \BBA{} Lounasmaa}{H\active@dq  \dq@prtct{a}m\active@dq  \dq@prtct{a}l\active@dq  \dq@prtct{a}inen\ \BOthers {.}}{{\APACyear {1993}}}}
+\bibcite{1.5.L2}{\citeauthoryear {H\active@dq  \dq@prtct{a}m\active@dq  \dq@prtct{a}l\active@dq  \dq@prtct{a}inen\ \BBA{} Ilmoniemi}{H\active@dq  \dq@prtct{a}m\active@dq  \dq@prtct{a}l\active@dq  \dq@prtct{a}inen\ \BBA{} Ilmoniemi}{{\APACyear {1984}}}}
+\APACbibcite{1.5.L2}{\citeauthoryear {H\active@dq  \dq@prtct{a}m\active@dq  \dq@prtct{a}l\active@dq  \dq@prtct{a}inen\ \BBA{} Ilmoniemi}{H\active@dq  \dq@prtct{a}m\active@dq  \dq@prtct{a}l\active@dq  \dq@prtct{a}inen\ \BBA{} Ilmoniemi}{{\APACyear {1984}}}}
+\bibcite{1.5.MNE}{\citeauthoryear {H\active@dq  \dq@prtct{a}m\active@dq  \dq@prtct{a}l\active@dq  \dq@prtct{a}inen\ \BBA{} Ilmoniemi}{H\active@dq  \dq@prtct{a}m\active@dq  \dq@prtct{a}l\active@dq  \dq@prtct{a}inen\ \BBA{} Ilmoniemi}{{\APACyear {1994}}}}
+\APACbibcite{1.5.MNE}{\citeauthoryear {H\active@dq  \dq@prtct{a}m\active@dq  \dq@prtct{a}l\active@dq  \dq@prtct{a}inen\ \BBA{} Ilmoniemi}{H\active@dq  \dq@prtct{a}m\active@dq  \dq@prtct{a}l\active@dq  \dq@prtct{a}inen\ \BBA{} Ilmoniemi}{{\APACyear {1994}}}}
+\bibcite{1.1.tracts.interference.a}{\citeauthoryear {Hamer, Moritz-Gasser, Gatignol,{}\ \BBA{} Duffau}{Hamer\ \BOthers {.}}{{\APACyear {2011}}}}
+\APACbibcite{1.1.tracts.interference.a}{\citeauthoryear {Hamer, Moritz-Gasser, Gatignol,{}\ \BBA{} Duffau}{Hamer\ \BOthers {.}}{{\APACyear {2011}}}}
+\bibcite{1.5.tissues.b}{\citeauthoryear {Haueisen}{Haueisen}{{\APACyear {1996}}}}
+\APACbibcite{1.5.tissues.b}{\citeauthoryear {Haueisen}{Haueisen}{{\APACyear {1996}}}}
+\bibcite{1.5.sensitivity}{\citeauthoryear {Hillebrand\ \BBA{} Barnes}{Hillebrand\ \BBA{} Barnes}{{\APACyear {2002}}}}
+\APACbibcite{1.5.sensitivity}{\citeauthoryear {Hillebrand\ \BBA{} Barnes}{Hillebrand\ \BBA{} Barnes}{{\APACyear {2002}}}}
+\bibcite{1.5.simplex}{\citeauthoryear {Huang\ \BOthers {.}}{Huang\ \BOthers {.}}{{\APACyear {1998}}}}
+\APACbibcite{1.5.simplex}{\citeauthoryear {Huang\ \BOthers {.}}{Huang\ \BOthers {.}}{{\APACyear {1998}}}}
+\bibcite{1.5.causality}{\citeauthoryear {J.T.\ \BBA{} M.}{J.T.\ \BBA{} M.}{{\APACyear {2010}}}}
+\APACbibcite{1.5.causality}{\citeauthoryear {J.T.\ \BBA{} M.}{J.T.\ \BBA{} M.}{{\APACyear {2010}}}}
+\bibcite{1.5.Kriegeskorte}{\citeauthoryear {Kriegeskorte\ \BBA{} Bandettini}{Kriegeskorte\ \BBA{} Bandettini}{{\APACyear {2007}}}}
+\APACbibcite{1.5.Kriegeskorte}{\citeauthoryear {Kriegeskorte\ \BBA{} Bandettini}{Kriegeskorte\ \BBA{} Bandettini}{{\APACyear {2007}}}}
+\bibcite{3.2.space}{\citeauthoryear {Lichy\ \BOthers {.}}{Lichy\ \BOthers {.}}{{\APACyear {2005}}}}
+\APACbibcite{3.2.space}{\citeauthoryear {Lichy\ \BOthers {.}}{Lichy\ \BOthers {.}}{{\APACyear {2005}}}}
+\bibcite{3.4.Trentool}{\citeauthoryear {Lindner, Vicente, Priesemann,{}\ \BBA{} Wibral}{Lindner\ \BOthers {.}}{{\APACyear {2011}}}}
+\APACbibcite{3.4.Trentool}{\citeauthoryear {Lindner, Vicente, Priesemann,{}\ \BBA{} Wibral}{Lindner\ \BOthers {.}}{{\APACyear {2011}}}}
+\bibcite{3.3.clustertest}{\citeauthoryear {Maris\ \BBA{} Oostenveld}{Maris\ \BBA{} Oostenveld}{{\APACyear {2007}}}}
+\APACbibcite{3.3.clustertest}{\citeauthoryear {Maris\ \BBA{} Oostenveld}{Maris\ \BBA{} Oostenveld}{{\APACyear {2007}}}}
+\bibcite{1.5.ecg.a}{\citeauthoryear {McSharry, Clifford, Tarassenko,{}\ \BBA{} Smith}{McSharry\ \BOthers {.}}{{\APACyear {2003}}}}
+\APACbibcite{1.5.ecg.a}{\citeauthoryear {McSharry, Clifford, Tarassenko,{}\ \BBA{} Smith}{McSharry\ \BOthers {.}}{{\APACyear {2003}}}}
+\bibcite{1.1.causality}{\citeauthoryear {Meyer, Cunitz, Obleser,{}\ \BBA{} Friederici}{Meyer\ \BOthers {.}}{{\APACyear {2014}}}}
+\APACbibcite{1.1.causality}{\citeauthoryear {Meyer, Cunitz, Obleser,{}\ \BBA{} Friederici}{Meyer\ \BOthers {.}}{{\APACyear {2014}}}}
+\bibcite{1.5.music}{\citeauthoryear {Mosher\ \BBA{} Leahy}{Mosher\ \BBA{} Leahy}{{\APACyear {1998}}}}
+\APACbibcite{1.5.music}{\citeauthoryear {Mosher\ \BBA{} Leahy}{Mosher\ \BBA{} Leahy}{{\APACyear {1998}}}}
+\bibcite{3.2.mprage}{\citeauthoryear {Mugler\ \BBA{} Brookeman}{Mugler\ \BBA{} Brookeman}{{\APACyear {1991}}}}
+\APACbibcite{3.2.mprage}{\citeauthoryear {Mugler\ \BBA{} Brookeman}{Mugler\ \BBA{} Brookeman}{{\APACyear {1991}}}}
+\bibcite{3.1.LQ}{\citeauthoryear {Oldfield}{Oldfield}{{\APACyear {1971}}}}
+\APACbibcite{3.1.LQ}{\citeauthoryear {Oldfield}{Oldfield}{{\APACyear {1971}}}}
+\bibcite{1.5.sLORETA}{\citeauthoryear {Pascual-Marqui}{Pascual-Marqui}{{\APACyear {2002}}}}
+\APACbibcite{1.5.sLORETA}{\citeauthoryear {Pascual-Marqui}{Pascual-Marqui}{{\APACyear {2002}}}}
+\bibcite{1.5.synchronicity}{\citeauthoryear {{\em  Principles of Neural Science\/}}{{\em  Principles of Neural Science\/}}{{\APACyear {2000}}}}
+\APACbibcite{1.5.synchronicity}{\citeauthoryear {{\em  Principles of Neural Science\/}}{{\em  Principles of Neural Science\/}}{{\APACyear {2000}}}}
+\bibcite{3.4.binomialtest}{\citeauthoryear {R.\ \BBA{} Solanas}{R.\ \BBA{} Solanas}{{\APACyear {2012}}}}
+\APACbibcite{3.4.binomialtest}{\citeauthoryear {R.\ \BBA{} Solanas}{R.\ \BBA{} Solanas}{{\APACyear {2012}}}}
+\bibcite{1.5.connectivity}{\citeauthoryear {Sakkalis}{Sakkalis}{{\APACyear {2011}}}}
+\APACbibcite{1.5.connectivity}{\citeauthoryear {Sakkalis}{Sakkalis}{{\APACyear {2011}}}}
+\bibcite{1.5.ecg.b}{\citeauthoryear {Sands, Appel, Lilly, Schoen,{}\ \BBA{} Mudge}{Sands\ \BOthers {.}}{{\APACyear {1989}}}}
+\APACbibcite{1.5.ecg.b}{\citeauthoryear {Sands, Appel, Lilly, Schoen,{}\ \BBA{} Mudge}{Sands\ \BOthers {.}}{{\APACyear {1989}}}}
+\bibcite{1.1.D1b}{\citeauthoryear {Saur\ \BOthers {.}}{Saur\ \BOthers {.}}{{\APACyear {2008}}}}
+\APACbibcite{1.1.D1b}{\citeauthoryear {Saur\ \BOthers {.}}{Saur\ \BOthers {.}}{{\APACyear {2008}}}}
+\bibcite{1.5.PDC}{\citeauthoryear {Schelter, Timmer,{}\ \BBA{} Eichler}{Schelter\ \BOthers {.}}{{\APACyear {2009}}}}
+\APACbibcite{1.5.PDC}{\citeauthoryear {Schelter, Timmer,{}\ \BBA{} Eichler}{Schelter\ \BOthers {.}}{{\APACyear {2009}}}}
+\bibcite{3.1.animals}{\citeauthoryear {Schipke, Friederici,{}\ \BBA{} Oberecker}{Schipke\ \BOthers {.}}{{\APACyear {2011}}}}
+\APACbibcite{3.1.animals}{\citeauthoryear {Schipke, Friederici,{}\ \BBA{} Oberecker}{Schipke\ \BOthers {.}}{{\APACyear {2011}}}}
+\bibcite{1.1.history}{\citeauthoryear {Schmahmann\ \BBA{} Pandya}{Schmahmann\ \BBA{} Pandya}{{\APACyear {2007}}}}
+\APACbibcite{1.1.history}{\citeauthoryear {Schmahmann\ \BBA{} Pandya}{Schmahmann\ \BBA{} Pandya}{{\APACyear {2007}}}}
+\bibcite{3.4.TE.a}{\citeauthoryear {Schreiber}{Schreiber}{{\APACyear {2000}}}}
+\APACbibcite{3.4.TE.a}{\citeauthoryear {Schreiber}{Schreiber}{{\APACyear {2000}}}}
+\bibcite{3.3.levtest}{\citeauthoryear {Schultz}{Schultz}{{\APACyear {1985}}}}
+\APACbibcite{3.3.levtest}{\citeauthoryear {Schultz}{Schultz}{{\APACyear {1985}}}}
+\bibcite{1.1.fiberstats}{\citeauthoryear {Schuz\ \BBA{} Braitenberg}{Schuz\ \BBA{} Braitenberg}{{\APACyear {2002}}}}
+\APACbibcite{1.1.fiberstats}{\citeauthoryear {Schuz\ \BBA{} Braitenberg}{Schuz\ \BBA{} Braitenberg}{{\APACyear {2002}}}}
+\bibcite{3.3.swtest}{\citeauthoryear {Shapiro\ \BBA{} Wilk}{Shapiro\ \BBA{} Wilk}{{\APACyear {1965}}}}
+\APACbibcite{3.3.swtest}{\citeauthoryear {Shapiro\ \BBA{} Wilk}{Shapiro\ \BBA{} Wilk}{{\APACyear {1965}}}}
+\bibcite{1.1.smallWorld}{\citeauthoryear {Sporns, Chialvo, Kaiser,{}\ \BBA{} Hilgetag}{Sporns\ \BOthers {.}}{{\APACyear {2004}}}}
+\APACbibcite{1.1.smallWorld}{\citeauthoryear {Sporns, Chialvo, Kaiser,{}\ \BBA{} Hilgetag}{Sporns\ \BOthers {.}}{{\APACyear {2004}}}}
+\bibcite{3.3.SSS}{\citeauthoryear {Taulu, Kajola,{}\ \BBA{} Simola}{Taulu\ \BOthers {.}}{{\APACyear {2004}}}}
+\APACbibcite{3.3.SSS}{\citeauthoryear {Taulu, Kajola,{}\ \BBA{} Simola}{Taulu\ \BOthers {.}}{{\APACyear {2004}}}}
+\bibcite{1.5.highpass}{\citeauthoryear {Tervaniemi\ \BOthers {.}}{Tervaniemi\ \BOthers {.}}{{\APACyear {1999}}}}
+\APACbibcite{1.5.highpass}{\citeauthoryear {Tervaniemi\ \BOthers {.}}{Tervaniemi\ \BOthers {.}}{{\APACyear {1999}}}}
+\bibcite{1.5.Beamformer-a}{\citeauthoryear {{Van Veen}, Van~Drongelen, Yuchtman,{}\ \BBA{} Suzuki}{{Van Veen}\ \BOthers {.}}{{\APACyear {1997}}}}
+\APACbibcite{1.5.Beamformer-a}{\citeauthoryear {{Van Veen}, Van~Drongelen, Yuchtman,{}\ \BBA{} Suzuki}{{Van Veen}\ \BOthers {.}}{{\APACyear {1997}}}}
+\bibcite{3.4.TE.b}{\citeauthoryear {Vicente, Wibral, Linder,{}\ \BBA{} Pipa}{Vicente\ \BOthers {.}}{{\APACyear {2011}}}}
+\APACbibcite{3.4.TE.b}{\citeauthoryear {Vicente, Wibral, Linder,{}\ \BBA{} Pipa}{Vicente\ \BOthers {.}}{{\APACyear {2011}}}}
+\bibcite{1.5.SNR}{\citeauthoryear {Volegov, Matlachov, Mosher, Espy,{}\ \BBA{} Kraus}{Volegov\ \BOthers {.}}{{\APACyear {2004}}}}
+\APACbibcite{1.5.SNR}{\citeauthoryear {Volegov, Matlachov, Mosher, Espy,{}\ \BBA{} Kraus}{Volegov\ \BOthers {.}}{{\APACyear {2004}}}}
+\bibcite{1.5.MEG.c}{\citeauthoryear {Vrba\ \BBA{} Robinson}{Vrba\ \BBA{} Robinson}{{\APACyear {2001}}}}
+\APACbibcite{1.5.MEG.c}{\citeauthoryear {Vrba\ \BBA{} Robinson}{Vrba\ \BBA{} Robinson}{{\APACyear {2001}}}}
+\bibcite{1.5.L1}{\citeauthoryear {Wagner, Fuchs, Wischmann, Drenckhahn,{}\ \BBA{} K\active@dq  \dq@prtct{o}hler}{Wagner\ \BOthers {.}}{{\APACyear {1996}}}}
+\APACbibcite{1.5.L1}{\citeauthoryear {Wagner, Fuchs, Wischmann, Drenckhahn,{}\ \BBA{} K\active@dq  \dq@prtct{o}hler}{Wagner\ \BOthers {.}}{{\APACyear {1996}}}}
+\bibcite{1.5.information}{\citeauthoryear {Wiener}{Wiener}{{\APACyear {1956}}}}
+\APACbibcite{1.5.information}{\citeauthoryear {Wiener}{Wiener}{{\APACyear {1956}}}}
+\bibcite{3.3.TrentoolTutorial}{\citeauthoryear {Wollstadt\ \BOthers {.}}{Wollstadt\ \BOthers {.}}{{\APACyear {2015}}}}
+\APACbibcite{3.3.TrentoolTutorial}{\citeauthoryear {Wollstadt\ \BOthers {.}}{Wollstadt\ \BOthers {.}}{{\APACyear {2015}}}}
+\bibcite{3.4.gpuTE}{\citeauthoryear {Wollstadt, M,{}\ \BBA{} Vicente}{Wollstadt\ \BOthers {.}}{{\APACyear {2014}}}}
+\APACbibcite{3.4.gpuTE}{\citeauthoryear {Wollstadt, M,{}\ \BBA{} Vicente}{Wollstadt\ \BOthers {.}}{{\APACyear {2014}}}}
+\bibcite{3.3.nuintensity}{\citeauthoryear {Zheng, Chee,{}\ \BBA{} Zagorodnov}{Zheng\ \BOthers {.}}{{\APACyear {2009}}}}
+\APACbibcite{3.3.nuintensity}{\citeauthoryear {Zheng, Chee,{}\ \BBA{} Zagorodnov}{Zheng\ \BOthers {.}}{{\APACyear {2009}}}}
 \citation{1.1.Gierhan}
 \citation{1.1.Gierhan}
-\@writefile{toc}{\contentsline {chapter}{List of Figures}{83}}
-\@writefile{toc}{\contentsline {chapter}{List of Tables}{87}}
+\@writefile{toc}{\contentsline {chapter}{List of Figures}{91}}
+\@writefile{toc}{\contentsline {chapter}{List of Tables}{95}}
