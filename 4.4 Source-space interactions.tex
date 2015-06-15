@@ -12,62 +12,61 @@ These values are listed in tables \ref{4.4.TEvalues.a} and \ref{4.4.TEvalues.b},
 \begin{table}[h]
 \begin{center}
 % Header design from http://www.tablesgenerator.com/
-\begin{tabular}{cccccccccccc}
-Origin & Target & \multicolumn{10}{c}{ORC condition}\\
-ROI & ROI & \multicolumn{5}{c}{Transfer Entropy} & \multicolumn{5}{c}{Probability}\\
- & & T1 & T2 & T3 & T4 & \multicolumn{1}{c|}{T5} & T1 & T2 & T3 & T4 & T5\\ \hline
+\begin{tabular}{ccccccc}
+Origin ROI & Target ROI & \multicolumn{5}{c}{TE in ORC condition} \\
+           &            &      T1 & T2 & T3 & T4 & T5             \\ \hline
+
  % Table contents created with assembleResults.m
- pSTG & BA6v & N.S. & 67.8 & N.S. & N.S. & N.S. & 21\% & 5\% & 21\% & <1\% & 5\%\\ 
-PAC & pSTG & 19.0 & 15.1 & 14.3 & 20.5 & N.S. & <.1\% & <.1\% & <.1\% & <1\% & <.1\%\\ 
-pSTG & BA44 & N.S. & 38.2 & N.S. & 37.3 & N.S. & <1\% & <1\% & 5\% & 5\% & 21\%\\ 
-PAC & BA44 & 26.7 & N.S. & N.S. & N.S. & N.S. & 21\% & <1\% & 5\% & 21\% & 58\%\\ 
-PAC & aSTG & N.S. & N.S. & N.S. & N.S. & N.S. & 58\% & 58\% & 5\% & 5\% & 21\%\\ 
-aSTG & BA45 & N.S. & N.S. & N.S. & N.S. & N.S. & <1\% & 100\% & 100\% & 100\% & <1\%\\ 
-PAC & BA45 & N.S. & N.S. & N.S. & N.S. & N.S. & 5\% & 58\% & 58\% & 5\% & <1\%\\ 
-BA44 & BA45 & N.S. & 22.2 & N.S. & N.S. & N.S. & 5\% & <1\% & 58\% & 5\% & 21\%\\ 
-pSTG & aSTG & 29.2 & 19.6 & N.S. & 21.3 & 11.7 & <1\% & <1\% & <.1\% & 5\% & 21\%\\ 
-BA6v & pSTG & N.S. & 24.3 & 65.5 & 21.2 & 47.7 & <.1\% & <.1\% & <1\% & 5\% & <1\%\\ 
-pSTG & PAC & N.S. & 204.9 & N.S. & 68.9 & 16.4 & <.1\% & <.1\% & 5\% & <1\% & <.1\%\\ 
-BA44 & pSTG & N.S. & N.S. & N.S. & N.S. & 35.4 & 5\% & <.1\% & <1\% & <1\% & 5\%\\ 
-BA44 & PAC & 23.5 & 36.8 & N.S. & 28.2 & N.S. & <.1\% & 5\% & <1\% & 21\% & 58\%\\ 
-aSTG & PAC & 25.6 & N.S. & N.S. & N.S. & 20.7 & 58\% & 5\% & 21\% & 21\% & <1\%\\ 
-BA45 & aSTG & 207.1 & N.S. & N.S. & N.S. & 13.0 & 5\% & 58\% & <1\% & 58\% & <1\%\\ 
-BA45 & PAC & N.S. & N.S. & N.S. & 342.2 & N.S. & 5\% & 58\% & 5\% & <1\% & 5\%\\ 
-BA45 & BA44 & N.S. & N.S. & N.S. & N.S. & 25.2 & 58\% & 58\% & 58\% & 21\% & 58\%\\ 
-aSTG & pSTG & N.S. & N.S. & 20.4 & 43.1 & 28.0 & 21\% & 58\% & 5\% & 58\% & 21\%\\ 
+pSTG & BA6v & $-$ & $67.8^{+}$ & $-$ & $-$ & $-$ \\ 
+PAC & pSTG & $19.0^{***}$ & $15.1^{***}$ & $14.3^{***}$ & $20.5^{**}$ & $-$ \\ 
+pSTG & BA44 & $-$ & $38.2^{**}$ & $-$ & $37.3^{+}$ & $-$ \\ 
+PAC & BA44 & $26.7$ & $-$ & $-$ & $-$ & $-$ \\ 
+PAC & aSTG & $-$ & $-$ & $-$ & $-$ & $-$ \\ 
+aSTG & BA45 & $-$ & $-$ & $-$ & $-$ & $-$ \\ 
+PAC & BA45 & $-$ & $-$ & $-$ & $-$ & $-$ \\ 
+BA44 & BA45 & $-$ & $22.2^{**}$ & $-$ & $-$ & $-$ \\ 
+pSTG & aSTG & $29.2^{**}$ & $19.6^{**}$ & $-$ & $21.3^{+}$ & $11.7$ \\ 
+BA6v & pSTG & $-$ & $24.3^{***}$ & $65.5^{**}$ & $21.2^{+}$ & $47.7^{**}$ \\ 
+pSTG & PAC & $-$ & $204.9^{***}$ & $-$ & $68.9^{**}$ & $16.4^{***}$ \\ 
+BA44 & pSTG & $-$ & $-$ & $-$ & $-$ & $35.4^{+}$ \\ 
+BA44 & PAC & $23.5^{***}$ & $36.8^{+}$ & $-$ & $28.2$ & $-$ \\ 
+aSTG & PAC & $25.6$ & $-$ & $-$ & $-$ & $20.7^{**}$ \\ 
+BA45 & aSTG & $207.1^{+}$ & $-$ & $-$ & $-$ & $13.0^{**}$ \\ 
+BA45 & PAC & $-$ & $-$ & $-$ & $342.2^{**}$ & $-$ \\ 
+BA45 & BA44 & $-$ & $-$ & $-$ & $-$ & $25.2$ \\ 
+aSTG & pSTG & $-$ & $-$ & $20.4^{+}$ & $43.1$ & $28.0$ \\ 
 \end{tabular}
-\caption{\label{4.4.TEvalues.a} Transfer entropy and binomial test results for the interaction analysis between selected regions of interest for object-relative clauses. The field probability contains the likelihood that subject-specific significance values are randomly distributed. N.S.: not significant}
+\caption{\label{4.4.TEvalues.a} Transfer entropy and binomial test results for the interaction analysis between selected regions of interest for subject-relative clauses. Abbreviations for the probability that interaction test results can be explained by random variance: + (p < 10\%), * (p < 5\%), ** (p < 1\%), ** (p < 0.1\%). Fields with a $-$ did not reach significance in any subject.}
 \end{center}
 \end{table}
 \vspace{5mm}
 
 \begin{table}[h]
 \begin{center}
-% Header design from http://www.tablesgenerator.com/
-\begin{tabular}{cccccccccccc}
-Origin & Target & \multicolumn{10}{c}{SRC condition}\\
-ROI & ROI & \multicolumn{5}{c}{Transfer Entropy} & \multicolumn{5}{c}{Probability}\\
- & & T1 & T2 & T3 & T4 & \multicolumn{1}{c|}{T5} & T1 & T2 & T3 & T4 & T5\\ \hline
-pSTG & BA6v & N.S. & N.S. & N.S. & N.S. & 21.0 & <1\% & <1\% & <1\% & <1\% & <1\%\\ 
-PAC & pSTG & 38.1 & 60.9 & N.S. & N.S. & N.S. & <.1\% & <1\% & <1\% & <1\% & <1\%\\ 
-pSTG & BA44 & N.S. & N.S. & 18.9 & N.S. & N.S. & <1\% & 5\% & <1\% & 5\% & <1\%\\ 
-PAC & BA44 & 32.4 & N.S. & 122.0 & N.S. & 31.6 & <.1\% & 21\% & <1\% & <1\% & 5\%\\ 
-PAC & aSTG & N.S. & N.S. & 23.8 & N.S. & N.S. & 21\% & 21\% & 5\% & 21\% & <1\%\\ 
-aSTG & BA45 & N.S. & 27.6 & 378.3 & 35.0 & N.S. & 21\% & 21\% & 5\% & 21\% & 58\%\\ 
-PAC & BA45 & N.S. & N.S. & N.S. & 21.7 & 27.9 & 21\% & 58\% & 21\% & <1\% & 21\%\\ 
-BA44 & BA45 & 24.8 & 13.7 & 17.3 & N.S. & 24.0 & 21\% & 58\% & <1\% & 21\% & 58\%\\ 
-pSTG & aSTG & 20.9 & N.S. & N.S. & 25.5 & N.S. & <1\% & 21\% & 5\% & 21\% & <.1\%\\ 
-BA6v & pSTG & 77.6 & 32.6 & N.S. & N.S. & 30.1 & <.1\% & <.1\% & <1\% & <1\% & <1\%\\ 
-pSTG & PAC & N.S. & N.S. & 19.0 & 31.2 & N.S. & <1\% & <1\% & <1\% & <.1\% & <.1\%\\ 
-BA44 & pSTG & N.S. & N.S. & 34.8 & N.S. & 28.2 & <1\% & <1\% & <1\% & 21\% & <.1\%\\ 
-BA44 & PAC & N.S. & N.S. & N.S. & N.S. & N.S. & 21\% & <.1\% & <1\% & 21\% & 5\%\\ 
-aSTG & PAC & N.S. & N.S. & N.S. & N.S. & N.S. & <1\% & 5\% & <1\% & 5\% & 21\%\\ 
-BA45 & aSTG & N.S. & N.S. & N.S. & N.S. & 34.3 & 58\% & <1\% & 21\% & 5\% & <1\%\\ 
-BA45 & PAC & N.S. & N.S. & 19.6 & 24.9 & N.S. & 58\% & <1\% & 21\% & 5\% & 5\%\\ 
-BA45 & BA44 & N.S. & N.S. & 58.8 & 56.6 & 17.4 & <1\% & 5\% & 21\% & 5\% & 58\%\\ 
-aSTG & pSTG & 19.0 & N.S. & 55.4 & 43.1 & 129.0 & 21\% & <.1\% & <.1\% & 5\% & <1\%\\ 
+\begin{tabular}{ccccccc}
+Origin ROI & Target ROI & \multicolumn{5}{c}{TE in SRC condition} \\
+           &            &      T1 & T2 & T3 & T4 & T5             \\ \hline
+
+pSTG & BA6v & $-$ & $-$ & $-$ & $-$ & $21.0^{**}$ \\ 
+PAC & pSTG & $38.1^{***}$ & $60.9^{**}$ & $-$ & $-$ & $-$ \\ 
+pSTG & BA44 & $-$ & $-$ & $18.9^{**}$ & $-$ & $-$ \\ 
+PAC & BA44 & $32.4^{***}$ & $-$ & $122.0^{**}$ & $-$ & $31.6^{+}$ \\ 
+PAC & aSTG & $-$ & $-$ & $23.8^{+}$ & $-$ & $-$ \\ 
+aSTG & BA45 & $-$ & $27.6$ & $378.3^{+}$ & $35.0$ & $-$ \\ 
+PAC & BA45 & $-$ & $-$ & $-$ & $21.7^{**}$ & $27.9$ \\ 
+BA44 & BA45 & $24.8$ & $13.7$ & $17.3^{**}$ & $-$ & $24.0$ \\ 
+pSTG & aSTG & $20.9^{**}$ & $-$ & $-$ & $25.5$ & $-$ \\ 
+BA6v & pSTG & $77.6^{***}$ & $32.6^{***}$ & $-$ & $-$ & $30.1^{**}$ \\ 
+pSTG & PAC & $-$ & $-$ & $19.0^{**}$ & $31.2^{***}$ & $-$ \\ 
+BA44 & pSTG & $-$ & $-$ & $34.8^{**}$ & $-$ & $28.2^{***}$ \\ 
+BA44 & PAC & $-$ & $-$ & $-$ & $-$ & $-$ \\ 
+aSTG & PAC & $-$ & $-$ & $-$ & $-$ & $-$ \\ 
+BA45 & aSTG & $-$ & $-$ & $-$ & $-$ & $34.3^{**}$ \\ 
+BA45 & PAC & $-$ & $-$ & $19.6$ & $24.9^{+}$ & $-$ \\ 
+BA45 & BA44 & $-$ & $-$ & $58.8$ & $56.6^{+}$ & $17.4$ \\ 
+aSTG & pSTG & $19.0$ & $-$ & $55.4^{***}$ & $43.1^{+}$ & $129.0^{**}$ \\ 
 \end{tabular}
-\caption{\label{4.4.TEvalues.b} Transfer entropy and binomial test results for the interaction analysis between selected regions of interest for subject-relative clauses. The field probability contains the likelihood that subject-specific significance values are randomly distributed. N.S.: not significant}
+\caption{\label{4.4.TEvalues.b} Transfer entropy and binomial test results for the interaction analysis between selected regions of interest for subject-relative clauses. Abbreviations for the probability that interaction test results can be explained by random variance: + (p < 10\%), * (p < 5\%), ** (p < 1\%), ** (p < 0.1\%). Fields with a $-$ did not reach significance in any subject.}
 \end{center}
 \end{table}
 \vspace{5mm}

@@ -2,28 +2,28 @@
 \contentsline {section}{\numberline {1.1}Neurobiological background}{1}
 \contentsline {subsection}{\numberline {1.1.1}Exploration strategies of white matter tracts}{1}
 \contentsline {subsection}{\numberline {1.1.2}The role of myelination}{3}
-\contentsline {subsection}{\numberline {1.1.3}The language network}{5}
+\contentsline {subsection}{\numberline {1.1.3}The language network}{6}
 \contentsline {section}{\numberline {1.2}Experimental paradigm}{8}
 \contentsline {section}{\numberline {1.3}Hypotheses}{11}
 \contentsline {paragraph}{Replicating earlier results}{11}
 \contentsline {paragraph}{Explorative questions}{11}
 \contentsline {section}{\numberline {1.4}Choice of measurement methods}{12}
-\contentsline {subsection}{\numberline {1.4.1}Signal creation}{12}
+\contentsline {subsection}{\numberline {1.4.1}Signal creation}{13}
 \contentsline {subsection}{\numberline {1.4.2}Signal Acquisition}{14}
 \contentsline {paragraph}{Available acquisition methods}{14}
 \contentsline {paragraph}{Choice of acquisition methods}{15}
-\contentsline {subsection}{\numberline {1.4.3}Data preprocessing}{17}
+\contentsline {subsection}{\numberline {1.4.3}Data preprocessing}{18}
 \contentsline {paragraph}{DC bias removal}{18}
 \contentsline {paragraph}{Artifact removal}{18}
-\contentsline {subsection}{\numberline {1.4.4}Timewindow estimation}{19}
-\contentsline {subsection}{\numberline {1.4.5}Source localization}{20}
-\contentsline {paragraph}{Motivation}{20}
+\contentsline {subsection}{\numberline {1.4.4}Timewindow estimation}{20}
+\contentsline {subsection}{\numberline {1.4.5}Source localization}{21}
+\contentsline {paragraph}{Motivation}{21}
 \contentsline {paragraph}{Source reconstruction methods}{21}
 \contentsline {subsection}{\numberline {1.4.6}Information transfer}{23}
-\contentsline {paragraph}{Two types of information interaction}{23}
+\contentsline {paragraph}{Two types of information interaction}{24}
 \contentsline {paragraph}{Choice of analysis approach}{24}
-\contentsline {paragraph}{Granger-Causality derivatives}{24}
-\contentsline {paragraph}{Information-theoretic approaches}{25}
+\contentsline {paragraph}{Granger-Causality derivatives}{25}
+\contentsline {paragraph}{Information-theoretic approaches}{26}
 \contentsline {chapter}{\numberline {2}Pilot Study}{27}
 \contentsline {paragraph}{Experimental paradigm}{27}
 \contentsline {paragraph}{Participants}{27}

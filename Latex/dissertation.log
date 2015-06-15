@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.6.14)  15 JUN 2015 13:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.6.14)  15 JUN 2015 15:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1226,12 +1226,6 @@ Underfull \vbox (badness 2818) has occurred while \output is active []
  [1
 
 ]
-
-LaTeX Warning: Citation `1.1.history' undefined on input line 16.
-
-
-LaTeX Warning: Citation `1.1.firstDiffusion' undefined on input line 26.
-
 <pics/1_1_myelin_sheath.jpg, id=40, 123.3408pt x 70.94505pt>
 File: pics/1_1_myelin_sheath.jpg Graphic file (type jpg)
 
@@ -1248,22 +1242,12 @@ Package nag Warning: `center' environment in figure.
 (nag)                Maybe you want \centering instead on input line 35.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [2]
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 50.
- (/usr/local/texlive/2015basic/texmf-dist/tex/latex/psnfss/ts1ptm.fd
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)
-Underfull \vbox (badness 7238) has occurred while \output is active []
-
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -1271,10 +1255,18 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [3 <./pics/1_1_myelin_sheath.jpg>]
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 50.
 
-LaTeX Warning: Citation `1.1.smallWorld' undefined on input line 59.
+(/usr/local/texlive/2015basic/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
 
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
 
+[4]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1284,23 +1276,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[4]
-
-LaTeX Warning: Citation `1.1.fiberstats' undefined on input line 80.
-
-
-LaTeX Warning: Citation `1.1.Gierhan' undefined on input line 89.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
 [5]
-
-LaTeX Warning: Citation `1.1.pathways' undefined on input line 103.
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -1326,17 +1302,6 @@ Package nag Warning: `center' environment in figure.
 (nag)                Maybe you want \centering instead on input line 115.
 
 
-LaTeX Warning: Citation `1.1.tracts.lesions' undefined on input line 130.
-
-
-LaTeX Warning: Citation `1.1.tracts.interference.a' undefined on input line 130
-.
-
-
-LaTeX Warning: Citation `1.1.tracts.interference.b' undefined on input line 130
-.
-
-
 Underfull \vbox (badness 2285) has occurred while \output is active []
 
 
@@ -1349,15 +1314,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [7
 
  <./pics/1_1_tracts_ventral.png> <./pics/1_1_tracts_dorsal.png>]
-
-LaTeX Warning: Citation `1.1.D1a' undefined on input line 135.
-
-
-LaTeX Warning: Citation `1.1.D1b' undefined on input line 135.
-
-
-LaTeX Warning: Citation `1.1.causality' undefined on input line 141.
-
 <pics/1_1_tracts_function.png, id=69, 978.65625pt x 657.45625pt>
 File: pics/1_1_tracts_function.png Graphic file (type png)
 
@@ -1371,10 +1327,6 @@ Package nag Warning: `center' environment in figure.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \vbox (badness 1418) has occurred while \output is active []
-
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1393,11 +1345,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [9 <./pics/1_1_tracts_function.png>]
+Underfull \vbox (badness 2495) has occurred while \output is active []
 
-LaTeX Warning: Citation `1.3.Constable' undefined on input line 189.
-
-
-LaTeX Warning: Citation `1.3.Bornkessel' undefined on input line 200.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1413,6 +1362,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [11]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -1420,7 +1372,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [12]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1038) has occurred while \output is active []
 
 
 
@@ -1431,37 +1383,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [13]
 
-LaTeX Warning: Citation `1.5.MEG.a' undefined on input line 296.
-
-
-LaTeX Warning: Citation `1.5.MEG.b' undefined on input line 296.
-
-
-LaTeX Warning: Citation `1.5.MEG.c' undefined on input line 296.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [14]
-
-LaTeX Warning: Citation `1.5.SNR' undefined on input line 311.
-
-
-LaTeX Warning: Citation `1.5.sensitivity' undefined on input line 314.
-
-
-LaTeX Warning: Citation `1.5.tissues.b' undefined on input line 321.
-
-
-LaTeX Warning: Citation `1.5.tissues.a' undefined on input line 322.
-
 LaTeX Font Info:    External font `cmex7' loaded for size
 (Font)              <7> on input line 326.
 LaTeX Font Info:    External font `cmex7' loaded for size
@@ -1473,12 +1400,6 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 326.
 
-LaTeX Warning: Citation `1.5.magneticProperties' undefined on input line 326.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -1486,9 +1407,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [15]
-Underfull \vbox (badness 1248) has occurred while \output is active []
-
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -1496,7 +1414,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [16]
-Underfull \vbox (badness 1824) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
@@ -1507,23 +1425,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [17]
 
-LaTeX Warning: Citation `1.5.highpass' undefined on input line 381.
-
-
-LaTeX Warning: Citation `1.5.ecg.a' undefined on input line 389.
-
-
-LaTeX Warning: Citation `1.5.ecg.b' undefined on input line 390.
-
-
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [18]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Warning: Citation `1.5.Kriegeskorte' undefined on input line 425.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1532,6 +1441,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [19]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -1539,40 +1451,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [20]
-
-LaTeX Warning: Citation `1.5.Beamformer-a' undefined on input line 454.
-
-
-LaTeX Warning: Citation `1.5.Beamformer-b' undefined on input line 454.
-
-
-LaTeX Warning: Citation `1.5.synchronicity' undefined on input line 458.
-
-
-LaTeX Warning: Citation `1.5.music' undefined on input line 463.
-
-
-LaTeX Warning: Citation `1.5.simplex' undefined on input line 463.
-
-
-LaTeX Warning: Citation `1.5.L2' undefined on input line 478.
-
-
-LaTeX Warning: Citation `1.5.L1' undefined on input line 479.
-
-
-LaTeX Warning: Citation `1.5.dSPM' undefined on input line 481.
-
-
-LaTeX Warning: Citation `1.5.MNE' undefined on input line 481.
-
-
-LaTeX Warning: Citation `1.5.sLORETA' undefined on input line 481.
-
-
-Underfull \vbox (badness 2005) has occurred while \output is active []
-
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -1590,17 +1468,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [22]
-
-LaTeX Warning: Citation `1.5.information' undefined on input line 501.
-
-
-LaTeX Warning: Citation `1.5.causality' undefined on input line 508.
-
-
-LaTeX Warning: Citation `1.5.connectivity' undefined on input line 510.
-
-
-Underfull \vbox (badness 6016) has occurred while \output is active []
+Underfull \vbox (badness 1831) has occurred while \output is active []
 
 
 
@@ -1611,47 +1479,22 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [23]
 
-LaTeX Warning: Citation `1.5.SEM' undefined on input line 523.
-
-
-LaTeX Warning: Citation `1.5.DCM' undefined on input line 523.
-
-
-LaTeX Warning: Citation `1.5.Granger' undefined on input line 530.
-
-
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [24]
-
-LaTeX Warning: Citation `1.5.PDC' undefined on input line 536.
-
-
-LaTeX Warning: Citation `1.5.gPDC' undefined on input line 545.
+Underfull \vbox (badness 4699) has occurred while \output is active []
 
 
-LaTeX Warning: Citation `1.5.TEcomparison' undefined on input line 551.
-
-
-LaTeX Warning: Citation `3.4.TE.a' undefined on input line 552.
-
-
-LaTeX Warning: Citation `3.4.TE.b' undefined on input line 552.
-
-
-LaTeX Warning: Citation `3.4.Trentool' undefined on input line 560.
-
-) (./chapter/Pilotstudy.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[25]
+[25]) (./chapter/Pilotstudy.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -1763,9 +1606,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [34]
 Chapter 3.
-
-LaTeX Warning: Citation `3.1.LQ' undefined on input line 14.
-
 [35
 
 ]
@@ -1792,9 +1632,6 @@ Package pdftex.def Info: pics/3_1_screen.png used on input line 90.
 
 Package nag Warning: `center' environment in figure.
 (nag)                Maybe you want \centering instead on input line 92.
-
-
-LaTeX Warning: Citation `3.1.animals' undefined on input line 95.
 
 <pics/3_1_activities.png, id=173, 2492.31125pt x 380.42125pt>
 File: pics/3_1_activities.png Graphic file (type png)
@@ -1898,30 +1735,12 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <8> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 194.
 
 
-LaTeX Warning: Citation `3.2.mprage' undefined on input line 211.
-
-
-LaTeX Warning: Citation `3.2.space' undefined on input line 213.
-
-
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [42]
-
-LaTeX Warning: Citation `3.3.MNE' undefined on input line 220.
-
-
-LaTeX Warning: Citation `3.3.MNEpython' undefined on input line 220.
-
-
-LaTeX Warning: Citation `3.3.swtest' undefined on input line 232.
-
-
-LaTeX Warning: Citation `3.3.levtest' undefined on input line 233.
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -1930,18 +1749,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [43]
 
-LaTeX Warning: Citation `3.3.SSS' undefined on input line 244.
-
-
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [44]
-
-LaTeX Warning: Citation `3.3.clustertest' undefined on input line 270.
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -1982,9 +1795,6 @@ Package nag Warning: `center' environment in figure.
 (nag)                Maybe you want \centering instead on input line 290.
 
 
-LaTeX Warning: Citation `3.3.nuintensity' undefined on input line 299.
-
-
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
@@ -1993,6 +1803,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [46 <./pics/3_3_occipital_sensors.png (PNG copy)> <./pics/3_3_parietal_sensors.
 png (PNG copy)> <./pics/3_3_temporal_sensors.png (PNG copy)> <./pics/3_3_fronta
 l_sensors.png (PNG copy)>]
+Underfull \vbox (badness 1424) has occurred while \output is active []
+
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -2054,16 +1867,15 @@ Package nag Warning: `center' environment in figure.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \vbox (badness 4699) has occurred while \output is active []
-
-
-
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [48]
+Underfull \vbox (badness 4595) has occurred while \output is active []
+
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -2073,9 +1885,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [49 <./pics/dh55a-pial-lh.png (PNG copy)> <./pics/dh55a-pial-rh.png (PNG copy)>
  <./pics/dh55a-inflated-lh.png (PNG copy)> <./pics/dh55a-inflated-rh.png (PNG c
 opy)> <./pics/3_3_ROIlegend.png>]
-
-LaTeX Warning: Citation `3.4.gpuTE' undefined on input line 409.
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -2108,16 +1917,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [52 <./pics/3_4_regions.png>]
 
-LaTeX Warning: Citation `3.3.TrentoolTutorial' undefined on input line 457.
-
-
-LaTeX Warning: Reference `Appendix.A' on page 53 undefined on input line 484.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
@@ -2125,10 +1924,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [53]
 
-LaTeX Warning: Reference `Appendix.A' on page 54 undefined on input line 495.
+LaTeX Warning: Reference `Appendix.A' on page 54 undefined on input line 484.
 
 
-Underfull \vbox (badness 1533) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
@@ -2138,8 +1937,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [54]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
+LaTeX Warning: Reference `Appendix.A' on page 55 undefined on input line 495.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2147,17 +1946,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[55]
-
-LaTeX Warning: Citation `3.4.binomialtest' undefined on input line 523.
-
-
-LaTeX Warning: Citation `3.4.FDR.a' undefined on input line 524.
-
-
-LaTeX Warning: Citation `3.4.FDR.implementation' undefined on input line 524.
-
-) (./chapter/Results.tex
+[55]) (./chapter/Results.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -2914,22 +2703,20 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [74]
-Overfull \hbox (38.26573pt too wide) in paragraph at lines 323--347
- [] 
- []
+LaTeX Font Info:    External font `cmex7' loaded for size
+(Font)              <7.4> on input line 347.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 347.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 347.
 
 
 Package nag Warning: `center' environment in table.
 (nag)                Maybe you want \centering instead on input line 348.
 
 
-Overfull \hbox (26.98677pt too wide) in paragraph at lines 355--378
- [] 
- []
-
-
 Package nag Warning: `center' environment in table.
-(nag)                Maybe you want \centering instead on input line 379.
+(nag)                Maybe you want \centering instead on input line 378.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -2938,19 +2725,19 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: pics/TEobj/Slide1.png Graphic file (type png)
 
 <use pics/TEobj/Slide1.png>
-Package pdftex.def Info: pics/TEobj/Slide1.png used on input line 387.
+Package pdftex.def Info: pics/TEobj/Slide1.png used on input line 386.
 (pdftex.def)             Requested size: 195.1881pt x 126.01744pt.
 
 <pics/TEsubj/Slide1.png, id=398, 1606.0pt x 937.5025pt>
 File: pics/TEsubj/Slide1.png Graphic file (type png)
 
 <use pics/TEsubj/Slide1.png>
-Package pdftex.def Info: pics/TEsubj/Slide1.png used on input line 388.
+Package pdftex.def Info: pics/TEsubj/Slide1.png used on input line 387.
 (pdftex.def)             Requested size: 195.1881pt x 113.94026pt.
 
 
 Package nag Warning: `center' environment in figure.
-(nag)                Maybe you want \centering instead on input line 390.
+(nag)                Maybe you want \centering instead on input line 389.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -2959,61 +2746,61 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: pics/TEobj/Slide2.png Graphic file (type png)
 
 <use pics/TEobj/Slide2.png>
-Package pdftex.def Info: pics/TEobj/Slide2.png used on input line 396.
+Package pdftex.def Info: pics/TEobj/Slide2.png used on input line 395.
 (pdftex.def)             Requested size: 195.1881pt x 126.01744pt.
 
 <pics/TEsubj/Slide2.png, id=400, 1606.0pt x 937.5025pt>
 File: pics/TEsubj/Slide2.png Graphic file (type png)
 
 <use pics/TEsubj/Slide2.png>
-Package pdftex.def Info: pics/TEsubj/Slide2.png used on input line 397.
+Package pdftex.def Info: pics/TEsubj/Slide2.png used on input line 396.
 (pdftex.def)             Requested size: 195.1881pt x 113.94026pt.
 
 <pics/TEobj/Slide3.png, id=401, 1606.0pt x 1036.87375pt>
 File: pics/TEobj/Slide3.png Graphic file (type png)
 
 <use pics/TEobj/Slide3.png>
-Package pdftex.def Info: pics/TEobj/Slide3.png used on input line 398.
+Package pdftex.def Info: pics/TEobj/Slide3.png used on input line 397.
 (pdftex.def)             Requested size: 195.1881pt x 126.01744pt.
 
 <pics/TEsubj/Slide3.png, id=402, 1606.0pt x 937.5025pt>
 File: pics/TEsubj/Slide3.png Graphic file (type png)
 
 <use pics/TEsubj/Slide3.png>
-Package pdftex.def Info: pics/TEsubj/Slide3.png used on input line 399.
+Package pdftex.def Info: pics/TEsubj/Slide3.png used on input line 398.
 (pdftex.def)             Requested size: 195.1881pt x 113.94026pt.
 
 <pics/TEobj/Slide4.png, id=403, 1606.0pt x 1036.87375pt>
 File: pics/TEobj/Slide4.png Graphic file (type png)
 
 <use pics/TEobj/Slide4.png>
-Package pdftex.def Info: pics/TEobj/Slide4.png used on input line 400.
+Package pdftex.def Info: pics/TEobj/Slide4.png used on input line 399.
 (pdftex.def)             Requested size: 195.1881pt x 126.01744pt.
 
 <pics/TEsubj/Slide4.png, id=404, 1606.0pt x 937.5025pt>
 File: pics/TEsubj/Slide4.png Graphic file (type png)
 
 <use pics/TEsubj/Slide4.png>
-Package pdftex.def Info: pics/TEsubj/Slide4.png used on input line 401.
+Package pdftex.def Info: pics/TEsubj/Slide4.png used on input line 400.
 (pdftex.def)             Requested size: 195.1881pt x 113.94026pt.
 
 <pics/TEobj/Slide5.png, id=405, 1606.0pt x 1036.87375pt>
 File: pics/TEobj/Slide5.png Graphic file (type png)
 
 <use pics/TEobj/Slide5.png>
-Package pdftex.def Info: pics/TEobj/Slide5.png used on input line 402.
+Package pdftex.def Info: pics/TEobj/Slide5.png used on input line 401.
 (pdftex.def)             Requested size: 195.1881pt x 126.01744pt.
 
 <pics/TEsubj/Slide5.png, id=406, 1606.0pt x 937.5025pt>
 File: pics/TEsubj/Slide5.png Graphic file (type png)
 
 <use pics/TEsubj/Slide5.png>
-Package pdftex.def Info: pics/TEsubj/Slide5.png used on input line 403.
+Package pdftex.def Info: pics/TEsubj/Slide5.png used on input line 402.
 (pdftex.def)             Requested size: 195.1881pt x 113.94026pt.
 
 
 Package nag Warning: `center' environment in figure.
-(nag)                Maybe you want \centering instead on input line 405.
+(nag)                Maybe you want \centering instead on input line 404.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -3227,11 +3014,11 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 15047 strings out of 494501
- 306288 string characters out of 6167030
- 328380 words of memory out of 5000000
- 17945 multiletter control sequences out of 15000+600000
- 90155 words of font info for 123 fonts, out of 8000000 for 9000
+ 15119 strings out of 494501
+ 307485 string characters out of 6167030
+ 328237 words of memory out of 5000000
+ 18015 multiletter control sequences out of 15000+600000
+ 96696 words of font info for 137 fonts, out of 8000000 for 9000
  320 hyphenation exceptions out of 8191
  39i,12n,48p,10399b,771s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015basic/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/lo
@@ -3245,7 +3032,7 @@ ymr10.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/urw/symbol/usyr.
 pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><
 /usr/local/texlive/2015basic/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/
 local/texlive/2015basic/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on dissertation.pdf (108 pages, 8878997 bytes).
+Output written on dissertation.pdf (108 pages, 8881544 bytes).
 PDF statistics:
  531 PDF objects out of 1000 (max. 8388607)
  271 compressed objects within 3 object streams

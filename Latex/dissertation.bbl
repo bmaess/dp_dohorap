@@ -265,7 +265,7 @@ Dale, A.%
   statistical parametric mapping: combining fmri and meg for high-resolution
   imaging of cortical activity}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Neuron.}{26}{1}{55–67}.
+\APACjournalVolNumPages{Neuron}{26}{1}{55–67}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -1760,7 +1760,8 @@ Wiener, N.%
 {\BBOQ}\APACrefatitle {The theory of prediction} {The theory of
   prediction}.{\BBCQ}
 \newblock
-\BIn{} E.~Beckmann\ (\BED), .
+\BIn{} E.~Beckmann\ (\BED), \APACrefbtitle {Modern Mathematics for the
+  Engineer.} {Modern mathematics for the engineer.}
 \newblock
 \APACaddressPublisher{}{McGraw-Hill, New York}.
 \PrintBackRefs{\CurrentBib}
