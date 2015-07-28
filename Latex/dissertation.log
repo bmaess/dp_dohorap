@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.6.14)  15 JUN 2015 15:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.6.14)  15 JUN 2015 15:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2703,13 +2703,16 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [74]
+
+LaTeX Warning: Reference `4.4.networkgraph.b' on page 75 undefined on input lin
+e 317.
+
 LaTeX Font Info:    External font `cmex7' loaded for size
 (Font)              <7.4> on input line 347.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 347.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 347.
-
 
 Package nag Warning: `center' environment in table.
 (nag)                Maybe you want \centering instead on input line 348.
@@ -2735,72 +2738,87 @@ File: pics/TEsubj/Slide1.png Graphic file (type png)
 Package pdftex.def Info: pics/TEsubj/Slide1.png used on input line 387.
 (pdftex.def)             Requested size: 195.1881pt x 113.94026pt.
 
-
-Package nag Warning: `center' environment in figure.
-(nag)                Maybe you want \centering instead on input line 389.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 <pics/TEobj/Slide2.png, id=399, 1606.0pt x 1036.87375pt>
 File: pics/TEobj/Slide2.png Graphic file (type png)
 
 <use pics/TEobj/Slide2.png>
-Package pdftex.def Info: pics/TEobj/Slide2.png used on input line 395.
+Package pdftex.def Info: pics/TEobj/Slide2.png used on input line 388.
 (pdftex.def)             Requested size: 195.1881pt x 126.01744pt.
 
 <pics/TEsubj/Slide2.png, id=400, 1606.0pt x 937.5025pt>
 File: pics/TEsubj/Slide2.png Graphic file (type png)
 
 <use pics/TEsubj/Slide2.png>
-Package pdftex.def Info: pics/TEsubj/Slide2.png used on input line 396.
+Package pdftex.def Info: pics/TEsubj/Slide2.png used on input line 389.
 (pdftex.def)             Requested size: 195.1881pt x 113.94026pt.
 
 <pics/TEobj/Slide3.png, id=401, 1606.0pt x 1036.87375pt>
 File: pics/TEobj/Slide3.png Graphic file (type png)
 
 <use pics/TEobj/Slide3.png>
-Package pdftex.def Info: pics/TEobj/Slide3.png used on input line 397.
+Package pdftex.def Info: pics/TEobj/Slide3.png used on input line 390.
 (pdftex.def)             Requested size: 195.1881pt x 126.01744pt.
 
 <pics/TEsubj/Slide3.png, id=402, 1606.0pt x 937.5025pt>
 File: pics/TEsubj/Slide3.png Graphic file (type png)
 
 <use pics/TEsubj/Slide3.png>
-Package pdftex.def Info: pics/TEsubj/Slide3.png used on input line 398.
+Package pdftex.def Info: pics/TEsubj/Slide3.png used on input line 391.
 (pdftex.def)             Requested size: 195.1881pt x 113.94026pt.
 
 <pics/TEobj/Slide4.png, id=403, 1606.0pt x 1036.87375pt>
 File: pics/TEobj/Slide4.png Graphic file (type png)
 
 <use pics/TEobj/Slide4.png>
-Package pdftex.def Info: pics/TEobj/Slide4.png used on input line 399.
+Package pdftex.def Info: pics/TEobj/Slide4.png used on input line 392.
 (pdftex.def)             Requested size: 195.1881pt x 126.01744pt.
 
 <pics/TEsubj/Slide4.png, id=404, 1606.0pt x 937.5025pt>
 File: pics/TEsubj/Slide4.png Graphic file (type png)
 
 <use pics/TEsubj/Slide4.png>
-Package pdftex.def Info: pics/TEsubj/Slide4.png used on input line 400.
+Package pdftex.def Info: pics/TEsubj/Slide4.png used on input line 393.
 (pdftex.def)             Requested size: 195.1881pt x 113.94026pt.
 
 <pics/TEobj/Slide5.png, id=405, 1606.0pt x 1036.87375pt>
 File: pics/TEobj/Slide5.png Graphic file (type png)
 
 <use pics/TEobj/Slide5.png>
-Package pdftex.def Info: pics/TEobj/Slide5.png used on input line 401.
+Package pdftex.def Info: pics/TEobj/Slide5.png used on input line 394.
 (pdftex.def)             Requested size: 195.1881pt x 126.01744pt.
 
 <pics/TEsubj/Slide5.png, id=406, 1606.0pt x 937.5025pt>
 File: pics/TEsubj/Slide5.png Graphic file (type png)
 
 <use pics/TEsubj/Slide5.png>
-Package pdftex.def Info: pics/TEsubj/Slide5.png used on input line 402.
+Package pdftex.def Info: pics/TEsubj/Slide5.png used on input line 395.
 (pdftex.def)             Requested size: 195.1881pt x 113.94026pt.
+
+Underfull \hbox (badness 3209) in paragraph at lines 386--396
+[][] []
+ []
+
+
+Underfull \hbox (badness 3209) in paragraph at lines 386--396
+[] []
+ []
+
+
+Underfull \hbox (badness 3209) in paragraph at lines 386--396
+[] []
+ []
+
+
+Underfull \hbox (badness 3209) in paragraph at lines 386--396
+[] []
+ []
 
 
 Package nag Warning: `center' environment in figure.
-(nag)                Maybe you want \centering instead on input line 404.
+(nag)                Maybe you want \centering instead on input line 398.
+
+
+LaTeX Warning: Float too large for page by 77.09363pt on input line 399.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -2826,20 +2844,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[77 <./pics/TEobj/Slide1.png> <./pics/TEsubj/Slide1.png>]
+[77 <./pics/TEobj/Slide1.png> <./pics/TEsubj/Slide1.png> <./pics/TEobj/Slide2.p
+ng> <./pics/TEsubj/Slide2.png> <./pics/TEobj/Slide3.png> <./pics/TEsubj/Slide3.
+png> <./pics/TEobj/Slide4.png> <./pics/TEsubj/Slide4.png> <./pics/TEobj/Slide5.
+png> <./pics/TEsubj/Slide5.png>] [78
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[78 <./pics/TEobj/Slide2.png> <./pics/TEsubj/Slide2.png> <./pics/TEobj/Slide3.p
-ng> <./pics/TEsubj/Slide3.png> <./pics/TEobj/Slide4.png> <./pics/TEsubj/Slide4.
-png> <./pics/TEobj/Slide5.png> <./pics/TEsubj/Slide5.png>]
+]
 Chapter 5.
-) (./chapter/Conclusion.tex) (./chapter/Appendix.tex [79
-
-] [80
+) (./chapter/Conclusion.tex) (./chapter/Appendix.tex [79] [80
 
 ]
 Appendix A.
@@ -3003,7 +3015,7 @@ Package nag Warning: Package mathptm is obsolete.
 (nag)                Use the mathptmx package instead.
 
 
-Package nag Warning: 29 complaints in total.
+Package nag Warning: 28 complaints in total.
 
 (./dissertation.aux)
 
@@ -3016,7 +3028,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  15119 strings out of 494501
  307485 string characters out of 6167030
- 328237 words of memory out of 5000000
+ 328225 words of memory out of 5000000
  18015 multiletter control sequences out of 15000+600000
  96696 words of font info for 137 fonts, out of 8000000 for 9000
  320 hyphenation exceptions out of 8191
@@ -3032,7 +3044,7 @@ ymr10.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/urw/symbol/usyr.
 pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><
 /usr/local/texlive/2015basic/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/
 local/texlive/2015basic/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on dissertation.pdf (108 pages, 8881544 bytes).
+Output written on dissertation.pdf (108 pages, 8881274 bytes).
 PDF statistics:
  531 PDF objects out of 1000 (max. 8388607)
  271 compressed objects within 3 object streams
