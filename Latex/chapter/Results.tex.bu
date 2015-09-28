@@ -314,7 +314,7 @@ Time intervals (relative to stimulus onset) are abbreviated with T1 (0ms - 200ms
 First, transfer entropy was compared against surrogate data.
 The surrogate test determined whether the transfered entropy (TE) was erroneously detected due to random coincidence.
 The effective TE was calculated from the difference between surrogate TE and raw TE.
-These values are listed in tables \ref{4.4.TEvalues.a} and \ref{4.4.TEvalues.b}, and visualized in figures \ref{4.4.networkgraph.a} and \ref{4.4.networkgraph.b}.
+These values are listed in tables \ref{4.4.TEvalues.a} and \ref{4.4.TEvalues.b}, and visualized in figure \ref{4.4.networkgraph}.
 
 \vspace{5mm}
 \begin{table}[h]
@@ -328,23 +328,23 @@ Origin ROI & Target ROI & \multicolumn{5}{c}{TE in ORC condition} \\
 pSTG & BA6v & $-$ & $67.8^{+}$ & $-$ & $-$ & $-$ \\ 
 PAC & pSTG & $19.0^{***}$ & $15.1^{***}$ & $14.3^{***}$ & $20.5^{**}$ & $-$ \\ 
 pSTG & BA44 & $-$ & $38.2^{**}$ & $-$ & $37.3^{+}$ & $-$ \\ 
-PAC & BA44 & $26.7$ & $-$ & $-$ & $-$ & $-$ \\ 
+PAC & BA44 & $26.7^{-}$ & $-$ & $-$ & $-$ & $-$ \\ 
 PAC & aSTG & $-$ & $-$ & $-$ & $-$ & $-$ \\ 
 aSTG & BA45 & $-$ & $-$ & $-$ & $-$ & $-$ \\ 
 PAC & BA45 & $-$ & $-$ & $-$ & $-$ & $-$ \\ 
 BA44 & BA45 & $-$ & $22.2^{**}$ & $-$ & $-$ & $-$ \\ 
-pSTG & aSTG & $29.2^{**}$ & $19.6^{**}$ & $-$ & $21.3^{+}$ & $11.7$ \\ 
+pSTG & aSTG & $29.2^{**}$ & $19.6^{**}$ & $-$ & $21.3^{+}$ & $11.7^{-}$ \\ 
 BA6v & pSTG & $-$ & $24.3^{***}$ & $65.5^{**}$ & $21.2^{+}$ & $47.7^{**}$ \\ 
 pSTG & PAC & $-$ & $204.9^{***}$ & $-$ & $68.9^{**}$ & $16.4^{***}$ \\ 
 BA44 & pSTG & $-$ & $-$ & $-$ & $-$ & $35.4^{+}$ \\ 
-BA44 & PAC & $23.5^{***}$ & $36.8^{+}$ & $-$ & $28.2$ & $-$ \\ 
-aSTG & PAC & $25.6$ & $-$ & $-$ & $-$ & $20.7^{**}$ \\ 
+BA44 & PAC & $23.5^{***}$ & $36.8^{+}$ & $-$ & $28.2^{-}$ & $-$ \\ 
+aSTG & PAC & $25.6^{-}$ & $-$ & $-$ & $-$ & $20.7^{**}$ \\ 
 BA45 & aSTG & $207.1^{+}$ & $-$ & $-$ & $-$ & $13.0^{**}$ \\ 
 BA45 & PAC & $-$ & $-$ & $-$ & $342.2^{**}$ & $-$ \\ 
-BA45 & BA44 & $-$ & $-$ & $-$ & $-$ & $25.2$ \\ 
-aSTG & pSTG & $-$ & $-$ & $20.4^{+}$ & $43.1$ & $28.0$ \\ 
+BA45 & BA44 & $-$ & $-$ & $-$ & $-$ & $25.2^{-}$ \\ 
+aSTG & pSTG & $-$ & $-$ & $20.4^{+}$ & $43.1^{-}$ & $28.0^{-}$ \\ 
 \end{tabular}
-\caption{\label{4.4.TEvalues.a} Transfer entropy and binomial test results for the interaction analysis between selected regions of interest for subject-relative clauses. Abbreviations for the probability that interaction test results can be explained by random variance: + (p < 10\%), * (p < 5\%), ** (p < 1\%), ** (p < 0.1\%). Fields with a $-$ did not reach significance in any subject.}
+\caption{\label{4.4.TEvalues.a} Transfer entropy estimates and binomial test results for the interaction analysis between selected regions of interest for object-relative clauses. Abbreviations for the probability that interaction test results can be explained by random variance: + ($p < 10\%$), * ($p < 5\%$), ** ($p < 1\%$), ** ($p < 0.1\%$). Fields with a $-$ did not reach significance.}
 \end{center}
 \end{table}
 \vspace{5mm}
@@ -360,21 +360,21 @@ PAC & pSTG & $38.1^{***}$ & $60.9^{**}$ & $-$ & $-$ & $-$ \\
 pSTG & BA44 & $-$ & $-$ & $18.9^{**}$ & $-$ & $-$ \\ 
 PAC & BA44 & $32.4^{***}$ & $-$ & $122.0^{**}$ & $-$ & $31.6^{+}$ \\ 
 PAC & aSTG & $-$ & $-$ & $23.8^{+}$ & $-$ & $-$ \\ 
-aSTG & BA45 & $-$ & $27.6$ & $378.3^{+}$ & $35.0$ & $-$ \\ 
-PAC & BA45 & $-$ & $-$ & $-$ & $21.7^{**}$ & $27.9$ \\ 
-BA44 & BA45 & $24.8$ & $13.7$ & $17.3^{**}$ & $-$ & $24.0$ \\ 
-pSTG & aSTG & $20.9^{**}$ & $-$ & $-$ & $25.5$ & $-$ \\ 
+aSTG & BA45 & $-$ & $27.6^{-}$ & $378.3^{+}$ & $35.0^{-}$ & $-$ \\ 
+PAC & BA45 & $-$ & $-$ & $-$ & $21.7^{**}$ & $27.9^{-}$ \\ 
+BA44 & BA45 & $24.8^{-}$ & $13.7^{-}$ & $17.3^{**}$ & $-$ & $24.0^{-}$ \\ 
+pSTG & aSTG & $20.9^{**}$ & $-$ & $-$ & $25.5^{-}$ & $-$ \\ 
 BA6v & pSTG & $77.6^{***}$ & $32.6^{***}$ & $-$ & $-$ & $30.1^{**}$ \\ 
 pSTG & PAC & $-$ & $-$ & $19.0^{**}$ & $31.2^{***}$ & $-$ \\ 
 BA44 & pSTG & $-$ & $-$ & $34.8^{**}$ & $-$ & $28.2^{***}$ \\ 
 BA44 & PAC & $-$ & $-$ & $-$ & $-$ & $-$ \\ 
 aSTG & PAC & $-$ & $-$ & $-$ & $-$ & $-$ \\ 
 BA45 & aSTG & $-$ & $-$ & $-$ & $-$ & $34.3^{**}$ \\ 
-BA45 & PAC & $-$ & $-$ & $19.6$ & $24.9^{+}$ & $-$ \\ 
-BA45 & BA44 & $-$ & $-$ & $58.8$ & $56.6^{+}$ & $17.4$ \\ 
-aSTG & pSTG & $19.0$ & $-$ & $55.4^{***}$ & $43.1^{+}$ & $129.0^{**}$ \\ 
+BA45 & PAC & $-$ & $-$ & $19.6^{-}$ & $24.9^{+}$ & $-$ \\ 
+BA45 & BA44 & $-$ & $-$ & $58.8^{-}$ & $56.6^{+}$ & $17.4^{-}$ \\ 
+aSTG & pSTG & $19.0^{-}$ & $-$ & $55.4^{***}$ & $43.1^{+}$ & $129.0^{**}$ \\ 
 \end{tabular}
-\caption{\label{4.4.TEvalues.b} Transfer entropy and binomial test results for the interaction analysis between selected regions of interest for subject-relative clauses. Abbreviations for the probability that interaction test results can be explained by random variance: + ($p < 10\%$), * ($p < 5\%$), ** ($p < 1\%$), ** ($p < 0.1\%$). Fields with a $-$ did not reach significance in any subject.}
+\caption{\label{4.4.TEvalues.b} Transfer entropy estimates and binomial test results for the interaction analysis between selected regions of interest for subject-relative clauses. Abbreviations for the probability that interaction test results can be explained by random variance: + ($p < 10\%$), * ($p < 5\%$), ** ($p < 1\%$), ** ($p < 0.1\%$). Fields with a $-$ did not reach significance.}
 \end{center}
 \end{table}
 \vspace{5mm}
@@ -394,13 +394,22 @@ aSTG & pSTG & $19.0$ & $-$ & $55.4^{***}$ & $43.1^{+}$ & $129.0^{**}$ \\
 			\includegraphics[width=0.49\textwidth]{pics/TEobj/Slide5.png}
 			\includegraphics[width=0.49\textwidth]{pics/TEsubj/Slide5.png}
 		\end{minipage}
-		\caption{\label{4.4.networkgraph.a} Significant ($p < 5\%$) entropy flow between selected cortical regions. Estimated transfer entropy is denoted with numbers and visualized with arrow thickness. Left: Results from the ORC condition, Right: Results from the SRC condition. From top to bottom: Results from time intervals T1 to T5.}
+			\caption{\label{4.4.networkgraph} Significant ($p < 5\%$) entropy flow between selected cortical regions. Estimated transfer entropy is denoted with numbers and visualized with arrow thickness. Left: Results from the ORC condition, Right: Results from the SRC condition. From top to bottom: Results from time intervals T1 to T5.}
 	\end{center}
 \end{figure}
 
 Second, the impact of the syntax condition on transfer entropy was determined with a group-level cluster comparison.
-Only three functional connections showed a significant syntax effect: $PAC_{lh} \rightarrow pSTG_{lh}$, $PAC_{lh} \rightarrow BA45_{lh}$ and $BA6v_{lh} \rightarrow pSTG_{lh}$.
-All of these syntax effects showed at the time intervals T4 and T5.
-$PAC_{lh} \rightarrow pSTG_{lh}$ and $BA6v_{lh} \rightarrow pSTG_{lh}$ showed a significantly stronger transfer entropy in the SRC condition than in the ORC condition ($p = 2.3\%$ and $0.2\%$, $t(17) = -2.2$ and $-3.7$).
-$PAC_{lh} \rightarrow BA45_{lh}$ showed a significantly weaker transfer entropy in the SRC condition than in the ORC condition ($p = 1.9\%$, $t(17) = 2.3$).
-No functional connections showed a syntax condition effect after correcting for multiple comparisons.
+There were three time windows with functional connections that showed a significant group x syntax interaction.
+T1:
+PAC->BA45: p = 1.4\%, 15ms
+aSTG->PAC: p = 2.4\%, 10ms
+BA45->BA44: p = 0.7\%, 12ms
+
+T4:
+PAC->BA45: p = 1.9\%, 13ms
+BA6v->pSTG: p = 0.2\%, 9ms
+
+T5:
+pSTG->BA6v: p = 1.9\%, 8ms
+aSTG->PAC: p = 1.8\%, 19ms
+BA45->aSTG: p = 2.0\%, 14ms

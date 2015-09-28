@@ -12,12 +12,13 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: bibliography.bib
+Warning--I didn't find a database entry for "1.5.Beamformer.Problems"
 Warning--I didn't find a database entry for "AFIFI98"
 apacite.bst [2013/07/21 v6.03 APA bibliography style]
 Warning--No address in 1.5.L2
 You've used 64 entries,
             6951 wiz_defined-function locations,
-            1708 strings with 23767 characters,
+            1710 strings with 23813 characters,
 and the built_in function-call counts, 135717 in all, are:
 = -- 16316
 > -- 1218
@@ -56,4 +57,4 @@ warning$ -- 1
 while$ -- 713
 width$ -- 0
 write$ -- 2190
-(There were 2 warnings)
+(There were 3 warnings)

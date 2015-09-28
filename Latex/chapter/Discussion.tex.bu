@@ -1,11 +1,15 @@
 
 \chapter{Discussion}
 
-\paragraph{What do this data mean?}
+\paragraph{Interpretation}
 Sensor data:
 
 Source data:
 
+Interaction analysis:
+- sensory feedforward and feedback model
+- Trentool allows for the quantification of feedforward and feedback components
+- epilepsy study shows bias towards short feedforward and long feedback propagation
 
 \paragraph{Are the hypotheses confirmed?}
 

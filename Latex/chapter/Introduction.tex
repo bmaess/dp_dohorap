@@ -437,35 +437,38 @@ Second, a bootstrapped comparison allows for the exploration of spatial and temp
 \paragraph{Motivation}
 MEG sensors are inherently impartial when measuring magnetic fields.
 Due to their high sensitivity, MEG sensors measure a mixture of several types of sources.
-"'Outside"' (as in "'not inside the skull"') sources, for example the earth's magnetic field, can overpower brain activity by several orders of magnitude.
+"'Outside"' (as in "'not contained inside the skull cavity"') sources, such as the earth's magnetic field, can overpower brain activity by several orders of magnitude.
 Even though outside sources can be mostly removed during preprocessing, the magnetic fields from different cortical sources strongly overlap at the sensors.
-Demixing these signals is a fundamentally flawed process.
-The problem of discerning these signal sources is equivalent to finding the location and intensity of all the flames in a hot air balloon, while only looking at the outside of the hull.
-There are infinitely many possible configurations of light sources that can generate the same brightness pattern on the outer skin.
-A very similar issue presents itself when trying to determine the momentary intensity and location of neural field sources.
+Demixing these signals is necessary, but a fundamentally flawed process.
+To illustrate these flaws, consider the task of finding the location and intensity of all the flames inside a hot air balloon, while only looking at the outside of the hull.
+There are infinitely many possible configurations of light sources that can generate the same brightness pattern on the hull.
+A very similar issue presents itself when trying to determine the momentary intensity and location of neural field sources from a surface measurement.
 This task involves creating a bidirectional map between the (two-dimensional) curved plane of MEG sensors and the (three-dimensional) human head.
 Because of the different dimensionality, the task of creating this map is an underdefined problem.
 This means that there are infinitely many possible locations and intensities for magnetic fields that can generate the exact same signal pattern in the MEG sensors.
 This multitude of possible solutions needs to be constrained to make the results meaningful.
-Different sets of constraints result in different models.
+Different sets of constraints result in different types of approaches.
 There are two popular types of approaches for reconstructing neural activity, filtering methods and inverse methods.
 
 \paragraph{Source reconstruction methods}
-The most common filtering method is the single-core beamformer method \cite{1.5.Beamformer-a, 1.5.Beamformer-b}.
-This method is 
-Its main weakness is the assumption that data from different sources is completely uncorrelated.
+The most popular methods are spatial filtering methods.
+This type of method estimates the source activity at individual spatial points, instead of finding a global solution.
+Currently popular filtering methods are the single-core beamformer method \cite{1.5.Beamformer-a, 1.5.Beamformer-b} and the multiple signal classification \cite{1.5.music}.
+Source reconstruction in these methods is performed determine neural activity at a spatial point by modelling it with a dipole.
+This reconstruction is repeated for the whole cortex by sweeping over a multitude of points.
+Due to this mechanism, these methods are also called scanning methods.
+Their main weakness is the assumption that data from different sources is completely uncorrelated.
 This assumption is especially detrimental to the analysis of cortical signals.
 Neural synchronicity is one of the fundamental principles behind attention and learning \cite{1.5.synchronicity}.
-Synchronous signals appear highly correlated when measured, resulting in skewed beamformer results during periods of high synchronicity.
+Synchronous signals appear highly correlated when measured, resulting in skewed beamformer results during periods of high synchronicity \cite{1.5.Beamformer.Problems}. 
 
-In the second type of source modelling, the focal source model, neural current flow is represented by a limited set of point-shaped current dipoles.
-There are are three subcategories to this model: an unconstrained variant (the moving dipole model), dipoles with a fixed position (the rotating dipole model) and dipoles with a fixed position and rotation (the fixed dipole model).
-Popular applications of this approach include "'multiple signal classification"' (MUSIC) \cite{1.5.music} and "'multi-start spatio-temporal multiple-dipole modeling"' \cite{1.5.simplex}
+The second type of source reconstruction, inverse modeling, represents neural current flow with a limited set of point-shaped current dipoles.
+There are are three subcategories to this model: an unconstrained type (the moving dipole model), dipoles with a fixed position (the rotating dipole model) and dipoles with a fixed position and rotation (the fixed dipole model).
+A popular application of this approach would be, for example, \emph{multi-start spatio-temporal multiple-dipole modeling} \cite{1.5.simplex}.
 Dipole models have had limited success with representing neuronal responses for two main reasons.
 First, reducing extended neuroanatomical structures to a point current source introduces a systematic model error.
 Second, the number and location of dipoles has a strong influence on the localized results, yet is hard to estimate in advance (Huang et al., 1998).
 
-The third type of source model is the distributed source model.
 For these approaches, a dense grid of dipoles is derived from a cortical layer.
 The goal is to place dipoles in homogenous density at every location that is able to produce currents.
 Typically, the continuous cortex surface is extracted from anatomical data and populated with several thousands of (roughly) equally spaced dipoles.
