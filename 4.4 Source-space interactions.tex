@@ -6,7 +6,7 @@ Time intervals (relative to stimulus onset) are abbreviated with T1 (0ms - 200ms
 First, transfer entropy was compared against surrogate data.
 The surrogate test determined whether the transfered entropy (TE) was erroneously detected due to random coincidence.
 The effective TE was calculated from the difference between surrogate TE and raw TE.
-These values are listed in tables \ref{4.4.TEvalues.a} and \ref{4.4.TEvalues.b}, and visualized in figure \ref{4.4.networkgraph}.
+These values are listed in tables \ref{4.4.TEvalues.a} and \ref{4.4.TEvalues.b}, and visualized in figures \ref{4.4.networkgraph.a} through \ref{4.4.networkgraph.e} For optimized viewing, I recommend putting pages \pageref{4.4.networkgraph.a} through \pageref{4.4.networkgraph.e} next to each other.
 
 \vspace{5mm}
 \begin{table}[h]
@@ -66,7 +66,7 @@ BA45 & PAC & $-$ & $-$ & $19.6^{-}$ & $24.9^{+}$ & $-$ \\
 BA45 & BA44 & $-$ & $-$ & $58.8^{-}$ & $56.6^{+}$ & $17.4^{-}$ \\ 
 aSTG & pSTG & $19.0^{-}$ & $-$ & $55.4^{***}$ & $43.1^{+}$ & $129.0^{**}$ \\ 
 \end{tabular}
-\caption{\label{4.4.TEvalues.b} Transfer entropy estimates and binomial test results for the interaction analysis between selected regions of interest for subject-relative clauses. Abbreviations for the probability that interaction test results can be explained by random variance: + ($p < 10\%$), * ($p < 5\%$), ** ($p < 1\%$), ** ($p < 0.1\%$). Fields with a $-$ did not reach significance.}
+\caption{\label{4.4.TEvalues.b} Transfer entropy estimates and binomial test results for the interaction analysis between selected regions of interest for subject-relative clauses. Markers for the probability that interaction test results can be explained by random variance: + ($p < 10\%$), * ($p < 5\%$), ** ($p < 1\%$), ** ($p < 0.1\%$). Fields with a $-$ marker failed to reach a significance level of 10\%.}
 \end{center}
 \end{table}
 \vspace{5mm}
@@ -75,20 +75,57 @@ aSTG & pSTG & $19.0^{-}$ & $-$ & $55.4^{***}$ & $43.1^{+}$ & $129.0^{**}$ \\
 \begin{figure}[h]
 	\begin{center}
 		\begin{minipage}{\textwidth}
-			\includegraphics[width=0.49\textwidth]{pics/TEobj/Slide1.png}
-			\includegraphics[width=0.49\textwidth]{pics/TEsubj/Slide1.png}
-			\includegraphics[width=0.49\textwidth]{pics/TEobj/Slide2.png}
-			\includegraphics[width=0.49\textwidth]{pics/TEsubj/Slide2.png}
-			\includegraphics[width=0.49\textwidth]{pics/TEobj/Slide3.png}
-			\includegraphics[width=0.49\textwidth]{pics/TEsubj/Slide3.png}
-			\includegraphics[width=0.49\textwidth]{pics/TEobj/Slide4.png}
-			\includegraphics[width=0.49\textwidth]{pics/TEsubj/Slide4.png}
-			\includegraphics[width=0.49\textwidth]{pics/TEobj/Slide5.png}
-			\includegraphics[width=0.49\textwidth]{pics/TEsubj/Slide5.png}
+			\includegraphics[width=\textwidth]{pics/TEobj/Slide1.png}
+			\includegraphics[width=\textwidth]{pics/TEsubj/Slide1.png}
 		\end{minipage}
-			\caption{\label{4.4.networkgraph} Significant ($p < 5\%$) entropy flow between selected cortical regions. Estimated transfer entropy is denoted with numbers and visualized with arrow thickness. Left: Results from the ORC condition, Right: Results from the SRC condition. From top to bottom: Results from time intervals T1 to T5.}
+	\caption{\label{4.4.networkgraph.a} Estimated entropy flow between selected cortical regions in the first time interval (0ms to 200ms). Estimated transfer entropy is denoted with numbers and visualized with arrow thickness. Hollow arrows describe interactions on a significance level between 5\% and 10\%. Top: Results from the ORC condition, Bottom: Results from the SRC condition.}
 	\end{center}
 \end{figure}
+\vspace{5mm}
+
+\begin{figure}[h]
+	\begin{center}
+		\begin{minipage}{\textwidth}
+			\includegraphics[width=\textwidth]{pics/TEobj/Slide2.png}
+			\includegraphics[width=\textwidth]{pics/TEsubj/Slide2.png}
+		\end{minipage}
+	\caption{\label{4.4.networkgraph.b} Estimated entropy flow between selected cortical regions in the second time interval (200ms to 400ms). Estimated transfer entropy is denoted with numbers and visualized with arrow thickness. Hollow arrows describe interactions on a significance level between 5\% and 10\%. Top: Results from the ORC condition, Bottom: Results from the SRC condition.}
+	\end{center}
+\end{figure}
+\vspace{5mm}
+
+\begin{figure}[h]
+	\begin{center}
+		\begin{minipage}{\textwidth}
+			\includegraphics[width=\textwidth]{pics/TEobj/Slide3.png}
+			\includegraphics[width=\textwidth]{pics/TEsubj/Slide3.png}
+		\end{minipage}
+	\caption{\label{4.4.networkgraph.c} Estimated entropy flow between selected cortical regions in the third time interval (400ms to 600ms). Estimated transfer entropy is denoted with numbers and visualized with arrow thickness. Hollow arrows describe interactions on a significance level between 5\% and 10\%. Top: Results from the ORC condition, Bottom: Results from the SRC condition.}
+	\end{center}
+\end{figure}
+\vspace{5mm}
+
+\begin{figure}[h]
+	\begin{center}
+		\begin{minipage}{\textwidth}
+			\includegraphics[width=\textwidth]{pics/TEobj/Slide4.png}
+			\includegraphics[width=\textwidth]{pics/TEsubj/Slide4.png}
+		\end{minipage}
+	\caption{\label{4.4.networkgraph.d} Estimated entropy flow between selected cortical regions in the fourth time interval (600ms to 800ms). Estimated transfer entropy is denoted with numbers and visualized with arrow thickness. Hollow arrows describe interactions on a significance level between 5\% and 10\%. Top: Results from the ORC condition, Bottom: Results from the SRC condition.}
+	\end{center}
+\end{figure}
+\vspace{5mm}
+
+\begin{figure}[h]
+	\begin{center}
+		\begin{minipage}{\textwidth}
+			\includegraphics[width=\textwidth]{pics/TEobj/Slide5.png}
+			\includegraphics[width=\textwidth]{pics/TEsubj/Slide5.png}
+		\end{minipage}
+	\caption{\label{4.4.networkgraph.e} Estimated entropy flow between selected cortical regions in the fifth time interval (800ms to 1000ms). Estimated transfer entropy is denoted with numbers and visualized with arrow thickness. Hollow arrows describe interactions on a significance level between 5\% and 10\%. Top: Results from the ORC condition, Bottom: Results from the SRC condition.}
+	\end{center}
+\end{figure}
+\vspace{5mm}
 
 Second, the impact of the syntax condition on transfer entropy was determined with a group-level cluster comparison.
 There were three time windows with functional connections that showed a significant group x syntax interaction.
