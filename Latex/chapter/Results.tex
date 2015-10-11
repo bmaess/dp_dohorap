@@ -59,7 +59,7 @@ There was no interaction effect between group and sentence condition ($F < 0.1$,
 We computed average event-related fields (ERF) for each subject and sensor region.
 Activity from these ERF was selected with two different types of time windows.
 
-A positive effect indicates that activity evoked by object-relative clauses was more positive than activity evoked by subject-relative clauses. In the case of gradiometers, "'more positive"' means a higher regional RMS. With localized data, "'more positive"' means a higher z-score from the sLORETA source reconstruction.
+A positive effect indicates that activity evoked by object-relative clauses was polarized more positively than activity evoked by subject-relative clauses. In the case of gradiometers, "'more positive"' means a higher regional RMS. With localized data, "'more positive"' means a higher z-score from the sLORETA source reconstruction.
 
 
 \subsection{Interval analysis}
@@ -182,14 +182,11 @@ These differences seem to promise a group effect, and will be resolved more accu
 \clearpage\section{Source-space activity}\label{4.3}
 
 \subsection{Comparison of means}
-Localized activity from eight regions of interest (PAC, aSTS, aSTG, pSTS, pSTG, BA44, BA45 and BA6v) were examined for a syntactic effect.
-Two different types of analysis were conducted: a cluster-based comparison and an interval-based comparison.
-
-\paragraph{Cluster analysis}
-The cluster comparison yielded only spurious effects in both groups ($p > 7\%$).
+Localized activity from eight regions of interest (PAC, aSTS, aSTG, pSTS, pSTG, BA44, BA45 and BA6v) were examined for a syntax effect.
+For this purpose, average activity was computed and compared within evenly-spaced time intervals. "'positive"' effects imply elevated activity during object-related clauses, while "'negative"' effects imply elevated activity during subject-related clauses.
 
 \paragraph{Interval analysis}
-The interval comparison (0ms to 2200ms) yielded three distinct effect clusters in adults.
+The interval comparison (0ms to 2200ms) yielded three distinct temporal clusters in adults.
 
 During the first time cluster, 0ms to 200ms, especially the right PAC showed a strong negative effect ($p = 0.5\%$, $t_{17} = -3.7$).
 Other negative effects were visible in the left PAC ($p = 3.0\%$, $t_{17} = -2.9$) and the left BA45 ($p = 5.1\%$, $t_{17} = -2.6$).
@@ -260,19 +257,19 @@ It is also be possible that the automated segmentation process, that Freesurfer 
 An imprecise definition of the cortical surface would result in a skewed spatial location of the source dipoles, again causing regional overlapping and diminishing the experimental effect.
 If the localization performed drastically worse for children, the extraction of relevant time intervals and regional connections from the conditional effect would be impossible.
 
-Second, it is possible that the cognitive strategies were stable within each subject, but those of my young subjects were  more diverse than those of my adults.
-Both cluster analysis and interval analysis are based on the assumption that all subjects in one group use the same cognitive strategy.
-If this assumption is true for adults, but not for children, different processing strategies could cancel each other out and produce no effect.
+Second, it is possible that the cognitive strategies were stable within each subject, but the strategies of my young subjects were more diverse than those of my adults.
+Both cluster analysis and interval analysis are based on the assumption that all subjects in one group use the same cognitive strategy, and the same anatomical pathways.
+If this suspicion was true for adults, but not for children, different processing strategies could cancel each other out and produce no effect.
 Both the average localized activity and pooled single trials would be vulnerable to this violation.
 
-Third, it is possible that cognitive strategies varied within subjects for children, but not for adults.
+Third, it is possible that cognitive strategies and pathways vary within individual children, but stay stable within individual adults.
 This circumstance would lead the conditional effect to appear in different regions over the course of the task.
-Mean regional activity would be blurred because the stationarity assumption would be violated, and the overall effect would be diminshed.
+Mean regional activity would be blurred because the stationarity assumption would be violated, and the overall effect would be greatly diminshed.
 
 \paragraph{Exploring the explanations}
 Unfortunately, in order to compare the first possibility, a ground truth for the dipole locations and activations would be necessary.
 This type of reference data is only available in phantom models, therefore the first possibility remains elusive for direct statistical tests.
-However, since neither set of localization software was designed for processing infant brains, this possibility remains the  default explanation.
+However, since neither set of localization software was designed for processing infant brains, this possibility remains the default explanation.
 
 To decide whether the second possibility was responsible for the skewed results, I conducted two tests:
 First, if the cognitive processes were much more varied in children than in adults, this circumstance should be reflected in a more homogenuous evoked activity within the adults.
@@ -281,7 +278,7 @@ To test this hypothesis, I calculated the individual deviation from the group-av
 Second, if the cognitive strategy was less stable in children than in adults, localized activity in children should show more intra-subject variation.
 To test this hypothesis, I calculated the individual deviation from the individual-average activity and compared deviations between both groups.
 
-\paragraph{Test results}
+\paragraph{Post-hoc test results}
 For the first test, localized pooled activity (evoked by object-relative clauses) was selected from the time window 0ms to 2200ms.
 The mean activity was computed from this selected activity from all subjects within each group.
 The difference between individual and mean activity was then computed for each cortical region, yielding a time series.
@@ -305,8 +302,9 @@ This finding weakened the third possibility (stronger intra-subject variation in
 The deterioration of the syntactical effect in children before and after the source localization can not be explained by a wider spectrum of cognitive strategies.
 If anything, adults showed a wider, not a smaller variety of localized activity than children.
 By the refutation of the second and third possibilities, the first assumption was strengthened in comparison.
-Therefore, I had to conclude that the inverse solution for childrens' cortical activity failed to match the accuracy of the adults'.
-Without the spatio-temporal distribution of condition effects in children, the task of determining their relevant TOI and ROI for the following section showed little promise.\section{Source-space interactions}
+Therefore, it seems as if the inverse solution for childrens' cortical activity failed to match the accuracy of the adults'.
+Without the spatio-temporal distribution of condition effects in children, the task of determining the equivalent TOI and ROI showed little promise.
+Since accurate TOI and ROI were necessary for the next step, I continued the analysis only with the adult subject group.\section{Source-space interactions}
 
 Transfer entropy was examined across 9 possible functional connections for five time intervals, spanning an interaction delay between 1ms and 50ms.
 Time intervals (relative to stimulus onset) are abbreviated with T1 (0ms - 200ms), T2 (200ms - 400ms), T3 (400ms - 600ms), T4 (600ms - 800ms) and T5 (800ms - 1000ms).
@@ -314,7 +312,7 @@ Time intervals (relative to stimulus onset) are abbreviated with T1 (0ms - 200ms
 First, transfer entropy was compared against surrogate data.
 The surrogate test determined whether the transfered entropy (TE) was erroneously detected due to random coincidence.
 The effective TE was calculated from the difference between surrogate TE and raw TE.
-These values are listed in tables \ref{4.4.TEvalues.a} and \ref{4.4.TEvalues.b}, and visualized in figures \ref{4.4.networkgraph.a} through \ref{4.4.networkgraph.f} For optimized viewing, I recommend putting pages \pageref{4.4.networkgraph.a} through \pageref{4.4.networkgraph.e} next to each other.
+These values are listed in tables \ref{4.4.TEvalues.a} and \ref{4.4.TEvalues.b}, and visualized in figures \ref{4.4.networkgraph.a} through \ref{4.4.networkgraph.e}. For optimized viewing, I recommend putting pages \pageref{4.4.networkgraph.a} through \pageref{4.4.networkgraph.e} next to each other. 
 
 \vspace{5mm}
 \begin{table}[h]

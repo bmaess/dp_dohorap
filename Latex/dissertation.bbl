@@ -1497,6 +1497,33 @@ Shapiro, S.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Skeide%
+}{%
+Skeide%
+}{%
+{\protect \APACyear {2012}}%
+}]{%
+2.1}
+\APACinsertmetastar {%
+2.1}%
+\begin{APACrefauthors}%
+Skeide, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2012}.
+\unskip\
+\newblock
+\APACrefbtitle {Syntax and semantics networks in the developing brain. PhD
+  Thesis} {Syntax and semantics networks in the developing brain. phd thesis}\
+  \APACtypeAddressSchool {\BUPhD}{}{}.
+\unskip\
+\newblock
+\APACaddressSchool {}{Max Planck Institute for Human Cognitive and Brain
+  Sciences}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Sporns%
 , Chialvo%
 , Kaiser%

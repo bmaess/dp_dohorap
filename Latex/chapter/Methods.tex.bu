@@ -154,10 +154,22 @@ The structure of the final sentences is displayed in table \ref{3.1.sentences}.
 \begin{center}
 \begin{tabular}{c|cccccccc}
 Original & Wo & ist & das & Tier, & das & der & Tiger & malt?\\
-Translated & Where & is & the & animal$_{OBJ}$, & which & the$_{NOM}$ & tiger$_{SUBJ}$ & paints?\\
+Translated & Where & is & the & animal$_{OBJ}$, & which$_{dat}$ & the & tiger$_{SUBJ}$ & paints?\\
 Word index & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8
 \end{tabular}
-\caption{\label{3.1.sentences} Example stimulus sentence. Top: original spelling in German. Middle: Literal translation in English. Bottom: Word index within the sentence. NOM: Nominative case.}
+\caption{\label{3.1.sentences} Examplary object-relative sentence. Top: original spelling in German. Middle: Literal translation in English. Bottom: Word index within the sentence. \emph{dat}: dative case form.}
+\end{center}
+\end{table}
+
+\begin{table}[htb]
+\vspace{5mm}
+\begin{center}
+\begin{tabular}{c|cccccccc}
+Original & Wo & ist & das & Tier, & das & den & Affen & kämmt?\\
+Translated & Where & is & the & animal$_{SUBJ}$, & which & the$_{dat}$ & ape$_{OBJ}$ & combs?\\
+Word index & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8
+\end{tabular}
+\caption{\label{3.1.sentences} Examplary subject-relative sentence. Top: original spelling in German. Middle: Literal translation in English. Bottom: Word index within the sentence. \emph{dat}: dative case form.}
 \end{center}
 \end{table}
 

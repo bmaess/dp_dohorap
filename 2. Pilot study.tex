@@ -69,7 +69,19 @@ Original & Wo & ist & der & K"afer, & den & der & Frosch & w"ascht?\\
 Translated & Where & is & the & bug$_{(OBJ)}$, & who$_{(dat)}$ & the & frog$_{(SUBJ)}$ & washes?\\
 Word index & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8
 \end{tabular}
-\caption{\label{2.sentences} Example stimulus sentence. Top: original spelling in German. Middle: Literal translation in English. Bottom: Word index within the sentence}
+\caption{\label{2.sentences} Exemplary object-relative sentence. Top: original spelling in German. Middle: Literal translation in English. Bottom: Word index within the sentence. \emph{dat}: dative case form.}
+\end{center}
+\end{table}
+
+\vspace{5mm}
+\begin{table}[htb]
+\begin{center}
+\begin{tabular}{ccccccccc}
+Original & Wo & ist & der & Hase, & der & den & Tiger & f"angt?\\
+Translated & Where & is & the & rabbit$_{(SUBJ)}$, & who & the$_{(dat)}$ & tiger$_{(OBJ)}$ & catches?\\
+Word index & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8
+\end{tabular}
+\caption{\label{2.sentences} Exemplary subject-relative sentence. Top: original spelling in German. Middle: Literal translation in English. Bottom: Word index within the sentence. \emph{dat}: dative case form.}
 \end{center}
 \end{table}
 \vspace{5mm}
@@ -92,9 +104,9 @@ Sound was played with a pair of semi-open headphones.
 Behavioral data were analyzed with Matlab (version 2014a).
 Response accuracy was evaluated for the case that subjects responded randomly.
 For this purpose, accuracy was compared to the outcome of a random sequence of binary events.
-We established the alpha = 0.01 confidence interval for the percentage of correct trials ($\frac{k}{n}$) that could be answered correctly purely by chance.
+We established the 99\% confidence interval (alpha = 1\%) for the percentage of correct trials ($\frac{k}{n}$) that could be answered correctly purely by chance.
 This calculation was implemented using the binomial fit method in Matlab: binofit(k, n, alpha).
-If the upper confidence interval of this calculation exceeded the subject-specific accuracy, the subject was removed from further analysis.
+If the upper confidence interval of this calculation exceeded the subject-specific accuracy, performance was deemed purely random, and the subject was removed from further analysis.
 Two subjects failed to exceed chance level performance, leaving 19 subjects for the analysis.
 
 Two types of behavioral data were analyzed for group and condition effects: response time (RT) and response accuracy (RA).
@@ -103,7 +115,7 @@ Trials were omitted when the subject skipped or answered them incorrectly, or re
 Accuracy was calculated by dividing the amount of correct trials by the amount of total trials for each subject.
 
 A Shapiro-Wilk test was used to test for normal-distributed residuals.
-Accuracy passed this test at a p = 0.01 significance level.
+Accuracy passed this test at a $p = 1\%$ significance level.
 The impact of the syntactic condition on response accuracy was determined with a T-test.
 
 Any unintended bias on response time was determined by splitting RT from each subject into two groups along one of five impact factors.
@@ -146,27 +158,28 @@ These findings support the current stimulus setup for use during MEG measurement
 
 The second goal of the pilot study was to determine if 10-year old children were suitable subjects for the designed task.
 Accuracy levels were comparable with the findings of similar experiments.
-Due to different trigger points and sentence lengths, comparisons of response times couldn't be made directly and were instead limited to comparisons of effect size.
-We start by comparing our results to our spiritual predecessor, the study by [2.1].
-They found no significant conditional impact on response time in the 9-10-year age bracket.
-In stark contrast to our results (93\% and 64\% for subject- and object-relative clauses), their subjects were not influenced by a condition effect, with accuracy levels of 94\% in both conditions.
-The good performance was met with surprise and speculation that semantic cues may have helped with sentence comprehension.
-This speculation was supported by their fMRI findings, which indicated that children relied heavily on semantic-centric processing areas, rather than on pure syntax-related processing areas that adults use.
+Due to different trigger points and sentence lengths, comparisons of response times weren't possible directly.
+I started by comparing our findings to the results of a similar study, \cite{2.1}.
+They found no significant impact of syntax condition on response time in the 9- to 10-year age bracket.
+In stark contrast to their results (94\% accuracy in both syntax conditions), my subjects were influenced by a condition effect, with accuracy levels of 93\% and 64\% for subject- and object-relative clauses respectively.
+The surprising performance benefit may be partially explained by the semantic cues that were included in \cite{2.1}'s paradigm.
+The speculation that semantic cues may have facilitated sentence processing is supported by \cite{2.1}'s fMRI findings.
+Those indicate that children relied heavily on semantic-centric processing areas, rather than on pure syntax-related processing areas that adults use.
 Our setup didn't include semantic cues, which puts our results more in line with other infant studies.
 
-[2.2], for instance, measured repetition performance in 3- and 4-year-old children.
+\cite{2.2}, for example, measured repetition performance in 3- and 4-year-old children.
 The study presented German subject-relative and object-relative clauses with two interacting people in third person, similar to our setup.
 Their subjects performed with an accuracy of just 5\% (3 years) and 26\% (4 years) for object-relative clauses.
 Subject-relative clauses were performed with 13\% and 31\% accuracy, respectably.
 Note that these ratings represent accurate verbal repetition, and don't need to be corrected for chance level performance.
 
-[2.3] found more accurate responses to portuguese right-branching subject- and object-relative clauses.
+\cite{2.3} found more accurate responses to portuguese right-branching subject- and object-relative clauses.
 Subject-relative clauses were correctly answered 23\%, 50\%, 83\% and 80\% of the time (in 3-, 4-, 5- and 6-year old children, respectably).
 Object-relative clauses reached only slightly lower accuracy levels of 18\%, 40\%, 75\% and 68\%, respectably.
 They employed a more user-friendly approach by requiring the children to act out the posed sentences with toy animals.
 Because the authors deliberately removed as many processing constraints as possible, these accuracy levels can be considered upper performance limits on these age brackets.
 
-6 to 8 year old children solved syntactic problems with higher complexity in the study by [2.4].
+6 to 8 year old children solved syntactic problems with higher complexity in the study by \cite{2.4}.
 The experimental design varied two syntactical factors and one contextual factor.
 One syntactical factor, ``question``, varied English object- and subject-relative clauses, coinciding with our setup.
 Object-first and subject-first clauses were responded with an accuracy of 64\% and 83\%, respectably.
@@ -188,9 +201,10 @@ The syntactical condition reverses the order of pronouns, creating an opposition
 To prevent confounding effects from different content, the initial sentence fragment needs to be identical at least across conditions, and, preferably, across trials as well.
 Ideally, the distance between the end of this identical sentence fragment and the conditional cue point should be as short and invariant as possible.
 
-Second, our sentence structure contained a theoretical loophole.
-With sufficient time and wit, subjects could develop an alternative strategy that doesn't require syntactic processing of the whole sentence.
-The alternative strategy exploits the fact that the minimum information for a correct decision is already available at the fifth word (see table \ref{2.1.sentences}).
+Second, our sentence structure contained a conceptual loophole.
+With sufficient time and wit, subjects were theoretically able to develop an alternative strategy that didn't require conventional syntactic processing of the whole sentence.
+This alternative strategy exploits the fact that the minimum information for a correct decision is already available at the fifth word (see table \ref{2.1.sentences}).
+
 Subjects only needed to complete three sequential steps:
 First, attending only to the left of the two pictures.
 Second, waiting until the fourth word is spoken.
@@ -202,4 +216,4 @@ This strategy could potentially reduce the task into a simple series of motor pr
 Complex syntactic processing and, presumably, the use of pSTS and dorsal pathway II would be circumvented.
 Employing this strategy could create suspicious behavioral results in the form of systematically reduced and less varied response times.
 This flaw was the main reason for the redesign of stimuli for the main study.
-Other minor flaws were also corrected for improved validity.
+The other - minor - flaws were also corrected for improved validity.

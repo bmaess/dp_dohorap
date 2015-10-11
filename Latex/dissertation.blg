@@ -16,45 +16,45 @@ Warning--I didn't find a database entry for "1.5.Beamformer.Problems"
 Warning--I didn't find a database entry for "AFIFI98"
 apacite.bst [2013/07/21 v6.03 APA bibliography style]
 Warning--No address in 1.5.L2
-You've used 64 entries,
+You've used 65 entries,
             6951 wiz_defined-function locations,
-            1710 strings with 23813 characters,
-and the built_in function-call counts, 135717 in all, are:
-= -- 16316
-> -- 1218
-< -- 6975
-+ -- 7167
-- -- 129
-* -- 9208
-:= -- 25531
-add.period$ -- 263
-call.type$ -- 64
-change.case$ -- 1108
+            1714 strings with 23951 characters,
+and the built_in function-call counts, 137610 in all, are:
+= -- 16581
+> -- 1228
+< -- 7059
++ -- 7243
+- -- 131
+* -- 9309
+:= -- 25846
+add.period$ -- 268
+call.type$ -- 65
+change.case$ -- 1125
 chr.to.int$ -- 0
-cite$ -- 129
-duplicate$ -- 3790
-empty$ -- 5099
-format.name$ -- 2149
-if$ -- 25045
+cite$ -- 131
+duplicate$ -- 3820
+empty$ -- 5171
+format.name$ -- 2163
+if$ -- 25429
 int.to.chr$ -- 0
-int.to.str$ -- 196
+int.to.str$ -- 199
 missing$ -- 0
-newline$ -- 1704
-num.names$ -- 506
-pop$ -- 2006
+newline$ -- 1728
+num.names$ -- 514
+pop$ -- 2026
 preamble$ -- 1
-purify$ -- 255
+purify$ -- 259
 quote$ -- 0
-skip$ -- 8380
+skip$ -- 8558
 stack$ -- 0
-substring$ -- 7722
-swap$ -- 2226
-text.length$ -- 161
+substring$ -- 7803
+swap$ -- 2246
+text.length$ -- 163
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 5464
+type$ -- 5608
 warning$ -- 1
-while$ -- 713
+while$ -- 718
 width$ -- 0
-write$ -- 2190
+write$ -- 2216
 (There were 3 warnings)

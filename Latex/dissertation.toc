@@ -55,42 +55,40 @@
 \contentsline {subsection}{\numberline {3.3.1}Behavioral data}{45}
 \contentsline {subsection}{\numberline {3.3.2}Sensor-space activity}{46}
 \contentsline {paragraph}{Preprocessing and HPI correction}{46}
-\contentsline {paragraph}{Artifact removal}{46}
+\contentsline {paragraph}{Artifact removal}{47}
 \contentsline {paragraph}{Epoching}{47}
 \contentsline {paragraph}{Cluster analysis}{47}
-\contentsline {paragraph}{Interval analysis}{47}
+\contentsline {paragraph}{Interval analysis}{48}
 \contentsline {subsection}{\numberline {3.3.3}Source space activity}{48}
 \contentsline {paragraph}{Anatomical preprocessing}{48}
 \contentsline {paragraph}{Forward and inverse operator}{49}
 \contentsline {paragraph}{Inverse solution}{50}
 \contentsline {subsection}{\numberline {3.3.4}Interaction analysis}{52}
-\contentsline {paragraph}{Preparation}{52}
+\contentsline {paragraph}{Preparation}{53}
 \contentsline {paragraph}{Transfer entropy calculations}{57}
 \contentsline {paragraph}{Result evaluation}{58}
-\contentsline {chapter}{\numberline {4}Results}{59}
-\contentsline {section}{\numberline {4.1}Behavioral results}{59}
-\contentsline {subsection}{\numberline {4.1.1}Response times}{59}
-\contentsline {subsection}{\numberline {4.1.2}Response accuracy}{60}
-\contentsline {subsection}{\numberline {4.1.3}Analysis of combined performance data}{60}
-\contentsline {section}{\numberline {4.2}Sensor-space activity}{61}
-\contentsline {subsection}{\numberline {4.2.1}Interval analysis}{61}
-\contentsline {subsection}{\numberline {4.2.2}Cluster analysis}{61}
-\contentsline {section}{\numberline {4.3}Source-space activity}{70}
-\contentsline {subsection}{\numberline {4.3.1}Comparison of means}{70}
-\contentsline {paragraph}{Cluster analysis}{70}
-\contentsline {paragraph}{Interval analysis}{70}
-\contentsline {subsection}{\numberline {4.3.2}Post-hoc analysis}{74}
-\contentsline {paragraph}{Possible explanations}{74}
-\contentsline {paragraph}{Exploring the explanations}{75}
-\contentsline {paragraph}{Test results}{75}
-\contentsline {paragraph}{Conclusion}{76}
-\contentsline {section}{\numberline {4.4}Source-space interactions}{77}
-\contentsline {chapter}{\numberline {5}Discussion}{85}
-\contentsline {paragraph}{Interpretation}{85}
-\contentsline {paragraph}{Are the hypotheses confirmed?}{85}
-\contentsline {paragraph}{What have similar studies found out?}{85}
-\contentsline {paragraph}{In which ways is my study limited, and what can it dare to say?}{85}
-\contentsline {chapter}{\numberline {A}Appendix}{87}
-\contentsline {chapter}{References}{89}
-\contentsline {chapter}{List of Figures}{97}
-\contentsline {chapter}{List of Tables}{103}
+\contentsline {chapter}{\numberline {4}Results}{61}
+\contentsline {section}{\numberline {4.1}Behavioral results}{61}
+\contentsline {subsection}{\numberline {4.1.1}Response times}{61}
+\contentsline {subsection}{\numberline {4.1.2}Response accuracy}{62}
+\contentsline {subsection}{\numberline {4.1.3}Analysis of combined performance data}{62}
+\contentsline {section}{\numberline {4.2}Sensor-space activity}{63}
+\contentsline {subsection}{\numberline {4.2.1}Interval analysis}{63}
+\contentsline {subsection}{\numberline {4.2.2}Cluster analysis}{63}
+\contentsline {section}{\numberline {4.3}Source-space activity}{72}
+\contentsline {subsection}{\numberline {4.3.1}Comparison of means}{72}
+\contentsline {paragraph}{Interval analysis}{72}
+\contentsline {subsection}{\numberline {4.3.2}Post-hoc analysis}{76}
+\contentsline {paragraph}{Possible explanations}{76}
+\contentsline {paragraph}{Exploring the explanations}{77}
+\contentsline {paragraph}{Post-hoc test results}{78}
+\contentsline {paragraph}{Conclusion}{78}
+\contentsline {section}{\numberline {4.4}Source-space interactions}{79}
+\contentsline {chapter}{\numberline {5}Discussion}{87}
+\contentsline {paragraph}{Research questions}{87}
+\contentsline {paragraph}{What have similar studies found out?}{88}
+\contentsline {paragraph}{In which ways is my study limited, and what can it dare to say?}{88}
+\contentsline {chapter}{\numberline {A}Appendix}{89}
+\contentsline {chapter}{References}{91}
+\contentsline {chapter}{List of Figures}{99}
+\contentsline {chapter}{List of Tables}{105}
