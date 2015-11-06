@@ -27,7 +27,7 @@ All results from the ANOVA were transformed back into milisecond space with the 
 Signal-space separation \cite{3.3.SSS} was used to reduce noise in the data by suppressing magnetic interference coming from outside and inside the sensory array.
 MEG recordings were corrected for HPI movements, and co-registered across blocks to the inital head position for each individual.
 All of these steps were computed with MaxFilter.
-Data were then subjected to a FIR highpass filter (Hamming window design, 4367 coefficients, -130db suppression at 0Hz, 3db breakpoint at 0.5Hz, processing in Matlab) to remove slow trends.
+Data were then subjected to a FIR highpass filter (Hamming window design, 4367 coefficients, -130dB suppression at 0Hz, 3dB breakpoint at 0.5Hz, processing in Matlab) to remove slow trends.
 
 \paragraph{Artifact removal}
 MEG channels with abnormally high noise levels as identified by visual inspection were rejected from further analysis. A median of 1 channel (maximum: 3 channels) was removed.
@@ -43,13 +43,13 @@ The remaining ICA components were used to reconstruct continuous data.
 The main trigger was set at the condition onset (described in section 3.1.4).
 Epochs were created between 1000ms before and 4000ms after the main trigger.
 An epoch was rejected if the trial was skipped, or answered too slow (more than 4000ms) or answered incorrectly.
-This procedure yielded an average of [] trials in children and [] trials in adults.
+This procedure yielded an average of 274 (90\%) trials in children and 297 (98\%) trials in adults.
 Data were filtered before epoching with a 45Hz FIR lowpass (using the MNE function \emph{raw.filter}) exclusively for the following two steps.
 
 \paragraph{Cluster analysis}
 Each trial consisted of mean activity from one of each of three sensor groups (from parietal, temporal and frontal locations).
 Trials from each syntax condition were pooled into a pair of trial sets.
-Since the group had a strong impact on RT (see [4.1.1]), effective time windows were estimated separately for children and adults.
+Since the group had a strong impact on RT (see section \ref{results}), effective time windows were estimated separately for children and adults.
 Clusters were computed by running the MNE function \emph{stats.permutation\_cluster\_test} \cite{3.3.clustertest} with the pair of trial sets as input data.
 The function was run with 2500 permutations, and an t-threshold of 2.0.
 
